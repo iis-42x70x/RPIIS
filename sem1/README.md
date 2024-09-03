@@ -1,9 +1,9 @@
 Гугл-диск со условиями и материалами для подготовки к лабораторным занятиям доступен
-[по ссылке](https://drive.google.com/drive/folders/16fEpAx6KRqgLw5d04KHxVPeL6GJhixnS)
+[по ссылке](https://drive.google.com/drive/folders/19HJwkGGA-ZhebpaelsZvrmV5ZuwKclkh?usp=drive_link)
 
 ## Лабораторная работа №1
 В рамках ЛР 1 необходимо сверстать страницу сборника средствами LaTeX. Вариант выдаётся преподавателем.
-Сборник для ЛР 1 доступен по [ссылке](http://proc.ostis.net/proc/Proceedings%20OSTIS-2023.pdf).
+Сборник для ЛР 1 доступен по [ссылке](https://proc.ostis.net/proc/Proceedings%20OSTIS-2024.pdf).
 
 Выполнять ЛР 1 можно на сайте [overleaf](https://www.overleaf.com/learn).
 В результате выполнения лабораторной необходимо добавить скомпилированный pdf-файл
@@ -34,10 +34,10 @@
 ## Лабораторная работа №5
 В рамках ЛР 1 необходимо создать исполняемый файл в соответствии с заданным вариантом.
 Список заданий для ЛР 1 доступен 
-[по ссылке](https://docs.google.com/document/d/1LoQUc3vnl5gvPJD2AASKpqAh-MAW2DTD95snxD1PNmw/edit)
+[по ссылке](https://docs.google.com/document/d/1jQIRngcwNa9yVtQns-ID8a5rRZHwlNSgp8OFaTEHMHc/edit?usp=drive_link)
 
 ## Расчётная работа
-Для того, чтобы выполнить РР необходимо ознакомиться и следовать [руководство к выполнению РР](https://drive.google.com/drive/folders/1RSriLOZWpxyozHjUa1Kz3uZtIr0PixVh), глава 1.
+Для того, чтобы выполнить РР необходимо ознакомиться и следовать [руководство к выполнению РР](https://drive.google.com/file/d/1-rSQZex8jW-2DlY2kko18gU1oUAtEGHl/view?usp=drive_link), глава 1.
 Полученные gwf-файлы должны быть загружены на удалённый репозиторий.
 
 В результате ожидается отчёт в виде README-файла или pdf-файла в репозитории.
