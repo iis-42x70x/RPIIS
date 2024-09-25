@@ -1,0 +1,213 @@
+ка\documentclass[times]{article}
+\twocolumn
+
+\usepackage[russian, english]{babel}
+\usepackage{enumerate}
+\usepackage[a4paper, total={160mm, 250mm}]{geometry}
+\usepackage{newtxtext}
+\usepackage{comment}
+
+
+
+
+%\usepackage{fancyhdr}
+%\cfoot{\textbf{\thepage}}
+%\pagestyle{fancy}
+
+\setcounter{page}{240}
+\newcommand{\RomanNumeralCaps}[1]
+    {\MakeUppercase{\romannumeral #1}}
+
+\usepackage[nottoc]{tocbibind} %% add bibliography to table of contents
+\renewcommand{\tocbibname}{\normalsize \centering \textnormal{
+References}}
+
+
+\begin{document}
+\begin{center}
+    \RomanNumeralCaps{4}. Canonical Form of the Subject Domain Ontology 
+\end{center}
+
+We will say that the subject domain ontology is in canonical form if the following conditions are met [1]:
+
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \item all attributes from the set A participating in the definition of classes, functions, and axioms ontology are atomic;
+    \item all attributes of each class have a functionality flag and have no subordinate attributes;
+    \item the system of FD structure generators between the attributes of the ontology is the elementary basis of this FD structure.
+\end{itemize}
+
+The algorithm for reducing the subject domain ontol- ogy to the canonical form consists of the following steps.
+\begin{enumerate}[1{)}]
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \item For each composite attribute, add to set A the atomic attributes that make up the com-posite attribute. If this composite attribute is part of some class with a flag of functionality, then replace it in this class with atomic attributes with a flag of functionality. If a composite attribute is a part of a class without a functionality flag (it is a list attribute), then represent it as a subclass consist- ing of atomic attributes with a functionality flag included in the composite attribute. At the same time, determine the keys of a new class depending on the presence of an FD between atomic attributes
+within a composite attribute.
+    \item Each composite attribute included in the functions
+and axioms of the ontology should be replaced
+with atomic attributes included in its composition.
+    \item Each atomic attribute that is part of some class without a flag of functionality, to represent in the form of a subclass consisting of this attribute with a flag of functionality, and the class key consists
+of this atomic attribute.
+    \item Each atomic attribute that is part of a class and has
+subordinate attributes in it should be represented as a subclass consisting of this attribute and subordi- nate attributes with a flag of functionality. If this attribute was without the functionality flag, then the key of the new class consists of this atomic attribute otherwise all of its attributes are included in the key of the new class.
+    \item Select non-trivial FD between attributes according
+to the rules described above and form a system of
+generators of FD structure on the set of attributes
+$P \ = \ \{P_{j} = X_{j} \to Y_{j} \ | \ X_{j} \subset A, Y_{j} \subseteq A, j = \overline{\rm 1,m} \}$.
+    \item Remove redundant attributes from the left sides of
+the FD from set $P$ . Attribute $B \in X_{j}$ is considered redundant in $X_{j}$, if $B \in (X_{j} \setminus B)+(P)$.
+    \item Remove redundant attributes from the right sides of the FD from set $P$. Attribute $B \in Y_{j}$ is considered redundant in $Y_{j}$, if $B \in X_{j} + (P')$, where $P'$ denotes the system of generators of the FD structure, obtained from $P$ by replacing FD $X_{j} \to Y_{j}$ with $X_{j} \to (Y_{j} \setminus B)$. As a result of performing steps 6 and 7, an elementary basis of the FD structure on a set of attributes $E = \{H_{j} \to T_{j} \ | \ H_{j} \subset A,T_{j} \subseteq A,j = \overline{\rm 1, m} \}$ will be obtained.
+    \item Bring the subject domain ontology in accordance with the obtained elementary basis of the FD struc- ture between attributes by performing the following steps:
+    \begin{itemize}
+        \setlength{\itemsep}{1pt}
+        \setlength{\parskip}{0pt}
+        \item remove from the classes the attributes that turned out to be redundant in the right parts of the corresponding FD of the elementary basis;
+        \item remove from the composition of the keys of the classes the attributes that turned out to be redundant in the left parts of the corresponding FD of the elementary basis;
+        \item unite into one class those ontology classes that have the same closures of their keys concern- ing the elementary basis of the FD structure;
+        \item remove functions from the set F, in which all the attributes of the right-hand sides in the corresponding FD of the elementary basis turned out to be redundant;
+        \item from the left-hand sides of the functions from the set F , remove the attributes that turned out to be redundant in the left-hand sides of the corresponding FD of the elementary basis.
+    \end{itemize}
+\end{enumerate}
+%\vspace{3mm}%
+\begin{center}
+{ \RomanNumeralCaps{5}. Optimal Canonical Form of the Subject Domain Ontology}
+\end{center}
+
+The canonical form of a subject domain ontology is called optimal if it contains a minimum number of classes with a minimum number of occurrences of attributes in them. The task of bringing the subject domain ontology to optimal canonical form comes down to finding the optimal elementary basis of the structure FD between the attributes of the ontology, which contains the minimum number FD with the minimum number of occurrences of attributes in them.
+
+In article [9], the concept of P-dependencies in the
+elementary basis of the FD structure was introduced and
+studied. Let $E=\{H_{j} \to T_{j} \ | \ H_{j} \subset A,T_{j} \subseteq A,j=\overline{\rm 1, m}\}$ be the elementary basis of the FD structure $S(E)$
+on the set $A$ on the set $A$. We will say that in the FD $(H_{s} \to T_{s}) \in E$ there is a $P$-dependence of a non-empty $T_{s}' \ \subseteq T_{s}$ on $H_{s}$ if there exists an $P \subset H_{s} +(E),P \ne H_{s}$ such that $T_{s}' \subseteq (P +(E)\setminus P)$ and no
+subset of $P$ possesses these properties. Let $E′$ us denote the
+system of generators of the FD structure obtained from
+$E$ by replacing the FD $H_{s} \to T_{s}$ with $H_{s} \to T_{s}\setminus T_{s}'$.
+We will distinguish three types of $P$-dependence: $P_{1}$-dependence occurs if $P \subseteq H_{s}+(E′)$, $P_{2}$-dependence if simultaneously $P \not \subseteq H_{s} + (E')$ and $T_{s}' \ \not \subseteq (P+(E' \setminus P)$, $P_{3}$-dependence if simultaneously $P \ \not \subseteq \ H_{s}+(E')$ and $T_{s}' \ \subseteq (P+(E' \setminus P)$.
+
+We formulate the main properties of $P$-dependencies in the form of the following statements, the proof of which is carried out by checking the fulfillment of suffi- cient conditions for the equivalence of the FD structures.
+
+If in the FD $(H_{s} \to T_{s}) \in E$ there is a$P_{1}$-dependence of ${T_{s}' \ \subseteq T_{s}}$ on $H_{s}$, and the system of generators of the structure of the FD $Q$ is obtained from $E$ by replacing the FD $H_{s} \to T_{s}$ with $H_{s} \to T_{s} \setminus T_{s}'$ and adding the FD $P \to T_{s}'$ to the $E$, then the structures of the FD specified by the systems of generators $E$ and $Q$ are equivalent.
+
+If in the FD $(H_{s} \to T_{s}) \in E$ there is a $P_{2}$-dependence of $T_{s}' \ \subseteq T_{s}$ on $H_{s}$, and the system of generators of the FD structure $Q$ is obtained from $E$ by replacing the FD $H_{s} \to T_{s}$ with $H_{s} \to ((T_{s} \setminus T_{s}') \cup (P \setminus H_{s})$ and adding the FD $P \to T_{s}'$ to the $E$, then the FD structures specified by the systems of generators $E$ and $Q$ are equivalent.
+
+If in the FD $(H_{s} \to T_{s}) \in E$ there is a $P_{3}$-dependence of $T_{s}' \ \subseteq T_{s}$ on $H_{s}$, and the system of generators of the FD structure $Q$ is obtained from $E$ by replacing the FD $H_{s} \to T_{s}$ with $H_{s} \to ((T_{s} \setminus T_{s}') \cup (P \setminus H_{s})$, then the FD structures specified by the systems of generators $E$ and $Q$ are equivalent.
+
+The given properties of $P$-dependencies make it pos- sible to move from one elementary basis of the FD structure to other elementary bases and find the optimal elementary basis of the FD structure.
+
+In article [10], the concept of a cycle in the elementary basis of the FD structure is introduced and it is proved that the presence of cycles in the elementary basis of the FD structure is a necessary condition for the existence of $P$-dependencies in the elementary basis. The elementary basis of the FD structure on set $A$ can be associated with a bipartite oriented graph $(A, E, H, T )$, in which $A$ – the set of vertices of the first part of the graph, $E$ – the set of vertices of the second part of the graph, $H$ – the set of arcs of the graph directed from the vertices of the first part to the vertices of the second part of the graph (showing the occurrence of elements from $A$ to the left parts of the FD), $T$ is a set of arcs of the graph directed from the vertices of the second part to the vertices of the first part of the graph (showing the occurrence of elements from $A$ in the right parts of the FD). It is easy to verify that each cycle in an elementary basis corresponds to a family of cycles in the corresponding bipartite graph.
+
+In general, the problem of finding all cycles in a bipartite directed graph is $N P$-hard, but its difficulty is determined by the fact that the maximum possible number of cycles in a graph depends exponentially on the dimension of the graph. The search time for one cycle in a directed graph using a standard depth-first search algorithm depends linearly on the dimension of the graph. In real optimization problems of the canonical form of a subject domain ontology, with the number of attributes on the order of $10^3$, the number of cycles in the elementary basis of the FD structure does not exceed $10^2$, therefore all cycles in the elementary basis of the FD structure can be found in an acceptable time.
+
+\begin{center}
+    \RomanNumeralCaps{6}. Software for Bringing the Subject Domain Ontology to Canonical Form
+\end{center}
+
+The input data of the software is the subject domain ontology in the OWL-2 language in the input file. The output data is the equivalent subject domain ontology, which is in the canonical form, presented as an owl- file. The software extracts from the original owl-file and presents attributes, classes, class hierarchy, links between attributes and classes in the form of database tables. Then, atomic attributes and the system of forming the FD structure between the attributes are extracted from the database tables. The software for bringing the subject domain ontology to the canonical form includes the Attribute, AttributeSet, FuncDepen, FDStructure classes developed in C++.
+
+The Attribute class is used to represent a single atomic attribute. The class data is an attribute identification number, an attribute name, and an attribute purpose.
+
+The AttributeSet class is used to represent any subset of atomic attributes. The class data is an array of attribute identification numbers. The class methods return the number of attributes in a subset, add an attribute to a subset, remove an attribute from a subset, check for the presence of an attribute in a subset, check if a given subset of attributes is in a subset, get the union and inter- section of a given subset of attributes with a subset.
+
+The FuncDepen class is used to represent a single functional dependency between atomic attributes. The data of the class are an object of the AttributeSet class, corresponding to the left part of the FD, and an object of the AttributeSet class, corresponding to the right part of the FD. Class methods add an attribute to the left or right part of the FD, remove an attribute from the left or right part of the FD.
+
+The FDStructure class is used to represent a system of generators and an elementary basis for a structure of functional dependencies between atomic attributes. The class data is an array of objects of the FuncDepen class. The class methods return the number of FDs in the structure, add FDs to the structure, remove FDs from the structure, obtain the closure of a given subset of attributes with respect to the FD structure, and find the elementary basis of the FD structure.
+
+Software for bringing the subject domain ontology to the optimal canonical form is under development.
+
+The software for bringing the subject domain ontology to canonical form was used in the development of the domain ontology of radio communication networks. As a result, the main ontology classes and their subclasses were obtained.
+
+The TransmiterTypes class and its subclasses are designed to store data about transmitter types. The classes include attributes: name of the transmitter type, boundaries of operating ranges frequencies, power range boundaries, emission codes, emission bandwidth for each emission code, dependence of the attenuation of out-of- band and noise emissions on detuning from the operating frequency, attenuation of radiation at harmonic and ref- erence oscillator frequencies, attenuation of radiation at combination and intermodulation frequencies.
+
+The ReceiverTypes class and its subclasses are de- signed to store data about receiver types. The classes include attributes: the name of the receiver type, the boundaries of the operating frequency ranges, sensitivity, codes of received emissions, bandwidth and the required signal-to-noise ratio for each received radiation, the dependence of the sensitivity attenuation on detuning from the operating frequency, intermediate frequencies, the radiation power of the receiver at local oscillator frequencies, weakening of sensitivity at intermediate frequencies, local oscillator frequencies, mirror local oscillator frequencies, combination and intermodulation frequencies.
+
+The AntennaTypes class is designed to store data about antenna types. The class includes the following attributes: antenna type name, antenna type code, polarization code, minimum and maximum electrical center height, isotropic gain for horizontal and vertical polarization, antenna half power beamwidth in horizontal and vertical plane, side lobe attenuation relative to to an isotropic antenna, attenuation in the feeder.
+
+The RadioDevTypes class is designed to store data about types of radio devices (RD). The class includes the following attributes: name of the RD type, code of the RD type (transmitter, receiver, radio station), code of the RD operating mode (simplex, duplex).
+
+The ObjectCommInds class is designed to store data about individuals of communication objects. The class includes the following attributes: name of the commu- nication object, geographic coordinates of the center of the stationary communication object or the center of the movement zone of the mobile communication object, the radius of the movement zone of the mobile communication object, the height of the point of standing of the stationary communication object above sea level.
+
+The AntennaInds class is a subclass of the Anten- naTypes class and is intended to store data about antenna individuals. The class includes the following attributes: the name of the antenna, the height of the electrical center of the antenna above the communication object, the direction angles of the antenna in the horizontal and vertical plane, the coordinates of the antenna relative to the center of the communication object.
+
+The Radiolines class and its subclasses are designed to store data about radio lines (RL) and radio networks. The classes include the following attributes: name of RL, RL importance code, RL type code (with fixed radio frequencies, with pseudo-random switching of the oper- ating frequency, radio relay line interval), RL operating mode code (simplex, duplex with time division, duplex with frequency division), codes of emissions used in RL, frequencies or average frequencies of frequency bands assigned to RL for transmitting and receiving in the main RD.
+
+\begin{center}
+    \RomanNumeralCaps{7}. Conclusion    
+\end{center}
+
+To eliminate ambiguity and redundancy in the domain ontol- ogy, the concept of the canonical form of the domain ontology was introduced and algorithms were proposed for bringing the domain ontology to a canonical form and an optimal canonical form. Software has been developed that implements bringing the domain ontology to a canonical form.
+
+
+
+\begin{thebibliography}{196}
+    \footnotesize
+    \bibitem{subject}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    A. A. Karpuk and A. V. Havorka, “Bringing the Subject Do- main Ontology of Radio Communication Networks to Canonical Form”, Problems of Infocommunications, No 2(14), pp. 25–30, 2021, (in Russian).
+    \bibitem{reduction}
+    A.V.Havorka and A.A.Karpuk,“Reductiont he Subject Domain Ontology to Canonical Form”, International Journal of Informa- tion and Communication Technologies. Special Issue, pp. 43–47, May 2022.
+    \bibitem{ontological methods}
+    A.V.Palagin, S.L.Kryvy and N.G.Petrenko “Ontological Meth- ods and Means of Processing Subject Knowledge: Monograph”, Lugansk, 324 p., 2012, (in Russian).
+    \bibitem{construction}
+    A. A. Karpuk and A. V. Havorka, “Construction of an Applied Ontology of Radio Communication Networks”, Vestnik suvjazi, No 6, pp. 36–40, 2021, (in Russian).
+    \bibitem{XML}
+    “W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes. W3C Recommendation”, 5 April 2012 [Electronic resource] URL: http://www.w3.org/TR/xmlschema11-2.
+    \bibitem{Armstrong}
+    W. W. Armstrong, “Dependency structure of data base relation- ships”, Proc. IFIP Congress. Geneva, Switzerland, pp. 580–583, 1974.
+    \bibitem{Kuznecov}
+    S.D.Kuznecov,“Database. Models and Languages”, M., Binom– Press, 720 p., 2008, (in Russian).
+    \bibitem{Methodology of Data
+Domain Description}
+A. A. Karpuk and V. V. Krasnoproshin, “Methodology of Data Domain Description for Databases Design in Complex Systems”, International Academy Journal Web of Scholar, Vol. 1, No 4(13), pp. 11–20, 2017.
+    \bibitem{KarpukAnalysis of Structure}
+    A.A.Karpuk,“Analysis of Structure of Functional Dependencies between Attributes of a Relational Database”, Economics and Management of Control Systems, No 3(25), pp. 64–70, 2017, (in Russian).
+    \bibitem{Karpukcycles in structure}
+    A. A. Karpuk and V. V. Krasnoproshin, “Cycles in Structures of Functional Dependencies”, International Journal of Open Infor- mation Technologies, Vol. 5, No 7, pp. 38–44, 2017.
+    
+    
+    
+    
+    
+    
+\end{thebibliography}
+\begin{comment}
+\begin{enumerate}[{[}1{]}]
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    
+    \footnotesize{
+    \item A. A. Karpuk and A. V. Havorka, “Bringing the Subject Do- main Ontology of Radio Communication Networks to Canonical Form”, Problems of Infocommunications, No 2(14), pp. 25–30, 2021, (in Russian).
+    \item A.V.HavorkaandA.A.Karpuk,“Reductionthe Subject Domain Ontology to Canonical Form”, International Journal of Informa- tion and Communication Technologies. Special Issue, pp. 43–47, May 2022.
+    \item A.V.Palagin,S.L.KryvyandN.G.Petrenko“Ontological Meth- ods and Means of Processing Subject Knowledge: Monograph”, Lugansk, 324 p., 2012, (in Russian).
+    \item A. A. Karpuk and A. V. Havorka, “Construction of an Applied Ontology of Radio Communication Networks”, Vestnik suvjazi, No 6, pp. 36–40, 2021, (in Russian).
+    \item “W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes. W3C Recommendation”, 5 April 2012 [Electronic resource] URL: http://www.w3.org/TR/xmlschema11-2.
+    \item W. W. Armstrong, “Dependency structure of data base relation- ships”, Proc. IFIP Congress. Geneva, Switzerland, pp. 580–583, 1974.
+    \item S.D.Kuznecov,“Database. Models and Languages”, M., Binom– Press, 720 p., 2008, (in Russian).
+    \item A. A. Karpuk and V. V. Krasnoproshin, “Methodology of Data Domain Description for Databases Design in Complex Systems”, International Academy Journal Web of Scholar, Vol. 1, No 4(13), pp. 11–20, 2017.
+    \item A.A.Karpuk,“Analysis of Structure of Functional Dependencies between Attributes of a Relational Database”, Economics and Management of Control Systems, No 3(25), pp. 64–70, 2017, (in Russian).
+    \item A. A. Karpuk and V. V. Krasnoproshin, “Cycles in Structures of Functional Dependencies”, International Journal of Open Infor- mation Technologies, Vol. 5, No 7, pp. 38–44, 2017.
+    }
+\end{enumerate}
+\end{comment}
+\begin{otherlanguage}{russian}
+    \begin{center}
+
+     \textbf{ПРИВЕДЕНИЕ ОНТОЛОГИИ ПРЕДМЕТНОЙ
+     ОБЛАСТИ К ОПТИМАЛЬНОЙ КАНОНИЧЕСКОЙ
+     ФОРМЕ}
+    
+        Карпук А.
+    \end{center}
+    
+    Дано формальное определение онтологии предметной области. Рассмотрено понятие канонической формы он- тологии предметной области, которая строится на основе анализа функциональных зависимостей между понятиями и свойствами понятий онтологии. Описан алгоритм при- ведения онтологии предметной области к каноническоой форме. Введено понятие оптимальной канонической формы онтологии предметной области, содержащей минимальное количество классов и минимальное количество атрибутов в классах. Предложен метод приведения онтологии предметной области к оптимальноой каноническоой форме.
+\end{otherlanguage}
+\begin{flushright}
+    Received 13.03.2024
+\end{flushright}
+
+
+
+
+
+\end{document}
