@@ -11,32 +11,7 @@
 
 
 ### Для начала работы мы загружаем кантибулы✍:
-```
-\documentclass[a4paper]{article}
-\usepackage[left=2.8cm,right=2.8cm,top=1.5cm,bottom=2.5cm]{geometry}
-\pagestyle{plain} %странички
-\setcounter{page}{185} %нумерация
-\usepackage{fancyhdr}
-\cfoot{\textbf{\thepage}}
-\usepackage{ragged2e}%выравнивание по ширине
-\usepackage{graphicx}%картинки
-\usepackage{titlesec}
-\titleformat{\section}
-  {\normalfont\normalsize\centering} % Обычный шрифт, нормальный размер
-  {\thesection}{1em}{}
-\usepackage{enumitem}
-\usepackage{setspace} %межстрочный интервал
-\usepackage{fancyhdr} %настройки верхнего и нижнего колонтитулов в документе.
-\usepackage{newtxtext, newtxmath} % Times New Roman
-\graphicspath{{images/}} %Папка для фоток
-\setlist[itemize]{noitemsep, topsep=0pt} %Убрать расстояние между списками
-\setlist[enumerate]{noitemsep, topsep=0pt} %Убрать расстояние между списками
-\usepackage{float} %Плавающие фотки
-\usepackage{multicol} %Колонки
-\setlength{\columnsep}{.5cm}
-\renewcommand{\thesection}{\Roman{section}}
 
-```
 <p><img src="images/Second.png"></p>
 
 ### Работа c обычными списками📃
