@@ -1,8 +1,15 @@
 <h1 align="center"> Работа с Latex</h1>
-Для начала проекта нужно нажать на кнопку
-<p  align="center"><img src="images/First.png" ></p>
 
-###Для начала работы мы загружаем кантибулы:
+### Регистрация
+
+<a href="https://ru.overleaf.com/register">Регистрация на overleaf</a>
+
+### Для начала проекта нужно нажать на кнопку
+<p><img src="images/First.png" height="250" >
+
+
+
+### Для начала работы мы загружаем кантибулы:
 ```
 \documentclass[a4paper]{article}
 \usepackage[left=2.8cm,right=2.8cm,top=1.5cm,bottom=2.5cm]{geometry}
@@ -30,6 +37,7 @@
 
 ```
 <p align="center"><img src="images/Second.png"></p>
+
 ### Работа c обычными списками
 
 ```
@@ -76,7 +84,7 @@ system.
 Как это выглядит в редакторе:
 <p align="center"><img src="images/Fourth.png"></p>
 
-###Нумерация заголовков римскими цифрами
+### Нумерация заголовков римскими цифрами
 ```
 \renewcommand{\thesection}{\Roman{section}}%Римские цифры
 \begin{enumerate}[label=\arabic*),start=4]%Начинаем нумерацию с 5(1+4)
@@ -86,7 +94,7 @@ system.
 
  <p  align="center"><img src="images/Fiveth.png" ></p>
 
-###Создание списка литературы:
+### Создание списка литературы:
 ```
 \begin{thebibliography}{2}
 \fontsize{8}{5}\selectfont
@@ -180,6 +188,12 @@ bash
 ```
 bash
     git reset --hard HEAD~1
+```
+
+### Цель лабараторной работы №3:
+
+```
+Целью лабараторной работы является научиться работать с GitHub.
 ```
 
 ### Ресурсы для обучения
