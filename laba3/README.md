@@ -1,10 +1,10 @@
 <h1 align="center"> Работа с Latex</h1>
-
+<p><img src="images/1.png"</p>
 ### Регистрация
 
 <a href="https://ru.overleaf.com/register">Регистрация на overleaf</a>
 
-### Для начала проекта нужно нажать на кнопку
+### Для начала проекта нужно нажать на кнопку "Создать проект"
 <p><img src="images/First.png" height="250" >
 
 
