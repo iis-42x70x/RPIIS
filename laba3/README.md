@@ -1,15 +1,16 @@
-<h1 align="center"> Работа с Latex</h1>
-<p><img src="images/1.png"</p>
+<h1 align="center"> Лабараторная работа №3</h1>
+<p align="center"><img src="images/1.jpg">
+  
 ### Регистрация
 
 <a href="https://ru.overleaf.com/register">Регистрация на overleaf</a>
 
-### Для начала проекта нужно нажать на кнопку "Создать проект"
+### Для начала проекта нужно нажать на кнопку "Создать проект"🔥
 <p><img src="images/First.png" height="250" >
 
 
 
-### Для начала работы мы загружаем кантибулы:
+### Для начала работы мы загружаем кантибулы✍:
 ```
 \documentclass[a4paper]{article}
 \usepackage[left=2.8cm,right=2.8cm,top=1.5cm,bottom=2.5cm]{geometry}
@@ -36,9 +37,9 @@
 \renewcommand{\thesection}{\Roman{section}}
 
 ```
-<p align="center"><img src="images/Second.png"></p>
+<p><img src="images/Second.png"></p>
 
-### Работа c обычными списками
+### Работа c обычными списками📃
 
 ```
 \begin{flushright}
@@ -61,10 +62,10 @@ process.
 \end{flushright}
 ```
 Как это отображается в редакторе:
-<p align="center"><img src="images/Third.png"></p>
-<p align="center"><img src="images/Third.1.png"></p>
+<p><img src="images/Third.png"></p>
+<p><img src="images/Third.1.png"></p>
 
-### Работа с нумеруемыми списками
+### Работа с нумеруемыми списками📆
 ```
 \begin{enumerate}[label=\arabic*)]
 
@@ -82,9 +83,9 @@ system.
 \end{enumerate}
 ```
 Как это выглядит в редакторе:
-<p align="center"><img src="images/Fourth.png"></p>
+<p><img src="images/Fourth.png"></p>
 
-### Нумерация заголовков римскими цифрами
+### Нумерация заголовков римскими цифрами Ⅸ Ⅹ Ⅺ
 ```
 \renewcommand{\thesection}{\Roman{section}}%Римские цифры
 \begin{enumerate}[label=\arabic*),start=4]%Начинаем нумерацию с 5(1+4)
@@ -92,9 +93,9 @@ system.
 ```
 Как это выглядит в редакторе
 
- <p  align="center"><img src="images/Fiveth.png" ></p>
+ <p><img src="images/Fiveth.png" ></p>
 
-### Создание списка литературы:
+### Создание списка литературы 📚 :
 ```
 \begin{thebibliography}{2}
 \fontsize{8}{5}\selectfont
@@ -108,8 +109,20 @@ razrabotke edinoi basi znanii multimodalnih perevozok [An ontological approach t
 }
 \end{thebibliography}
 ```
+### Вставка картинок:
+
+```
+\begin{center}
+\includegraphics[width=\linewidth]{Second}
+\caption{\footnotesize Figure 3. Semantic neighborhood of knowlegebase RW}%подпись
+\end{center}
+```
+
+<p><img src="images/2.png"></p>
+
+
  
- ### Основные команды:
+### Основные команды:
 
 <p>1. Проверка стасуса</p>
 
