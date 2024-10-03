@@ -3,7 +3,7 @@
   
 ### Регистрация
 
-<a href="https://ru.overleaf.com/register">Регистрация на overleaf</a>
+<a href="https://ru.overleaf.com/register">✉</a>
 
 ### Для начала проекта нужно нажать на кнопку "Создать проект"🔥
 <p><img src="images/First.png" height="250" >
@@ -61,7 +61,6 @@ process.
 \end{itemize}
 \end{flushright}
 ```
-Как это отображается в редакторе:
 <p><img src="images/Third.png"></p>
 <p><img src="images/Third.1.png"></p>
 
@@ -82,7 +81,6 @@ decisions and the result of their impact on the
 system.
 \end{enumerate}
 ```
-Как это выглядит в редакторе:
 <p><img src="images/Fourth.png"></p>
 
 ### Нумерация заголовков римскими цифрами Ⅸ Ⅹ Ⅺ
@@ -91,7 +89,7 @@ system.
 \begin{enumerate}[label=\arabic*),start=4]%Начинаем нумерацию с 5(1+4)
 \section{Conclusion}   
 ```
-Как это выглядит в редакторе
+
 
  <p><img src="images/Fiveth.png" ></p>
 
@@ -109,7 +107,7 @@ razrabotke edinoi basi znanii multimodalnih perevozok [An ontological approach t
 }
 \end{thebibliography}
 ```
-### Вставка картинок:
+### Вставка картинок📷:
 
 ```
 \begin{center}
@@ -210,4 +208,8 @@ bash
 ```
 
 ### Ресурсы для обучения
-<a href="https://habr.com/ru/articles/541258/">Работа с git</a>
+<a href="https://habr.com/ru/articles/541258/">📙</a>
+<a href="https://www.udemy.com/course/git-basic-concept-fundamentals-github/">📕</a>
+<a href="https://www.udemy.com/course/git-complete/">📗</a>
+<a href="https://www.udemy.com/course/git-expert-4-hours/">📘</a>
+<a href="https://www.udemy.com/course/git-and-github-complete-guide/">📖</a>
