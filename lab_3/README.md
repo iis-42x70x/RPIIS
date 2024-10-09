@@ -13,7 +13,7 @@
 
 Более подробный гайд можно почитать [тут](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes).
 
-<"C:\Users\user\Pictures\Screenshots\Screenshot 2024-10-08 124128.png">
+<"Screenshot 2024-10-08 124128.png">
 
 # Лабораторная работа 3
 
