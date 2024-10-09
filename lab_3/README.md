@@ -13,7 +13,7 @@
 
 Более подробный гайд можно почитать [тут](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes).
 
-![Screenshot 2024-10-08 124128 — копия](https://github.com/user-attachments/assets/ee1a807a-ba3b-43db-8745-6ee7ca461c58)
+![Screenshot 2024-10-08 124128 — копия width=1227](https://github.com/user-attachments/assets/ee1a807a-ba3b-43db-8745-6ee7ca461c58)
 
 # Лабораторная работа 3
 
