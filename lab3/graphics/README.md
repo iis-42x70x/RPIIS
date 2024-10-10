@@ -1,1 +1,1 @@
-#This folder contains image files used in lab1
+# This folder contains image files used in lab1
