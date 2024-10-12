@@ -21,7 +21,7 @@
 
 Познакомиться с программами git, освоить их программные аргументы.
 
-![images-2](https://github.com/user-attachments/assets/08b75428-452f-4fd1-8085-e4311be568e0)
+![image](https://github.com/user-attachments/assets/08b75428-452f-4fd1-8085-e4311be568e0)
 
 ### Основные комманды
 
