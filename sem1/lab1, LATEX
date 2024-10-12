@@ -1,0 +1,54 @@
+(\forall e \in E, \exists !b_{o},b_{o} \in A : (Inc(e,b_{o}) \wedge Inc(e, b_{i}))),
+\]
+
+\ \ \ \ \ \ \ \ \ ($\forall$ $e$ $\in$ $C$, $\exists$ ! $n_{bo}$,$p_{bo}$ , $n_{bi}$, $p_{bi}$ $\in$ $A$ : \par
+((\textit{Inc}(\textit{e}, $n_{bo}$)$\wedge$(\textit{Inc}(\textit{e}, $n_{bi}$)$\wedge$(\textit{Inc}(\textit{e}, $n_{bi}$)$\wedge$(\textit{Inc}(\textit{e}, $p_{bi}$)))),
+\\ 
+
+\ \ \ \ \ \ \ \ \ ($\forall$ $e$ $\in$ $C$, $\exists$ ! $n_{eo}$,$p_{eo}$ , $n_{ei}$, $p_{ei}$ $\in$ $A$ : \par
+((\textit{Inc}(\textit{e}, $n_{eo}$)$\wedge$(\textit{Inc}(\textit{e}, $p_{eo}$)$\wedge$(\textit{Inc}(\textit{e}, $n_{ei}$)$\wedge$(\textit{Inc}(\textit{e}, $p_{ei}$)))),
+\par \ \ \ where \textit{Inc} is the binary relation of incidence of two
+sc-elements.
+\par \ \ \ Information about the number of incoming and outgoing sc-connectors C can be represented as:
+\[
+CI = \langle c_{in}, c_{out} \rangle 
+\]
+where
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+    \item $c_{in}$ $\in$ ($\mathbb{\bar N}$ $\cup$ \{0\}) is the number of incoming sc-connectors in a given sc-element,
+    \item $c_{out}$ $\in$ ($\mathbb{\bar N}$ $\cup$ \{0\}) is the number of outgoing sc-connectors from a given sc-element.
+\end{itemize}
+\par \ \ \ This information can be used to optimize the isomorphic search for sc-constructions over a given graphtemplate [2].
+\par \ \ \ The model of storage of sc-elements in sc-memory
+provides:
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+    \item  storage of sc-constructions, their sc-elements, characteristics and incident relations between them;
+    \item ability to create, modify, search and delete scelements.
+\end{itemize}
+\par \ \ \ The advantages of this model are as follows:
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+    \item it provides efficient fragmentation and defragmentation of cells;
+    \item algorithms for allocating and freeing a memory
+segment have asymptotic complexity from $O$(1) to
+$O$($n$), where n is the number of segments that must
+be traversed to find a free segment.
+\end{itemize}
+\textit{B. Model of storage of external information constructions in sc-memory}
+\par \ \ \ The model of storage of external information constructions in sc-memory can be represented as
+\par \ \ \ \ \ \ \ \ \ \ $FS$ = $\langle$ $CH$, $M_{s}$, $n_{ch_{le}}$, $n_{ch_{max}}$, $m_{ch}$, $tr$ \\
+\par \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ $TSO$, $SOF$, $FSO$, $FSPI$ $\rangle$,
+where
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+    \item $CH$ = $\langle$$ch_{1}$, $ch_{2}$, ..., $ch_{i}$, ..., $ch_{n}$,   $\rangle$, $i$ = $\overline{1, n}$ is
+the sequence of dynamically allocated file segments
+in sc-memory of fixed size n;
+    \item $ch_{i}$ = \{ $\langle$ $\langle$ $l_{s_{i1}}$, $s_{i1}$  $\rangle$, ..., $\langle$ $l_{s_{ij1}}$, $s_{i1}$  $\rangle$, ... $\langle$ $l_{s_{im}}$,$e_{im}$$\rangle$$\rangle$, $n_{sl}$, $m_{s}$\}, $j$ = $\overline{1, m}$ \textit{---} the $i$-th file segment of fixed size m, consisting of cells – pairs of string lengths $s_{s_{ij}}$ and strings themselves $s_{ij}$ $\in$ $STR$,
+    \item $n_{s_{l}}$ $\in$ ($\mathbb{\bar N}$ $\cup$ \{0\}) \textbf{---}  the index of the last engaged
+cell in the file segment $ch_{i}$,
+    \item $m_{s}$ $\in$ $M$ \textbf{---} the object that synchronizes access to $n_{s_{le}}$;
+    \item $M_{s}$ $\subseteq$ $CHS$ $\times$ $M$ \textbf{---} a dynamic oriented set of file
+and cell pairs and their corresponding synchronization objects;
+    \item $n_{ch_{le}}$ $\in$  ($\mathbb{\bar N}$ $\cup$ \{0\}) \textbf{---} the index of the last engaged
+file segment in sc-memory ($n_{ch_{le}}$ = $n$),
+\end{itemize}
+\end{document}
