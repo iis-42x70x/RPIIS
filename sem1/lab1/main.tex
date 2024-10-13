@@ -1,0 +1,189 @@
+\documentclass{scndocument}
+
+\usepackage{multicol}
+\usepackage{moresize}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+\captionsetup[figure]{name=Figure}
+\setcounter{figure}{1}
+\setcounter{page}{246}
+
+\begin{document}
+\begin{multicols*}{2}
+\noindent interpretation platform with a semantic model of the system itself described in SC-code, encompassing sub-models for the knowledge base, interfaces, and problem solvers. A detailed description follows:
+\vspace{5mm}
+
+\noindent\textit{A. Development of the Solver and Knowledge Base.}
+\vspace{3mm}
+
+The introduction of SC-code by OSTIS technology serves as a universal language for semantic expression of information in intelligent computing systems. It employs set theory for defining semantic aspects and graph theory for constructing syntactic structures, ensuring compatibility across different types of knowledge through semantic memory (sc-memory). This approach not only simplifies the description of various types of knowledge and models but also allows for the construction of an ontological model (sc-model) of any entity based on SC-code.
+
+Developing a problem solver and knowledge base, especially for Alzheimer’s disease using OSTIS technology, involves several key steps:
+\begin{enumerate}[label=\alph*), noitemsep]
+\item Knowledge Representation: This step involves defining knowledge about Alzheimer’s disease, such as symptoms, diagnostic criteria, etc., and how this knowledge is represented within the OSTIS framework. The method of representation includes creating a semantic network to model the relationships and entities related to Alzheimer’s disease.
+\item Data Collection and Organization: Gathering and documenting data, where the structure of the data must be consistent with the chosen method of knowledge representation.
+\item Knowledge Base Development: Importing data into the OSTIS system to establish a knowledge base, which may include concepts, predicates, and rules for controlling the logic of diagnosing Alzheimer’s disease within the system.
+\item Solver Implementation: Developing the solver in-volves creating algorithms that can navigate the knowledge base to provide diagnoses based on input data. This includes implementing reasoning mechanisms that can assess patient data against the knowledge base to identify the presence of Alzheimer’s disease.
+\item Data Storage: In compliance with medical data storage regulations, the system needs not only to possess a static knowledge base but also to have the capability to store dynamic data such as patient records and diagnostic results.
+\end{enumerate}
+
+The semantic knowledge base is the cornerstone of semantic communication, forming the foundational part of the decision-making system. The data it contains are authoritative, referential, and diverse. For different domains, the objects encompassed by the knowledge base vary, aiming to integrate scattered knowledge within the domain, including historical data, real-time data, statistical analysis results, predictive models, as well as expert knowledge and experience. Through computer technology, originally scattered knowledge is recombined and stored in different locations, enabling decision-makers to quickly access relevant information and resources.
+
+In application, the development of the knowledge base is primarily based on the information extracted, combined with the OSTIS framework, to construct a knowledge graph. This graph is further processed and refined to form a structured knowledge base. Storing semantically linked data about neurological diseases, it provides the necessary knowledge support for disease prediction.
+\begin{SCn}
+\scnheader{System Knowledge Base}
+\scnsuperset{Declarative Knowledge}
+\begin{scnindent}
+    \scnhaselement{Alzheimer's Recognition Theory Concept Ontology}
+\end{scnindent}
+\scnsuperset{Procedural Knowledge}
+\begin{scnindent}
+    \scnsuperset{System Knowledge}
+    \begin{scnindent}
+        \begin{scnrelfromset}{splitting}
+            \scnitem{Model Building Knowledge}
+            \scnitem{Model Optimization Knowledge}
+            \scnitem{Results Display Knowledge}
+        \end{scnrelfromset}
+    \end{scnindent}
+    \scnsuperset{Static Knowledge}
+    \begin{scnindent}
+        \scnhaselement{System Process}
+    \end{scnindent}
+    \scnsuperset{Dynamic Knowledge}
+    \begin{scnindent}
+        \scnhaselement{Conditional Response in Specific Situations}
+    \end{scnindent}
+\end{scnindent}
+\end{SCn}
+
+The problem solver performs basic actions of directly modifying and managing the knowledge base, offering a more dynamic component compared to the knowledge base itself. It handles information stored in the knowledge base to address specific problems, applying algorithms, rules, and reasoning techniques to interpret, analyze, and derive conclusions or solutions from available knowledge, making decisions or generating new knowledge. Semantically, these operations are considered actions performed within the memory of the acting entity, typically the OSTIS system itself, with the knowledge base viewed as its memory. Actions are executed based on the set problem, describing the internal state of the intelligent system or the required state of the external environment for different problem categories.
+
+Figure 2 presents the SCG-code description of the speech classification task within the set-theoretical ontology
+
+Within the OSTIS Technology framework, to achieve the task of natural language processing, a specialized ostis-system can be developed. The sc-model of the problem solver is developed as a hierarchical system of agents (sc-agents), providing flexibility and modularity for the developed sc-agents. Abstract sc-agents are func-
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{images/figure2.png}
+    \caption{A fragment of the set-theoretic ontology for speech classification tasks.}
+\end{figure}
+
+\noindent tionally equivalent sc-agents of a certain category, with different instances implemented in various programming languages to address specific problems. In our work, to implement an intelligent IT diagnostic system for Alzheimer’s disease integrated with OSTIS, converting natural language speech into diagnostic indicators required describing the entire process of natural language processing and building extraction rules. Since in the OSTIS technology framework, every action internally represents some transformation executed by a specific sc-agent (or a group of sc-agents), we consider the scmodel of the problem solver. The entire data processing workflow is a core component of the system, ensuring efficient and accurate collection, transmission, processing, and storage of data. An example of processing users’ data within the system is shown in Figure 3.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{images/figure3.png}
+    \caption{An example of processing users’ data within the system.}
+\end{figure}
+
+\noindent\textit{B. Designing the User interface}
+\vspace{2mm}
+
+Designing the user interface for the diagnostics system requires careful consideration of the end-users, typically healthcare professionals and possibly patients or their families. The interface should be intuitive and facilitate easy navigation through the diagnostic process:
+\begin{enumerate}[label=\arabic*), noitemsep]
+\item Information Input: Designing forms and input fields that allow for easy entry of patient data and symptoms.
+\item Diagnostic Process Visualization: Providing visual cues or progress indicators that guide the user through the diagnostic process, helping them understand what stage the diagnosis is at and what steps are next.
+\item Results Presentation: Displaying the diagnostic results in a clear, understandable format. This could include a summary of findings, confidence levels, and recommendations for further actions or treatments.
+\end{enumerate}
+
+Due to the use of component approach, the development of the entire natural language interface comes down to development and improvement of separate specified components (e.g. knowledge base on natural language processing, component for natural language texts generation). The model of the process of responding to user needs and the components of inference engine was shown in figure 4.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{images/figure4.png}
+    \caption{The model of the process of responding to user needs.}
+\end{figure}
+
+The user interface includes all the components required for user interaction and obtaining results. The general process of interacting with the user interface can be described as follows:
+\begin{itemize}[noitemsep]
+\item The user reads all the necessary instructions.
+\item The user begins to record voice data according to the instructions.
+\item The user ends the recording action and uploads the data.
+\item The user presses the "Predict Data" button to receive the probability of illness corresponding to their voice data.
+\item The result is displayed in the result feedback area.
+\end{itemize}
+
+In the design of the user interface, taking the collection of voice data as an example, the client-side page allows participants to select from three functions: recording voice information, converting voice to text, and predicting outcomes. The voice-to-text conversion serves as an illustrative example of one method of data preprocessing. Developers may adapt or modify this functionality based on specific design requirements. After participants have recorded their voice information onto their phones, the device will save this voice data and carry out data preprocessing and feature extraction tasks. Upon activation of the "predict" function by the participant, the phone, acting as a client, will transmit the generated feature file to the server. Following the receipt of prediction results sent from the server or another agent, the phone will interpret these results and display them on the page.
+
+User interface design is based on a component-based approach, any user interface component can be described in the ostis-system knowledge base. An illustration of the user interface displaying the probability of a participant being diagnosed with Alzheimer’s disease is presented in Figure 5.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{images/figure5.png}
+    \caption{An example of the user interface}
+\end{figure}
+
+For the corresponding SCg-code description fragment within the OSTIS system knowledge base, see Figure 6.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{images/figure6.png}
+    \caption{SCg-code of the user interface.}
+\end{figure}
+
+\begingroup
+\centering
+\normalsize VI. Conclusion and future works
+
+\endgroup
+
+\normalsize In the report, the authors present an approach to the design of an Internet of Things-based diagnostic network aimed at using the OSTIS platform to expand the possibilities of data interpretation within the intelligent process of diagnosing Alzheimer’s disease. The structure of the ontology for the description of the subject area is given. The process of developing solvers, knowledge bases and user interfaces adapted for healthcare professionals and patients is described taking into account the stages from data collection to presentation of diagnostic results. In the future, the work will focus on improving the OSTIS-based OTNET to increase the accuracy of recognition and study its applicability to the treatment process, thereby expanding the possibilities of intelligent diagnostics in the field of medicine.
+\vspace{3mm}
+
+\begingroup
+\centering
+References
+
+\endgroup
+\begin{enumerate}[label=\textbf{[\arabic*]}, noitemsep]
+\ssmall
+\item T. Shuo, Y. Wenbo, L. G. Jehane Michael, W. Peng, H. Wei, and Y. Zhewei, “Smart healthcare: making medical care more intelligent,” Global Health Journal, vol. 3, no. 3, pp. 62–65, 2019.
+\item J. Zhang, Y. Li, L. Cao, and Y. Zhang, “Research on the construction of smart hospitals at home and abroad,” Chinese Hospital Management, vol. 38, pp. 64–66, 2018.
+\item K. Clemens Scott and B. Amanda, “Health information technology continues to show positive effect on medical outcomes: systematic review,” Journal of medical Internet research, vol. 20, no. 2, 2018, article e41.
+\item B. Pradhan, S. Bhattacharyya, and K. Pal, “Iot-based applications in healthcare devices,” Journal of healthcare engineering, vol. 2021, pp. 1–18, 2021, article ID 6632599.
+\item (2020) Alzheimer disease relevance ontology by process. [Online]. Available: https://bioportal.bioontology.org/ontologies/AD-DROP/p=classesconceptid=rootconcept
+\item G. Szatloczki, I. Hoffmann, V. Vincze, J. Kalman, and M. Pakaski, “Speaking in alzheimer’s disease, is that an early sign? importance of changes in language abilities in alzheimer’s disease,” Frontiers in aging neuroscience, vol. 7, 2015, article 195.
+\item F. Martínez-Sánchez, J. J. G. Meilán, J. Carro, and O. Ivanova, “A prototype for the voice analysis diagnosis of alzheimer’s disease,” Journal of Alzheimer’s disease, vol. 64, no. 2, pp. 473–481, 2018.
+\item R. D. Nebes, C. B. Brady, and F. J. Huff, “Automatic and attentional mechanisms of semantic priming in alzheimer’s disease,” Journal of Clinical and Experimental Neuropsychology, vol. 11, no. 2, pp. 219–230, 1989.
+\item A. Satt, R. Hoory, A. König, P. Aalten, and P. H. Robert, “Speechbased automatic and robust detection of very early dementia,” in Fifteenth Annual Conference of the International Speech Communication Association, 2014, p. 2538––2542.
+\item U. Vishniakou and C. Yu, “Using machine learning for recognition of Alzheimer’s disease based on transcription information,” Reports of BSUIR, vol. 21, no. 6, pp. 106–112, 2023.
+\end{enumerate}
+
+
+\begingroup
+\centering
+\textbf{РАЗРАБОТКА СЕТИ ИНТЕРНЕТА ВЕЩЕЙ ДЛЯ ДИАГНОСТИКИ БОЛЕЗНИ АЛЬЦГЕЙМЕРА С ИСПОЛЬЗОВАНИЕМ OSTIS}
+
+\endgroup
+\begingroup
+\centering
+Вишняков В.А., Чуюэ Юй
+
+\endgroup
+\vspace{3mm}
+
+Доклад посвящен разработке Интернета вещей для диагностики болезни
+Альцгеймера (БА) с использованием
+технологии OSTIS. Приведена структура онтологии для
+описания элементов заболевания БА. В статье рассматривается построение ИТ
+диагностической сети БА, использующей семантические возможности платформы
+OSTIS для
+обработки и анализа медицинских данных. Представлены
+элементы описания базы знаний, решателей и пользовательского интерфейса с использованием компонентного подхода
+к проектированию.
+
+Ключевые слова: сеть интернета вещей, болезнь Альцгеймера, база знаний, решатель, пользовательский интерфейс,
+ИТ-диагностика, OSTIS.
+
+\begingroup
+\raggedleft
+Received 31.03.2024
+
+\endgroup
+
+\end{multicols*}
+\end{document}
