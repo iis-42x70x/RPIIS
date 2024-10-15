@@ -45,9 +45,7 @@
 
  ### Работа с секциями  и римскими цифрами
  ```
- \section*{\fontsize{10}{11}\selectfont\textnormal{
-  \RomanNumeralCaps{5}. Conclusion }
-}
+\RNumb{5}. Experiments and Results
 ```
 <p align="center"> а вот как выглядит это в <b>pdf</b>
 </p>
