@@ -29,22 +29,19 @@
 \end{itemize}
 ```
  а вот как выглядит это в **pdf**
- <p  align="center"><img src="images/im1.png" ></p>
+ <p  align="center"><img src="images/1.png" ></p>
 
 ### Вставка картинок
 ```
-\begin{center}
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=4.35cm]{figs/Picture.png}
-    \caption{Figure 5.The first variant of mutual placement of objects.}
-    \label{fig:first}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=8cm,height=4cm]{image.png}
+  \caption{Simple neural network architecture.}
 \end{figure}
-\end{center}
 ```
  а вот как выглядит это в **pdf**
 
-  <p  align="center"><img src="images/4.png" width=400px height=300px></p>
+  <p  align="center"><img src="images/2.png" width=400px height=300px></p>
 
  ### Работа с секциями  и римскими цифрами
  ```
