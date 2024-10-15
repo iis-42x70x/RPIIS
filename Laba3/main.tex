@@ -1,0 +1,255 @@
+\documentclass[a4paper, 10pt,twocolumn]{article}
+\usepackage[margin=2.2cm,top=1.8cm]{geometry} % for setting margins
+\usepackage{graphicx}
+
+\title{\textbf{Applied Aspects of Using OSTIS Technology in
+Information Support of Digitalisation of Water
+Use Processes of Dairy Processing Enterprises}}
+\author{
+    Vladimir N. Shtepa\\
+    Minsk, Belarus\\
+    Email: tppoless@gmail.com
+  \and
+    Eduard N. Muslimov\\
+    Minsk, Belarus\\
+    Email: muslimoven@mail.ru}
+\date{}
+\begin{document}
+\maketitle
+
+\textbf{
+ \textit{Abstract}—The conceptual approaches of digitalisation of
+manufactures based on the e-Manufacturing ideology are
+evaluated, which are proposed to be used for modelling
+the processes of water use of milk processing enterprises;
+the organisational and technological processes of formation
+of pollutants in their wastewater are analysed. In IDEF0
+methodology functional modelling of water use of such
+productions is carried out, that allowed to reveal complexity
+and multidirectionality of interrelations of parameters and
+to justify the use of OSTIS technology for tasks of formation
+of intellectual information and reference system. On the
+example of a biological pond as a node of wastewater
+treatment, an element of the proposed approach of practical
+implementation of OSTIS-solutions in the segments of
+digital modelling of the dairy industry and environmental
+management is implemented.}
+\setcounter{page}{171}
+\par
+\textbf{
+\textit{Keywords}—Digitalisation, water management, milk processing, information and reference system}\\
+\centerline {\maketitle{I. Introduction} }
+
+The term Digitale Fabrik (digital factory) is used to
+describe production in the context of informatisation,
+but today the essence of Digitale Fabrik is more often
+expressed by the term e-Manufacturing. At the heart of
+the idea of e-Manufacturing is the continuous application of digital models in the design and operation of
+production systems. Not only the products themselves are
+modelled, but also production equipment, material flows,
+as well as production and logistics processes, taking
+ergonomics and human factors into account. The goal of
+e-Manufacturing is to achieve such a level of object and
+process modelling that the real manufacturing process
+starts only after all its elements have been studied and
+optimised with the help of models [1].
+\par Digital manufacturing is one of the components of
+product lifecycle management (PLM) technology, its
+main task is to improve complex manufacturing processes. A set of digital manufacturing solutions belongs
+to the class of MRM-systems (Manufacturing Process
+Management) [2].
+\par If in CAD/CAM/CAE-systems in most cases the application of a particular software tool is associated with
+obtaining a digital layout of the product and the distribution of roles is clearly deterministic by the content of
+the work performed (surface designer, layout designer,
+solid geometry designer, etc.), in MRM-systems this
+dependence is much more flexible [3]. This is due to the
+fact that technological processes in different industries
+can differ significantly, even enterprises of the same
+industry can have different technological processes. Such
+operations include the functioning of complexes ensuring
+the fulfilment of environmental requirements, including
+the removal (treatment, discharge) of industrial wastewater (WW) [4], [5].
+\par This problem is especially acute for enterprises of milk
+processing industry.
+
+
+\maketitle{II. Technological problems of formation and treatment
+of wastewater of milk processing enterprises} 
+
+Contaminated wastewater of milk processing plants is
+a product formed after washing of equipment, technological piping system, transport tanks of different volumes,
+including road and railway tanks, flasks and other containers [6], [7]. Also the sources of pollutants formation
+include effluents after cleaning of production facilities,
+washing of panels and floors. The amount of polluted
+wastewater is 20% — 50% of the total volume of water
+use. Wastewaters of milk processing enterprises belong
+to the category of highly concentrated organic pollutants:
+they contain significant concentrations of organic pollutants (fat, protein, lactose), polluted also with inorganic
+compounds (including acids and alkalis) and synthetic
+surface active substances (detergents). Their composition
+and concentration of pollutants depend on the profile and
+productivity of enterprises [7], [8].
+\par Analysis of literature sources [4]–[8] has shown that
+there is an intensive search for rational and highly efficient methods and technologies of wastewater treatment
+for food industry enterprises (including dairy industry).
+The most common solution in this area is the combination of classical treatment methods with new methods [8],
+while an adequate choice of equipment for a particular
+enterprise is impossible without a high-quality design
+task and the preparation of appropriate models (first of
+all, water technological passport), including those based
+on digital technologies [9].\\
+
+\maketitle {III. Problem formulation for an intelligent information
+and reference system water use by dairy processing
+enterprises}\\
+
+To solve the problem, we initially perform functional
+modelling in IDEF0 methodology (Fig. III).
+\par The following categories of parameters (according
+to IDEF0 terminology) are selected on the basis of
+technological analysis:
+
+\textbf{• input factors}
+\par \quad  \textbf{-} coming from measuring instruments in operational mode:
+\par \qquad \textasteriskcentered \quad  actual flow rate of process water (PW):;
+\par \qquad \textasteriskcentered \quad  about 2-3 process water quality indicators
+(e.g., pH, electrical conductivity);
+\par \qquad \textasteriskcentered \quad  actual wastewater flow rate;
+\par \qquad \textasteriskcentered \quad  about 3-5 quality indicators of WW: pH, temperature, redox potential (ORP), chemical oxygen demand (COD), electrical conductivity;
+\par \qquad \textasteriskcentered \quad  information on equipment status (based on the
+production scheme and operating SCADA).
+\par \quad  \textbf{-} measurements of water quality parameters from
+the laboratory:
+\par \qquad \textasteriskcentered \quad information on PW quality;
+\par \qquad \textasteriskcentered \quad information on WW quality.
+
+\par \quad  \textbf{-} from expert technologists and expert technicians:
+\par \qquad \textasteriskcentered \quad information on the planned demand for PW
+per shift;
+\par \qquad \textasteriskcentered \quad information on the planned demand for ingredients per shift;
+\par \qquad \textasteriskcentered \quad information on the state of technological
+equipment.
+\par \textbf{• control factors:}  requirements for the quality of PW,
+characteristics of the equipment (under which it
+operates according to its passport parameters), requirements for technological processes (under which
+the requirements for their regulatory flow are met),
+regulatory requirements for the quality of wastewater, cost of resources;
+\par \textbf{• mechanisms:} electrical equipment that ensures the
+operation of the information system as a whole;
+\par \textbf{• results:}
+\par \quad  \textbf{-} dynamic balance of water use (based on planned
+shift production tasks, as well as with the function
+of calculating financial costs for the period from
+the beginning of the shift to the current point
+in time - potentially a forecast is also necessary
+based on the current state, for example, until the
+end of the shift);
+\par \quad  \textbf{-} operational forecast of the quality of WW (based
+on planned shift tasks, as well as with a forecast
+correction function based on real indicators of
+production and quality of PW and WW at the
+current time (with various forecast projections);
+\par \quad  \textbf{-} dynamic recommendations for organizational,
+technical and technological actions in order to
+reduce financial costs for water use (based on the
+current situation and forecast);
+
+\par \quad  \textbf{-} dynamic costs for minimizing waste pollution
+(based on the current situation and forecast).
+
+\par Performing a decomposition of the first level diagram
+(see Fig. 1) allows you to detail the tasks of digital
+modeling (\ref{image}Fig. III).
+\par Analysis of the diagram of the first level of decomposition (\ref{image} see Fig. III):
+\par \textbf{•} here the key will be the multi-level decomposition of
+the block “Systematization of data on water disposal
+parameters”, it will include production subsystems
+and units that use “process water”, polluting it
+and transforming it into “waste water” - with the
+main module “Intelligent information and reference
+system" (IIRS), which will analyze the situation
+and "consult" process and technical specialists: what
+operating modes they should choose initially, how
+to relate to the state of this or that equipment (the
+flow of production processes), what variants of the
+assortment task will lead to what resource costs and
+environmental risks, regarding the resource cost of a
+specific assortment task, regarding the acceptability
+of the functioning of a specific unit or the use of an
+ingredient, etc. (based on a retrospective production
+analysis);
+\par \textbf{•} at the same time, the “Intelligent Information and
+Reference System” must, of course, work with the
+integrating technology support block “Analysis and
+forecasting of the efficiency of use of water resources of an enterprise.”
+\par The “intelligent information and reference system”, in
+fact, should become an adaptive (interactive) technological regulation for water use of an enterprise, largely
+ensuring the interoperability of the entire system as a
+whole, with potential transformation along the chain:
+“decision support system – automated process control
+system for water use — digital MES (MIS, LIMS, EMI)
+resources — ERP.”
+\par Then the intelligent information and reference system
+for supporting specialists of milk processing enterprises
+in the water use segment is a software product (SP)
+intended for storage in a structured electronic form
+and prompt provision to other SPs and specialists of
+various technological information accumulated both in
+basic regulatory documents (BC ,SS R, BAT) and in
+specially created databases and knowledge. IISS will
+make it possible to create a unified information space
+of technological knowledge for prompt consultation on
+issues of interest to specialized specialists (managers,
+chief engineers, WW technologists, instrumentation and
+control engineers, designers) using data from regulatory
+documents and advanced solutions obtained, for example, based on benchmarking and expert opinions.
+\par Main planned products:
+\par \textbf{•} software (SP), which can be used by all enterprises,
+including holding companies;
+\par \textbf{•} educational and methodological materials for continuous improvement of qualifications and retraining of
+specialists in the field of digital technologies using
+the created product.
+
+\begin{figure*}[h!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{2024-09-04_17-41-53.png}
+    \caption{gfk}
+    \label{image}
+\end{figure*}
+
+
+
+\par At the same time, it should be noted that water use
+processes, including the functioning of local
+treatment
+facilities, are characterized by nonlinearity, nonstationarity, multifactorial, multiprocess nature, constant changes
+in the structure of internal relationships, the presence of
+significant hidden mutual influences between technological parameters, the use of separately functioning ones
+when solving a single industrial problems of information
+systems (for example, 5-6 industrial SCADA) [4]–[9].
+\par Accordingly, the proposed (reasonable) transformation
+(“intelligent decision support system – automated process
+control system for water use — digital MES (MIS,
+LIMS, EMI) resources — ERP”) requires a specialized
+methodological apparatus of a new generation.
+\par Such solutions include OSTIS Technology [10]. New
+generation intelligent computer systems developed on its
+basis are called OSTIS systems. The OSTIS Technology
+is based on a universal method of semantic representation
+(coding) of information in the memory of intelligent
+computer systems, called the SC code. SC code texts
+(sc-texts, sc-constructions) are unified semantic networks
+with a basic set-theoretic interpretation. Elements of
+such semantic networks are called sc-elements (sc-nodes
+and sc-connectors, which, in turn, depending on their
+orientation, can be sc-arcs or sc-edges). The universality
+and unification of the SC code makes it possible to
+describe on its basis any type of knowledge and any
+methods for solving problems, which, in turn, greatly
+simplifies their integration both within one system and
+within a group of such systems.
+
+\par The basis of the knowledge base developed using the
+OSTIS Technology is a hierarchical system.
+
+\end{document}
