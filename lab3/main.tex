@@ -1,0 +1,314 @@
+\documentclass{article}
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools,mathtext}
+\usepackage[labelformat=empty]{caption}
+\usepackage{multirow}
+\usepackage[a4paper,top=1cm,left=2cm,right=2cm,bottom=2cm]{geometry}
+\usepackage{array}
+\usepackage{ragged2e}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}} % центрирование текста в ячейках
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\setlist[itemize,1]{itemsep=0pt, topsep=0pt, parsep=0pt, partopsep=0pt}
+\setlength{\columnsep}{0.3cm} % Устанавливаем расстояние между колонками
+\setcounter{page}{276}
+\usepackage{url} 
+\usepackage{hyperref}
+\usepackage{paracol}
+\begin{document}
+
+
+
+\begin{center}
+Table I \\
+Accuracy and Predictive Values
+\end{center}
+
+\begin{center}
+\small
+\begin{tabular}{|P{1.2cm}|P{1.2cm}|P{1.2cm}|P{1.2cm}|P{1.2cm}|P{1.2cm}|P{1.2cm}|P{1.2cm}|P{1.2cm}|}
+
+\hline
+ & \multicolumn{4}{|c|}{\textbf{ UNet Segmentation}} & \multicolumn{4}{c|}{\textbf{CRF Segmentation}} \\ \hline
+&  Acc. & CPV & DPV & NPV & Acc. & CPV & DPV & NPV \\ \hline
+\multicolumn{9}{|c|}{\textbf{Binary Segmentation, Dice Loss}} \\ \hline
+Minimal & 0.2629 & 0.0108 & - & 0.3144 &0.2556 & 0.0086 & - & \\ \hline
+Average & 0.7427 &0.3962& -& 0.8984& 0.7440 &0.3978& - &0.8987 \\ \hline
+Median & 0.7580& 0.3933 &-& 0.9464 &0.7589 &0.3939& - &0.9479 \\  \hline
+Maximal &0.9243 &0.8968& - &1& 0.9217& 0.9001& -& 1 \\ \hline
+\multicolumn{9}{|c|}{\textbf{Binary Segmentation, Focal Loss}} \\ \hline
+Minimal &0.3379& 0& -& 0.3330& 0.3389 &0 &- &0.3322 \\ \hline
+Average &0.8308 &0.4023 &-& 0.8513& 0.8098 &0.4185 &-& 0.8292 \\ \hline
+Median& 0.8671& 0.3960 &- &0.8891 &0.8412 &0.4110 &- &0.8635 \\ \hline
+Maximal &0.9785 &0.9897 &- &0.9965 &0.9780 &1 &- &0.9950 \\ \hline
+\multicolumn{9}{|c|}{\textbf{Ternary Segmentation, Dice Loss}} \\ \hline
+Minimal& 0.0685& 0.1310& 0& 0& 0.0622& 0.1271 &0 &0 \\ \hline
+Average& \textbf{0.3175} &0.6830 &\textbf{0.3746} &0.5127 &\textbf{0.4498} &0.6819 &\textbf{0.5169} &0.5132 \\ \hline
+Median& \textbf{0.3067}& 0.7412 &\textbf{0.3245} &0.5017 &\textbf{0.4386} &0.7447 &\textbf{0.5616} &0.5132 \\ \hline
+Maximal &\textbf{0.7331}& 0.9992 &0.9992 &1& \textbf{0.9168}&0.9983 &0.9947& 1 \\ \hline
+\multicolumn{9}{|c|}{\textbf{Ternary Segmentation, Focal Loss}} \\ \hline
+Minimal &0.0053 &0.0466 &0 &0 &0.0534 &0.0899& 0.0002 &0 \\ \hline
+Average &\textbf{0.3178} &0.7028 &\textbf{0.2437} &0.4929 &\textbf{0.5026} &0.7014 &\textbf{0.4890} &0.4765 \\ \hline
+Median &\textbf{0.3012} &0.8016 &\textbf{0.0771} &0.4913 &\textbf{0.4952} &0.7785 &\textbf{0.4911} &0.4693 \\ \hline
+Maximal &\textbf{0.7775} &0.9998 &1 &1 &\textbf{0.9381} &1& 0.9911& 1 \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{multicols}{2}
+
+\raggedright % Выровнять текст по левому краю
+
+\normalsize Sometimes the rates $N_1/\hat{N_1}$ and $N_2/\hat{N_2}$ are greater than 1. It may indicate situations where separate persons are detected as crowds and sparse crowds are recognized as dense crowd regions. According to our calculations, from 15\% to 25\% images have such values. Hence, the model might both under- and overestimate the crowd density. Also, data from Table II prove again using the CRF is crucial for ternary segmentation prediction.\\
+\vspace{15pt} 
+\centering \small Table II\\
+\small Crowd Detection Rates\\
+\vspace{5pt} 
+\begin{tabular}{|P{1.2cm}|P{1.2cm}|P{1.2cm}|P{1.2cm}|P{1.2cm}|}
+\hline
+
+& \multicolumn{2}{c|}{UNet segmentation} & \multicolumn{2}{c|}{CRF segmentation} \\ \hline
+ & Dice & Focal & Dice & Focal \\ \hline
+\multicolumn{5}{|c|}{\textbf{Binary Segmentation ($N_1/\hat{N_1}$)}} \\ \hline
+Minimal & 0.0097 & 0 & 0 & 0 \\ \hline
+Average & 0.7896 & 0.1719 & 0.7909 & 0.1687 \\ \hline
+Median & 0.8454 & 0.1189 & 0.8473 & 0.0872 \\ \hline
+Maximal & 1.3235 & 0.8868 & 1.3235 & 0.9057 \\ \hline
+\multicolumn{5}{|c|}{\textbf{Ternary Segmentation ($N_2/\hat{N_2}$)}} \\ \hline
+Minimal & 0 & 0.0402 & 0 & 0 \\ \hline
+Average & \textbf{0.5298} & 0.0199 & \textbf{0.8785} & 0.7896 \\ \hline
+Median & \textbf{0.5215} & 0 & \textbf{0.9704} & 0.8517 \\ \hline
+Maximal & 1.2971 & 1 & 1.2971 & 1.2971 \\ \hline
+\end{tabular}
+\vspace{15pt} 
+
+\large\textit{B. Crowd Semantics}
+\vspace{5pt} 
+
+ \justifying \par Most of the ShanghaiTech datasets images are captured by a camera observing a nearby scene from above. Hence, the typical clusterization consists of distant dense clusters, closer regular clusters, and near sparse clusters (\ref{fig:ex}). However, the crowd in an image can be divided vertically if there is a tall object like a pole or a flag (Fig. 4b).\columnbreak
+\justifying
+ \par Sometimes the pattern doesn't hold, which could indicate a group with interest. Some examples where we detect a people's interest include:\\
+\normalsize
+\begin{itemize}
+    \item Multiple clusters with equal density spanning most of the image (Fig. 4c). Those usually present a uniform crowd with regular attention.
+    \item A small cluster within or near a bigger one of a different type (Fig. 4, d-e). Those situations usually present a concentration of interest in particular groups within or near the crowd.
+    \item A significant overlapping between clusters of different types (Fig. 4f). This one can indicate a spreading interest or joining the people groups. Real-time surveillance systems must detect such actions to prevent any dire situations.
+    \item Elongated clusters presenting regular or dense crowds may indicate the presence of a queue in the region (Fig. 4g, the bottom orange cluster). If the density is high enough, some extraordinary situations might take place like queue crushes or evacuation panic which must be dealt with immediately.
+    \item A wide sparse cluster at the bottom of the image might indicate a group of people that is very close to the observer (Fig. 4, d, h). Overlapping between the close cluster and other, distant ones is another feature of such a situation. Depending on the people's behavior, such a close group might be considered an outlier or an interest group, especially when it grows or approaches the observer.
+\end{itemize}
+
+\large
+\centering {\romannumeral 5. Conclusions}
+\\
+\small
+\justifying This paper presents an approach for semantic segmentation of dense and sparse crowd images, addressing the critical 
+\end{multicols}
+\newpage
+\begin{figure}[ht]
+  \centering
+    \begin{subfigure}
+    \includegraphics[width=0.32\linewidth, height=4cm]{image_a.png} 
+    \end{subfigure}
+\begin{subfigure}
+    \includegraphics[width=0.32\linewidth, height=4cm]{image_b.png} 
+    \end{subfigure}
+\begin{subfigure}
+\includegraphics[width=0.32\linewidth, height=4cm]{image_c.png} 
+\end{subfigure}
+\end{figure} \\ 
+\begin{figure}[h]
+\centering
+\begin{subfigure}
+\includegraphics[width=0.32\linewidth, height=4cm]{image_d.png} 
+\end{subfigure}
+\begin{subfigure}
+\includegraphics[width=0.32\linewidth, height=4cm]{image_e.png} 
+\end{subfigure}
+\begin{subfigure}
+\includegraphics[width=0.32\linewidth, height=4cm]{image_f.png} 
+
+\end{subfigure}
+\end{figure} \\ 
+\begin{figure}[h]
+\centering
+\begin{subfigure}
+\includegraphics[width=0.45\linewidth, height=5cm]{image_g.png} 
+\end{subfigure}
+\begin{subfigure}
+\includegraphics[width=0.45\linewidth, height=5cm]{image_h.png} 
+\end{subfigure}
+\caption{\justifying \small  Semantic segmentation of crowds of different types: regular crowds with no attention (a, b), uniform crowd with regular attention (c),diverse crowd containing groups with increased interest (d, e), diverse crowd with a spreading group with interest (f), crowd with a queue (g),
+crowd with a close cluster (h)}
+\label{fig:ex}
+\end{figure} \\ 
+\vspace{10pt}
+\begin{multicols}{2}
+
+\justifying
+\normalsize \noindent  need for accurate crowd analysis in various applications such as crowd management, surveillance, and urban planning. Our proposed method leverages a combination of UNet and CRF networks, augmented by a semi-automatic labeling technique based on Gaussian blur and thresholding methods to generate ground truth maps. Furthermore, we highlight some typical crowd behavior patterns based on clustering the people groups by their density and interconnections between them. Indicating those patterns is important for understanding crowd structures and dynamics as well as establishing crowd management and safety.
+\justifying
+\par \normalsize Through  extensive experimentation and evaluation, we have demonstrated the effectiveness of our approach in accurately segmenting crowd images, particularly in binary segmentation tasks distinguishing crowded from non-crowded regions. While our model excels in binary segmentation, we acknowledge the challenges encountered in ternary segmentation tasks involving dense crowds, sparse crowds, and non-crowded areas. Despite this, our model shows promising results in crowd detection regardless of crowd density. Besides, we prove the necessity of CRF refinement to get better results. \\ 
+
+
+
+\begin{thebibliography}{99}
+\setlength{\itemsep}{0pt}
+\tiny
+
+\bibitem{ref1} 
+K. Khan et al., ``Crowd Counting Using End-to-End Semantic Image Segmentation,'' \textit{Electronics}, 2021, vol. 10, no. 11, \#1293, doi: 10.3390/electronics10111293.
+
+\bibitem{ref2} 
+L. Liu, Z. Qiu, G. Li, S. Liu, W. Ouyang, L. Lin, ``Crowd counting with deep structured scale integration network,'' in \textit{2019 IEEE International Conference on Computer Vision (CVF)}, pp. 1774-1783.
+
+\bibitem{ref3} 
+S. Sholtanyuk, A. Leuniaku, ``Lightweight Deep Neural Networks for Dense Crowd Counting Estimation,'' in \textit{Pattern Recognition and Information Processing (PRIP'2021)}, United Institute of Informatics Problems of the National Academy of Sciences of Belarus, Minsk, 2021, pp. 61–64.
+
+\bibitem{ref4} 
+S. Sholtanyuk, ``Finding The Optimal Segmentation of a Crowd Image with Watershed Method,'' in \textit{Information Systems and Technologies (CSIST'22)}, Part 2, Belarusian State University, Minsk, 2022, pp. 217-223. Available at: https://elib.bsu.by/handle/123456789/288544.
+
+\bibitem{ref5} 
+F. Abdullah, A. Jalal, ``Semantic Segmentation Based Crowd Tracking and Anomaly Detection via Neuro-Fuzzy Classifier in Smart Surveillance System,'' \textit{Arabian Journal for Science and Engineering}, 2023, vol. 48, no. 2, pp. 2173-2190.
+
+\bibitem{ref6} 
+M. Gruosso, N. Capece, U. Erra, ``Human Segmentation in Surveillance Video with Deep Learning,'' \textit{Multimedia Tools and Applications}, 2021, vol. 80, no. 1, pp. 1175-1199.
+
+\bibitem{ref7} 
+A. Kroschanka, E. Mikhno, M. Kovalev, V. Zaharieva, A. Zagorskiy, ``Semantic Analysis of the Video Stream Based on Neuro-Symbolic Artificial Intelligence,'' in \textit{Open Semantic Technologies for Intelligent Systems}.
+
+\bibitem{ref8}
+OSTIS-2021. Belarusian State University of Informatics and Radioelectronics, Minsk, 2021, pp. 193-204.
+\bibitem{ref9}
+A. Kroshchanka, V. Golovko, E. Mikhno, M. Kovalev, V. Zaharie, and A. Zagorskij, ``A Neural-Symbolic Approach to Computer Vision,'' in \textit{Open Semantic Technologies for Intelligent Systems}, eds.: V. Golenkov, V. Krasnoproshin, V. Golovko, and B. Shunkevich, Cham: Springer International Publishing, 2022, pp. 282-309, doi: 10.1007/978-3-031-15882-7\_15.
+
+\bibitem{ref9}
+L. Greco, P. Ritrovato, M. Vento, ``On the use of semantic technologies for video analytics,'' \textit{J Ambient Intell Human Comput}, 2021, vol. 12, pp. 567-587, doi: 10.1007/s12652-020-02021-y.
+
+\bibitem{ref10}
+P. Anderson, B. Fernando, M. Johnson, S. Gould, ``SPICE: Semantic Propositional Image Caption Evaluation,'' in \textit{Computer Vision--ECCV 2016}, eds.: B. Leibe, J. Matas, N. Sebe, M. Welling, Cham: Springer International Publishing, 2016, pp. 382-398, doi: 10.1007/978-3-319-46454-1\_24.
+
+\bibitem{ref11}
+M. H. T. De Boer, Y.-J. Lu, H. Zhang, K. Schutte, C.-W. Ngo, W. Kraaij, ``Semantic Reasoning in Zero Example Video Event Retrieval,'' \textit{ACM Trans. Multimedia Comput. Commun. Appl.}, 2017, vol. 13, no. 4, Article 60, 17 p., doi: 10.1145/3131288.
+
+\bibitem{ref12}
+Z. Feng, Z. Zeng, C. Guo, Z. Li, ``Exploiting Visual Semantic Reasoning for Video-Text Retrieval,'' \textit{arXiv preprint}, arXiv:2006.08889, 2020.
+
+\bibitem{ref13}
+S. Munir, S.I. Jami, S. Wasi, ``Towards the Modelling of Veillance based Citizen Profiling using Knowledge Graphs,'' \textit{Open Computer Science}, 2021, vol. 11, no. 1, pp. 294-304, doi: 10.1515/comp-2020-0209.
+
+\bibitem{ref14}
+X. Guo, M. Gao, G. Zou, A. Bruno, A. Chehri, G. Jeon, ``Object Counting via Group and Graph Attention Network,'' in \textit{IEEE Transactions on Neural Networks and Learning Systems}, 2023, pp. 1-12, doi: 10.1109/TNNLS.2023.3336894.
+
+\bibitem{ref15}
+L. Greco, P. Ritrovato, A. Saggese, M. Vento, ``Improving reliability of people tracking by adding semantic reasoning,'' in \textit{IEEE conference on advanced video and signal based surveillance (AVSS)}, IEEE, 2016, pp. 194-199.
+
+\bibitem{ref16}
+K. Humphrey, G. Underwood, ``Domain knowledge moderates the influence of visual saliency in scene recognition,'' \textit{British Journal of Psychology}, 2008, vol. 100, no. 2, pp. 377-398, doi: 10.1348/000712608X334780.
+
+\bibitem{ref17}
+B. Chen, Z. Yan, K. Li, P. Li, B. Wang, W. Zuo, L. Zhang, ``Variation Attention: Propagating Semantic-Specific Knowledge for Multi-Domain Learning,'' in \textit{Proceedings of the IEEE/CVF International Conference on Computer Vision}, 2021, pp. 16065-16075.
+\bibitem{Sindagi2020}
+V. A. Sindagi, V. M. Patel, ``HA-CCN: Hierarchical Attention-Based Crowd Counting Network,'' in \textit{IEEE Transactions on Image Processing}, 2020, vol. 29, pp. 323-335, doi: 10.1109/TIP.2019.2928634.
+
+\bibitem{Liu2021}
+W. Liu, M. Salzmann, P. Fua, ``Context-Aware Crowd Counting,'' in \textit{IEEE/CVF conference on computer vision and pattern recognition}, 2021, pp. 5099-5108.
+
+\bibitem{Wang2011}
+J. Wang, Z. Chen, Y. Wu, ``Action recognition with multiscale spatiotemporal contexts,'' in \textit{CVPR 2011}. IEEE, June 2011, pp. 3185-3192.
+
+\bibitem{Ronneberger2015}
+O. Ronneberger, P. Fischer, T. Brox, ``U-Net: Convolutional Networks for Biomedical Image Segmentation,'' in \textit{International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI)}, 2015, pp. 234-241.
+
+\bibitem{Badrinarayanan2017}
+V. Badrinarayanan, A. Kendall, R. Cipolla, ``SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation,'' in \textit{IEEE Transactions on Pattern Analysis and Machine Intelligence}, 2017, vol. 39, no. 12, pp. 2481-2495.
+
+\bibitem{Diakogiannis2020}
+F.I. Diakogiannis, F. Waldner, P. Caccetta, C. Wu, ``ResUNet-a: a Deep Learning Framework for Semantic Segmentation of Remotely Sensed Data,'' in \textit{ISPRS Journal of Photogrammetry and Remote Sensing}, 2020, vol. 162, pp. 94-114.
+
+\bibitem{Long2015}
+J. Long, E. Shelhamer, T. Darrell, ``Fully Convolutional Networks for Semantic Segmentation,'' in \textit{IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}, 2015, pp. 3431-3440.
+
+\bibitem{Arbelaez2012}
+P. Arbelaez, B. Hariharan, C. Gu, S. Gupta, L. Bourdev, J. Malik, ``Semantic Segmentation Using Regions and Parts,'' in \textit{IEEE Conference on Computer Vision and Pattern Recognition}. IEEE, June 2012, pp. 3378-3385.
+
+\bibitem{Girshick2014}
+R. Girshick, J. Donahue, T. Darrell, J. Malik, ``Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation,'' in \textit{IEEE Conference on Computer Vision and Pattern Recognition}, 2014, pp. 580-587.
+
+\bibitem{Simonyan2014}
+K. Simonyan, A. Zisserman, ``Very Deep Convolutional Networks for Large-Scale Image Recognition,'' \textit{arXiv preprint}, arXiv:1409.1556, 2014.
+
+\bibitem{Krahenbuhl2011}
+P. Krähenbühl, V. Koltun, ``Efficient Inference in Fully Connected CRFs with Gaussian Edge Potentials,'' \textit{Advances in Neural Information Processing Systems}, 2011, vol. 24, pp. 109-117.
+
+\bibitem{He2014}
+X. He, R.S. Zemel, M.A. Carreira-Perpiñán, ``Multiscale Conditional Random Fields for Image Labeling,'' in \textit{2014 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR)}. IEEE, 2014, pp. 695-702, doi: 10.1109/CVPR.2014.135223.
+
+\bibitem{Dalal2005}
+N. Dalal, B. Triggs, ``Histograms of Oriented Gradients for Human Detection,'' in \textit{IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR'05)}, 2005, vol. 1, pp. 886-893.
+\bibitem{Helbing1995}
+D. Helbing, P. Molnár, ``Social force model for pedestrian dynamics,'' \textit{Physical Review E}, 1995, vol. 51, no. 5, pp. 4282-4286.
+
+\bibitem{Zhang2016}
+Y. Zhang, D. Zhou, S. Chen, S. Gao, Y. Ma, ``Single-Image Crowd Counting via a Multi-Column Convolutional Neural Network,'' in \textit{IEEE Conference on Computer Vision and Pattern Recognition}, 2016, pp. 589-597.
+
+\bibitem{Tan2019}
+M. Tan, Q. Le, ``EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks,'' in \textit{International conference on machine learning}. PMLR, May 2019, pp. 6105-6114.
+
+\bibitem{He2024}
+S. He et al., ``An Image Inpainting-Based Data Augmentation Method for Improved Sclerosed Glomerular Identification Performance with The Segmentation Model EfficientNetB3-UNet,'' \textit{Scientific Reports}, 2024, vol. 14, no. 1, 1033.
+
+\bibitem{Sandler2018}
+M. Sandler, A. Howard, M. Zhu, A. Zhmoginov, L.C. Chen, ``MobileNetV2: Inverted Residuals and Linear Bottlenecks,'' in \textit{IEEE Conference on Computer Vision and Pattern Recognition}, 2018, pp. 4510-4520.
+
+\bibitem{YakubovskiyGithub}
+P. Yakubovskiy, ``Segmentation Models,'' GitHub repository. Available at: \url{https://github.com/qubvel/segmentation_models} (accessed 2024, Mar).
+
+\bibitem{Jadon2020}
+S. Jadon, ``A Survey of Loss Functions for Semantic Segmentation,'' in \textit{2020 IEEE Conference on Computational Intelligence in Bioinformatics and Computational Biology (CIBCB)}. IEEE, Oct. 2020, pp. 1-7.
+
+\bibitem{Milletari2016}
+F. Milletari, N. Navab, S.A. Ahmadi, ``V-Net: Fully Convolutional Neural Networks for Volumetric Medical Image Segmentation,'' in \textit{2016 International Conference on 3D Vision (3DV)}. IEEE, Oct. 2016, pp. 565-571.
+
+\bibitem{Hossain2021}
+M.S. Hossain, J.M. Betts, A.P. Paplinski, ``Dual Focal Loss to Address Class Imbalance in Semantic Segmentation,'' \textit{Neurocomputing}, 2021, vol. 426, pp. 69-87.
+
+\bibitem{KrahenbuhlGithub}
+L. Chen, ``PyDenseCRF,'' GitHub repository. Available at: \url{https://github.com/lucasb-eyer/pydensecrf} (accessed 2024, Mar).
+
+\bibitem{Chen2022}
+M. Chen, S. Banitan, M. Maleki, Y. Li, ``Pedestrian Group Detection with K-Means and DBSCAN Clustering Methods,'' in \textit{2022 IEEE International Conference on Electro Information Technology (eIT)}. Mankato, MN, USA, 2022, pp. 1-6, doi: 10.1109/EIT53591.2022.9813918.
+
+\bibitem{Bouhmidi2022}
+A. Bouhmidi, J. Paquet, E. Bocher, ``Using a Clustering Method to Detect Spatial Events in a Smartphone-Based Crowd-Sourced Database for Environmental Noise Assessment,'' \textit{Sensors}, 2022, vol. 22, #8832, doi: 10.3390/s22228832.
+\begin{center}
+\large \textbf{АВТОМАТИЗАЦИЯ ОЦЕНКИ ВНИМАНИЯ
+СКОПЛЕНИЙ ЛЮДЕЙ НА ОСНОВЕ
+ПОЛУАВТОМАТИЧЕСКОЙ СЕМАНТИЧЕСКОЙ
+СЕГМЕНТАЦИИ ИЗОБРАЖЕНИЙ С
+ИСПОЛЬЗОВАНИЕМ СЕТЕЙ UNET И CRF} \\ 
+\normalsize Шолтанюк С. В., Малёнкин Я. О.,
+Лэй Б., Недзьведь А. М.
+
+\end{center}
+\setlength{\parskip}{0pt}
+\normalsize
+\justifying
+Семантическая сегментация изображений скоплений людей играет ключевую роль в различных приложениях, таких как управление толпой, наблюдение и городское планирование. В данной статье предложен подход к семантической сегментации изображений с плотной и разреженной толпой на основе полуавтоматической разметки, используя комбинацию UNet и условных случайных полей (CRF).
+\vspace{0pt}
+\parПредставляется новый метод семантической сегментации для изображений скоплений людей. Сеть UNet используется для первоочередной сегментации, после которой необходимо следует её уточнение с использованием CRF. Результаты экспериментов показали, что модель лучше выявляет бинарную маску (области, занятые людьми, и фона), свободную от ошибок, чем без использования CRF. Кроме того, улучшение точности, показанной с помощью количественных и качественных результатов, превосходит существующие методы сегментации.Таким образом, предложенный подход даёт лучшие результаты по сегментации толпы в целом (без учёта типа плотности толпы), показав значительное улучшение сегментации при помощи CRF в задаче генерации сегментации толпы.
+\vspace{0pt}
+\par Также на основе предложенной модели сегментации выделены некоторые закономерности поведения скоплений людей. Они связаны как с плотностью внимания людей, связанным с восприятием людей и между ними, а также вероятностью возникновения чрезвычайных ситуаций.
+
+\vspace{0cm}
+
+\begin{flushright}
+Received 25.03.2024
+\end{flushright}
+
+\end{thebibliography}
+\end{multicols}
+
+\end{document}
