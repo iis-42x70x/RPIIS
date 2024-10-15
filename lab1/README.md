@@ -9,28 +9,15 @@
 
 ### Для работы с Latex нужно подключитьспециальные пакеты
 ```
-\documentclass[10pt, a4paper]{article}%создание базы , шрифт 10
+\documentclass[twotcolumn]{scndocument}
 
-\usepackage{graphicx} %подключение пакета для картинок
-\usepackage{multicol} %подключение библиотеки для разделения текста на колонки
-\usepackage{amsmath}
-
-\usepackage[colorlinks=true, allcolors=blue]{hyperref}
-\graphicspath{ {images/} }
+\newcommand{\RNumb}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+\usepackage{multicol}
 \usepackage{lipsum}
-\usepackage{setspace}%подключение бибилотеки для отступов между строками
-\usepackage{fancyhdr}
+\usepackage{tikz}
 \usepackage{float}
-\usepackage[left=2.1cm,right=2.1cm, top=2.1cm,bottom=2.2cm]{geometry} % создание шаблона с определенными отступами
-\setlength{\columnsep}{0.45cm} %расстояние между двумя колонками с текстами
-\usepackage{fancyhdr}
-\cfoot{\textbf{\thepage}} % номер страницы становится жирным
-\pagestyle{fancy}
-\setcounter {page}{117}% установление номера страницы
-\renewcommand{\headrulewidth}{0pt} % убрать разделительную линиб в верхнем колонтитуле
-\newcommand{\RomanNumeralCaps}[1]
-    {\MakeUppercase{\romannumeral #1}}
-
+\usepackage{graphicx}
+\usepackage[usenames]{hyperref}
 ```
 ### Работа со списками
 ```
