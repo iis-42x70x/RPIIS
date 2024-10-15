@@ -21,14 +21,11 @@
 ```
 ### Работа со списками
 ```
-\begin{itemize} %задание списка
-\item[1)]Some parametric family (model) of algorithms is
-selected;
-\item[2)]The initial values of the parameters are fixed, and
-thus a specific algorithm is set;
-\item[3)]The final setting of the algorithm to the subject
-domain is carried out during its training based on
-the training set data.
+\begin{itemize}
+    \item Client 1: SimpleModel (see above);
+    \item Client 2: MobileNetV3 Large;
+    \item Client 3: MobileNetV3 Small;
+    \item Client 4: DenseNet121. 
 \end{itemize}
 ```
  а вот как выглядит это в **pdf**
