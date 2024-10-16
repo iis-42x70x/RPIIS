@@ -8,5 +8,9 @@
 * `\begin{itemize} ... \end{itemize}` - список без нумерации
 * `\newpage` - новая страница
 * `\nohyphens` - убрать отступ в начале(убрать абзац)
+
+### Прилагаемые файлы:
+* `[main.txt](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D0%B2%D0%BE%D1%80_%D0%93/laba_3/main.tex)` - исходный файл вёрстки
+* `[laba1.pdf](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D0%B2%D0%BE%D1%80_%D0%93/laba_3/laba1.pdf)` - готовый pdf-файл с вёрсткой
 ---------
 Гайд от создателей overleaf(LaTeX за 30 минут) - [тык](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
