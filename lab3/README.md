@@ -34,8 +34,11 @@
 ## Примеры выполнения команд:
 
 Использование `git log`:
+
 ![git](https://github.com/user-attachments/assets/8e328090-5b8a-4691-8f9c-ea7e524c07a0)
+
 Использование `git checkout -b` и `git branch`:
+
 ![git1](https://github.com/user-attachments/assets/0c8aea00-44ad-446c-ad6d-94453a427b88)
 
 
