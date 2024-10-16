@@ -27,5 +27,7 @@
 
 ### Работа на удалённом сервере GitHub
 Самым популярным веб-хостингом для работы в команде, для хроненя версий проекта, основанный на Git - GitHub.
+
 [Тут](https://timeweb.com/ru/community/articles/kak-polzovatsya-github) можно ознакомиться с картким обзором GitHub.
+
 [Здесь](https://www.youtube.com/watch?v=O00FTZDxD0o&ab_channel=BogdanStashchuk) же можно более подробно изучить Git и GitHub.
