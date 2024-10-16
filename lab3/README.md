@@ -14,8 +14,6 @@
 
 ![laba1](https://github.com/user-attachments/assets/796be693-5d64-4108-989d-3449c82f20cd)
 
-
-
 # Лабораторная работа 3
 
 ### Цель:
