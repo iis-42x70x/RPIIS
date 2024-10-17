@@ -1,0 +1,363 @@
+\documentclass{article}
+\usepackage{fontspec} 
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{parcolumns}
+\setlength{\columnsep}{1cm}
+\usepackage{titlesec}
+\usepackage[top=2cm, left=2cm, right=2cm,bottom=2cm]{geometry}
+\setmainfont{Times New Roman}
+\renewcommand{\thesection}{\textnormal{\Roman{section}.}}
+\titleformat{\section}
+  {\normalfont\bfseries\centering} % Формат заголовка
+  {\thesection} % Нумерация
+  {1em} % Расстояние между номером и заголовком
+  {} 
+\begin{document}
+
+    \section*{\Huge Basic Priciples of the Ontology of the \\
+    Transportation Process in Railway Transport}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multicols}{2}
+    \section*{\textnormal {Aleksandr Erofeev \\
+     \emph{Belarusian State University of Transport} \\
+     Gomel, Belarus \\
+     Email: \href{mailto:erofeev_aa@bsut.by}{\url{erofeev_aa@bsut.by}}}}
+\columnbreak
+    \section*{\textnormal {Ilya Erofeev \\
+     \emph{Belarussian State University \\
+     of Informatics and Radioelectronics} \\
+     Minsk, Belarus \\
+     Email: \href{mailto:ilerofv@gmail.com}{\url{ilerofv@gmail.com}}}}
+\end{multicols}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multicols}{2}
+
+     \setlength{\baselineskip}{1pt}  {\bfseries \emph{Abstract}—The relevance of developing an ontology for
+an intelligent transportation process management system
+is determined. The structure of the theory of ontology
+construction is given. The existing ontologies of railway
+systems are described. The problems of existing ontologies
+are established. It is proposed to use a process-object
+approach in the formation of ontology. Examples of the use
+of ontology are given. Indicated that the OSTIS technology
+is an effective tool for describing the process-object ontology of the transportation process. \par 
+\emph{Keywords}—Intelligent transportation process management system, ontology, knowledge base, process-object approach, OSTIS technology}
+
+\section{\textnormal{Introduction}} \noindent
+
+Digitalization of technological processes is one of the most effective ways to improve the efficiency of both
+individual enterprises and entire industries. This fully
+applies to railway transport.
+
+For these purposes, the Belarusian Railway has implemented a number of projects on the informatization of
+key technological processes. The Information and Analytical Management Decision Support System for Freight
+Transportation (IAMDSS FT) provides specialists and
+managers at all levels with prompt and reliable information about freight transportation that are being performed
+and were performed, the condition and location of the
+wagon and locomotive fleets. The Unified Corporate
+Integrated Financial and Resource Management System
+(UC IFRMS) based on SAP SE products is designed
+for effective information support of planning, modeling
+and operational management of financial and economic
+activities of the BR divisions.
+
+The creation of the Transportation Management Center and its equipping with automated dispatch control
+systems using "Neman" software and hardware has been
+completed, the development of train schedules using
+"Grafist" automated control systems has been automated,
+and separate planning procedures have been automated.
+At the line level, there are automated management systems for stations and linear areas (AMSS, AMSLA), a
+system for automating the preparation and processing of
+station and commercial reporting documents (SAPPD).
+\columnbreak
+
+The implementation of the above-mentioned and a
+number of other systems made it possible to create a
+fairly detailed and complete database on the transportation process and the railway as a whole. At the same time,
+information technologies operating in railway transport
+make it possible to implement only certain functions
+of the management cycle, entrusting the procedures for
+forming, evaluating and making managerial decisions
+(MD) entirely to a human.
+
+The greatest problems arise with significant deviations from pre-developed technologies (delay of a passenger
+train, shortage of capacity of the station’s fleet, lack of
+empty wagons for loading, etc.). It is at those moments,
+when a person needs help in making managerial decisions, that modern automated systems are not effective
+enough. In such conditions, a person, as a rule, when
+searching for rational MD, resorts to his experience
+based on partially unformalized knowledge and empirical
+experience, and to a lesser extent relies on the help of
+information systems.
+
+Next logical stage in the development of information
+technologies in railway transport is the transition from
+information and reference systems to information and
+analytical and information management systems. In this
+regard, as foundation for the digital transformation of
+railway transport is proposed to consider an intelligent
+transportation process management system (ITPMS).
+
+The development of the ITPMS presupposes the existence of unified ways to describe the system and the
+processes occurring in it — ontologies. [1]
+\begin{center}
+\section{\textnormal{The concept and basis of ontology}}
+\end{center}
+The use of a single "metaplatform" contributes to
+the improvement of transport processes, simplification of
+document flow and acceleration of information exchange
+between participants in multimodal transportation. This
+approach leads to a synergistic effect on three levels:
+within each mode of transport, between different modes
+of transport and in the transport complex as a whole.
+
+However, the development of such systems faces a
+huge amount of information that needs to be integrated
+and coordinated within a single digital platform. Data
+
+
+
+\end{multicols}
+
+\newpage
+\begin{multicols}{2}\noindent
+sources are often disparate even within a single company,
+and the information contained in them can be duplicated, diverse, and have complex relationships such as
+synonymy and mero-holonymy. The complexity of the
+task increases exponentially when scaled to the level of
+the entire transport system or the transport complex as a
+whole.
+
+In the field of multimodal transportation, the active
+use of knowledge brings significant benefits to all participants. For example, successful innovative solutions that
+were once used and accelerated the movement of goods
+in the logistics chain or brought additional profits are
+becoming available to everyone. The ability to generate
+new knowledge can help to find such solutions, even if
+they have not been used before. Ontologies, as well as
+frame models of knowledge representation, are the basis
+of such solutions [2].
+
+Ontologies can be classified into four levels depending
+on their goals:
+
+\begin{enumerate}[noitemsep, label=\arabic*)]
+\item Representation Ontology: They define the domain
+of knowledge representation and serve as the basis
+for creating a specification language for lower-level
+ontologies.
+\item Top-level Ontologies: They describe abstract interdisciplinary concepts and the connections between
+them. Such ontologies capture general knowledge
+applicable in several subject areas.
+\item Domain Ontology: They describe and summarize
+concepts specific to a particular subject area.
+\item Applied Ontologies: They describe the conceptual
+model of a specific task or application.
+\end{enumerate}
+\par
+The following approaches are distinguished within
+these levels:
+\begin{itemize}
+ \item Formal taxonomies: They define a "class-subclass"
+ relationship and ensure the transitivity of this relationship.
+
+ \item Formal instances: They define a "class-instance"
+ relationship and add instances to the class hierarchy.
+
+ \item Disjunctive classes, inverse properties: They allow
+you  to declare two classes disjoint and allow you to
+make  not only direct inference, but also reverse.
+
+ \item Ontologies with restrictions on the scope of property  values:  Property values are selected from a
+predefined  set or subset of concepts.
+
+ \item Frame-based properties: Each class can also have
+slots  containing information about its properties,
+also they can  be inherited by classes of higher levels.
+
+ \item Arbitrary logical constraints: Allow you to define
+ arbitrary axioms.
+ \end{itemize}
+
+Ontologies can also be classified by content into: 
+
+\begin{itemize}
+  \item General Ontologies: They describe the most general
+concepts, independent of specific problems or areas.
+
+ \item Task ontologies: They reflect the specifics of particular applications, tasks or programs.
+\end{itemize}
+    \columnbreak
+    \begin{itemize}
+     \item Subject ontologies: They describe real objects used
+     in a  certain activity.
+    \end{itemize}
+    \includegraphics[width=1\linewidth]{image1.jpg}
+    \begin{center}
+    Figure 1. Ontology classification
+\end{center}
+
+According to Gruber’s definition [4], an ontology is an
+explicit specification of a conceptualization, a formalized
+representation of concepts and the connections between
+them. Formally, it has the form
+\begin{itemize}[noitemsep, label={}]
+\item \emph{< C, R, P, A >},
+\item where
+\item \emph{C} is a set of concepts of a specific subject area,
+\item \emph{R} is the set of relations between concepts,
+\item \emph{P} is the set of attributes of concepts,
+\item \emph{A} is a set of axioms.
+\end{itemize}
+
+\section{\textnormal{Current state of ontologies in railway transportation}} \noindent
+
+The process of creating ontologies is complex and nontrivial. When developing them, as a rule, experts from
+different fields are involved (in the subject area, linguists,
+programmers, etc.), each of whom applies their own
+methods of work. But there are still no universal methods,
+and the correctness of the result obtained is determined
+specifically for each particular task. [5], [6] Ontological
+analysis determines the functional structure (connections
+between objects) and determines the behavior of the
+system (scenarios).
+
+The existing IDEF5 [3] standard describes the construction of ontologies in a very simplified way. Due to
+the lack of a theoretical methodology for determining
+the structure of information, the task of finding the fundamental foundations for creating a developed transport
+ontology is urgent.
+
+At the moment, ontologies are used in intelligent railway transport management systems (IRTMS) both in JSC
+"Russian Railways" and on the railways of the European
+Union. However, the analysis of these ontologies shows
+that they are rather intended for storing and consolidating
+data on the state of various objects of the transportation
+process. They are applied and are not currently focused
+on expanding to the entire subject area.
+\end{multicols}
+\newpage
+\begin{multicols}{2}\noindent \par
+The ontologies used on the railways of the European Union are even more narrowly oriented and do
+not include the more abstract, technological level of
+knowledge that is present in the ontologies of this field.
+One of the reasons for the inapplicability of Western
+ontologies is the structural difference of the railway
+system. The terminology sets describing the Belarusian
+Railway and European railways differ significantly. Despite the presence of common concepts at a high level,
+such as "Station" and "Wagon", at lower levels, such as
+classification of wagons, tracks, document management
+and others, the terms are fundamentally different.
+
+Nevertheless, the ontology being formed should be
+interdisciplinary, since various modes of transport with
+their own technology and specifics of work, regulatory
+documents, loading and unloading regulations, etc. participate in transportation. To ensure internal consistency
+of ontologies, it is necessary to determine a common
+"point" around which they can be combined. In this
+case, such a unifying "point" may be cargo, and then
+the subject area will be "cargo transportation".
+
+Thus, the use of foreign ontologies is not possible,
+and in the case of integration with European systems,
+the ontology will have to contain universal concepts
+describing those concepts in a form understandable to
+both sides
+
+It should also be noted that the railway infrastructure
+is a strategically important facility. Thus, this area should
+be import-independent. And one of the problems of the
+existing ontology used in IRTMS is the dependence on
+Western instruments.
+
+Despite the fact that, at first glance, it is sufficient to
+consider the ITPMS as an ontology of the subject area, it
+must be borne in mind that the ITPMS is the first stage
+in building an Intelligent Transport Management System
+and must have all the features of top-level ontologies.
+This task is inextricably linked with the formation of
+a digital model of the transportation process (DMTP).
+The current mechanisms for the formation of the DMTP
+should allow for online modeling of the state of the
+transportation process. This requires the unification of
+requirements for the content and form of presentation of
+information about the parameters of the functioning of
+objects. DMTP may include:
+
+\begin{itemize}[noitemsep]
+    \item models of objects (including resources);
+    \item process models — description of processes occurring both in the ITPMS and in the external object
+environment;
+    \item models of the external object environment describing the external impact on the objects of the transportation process;
+    \item models of predicting situations — study of options
+for the development of the transport situation with
+abnormal changes in the state of elements of the
+transport system, the external environment, with
+\columnbreak
+changes in the characteristics of information flows;
+\end{itemize}
+\begin{itemize}[noitemsep]
+    \item models for the formation of managerial decisions
+that provide an analysis of the operational situation
+and the formation of effective managerial decision;
+    \item evaluation models that provide an assessment of the
+effectiveness of implemented MD, the condition of
+facilities and the parameters of the transportation
+process.
+\end{itemize}
+
+The basis for the formation of the ontology under
+consideration can be the subsystem of the normativereference information of IAMDSS FT (SNRI). This
+subsystem contains many tables describing both static
+and dynamic objects. However, in its pure form, SNRI
+does not allow solving operational tasks, but is used only
+as reference information. Thus, the scientific problem of
+developing tools for the transformation of normativereference information into an ontological description
+of both the subject area and interdisciplinary concepts
+should be solved.
+
+\section{\textnormal{Our proposal on the direction of research in the
+field of development of railway transport ontology.}} 
+
+In our work we propose to use the OSTIS technology
+and platform, which is being developed in the Republic
+of Belarus. Within the framework of this technology,
+tools for creating ontologies are implemented, as well
+as creating agents to work with it. [7]–[10]
+
+Based on the above justifications of relevance, the
+following tasks can be distinguished for ontology:
+\begin{itemize}[noitemsep]
+    \item Fully describe the objects and processes of the
+transportation process.
+    \item Converting information from existing standards to a
+knowledge base and back.
+    \item Set of agents for data transformation
+    \item Storage and analysis of external information.
+    \item Storage of managing decision models.
+    \item Set of agents for converting incoming information
+into a managing decision.
+\end{itemize}\par
+Accordingly, the Knowledge Base can be divided into
+subdomains.
+    \begin{enumerate}[noitemsep, label=\arabic*)]
+    \item Description of the main objects involved in the
+transportation process;
+    \item Description of the processes occurring in the
+ITPMS, as well as external processes affecting the
+ITPMS;
+    \item Description of external objects that affect the transportation process;
+    \item Description of possible emergency situations, models for predicting their development;
+    \item Description of possible managing decisions;
+    \item Description of criteria for evaluating managing
+decisions and the result of their impact on the
+system.
+    \end{enumerate}\par
+    Some examples of subject areas that can be included
+in the ontology of the transportation process:
+
+\end{multicols}
+\end{document}
