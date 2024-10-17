@@ -9,6 +9,8 @@
 * `\newpage` - новая страница
 * `\nohyphens` - убрать отступ в начале(убрать абзац)
 
+!()[https://www.flaticon.com/free-icon/github-logo_25231]
+
 ### Прилагаемые файлы/ссылки:
 * [main.txt](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D0%B2%D0%BE%D1%80_%D0%93/laba_3/main.tex) - исходный файл вёрстки
 * [laba1.pdf](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D0%B2%D0%BE%D1%80_%D0%93/laba_3/laba1.pdf) - готовый pdf-файл с вёрсткой
