@@ -13,6 +13,8 @@
 
 Более подробно с LaTex можно ознакомиться по [ссылке](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
 
+![](./image.png) 
+
 # Лабораторная работа 3
 
 ### Цель:
