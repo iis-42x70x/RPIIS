@@ -1,7 +1,9 @@
 # Работа с LaTeX
 
-Для регистрации можно перейти по ссылке  
+Был использован инструмент Overleaf
+Для регистрации можно перейти по ссылке:
 [OverLeaf](https://www.overleaf.com)
+
 *OverLeaf — онлайн редактор Latex с гибкими настройками* 
 
 ## Подключение пакетов
@@ -15,7 +17,7 @@
 \usepackage{graphicx} — В данном случае для управления картинками 
 \usepackage{parcolumns} — Дополнительные настройки коллонок 
 \usepackage{titlesec} — Гибкая настройка заголовков 
-\usepackage[top=2cm, left=2cm, right=2cm,bottom=2cm]{geometry} — Настройка положения и геометрии страницы
+\usepackage[top=2cm, left=2cm, right=2cm,bottom=2cm]{geometry} — Настройка геометрии страницы
 
 
 
