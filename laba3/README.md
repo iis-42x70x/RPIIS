@@ -1,5 +1,5 @@
 <h1 style="text-align: center;"> ЛР1. Работа с LaTex </h1>
-<img src="C:\Users\Asus\Desktop\laba3\imagesforlatex\laTex.png">
+<img src="imagesforlatex\laTex.png">
 <h3>Цель ЛР1 - сверстать страницы сборника средствами LaTeX.</h3>
 <p>Для выполнения поставленной задачи очень удобно использовать сайт <a href="https://www.overleaf.com/"> OverLeaf</a>.
 <h3>Для работы с latex необходимо подключить следующие пакеты:</h3> 
@@ -17,19 +17,19 @@
 </code></p>
 <h3>Вставка изображений в latex:</h3>
 <p>Предварительно необходимо загрузить изображение на сам сайт overleaf:</p>
-<img src="C:\Users\Asus\Desktop\laba3\imagesforlatex\addimages.png"></img>
+<img src="imagesforlatex\addimages.png"></img>
 <p>После чего можно добавить свое изображение:</p>
 <p><code>\begin{figure}<br> 
 \centering<br> 
 \includegraphics[width=0.829\linewidth]{snimok5.png}<br>  \caption{\textbf{EasyEPLANner} objects}<br>
 \label{fig:easy}</code></p>
 <h4>Пример выполнения в PDF:</h4>
-<img src="C:\Users\Asus\Desktop\laba3\imagesforlatex\pdfphoto.png"></img>
+<img src="imagesforlatex\pdfphoto.png"></img>
 <h3>Вставка математических формул в latex:</h3>
 <p>Необходимо заключать математическую формулу в <code>$..$</code>: <br>
 <code>$y_j=F(\displaystyle \sum_{i}\omega_{ij}-T_j)$</code></p>
 <h4>Пример выполнения в PDF:</h4>
-<img src="C:\Users\Asus\Desktop\laba3\imagesforlatex\formula.png"></img>
+<img src="imagesforlatex\formula.png"></img>
 <h3>Работа со списками в latex:</h3>
 <p><code>\begin{itemize}<br>
 \item Improving system performance and especially accelerating system response time to user requests. It is connect with productivity and overall user satisfaction.<br> \item Continuous updating and refactoring ontological models (further formalization of missing concepts, fix typos and etc.);<br>
@@ -38,7 +38,7 @@
 \item Adding more description of parts of real control projects based on the existing knowledge base.<br>
 \end{itemize}</code></p>
 <h4>Пример выполнения в PDF:</h4>
-<img src="C:\Users\Asus\Desktop\laba3\imagesforlatex\listing.png"></img>
+<img src="imagesforlatex\listing.png"></img>
 <h3>Благодарности в latex:</h3>
 <p><code>\begin{thebibliography}{20}<br>
 \fontsize{6}{5}\selectfont<br>
@@ -65,7 +65,7 @@ Systems}, vol. 5, p. 10, 09 2021.<br>
 J. I. Olszewska, “Ontologies for industry 4.0,” \underline{The Knowledge
 Engineering Review}, vol. 34, p. e17, 2019.</code></p>
 <h4>Пример выполнения в PDF:</h4>
-<img src="C:\Users\Asus\Desktop\laba3\imagesforlatex\references.png"></img>
+<img src="imagesforlatex\references.png"></img>
 <h3>Выполнение римских цифр средствами latex:</h3>
 <code>\newcommand{\RomanNumeralCaps}[1]<br>
 {\MakeUppercase{\romannumeral #1}} %римские цифры будут выглядеть как надо<br>
@@ -73,14 +73,14 @@ Engineering Review}, vol. 34, p. e17, 2019.</code></p>
 \section*{\footnotesize \RomanNumeralCaps{9}. Conclusion}<br>
 \end{center}</code>
 <h4>Теперь как это выглядит в PDF:</h4>
-<img src="C:\Users\Asus\Desktop\laba3\imagesforlatex\romannumeral.png"></img>
+<img src="imagesforlatex\romannumeral.png"></img>
 <h1 style="text-align: center;">ЛР3.Знакомство с Git и Github.</h1>
 <h3>Цель: работа с Git и GitHub, а также научиться оформлять MarkDown файлы</h3>
 <h4>Что такое git?</h4>
 <p>Git - это консольная утилита, для отслеживания и ведения истории изменения файлов, в вашем проекте. Чаще всего его используют для кода, но можно и для других файлов. Например, для картинок - полезно для дизайнеров.
 <br>С помощью Git-a вы можете откатить свой проект до более старой версии, сравнивать, анализировать или сливать свои изменения в репозиторий.</p>
 <hr style="color: red;">
-<img src="C:\Users\Asus\Desktop\laba3\imagesforlatex\git.png"></img>
+<img src="imagesforlatex\git.png"></img>
 <hr style="color: red;">
 <h1 style = "text-align: center;">Основные команды Git:</h1>
 <p><code>git init</code> - создание пустого репозитория<br>
