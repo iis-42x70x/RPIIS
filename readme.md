@@ -1,6 +1,7 @@
 # Работа с LaTeX
 
 Был использован Overleaf
+
 Для регистрации можно перейти по ссылке:
 [OverLeaf](https://www.overleaf.com)
 
