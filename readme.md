@@ -25,4 +25,8 @@
 
 ```\includegraphics[width=1\linewidth]{image1.jpg}```
 
+#### Римские цифры
+Команда была изменена для нумерации заголовком с помощью римских цифр
+```\renewcommand{\thesection}{\textnormal{\Roman{section}.}}```
+
 
