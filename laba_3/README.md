@@ -10,7 +10,7 @@
 * `\nohyphens` - убрать отступ в начале(убрать абзац)
 
 
-![](https://www.google.com/url?sa=i&url=https%3A%2F%2F1000logos.net%2Fgithub-logo%2F&psig=AOvVaw135weGqcr83f8PXEsiwgvp&ust=1729252069195000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCyzIuslYkDFQAAAAAdAAAAABAS)
+![](25231.png)
 
 ### Прилагаемые файлы/ссылки:
 * [main.txt](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D0%B2%D0%BE%D1%80_%D0%93/laba_3/main.tex) - исходный файл вёрстки
