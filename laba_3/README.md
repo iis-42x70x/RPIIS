@@ -10,8 +10,6 @@
 * `\nohyphens` - убрать отступ в начале(убрать абзац)
 
 
-![](25231.png)
-
 ### Прилагаемые файлы/ссылки:
 * [main.txt](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D0%B2%D0%BE%D1%80_%D0%93/laba_3/main.tex) - исходный файл вёрстки
 * [laba1.pdf](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D0%B2%D0%BE%D1%80_%D0%93/laba_3/laba1.pdf) - готовый pdf-файл с вёрсткой
@@ -30,6 +28,8 @@
 
 ### Работа на удалённом сервере GitHub:
 Самым популярным веб-хостингом для работы в команде, для хронения версий проекта, основанный на Git - GitHub.
+
+![](25231.png)
 
 [Тут](https://timeweb.com/ru/community/articles/kak-polzovatsya-github) можно ознакомиться с кратким обзором GitHub.
 
