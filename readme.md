@@ -34,16 +34,15 @@
 # Работа с Git'ом
 
 Для выполнения L3
-Был использован Github & Git
-
-[Github](https://github.com/)
+Были использованы Github & Git
 
 *Github — веб-сервис хостинга проектов и их совместной разработки на базе Git*
 
-[Git](https://git-scm.com/)
+[Github](https://github.com/)
 
 *Git— распределённая система управления версиями*
 
+[Git](https://git-scm.com/)
 
 
 
