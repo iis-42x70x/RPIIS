@@ -7,7 +7,7 @@
 
 *OverLeaf — онлайн редактор Latex* 
 
-## Подключение пакетов
+## Использованные пакеты Latex
 
 Для корректной работы в LaTeX нужно подключить специальные пакеты, в данной работе были использованы следующие:
 
@@ -19,6 +19,10 @@
 \usepackage{parcolumns} — Дополнительные настройки коллонок 
 \usepackage{titlesec} — Гибкая настройка заголовков 
 \usepackage[top=2cm, left=2cm, right=2cm,bottom=2cm]{geometry} — Настройка геометрии страницы
+```
 
+### Вставка фото
+
+```\includegraphics[width=1\linewidth]{image1.jpg}```
 
 
