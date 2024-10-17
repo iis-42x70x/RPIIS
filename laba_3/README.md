@@ -32,6 +32,6 @@
 
 [Здесь](https://www.youtube.com/watch?v=O00FTZDxD0o&ab_channel=BogdanStashchuk) же можно более подробно изучить Git и GitHub.
 
-###Вывод:
+### Вывод:
 
 ...
