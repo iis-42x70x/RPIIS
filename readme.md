@@ -22,16 +22,16 @@
 \usepackage[top=2cm, left=2cm, right=2cm,bottom=2cm]{geometry} — Настройка геометрии страницы
 ```
 
-### Вставка фото
+## Вставка фото
 
 ```\includegraphics[width=1\linewidth]{image1.jpg}```
 
-#### Римские цифры
+## Римские цифры
 Команда была изменена для нумерации заголовком с помощью римских цифр
 
 ```\renewcommand{\thesection}{\textnormal{\Roman{section}.}}```
 
-#### Работа с Git'ом
+# Работа с Git'ом
 
 Для выполнения L3
 Был использован Github & Git
