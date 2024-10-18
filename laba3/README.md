@@ -10,10 +10,9 @@
 * `\nohyphens` - убрать отступ в начале(убрать абзац)
 
 
-### Прилагаемые файлы/ссылки:
-* [main.txt](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D0%B2%D0%BE%D1%80_%D0%93/laba_3/main.tex) - исходный файл вёрстки
-* [laba1.pdf](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D0%B2%D0%BE%D1%80_%D0%93/laba_3/laba1.pdf) - готовый pdf-файл с вёрсткой
-* [Гайд](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes) от создателей overleaf(LaTeX за 30 минут)
+### Прилагаемые файлы:
+* [main.txt](https://github.com/iis-42x70x/RPIIS/blob/%D0%A0%D0%B0%D0%B7%D1%83%D0%BC%D0%BE%D0%B2_%D0%92/laba3/main.tex) - исходный файл вёрстки
+* [laba1.pdf]((https://github.com/iis-42x70x/RPIIS/blob/%D0%A0%D0%B0%D0%B7%D1%83%D0%BC%D0%BE%D0%B2_%D0%92/laba3/laba1.pdf) - готовый pdf-файл с вёрсткой
 
 
 # Лабараторная работа №3
