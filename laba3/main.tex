@@ -1,0 +1,349 @@
+\documentclass[10pt,final]{article}
+
+\usepackage{multicol}
+\usepackage{import}
+\usepackage{scn}
+\usepackage{microtype}
+\usepackage{graphics}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage[russian, english]{babel}
+\newcommand{\RomanNumeralCaps}[1]
+    {\MakeUppercase{\romannumeral #1}}
+\setcounter{page}{174}
+\renewcommand{\thepage}{\textbf{\arabic{page}}}
+\setlength{\intextsep}{-3pt}
+
+\begin{document}
+\begin{multicols}{2}
+\noindent such semantic networks are called sc-elements (sc-nodes
+and sc-connectors, which, in turn, depending on their
+orientation, can be sc-arcs or sc-edges). The universality
+and unification of the SC code makes it possible to
+describe on its basis any type of knowledge and any
+methods for solving problems, which, in turn, greatly
+simplifies their integration both within one system and
+within a group of such systems.\\
+\vspace{-0.1em}
+\hspace{0.4cm}The basis of the knowledge base developed using the
+OSTIS Technology is a hierarchical system of semantic
+models of subject areas and ontologies, among which
+stands out the universal Core of semantic models of
+knowledge bases and the methodology for developing
+semantic models of knowledge bases, ensuring semantic
+compatibility of the developed knowledge bases [10]. The
+basis of the OSTIS -system problem solver is a set of
+agents that interact exclusively through the specification
+of the information processes they perform in semantic
+memory (sc-agents). All of these principles together
+make it possible to ensure semantic compatibility and
+simplify the integration of both various components of
+computer systems and such systems themselves. Within
+the framework of the OSTIS Technology, several universal options for visualizing SC code structures are
+proposed. Within the framework of this work, examples
+will be used in SCg-code - a graphical version of
+visualization of SC-code constructions and SCn-code —
+a structured hypertext version of visualization of SC-code
+constructions.
+\vspace{-\topsep}
+\begin{center}
+\RomanNumeralCaps{4}. Practical implementation of IIRS based on OSTIS
+Technology (using the example of a unit for
+post-treatment of wastewater from dairies — biological
+ponds)
+\end{center}
+\vspace{-\topsep}
+In biological ponds for post-treatment, contaminants
+are removed by aerobic microorganisms, which enter
+them with purified liquid from secondary settling tanks
+(after aeration tanks and/or biological filters), and also
+develop directly in the ponds themselves. Higher aquatic
+vegetation (algae) plays an important role. The rate
+of the biochemical process of extraction and oxidation
+of organic pollutants in ponds with natural aeration is
+limited by the low rates of atmospheric reaeration and
+mass transfer processes. In ponds with artificial aeration,
+as a result of supplying the required amount of air
+with intensive mixing of the liquid, the speed of the
+biochemical process is 5–7 times greater.
+
+The feasibility of their use at dairy processing enterprises is largely due to the fact that many harmful organic
+substances are not completely oxidized at biological
+wastewater treatment facilities; they remain stable in
+water for a long time and can have a toxic effect on
+living organisms. In addition, intensive disposal
+
+\columnbreak
+\noindent of large amounts of excess sludge formed, its swelling
+and foaming.
+
+The characteristics of the life cycles of biological
+ponds fully include: nonlinearity, nonstationarity, multifactoriality, multiprocessivity, constant changes in the
+structure of internal relationships, the presence of significant hidden mutual influences between technological
+parameters. Accordingly, it is justified to apply OSTIS
+Technology to the creation of a knowledge base of
+their processes with further synthesis of an intelligent
+information and reference system.
+
+The formation of the IIRS knowledge base was based
+on the national regulatory document - BS 4.04.02-2019
+“Building standards of the Republic of Belarus Sewerage. External networks and structures.” Let’s consider a
+fragment of the ontology that describes the concept of
+“biological pond” and the parameters specified on it in
+the SCn code [10]
+
+\vspace{0.5cm}
+\noindent 
+\textbf{\textit{biological pond}}
+
+\noindent 
+\(\Rightarrow\)  
+\textit{explanation}*:
+
+[Used for purification and post-treatment of munic-
+
+ ipal, domestic, industrial and surface wastewater 
+ 
+ containing organic substances.]
+ 
+\noindent 
+\(\Rightarrow\) 
+\textit{subdividing}*:
+
+\textbf{\textbraceleft}\setlength{\parindent}{0.85cm}
+\textit{• biopond with artificial aeration}
+
+\textit{• biopond with natural aeration}
+
+\setlength{\parindent}{0.6cm}
+\textbf{\textbraceright}
+
+\setlength\itemsep{0pt} \noindent
+\(\Rightarrow\)
+\textit{ parameters}*:
+
+\textbf{\textbraceleft}
+\textit{• waste water flow}
+
+\hspace{0.4cm}$\in$
+\textit{measurable parameter}
+
+\hspace{0.24cm} \(\Rightarrow\)
+\textit{designation}*:
+
+\hspace{0.85cm}[Qw]
+
+\hspace{0.35cm}\(\Rightarrow\)
+\textit{measurement unit}*:
+
+\hspace{0.85cm}\textit{$1m^3/day$}
+
+\textbf{\textbraceright}
+
+\noindent\textbf{\textit{waste water}}
+
+\noindent := \textit{explanation*}: 
+
+[surface, domestic and industrial waters discharged
+
+into sewers] 
+
+\noindent \(\Rightarrow\) 
+\textit{parameters*}: 
+
+\hspace{-0.25cm} \textbf{\textbraceleft}
+• \textit{TBOD} 
+
+\hspace{0.4cm} $\in$ 
+\textit{biochemical indicator}
+
+\hspace{0.2cm}•\textit{ average monthly temperature in winter}
+
+\hspace{0.2cm}•\textit{ average monthly temperature in summer}
+
+\hspace{-0.25cm} \textbf{\textbraceright}
+
+\vspace{0.45cm}
+\textbf{\textit{TBOD}}
+
+\noindent := [total biological oxygen demand]
+
+\noindent \(\Rightarrow\)
+\textit{explanation}*:
+
+[reflects the amount of oxygen required for the bio-
+
+chemical oxidation of organic wastewater contami-
+
+nants in 20 days]
+
+\noindent $\in$ \textit{measurable parameter}
+
+
+\newpage
+
+
+
+\(\Rightarrow\) \textit{designation}*:
+
+\noindent[L]
+
+\(\Rightarrow\)
+\textit{measurement unit}*:
+
+\textit{1 mg/l}
+
+Consider for an example of using the developed ontology to describe a specific technological task. A biological
+pond with a flow rate of Qw = 5640 m3
+/day was taken as
+a technological prototype. Biochemical indicators of the
+processed WW: biological oxygen demand (TBOD) Len
+= 18 mg/l; The technological task is to provide a TBOD
+of treated wastewater Lex = 5 mg/l. At the same time,
+the average monthly temperature of PW for the summer
+period is Tw = 22 °C; average monthly temperature for
+the winter period Tw = 15 °C. The indicated parameters
+correspond to the use of a biological pond after a
+fairly well-functioning biological and physico-chemical
+wastewater treatment of a large milk processing plant.
+
+Figures IV–IV show an example of a problem condition and related parameters, formalized in the SCgcode [10].
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{image.png}
+    {\scriptsize Figure 4. Formulation of the problem conditions (fragment 2)}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{center}
+    \RomanNumeralCaps{5}. Conclusion
+\end{center} 
+
+The use of OSTIS Technology and the development of
+the corresponding ISRS in the analysis and formation of
+new production knowledge in the water use segment of
+dairy processing enterprises will allow:
+
+\begin{itemize}[leftmargin=7mm]
+\item  increase the efficiency and versatility of decisionmaking, including cases of complex production situations;
+
+\item  improve administration flexibility, even when expanding technological lines;
+
+\item  increase the level of qualifications of employees,
+since the OSTIS Technology represents a knowledge
+system in natural language and corresponds to modern ideas about the organization of human long-term
+memory.
+\end{itemize}
+\columnbreak
+
+{Taken together, the creation of such products based
+on the OSTIS Technology will form an ontological basis
+for digital modeling of resource use processes (water,
+electricity, heat, steam, reagents) in dairies.}
+\begin{center}
+    Acknowledgment
+\end{center} 
+
+The authors would like to thank the scientific team
+of the department of intelligent information technologies
+of the Belarusian State University of Informatics and
+Radioelectronics for their assistance in the work and
+valuable comments.
+
+
+\begin{otherlanguage}{english}
+\centering\begin{thebibliography}{11}
+\fontsize{8}{5}\selectfont
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.0cm}
+     \bibitem [1]{e1} Mittal S., Khan M. A., Romero D., Wuest T. Smart manufacturing: Characteristics, technologies and enabling factors. Proc.
+of the Institution of Mechanical Engineers, Part B: Journal of
+Engineering Manufacture, 2019, Vol. 233(5), pp. 1342–1361.
+DOI:10.1177/0954405417736547.
+     \bibitem[2]{e1}  Grieves M., Vickers J. Digital Twin: Mitigating Unpredictable,
+Undesirable Emergent Behavior in Complex Systems. Kahlen
+F. J., Flumerfelt S., Alves A. (Eds). Transdisciplinary Perspectives on Complex Systems. Cham: Springer, 2017, pp. 85-113.
+DOI:10.1007/978-3-319-38756- 7 4.
+      \bibitem[3]{e1} Tao F., Zhang H., Liu A., Nee A. Y. Digital twin in industry: Stateof-the-art. IEEE Trans. on Industrial Informatics, 2019, Vol. 15,
+pp. 2405-2415.
+      \bibitem[4]{e1} Shtepa, V. N. Funkcional’no-staticheskij analiz sistemy kontrolja vodootvedenija i ocenka podhodov k ejo cifrovomu modelirovaniju [Functional-static analysis of the water disposal control system and assessment of approaches to its digital modeling]. Computer science and cybernetics: scientific journal, 2023,
+No. 3(33), pp. 35-42.
+      \bibitem[5]{e1} Shtepa V. N., Zolotykh N. Yu., Kireev S. Yu. Obosnovanie i
+shemy ispol’zovanija ranzhirujushhih izmeritel’nyh sistem jekologicheskogo monitoringa i intellektual’nogo analiza rezhimov
+vodootvedenija [Justification and schemes for using ranking measurement systems of environmental monitoring and intelligent
+analysis of water disposal regimes]. Bulletin of Polotsk State
+University. Series F. Construction. Applied sciences: scientific
+journal, 2023, No. 1, pp. 94–103.
+      \bibitem[6]{e1} Alekseevsky D. Enhancing Ecological Efficiency in Biological
+Wastewater Treatment: A Case Study on Quality Control Information System. Water, 2023, Vol. 15, Iss. 21, P. 3744.
+      \bibitem[7]{e1} Shifrin S. M., Ivanov G. V., Mishukov B. G., Feofanov Yu. A.
+Ochistka stochnyh vod predprijatij mjasnoj i molochnoj promyshlennosti [Wastewater treatment of meat and dairy industry enterprises]. Light and food industry, 1981, P. 272
+      \bibitem[8]{e1} Garzanov A. L., Usov A. V., Kushniruk M. Yu., Barabash V. P.,
+Kamalyan O. A. Modernizacija ochistnyh sooruzhenij fabriki
+morozhenogo [Modernization of treatment facilities at an ice
+cream factory]. "Morozhenoe i zamorozhennye produkty" ["Ice
+cream and frozen foods"], 2004, No. 6, pp. 26-27.
+       \bibitem[9]{e1} Voitov I.V. O zadachah cifrovizacii sistem vodootvedenija
+kommunal’no-promyshlennyh ob’ektov [On the tasks of digitalization of water disposal systems of municipal and industrial
+facilities]. Petroleum and gas chemistry – 2023: materials of
+the VI International Scientific and Technical Forum on Chemical
+Technologies and Oil and Gas Processing, Minsk, November 1-3,
+2023, BSTU, 2023, pp. 147-151.
+       \bibitem[10]{e1} V. Golenkov, Ed., Tehnologija kompleksnoj podderzhki
+zhiznennogo cikla semanticheski sovmestimyh intellektual’nyhkomp’juternyh sistem novogo pokolenija [Technology of
+complex life cycle support of semantically compatible intelligent
+computersystems of new generation]. Bestprint, 2023.
+
+\end{thebibliography}
+\end{otherlanguage}
+\onecolumn{
+\newpage
+\vspace{-5cm}\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{picture2.png}\\
+    {\scriptsize Figure 3. Formulation of the problem conditions (fragment 1)}
+    \label{fig:enter-label}
+\end{figure}}
+\begin{minipage}{0.4\textwidth}
+
+\vspace{15.5cm}
+\begin{otherlanguage}{russian}
+\begin{center}  
+  \textbf{ПРИКЛАДНЫЕ АСПЕКТЫ
+ИСПОЛЬЗОВАНИЯ ТЕХНОЛОГИИ
+OSTIS ПРИ ИНФОРМАЦИОННОМ
+ОБЕСПЕЧЕНИИ ЦИФРОВИЗАЦИИ ВОДОПОЛЬЗОВАНИЯ
+МОЛОКОПЕРЕРАБАТЫВАЮЩИХ
+ПРЕДПРИЯТИЙ}
+
+\vspace{5}
+
+Штепа В. Н., Муслимов Э. Н.
+
+ \end{center}
+ 
+ \vspace{4}
+ \scriptsize
+ 
+{Оценены концептуальные подходы цифровизации производств на основе идеологии e-Manufacturing, которые предложено использовать для моделирования процессов водопользования предприятий по переработке молока, проанализированы организационно-технологические процессы формирования загрязнителей их сточных вод. В методологии IDEF0
+выполнено функциональное моделирование водопользования таких производств, что позволило выявить сложность
+и многонаправленность взаимосвязей параметров и обосновать использование технологии OSTIS для задач формирования интеллектуальной информационно-справочной системы.
+На примере биологического пруда, как узла очистки сточных
+вод, реализован элемент предложенного подхода.}
+\end{otherlanguage}
+
+\begin{flushright}
+    Received 13.03.2024
+\end{flushright}
+
+\end{minipage}
+
+\end{multicols}
+
+\end{document}
