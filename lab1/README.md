@@ -43,15 +43,15 @@ git push origin <название ветки>
 \begin{math}
 \end{math}
 ```
-<p>3.Подстрочные символы</p>
+<p>3. Подстрочные символы</p>
 
 ```
 a_{n_i}
 ```
-<p>4.Надстрочные символы</p>
+<p>4. Для разбиения страницы на части</p>
 
 ```
-\[ (a^n)^{r+s} = a^{nr+ns}  \]
+multicols
 ```
 
 Более подробный гайд можно почитать [тут](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes).
