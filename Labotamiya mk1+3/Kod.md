@@ -177,3 +177,5 @@ to the client.
 The described method has the same advantages as basic federated learning approaches, but it has an additional
 \end{multicols}
 \end{document}
+
+
