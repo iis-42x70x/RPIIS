@@ -1,0 +1,329 @@
+\documentclass[a4paper, onecolumn]{article}
+
+\usepackage{fontspec} %библиотека шрифтов
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{graphicx}%Вставка картинок правильная
+\usepackage{multicol}
+\usepackage[left=1.75cm,right=1.75cm, top=1.75cm,bottom=3.4cm,bindingoffset=0cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{mathtools}
+\usepackage{setspace}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\setlength{\columnsep}{0.5cm}
+\setmainfont{Times New Roman} 
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+%отмена переноса слов на следующую строку
+
+\linespread{1.15}
+
+\newfontface\sectionfont{Times New Roman}[Scale=1] % 16px примерно соответствует 1.3333em
+
+% Настройка нумерации и стиля для section
+\titleformat{\section}[block]
+{\normalfont\sectionfont\centering}
+{\thesection.}{1em}{}
+[\vspace{0.5cm}] % Отступ после заголовка
+
+% Настройка нумерации римскими цифрами с точкой
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thetable}{\Roman{table}}
+
+\newcounter{tablecounter}
+\newcommand{\cntrplus}{\stepcounter{tablecounter}\arabic{tablecounter} 
+
+\captionsetup[table]{format=plain, labelfont=bf, labelsep=newline}
+}
+
+
+% Отступ перед заголовком
+\titlespacing*{\section}{0pt}{0.5cm}{0pt}
+
+\begin{document}
+	\setcounter{page}{294}
+	\setcounter{figure}{2}
+	\setcounter{section}{1}
+
+	\begin{multicols}{2}
+	
+	\fontsize{10}{10}\selectfont	
+		\begin{figure}[H]
+			\centering
+			
+			\includegraphics[width=\linewidth]{Figure_3.jpg}
+			
+			\caption{CXR image categories from TB Portals [\href{http://google.com}{1}] website.}
+			
+			\label{fig:img3}
+		\end{figure}
+		analysis there is a report on the use of the obtained
+		data in solving the prediction of the parameter "Overall
+		percent of abnormal volume" is given.
+		
+		\section{CXR annotations, as if it were a CT}
+		
+		There are 106 images described like a CT. All from
+		Georgia. These images have 19 parameters with disease
+		descriptions, like a CT scan. Annotation parameters for
+		CXR are absent.
+		
+		For example, in Fig. \ref{fig:img4}, patient ID 1534 has one
+		annotated image with a study modality CR (Computed
+		Radiography), but the actual description is as if it were
+		a CT (Computed Tomography).
+		\begin{figure}[H]
+			%\centering
+			
+			\includegraphics[width=1\linewidth]{Figure_4.jpg}
+			\caption{Patient ID 1534 with CXR annotation, as if it were a CT.}
+			\label{fig:img4}
+		\end{figure}
+		\textit{ It was decided to exclude these images from the further investigations for the following reasons:}
+		\begin{itemize}[noitemsep]
+			\item their annotation is different than most other files,
+			meaning that these images cannot participate in
+			neural network training together with everyone else;
+			\item 106 files can participate in separate neural network
+			training, but there is more valuable data to explore;
+			\item it is unclear why these images are described differently, and until this is clarified, it is better to exclude
+			them from further study.
+			
+		\end{itemize}
+		
+		\section{CXR annotations of sextants}
+		
+		A. \textit{Lesion names to describe the lungs lobes}
+		
+		In the CXR image, the lungs are divided into six lobes
+		or sextants:
+		\begin{itemize}[noitemsep]
+			\item Upper Right Sextant;
+			\item Upper Left Sextant;
+			\item Middle Right Sextant;
+			\item Middle Left Sextant;
+			\item Lower Right Sextant;
+			\item Lower Left Sextant.
+		\end{itemize}
+		Each sextant has twenty identical lesion names, which
+		can be found in the corresponding JSON files for each
+		CXR image:
+		\begin{enumerate}[noitemsep, label=\arabic*)]
+			\item Small Cavities
+			\item Medium Cavities
+			\item Large Cavities
+			\item Is any Large cavity belong to a multi-sextant cavity?
+			\item Can Multiple cavities be seen?
+			\item Small Nodules
+			\item Medium Nodules
+			\item Large Nodules
+			\item Huge Nodules
+			\item Is any calcified or partially-calcified Nodule exists?
+			\item Is any non-calcified Nodule exists?
+			\item Is any clustered Nodule exists
+			\item Are multiple Nodules exist?
+			\item Low/ground glass Density (active fresh nodules)
+			\item Medium Density (stabilized fibrotic nodules)
+			\item High Density (calcified nodules, typically sequella)
+			\item Low/ground glass Density
+			\item Medium Density
+			\item High Density
+			\item Collapse
+		\end{enumerate}
+		
+		The data displayed on the CASE BROWSER [\href{http://google.com}{2}] and TB DEPOT [\href{http://google.com}{3}] websites and the tag names in JSON files are slightly different, but a mutually unambiguous match can be made even by a non-specialist. The only non- obvious correspondence is that the field "Infiltrate" on the website should correspond to the tag "High Density" in JSON files. This match between the "Infiltrate" field and "High Density" tag was found by the method of exceptions as the last possible match.
+		
+		Mutually unambiguous correspondence between the data on the websites and in JSON files is given in Tab. I and Tab. III.
+		
+		The sequential arrangement of the twenty lesions in Tab. I is the same as on the CASE BROWSER [\href{http://google.com}{2}] website.
+		
+		The number of non-empty lesions in the lung sextants is listed in Tab. II.
+		For convenience and to save space, in Tab. II, the word "Sextant" is omitted in table header. The total number of	
+	\end{multicols}
+	
+	
+	
+	\begin{table}
+		\centering
+		\caption{\\* Twenty lesions to describe the lungs lobes in CXR images}
+		\fontsize{8}{9}\selectfont
+		\begin{tabular}{|c|m{5 cm}|m{5 cm}|m{5 cm}|}
+			\hline
+			№ & Tags in JSON files "info-all.json" & CASE BROWSER [\href{http://google.com}{2}] website & TB DEPOT [\href{http://google.com}{3}] website \\
+			\hline
+			\multicolumn{4}{|c|}{\textbf{Cavity}} \\
+			\hline
+			\cntrplus & Small Cavities & Small Cavities (less than 3 cm) & Small Cavities \\
+			\hline
+			\cntrplus & Medium Cavities & Medium Cavities (3-5 cm) & Medium Cavities \\
+			\hline
+			\cntrplus & Large Cavities & Large Cavities (more than 5 cm) & Large Cavities \\
+			\hline
+			\cntrplus & Is any Large cavity belong to a multi sextant cavity? & Does any Large cavity belong to a multi-sextant cavity? & Large Cavity Multi Sextant \\
+			\hline
+			\cntrplus & Can Multiple cavities be seen? & Can Multiple cavities be seen? & Multiple Cavities Seen \\
+			\hline
+			\multicolumn{4}{|c|}{\textbf{Nodules}} \\
+			\hline
+			\cntrplus & Small Nodules & Small Nodules (less than 3 mm) & Small Nodules \\
+			\hline
+			\cntrplus & Medium Nodules & Medium Nodules (5-15 mm) & Medium Nodules \\
+			\hline
+			\cntrplus & Large Nodules & Large Nodules (15-30 mm) & Large Nodules \\
+			\hline
+			\cntrplus & Huge Nodules & Huge Nodules (more than 30 mm, tuberculoma) & Huge Nodules \\
+			\hline
+			\cntrplus & Is any calcified or partially-calcified Nodule exists? & Any calcified or partially-calcified Nodules? & Partially Calcified Nodule Exists \\
+			\hline
+			\cntrplus & Is any non-calcified Nodule exists? & Any non-calcified Nodules? & Non Calcified Nodule Exists \\
+			\hline
+			\cntrplus & Is any clustered Nodule exists & Any clustered Nodules (nodules 2-5 mm apart)? & Any Clustered Nodule Exists \\
+			\hline
+			\cntrplus & Are multiple Nodules exist? & Can Multiple Nodules be seen? & Multiple Nodule Exists \\
+			\hline
+			\cntrplus & Low/ground glass Density (active fresh nodules) & Low/ground glass Density (active fresh nodules) & Low Ground Glass Density Active Fresh Nodules \\
+			\hline
+			\cntrplus & Medium Density (stabilized fibrotic nodules) & Medium Density (stabilized fibrotic nodules) & Medium Density Stabalized Fibrotic Nodules \\
+			\hline
+			\cntrplus & High Density (calcified nodules, typically sequella) & High Density (calcified nodules, typically sequella) & High Density Calcified Typically Sequella \\
+			\hline
+			\multicolumn{4}{|c|}{\textbf{Infiltrate}} \\
+			\hline
+			\cntrplus & Low/ground glass Density & Low/ground glass Density & Infiltrate Low/Ground Density \\
+			\hline
+			\cntrplus & Medium Density & Medium Density & Infiltrate Medium Density \\
+			\hline
+			\cntrplus & High Density & High Density & Infiltrate \\
+			\hline
+			\multicolumn{4}{|c|}{\textbf{Collapse}} \\
+			\hline
+			\cntrplus & Collapse & Collapse & Collapse \\
+			\hline
+			
+		\end{tabular}
+			\begin{flushleft}
+				\textit{\raisebox{0.9ex}{\scriptsize a}Lesion names have been left unchanged for accuracy of description.}
+			\end{flushleft}
+		
+	\end{table}
+	\begin{table}
+		\centering
+		\caption{\\* The number of non-empty lesions in the lung sextants}
+		\fontsize{8}{5}\selectfont
+		\begin{tabular}{|m{5 cm}|c|c|c|c|c|c|}
+			\hline
+			Lesion name & Upper Right & Upper Left & Middle Right & Middle Left & Lower Right & Lower Left \\
+			\hline
+			Small Cavities & 6723 &	5856 & 4654	& 4717 & 2756 & 2596 \\
+			\hline
+			Medium Cavities & 6720 & 5856 & 4653 & 4714 & 2755 & 2596 \\
+			\hline
+			Large Cavities & 6719 & 5855 & 4652 & 4714 & 2755 & 2596 \\
+			\hline
+			Is any Large cavity belong to a multi-sextant cavity? & 6732 & 5868 & 4663 & 4727 & 2768 & 2608 \\
+			\hline
+			Can Multiple cavities be seen? & 6732 & 5867 & 4661 & 4727 & 2768 & 2606 \\
+			\hline
+			Small Nodules &	6724 & 5856 & 4656 & 4719 & 2757 & 2599 \\
+			\hline
+			Medium Nodules & 6724 & 5855 & 4653 & 4715 & 2755 & 2596 \\
+			\hline
+			Large Nodules & 6720 & 5853 & 4652 & 4714 & 2755 & 2596 \\
+			\hline
+			Huge Nodules & 6720 & 5854 & 4652 & 4714 & 2755 & 2596 \\
+			\hline
+			Is any calcified or partially-calcified Nodule exists?	& 6733 & 5868 & 4666 & 4727 & 2768 & 2609 \\
+			\hline
+			Is any non-calcified Nodule exists?	& 6731 & 5868 & 4665 & 4728 & 2768 & 2609 \\
+			\hline
+			Is any clustered Nodule exists & 6731 & 5864 & 4665 & 4727 & 2769 & 2608 \\
+			\hline
+			Are multiple Nodules exist? & 6730 & 5862 & 4661  & 4723 & 2768	& 2608 \\
+			\hline
+			Low/ground glass Density (active fresh nodules) & 6726 & 5856 & 4656 & 4718	& 2757 & 2599 \\
+			\hline
+			Medium Density (stabilized fibrotic nodules) & 6724	& 5857 & 4654 & 4716 & 2755	& 2596 \\
+			\hline
+			High Density (calcified nodules, typically sequella) & 6720 & 5853 & 4652 & 4714 & 2754	& 2596 \\
+			\hline
+			Low/ground glass Density & 6724 & 5856 & 4657 & 4715 & 2760 & 2598 \\
+			\hline
+			Medium Density & 6724 & 5858 & 4655 & 4716 & 2757 & 2597 \\
+			\hline
+			High Density & 6720 & 5855 & 4652 & 4713 & 2755 & 2596 \\
+			\hline
+			Collapse & 6720 & 5855 & 4652 & 4714 & 2754	& 2598 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	
+	\begin{multicols}{2}
+		
+		\fontsize{10}{10}\selectfont
+		
+		text annotations is 546,364. For the right lung: 282,817. For the left lung: 263,547. 
+		
+		The division of the lungs into sextants is made by a radiologist according to the following rules.
+		
+		For CXR:
+		\begin{itemize}[noitemsep]
+			\item Upper sextants are above the lower edge of the aortic arch;
+			\item Middle sextants are between the lower edge of the aortic arch and the right inferior pulmonary vein);
+			\item Lower sextants are below the right inferior pul- monary vein.
+		\end{itemize}
+		For CT:
+		\begin{itemize}[noitemsep]
+			\item Upper sextants are above keel level;
+			\item Middle sextants are between keel and right inferior pulmonary vein;
+			\item Lower sextants are below right inferior pulmonary vein.
+		\end{itemize}
+		Approximately, \textit{with some reservations}, the lung may be considered to be divided into three equal lobes vertically and into two equal lobes horizontally. It was decided to determine the boundaries of the sextants by calculating the third part of the total area of the lungs. With this choice of boundaries, the sizes of the sextants will be approximately the same in area. In this case the boundaries of the sextant are approximate and not related to lung anatomy. The left lung is where the heart and left arm are located. The right lung is where the right arm is located. 
+		
+		Tab. II shows that the highest number of lung diseases was registered in the upper lung lobes and the lowest number of lung diseases was registered in the lower lung lobes. At the same time, on average, more diseases were registered in the right lung than in the left lung. 
+		
+		According to Radiopaedia "post-primary infections have a strong predilection for the upper zones" [\href{http://google.com}{4}]. Right versus left lesions asymmetry is not so obvious as top versus bottom and depends on the type (class) of the lesion. Statistical Atlas of Lung Lesions [\href{http://google.com}{5}], [\href{http://google.com}{6}], which was made by our team, is still in research. The difficulty in studying the statistical distribution of lesions is that they are of different nature and different biological substrates. \\
+		\textit{B.	Analysis of sextant lesion names}
+		
+		According to the CASE BROWSER [\href{http://google.com}{2}] website 20 lesion names are divided on the four groups (classes): "Cavity", "Nodules", "Infiltrate" and "Collapse" (see Tab. I).
+		
+		Additional analysis of the sextant lesions list is shown in Fig. \ref{fig:img5}.
+		
+		In Fig. \ref{fig:img5}, equally significant sections of text are highlighted with the same color. The 20 parameters are specially grouped in such a way that the same significant values are next to each other. Here are the definitions for these diseases.
+		\begin{figure}[H]
+			\centering
+			
+			\includegraphics[width=\linewidth]{Figure_5.jpg}
+			
+			\caption{Graphical result of lesion names analysis for lung lobes.}
+			
+			\label{fig:img5}
+		\end{figure}
+		A lung cavity or pulmonary \textit{cavity} is an abnormal, thick-walled, air-filled space within the lung. Cavities in the lung can be caused by infections, cancer, autoimmune conditions, trauma, congenital defects, or pulmonary embolism. The most common cause of a single lung cavity is lung cancer. Bacterial, mycobacterial, and fungal infections are common causes of lung cavities [\href{http://google.com}{7}].
+		
+		According to the glossary of terms for chest imaging proposed by the Fleischner Society, a lung nodule is defined as an approximately rounded opacity more or less well-defined measuring up to 3 cm in diameter [\href{http://google.com}{8}]. Rounded lesions measuring more than 3 cm in diameter are termed lung masses and should be considered indica- tive of lung cancer until histologically proven otherwise. Lung mass approach differs from that of nodules [\href{http://google.com}{9}].
+		
+		The \textit{density} of the lung reflects the total mass of fluid, air, and dry lung tissue per unit volume of the lung. Lung density can be measured by evaluation of attenuation of an electron beam with CT. This technique has been shown to be sufficiently reliable and sensitive to distinguish normal from abnormal lung water [\href{http://google.com}{10}].
+		
+		A pulmonary \textit{infiltrate} is a substance denser than air, such as pus, blood, or protein, which lingers within the parenchyma of the lungs. Pulmonary infiltrates are associated with pneumonia, tuberculosis, and sarcoido- sis [\href{http://google.com}{11}].
+		
+		A \textit{collapsed} lung (pneumothorax) occurs when air escapes from the lung. The air then fills the space outside of the lung between the lung and chest wall. This buildup of air puts pressure on the lung, so it cannot expand as much as it normally does when you take a breath. The medical name of this condition is pneumothorax [\href{http://google.com}{12}].
+		
+		Four general categories (classes) of disease can be distinguished from the definitions above:
+		
+		\begin{enumerate}[noitemsep, label=\arabic*)]
+			\item class "Cavity" in the presence of one or more abnormal thick-walled spaces in the lung filled with air (gas);
+		\end{enumerate}
+	\end{multicols}
+	
+	
+	
+
+\end{document}
