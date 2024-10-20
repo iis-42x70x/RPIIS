@@ -43,12 +43,13 @@
 ![image](https://github.com/user-attachments/assets/76b00c4d-0da2-404b-82e9-11c71848f732)
 
 
-Ознакомиться с заданиями 3 лабораторной работы можно ознакомится [ТУТ](https://docs.google.com/document/d/1DpzNF7gFXbHFqsENBv4GP7qznS-TE1uCoOUyWgAPDas/edit?tab=t.0)
+Ознакомиться с заданиями 3 лабораторной работы можно ознакомится [ТУТ](https://docs.google.com/document/d/1T6tzvKy9n5-v57hwMeZTpBKOy4lpDj9-8L8KdtQ0Rr4/edit?tab=t.0)
 ## Выполнение:
 1.Создание локального репозитория в текущей папке
 ```
 git init
 ```
+
 
 
 
