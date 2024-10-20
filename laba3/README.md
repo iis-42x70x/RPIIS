@@ -39,7 +39,8 @@
 ## Цель:
 Познакомиться с программами git, освоить их программные аргументы.
 ![image](https://github.com/user-attachments/assets/76b00c4d-0da2-404b-82e9-11c71848f732)
-Ознакомиться с заданиями 3 лабораторной работы можно ознакомится [ТУТ]https://docs.google.com/document/d/1DpzNF7gFXbHFqsENBv4GP7qznS-TE1uCoOUyWgAPDas/edit?tab=t.0)
+
+Ознакомиться с заданиями 3 лабораторной работы можно ознакомится [ТУТ](https://docs.google.com/document/d/1DpzNF7gFXbHFqsENBv4GP7qznS-TE1uCoOUyWgAPDas/edit?tab=t.0)
 ## Выполнение:
 
 
