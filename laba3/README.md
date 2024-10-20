@@ -35,6 +35,11 @@
 +    \begin{itemize} ... \end{itemize}: Начало и конец ненумерованного списка.
 +   \item: Элемент списка.
 ## Более подробно можно почитать [Тут](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
+# Лабораторная работа 3
+## Цель:
+Познакомиться с программами git, освоить их программные аргументы.
+
+Ознакомиться с заданиями 3 лабораторной работы можно ознакомится [тут](https://docs.google.com/document/d/1DpzNF7gFXbHFqsENBv4GP7qznS-TE1uCoOUyWgAPDas/edit?tab=t.0)
 
 
 
