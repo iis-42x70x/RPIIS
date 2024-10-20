@@ -49,6 +49,8 @@
 ```
 git init
 ```
+![Снимок экрана от 2024-10-20 18-49-06](https://github.com/user-attachments/assets/05d82977-0ae9-457c-b7a4-63e632ed2298)
+
 
 
 
