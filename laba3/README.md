@@ -45,6 +45,10 @@
 
 Ознакомиться с заданиями 3 лабораторной работы можно ознакомится [ТУТ](https://docs.google.com/document/d/1DpzNF7gFXbHFqsENBv4GP7qznS-TE1uCoOUyWgAPDas/edit?tab=t.0)
 ## Выполнение:
+1.Создание локального репозитория в текущей папке
+```
+git init
+```
 
 
 
