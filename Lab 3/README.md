@@ -5,4 +5,9 @@
 
 
 ### Основные команды
-[Ссылка](https://www.youtube.com/watch?v=u5ylkboKQXA&ab_channel=WEB%D0%A0%D0%90%D0%97%D0%A0%D0%90%D0%91%D0%9E%D0%A2%D0%9A%D0%90)
+- multicols- для разбиения страницы на части;
+- itemize - для создания списка;
+- scn - для подключения одноименной библиотеки;
+- newpage - для создания новой страницы
+
+Более подробно с LaЕex вы можете ознакомится [тут](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
