@@ -11,3 +11,4 @@
 - newpage - для создания новой страницы
 
 Более подробно с LaЕex вы можете ознакомится [тут](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
+![](image.png)
