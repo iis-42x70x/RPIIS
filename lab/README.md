@@ -10,26 +10,20 @@
 ### Для работы с Latex нужно подключитьспециальные пакеты
 ```
 \documentclass[10pt, a4paper]{article}%создание базы , шрифт 10
-
 \usepackage{graphicx} %подключение пакета для картинок
 \usepackage{multicol} %подключение библиотеки для разделения текста на колонки
 \usepackage{amsmath}
-
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \graphicspath{ {images/} }
-\usepackage{lipsum}
 \usepackage{setspace}%подключение бибилотеки для отступов между строками
-\usepackage{fancyhdr}
-\usepackage{float}
 \usepackage[left=2.1cm,right=2.1cm, top=2.1cm,bottom=2.2cm]{geometry} % создание шаблона с определенными отступами
 \setlength{\columnsep}{0.45cm} %расстояние между двумя колонками с текстами
 \usepackage{fancyhdr}
 \cfoot{\textbf{\thepage}} % номер страницы становится жирным
 \pagestyle{fancy}
-\setcounter {page}{117}% установление номера страницы
-\renewcommand{\headrulewidth}{0pt} % убрать разделительную линиб в верхнем колонтитуле
+\setcounter {page}{1}% установление номера страницы
 \newcommand{\RomanNumeralCaps}[1]
-    {\MakeUppercase{\romannumeral #1}}
+{\MakeUppercase{\romannumeral #1}}
 
 ```
 ### Работа со списками
@@ -60,7 +54,7 @@ the training set data.
 ```
  а вот как выглядит это в **pdf**
 
-  <p  align="center"><img src="images/4.png" width=400px height=300px></p>
+  <p  align="center"><img src="images/zzzzzzzzzzzz.jpg" width=400px height=300px></p>
 
 ### Работа с таблицами
 ```
