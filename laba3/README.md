@@ -91,7 +91,62 @@ git reset "Имя файла"
 ```
 ![Снимок экрана от 2024-10-21 09-10-44](https://github.com/user-attachments/assets/d90a93f0-d169-448a-a578-fc5e1d3987da)
 
-10.
+10.Посмотреть изменения в файле между коммитами
+```
+git diff <commit hash> <commit hash>
+```
+![изображение](https://github.com/user-attachments/assets/bd9021ad-7b45-45e0-8798-9193ea7730d4)
+
+11.Убрать изменения относительно последнего коммита из файла
+```
+git checkout --"Имя файла"
+```
+![изображение](https://github.com/user-attachments/assets/c87b4e2e-c362-48bf-bf5f-724311140be2)
+
+12.Добавить в контекст коммита все измененные и созданные файлы
+```
+git add .
+```
+13.Изменить глобальные/локальные настройки
+```
+git config --global <ключ> <значение>
+git config --local <ключ> <значение>
+```
+14.Переписать имя пользователя
+```
+git config --global user.name "Ваше Имя"
+git config --global user.email "ваш_email@example.com"
+```
+15.Посмотреть существующие ветки
+```
+git branch(Для локальных веток)
+git branch -a(Для локальных и удаленных)
+```
+![Снимок экрана от 2024-10-21 09-30-18](https://github.com/user-attachments/assets/227aa551-dd28-4858-8a5d-fc4c8bb6a57a)
+
+16.Создать новую ветку
+```
+git branch "Имя ветки"
+```
+17.Переключиться на другую ветку
+```
+git checkout "Имя ветки"
+```
+![изображение](https://github.com/user-attachments/assets/a9c48009-7f5a-4a9a-a405-86df8bd75428)
+
+18.Создать новую ветку и сразу же переключиться на неё
+```
+git checkout -b "Имя ветки"
+```
+19.Удалить ветку(1) и удалить ветку,даже если она примержена(2)
+```
+git branch -d "Имя ветки"
+git branch -D "Имя ветки"
+```
+
+
+
+
 
 
 
