@@ -95,7 +95,7 @@ git reset "Имя файла"
 ```
 git diff <commit hash> <commit hash>
 ```
-![изображение](https://github.com/user-attachments/assets/bd9021ad-7b45-45e0-8798-9193ea7730d4)
+![Снимок экрана от 2024-10-21 09-16-49](https://github.com/user-attachments/assets/2371621c-4e89-40ad-b4cf-23668b3cf925)
 
 11.Убрать изменения относительно последнего коммита из файла
 ```
