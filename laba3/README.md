@@ -99,9 +99,9 @@ git diff <commit hash> <commit hash>
 
 11.Убрать изменения относительно последнего коммита из файла
 ```
-git checkout --"Имя файла"
+git restore "Имя файла"
 ```
-![изображение](https://github.com/user-attachments/assets/c87b4e2e-c362-48bf-bf5f-724311140be2)
+![Снимок экрана от 2024-10-21 09-43-51](https://github.com/user-attachments/assets/c6e9b190-64ca-4b8c-96ec-aa137d88682d)
 
 12.Добавить в контекст коммита все измененные и созданные файлы
 ```
