@@ -35,7 +35,7 @@
 \end{itemize}
 ```
  а вот как выглядит это в **pdf**
- <p  align="center"><img src="images/3.png" ></p>
+ <p  align="center"><img src="Cписок.jpg" ></p>
 
 ### Вставка картинок
 ```
