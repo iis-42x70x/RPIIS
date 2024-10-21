@@ -5,7 +5,7 @@
 <a href="https://www.overleaf.com/">OverLeaf</a>
 
 Для начала проекта нужно нажать на кнопку
-<p  align="center"><img src="images/10.png" ></p>
+<p  align="center"><img src="Начало проекта.jpg" ></p>
 
 ### Для работы с Latex нужно подключитьспециальные пакеты
 ```
