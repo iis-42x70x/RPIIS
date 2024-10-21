@@ -38,13 +38,16 @@
 \includegraphics[width=0.9\linewidth]{image/picture1.png}
 \includegraphics[width=1\linewidth]{image/picture2.png}
 \includegraphics[width=1\linewidth]{image/picture3.png}
-\includegraphics[width=0.95\linewidth]{image/picture3.png}```
+\includegraphics[width=0.95\linewidth]{image/picture3.png}
+```
 
 ## Римские цифры
  Была введена новая команда для нумерации заголовков с помощью римских цифр
 
-```\newcommand{\upperRomannumeral}[1]{\uppercase\expandafter{\romannumeral#1}}```
+```\newcommand{\upperRomannumeral}[]{\uppercase\expandafter{\romannumeral#1}}```
+
 Для использования нужно ввести команду вида
+
 ```\upperRomannumeral{}```
 
 # Работа с Git'ом
