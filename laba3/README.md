@@ -89,7 +89,7 @@ git config --list
 ```
 git reset "Имя файла"
 ```
-![Снимок экрана от 2024-10-21 09-10-44](https://github.com/user-attachments/assets/d90a93f0-d169-448a-a578-fc5e1d3987da)
+![Снимок экрана от 2024-10-21 09-16-49](https://github.com/user-attachments/assets/06ac9dbf-0da9-47d4-8af1-41a4104ca566)
 
 10.Посмотреть изменения в файле между коммитами
 ```
