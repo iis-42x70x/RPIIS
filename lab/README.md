@@ -28,14 +28,10 @@
 ```
 ### Работа со списками
 ```
-\begin{itemize} %задание списка
-\item[1)]Some parametric family (model) of algorithms is
-selected;
-\item[2)]The initial values of the parameters are fixed, and
-thus a specific algorithm is set;
-\item[3)]The final setting of the algorithm to the subject
-domain is carried out during its training based on
-the training set data.
+\begin{itemize}
+\item Filtering irrelevant parts of an sc-text stored in the knowledge base;
+\item Linearization of a non-linear text that is a certain graph structure within the knowledge base; 
+\item Translation of a linearized sc-text into a natural language.
 \end{itemize}
 ```
  а вот как выглядит это в **pdf**
