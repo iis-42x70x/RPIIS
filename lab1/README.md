@@ -53,7 +53,7 @@
 для добавления гиперссылки объекту
  
  ## Вот так выглядит документ при его редактировании
-  <p  align="center"><img src="images/21.png"  ></p>
+  <p  align="center"><img src="images/4.png"  ></p>
 
 ## Цель: работа с Git и GitHub, а также научиться оформлять MarkDown  файлы
 
