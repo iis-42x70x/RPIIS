@@ -49,7 +49,7 @@
 ```
 <p align="center"> а вот как выглядит это в <b>pdf</b>
 </p>
- <p  align="center"><img src="images/3.png" width=700px height=200px ></p>
+ <p  align="center"><img src="images/3.png" width=500px height=100px ></p>
  
  ## Вот так выглядит документ при его редактировании
   <p  align="center"><img src="images/21.png"  ></p>
