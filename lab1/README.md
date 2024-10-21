@@ -48,7 +48,6 @@
 \RNumb{5}. Experiments and Results
 ```
 <p align="center"> а вот как выглядит это в <b>pdf</b>
-</p>
  <p  align="center"><img src="images/3.png" width=500px height=100px ></p>
  
  ## Вот так выглядит документ при его редактировании
