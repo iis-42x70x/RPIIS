@@ -43,6 +43,14 @@
  <p  align="center"><img src="images/3.png" width=500px height=100px ></p>
 
   ## Также использовались следующие команды
+```
+ \columnbreak
+ ```
+для прерывания колонны
+ ```
+ \href{https://proc.ostis.net/proc/Proceedings%20OSTIS-2024.pdf}{\textcolor{blue}{2}}
+ ```
+для добавления гиперссылки объекту
  
  ## Вот так выглядит документ при его редактировании
   <p  align="center"><img src="images/21.png"  ></p>
