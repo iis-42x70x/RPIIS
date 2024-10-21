@@ -132,7 +132,7 @@ git branch "Имя ветки"
 ```
 git checkout "Имя ветки"
 ```
-![изображение](https://github.com/user-attachments/assets/a9c48009-7f5a-4a9a-a405-86df8bd75428)
+![Снимок экрана от 2024-10-21 09-32-37](https://github.com/user-attachments/assets/6f4c12ae-03a6-4814-9e3e-30e9f71bcb7b)
 
 18.Создать новую ветку и сразу же переключиться на неё
 ```
