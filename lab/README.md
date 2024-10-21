@@ -56,39 +56,6 @@ the training set data.
 
   <p  align="center"><img src="images/zzzzzzzzzzzz.jpg" width=400px height=300px></p>
 
-### Работа с таблицами
-```
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
-\hline
-\textbf{Units} & \textbf{0} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} \\
-\hline
-\textbf{0} & 2 & 2 & 2 & 3 & 2 & 3 & 2 & 3 & 2 & 3 \\
-\hline
-\textbf{1} & 3 & 3 & 2 & 3 & 2 & 3 & 3 & 2 & 3 & 2 \\
-\hline
-\textbf{2} & 2 & 3 & 2 & 3 & 2 & 2 & 2 & 3 & 3 & 2 \\
-\hline
-\textbf{3} & 3 & 2 & 2 & 3 & 2 & 3 & 2 & 2 & 3 & 2 \\
-\hline
-\textbf{4} & 2 & 3 & 2 & 3 & 2 & 3 & 2 & 3 & 2 & 3 \\
-\hline
-\textbf{5} & 3 & 2 & 3 & 3 & 3 & 3 & 2 & 3 & 3 & 2 \\
-\hline
-\textbf{6} & 3 & 2 & 2 & 3 & 2 & 3 & 2 & 3 & 3 & 2 \\
-\hline
-\textbf{7} & 2 & 3 & 3 & 3 & 2 & 3 & 2 & 3 & 2 & 3 \\
-\hline
-\textbf{8} & 3 & 2 & 2 & 3 & 3 & 3 & 2 & 3 & 3 & 2 \\
-\hline
-\textbf{9} & 2 & 3 & 2 & 3 & 3 & 3 & 2 & 3 & 3 & 2 \\
-\hline
-\end{tabular}
-```
- <p align="center"> а вот как выглядит это в <b>pdf</b>
-</p>
-
- <p  align="center"><img src="images/7.png" ></p>
-
  ### Работа с секциями  и римскими цифрами
  ```
  \section*{\fontsize{10}{11}\selectfont\textnormal{
