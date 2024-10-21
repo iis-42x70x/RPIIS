@@ -41,6 +41,8 @@
 ```
 <p align="center"> а вот как выглядит это в <b>pdf</b>
  <p  align="center"><img src="images/3.png" width=500px height=100px ></p>
+
+  ## Также использовались следующие команды
  
  ## Вот так выглядит документ при его редактировании
   <p  align="center"><img src="images/21.png"  ></p>
