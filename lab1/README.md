@@ -1,11 +1,4 @@
 <h1 align="center"> Работа с Latex</h1>
-<p  align="center"><img src="images/11.png"></p>
-Для регистрации можно перйти по ссылке
-
-<a href="https://www.overleaf.com/">OverLeaf</a>
-
-Для начала проекта нужно нажать на кнопку
-<p  align="center"><img src="images/10.png" ></p>
 
 ### Для работы с Latex нужно подключитьспециальные пакеты
 ```
