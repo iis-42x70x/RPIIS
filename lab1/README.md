@@ -57,7 +57,7 @@
 
 ## Цель: работа с Git и GitHub, а также научиться оформлять MarkDown  файлы
 
- <p  ><img src="images/555.png"  ></p>
+ <p  ><img src="images/5.png"  ></p>
  <p><b>Git</b> (произносится «гит») — распределённая система управления версиями.</p>
 
  [Git](https://git-scm.com/)
