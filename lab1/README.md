@@ -55,6 +55,8 @@
  ## Вот так выглядит документ при его редактировании
   <p  align="center"><img src="images/4.png"  ></p>
 
+# Лабораторная работа 1 
+
 ## Цель: работа с Git и GitHub, а также научиться оформлять MarkDown  файлы
 
  <img src="images/5.png" width=400px height=200px></p>
