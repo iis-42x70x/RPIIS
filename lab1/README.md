@@ -4,13 +4,13 @@
 ```
 \documentclass[twotcolumn]{scndocument}
 
-\newcommand{\RNumb}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
-\usepackage{multicol}
+\newcommand{\RNumb}[1]{\uppercase\expandafter{\romannumeral #1\relax}} %написание римских цифр
+\usepackage{multicol} %подключение библиотеки для разделения текста на колонки
 \usepackage{lipsum}
 \usepackage{tikz}
 \usepackage{float}
-\usepackage{graphicx}
-\usepackage[usenames]{hyperref}
+\usepackage{graphicx} %подключение пакета для картинок
+\usepackage[usenames]{hyperref} %создание гиперссылок
 ```
 ### Работа со списками
 ```
