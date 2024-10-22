@@ -24,7 +24,7 @@
 ## ОТЧЁТ
 1. git init <br>![1](images/1.png)
 2. git status <br>![2](images/2.png)
-3. последовательность коммитов, master   /   main <br>
+3. ветка в Git-это линия разработки. Обычно основной веткой является main или master.
 4. git add {file} <br>![4](images/4.png)
 5. git commit -m "comment" <br>![5](images/5.png)
 6. git commit -am "comment" <br>![6](images/6.png)
