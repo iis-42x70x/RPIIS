@@ -1,0 +1,162 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[margin=0.7in,top=0.3in]{geometry}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[T2A]{fontenc}
+\usepackage[russian,english]{babel}
+
+\usepackage{hyperref}
+\usepackage{url} 
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\begin{document}
+
+\pagestyle{fancy}
+\fancyfoot[C]{\Large \textbf{\thepage}} 
+
+\renewcommand{\headrulewidth}{0pt}
+\setcounter{page}{84}
+
+\setcounter{figure}{1}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figure1.jpg}  
+    \caption{User interface architecture}  
+   
+
+    \centering
+    \includegraphics[scale=0.7]{figure2.jpg}  
+    \caption{User action example}  
+   
+\end{figure}
+
+\newpage
+
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\Large \textbf{\thepage}}
+}
+
+\thispagestyle{plain}
+
+\begin{figure}[H]
+  \centering  
+  \includegraphics[scale=0.7]{figure3.jpg}
+  \caption{Sequence diagram for updating the user interface based on user interaction}
+
+\end{figure}
+
+\begin{multicols}{2}
+
+\vspace{5mm}
+\hspace*{10mm}interface component model as a reaction to one or 
+\hspace*{10mm}another type of interaction.
+
+\justifying
+
+\hspace*{2mm}The user interface implemented according to the specified architecture will be generated on the basis of its model in the knowledge base, adapted to the needs of users, and dynamically changed depending on the tasks to be solved.
+
+\vspace{2mm}
+
+\setcounter{section}{4}
+\begin{center}
+ \Roman{section}. Conclusion 
+\end{center}
+
+\vspace{-2mm}
+
+\hspace*{2mm}The paper analyzes the capabilities of computer systems and the level of development of tools for interaction with them (user interfaces). Based on the analysis, an approach to the design of adaptive user interfaces of intelligent systems is proposed to provide new scenarios of user interaction with computer systems.
+
+\hspace*{2mm}To apply this approach, the OSTIS Technology is used, which allows solving complex problems and whose components integrate with each other and have a synergistic effect. In turn, the application of ontological approach based on the semantic model of building adaptive user interfaces within the framework of the OSTIS Technology allows making intelligent systems practically applicable for a large number of classes of tasks. The paper refines and extends the previously proposed semantic model
+
+\end{multicols}
+
+\newpage
+
+\begin{multicols}{2}
+
+of adaptive user interfaces of intelligent systems and
+presents their proposed architecture.
+
+\justifying
+
+\vspace{2mm}
+
+\begin{center}
+    Acknowledgment
+\end{center}
+
+\vspace{-2mm}
+
+\hspace*{2mm} The authors would like to thank the scientific collectives of the departments of Intelligent Information Technologies of the Belarusian State University of Informatics and Radioelectronics and Brest State Technical University for their help and valuable comments.
+
+\vspace{2mm}
+
+\begin{center}
+    References
+\end{center}
+
+\vspace{-2mm}
+
+\begin{footnotesize } 
+
+\begin{enumerate}
+    \item [{[1]}](2024, February) Data-driven ui: unlimited power. [Online]. Available: \href{https://mobius-piter.ru/en/2018/spb/talks/v96lokugwe8cwggio8ois/}{https://mobius-piter.ru/en/2018/spb/talks/v96lokugwe8cwggio8ois/}
+    
+    \item [{[2]}] B. A. Myers and M. B. Rosson, “Survey on user interface programming,” ser. CHI ’92. New York, NY, USA: Association for Computing Machinery, 1992, p. 195–202. [Online]. Available: \href{https://doi.org/10.1145/142750.142789}{https://doi.org/10.1145/142750.142789}
+    
+    \item [{[3]}] M. E. Sadouski, “Semantic models and tools for designing adaptive user interfaces of intelligent systems,” Informatics, vol. 20, no. 3, p. 74–89, Sep. 2023. [Online]. Available: \href{http://dx.doi.org/10.37661/1816-0301-2023-20-3-74-89}{http://dx.doi.org/10.37661/1816-0301-2023-20-3-74-89}
+    
+    \item [{[4]}] S. Abrahão, E. Insfran, A. Sluÿters, and J. Vanderdonckt, “Model-based intelligent user interface adaptation: challenges and future directions,” Software and Systems Modeling, vol. 20, no. 5, p. 1335–1349, Jul. 2021. [Online]. Available: \href{http://dx.doi.org/10.1007/s10270-021-00909-7}{http://dx.doi.org/10.1007/s10270-021-00909-7}
+    
+    \item [{[5]}] A. Wolff, P. Forbrig, A. Dittmar, and D. Reichart, “Linking gui elements to tasks: Supporting an evolutionary design process,” vol. 127, pp. 27–34, 01 2005.
+    
+    \item [{[6]}] D. Shunkevich, “Agentno-orientirovannye reshateli zadach intellektual’nyh sistem [Agent-oriented models, method and tools of compatible problem solvers development for intelligent systems],” in Otkrytye semanticheskie tekhnologii proektirovaniya intellektual’nykh system [Open semantic technologies for intelligent systems], V. Golenkov, Ed. BSUIR, Minsk, 2018, pp. 119–132.
+    
+    \item [{[7]}] N. Zotov, “Semantic theory of programs in next-generation intelligent computer systems,” in Open semantic technologies for intelligent systems. BSUIR, Minsk, 2022, pp. 297—326.
+    
+    \item [{[8]}] V. N. Lukin, A. L. Dzyubenko, and Y. B. Chechikov, “Approaches to user interface development,” Program. Comput. Softw., vol. 46, no. 5, p. 316–323, sep 2020. [Online]. Available: \href{https://doi.org/10.1134/S0361768820050059}{https://doi.org/10.1134/S0361768820050059}
+    
+    \item [{[9]}] M. G. Shishaev and V. V. Dikovickij, “Tekhnologiya sinteza adaptivnyh pol’zovatel’skih interfejsov dlya mul’tipredmetnyh informacionnyh sistem,” Trudy Kol’skogo nauchnogo centra RAN, no. 5 (24), pp. 101–108, 2014.
+    
+    \item [{[10]}] V. Golenkov, Ed., Tehnologija kompleksnoj podderzhki zhiznennogo cikla semanticheski sovmestimyh intellektual’nyh komp’juternyh sistem novogo pokolenija [Technology of complex life cycle support of semantically compatible intelligent computer systems of new generation]. Bestprint, 2023.
+    
+    \item [{[11]}] M. Orlov, “Control tools for reusable components of intelligent computer systems of a new generation,” Open semantic technologies for intelligent systems, no. 7, pp. 191–206, 2023.
+    
+    \item [{[12]}] K. Bantsevich, “Metasystem of the ostis technology and the standard of the ostis technology,” in Open semantic technologies for intelligent systems, ser. Iss. 6, V. Golenkov, Ed. BSUIR, Minsk, 2022, pp. 357–368.
+    
+    \item [{[13]}] A. Zagorskiy, “Principles for implementing the ecosystem of next-generation intelligent computer systems,” Open semantic technologies for intelligent systems, no. 6, pp. 347–356, 2022.
+    
+    \item [{[14]}] V. Golenkov, N. Guliakina, and D. Shunkevich, Otkrytaja tehnologija ontologicheskogo proektirovanija, proizvodstva i jekspluatacii semanticheski sovmestimyh gibridnyh intellektual’nyh komp’juternyh sistem [Open technology of ontological design, production and operation of semantically compatible hybrid intelligent computer systems], V. Golenkov, Ed. Minsk: Bestprint, 2021.
+\end{enumerate}
+
+\end{footnotesize } 
+
+\columnbreak
+
+\begin{center}
+    \textbf{АДАПТИВНЫЕ ПОЛЬЗОВАТЕЛЬСКИЕ ИНТЕРФЕЙСЫ ИНТЕЛЛЕКТУАЛЬНЫХ СИСТЕМ: РАСКРЫТИЕ ПОТЕНЦИАЛА ВЗАИМОДЕЙСТВИЯ "ЧЕЛОВЕК-СИСТЕМА"}
+\end{center}
+
+\begin{center}
+   \textbf{Садовский М. Е., Насевич П. Е., Орлов М. К., Жмырко А. В.}
+\end{center}
+
+В работе проведен анализ возможностей компьютерных систем и уровня развития инструментов взаимодействия с ними (пользовательских интерфейсов). На основе анализа предложен подход к проектированию адаптивных пользовательских интерфейсов интеллектуальных систем на основе Технологии OSTIS. Уточнена и расширена предложенная ранее семантическая модель таких интерфейсов, приведена предлагаемая архитектура таких систем. Проектируемые на основе предложенного подхода адаптивные пользовательские интерфейсы обеспечат новые сценарии взаимодействия пользователей с компьютерными системами.
+
+\vspace{2mm}
+
+\raggedleft Received 01.04.2024
+
+\end{multicols}
+
+\end{document}
+
+
+
