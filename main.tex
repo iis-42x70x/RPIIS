@@ -1,0 +1,444 @@
+\documentclass{article}
+\usepackage{enumitem}
+\usepackage[russian]{babel}
+\usepackage{ragged2e}
+\usepackage{multicol}
+\setlength { \columnsep }{ 2cm }
+\usepackage[left=5cm,right=1.9cm, top=2.2cm,bottom=2.5cm]{geometry}
+\linespread{0.84} 
+
+\setcounter{page}{60}
+
+\begin{document}
+\begin{multicols}{2}
+\begin{itemize}
+\sloppy
+\item[$\Rightarrow$] \quad
+\textit{commmand to call an agent*: 
+[components search -class concept\_reusable\_kb\_component]} 
+     \leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{result*:} \par 
+      \leftskip=0pt
+[Found all Knowledge Base components 
+ whose specifications have been installed] \par
+\leftskip=-3em
+ \item\quad\textit{ Installing the Knowledge Base component} \par
+  \leftskip=0pt
+  \leftskip=-1em
+ \item[$\Rightarrow$] \quad
+ \textit{sc-agent*:} \par
+   \leftskip=0pt
+ [ScComponentManagerInstallAgent] \par
+ \leftskip=-1em
+ \item[$\Rightarrow$] \quad
+ \textit{commmand to call an agent*:
+[components install --idtf
+part\_polygons]} \par
+ \item[$\Rightarrow$] \quad
+ \textit{result*} \par
+ \leftskip=0pt
+ [A Knowledge Base component in
+the form of subject domain of
+polygons was established.] \par
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{note*:} \par
+\leftskip=0pt
+[After performing this step, we
+can find the concept "multiple"
+in the web interface and browse
+its semantic neighbourhood. But
+it is worth noting that the subject
+domain of triangles, which is a
+private subject domain of polygons, is empty.] \par
+\leftskip=-3em
+\item\quad\textit{Installing the Knowledge Base component} \par
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{sc-agent*:} \par
+\leftskip=0pt
+[ScComponentManagerInstallAgent] \par
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{commmand to call an agent*:
+[components install --idtf
+part\_triangles]} 
+\item[$\Rightarrow$] \quad
+\textit{result*:} \par
+\leftskip=0pt
+[The Knowledge Base component
+is installed in the form ofof subject domain of triangle] \par
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{note*:} \par
+\leftskip=0pt
+[After performing this step, we
+can find the concept "triangle"
+in the web interface and browse
+its semantic neighbourhood. It is
+worth noting that the subject domain of triangles, which is a private subject domain of polygons,
+is fully described and compatible
+with the subject domain of polygons.] \par
+\leftskip=-3em
+\item\quad\textit{Creating two sets of triangles} \par
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{note*:} \par
+\leftskip=0pt
+[At this step it is necessary to find
+the class "triangle" in the webinterface, create two sets of triangles and add elements to them.
+
+\columnbreak
+
+It is necessary to specify that the
+sets and their elements belong to
+the class "triangle".] 
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{example*:} \par
+\leftskip=0pt
+\textit{[triangles\_1 = \{ABC, CDE, XYZ\},
+triangles\_2 = \{MNK, CDE,
+XYZ\}]} 
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{note*:} \par
+\leftskip=0pt
+[After performing this step, you
+can check that no operations on
+sets can be performed now. This
+can be verified by right-clicking
+on the node "triangles\_1".] \par
+\leftskip=-3em
+ \item\quad\textit{Search for all available problem solver
+components in the library} \par
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{sc-agent*:} \par
+\leftskip=0pt
+[ScComponentManagerSearchAgent] \par
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{commmand to call an agent*:
+[components search  --class concept\_reusable\-ps\_component]} 
+\item[$\Rightarrow$] \quad
+\textit{result*:} \par
+\leftskip=0pt
+[Found all components of the problem solver whose specifications
+are installed.] \par
+\leftskip=-3em
+  \item\quad\textit{Installing the components of the problem
+  solver} \par
+  \leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{sc-agent*:} \par
+\leftskip=0pt
+[ScComponentManagerInstallAgent] \par
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{commmand to call an agent*: 
+[components install --idtf
+agent\_of\_finding\_intersection\_of\_sets]}
+\par
+\item[$\Rightarrow$] \quad
+\textit{result*:} \par
+\leftskip=0pt
+[A problem solver component for
+finding the intersection of two
+sets is established.] \par
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{note*:} \par
+\leftskip=0pt
+[After this step, you can check
+that you can now perform an
+operation on sets. In the web
+interface, search for the concept
+"installed components" and select
+the node of the desired agent
+\textit{agent\_of\_finding\_intersection\_of\_sets)}
+and run the set intersection agent
+using the example of two
+previously created triangle
+sets. The intersection of the
+two sets will be found. But it
+should be noted that this way of
+launching the agent is long and
+inconvenient.] \par
+\leftskip=-3em
+  \item\quad\textit{Search for all available interface
+components in the library} \par
+\leftskip=0pt
+
+
+\newpage
+
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{sc-agent*:} \par
+\leftskip=0pt
+[ScComponentManagerSearchAgent] \par
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{commmand to call an agent*:
+[components search class concept\_reusable\_interface\_component]}
+\item[$\Rightarrow$] \quad
+\textit{result*:} \par
+\leftskip=0pt
+[Found all interface components
+whose specifications have been
+downloaded.] \par
+\leftskip=-3em
+\item\textit{Installing the user interface component} \par
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{sc-agent*:} \par
+\leftskip=0pt
+[ScComponentManagerInstallAgent] \par
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{commmand to call an agent*:
+[components install −−idtf 
+menu\_of\_agent\_of\_finding\_intersection\_of\_sets]}
+\item[$\Rightarrow$] \quad
+\textit{result*:} \par
+\leftskip=0pt
+[Installed an interface component
+for an agent to find the intersection of two sets.] \par
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{note*:} \par
+\leftskip=0pt
+[After this step, the intersection
+finder can be invoked using a
+button in the interface, which is
+much faster and more convenient
+than the first method. This can be
+checked by calling the agent to
+find the intersection of two sets
+using the example of triangle sets
+(triangles\_1 and triangles\_2).] \par
+\leftskip=-3em
+\item\textit{Setting a logical formula component} \par
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{sc-agent*:} \par
+\leftskip=0pt
+[ScComponentManagerInstallAgent] \par
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{commmand to call an agent*:
+[components install −−idtf
+lr\_about\_isosceles\_triangle]} \par
+\item[$\Rightarrow$] \quad
+\textit{result*:} \par
+\leftskip=0pt
+[Established a component with a
+logical formula for determining
+whether a triangle is isosceles or
+not.] \par
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{note*:} \par
+\leftskip=0pt
+[If you go to the web interface
+after performing this step, create
+the necessary fragment for the
+geometry logic formula parcels
+and try to run the logic output,
+it fails because the logic output
+component is missing.] \par
+\leftskip=-3em
+\item\textit{Setting the logic inference component}
+\item[$\Rightarrow$] \quad
+\leftskip=-1em
+\textit{sc-agent*:} \par
+\leftskip=0pt
+[ScComponentManagerInstallAgent]
+
+\columnbreak
+
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{commmand to call an agent*:
+[components install −−idtf
+scl\_machine]}
+\item[$\Rightarrow$] \quad
+\textit{result*:} \par
+\leftskip=0pt
+[Logic inference machine is installed.] \par
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{note*:} \par
+\leftskip=0pt
+[After performing this step go to
+the web-interface, create the necessary fragment to send a logical
+formula on geometry and try to
+run the logical output, then the
+formula will generate the necessary fragment of the Knowledge
+Base. However, this is still not
+very convenient.] \par
+\leftskip=-3em
+\item\textit{Installing the user interface component} \par
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{sc-agent*:} \par
+\leftskip=0pt
+[ScComponentManagerInstallAgent]
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{result*:} \par
+\leftskip=0pt
+[Interface component for logic output component installed] \par
+\leftskip=-1em
+\item[$\Rightarrow$] \quad
+\textit{note*:} \par
+\leftskip=0pt
+[After performing this step in the
+web interface after creating the
+necessary fragment to send the
+formula on geometry, you can easily call the logical output agent
+through the interface component.] \par
+\leftskip=-4em
+\rangle \par
+\leftskip=-2em
+\item[$\Rightarrow$] \quad
+\leftskip=0pt
+\setlength { \columnsep }{ 0.5cm }
+\textit{result*:}
+[The functionality of the system is extended. A system capable of logical inference and finding intersection of sets is obtained. The system has interface components corresponding to these agents.
+The Knowledge Base on geometrical figures (polygons and triangles) is also obtained.]
+\begin{center}
+    Conclusion
+\end{center}
+\leftskip=-4em
+The component approach is key in the technology
+of designing intelligent computer systems. At the same
+time, the technology of component design is closely
+related to the other components of the technology of
+designing intelligent computer systems and ensures their
+compatibility, producing a powerful synergetic effect
+when using the entire complex of private technologies for
+designing intelligent systems. The most important principle in the implementation of the component approach
+is the semantic compatibility of reusable components,
+which minimizes the participation of programmers in the
+creation of new computer systems and the improvement
+of existing ones.
+
+\newpage
+\\
+To implement the component approach, in the article, a
+library of reusable compatible components of intelligent
+computer systems based on the OSTIS Technology is
+proposed, classification and specification of reusable
+ostis-systems components is introduced, a component
+manager model is proposed that allows ostis-systems
+to interact with libraries of reusable components and
+manage components in the system, the architecture of the
+ecosystem of intelligent computer systems is considered
+from the point of view of using a library of reusable
+components. \par
+At the moment the manager of reusable components of
+ostis-systems with console user interface and the library
+of reusable components of ostis-systems with graphical
+user interface have been implemented. The subject areas
+necessary for the implementation of component design
+have been implemented, and diagrams showing the details of the use and operation of the component manager
+and the component library have been implemented. \par
+The results obtained will improve the design efficiency of intelligent systems and automation tools for
+the development of such systems, as well as provide an
+opportunity not only for the developer but also for the
+intelligent system to automatically supplement the system
+with new knowledge and skills.
+\begin{center}
+    References
+\end{center}
+\begin{enumerate}[label=\textit{[\arabic*]}]
+\scriptsize
+\leftskip=-10em
+ \item K. Yaghoobirafi and A. Farahani, “An approach for semantic interoperability in autonomic distributed intelligent systems,” Journal
+of Software: Evolution and Process, vol. 34, 02 2022.
+ \item Natalia N. Skeeter, Natalia V. Ketko, Aleksey B. Simonov,
+Aleksey G. Gagarin, Irina Tislenkova, “Artificial intelligence:
+Problems and prospects of development,” Artificial Intelligence:
+Anthropogenic Nature vs. Social Origin, 2020.
+ \item Olena Yara, Anatoliy Brazheyev, Liudmyla Golovko, Liudmyla
+Golovko, Viktoriia Bashkatova, “Legal regulation of the use
+of artificial intelligence: Problems and development prospects,”
+European Journal of Sustainable Development, 2021.
+ \item J. Waters, B. J. Powers, and M. G. Ceruti, “Global interoperability using semantics, standards, science and technology (gis3t),”
+Computer Standards \& Interfaces, vol. 31, no. 6, pp. 1158–1166,
+2009.
+ \item M. Wooldridge, An introduction to multiagent systems, 2nd ed.
+Chichester : J. Wiley, 2009.
+ \item X. Shi, Z. Zheng, Y. Zhou, H. Jin, L. He, B. Liu, and Q.-S.
+Hua, “Graph processing on GPUs,” ACM Computing Surveys,
+vol. 50, no. 6, pp. 1–35, Nov. 2018. [Online]. Available:
+https://doi.org/10.1145/3128571
+ \item P. Lopes de Lopes de Souza, W. Lopes de Lopes de Souza, and
+R. R. Ciferri, “Semantic interoperability in the internet of things:
+A systematic literature review,” in ITNG 2022 19th International
+Conference on Information Technology-New Generations, S. Latifi, Ed. Cham: Springer International Publishing, 2022, pp. 333–
+340.
+ \item Blähser, Jannik and Göller, Tim and Böhmer, Matthias, “Thine
+— approach for a fault tolerant distributed packet manager based
+on hypercore protocol,” in 2021 IEEE 45th Annual Computers,
+Software, and Applications Conference (COMPSAC), 2021, pp.
+1778–1782.
+ \item V. Torres da Silva, J. S. dos Santos, R. Thiago, E. Soares, and
+L. Guerreiro Azevedo, “OWL ontology evolution: understanding
+and unifying the complex changes,” The Knowledge Engineering
+Review, vol. 37, p. e10, 2022.
+
+\columnbreak
+
+ \item V. Gribova,L. Fedorischev, P. Moskalenko, V. Timchenko, “Interaction of cloud services with external software and its implementation on the IACPaaS platform,” pp. 1–11, 2021.
+\item Vladimir Golenkov and Natalia Guliakina and Daniil Shunkevich,
+Open technology of ontological design, production and operation
+of semantically compatible hybrid intelligent computer systems,
+V. Golenkov, Ed. Minsk: Bestprint [Bestprint], 2021.
+\item (2022, September) IMS.ostis Metasystem. [Online]. Available:
+https://ims.ostis.net
+\item Shunkevich D.V., Davydenko I.T., Koronchik D.N., Zukov
+I.I., Parkalov A.V., “Support tools knowledge-based systems
+component design,” Open semantic technologies for intelligent
+systems, pp. 79–88, 2015. [Online]. Available: http://proc.ostis.
+net/proc/Proceedings%20OSTIS-2015.pdf
+\item G. Sellitto, E. Iannone, Z. Codabux, V. Lenarduzzi, A. De Lucia,
+F. Palomba, and F. Ferrucci, “Toward understanding the impact
+of refactoring on program comprehension,” in 29th International
+Conference on Software Analysis, Evolution, and Reengineering
+(SANER), 2022, pp. 1–12.
+\item M. K. Orlov, “Comprehensive library of reusable semantically
+compatible components of next-generation intelligent computer
+systems,” in Open semantic technologies for intelligent systems,
+ser. Iss. 6. Minsk : BSUIR, 2022, pp. 261–272.
+\item ——, “Control tools for reusable components of intelligent computer systems of a new generation,” in Open semantic technologies for intelligent systems, ser. Iss. 7. Minsk : BSUIR, 2023,
+pp. 261–272.
+\end{enumerate}
+\normalsize
+\begin{center}
+\textbf{ТЕКУЩЕЕ СОСТОЯНИЕ СРЕДСТВ
+АВТОМАТИЗАЦИИ КОМПОНЕНТНОГО
+ПРОЕКТИРОВАНИЯ OSTIS-СИСТЕМ} \par
+Орлов М. К., Макаренко А. И.,
+Петрочук К. Д. 
+
+\end{center}
+
+В работе рассматривается подход к проектированию
+интеллектуальных систем, ориентированный на использование совместимых многократно используемых
+компонентов, что существенно сокращает трудоемкость разработки таких систем. Ключевым средством
+поддержки компонентного проектирования интеллектуальных компьютерных систем является предложенный в работе менеджер многократно используемых
+компонентов.
+\begin{flushright}
+    Received 03.03.2024
+\end{flushright}
+
+
+
+
+ \end{itemize}
+\end{multicols}
+\end{document}
