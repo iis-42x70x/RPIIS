@@ -30,6 +30,8 @@
 Команда была изменена для нумерации заголовков с помощью римских цифр
 
 ```\renewcommand{\thesection}{\textnormal{\Roman{section}.}}```
+## [РЕЗУЛЬТАТ(.pdf)](Lab_Latex.pdf)
+## [РЕЗУЛЬТАТ(.tex)](main.tex)
 
 # Работа с Git'ом
 
