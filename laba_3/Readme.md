@@ -16,10 +16,10 @@
 * % - для комментариев.
 
 Более подробно с _LaTex_ можно ознакомиться по [ссылке](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
-![pic1](laba_3/picture1.pdf)
-![pic2](laba_3/picture2.pdf)
-![pic3](laba_3/picture3.pdf)
-![pic4](laba_3/picture4.pdf)
+![pic1](picture1.pdf)
+![pic2](picture2.pdf)
+![pic3](picture3.pdf)
+![pic4](picture4.pdf)
 # Лабораторная работа 3
 ## Цель работы:
 Познакомиться с программами git, освоить их программные аргументы.
