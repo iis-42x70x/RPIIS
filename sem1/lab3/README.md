@@ -43,6 +43,23 @@
 как это будет выглядеть 
  <p  align="center"><img src="images/1.png" ></p>
 
+### Создание таблицы
+```
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Units} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} \\
+\hline
+\textbf{1} & 1 & 2 & 3 & 4 & 5 & 6  \\
+\hline
+\textbf{2} & 1 & 2 & 3 & 4 & 5 & 6  \\
+\hline
+\textbf{3} & 1 & 2 & 3 & 4 & 5 & 6  \\
+\hline
+\textbf{4} & 1 & 2 & 3 & 4 & 5 & 6  \\
+\hline
+\end{tabular}
+```
+
 ### Основыне комманды
 * `\par` - абзац
 * `\begin{tabular} ... \end{tabular}` -  создает таблицу
