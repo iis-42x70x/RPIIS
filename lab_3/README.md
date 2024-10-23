@@ -37,21 +37,21 @@ git pull origin
 
 \usepackage{scn} <br/>
 \begin{scnindent} <br/>
-    \scnitem{}<br/>
-    \begin{scnindent}<br/>
-        \scnitem{}<br/>
-        \begin{scnrelfromset}{Your text}<br/>
-        \scnitem{Your text}<br/>
-        \scnitem{Your text}<br/>
-        \scnitem{Your text}<br/>
-        \end{scnrelfromset}<br/>
-    \end{scnindent}<br/>
+ &nbsp;    \scnitem{}<br/>
+ &nbsp;   \begin{scnindent}<br/>
+ &ensp;        \scnitem{}<br/>
+ &ensp;       \begin{scnrelfromset}{Your text}<br/>
+ &ensp;       \scnitem{Your text}<br/>
+ &ensp;       \scnitem{Your text}<br/>
+ &ensp;       \scnitem{Your text}<br/>
+ &nbsp;       \end{scnrelfromset}<br/>
+ &nbsp;   \end{scnindent}<br/>
 \end{scnindent}
 
 #Римские цифры: 
 
 \newcommand{\RomanNumeralCaps}[1]<br/>
-    {\MakeUppercase{\romannumeral #1}}<br/>
+    &nbsp; {\MakeUppercase{\romannumeral #1}}<br/>
 \RomanNumeralCaps{Your Number}
 
 #Специальные символы:
