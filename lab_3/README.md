@@ -35,24 +35,24 @@ git pull origin
 
 #Scn: 
 
-\usepackage{scn}
-\begin{scnindent}
-    \scnitem{}
-    \begin{scnindent}
-        \scnitem{}
-        \begin{scnrelfromset}{Your text}
-        \scnitem{Your text}
-        \scnitem{Your text}
-        \scnitem{Your text}
-        \end{scnrelfromset}
-    \end{scnindent}
+\usepackage{scn} \n
+\begin{scnindent} \n
+    \scnitem{}\n
+    \begin{scnindent}\n
+        \scnitem{}\n
+        \begin{scnrelfromset}{Your text}\n
+        \scnitem{Your text}\n
+        \scnitem{Your text}\n
+        \scnitem{Your text}\n
+        \end{scnrelfromset}\n
+    \end{scnindent}\n
 \end{scnindent}
 
 #Римские цифры: 
 
-\newcommand{\RomanNumeralCaps}[1]
-    {\MakeUppercase{\romannumeral #1}}
-\RomanNumeralCaps{Your Number}
+\newcommand{\RomanNumeralCaps}[1]\n
+    {\MakeUppercase{\romannumeral #1}}\n
+\RomanNumeralCaps{Your Number}\n
 
 #Специальные символы:
 
