@@ -1,0 +1,423 @@
+\documentclass[10pt, a4paper]{article}
+
+\usepackage{CJKutf8}
+\usepackage[russian, english]{babel} %язык
+
+\renewenvironment{itemize}{
+    \begin{list}{\labelitemi}{
+    \setlength{\topsep}{0pt}
+    \setlength{\partopsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parsep}{0pt}
+    }
+}{\end{list}}
+
+\usepackage[utf8]{inputenc}
+\usepackage{multicol} %колонки
+\usepackage{setspace} %межстрочный интервал
+\usepackage{ragged2e}% выравнивания текста по ширине в документе.
+\usepackage{fancyhdr} %настройки верхнего и нижнего колонтитулов в документе.
+\usepackage{titlesec} %стилей заголовков разделов в документе.
+\usepackage{enumitem} %настройки списков в документе.
+\usepackage{graphicx}%Вставка картинок правильная
+\usepackage{float}%"Плавающие" картинки
+\usepackage{wrapfig}%Обтекание фигур (таблиц, картинок и прочего)
+\usepackage{hyperref}%Гиперссылки
+
+\usepackage[left=1.9cm,right=1.9cm, top=2.2cm,bottom=2.5cm]{geometry}
+
+\justifying % выравнивает текст по ширине.
+\fancyhf{} %очищает все верхние и нижние колонтитулы.
+\renewcommand{\headrulewidth}{0pt} % remove the header rule
+\cfoot{\vskip -1.5cm \thepage} %устанавливает номер страницы в нижнем колонтитуле.
+
+\linespread{0.8} %устанавливает межстрочный интервал в 0.84.
+
+
+\setlength{\columnsep}{0.5cm}
+\setcounter{page}{156}
+\renewcommand{\thesection}{\Roman{section}} %устанавливает стиль нумерации разделов в виде заглавных римских цифр.
+
+\titleformat{\section}{\footnotesize\centering\sc}{\thesection.}{0cm}{}[] %настраивает стиль заголовков разделов.
+
+%\usepackage[unicode, pdftex]{hyperref} % Пакет для подключения ссылок
+
+
+
+
+
+\begin{document}
+
+\selectlanguage{english}
+\fontsize{10}{14}\selectfont
+\begin{multicols}{2}
+\setlength{\parindent}{0.8cm}
+\par
+\setlength{\parindent}{0.3cm}
+\fontsize{10}{15}\selectfont
+In non-invasive diagnostics, sensor output signals have
+different physical nature and correspondingly different
+types of data representation - and the question arises
+how to process them. This, in turn, necessitates the
+use of ontological approach. It is proposed to use the
+domestic technology of complex life cycle support of
+semantically compatible intelligent computer systems of
+new generation (Open Semantic Technology of Intelli-
+gent Systems). Logical-semantic approach in diagnostic
+tasks will allow to carry out differential diagnostics (to
+put forward several diagnostic hypotheses).
+\par The technological basis for the creation of an intelli-
+gent diagnostic system is the technology of OSTIS.
+\par The project of intellectual non-invasive diagnostics is
+justified by the presence of technological basis of OSTIS,
+application of logical-semantic approach in diagnostic
+tasks, as well as different variants of non-invasive di-
+agnostics.
+\par In the future, one of the directions of development of
+this system is the development of a personal medical as-
+sistant for the patient, which is focused not only on early
+detection of the disease, but also on recommendations to
+the patient for possible additional examination.
+\par The basis for the functioning of the personal medical
+assistant is a decision support system. Obtaining knowl-
+edge by the patient will contribute to the understanding
+of his condition and its possible causes.
+\par Important aspects of the system functioning are ac-
+cumulation of data and knowledge, their systematization
+and the possibility of system evolution. \newline
+
+\begin{thebibliography}{21}
+\fontsize{8}{5}\selectfont
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.0cm}
+     \bibitem[1]{e1}V. N. Rostovtsev, V. S. Ulashchik. New technology of physical
+medicine. Zdravookhranenie, 2005, №5, pp. 10-14
+     \bibitem[2]{e2}M. I.Silkou, R. M.Raviako, N. G.Lipnitskaya Multifunctional
+device for non¬invasive measurement of functional condition of
+patients. 6–th International Seminar on science and computing.
+Moscow, 2003, pp. 488-493.
+     \bibitem[3]{e3}V. L.Malykh. "Decision support systems in medicine". Software
+Systems: Theory and Applications, 2019, vol. 10 no. 2(41), pp.
+155-184.
+     \bibitem[4]{e10}Efimenko I. V., Khoroshevsky V. F. Intelligent decision support
+systems in medicine: retrospective review of the state of research
+and development and prospects.Open semantic technologies for
+designing intelligent systems, Iss. 1, pp. 251-260.
+     \bibitem[5]{e4}Kobrinsky B. A. Artificial intelligence systems in medical prac-
+tice: status and prospects. Bulletin of Roszdravnadzor. 2020. №3,
+pp. 37-43.
+     \bibitem[6]{e5}Sutton R. T. et al. An overview of clinical decision support
+systems: benefits, risks, and strategies for success. NPJ digital
+medicine, 2020, Vol.3, №1, P. 17
+    \bibitem[7]{e6}Berseneva E. A., Mikhaylov D. Y. The experience of using intel-
+ligent diagnostic decision support systems in a multidisciplinary
+hospital, Ural Medical Journal, №05 (188) 2020, pp. 174-180.
+    \bibitem[8]{e6}Shchekina E. N. Using a systematic approach to create decision
+support systems in medicine (literature review). VESTRUCTURE
+OF NEW MEDICAL TECHNOLOGIES, Vol. 11, №2 2017,
+RUSSIA, TULA, pp. 356-364.
+    \bibitem[9]{e6} — Smart system of personal health monitoring. Medelectron-
+ics — 2020. Means of medical electronics and new medical
+technologies : collection of scientific articles XII International
+Scientific and Technical Conference, Minsk, December 10, 2020.
+BSUIR, Minsk, 2020, pp. 198-203.
+    \bibitem[10]{e6} Aminu E. F. et al. A review on ontology development methodolo-
+gies for developing ontological knowledge representation systems
+for various domains. International Journal of Information Engi-
+neering and Electronic Business( IJIEEB), 2020, Vol. 12, №2,
+pp. 28-39.
+    \bibitem[11]{e6}Shunkevich, D. Ontological approach to the development of
+hybrid problem solvers for intelligent computer systems. Open
+Semantic Technologies for Intelligent Systems. Minsk, 2021,
+Iss. 5, pp. 63-74.
+    \bibitem[12]{e6}Technology of complex life cycle support of semantically compatible intelligent computer systems of new generation. Minsk,
+Bestprint, 2023, 1064 P.
+    \bibitem[13]{e6} — Medical diagnostics ontology for intelligent decision support
+systems. Design Ontology, 2018, Vol. 8, №1(27), pp. 58-73.
+    \bibitem[14]{e6} V. Rostovtsev Intelligent Health Monitoring Systems. Open Se-
+mantic Technologies for Intelligent Systems. Minsk, 2023, Iss. 7,
+pp. 237-239.
+    \bibitem[15]{e6} — Bioimpedanceometry as a method of assessing the component
+composition of the human body (literature review). Bulletin of
+St. Petersburg State University. Medicine, 2017, Vol. 12, №4.
+pp. 365-384.
+    \bibitem[16]{e6}Lipnitskaya, N. G. Synthesis of the information-measuring de-
+vices with application of the evolutionary calculations: Cand. Sci.
+(Techn.) Dissertation: 05.13.05, Minsk, 2005, 115 P.
+    \bibitem[17]{e6} — Method and device for detection of a diseased organ in a
+patient by Zakharyin-Ged zones : patent. BY 10905. Published
+30.08.2008.
+    \bibitem[18]{e6}Boytsov I. V. Dynamic segmental diagnostics. Manual for doctors,
+N.Novgorod, "Typography "Povolzhie", 2014, 460 P.
+    \bibitem[19]{e6}V. N. Rostovtsev, A. K. Kalmanovich, A. O. Lukyanov Device
+for recording and compensation of spectral-dynamic processes :
+patent. BY 6321. Published 30.06.2010
+    \bibitem[20]{e6}Boytsov I. V., Kononovich V. I. Meridian diagnostics: a modern
+approach to research. Military Medicine, 2024, №1, pp. 60-70.
+\end{thebibliography}
+
+
+\setlength{\parindent}{0.8cm}
+\par
+\setlength{\parindent}{0.3cm}
+\fontsize{10}{15}\selectfont
+\selectlanguage{russian}
+\begin{center}
+\normalsize{\textbf{ОСНОВАНИЯ ИНТЕЛЛЕКТУАЛЬНОЙ
+НЕИНВАЗИВНОЙ ДИАГНОСТИКИ}}
+\fontsize{12}{15}\selectfont
+\par Липницкая Н. Г., Ростовцев В. Н.
+\end{center}
+\fontsize{10}{13}\selectfont
+\par В статье предложено обоснование направления ра
+бот по созданию системы интеллектуальной неинва
+зивной диагностики. В качестве ее основополагающих
+составляющих определены два аспекта: технологи
+ческий базис для разработки и различные варианты
+неинвазивной диагностики.
+\par Технологическим базисом для создания интеллектуальной диагностической системы является отечественная Открытая Семантическая Технология Интеллектуальных Систем (ОСТИС). Использование логико
+семантического подхода в диагностических задачах позволит осуществлять дифференциальную диагностику (выдвигать несколько диагностических гипотез). Рассмотрено несколько направлений (вариантов) неинвазивной диагностики: функционально
+спектральная диагностика (ФСД-диагностика), биоим-педансный анализ, предварительная диагностика на
+основе оценки основных параметров функционального
+состояния, диагностика по зонам Захарьина-Геда, диагностика по методу Накатани, частотно-резонансная
+диагностика.
+
+\begin{flushright}
+    \par
+    \par Received 13.03.2024
+\end{flushright}
+
+\clearpage
+
+\end{multicols}
+\setlength{\parindent}{0.3cm}
+\fontsize{10}{15}\selectfont
+\selectlanguage{russian}
+\begin{center}
+\fontsize{22}{30}\selectfont
+\textbf{Integration and Standardization
+\\
+in New Generation Intelligent Medical Systems 
+\\
+Based on OSTIS Technology}
+\end{center}
+\setlength{\parindent}{0.8cm}
+\par
+\setlength{\parindent}{0.3cm}
+\begin{center}
+\fontsize{10}{13}\selectfont
+Veronika Krischenovich, Daniil Salnikov, Vadim Zahariev
+\\
+\textit{Belarusian State University of Informatics and Radioelectronics}
+\\
+Minsk, Belarus
+\\
+\{krish, d.salnikov, zahariev\}@bsuir.by
+\end{center}
+
+\begin{multicols}{2}
+\par \textbf{\textit{Abstract}—The article discusses the integration of international medical standards in Russia, Belarus, and Kazakhstan using semantic technologies. It describes OSTIS
+(Open Semantic Technology for Intelligent Systems) — an
+open project for creating common semantic technologies for
+the component design of intelligent systems. An example
+of the integration of various medical records standards in
+intelligent medical systems is given. The advantages of such
+integration are the improvement of the exchange of medical
+information, simplification of the diagnosis and treatment
+process, and the possibility of creating a unified medical
+space within the region.}
+\par \textbf{\textit{Keywords}—ontology modeling, OSTIS, medical information systems, standardization of medical data, integration
+of medical systems, International Classification of Diseases
+(ICD), flexibility and adaptability in healthcare systems.}
+
+    
+\section{Introduction}
+
+\par The possibilities of application of new modern technologies in human life are growing day by day. Implementation of artificial intelligence in medical systems
+plays an important role in medical data processing.
+The huge amount of data processed in modern medical
+systems can be quickly analyzed and processed only
+using the artificial intelligence (AI) element that is being
+implemented in modern computer technologies. Processing medical data using AI enables the identification of
+diseases and the patterns and trends of their development,
+helps to identify pathologies and risks of disease, as well
+as forecasting the spread of infections and predicting epidemics. This helps doctors and healthcare organizations
+in general to make informed decisions [1]–[3].
+\par The implementation of AI in medical systems can
+solve both complex and simpler problems. The complex challenges include the implementation of AI in
+robotic surgery. The application of AI in robotic surgery
+could significantly accelerate the development of surgical
+robots to perform complex surgeries with a high level of
+precision, which in turn will reduce risks and shorten
+patient recovery time after surgery. More straightforward challenges include the personalization of medicine,
+namely taking into account individual patient characteristics: genetic data and biomarker analysis, when developing personalized treatment plans and systematizing
+patients’ medical histories [4], [5].
+\par Electronic medical histories of patients, as well as dig-
+ital data from medical examinations, patient monitoring
+data from medical devices, are part of a unified medical
+decision support system called a medical information
+system (MIS). MIS is a key element of the medical
+system. MIS providing automation of document flow
+and accounting in medical institutions has an important
+role in modern medicine. And the introduction of AI
+in MIS allows to move these systems to a new level of
+development.
+
+\section{Problematics of modern medical information
+systems}
+
+\par MIS is an information system designed for processing,
+accumulation, storage and retrieval of a patient’s electronic medical record. MIS can be classified depending
+on the area of activity of medical institutions. For example, MIS for hospital usually collects and processes
+information from all blocks of the information system,
+including operating and resuscitation units. They may
+include modules for managing patients, staff, equipment,
+as well as for monitoring the performance of medical
+procedures and treatment. And MIS for outpatient clinics,
+in turn, usually focus on automating processes such as
+making appointments, working with waiting lists, and
+maintaining patient registries. They may also include
+functions for managing doctors’ schedules, tracking patients’ medical histories, and sharing medical information
+between different specialists and departments [6].
+\par Thus, it can be concluded that MISs vary depending
+on the specific needs of the healthcare facility, but all
+systems will perform functions such as completing a
+patient’s medical record and tracking medical history.
+\par The first thing patients encounter when moving from
+one health care facility to another is the need to re-
+fill out their data for their medical records. Although
+personal data remains unchanged, the medical history
+may be incomplete because the patient cannot access all
+the data about all the examinations they have undergone.
+\clearpage
+
+This can make diagnosis difficult and distort the overall
+picture. It is worth noting that the more systems in which
+a patient enters their personal data, the greater the risk
+of this data being leaked.
+\par Protection of patients’ personal data is an important
+element of MIS operation. When implementing an information system, the staff of a health care institution should
+make certain efforts, for example, they should follow
+the algorithm of working with the selected information
+system, enter information into the system using available
+templates and forms and consistently maintain electronic
+medical records.
+\par In 2020, during a roundtable discussion at the BELTA
+press center, representatives of the Ministry of Health
+and practical medicine discussed the promising directions of Belarusian e-health. And even earlier, in March
+2018, the Concept of e-health development of the Republic of Belarus for the period until 2022 was developed
+and approved. The purpose of which was to develop e-
+health and create a centralized health information system
+(CHIS) for the formation of a unified information archive
+of patients and exchange of medical data [7].
+\par The activity of the CHIS aims to improve the avail-
+ability and quality of health care by assisting in clinical
+decision-making, improving the quality and efficiency of
+management decisions based on statistical and analytical
+data.
+\par CHIS consists of functional and support subsystems
+and other subsystems. Supporting subsystems include
+software and hardware complexes, information protection
+system and subsystems that ensure proper technical functioning and interdepartmental information interaction of
+the CHIS. One of the subsystems included in the CHIS
+is the electronic medical record of the patient and the
+clinical decision support system.
+\par Thus, we can conclude that the electronic medical
+record is a MIS, a subsystem of the CHIS. And the main
+obstacle to the creation of CHIS is the lack of standards
+in the field of e-health and regulations for the exchange
+of electronic medical information
+\par As recommended by the World Health Organization
+and the International Telecommunication Union, a national eHealth system requires the following components:
+standards and interoperability (component); an enabling
+environment (role); and standards that will ensure the
+holistic and accurate capture and exchange of health
+information across all health systems and services (func-
+tional purpose).There are also a number of principles that
+should be considered when developing a CHIS:
+
+\begin{itemize}
+    \item utilization of cloud computing technologies;
+    \item use of open source software;
+    \item service-oriented architecture, microservices, modularity, possibility to create additional services through open interfaces;
+    \item elimination of duplication of engineering and telecommunication infrastructure;
+    \item Web client technology;
+    \item ensuring information security and information protection;
+    \item scalability;
+    \item simple and user-friendly interfaces, ergonomic and intuitive to use;
+    \item single entry and repeated use of primary information;
+    \item Interoperability of MIS with CHIS.
+\end{itemize}
+\par Thus, there is a need for technology that meets all
+the requirements for the realization of CHIS and, in
+particular, MIS.
+\par The results of the implementation of the Concept in
+eHealth is the creation of the following systems:
+\begin{enumerate}
+    \item National registers:
+    \begin{itemize}
+        \item State Register "Diabetes Mellitus";
+        \item State register of persons exposed to radiation as a result of the Chernobyl catastrophe and other radiation accidents;
+        \item Belarusian Kancer Register;
+        \item Republican register of HIV-infected patients;
+        \item Republican register "Tuberculosis".
+    \end{itemize}
+    \item Medical information systems:
+    \begin{itemize}
+        \item AIS "Electronic Prescription". This system is designed to automate the process of prescription writing and control over its fulfillment.
+        \item RSTMC (Telemedicine). Telemedicine system allows doctors to counsel patients from a distance using video, audio or messenger chat.
+        \item IAS "Zdravookhranenie". This system is designed to automate the recording and analysis of medical information, including data on the health status of patients.
+        \item IAS "Drug Supply". This system is designed to automate the process of planning and control of centralized procurement of medicines for healthcare organizations.
+    \end{itemize}
+\end{enumerate}
+\par All these systems are aimed at improving the quality and efficiency of medical care through the use of
+modern information technologies. They also promote
+standardization and centralization of medical information, which facilitates data exchange and collaboration
+between different specialists and medical institutions. In
+addition, these systems help to ensure the security and
+confidentiality of medical data.
+\par  There are a number of foreign analogs of MIS. Here
+are a few MIS popular in Russia:
+\begin{enumerate}
+    \item ArchiMed+ is a versatile medical software that is suitable for private physicians, medical centers, dental offices, and chain clinics. ArchiMed+ is easily scalable, offers many integrations including third-party labs, labeling system, telemedicine and more.
+\end{enumerate}
+
+\end{multicols}
+\clearpage
+Новый список
+\begin{enumerate}
+    \item Что-то первое
+    \item Что-то второе с подсписком
+    \begin{itemize}
+        \item бла-бла1
+        \item бла-бла2
+    \end{itemize}
+    \item Что-то третье
+\end{enumerate}
+
+\clearpage
+
+Страница с дополнениями всякими
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=15cm]{imagebanan.jpg}
+    \caption{Пример картинки}
+    \label{Fig. 1}
+\end{figure}
+
+\clearpage
+
+Ссылка на банан\pageref{Fig. 1}
+
+Ссылка на буквы \hyperref[Bukvi1]{ссылка}
+
+Ссылка на буквы2 \hyperlink{bukvi2}{ссылка}
+
+\clearpage
+
+Буквы: ПАЩЗПЩШЗВПШАЫОМПУОАТУЦОПАЛОВРЫЛМОЛДВЛФЫОУМВОМОДФВЫЛДМВ\label{Bukvi1}
+
+Буквы2: аЛПЩЗВОЫЗарзвыодыатвыдисшщйуйрзоащ \hypertarget{bukvi2}{\textbf{Якорь}}
+\end{document}
