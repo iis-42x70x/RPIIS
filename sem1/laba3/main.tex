@@ -1,0 +1,456 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage{graphicx}  %вставка изображений
+\usepackage[utf8]{inputenc}  %кодировка
+\usepackage{import}
+\usepackage{graphics}
+\usepackage{float}
+\usepackage{scn}
+
+\usepackage{multicol}  %столбцы
+\usepackage{microtype}  %типография
+\usepackage{enumitem}  %настройка списков
+\usepackage{setspace}  %межстрочный интервал
+\usepackage[english,russian]{babel}
+\usepackage[left=1.8cm,right=1.9cm,top=2.2cm,bottom=2.5cm,]{geometry}
+
+\justifying
+\fancyhf{}
+\setcounter{page}{111}
+\renewcommand{\thepage}{\textbf{\arabic{page}}}
+\footskip=5em
+\singlespacing
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral#1@}
+
+\begin{document}
+
+\begin{multicols}{2}
+
+
+\noindent\normalsize the history of their purchases, views, and liked goods. The
+success of the marketplace forced competitive companies
+to pay attention to the recommender systems technology. In
+the rapidly growing segment of social networks business\-oriented network LinkedIn also uses recommender system.
+Its system offers a member of the community the closest
+to the interests, specialization and experience of the
+community, company, specialists. To build recommender
+systems, there are four main types of data filtering [12]:
+
+\vspace{-0.9em}
+\begin{itemize}[itemsep=0pt, parsep=0pt]
+\setstretch{1.06}
+\item collaborative filtering;
+\item content filtering;
+\item knowledge-based filtering;
+\item hybrid filtering.
+\end{itemize}
+\vspace{-0.9em}
+
+ Often the recommender system technology is based on
+the principles of collaborative filtering, which analyses
+the actions of the most similar users with a similar profile.
+However, other types of filtering are also used in practice.
+
+\vspace{-0.5em}
+\begin{flushleft}
+ \textit{A. Collaborative filtering}
+ \end{flushleft}
+ \vspace{-0.9em}
+
+\hspace{-1.3em}
+The main principle of the functioning of filtering
+programs is the assumption that users with the same
+interests will subsequently have similar preferences. For
+the effective functioning of the model, not only the
+previous behavior of the client, its query history, but also
+the corresponding parameters of the additional cluster
+of similar users are taken into account. The target of
+collaborative filtering is to identify a certain number of
+customers operating with the closest patterns of behavior,
+and to recommend in further the goods or services liked
+by this group.\par
+The next method, which in turn is already based on
+comparing the similarity of objects, is called item-based.
+Its principle can be formulated as follows: if users who
+rated two products liked both, then the following users
+who tried only one product can be offered another.
+
+\vspace{-0.3em}
+\begin{flushleft}
+ \textit{B. Content filtering}
+ \end{flushleft}
+ \vspace{-0.9em}
+
+\hspace{-0.8em}
+Content filtering is based on the assumption of the
+constancy of user interests. In other words, based on the
+client’s past activity, it can be argued that in the future
+he will be interested in similar objects. Content filtering
+uses the following input data: both a set of users and a set
+of categories that correspond to users’ queries and to the
+objects, which users like.\par
+\hspace{-0.8em}
+\fontsize{9.6}{12}\selectfont {The purpose of this type of recommender systems is
+to build such a variety of items that are closest to the
+favorite categories of the current user. The main task of this
+methodology is to search for objects potentially close to
+the interests of users among a set of objects not yet viewed
+by the client. This search is based on finding the similarity
+of objects with the user’s interests known to the system.
+The absence of the need to revealing large user groups to
+ensure the functionality of the method is one of the main
+advantages of content filtering. This method also avoids the
+problem of “cold start”, because each object has attributes}
+
+\columnbreak
+
+\normalsize\noindent that will be analyzed in future. This type of filtering often
+make combination with collaborative filtering.
+
+\vspace{-0.7em}
+\begin{flushleft}
+\textit{C. Knowledge-based filtering}
+\end{flushleft}
+\vspace{-1em}
+
+\hspace{-0.8em}
+The most resource-intensive approach is to develop
+knowledge-based recommender systems. The main source
+of information is not the user assessment of objects or
+their metadata, but the rules and conditions developed by
+experts and expert systems for forming recommendations.
+Some researchers consider content filtering as a special
+case of the knowledge-based filtering, however, due to the
+wide prevalence, most prefer to classify it as a separate
+type. For the functioning of this kind of recommender
+systems, it is necessary to distinguish many expert rules,
+similarity metrics and user interest objects. For practical
+application of a given rules set, it is necessary to define
+user’s interests and preferences in terms of the subject area.\par
+The knowledge-based approach requires deep
+understanding of the technical features of the product,
+creation of user scenarios, inclusive restrictions and
+rules. Undoubtedly, the use of knowledge-based systems
+improves the quality of the recommendations being
+formed, since user requests find the most accurate
+response from recommendation algorithms among
+all methodologies. In addition, this method will be
+indispensable in those areas of commerce where the
+number of regular customers is relatively small. Of
+course, the development of such systems is extremely
+time-consuming in terms of time and resources. To
+improve the accuracy of functioning, it is necessary to
+involve relevant specialists in the field of data collection
+and processing, building the necessary models and user
+behavior. Also, such systems require additional interaction
+from the client with the system, which can lead to the
+outflow of some part of the target audience, moreover, the
+collected data cannot always be correctly interpreted by
+software.
+
+\vspace{-0.5em}
+\begin{flushleft}
+\textit{D. Hybrid filtering}
+\end{flushleft}
+\vspace{-0.9em}
+
+\hspace{-1.3em}
+The last type of recommender systems, hybrid,
+as the name suggests, is a synthesis of two or
+three above-mentioned methodologies. The use of
+hybrid recommender systems increases the efficiency,
+performance and accuracy of algorithms, and compensate
+their lacks. For example, the most used combinations are:
+
+\vspace{-1.2em}
+\begin{itemize}[itemsep=0pt, parsep=0pt]
+\setstretch{1.06}
+\item combining collaborative and content filtering approaches (with different weights);
+\item using some content-based filtering properties in
+collaborative filtering algorithms;
+\item partial using of knowledge-based filtering rules in recommender systems based on content filtering;
+\item building a separate model corresponding to business needs and subject area terms, combining rules of all three types.
+\end{itemize}
+\vspace{-1em}
+
+There is no unified algorithm for the functioning of
+hybrid systems, which allows researchers to apply a wide
+
+\columnbreak
+
+\noindent range of modern methodologies to create unique models. It
+was the hybrid type that became the basis of recommender
+systems in large companies to ensure better personalized
+interaction of users with their services.\par
+\hspace{-0.8em}
+Let’s take a closer look at two of the most popular
+methods of recommender systems – collaborative filtering
+and content filtering. Algorithms of these types of filtering
+can be classified into three main categories:
+
+\vspace{-0.95em}
+\begin{itemize}[itemsep=0pt, parsep=0pt]
+\setstretch{1}
+\item anamnestic methods, or methods based on the
+analysis of available estimates (memory-based
+filtering), are a family of algorithms that are based
+on statistical methods, the purpose of which is to
+search for the nearest group of users to the analyzed
+user; this approach is similar to the closest neighbors
+method, and recommendations are formed as a result
+of calculating a similarity measure based on a matrix
+of estimates of the users in the database; the main
+representative of memory-based algorithms is the
+used-based and item-based weighting of estimations;
+
+\item model-based filtering, in which a descriptive model of user and object assessments is preliminary
+formed, and priority relationships between them
+are distinguished; the main complexity of this
+method is its preliminary stage, where resourceintensive training of the model takes place; different
+approaches can be used to building such a
+model: cluster analysis methods, Markov decision
+process (MDP), singular value decomposition (SVD),
+latent semantic analysis (LSA), principle component
+analysis (PCA), etc.;
+
+\item hybrid methods, which suppose synthesis of several approaches to achieve a better result; for example,
+collaborative filtering systems can take advantage
+of a relatively easy-to-interpret anamnestic method
+with the efficiency and performance of model-based
+methods, the purpose of which is to increase the speed
+of recommender system work.
+
+\end{itemize}
+
+\vspace{-0,8em}
+Problems of development of recommender systems may
+include following situations:
+\vspace{-1em}
+
+\begin{itemize}[itemsep=0pt, parsep=0pt]
+\setstretch{1.06}
+
+\item sparseness of data, which means that due to a huge number of data the matrix “object-user” in system’s database becomes difficult to processing that
+complicates overall algorithm’s work;
+
+\item scalability, which means that traditional data
+processing algorithms may not cope with the growing
+flow of new customers and the goods they evaluate;
+for example, it can be extremely difficult to perform
+operations on matrices illustrating information about
+tens of millions of users and hundreds of thousands
+of objects, especially because the requirement for
+modern recommender system is an instant response
+to customer requests from all over the world;
+
+\item “cold start”, which arises in the case of new
+customers and goods emergence, because the
+absence of the information about the previous user
+
+\columnbreak
+
+\noindent interaction; this problem can be partially solved by
+the use of content/knowledge analysis or so-called
+"average"user;
+
+\item the lack of unified names of analyzed objects
+(especially in users’ queries) may have negative
+influence on the efficiency of joint filtering methods;
+recommender systems do not have the ability to define
+a hidden speech association, which can lead to the
+including of the same objects to different classes; for
+example, an algorithm will not be able to find the
+coincidence of the “toys for children” and “children’s
+toys” queries;
+
+\item fraud, for example, companies interested in the
+profitable sale of their own products can artificially
+underestimate the goods of their competitors and
+wind up a positive rating of their products, that will
+lead to the recommendation of the products of firms
+using such frauds;
+
+
+\item market diversity, which allows users to explore the
+vast expanses of marketplaces in better products
+search, and such consumer boom does not always
+correlate with the work of some methods of
+collaborative filtering, for example, purely based on
+the rating and success of sales of goods that do not
+take into account the possibility of promoting little\-known, new goods, which can adversely affect the
+diversity of the market and will lead to the survival
+of only the largest market players to whom the main
+user attention has already been focused;
+
+\item presence of the clients at the market, whose opinion is
+strikingly different from the majority; for such users,
+algorithms may not find unique like-minded people
+suitable for users, it can reduce the quality of their
+personalized recommendations.
+
+\end{itemize}
+
+\begin{center}
+
+\vspace{-1em}
+\rom{5}. Experience of DSS and recommender systems
+engineering
+
+\end{center}
+
+\vspace{-1.5em}
+There are several main results in DSS engineering have
+been received by the authors:
+\vspace{-2em}
+
+
+\begin{itemize}[itemsep=0pt, parsep=0pt]
+\setstretch{1.05}
+
+\item methods of efficiency assessment of the rule and
+model bases in DSS have been elaborated, which
+include the following coefficients: rule base certainty,
+rule base coverage, rating class efficiency and
+rating efficiency; formulae for calculation of these
+coefficients are deducted with the using of the rough
+sets theory [13];
+
+\item theoretical and practical approaches of DSS
+engineering for stock markets have been developed,
+which include the technology of the liquidity
+evaluation [14], the technology of algorithmic trading
+by means of 5-component oscillator [15], the
+technology of securities prices prediction with the
+use of the neural network [16];
+
+\item the concept of algorithmic marketing and machine
+learning in relation to the marketing activity, which
+
+\columnbreak
+
+\noindent is based on decision trees and ABC-analysis and
+allows reducing time necessary for market big data
+processing [17];
+
+    
+    \item the methodology of multi-agent DSS design
+and developing, which includes approach to the
+modelling of representation of knowledge about the
+subject area on the base of the concept of generalized
+objects [18];
+
+    \item adaptation of the technology of DSS engineering
+to recommender systems design, which will be
+considered below.
+    
+\end{itemize}
+\vspace{-0.8em}
+
+Example of the recommender system was realized
+for the purpose of the choice of musical tracks for
+different sport training. The initial data for analysis are
+the most popular audio sets for a specific training session
+(playlists of reputable sports publications, well-known
+fitness instructors and trainers, popular music editions).\par
+For the study 4 types of sports training were used:
+
+\vspace{-0.8em}
+\begin{itemize}[itemsep=0pt, parsep=0pt]
+\setstretch{1}
+
+    \item yoga, aimed at achieving internal harmony and
+tranquility;
+
+    \item cardio training, including a set of intensive exercises
+that increases the heart rate;
+
+    \item running, aimed at increasing endurance;
+
+    \item power exercises that contribute to an increase in
+muscle strength.
+    
+\end{itemize}
+\vspace{-0.8em}
+
+Client-server representational state transfer architecture
+(REST) is used for the integration of the recommender
+system with the mobile applications [19]. General scheme
+of interaction between Android client and database in
+REST architecture is represented in Fig. \ref{fig1}. The main
+requirements to this client-server architecture are the
+following: the server cannot store client information
+between requests, that’s why interface should be unified.
+
+\vspace{0.5em}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{mat_1.png}
+\caption{\footnotesize  General scheme of interaction between Android client and
+database in REST Architecture.}
+\label{fig1}
+\end{figure}
+
+\vspace{-0.5em}
+
+\normalsize Due to creation of music track pattern for each sport
+training it is necessary to create a big data set on the base
+of expert data. A large number of listeners (at least 15,000
+people) will serve as an indicator of quality. As a result, a
+set of 20 playlists was formed for each class, totaling more
+than 1000 unique tracks, on the base of which the desired
+average was calculated. Then, unique playlist identifiers
+are read from the generated files in order to eventually
+process each composition from the audio selection and
+\columnbreak
+
+\noindent sequentially extract all the properties of the tracks from it. To form the desired patterns, the function of calculating the average value of the set of components was used.\par
+As a result, 10 average indices represented in
+Fig. \ref{fig2} have been calculated: acousticness, valence,
+danceability, energy, instrumentalness, key, liveness,
+loudness, speechiness, tempo.
+
+\vspace{-0.5em}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{mat_2.png}
+\caption{\footnotesize Example of classification of the musical tracks by recommender
+system.}
+\label{fig2}
+\end{figure}
+\vspace{-0.8em}
+
+\normalsize After forming a pattern sample for each of the classes,
+it is necessary to select a set of tracks that are most similar
+to the pattern (200 songs are selected in the application).
+The search for songs is carried out from a large external
+data set, the storage of which is organized in a .csv file.\par
+For example, the program uses a file with 32880 unique
+compositions, where, in addition to a unique identifier,
+genre, the name and listing of the artists participating in
+the recording of the song, the extracted audio properties
+are presented. The playlist downloaded as a result of the
+operation of the HTTP library is displayed as interactive
+buttons, clicking on which leads to the playback of the
+corresponding song (Fig. \ref{fig3}).
+
+\vspace{-0.5em}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{mat_3.png}
+\vspace{-2em}
+\caption{\footnotesize Interface of the mobile recommender system for choosing musical
+tracks for different sport trainings.}
+\label{fig3}
+\end{figure}
+\vspace{-0.7em}
+
+\normalsize The recommender system also has own media player,
+where it is possible to pause/continue playing a song, turn
+on the next/previous composition; and mix and loop modes
+are available.
+
+\end{multicols}
+
+\end{document}
+
+
