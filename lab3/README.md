@@ -280,9 +280,3 @@ bash
 Целью лабараторной работы является научиться работать с GitHub.
 ```
 
-### Ресурсы для обучения
-<a href="https://habr.com/ru/articles/541258/">📙</a>
-<a href="https://www.udemy.com/course/git-basic-concept-fundamentals-github/">📕</a>
-<a href="https://www.udemy.com/course/git-complete/">📗</a>
-<a href="https://www.udemy.com/course/git-expert-4-hours/">📘</a>
-<a href="https://www.udemy.com/course/git-and-github-complete-guide/">📖</a>
