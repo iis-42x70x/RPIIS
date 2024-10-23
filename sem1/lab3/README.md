@@ -22,7 +22,7 @@
 \usepackage{fancyhdr}
 \cfoot{\textbf{\thepage}} % номер страницы становится жирным
 \pagestyle{fancy}
-\setcounter {page}{117}% установление номера страницы
+\setcounter {page}{114}% установление номера страницы
 \renewcommand{\headrulewidth}{0pt} % убрать разделительную линиб в верхнем колонтитуле
 \newcommand{\RomanNumeralCaps}[1]
     {\MakeUppercase{\romannumeral #1}}
@@ -67,16 +67,17 @@
  \begin{center}
     \begin{figure}[H]
     \centering
-   \includegraphics[width=0.8\columnwidth]{pic3.png}
+   \includegraphics[width=0.8\columnwidth]{pic2.png}
     \label{fig:first}
 \end{figure}
 \end{center}
 ```
-
+как это будет выглядеть 
+ <p  align="center"><img src="images/pic2.png" ></p>
  
-### Основыне комманды
+###  Так же могут прикодиться комманды
 * `\par` - абзац
-* `\begin{tabular} ... \end{tabular}` -  создает таблицу
-* `\bibitem{book1} ` - автомотическое создание нумирации списка
 * `\newpage` - новая страница
-* `\setcounter{page}...` - автомотическое  начало нумирации страниц с заданного номера
+* `\vspace{N}` - оступ на N
+
+Подробная инструкция для работы в *Overleaf* можно почитать [вот здесь](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes).
