@@ -1,0 +1,362 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage{hyperref}
+    \usepackage[unicode, pdftex]{hyperref}
+\usepackage[russian, english]{babel} % установка языков
+\usepackage{graphicx} % вставка изображений
+\usepackage{multicol} % деление на колонки
+\usepackage{fancyhdr} % настройка колонтитулов
+\usepackage{parskip} % настройка отступов абзаца
+\usepackage{biblatex} % список литературы
+\usepackage{mathtext} % Times New Roman
+\usepackage{indentfirst} % отступ после заголовка секции
+\usepackage{float} % плавающие картинки
+\usepackage{titlesec} % настройка заголовков
+\usepackage[margin=0.1cm]{caption} % настройка описаний
+\captionsetup[figure]{font=scriptsize} % шрифт описания фигуры
+\usepackage[left=2.5cm,right=2.5cm, top=2.1cm,bottom=2.5cm]{geometry} % макет страницы
+\fancyhf{} % очистка колонтитулов
+\cfoot{\textbf{\thepage}} % жирные номера страниц
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt} % удаление линии header
+\linespread{0.99} % межстрочный интервал
+\setlength{\columnsep}{0.6cm} % расстояние между столбцами
+
+\setlength{\parskip}{0pt} % вертикальный отступ абзаца
+\setlength{\parindent}{0.5cm} % горизонтальный отступ абзаца
+\setlength{\textfloatsep}{\theintvl\curtextsize} % отступ после картинок
+\setcounter{page}{108} % нумерация страниц
+\setcounter{figure}{7} % начальное значение нумерации фигур
+\titleformat{\section}{\normalsize\centering}{\thesection. }{0cm}{}[] % стиль заголовков разделов
+\titlespacing*{\section} % отступ возле секций
+{0pt}{0.4cm}{0.3cm}
+\renewcommand{\thesection}{\Roman{section}} % римские цифры
+\setcounter{section}{6} % нумерация секций
+
+\begin{document}
+
+
+\begin{figure}[H]
+    \href{http://fkn.ktu10.com/?q=node/2906}{%
+        \parbox{\textwidth}{
+            \centering
+            \includegraphics[width=16cm]{lw1_picture1.jpg}
+            \caption{Methodology of machine learning model development for computer vision}
+            \label{fig_8}
+        }
+    }
+\end{figure}
+
+
+\begin{multicols}{2}
+\noindent in the high complexity of their maintenance and improvement, as well as their insufficiently long life cycle.
+
+
+The problems of the unification of the principles for
+constructing various components of computer systems
+are solved in the OSTIS project. The OSTIS The project
+aims to create an open semantic technology for designing knowledge-driven systems in general and computer
+vision systems in particular [13].
+\section{Conclusion}
+
+The methodology for developing a machine learning
+model for solving applied computer vision problems is
+presented. The article discusses the tasks of computer
+vision, the main components of building application
+systems, and the and the challenges and limitations of
+the existing technological level. demonstrated the need
+to develop areas related to the compatibility of scientific
+research results in the field of artificial intelligence.
+\begin{footnotesize}
+\begin{thebibliography}{13}
+    \bibitem{book1} Karen Simonyan and Andrew Zisserman. Very deep convolutional
+networks for large-scale image recognition. In ICLR, 2015.
+    \bibitem{book2} Alex Krizhevsky, Ilya Sutskever, and Geoffrey E Hinton. Imagenet
+classification with deep convolutional neural networks. Communications of the ACM, 60(6):84–90, 2017.
+    \bibitem{book3}  Sebastian Raschka; Yuxi (Hayden) Liu; Vahid Mirjalili; Dmytro
+Dzhulgakov, Machine Learning with PyTorch and Scikit-Learn:
+Develop machine learning and deep learning models with Python
+, Packt Publishing, 2022.
+    \bibitem{book4} Fermüller, Cornelia and Michael Maynord. “Advanced Methods
+and Deep Learning in Computer Vision.” (2022).
+    \bibitem{book5} Zhengxia Zou, Keyan Chen, Zhenwei Shi, Yuhong Guo, and
+Jieping Ye. Object detection in 20 years: A survey. Proceedings
+of the IEEE, 2023.
+    \bibitem{book6} Tianfei Zhou, Fatih Porikli, David J Crandall, Luc Van Gool, and
+Wenguan Wang. A survey on deep learning technique for video
+segmentation. TPAMI, 2023.
+    \bibitem{book7}  Jingjing Xu, Wangchunshu Zhou, Zhiyi Fu, Hao Zhou, and
+Lei Li. A survey on green deep learning. arXiv preprint
+arXiv:2111.05193, 2021.
+    \bibitem{book8}  Jianyuan Guo, Kai Han, Han Wu, Yehui Tang, Xinghao Chen,
+Yunhe Wang, and Chang Xu. Cmt: Convolutional neural networks
+meet vision transformers. In CVPR, pages 12175–12185, 2022.
+    \bibitem{book9}  R. K. Kumar and K. Arunabhaskar, "A Hybrid Machine Learning
+Strategy Assisted Diabetic Retinopathy Detection based on Retinal Images," 2021 International Conference on Innovative Computing, Intelligent Communication and Smart Electrical Systems
+(ICSES), 2021, pp. 1-6, doi: 10.1109/ICSES52305.2021.9633875.
+    \bibitem{book10}  Dagliati, A, Marini, S, Sacchi, L, Cogni, G, Teliti, M, Tibollo,
+V, De Cata, P, Chiovato, L & Bellazzi, R 2018, ’Machine
+Learning Methods to Predict Diabetes Complications’, Journal
+of Diabetes Science and Technology, vol. 12, no. 2, pp. 295-302.
+https://doi.org/10.1177/1932296817706375
+    \bibitem{book11}  Lukashevich M.M. A neural network classifier for detecting diabetic retinopathy from retinal images. «System analysis
+and applied information science». 2023;(1):25-34. (In Russ.)
+ttps://doi.org/10.21122/2309-4923-2023-1-25-34
+    \bibitem{book12}  Labrak, Y., Rouvier, M., Dufour, R. (2023). A zero-shot and
+few-shot study of instruction-finetuned large language models applied to clinical and biomedical tasks. arXiv preprint
+arXiv:2307.12114.
+    \bibitem{book13}  V. Golenkov, N. Guliakina, V. Golovko, V. Krasnoproshin,
+“Methodological problems of the current state of works in
+the field of artificial intelligence,” Otkrytye semanticheskie
+tekhnologii proektirovaniya intellektual’nykh system [Open semantic technologies for intelligent systems], pp. 17–24, 2021.
+\end{thebibliography}
+\end{footnotesize}
+\begin{otherlanguage}{russian}
+\begin{center}
+\vspace{0.3cm}
+\small{\textbf{МЕТОДОЛОГИЯ РАЗРАБОТКИ МОДЕЛЕЙ МАШИННОГО ОБУЧЕНИЯ ДЛЯ РЕШЕНИЯ ПРИКЛАДНЫХ ЗАДАЧ КОМПЬЮТЕРНОГО ЗРЕНИЯ}}
+\vspace{0.1cm}
+\large{Лукашевич М. М.}
+\end{center}
+
+Представлена методология разработки моделей машинного обучения для решения прикладных задач
+компьютерного зрения. В статье рассматриваются задачи компьютерного зрения, основные компоненты
+построения прикладных систем, проблемы и ограничения существующего технологического уровня.
+\end{otherlanguage}
+\begin{flushright}
+Received 13.03.2024
+\end{flushright}
+\end{multicols}
+\begin{center}
+\LARGE{\textbf{Principles and Experience of Intelligent Decision
+Support and Recommender Systems Engineering}}
+\end{center}
+\vspace{0.4cm}
+\begin{figure}[H]
+\begin{minipage}{7cm}
+\centering
+    Boris Zhalezka \\
+\textit{Department of Marketin \\
+Belarusian National Technical University} \\
+Minsk, Belarus \\
+boriszh@yandex.ru
+\end{minipage}
+\begin{minipage}{9cm}
+\centering
+    Volha Siniauskaya \\
+\textit{Department of Industrial Marketing and Communications\\
+Belarusian State Economic University} \\
+Minsk, Belarus \\
+volha.siniauskaya@outlook.com \\
+\end{minipage}
+\end{figure}
+\begin{multicols}{2}
+
+
+    \textbf{\textit{\begin{otherlanguage}{russian}Аннотация\end{otherlanguage}}—In the article main principles of engineering
+of intelligent decision support and recommender systems
+are considered. Definition and concept of a generalized
+object are formulated. Technologies of recommender systems
+engineering and construction are analyzed. Classification of
+decision support systems is suggested. Experience of decision
+support and recommender systems engineering is presented.}
+
+    \textbf{\textit{Keywords}–OSTIS, intelligent system with integrated spatially referenced data, semantic model, question language,
+design process automation}
+\setcounter{section}{0}
+\section{Introduction}
+
+Despite existing developments in the area of decision
+support systems (further — DSS) engineering, these
+technologies presuppose the adaptation of only individual
+components of the DSS and do not provide the adaptation
+of the subject area model. This leads to the use of irrelevant
+and inaccurate data in the DSS, which negatively affects
+the efficiency of decision-making necessary in a quickly changing
+environment. These problems can be solved via adapting
+subject known area models to the conditions of decision-making
+tasks and well-timed updating of the models with the data,
+knowledge and precedent (subject) collections necessary
+for this model. The concept of a generalized object
+became the base of different DSS with combined intellect
+engineering and construction. The target of this research
+is to generalize from theoretical and practical experience in the
+sphere of intelligent decision support and recommender
+systems construction.
+
+The target of this research is to generalize theoretical and
+practical experience in the sphere of intelligent decision
+support and recommender systems construction.
+\section{Brief literature review}
+First theoretical research on decision support systems
+was made in USA at the Carnegie Institute of Technology
+in the late 1950s — early 1960s. The first main works on
+DSS were published in 1978-1980 by P.Keen, M. Scott
+Morton [1], [2], R. Sprague [3].
+
+Investigations in the sphere of intellectualizing of
+DSS information technologies are wavy carried out in
+the world. Moreover, the increase in research activity
+in time coincides with the periods of development on
+computing and financial resources (the emergence of
+personal computers, evolution of the processors, memory
+capacity, the emergence of a user-friendly interface, the
+emergence of mobile Internet technologies, etc., with the
+simultaneous reducing of its prices).
+
+Among the modern works on DSS there are
+books “Intelligent Decision Support System for IoTEnabling Technologies: Opportunities, Challenges and
+Applications” (2024) by ed. S. Sahana [4]; “Intelligent
+Decision Support Systems for Smart City Applications”
+(2022) by L. Gaur, V. Agarwal and P. Chatterjee [5];
+“Intelligent Decision Support Systems” (2022) by M.
+Sanchez-Marr ` e [6]; “Understanding Semantics-Based `
+Decision Support” (2021) by S. Jain [7]; “Intelligent
+Decision Support Systems: A Complete Guide — 2020
+Edition” by G. Blokdyk [8].
+
+The technology of recommender systems gained
+popularity only in the middle of 1990s. The concept
+of a recommender system was first used in 1992
+in the scientific publication of Xerox, in the same
+year in the article “Using collaborative filtering to
+weave an information tapestry” the term “collaborative
+filtering” was introduced. Subsequently, fundamental
+works systematizing knowledge on recommender systems
+were devoted to this area. One of them is “Recommender
+Systems: The Textbook” [9]: in this book, description,
+comparison, assessment of the accuracy of basic
+algorithms for developing recommendations to the user
+were made, in addition, the field of practical use of
+such systems is affected. The work “Recommender
+Systems: The Handbook” [10] deserves special attention.
+In it the existing variety of methods and concepts of
+recommender systems was systematized. This source
+shows how recommender systems can help users in
+decision-making, planning and procurement processes,
+illustrates the experience of using these systems in big
+corporations such as Amazon, Google, Microsoft.
+
+Nowadays the transition to the next-generation
+computer systems takes place. Intelligent DSS and
+recommender systems belong to this class of information
+\end{multicols}
+
+\begin{multicols}{2}
+\noindent systems. Such systems should “independently evolve and
+interact effectively with each other in the collective
+solution of complex problems” [11]. One of the relevant
+problems of next-generation computer systems design
+and development is generalization of formal theory and
+methodology of their functioning.
+
+\section{Definition and the concept of objects}
+Usually an object O can be represented in the view
+O $=<$ Data, Met, Mes $>$, where: Data — a set of
+internal information of the object (data); Met — a set of
+its own procedures for manipulating the data (methods);
+Mes — an external interface for interacting with other
+objects in the subject area (such as a permissible set of
+event messages outside and inside of the subject area).
+
+However, the need to take into account the development
+of DSS requires a more general and flexible mechanism
+for describing and modeling them. Such a mechanism can
+be built on the base of further generalization of the objectoriented approach and, in particular, of the term “object”
+in the conceptual model of the subject area
+
+The term “generalized object” is suggested: GO =<
+Data, Met, Model, Knowl, Mes, Link >, in which
+models, knowledge and links with the other domain
+objects are encapsulated in addition to data, methods and
+messages
+
+Such model of a generalized subject area can be
+considered as a type of multi-object neural network, if
+add to the usual method of object interaction by messages
+the possibility of activating objects (transmission of
+excitation) through (priorities)
+indicating the value of the response threshold level for
+each object. The value of the response threshold level
+can with the system development
+stage, solved problems, accumulated statistical experience
+of problems solving, etc. Interaction between generalized
+objects can be carried messages or changes in
+the links structure of the generalized object system. This
+system is separated from their functional part. It can be
+and represented by a dynamic links list, by changes in the
+links weights (filtering) and actuation threshold values.
+
+Each generalized object can have several states and go
+from one state to another depending on the incoming
+messages that are the result of the activities of other
+generalized objects. At the same time, the generalized
+object changes its state when its excitation value exceeds
+some non-zero threshold of actuation. In general, such
+subject area model can be considered as a hierarchy of
+abstractions classes of,
+problem and user objects. The status of the subject area
+actually depends on the status of each generalized object
+and the message queues at the input and output of these
+generalized objects. The latter can be considered as a
+database of facts about events on the base of which it is
+possible to determine an output machine for interpreting of existing and generating new facts in the process of
+simulating of modelling system functioning.
+
+Requirements to the multi-agent DSS can be formulated
+by means of object-oriented classification (enumerations
+of the object classes involved in solving problems, their
+properties, relationships and behavior). The main principle
+of classification is the of object classes based
+on the set of internal properties inherent in class objects.
+After that, the requirements are sequentially detailed until
+the multi-agent DSS project is fully described in terms of
+the basic objects of the used tools.
+
+\section{Recommender systems}
+In today’s world, we can often face the problem of
+recommending goods and services to users of any site,
+information system. The modern economic formation
+involves intense competition in various market niches,
+which leads to each potential buyer among
+companies. In order to improve their experience of
+interacting with the company’s services, it is beneficial
+to create personalized collections that will have client
+response. Previously, list, a
+set of current actions and the most popular goods was
+sufficient, but the current situation does not allow such
+low-cost methods to act. A relatively new technology of
+recommender systems can be used for buyers’ attraction
+and sales increasing.
+
+The essence of recommender systems approach
+presupposes the dynamic formation of recommendations
+personally for each specific client, which, unlike
+static information, significantly increases probability of
+coincidence with the real needs of people. Recommender
+systems take into account all kinds of parameters (purchase
+history, time and date of registration, region, purchased
+products, etc.), which allows prediction of the user’s
+wishes as accurately as possible.
+
+Recommender systems have already found their place
+in many areas: in addition to e-commerce, this kind of
+technology has been introduced for finding books, films,
+music, and social media contacts.
+
+The relevance of recommender systems is growing
+every year. Recommender systems are the programs aimed
+for the prediction of the user’s interest in certain objects
+and giving them the recommendation for purchase or
+using the items, which the user probably likes. Such
+recommendations are personalized and are formed for
+each user depending on their preferences. Although
+the technology itself appeared quite recently, its use is
+considered mandatory for all promising companies.
+
+One of the first to become interested in introducing
+recommender systems was the largest American ecommerce platform Amazon. Already in the late 1990s,
+the best minds of the company developed their own
+algorithms for the so-called collaborative (joint) filtering,
+which offered recommendations to each client based on
+\end{multicols}
+\end{document}
