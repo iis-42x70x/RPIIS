@@ -11,7 +11,11 @@
 * `\begin{thebibliography} … \end{thebibliography}` - список с нумерацией;
 * `\parskip` - настройка отступов абзаца.
 
-Более подробно с LaTex можно ознакомиться по [ссылке](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
+### Прилагаемые файлы/ссылки:
+* [main.tex](https://github.com/iis-42x70x/RPIIS/blob/%D0%92%D0%B5%D0%B3%D0%B5%D1%80%D0%B0_%D0%9C/sem1/lab3/main.tex) - исходный файл вёрстки
+* [laba_1.pdf]( https://github.com/iis-42x70x/RPIIS/blob/%D0%92%D0%B5%D0%B3%D0%B5%D1%80%D0%B0_%D0%9C/sem1/lab3/laba_1.pdf) - готовый pdf-файл с вёрсткой
+* [Гайд](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes) от создателей overleaf(LaTeX за 30 минут
+
 
 # Лабораторная работа 3
 
