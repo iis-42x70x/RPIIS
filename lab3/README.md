@@ -1,4 +1,4 @@
-<h1 align="center"> Лабараторная работа №3</h1>
+<h1 align="center"> Лабароторная работа №3</h1>
 <p align="center"><img src="images/1.jpg">
   
 ### Регистрация
