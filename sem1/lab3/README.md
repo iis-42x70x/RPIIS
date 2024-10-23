@@ -59,7 +59,21 @@
 \hline
 \end{tabular}
 ```
+как это будет выглядеть 
+ <p  align="center"><img src="images/2.png" ></p>
+ 
+### Добавление изображений
+```
+ \begin{center}
+    \begin{figure}[H]
+    \centering
+   \includegraphics[width=0.8\columnwidth]{pic3.png}
+    \label{fig:first}
+\end{figure}
+\end{center}
+```
 
+ 
 ### Основыне комманды
 * `\par` - абзац
 * `\begin{tabular} ... \end{tabular}` -  создает таблицу
