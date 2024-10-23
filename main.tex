@@ -1,0 +1,328 @@
+\documentclass{article}
+\usepackage{import}
+\usepackage{scn}
+\usepackage{multicol}
+\usepackage[left=1.5cm,right=1.5cm, top=1cm, botton=1cm]{geometry}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\graphicspath{ {./images/} }
+\begin{document}
+\setcounter{page}{177}
+\title{\textbf{NLP and LLM Based Approach\\
+to Enterprise Knowledge Base Construction
+}}
+\author{}
+\date{}
+\maketitle
+\begin{SCn}
+\begin{multicols}{2}
+\begin{center}
+Valery Taberko and Dzmitry Ivaniuk\\\
+\textit{JSC "Savushkin Product" }\\\
+Brest, Belarus\\\ 
+Email: tab@pda.savushkin.by, id@pda.savushkin.by
+\end{center}
+
+    \vfill
+    \columnbreak
+    \begin{center}
+Viktor Smorodin and Vladislav Prokhorenko\\\
+\textit{Department of Mathematical Problems\\\
+of Control and Informatics\\\
+Francisk Skorina Gomel State University}\\\
+Gomel, Belarus\\\
+Email: smorodin@gsu.by, shnysct@proton.me  
+ \end{center}
+\end{multicols}
+\begin{multicols}
+\justifying
+   \textbf{\textit{Abstract}—An approach to the automated formation of a
+knowledge base about an enterprise is proposed based on
+the analysis of existing technical documentation using large
+language models. This approach makes it possible to integrate the proposed solution with other developments and
+enterprise software to ensure the construction of intelligent
+automated control systems, recommendation systems and
+decision support systems, and information support systems
+for enterprise personnel.}
+
+\textbf{\textit{Keywords}—Industry 4.0, standard, large language model,
+NLP, knowledge extraction}
+\begin{center}
+{\MakeUppercase{\romannumeral 1.}}
+Introduction
+\end{center}
+
+Effective implementation of methods for automating
+control and decision making requires ensuring semantic
+compatibility of heterogeneous components of intelligent
+systems [1]. The OSTIS technology uses a multi-agent
+approach to the development of intelligent systems, when
+agents operate on a single knowledge base.
+
+Thus, in the course of building intelligent systems that
+provide solutions to a class of problems of automated
+management and information support of an enterprise,
+the task arises of combining all information about the
+enterprise into a single information space - a knowledge
+base, which is stored in the semantic memory of the
+intelligent system. The sources of such knowledge can
+be existing descriptions of the work of enterprises within
+the framework of accepted international standards.
+
+Information extraction (IE) is a fundamental challenge
+in the field of natural language processing (NLP), especially in the context of the modern digital era, where
+data volumes are rapidly increasing, as is the need for
+rapid processing [2]. The importance of IE is evident
+in a variety of applications, ranging from automating
+text analysis and extracting structured data from various
+sources to supporting decision making based on large
+volumes of information. Based on the principles of
+machine learning and deep learning, modern IE methods
+provide the ability to automatically extract information
+from texts and documents, which is an important step in
+the digital transformation of organizations and society as
+a whole.
+
+In the framework of Industry 4.0, where digitalization
+and automation play a key role in industrial transformation, the importance of automating the extraction of
+information from technical documents becomes critical
+to building a digital twin of the enterprise. A digital twin
+of an enterprise is a virtual model of its physical processes, equipment and resources based on real-time data.
+Automated information extraction systems allow you
+to quickly and efficiently process technical documents,
+highlighting key parameters, equipment characteristics,
+production process structure and other important data
+necessary to create and maintain a digital twin.
+
+Using a digital twin of an enterprise provides organizations with the opportunity to conduct virtual modeling
+and analysis of production processes, optimize their
+efficiency, predict possible problems and take preventive measures. This helps increase flexibility, respond
+to changes in real time and ensure more efficient use
+of enterprise resources. Thus, automation of information
+extraction from technical documents is an important link
+in the process of creating and maintaining a digital twin
+of an enterprise, which ultimately helps to increase its
+competitiveness and sustainability in the market.
+
+Information support for employees of an industrial
+enterprise also plays a key role in ensuring competitiveness and production efficiency. With the development of
+digital technologies and the penetration of the Internet
+of things into production processes, employees are faced
+with a huge amount of data that requires analysis and
+decision-making. Information support not only allows
+you to effectively manage data, but also provides access
+to up-to-date information in real time, which is necessary for a quick response to changes in the production
+environment.
+
+At the present stage of development of complex technological systems, the volume of information contained in
+technical documentation describing the relevant subject
+areas can be large and also difficult to analyze due to
+the heterogeneity and ambiguity of the interpretation of
+some provisions of the standards [3].
+This paper proposes an approach to solving this problem: automation of knowledge extraction from documentation based on the use of modern neural network
+technologies - large language models.
+\begin{center}
+{\MakeUppercase{\romannumeral 2.}}
+Problems of working with standards when designing
+new generation intelligent systems
+\end{center}
+
+Existing international standards for describing production systems make it possible to release an ontological
+approach to solving problems of production automation,
+building recommender systems and enterprise information support [4] . Thus, we can highlight the correspondence of the concepts of the ontology of the subject area
+“probabilistic technological production processes” to the
+concepts from the ISA 5.1, ISA-88 and ISA-95 [1], [3],
+[5]–[7] standards.
+
+At the same time, a number of problems arising in
+connection with the use of standards can be identified.
+One of the key difficulties is the heterogeneity and
+fragmentation of standards in various areas, which makes
+it difficult for them to interact and integrate into the
+overall system. These standards are often developed by
+different organizations and committees, resulting in a
+variety of formats, syntax and semantics, which makes
+them difficult to understand and interoperate within a
+single system. This creates compatibility problems between various system components, and also increases the
+complexity of the development and support process [8]–
+[10].
+
+Another major challenge is the rapid development
+of technology, which leads to constant updating and
+modification of existing standards. With the development
+of new technologies, standards also evolve, but on the
+other hand, periodic changes and updates may lead to
+incompatibility between different versions of standards
+and technologies. This complicates the integration and
+support of intelligent systems and can also cause compatibility issues between different components and devices,
+making it difficult to communicate and communicate between them. Thus, successful implementation and maintenance of intelligent systems requires continuous updating
+and adaptation to changing standards and technologies.
+
+Overcoming these difficulties is critical to the development of effective intelligent systems that can analyze, predict and optimize various aspects of enterprise
+functioning. This includes not only managing production processes, but also optimizing logistics schemes,
+forecasting demand, analyzing market trends and many
+other aspects of business. In this context, the use of
+modern methods of data processing, machine learning
+and artificial intelligence becomes a necessity to create
+adaptive and intelligent systems that can effectively respond to dynamically changing market conditions and
+the competitive environment.
+\begin{center}
+    {\MakeUppercase{\romannumeral 3.}}
+    Large language models
+\end{center}
+
+The historical path of natural language processing
+(NLP) before the advent of large language models is
+characterized by the gradual development of methods
+and approaches to text analysis. Since early research in
+linguistics and artificial intelligence, such as the creation
+of the first grammars and automatic translation systems,
+progress in NLP has been associated with finding ways
+for computers to efficiently understand and generate natural language. In the early periods of NLP development,
+the emphasis was on rules and symbolic approaches to
+text analysis, which often limited its applicability due to
+the difficulty of creating complete and accurate rules for
+different languages and contexts.
+
+However, the true breakthrough came with the development of machine learning methods and deep learning
+in particular. The emergence of large language models
+in recent years has opened up wide opportunities for
+working with text information in various areas of human
+activity. These models, such as GPT [11] and BERT
+[12], have a unique ability to understand the semantics of
+natural language and can efficiently analyze and process
+large volumes of text data.
+
+Research shows that the use of such models leads to
+significant improvements in natural language processing
+tasks, including machine translation, sentiment analysis,
+information extraction, and more [13]. Thanks to their capabilities, working with text information becomes more
+efficient and accurate, which opens up new prospects for
+the development of automated data processing systems
+and artificial intelligence.
+
+In the context of the problem under consideration, it
+is important, in particular, to note significant progress
+in solving the problem of information extraction [14].
+Integrating large language models into the process of
+extracting information from documents according to a
+given ontology is an important and promising direction
+of research in the field of natural language processing
+(NLP). These models have a unique ability to understand
+the semantics of the text and can effectively highlight key
+entities and relationships between them
+
+At the moment, we can note existing proposals for
+integrating LLM with OSTIS Technology [15], [16],
+which use third-party services (ChatGPT [17])
+
+It is also necessary to emphasize that despite the modern successes of using LLM in various fields of activity,
+it is also necessary to note their disadvantages, such as
+inconsistency and the possibility of errors. Such models
+can be highly sensitive to noise and anomalies in the
+input data, which can lead to unpredictable results and
+potential errors in text interpretation [18]. There is a wellknown phenomenon of hallucination in large language
+models, which is a phenomenon in which the model
+generates content that may be unpredictable, unrelated to
+the context, or even fictitious [19]. This phenomenon is a consequence of the huge amount of data on which models
+are trained, as well as their complex architecture, which
+includes billions of parameters. Under certain conditions,
+models can produce text that appears consistent and
+plausible, but is actually a random combination of words
+and phrases [20].
+
+Moreover, the interpretability of large language models
+poses a significant challenge. Due to their utilization of
+intricate deep learning architectures, the internal workings of these models often remain opaque and convoluted, hindering human comprehension. This lack of
+transparency raises concerns regarding the justification
+of the model’s decisions and undermines the confidence
+in relying on its conclusions for critical decision-making
+processes. Without a clear understanding of how the
+model arrives at its outputs, stakeholders may hesitate
+to fully trust its recommendations or insights, thereby
+impeding the integration of these advanced AI systems
+into real-world applications where trust and accountability are paramount.
+
+This phenomena highlight the need to critically analyze the results obtained from large language models
+and emphasizes the importance of developing methods
+to control the quality and reliability of their use.
+\begin{center}
+    {\MakeUppercase{\romannumeral 4.}}
+    An approach to automated construction of a
+    
+knowledge base about an enterprise from a standardized
+description
+\end{center}
+
+The main idea of the proposed approach is to implement a component of the OSTIS ecosystem that
+implements functionality for automated extraction of
+information from standardized technical documentation
+of an enterprise.
+
+The importance of prompt engineering for large language models is emphasized in the context of ensuring accurate and efficient interaction with the model. Prompts,
+being the key interface between the user and the model,
+determine the formulation of the problem and the context
+of the request, which directly affects the quality and
+relevance of the answers. Prompt engineering allows you
+to structure the input data for the model, taking into
+account the specifics of the problem and the requirements
+of the application, which provides more accurate and
+relevant results [21]. Automatic generation of prompts for
+large language models is a key area of research aimed at
+improving their performance and adaptability to a variety
+of tasks and contexts.
+
+To successfully solve the problem of extracting information from standardized documents in accordance with
+a given domain ontology, it is necessary to generate a
+prompt that will explicitly define the required information and provide the model with an understanding of
+the context of the document and the key concepts of
+probabilistic technological processes.
+In the prompt, the target information should be explicitly defined, namely, a set of concepts for work, and the
+connections between them. In addition, it is necessary
+to take into account the specific structure and format of
+documents of a particular standard. Including examples
+of the target input and output in the prompt provides
+not only additional context for the model, but also a
+more explicit representation of the desired output. This
+approach allows the model to better capture user intent,
+recognize key query elements, and correlate them with
+corresponding output. In this way, the model becomes
+capable of generating more accurate and appropriate
+responses or actions, which significantly improves its
+functionality and meets the users’ needs for better service.
+
+Thus, during the operation of the automated knowledge extraction component, it is necessary to solve the
+following tasks:
+\begin{itemize}
+\item determine the standard of the document and carry
+out its preliminary preparation;
+\item generate a prompt containing a description of a
+specific standard and domain ontology, as well as
+example of the expected output;
+\item send a prompt to a large language model;
+\item receive the model’s response and verify its correctness and compliance with the ontology;
+\item use the extracted knowledge from the answer in the
+knowledge base.
+\end{itemize}
+    
+The general scheme of prompt formation is shown in Fig.1.
+    \begin{center}
+    \includegraphics{images/снимок1.PNG}
+    \caption{Figure 1. Scheme for generating a prompt for LLM}
+    
+\end{center}
+\vspace{1cm}
+
+Within the framework of the OSTIS Technology, a
+multi-agent approach to problem solving [1] is used. This
+approach involves defining a hierarchy of agents that
+perform atomic functions for preparing and converting
+information. The proposed composite solver within this
+approach has the structure presented in Figure 2. Each
+agent specializes in certain aspects of information processing.
+
+\end{multicols}
+
+\end{SCn}
+\end{document}
+
