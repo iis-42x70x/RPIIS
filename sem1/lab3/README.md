@@ -40,7 +40,8 @@
     
 \end{enumerate}
 ```
-
+как это будет выглядеть 
+ <p  align="center"><img src="images/1.png" ></p>
 
 ### Основыне комманды
 * `\par` - абзац
