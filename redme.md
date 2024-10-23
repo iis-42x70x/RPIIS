@@ -1,10 +1,10 @@
-# Работа с LaTeX 
+<h1 align="center"> Работа с Latex</h1>
 
 Для выполнения Лабораторной работы № 1
 Был использован Overleaf
 
 Для регистрации можно перейти по ссылке:
-[OverLeaf](https://www.overleaf.com)
+<a href="https://www.overleaf.com/">OverLeaf</a>
 
 *OverLeaf — онлайн редактор Latex* 
 
