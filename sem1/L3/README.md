@@ -28,7 +28,7 @@
 
 работа с Git и GitHub
 
- [](./Images/git.png)
+![](./Images/git.png)
 
 ### Про технологию:
 
