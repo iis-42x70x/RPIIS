@@ -1,1 +1,0 @@
-darbandi farazik ofshin amir ogli
