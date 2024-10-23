@@ -1,0 +1,607 @@
+\documentclass{article}
+\usepackage { array } 
+\usepackage{multicol}
+\usepackage{enumitem}
+\setcounter{page}{72}
+\usepackage[left=1.9cm,right=1.9cm, top=2.2cm,bottom=2.5cm]{geometry}
+\linespread{0.87}
+
+\begin{document}
+\setlist{noitemsep}
+ 
+\begin{multicols}{2} 
+
+\begin{itemize}
+\itemsep=0mm
+  \item absence of deadlocks, races and hungry processes
+in sc-memory;
+  \item  fast parallel creation of sc-elements in sc-memory
+due to distribution of processes over sc-memory
+segments;
+  \item fast non-blockable parallel search of scconstructions provided that no other operations are
+performed on these sc-constructions.
+\end{itemize}
+  \textit {F. Model of sc-memory programming interface}
+
+  \textit {The model of sc-memory programming interface} {can
+be defined as follows}
+ \[\textit{PI = $N^T$}\times\textit{$C^{E\times{E\times{T}}}$}\times\textit{$F^{N\times{L}}$}\times\] 
+\textit{$\times$}\{\textit{$E^{E\times{\{E\cup{T\}\times{E}}}}$}\textit{$\cup$}\textit{$E^{\{E\cup{T\}\times{T\times{E}}}}$}\textit{$\cup$}\textit{$E^{E\times{T\times{\{E\cup{T\}}}}}$\}\textit{$\times$}}
+ 
+\textit{$\times$}\textit{$T^E$}\textit{$\times$} \textit{$F^L$}\textit{$\times$} \textit{$L^F$}\textit{$\times$}\{$\top$\textit{,}$\bot$\textit{$\}^E$} $\times$ \textit{$V^{E\times{{T_V}\times{{AG}}}}$}$\times$\{$\top$\textit{,}$\bot$\textit{$\}^V$}
+{where}
+\begin{itemize}
+\itemsep=0mm
+
+ \item{\textit{$N^T$}}
+ is the operation of creating an sc-node with the
+specified type;
+ \item{\textit{$C^{E\times{E\times{T}}}$}}
+is the operation of creating an scconnector between two given sc-elements with the
+specified type;
+\item{\textit{$F^{N\times{L}}$}}
+is the operation of setting the contents to an
+sc-node;
+\item{\textit{\{\textit{$E^{E\times{\{E\cup{T\}\times{E}}}}$}\textit{$\cup$}\textit{$E^{\{E\cup{T\}\times{T\times{E}}}}$}\textit{$\cup$}\textit{$E^{E\times{T\times{\{E\cup{T\}}}}}$\}}}}
+
+are operations of searching for three-element scconstructions by given first and/or second and/or
+third sc-elements;
+
+\item{\textit{$T^E$}}
+is the operation of obtaining the type of the
+given sc-element;
+
+\item{\textit{$F^L$}}
+ is the operation of obtaining ostis-system files
+by their contents;
+\item{\textit{$L^F$}}
+is the operation of obtaining the content from
+the ostis-system file;
+
+\item{\textit{\{$\top$\textit{,}$\bot$\textit{$\}^E$}}}
+is the operation of deleting the specified
+sc-element.
+
+\item{\textit{$V^{E\times{^{T_V}}\times{{AG}}}$}}
+— operation of creating a subscription
+to an event in sc-memory;
+
+\item{\textit{\{$\top$\textit{,}$\bot$\textit{$\}^V$}}}
+— operation of removing a subscription
+to an event in sc-memory;
+
+ \end{itemize}
+ Let us consider some of the algorithms of the described operations. The algorithm of the operation of
+creating an sc-node with the specified type \textit{$N^T$} can be
+described as follows:
+
+\begin{itemize}
+\itemsep=0mm
+\item Step 1: Verify that the specified sc-element type is
+a subtype of sc-node.
+
+\begin{itemize}
+\itemsep=0mm
+\item[-]If the specified sc-element type is not a subtype
+of sc-node, then terminate the algorithm with an
+error.
+
+\item[-]Otherwise, proceed to step 2.
+\end{itemize}
+
+\item Step 2: Allocate a new sc-memory cell for the scnode.
+
+
+\begin{itemize}
+\itemsep=0mm
+\item[-]If the sc-memory is engaged, terminate the algorithm with an error.
+
+\item[-]Otherwise, proceed to step 3.
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\itemsep=0mm
+\item Step 3: Set the type for the cell as sc-node with the
+specified type, go to step 4.
+\item Step 4: Return the resulting sc-address of the scnode and terminate.
+\end{itemize}
+
+The algorithm for the operation of creating an scconnector between two given sc-elements with the specified type \textit{$C^{E\times{E\times{T}}}$} can be described as follows:
+
+\begin{itemize}
+\itemsep=0mm
+\item Step 1: Verify that the specified sc-element type is
+a subtype of sc-connector.
+
+
+\begin{itemize}
+\itemsep=0mm
+\item[-]If the specified sc-element type is not a subtype
+of sc-node, then terminate the algorithm with an
+error.
+
+\item[-]Otherwise, proceed to step 2.
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\itemsep=0mm
+\item Step 2: Check that the sc-addresses of the start and
+end sc-elements are valid.
+
+
+\begin{itemize}
+\itemsep=0mm
+\item[-] If the sc-address is not valid, then terminate the
+algorithm with an error.
+
+\item[-]Otherwise, proceed to step 3.
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\itemsep=0mm
+\item Step 3: Allocate a new sc-memory cell for the scconnector
+
+\begin{itemize}
+\itemsep=0mm
+\item[-] If the sc-memory is engaged, terminate the algorithm with an error
+
+\item[-]Otherwise, proceed to step 4.
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\itemsep=0mm
+\item Step 4: Set the type for the cell as sc-connector with
+the specified type, go to step 5.
+\end{itemize}
+
+\begin{itemize}
+\itemsep=0mm
+\item Step 5: Add the sc-connector to the list of outgoing
+and incoming arcs of the start and end sc-elements,
+go to step 6.
+\end{itemize}
+
+\begin{itemize}
+\itemsep=0mm
+\item Step 6: Notify the outgoing and incoming arc addition events, go to step 7.
+\end{itemize}
+
+\begin{itemize}
+\itemsep = 0mm
+\item Step 7: Return the resulting sc-connector address
+and terminate.
+\end{itemize}
+The algorithm of the operation of deleting a given scelement \textit{\{$\top$\textit{,}$\bot$\textit{$\}^E$}} can be described as follows:
+
+\begin{itemize}
+\itemsep=0mm
+\item Step 1: Attempt to acquire a cell in sc-memory by
+the sc-address of the sc-element.
+
+
+\begin{itemize}
+\itemsep=0mm
+\item[-] If the cell is not found, terminate the algorithm
+with an error.
+
+\item[-]Otherwise, proceed to step 2.
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\itemsep = 0mm
+\item Step 2: Initialize the stack to remove sc-elements,
+go to step 3.
+\end{itemize}
+
+\begin{itemize}
+\itemsep = 0mm
+\item Step 3: Put the sc-address of the sc-element to be
+deleted into the deletion stack, go to step 4.
+
+\end{itemize}
+
+\begin{itemize}
+\itemsep = 0mm
+\item Step 4: Place the sc-addresses of all sc-connectors
+for which the given sc-element is the start or end scelement and the sc-addresses of all connectors for
+which the found sc-connectors are the start or end
+sc-elements on the deletion stack, go to step 5.
+\end{itemize}
+
+\begin{itemize}
+\itemsep = 0mm
+\item Step 5: While the deletion stack is not empty, set
+the cells for the sc-elements as released and release all those cells.
+
+
+
+\begin{itemize}
+\itemsep=0mm
+\item[-] For all sc-connectors to be deleted, notify outgoing and incoming sc-connector deletion events.
+
+\item[-]For all sc-cells to be deleted, notify sc-cell deletion events.
+\item[-]  Go to step 6.
+
+\end{itemize}
+
+\end{itemize}
+\begin{itemize}
+\itemsep = 0mm
+\item Step 6: Destroy the stack for sc-element deletion, go
+to step 7.
+
+
+\end{itemize}
+
+\begin{itemize}
+\itemsep = 0mm
+\item  Step 7: Terminate.
+
+
+\end{itemize}
+The algorithm for the operation of setting the content
+to a given sc-node \textit{$F^{N\times{L}}$} can be described as follows:
+
+
+\begin{itemize}
+\itemsep = 0mm
+\item Step 1: Attempt to retrieve a cell in sc memory by
+the sc address of the sc node.
+
+
+
+\begin{itemize}
+\itemsep=0mm
+\item[-] If the cell is not found, then terminate the algorithm with an error.
+
+\item[-]Otherwise, proceed to step 2.
+
+
+\end{itemize}
+
+\end{itemize}
+
+\begin{itemize}
+\itemsep = 0mm
+\item  Step 2: Change the sc-node type to an ostis-system
+file, go to step 3.
+
+
+\end{itemize}
+
+\begin{itemize}
+\itemsep = 0mm
+\item Step 3: Add the string to the file storage of scmemory.
+
+\begin{itemize}
+\itemsep=0mm
+\item[-] Add the string to a free segment of the file
+storage.
+
+\item[-]Assign matches between this string and the specified ostis file.
+
+\item[-]Notify the event of changing the content of the
+ostis-system file.
+
+\item[-] Go to step 4.
+
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\itemsep = 0mm
+\item  Step 4: Terminate.
+
+
+\end{itemize}
+
+The principles of search operations were discussed in
+[2].
+
+{This programming interface provides all the necessary
+functionality for working with sc-constructions, file constructions, events and processes in the memory.}
+
+\textit{G. Conclusions}
+
+{The proposed model of the shared semantic memory
+includes a formal description of the following (!):}
+
+\begin{itemize}
+\itemsep = 0mm
+\item  how to represent, store, and process graph and string
+constructions, events, and processes in the memory;
+\end{itemize}
+
+\begin{itemize}
+\itemsep = 0mm
+\item how to ensure efficient execution of operations in
+this shared memory;
+\end{itemize}
+
+\begin{itemize}
+\itemsep = 0mm
+\item how to coordinate multiple processes running at the
+same time on the same memory location,
+\end{itemize}
+
+\begin{itemize}
+\itemsep = 0mm
+\item how to efficiently utilize the available computing
+power, etc.,
+\end{itemize}
+
+and allows to (!):
+
+\begin{itemize}
+\itemsep = 0mm
+\item efficiently organize joint storage of graph constructions and string content of external information constructions not represented as a graph, using graphdynamic and event-driven models;
+\end{itemize}
+
+\begin{itemize}
+\itemsep = 0mm
+\item efficiently manage the address space, i.e. distribute
+information about these constructions the in memory in the most effective way;
+\end{itemize}
+
+\begin{itemize}
+\itemsep = 0mm
+\item efficiently allocate processes to work with these
+constructions in single-threaded and multi-threaded
+environments;
+\end{itemize}
+
+\begin{itemize}
+\itemsep = 0mm
+\item provide coordinated (synchronized) execution of several processes in one memory;
+\end{itemize}
+
+\begin{itemize}
+\itemsep = 0mm
+\item ensure consistency of operations at the level of representation and processing of data in the memory.
+\end{itemize}
+
+This model has many merits, but the following issues
+remain unresolved:
+
+\begin{itemize}
+\itemsep = 0mm
+\item how to ensure the security of information storage
+and processing, that is:
+
+\begin{itemize}
+\itemsep=0mm
+\item[-]how to ensure access rights for constructions
+stored in the memory;
+
+\item[-]how to efficiently process and assign these access
+rights to processes;
+
+\item[-]and more;
+
+\end{itemize}
+\end{itemize}
+
+
+
+\begin{itemize}
+\itemsep = 0mm
+\item how to ensure consistency of operations at the
+knowledge representation and processing level, i.e.:
+
+\begin{itemize}
+\itemsep=0mm
+\item[-]how to implement transactions for graphs;
+
+\item[-]how to ensure the integrity and atomicity of some
+group of operations on a subgraph;
+
+
+\item[-]how to ensure error-free execution of these transactions;
+\item[-]and more;
+\end{itemize}
+\end{itemize}
+
+
+
+
+\begin{itemize}
+\itemsep = 0mm
+\item how to ensure the storage and processing of information in teams of intelligent systems [28], that is:
+
+\begin{itemize}
+\itemsep=0mm
+\item[-]how to organize storage and processing of information in distributed memory, i.e. in memory not
+on one device, but on multiple devices;
+
+\item[-]how to efficiently organize data transfer over a
+network between several devices;
+
+\item[-]and more;
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\itemsep = 0mm
+\item how to organize the configuration of memory components from the memory itself.
+\item and so on.
+
+\end{itemize}
+
+Nevertheless, the results of this paper are very significant for future work. These questions will be discussed
+in the following papers. Let us consider some obtained
+quantitative characteristics of the implementation of the
+proposed model.
+\begin{center}
+
+
+
+ \MakeUppercase{\romannumeral4.} The software implementation of sc-memory for
+next-generation intelligent systems
+
+\end{center}
+
+\textit{A. Description of the sc-memory implementation}
+
+The current version of sc-machine is implemented on
+the Linux operating system (Ubuntu-22.04) [29] and is
+available on GitHub [30]. When developing sc-machine
+according to the described model, we used modern
+development environments (CLion, VSCode), containerization tools (Docker), programming languages (C, C++,
+CMake), as well as standard libraries and frameworks
+supplied together with compilers of the programming
+languages used. The development was based on the
+models and tools described in the previous section, as well as the \textit{OSTIS Technology Standard} described in the
+current version of the \textit{e OSTIS-2023 monographs} [9].
+
+The current Software implementation of sc-memory
+has the following features:
+
+\begin{itemize}
+\itemsep = 0mm
+\item The memory allocation and destruction mechanisms
+of the GLib library are used to manage dynamic
+memory.
+\item Prefix trees [31] and linked lists are used as data
+structures to store \textit{information constructions} that do
+not belong to \textit{SC-code.} The reasons for that are as
+follows [32]:
+
+\begin{itemize}
+\itemsep=0mm
+\item[-]prefix structures are fairly easy to understand and
+minimal in their syntax;
+
+
+\item[-]prefix structures are convenient enough to store
+and handle "key-value" relations;
+
+\item[-]access to a value by a key occurs in the worst
+case for the length of this key [33].
+
+\end{itemize}
+\end{itemize}
+
+The Implementation of file memory allows storing
+and searching any kind of information constructs
+(including binary files).
+
+\begin{itemize}
+\itemsep = 0mm
+\item To synchronize processes in sc-memory, monitors
+are implemented and used [34], [27]. They provide:
+
+\begin{itemize}
+\itemsep=0mm
+\item[-]locking mechanisms to prevent multiple processes
+from simultaneously accessing shared resources,
+eliminating the possibility of mutual exceptions,
+race conditions, and data access conflicts;
+
+
+\item[-]high-precision time synchronization between processes that allows them to work in a coordinated
+mode, which eliminates the possibility of some
+processes being hungry.
+
+\end{itemize}
+\end{itemize}
+
+The implementation of monitors uses mutexes, condition variables, and queues.
+
+\begin{itemize}
+\itemsep = 0mm
+\item The current \textit{Programming interface of the Software
+implementation of sc-memory} allows:
+ 
+\begin{itemize}
+\itemsep=0mm
+\item[-]implement platform-dependent components to a
+necessary and sufficient extent, almost independently of sc-memory implementation.
+
+
+\item[-]implement basic tools for designing platformindependent ostis-systems.
+
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\itemsep = 0mm
+\item  The current Implementation of sc-memory is fully
+consistent with the current Implementation of scpinterpreter.
+\end{itemize}
+
+In general, \textit{sc-memory}  can be implemented in different
+ways. For example, another variant of \textit{ostis-platform scmemory} can be realized by a program implementation of \textit{Neo4j DBMS.} The difference between such a possible \textit{scmemory} implementation and the current one is that the
+storage of \textit{graph constructions} and the control of the flow
+of actions over them should be realized more by means
+provided by \textit{Neo4j DBMS,}  while the representation of \textit{graph constructions} s should be implemented in its own
+way, because it depends on the \textit{SC-code syntax.}  [18].
+
+\textit{B. Efficiency of sc-memory operations}
+
+The current Software implementation of sc-memory
+in the Software platform for ostis-systems allows to
+store and represent \textit{sc-constructions,}  externa\textit{l information
+constructions }  not belonging to \textit{ SC-code,}  as well as to
+control and coordinate processes in it.
+
+The results of sc-memory operations testing, which
+includes the implementation of the process control model,
+showed that parallel execution of sc-memory operations
+is efficient when the number of operations is large
+enough (e.g., 1,000,000 operations) (Table 1).
+
+\begin{center}
+\small Table I \\ Efficiency of using 4 physical threads to perform 1,000,000 \\ sc-memory operations compared to 1 physical thread
+\end{center}
+
+\begin{center}
+\begin{tabular}{ | m { 3cm } | m { 1.5cm } | m { 1.6cm } | m {1.3cm}|}  
+  \hline 
+ &\multicolumn{1}{c|}{1 thread} & \multicolumn{2}{c|}{4 thread}  \\
+\cline{2-4}
+
+\raisebox {0ex} Number of physical threads & Response time, ms & Response time, ms & Speedup times \\
+  \hline
+  \multicolumn{4}{|c|}{Operations of addition (modification)} \\
+\hline
+ Operation of scnode creation  & 958,025 & 369,680 & 2.591 \\  
+  \hline 
+  Operation of scconnector creation  & 1,299.740 & 787.001 & 1.652 \\  
+  \hline 
+  Operation of adding content to ostis-system file & 29,885.500 & 9,555.450 & 3.128 \\  
+  \hline 
+   \multicolumn{4}{|c|}{Operations of search} \\
+\hline
+Operation of searching sc-connectors outgoing from a given scelement & 642.378 & 203.005 & 3.164 \\  
+  \hline 
+  Operation of searching an ostis-system file by its contents & 1,608.650 & 928.555 & 1.732 \\
+ \hline 
+  \multicolumn{4}{|c|}{Operations of deletion} \\
+\hline
+Operation of deleting an sc-element & 1,850.950 & 1,746.270 & 1,060 \\  
+  \hline 
+  Operation of deleting sc-connectors outgoing from a given scelement & 1,704.620 & 2,115.500 & 0.806\\
+ \hline 
+ 
+\end{tabular}
+\end{center}
+
+
+Testing and evaluation of the effectiveness of the ostissystems software platform were conducted on one of its
+latest versions — 0.9.0. This version of the platform
+solved the problem of controlling processes in the shared
+semantic memory. During the testing we calculated the
+main efficiency (performance) indicators of operations
+over sc-memory in single-threaded and multithreaded
+environments: response time and throughput, and also
+calculated the speedup [35] obtained by using parallelism
+when performing a group of operations of the same
+class over sc-memory [36]. The computer used was an \textit{HP ProBook Hewlett Packard} laptop with a \textit{Intel(R)}
+
+\end{multicols}
+\end{document}
