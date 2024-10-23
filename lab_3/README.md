@@ -56,5 +56,5 @@ git pull origin
 
 #Специальные символы:
 
-$\supset$
-$\ni$
+"$\supset$"
+"$\ni$"
