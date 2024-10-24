@@ -34,7 +34,7 @@
 ```
 
 а вот как выглядит это в **pdf**
-  <p  align="center"><img src="Lab1_files/image1_for_redme.png" width=400px height=300px></p>
+  <p  align="center"><img src="image1_for_redme.png" width=400px height=300px></p>
 
 ## Ссылка на фото
 
@@ -54,7 +54,7 @@ fix typos and etc.);
 \end{itemize}
 
 а вот как выглядит это в **pdf**
-  <p  align="center"><img src="Lab1_files/image2_for_redme.png" width=400px height=300px></p>
+  <p  align="center"><img src="image2_for_redme.png" width=400px height=300px></p>
 
 ## Римские цифры
 Команда была изменена для нумерации заголовков с помощью римских цифр
