@@ -6,10 +6,12 @@
 
 ## Основные команды
 
-* `multicols`- для разбиения страницы на части;
-* `itemize` - для создания списка;
-* `includegraphics` - для вставки изображений;
- 
+* `multicols`- разбиение страницы на части;
+* `itemize` - создание списка;
+* `includegraphics` - вставка изображений;
+* `par` - абзац;
+* `parskip` - настройка отступов абзаца.
+
 ![laba1](https://github.com/user-attachments/assets/130dad1f-25f2-4dfe-b7a1-983aa92e9c4c)
 
 # Лабораторная работа 3
