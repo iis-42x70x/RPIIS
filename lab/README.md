@@ -50,17 +50,15 @@
 ```
  а вот как выглядит это в **pdf**
 
-  <p  align="center"><img src="images/zzzzzzzzzzzz.jpg" width=400px height=300px></p>
+  <p  align="center"><img src="Фото 1.jpg" width=400px height=300px></p>
 
  ### Работа с секциями  и римскими цифрами
  ```
- \section*{\fontsize{10}{11}\selectfont\textnormal{
-  \RomanNumeralCaps{5}. Conclusion }
-}
+\centerline{\MakeUppercase{\romannumeral 3}. Introduction}
 ```
-<p align="center"> а вот как выглядит это в <b>pdf</b>
+а вот как выглядит это в **pdf**
 </p>
- <p  align="center"><img src="images/25.png" width=700px height=200px ></p>
+ <p  align="center"><img src="Римские цифры.jpg" width=700px height=200px ></p>
  
  ## Вот так выглядит документ при его редактировании
   <p  align="center"><img src="images/21.png"  ></p>
