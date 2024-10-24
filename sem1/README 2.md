@@ -12,7 +12,7 @@
 
 - Сверстать три страницы научной статьи с использованием системы верстки текстов TeX.
 
-### [РЕЗУЛЬТАТ]([q1_original.pdf](https://github.com/user-attachments/files/17512425/q1_original.pdf)
+### [РЕЗУЛЬТАТ]https://drive.google.com/file/d/15UcfGq9P8zdkgdlPHtJdGVvWgEZp1g2t/view?usp=sharing
 )
 
 # Лабораторная работа №3
