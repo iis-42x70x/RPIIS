@@ -7,7 +7,7 @@
 Для начала проекта нужно нажать на кнопку
 <p  align="center"><img src="Начало проекта.jpg" ></p>
 
-### Для работы с Latex нужно подключить специальные пакеты
+### Пакеты для работы с Latex
 ```
 \documentclass[10pt, a4paper]{article}%создание базы , шрифт 10
 \usepackage{graphicx} %подключение пакета для картинок
@@ -47,7 +47,7 @@
 
   <p  align="center"><img src="Фото 1.jpg" width=400px height=300px></p>
 
- ### Работа с секциями  и римскими цифрами
+ ### Работа римскими цифрами
  ```
 \centerline{\MakeUppercase{\romannumeral 3}. Introduction}
 ```
