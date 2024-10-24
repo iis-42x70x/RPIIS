@@ -33,7 +33,7 @@
 8. git config --list <br>![8](images/8.png)
 9. git restore --staged {file}   /   git reset <br>![9](images/9.png)
 10. git diff {file} <br>![10](images/10.png)
-11. git checkout {file} <br>![11](images/11.png)
+11. git checkout {file} <br>![11](images/11.png)![11.1](images/11.1.png)  ![11.2](images/11.2.png) 
 12. git add --all   /   git add . <br>![12](images/12.png)
 13. git config --global <br>
 14. git config --global [user.name](http://user.name) {name} <br>![14](images/14.png)
