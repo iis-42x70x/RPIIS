@@ -7,7 +7,7 @@
 ### УСЛОВИЕ
 
 - Сверстать три страницы научной статьи с использованием системы верстки текстов TeX.
-- На странице [OSTIS Research Papers Collection (246-248)](https://proc.ostis.net/proc/Proceedings%20OSTIS-2024.pdf) необходимо взять доклад, соответствующий варианту индивидуального задания.
+- На странице [OSTIS Research Papers Collection (171-173)](https://proc.ostis.net/proc/Proceedings%20OSTIS-2024.pdf) необходимо взять доклад, соответствующий варианту индивидуального задания.
 
 ### [РЕЗУЛЬТАТ](lab1/LAB1.pdf)
 
@@ -22,7 +22,7 @@
 - Получил практические навыки работы в консоли, использования консольных команд.
 
 ## ОТЧЁТ
-1. git init <br>![1](images/1.png)
+1. git init <br>![1](Screenshots/1.png)
 2. git status <br>![2](images/2.png)
 3. последовательность коммитов, master   /   main <br>
 4. git add {file} <br>![4](images/4.png)
