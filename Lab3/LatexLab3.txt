@@ -1,0 +1,372 @@
+\documentclass[25pt]{article}
+\usepackage[english,russian]{babel} %langs
+\usepackage{blindtext} 
+\usepackage{multicol} 
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{indentfirst} %kr stroka
+\usepackage{hyperref} %ref
+\usepackage[russian]{babel}
+
+\renewcommand{\thesection}{\Roman{section}} %roman for sections
+\titleformat{\section}{\filcenter\normalfont\Large\bfseries}{\thesection.}{0.2em}{} %section settings
+\titleformat{\subsection}{\filright\normalfont\Large\itseries}{\thesection.}{0.2em}{}
+
+
+
+\usepackage{geometry}
+\geometry{
+  a3paper,
+  top=30mm, 
+  right=31mm, 
+  bottom=30mm, 
+  left=31mm
+}
+
+\date{}
+\begin{document}
+
+\begin{multicols*}{2}
+\begin {enumerate}[label=(\arabic*)]
+
+\bibitem [12] V. Golenkov, N. Guliakina, V. Golovko, V. Krasnoproshin,
+“Methodological problems of the current state of works in
+the field of artificial intelligence,” in \textit{Otkrytye semanticheskie
+tekhnologii proektirovaniya intellektual’nykh system [Open semantic technologies for intelligent systems]}, ser. 5, V. Golenkov,
+Ed. BSUIR, Minsk, 2021, pp. 17–24.
+\bibitem [13] V. Ryen, A. Soylu, and D. Roman, “Building semantic knowledge
+graphs from (semi-) structured data: a review,” \textit{Future Internet},
+vol. 14, no. 5, p. 129, 2022.
+\bibitem [14] P. Barnaghi, A. Sheth, and C. Henson, “From data to actionable
+knowledge: Big data challenges in the web of things [guest editors’
+introduction],” \textit{IEEE Intelligent Systems}, vol. 28, no. 6, pp. 6–11,
+2013.
+\bibitem [15] C. Kellogg, “From data management to knowledge management,”
+\textit{Computer}, vol. 19, no. 01, pp. 75–84, 1986.
+\bibitem [16] D. Shunkevich, “Universal model of interpreting logical-semantic
+models of intelligent computer systems of a new generation,”
+in \textit{Otkrytye semanticheskie tekhnologii proektirovaniya intellektual’nykh system [Open semantic technologies for intelligent
+systems]}, V. Golenkov, Ed. BSUIR, Minsk, 2022, p. 285–296.
+\bibitem[17] Golenkov, V. V., “Graphodynamic models of parallel knowledge
+processing: principles of construction, implementation, and design,” in \textit{Open semantic technologies for designing intelligent
+systems (OSTIS-2012): Proceedings of the II International Scientific and Technical Conference, Minsk, February 16-18, 2012},
+Belarusian State University of Informatics and Radioelectronics;
+editorial board: V. V. Golenkov (chief editor) [et al.]. Minsk,
+2012, pp. 23–52.
+\bibitem [18] V. Ivashenko, “General-purpose semantic representation language
+and semantic space,” in \textit{Otkrytye semanticheskie tekhnologii
+proektirovaniya intellektual’nykh system [Open semantic technologies for intelligent systems]}, ser. Iss. 6. Minsk : BSUIR, 2022,
+pp. 41–64.
+\bibitem [19] V. V. Golenkov and N. A. Gulyakina, “Structuring the semantic
+space,” in \textit{Open semantic technologies for designing intelligent
+systems (OSTIS-2014): Proceedings of the IV International Scientific and Technical Conference}, V. V. Golenkov, Ed. Minsk:
+BSUIR, 2 2014, pp. 65–78, chief editor Golenkov, V. V. [and
+others].
+\bibitem [20]{prinsps} ——, “Principles of building mass semantic technology for component design of intelligent systems,” in \textit{Open semantic technologies for designing intelligent systems (OSTIS-2011): Proceedings
+of the international scientific and technical conference}, V. V.
+Golenkov, Ed. Minsk: Belarusian State University of Informatics
+and Radioelectronics, 2 2011, pp. 21–58, chief editor Golenkov,
+V. V. [et al.].
+\bibitem [21] D. Shunkevich, “Hybrid problem solvers of intelligent computer
+systems of a new generation,” \textit{Otkrytye semanticheskie tekhnologii
+proektirovaniya intellektual’nykh system [Open semantic technologies for intelligent systems]}, no. 6, pp. 119–144, 2022.
+\bibitem [22]{neo4j} “Neo4j graph Database Platform | Graph Database Management
+System [Electronic resource],” April 2024. [Online]. Available:
+https://neo4j.com/
+\bibitem [23] T. Kahveci and A. K. Singh, “An efficient index structure for
+string databases,” in VLDB, vol. 1, 2001, pp. 351–360.
+\bibitem [24] M. Barsky, U. Stege, and A. Thomo, “Structures for indexing
+substrings,” in \textit{Full-Text (Substring) Indexes in External Memory}.
+Springer, 2012, pp. 1–15.
+\bibitem [25] N. V. Zotov, “Model of process management in shared semantic
+memory of intelligent systems,” in \textit{Information Technologies and
+Systems 2023} (ITS 2023), L. Y. Shilin, Ed. Minsk: Belarusian
+State University of Informatics and Radioelectronics, 11 2023, pp.
+53–54, proceedings of the International Scientific Conference.
+\bibitem[26] J. L. W. Kessels, “An alternative to event queues for synchronization in monitors,” \textit{Communications of the ACM}, vol. 20, no. 7,
+pp. 500–503, 1977.
+\bibitem[27] C. A. R. Hoare, “Monitors: An operating system structuring
+concept,” \textit{Communications of the ACM}, vol. 17, no. 10, pp. 549–
+557, 1974.
+\bibitem[28] A. Zagorskiy, “Principles for implementing the ecosystem of nextgeneration intelligent computer systems,” in \textit{Otkrytye semanticheskie tekhnologii proektirovaniya intellektual’nykh system [Open
+semantic technologies for intelligent systems]}. BSUIR, Minsk,
+2022, p. 347–356.
+\bibitem[29] R. Love, \textit{Linux system programming: talking directly to the kernel
+and C library}. O’Reilly Media, Inc., 2013.
+\bibitem[30]{github} “Software implementation of semantic networks processing storage [Electronic resource],” 2024, mode of access: https://github.
+com/ostis-ai/sc-machine. — Date of access: 30.03.2024.
+\bibitem[31] R. Bayer, “Prefix b-trees,” ACM \textit{Transactions on Database Systems (TODS)}, vol. 2, no. 1, pp. 11–26, 1977.
+\bibitem[32] P. Ferragina and R. Grossi, “The string b-tree: A new data structure for string search in external memory and its applications,”
+\textit{Journal of the ACM} (JACM), vol. 46, no. 2, pp. 236–280, 1999.
+\bibitem[33] D. Belazzougui, “Fast prefix search in little space, with applications,” in \textit{European Symposium on Algorithms}, 2010, pp. 427–
+438.
+\bibitem[34] M. I. Cole, \textit{Algorithmic skeletons: structured management of
+parallel computation}. Pitman London, 1989.
+\bibitem[35] L. Gonnord, L. Henrio, L. Morel, and G. Radanne, “A survey on
+parallelism and determinism,” \textit{ACM Computing Surveys}, vol. 55,
+no. 10, pp. 1–28, 2023.
+\bibitem[36] N. V. Zotov, “Quantitative indicators of operations efficiency over
+shared semantic memory of intelligent systems,” in \textit{Information
+Technologies and Systems 2023 (ITS 2023)}, L. Y. Shilin, Ed.
+Minsk: Belarusian State University of Informatics and Radioelectronics, 11 2023, pp. 51–52, proceedings of the International
+Scientific Conference.
+\bibitem[37] L. P. Miret, “Consistency models in modern distributed systems.
+an approach to eventual consistency,” \textit{Master. MA thesis. Universitat Politecnica de Valencia, Spain}, 2014.\\
+
+\begin{center}
+
+\paragraph{}
+\large \textbf{\centering{\newlineФОРМАЛЬНАЯ МОДЕЛЬ ОБЩЕЙ\newline
+СЕМАНТИЧЕСКОЙ ПАМЯТИ ДЛЯ\newline
+ИНТЕЛЛЕКТУАЛЬНЫХ СИСТЕМ\newline
+НОВОГО ПОКОЛЕНИЯ \vspace{2mm}}}
+\newline
+\large Зотов Н.В.
+\end{center}
+
+\large{\par В работе подробно рассматривается формальная модель
+семантической памяти для интеллектуальных систем, структура, её элементы, соответствия между ними, правила и алгоритмы. Описывается реализация на основе данной модели,
+приводятся количественные показатели её эффективности.}
+
+\begin{flushright}
+    Received 15.03.2024
+\end{flushright}
+
+
+
+
+
+
+
+
+\end {enumerate}
+\end{multicols*}
+\newpage
+
+\begin{SecPAge}
+    
+
+\title{\centering{\Huge{\textbf{\titleUser Adaptive User Interfaces for Intelligent\newline
+Systems: Unlocking the Potential of\newline
+Human-System Interaction}}}}
+\newline
+\author{Mikhail Sadouski, Pavel Nasevich, Maksim Orlov, Alexandra Zhmyrko\\
+\textit{Belarusian State University of
+Informatics and Radioelectronics}\\ 
+Minsk, Belarus\\
+Email: \href{mailto:sadovski@bsuir.by}{\url{sadovski@bsuir.by}}, 
+\href{mailto:fallenchromium@gmail.com}{\url{fallenchromium@gmail.com}}, 
+\href{mailto:orlovmaksimkonst@gmail.com}{\url{orlovmaksimkonst@gmail.com}}, 
+\href{mailto:aleksashazh@gmail.com}{\url{aleksashazh@gmail.com}}
+}
+
+\maketitle
+
+\begin{multicols*}{2}
+    \Large{\textbf{Abstract—The paper analyzes the capabilities of computer systems and the level of development of tools for
+interacting with them (user interfaces). Based on the analysis, an approach to the design of adaptive user interfaces
+of intelligent systems based on the OSTIS Technology is
+proposed. The semantic model of such interfaces, proposed
+earlier, has been clarified and extended, the proposed architecture of such systems is given. Adaptive user interfaces
+designed on the basis of the proposed approach will provide
+new scenarios of user interaction with computer systems.} \par
+ \Large{\textbf{Keywords—adaptive user interface, intelligent systems,
+user interface of ostis-systems}}
+
+\section{Introduction}
+\par
+\Large{In the modern world, people use computer systems
+of various purposes daily. A key component of such
+systems that directly influences their efficiency is the user
+interface, which in a broad sense is a set of tools that
+provide interaction between a person and the system.
+\par
+A large part of the cost of developing computer
+systems is in the design, testing, and development of the
+user interface [1]. 
+\par
+A poorly designed user interface limits the potential
+of the system by increasing the threshold of entry and reducing the efficiency of interaction with users or making
+some interaction scenarios impossible [2].
+\par
+With the development of information society, the need
+of users for computer systems capable of solving various
+classes of problems, including tasks that are difficult to
+formalize, has led to an increased pace of development
+of computer technologies, the creation of a large number
+of models, methods and tools for the design and development of computer systems, including intelligent computer
+systems with increased requirements for interoperability,
+component compatibility and flexibility of scenarios of
+interaction with the user because of their ability to
+self-learning and solving complex problems, as well as
+problems, in the initial data and algorithms of solution
+of which there is an influence of non-factors.
+\par
+However, even computer systems that we use on a daily
+basis are severely limited in their functionality due to the
+limited means of interaction with these systems. There
+is a mismatch between the current level of development
+of user interfaces and the problem-solving capabilities of
+computer systems.
+\par
+Each user has unique needs and the application of
+adaptive user interfaces for intelligent systems becomes
+essential. The ease and flexibility of dynamically changing user interfaces based on user tasks that are not predetermined in the design of the system becomes key and
+allows for greater potential for interaction with intelligent
+computer systems.
+This article analyzes the capabilities of computer systems and the level of development of tools for interacting
+with them (user interfaces).
+\par
+The user interface is considered in this context as the
+language of communication between the system and the
+user, together with the means for such communication,
+emphasizing the content of the interaction more than the
+specific technical aspects of the implementation of the
+interaction. This analysis is based on a description of
+the historical development of computer systems (and, as
+a consequence, the development of the many classes of
+problems that computer systems solve).
+\par
+Based on the analysis, an approach to the design of
+adaptive user interfaces of intelligent systems based on
+the OSTIS Technology is proposed. The proposed [3]
+semantic model of such interfaces is clarified and extended, and the proposed architecture of such systems
+is given. Adaptive user interfaces designed on the basis
+of the proposed approach will provide new scenarios of
+user interaction with computer systems.}
+
+\section{ Analysis of existing approaches to solving the
+problem}
+\begin{enumerate}[label=\Alph*.]
+    \item \textit{Challenges of modern user interfaces}
+\end{enumerate} \par
+The challenges of modern user interfaces that cause
+users to fail to take advantage of the full potential of
+computer system problem solvers can be categorized as
+follows:
+
+
+
+\Large{
+    
+\begin{itemize}
+    \item A mismatch between the user’s skills and means of
+interacting with the system and the actual means of
+interaction provided by the system. An example is
+an over-complicated user interface for inexperienced
+users, or a user interface that does not take into
+account that the user is fully informed about the
+algorithm for solving a problem and takes time
+and attention away from unnecessary explanations.
+This leads to the fact that the user cannot predict
+the navigation through the user interface — his
+cognitive load increases, the time required to solve
+the problem increases [4].
+    \item Mismatch between the task and environment for
+which the user interface was designed with the
+actual task and environment of the system. This
+refers to the case where the system’s problem solver
+is capable of solving a broader and more general
+class of problems than the system’s user interface
+allows, since only in such a case can the user
+interface alone be said to be the limiting factor in
+the applicability of the system — [5].
+    \item Lack of user’s ability to make changes to the interface for integration with other user interfaces
+and/or systems. The impossibility of building an
+integrated working environment (i.e. a new user
+interface, qualitatively different from the multitude
+of interfaces designed to solve each of the sub-tasks
+of the complex task) makes it impossible to build
+scenarios for automatic integration of computer system subsystems and severely limits the user’s ability
+to integrate computer systems, because without the
+ability to change the user interface, the program
+behavior can only be changed programmatically [6],
+[7].
+\end{itemize} \par
+There are a lot of examples of functionalities limited
+on the user interface side, which are nevertheless technically realizable, but we will limit ourselves to a few
+significant ones:
+\begin{itemize}
+    \item Lack of integration of system components: your
+word processor does not prompt you to open the
+last quarter’s financial report, even though you were
+emailed it yesterday and are scheduled to check it
+on your electronic calendar today. 
+\item Lack of automatic adaptation to the environment:
+the online store does not offer you to make a pickup
+to the branch you are closest to at the moment.
+    \item Lack of ability to personalize the user interface:
+your fitness app does not allow you to fully customize the start screen with health metrics that
+are irrelevant to you and with workout suggestions
+that do not match your goal and access to fitness
+equipment
+    \item Solving complex tasks: for an average user the
+interface for automated solution of a multi-step task
+is not standard and is always available. For example,
+to process a call or a letter from a customer, enter
+relevant information from the letter into the project
+accounting system, assign a person with the necessary competence to be responsible for the project
+and send the customer a letter with the contact of
+the person responsible for the project.
+\end{itemize}
+It is worth noting that for each of these examples it is
+possible to find a counterexample: a computer system
+that did take into account the described use case, but
+it is worth recognizing that in general the described
+limitations exist in the vast majority of computer systems.
+
+\begin{enumerate}[label=\Alph*.]
+    \item[B.] \textit{Overview of the evolution of computer systems and
+their user interfaces}
+\end{enumerate} \par
+Let us consider the development paths of computer
+systems and their user interfaces - the major milestones,
+and what they were driven by (discoveries or user needs).
+\par
+Over the last 60 years, a large number of approaches
+to user interface design have been developed. The approaches focused on different directions, such as "which
+side of the interaction is primary" (the emotional state
+of the user, the purpose of the system, feedback from
+the user, the design of the program that implements the
+algorithm for solving the problem) and "how to convey
+the meaning of the objects of the user interface" —
+confrontation of metaphorical and idiomatic approach
+[8], [9].
+\par 
+At the same time, the paradigms used to implement the
+user interface have evolved. For example, the transition
+from a model where each interaction has an underlying
+function call to perform the process and provide feedback
+to an object-oriented interface where the UI elements correspond to the properties of the system entities (reactive
+approach).
+\par
+Currently, the approach when the user interface is
+described by a set of states and transitions in the algorithm of problem solving is popular (i.e. the paradigm
+of so-called "wizards", which leads the user step-by-step
+from the need to its resolution). Each of the approaches
+has a place, but a special place in the design of user
+interfaces for intelligent computer systems, based on the
+dynamic nature of the tasks that can be set before it, takes
+the paradigm of interface design based on the problem
+being solved and the algorithm for its solution. To date,
+there are no comprehensive means of building adaptive
+user interfaces (taking into account the environment,
+the characteristics of the user and his device), while
+dynamically taking into account the information about
+the algorithm for solving the problem.
+\begin{enumerate}[label=\Alph*.]
+    \item[C.] \textit{Conclusions}
+\end{enumerate} \par
+Based on the representation of the user interface described in I, we can conclude that the problems described
+in II-A are the result of a methodological error in the
+design of interfaces. At the moment, the factors affecting
+how the user interface should look like are taken into
+
+}
+
+\end{multicols*}
+
+    
+\end{SecPAge}
+
+\end{document}
