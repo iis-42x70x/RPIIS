@@ -46,9 +46,7 @@
 21. конфликт в случае слияния веток с разными изменениями в одном файле <br>
 22. git merge → git status <br>![16](images/22.png)
 23. устранить конфликт вручную изменив файл до удовлетворительного состояния <br>![16](images/22.png)
-24. git checout {hash} <br>![16](images/24.png)
 25. git rebase {name} <br>![16](images/25.png)
-26. устранить конфликт → git add {file} → git rebase --continue <br>![16](images/26.png)
 27. git rebase --abort <br>![16](images/27.png)
 28. git rebase --skip <br>![16](images/28.png)
 29. git push <br>![16](images/29.png)
