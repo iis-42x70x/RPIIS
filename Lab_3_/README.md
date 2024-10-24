@@ -1,9 +1,9 @@
 # Работа в LaTeX 
 Для редактирования кода LaTeX можно использовать сайт [Overleaf](https://www.overleaf.com "Главная страница Overleaf")
 После регистрации откроется страница с проектами. Для создания нового документа с помощью LaTeX нужно нажать соответствующую кнопку
-![Главная страница Overleaf](/images_latex/beginning_latex.png)
+![Главная страница Overleaf](https://github.com/iis-42x70x/RPIIS/blob/Бурбас_Д/Lab_3_/images_latex/beginning_latex.png)
 Когда вы создали новый проект вот так выглядит интерфейс
-![Интерфейс редактирования документа](/images_latex/editing_latex.png)
+![Интерфейс редактирования документа](https://github.com/iis-42x70x/RPIIS/blob/Бурбас_Д/Lab_3_/images_latex/editing_latex.png)
 В Overleaf также присутствует очень удобная функция: вы можете кликнуть по тексту в окне предпросмотра и Overleaf покажет как этот текст реализован в коде LaTeX в Окне редактирования кода.
 ## Подключение пакетов
 Для комфортной работы с LaTeX рекомендуется подключить специальные пакеты
@@ -38,7 +38,7 @@
 \end{figure}
 ```
 Вот как выглядит это в pdf
-![Пример картинки LaTeX](/images_latex/figure_example.png)
+![Пример картинки LaTeX](https://github.com/iis-42x70x/RPIIS/blob/Бурбас_Д/Lab_3_/images_latex/figure_example.png)
 ## Создание нумерации заголовков секций римскими цифрами
 Для этого необходимо написать в преамбуле следующую команду
 ```
@@ -49,12 +49,12 @@
 \section{Introduction}
 ```
 Вот как выглядит это в pdf
-![Пример секции Introduction](/images_latex/roman_section_example1.png)
+![Пример секции Introduction](https://github.com/iis-42x70x/RPIIS/blob/Бурбас_Д/Lab_3_/images_latex/roman_section_example1.png)
 ```
 \section{The cognitive abilities level and the interoperable behaviour. State of art}
 Вот как выглядит это в pdf
 ```
-![Пример секции The cognitive abilities](/images_latex/roman_section_example2.png)
+![Пример секции The cognitive abilities](https://github.com/iis-42x70x/RPIIS/blob/Бурбас_Д/Lab_3_/images_latex/roman_section_example2.png)
 ## Работа с библиографиями
 ```
 \begin{thebibliography}{26}
@@ -93,7 +93,7 @@ Basic approaches], Samara, Izdatel’stvo Samarskogo universiteta,
 \end{thebibliography}
 ```
 Вот как выглядит это в pdf
-![Пример библиографии](/images_latex/biblio_example.png)
+![Пример библиографии](https://github.com/iis-42x70x/RPIIS/blob/Бурбас_Д/Lab_3_/images_latex/biblio_example.png)
 ## Создание заголовка главы
 Для создания заголовка главы необходимо для начала написать в преамбуле команды по форматированию текста заголовка:
 ```
@@ -111,12 +111,12 @@ Email: kozlova@bsu.by}
 \maketitle
 ```
 Вот как выглядит это в pdf
-![Пример Заголовка](/images_latex/headline_example.png)
+![Пример Заголовка](https://github.com/iis-42x70x/RPIIS/blob/Бурбас_Д/Lab_3_/images_latex/headline_example.png)
 ## Переключение языка
 Для переключения языка(к примеру на русский) можно использовать команду
 ```
 \selectlanguage{russian}
 ```
-![Пример смены языка](/images_latex/select_lang_example.png)
+![Пример смены языка](https://github.com/iis-42x70x/RPIIS/blob/Бурбас_Д/Lab_3_/images_latex/select_lang_example.png)
 ## Ресурс для более глубокого изучения LaTeX
 [Learn LaTeX in 30 minutes](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes "Туториалы от Overleaf")
