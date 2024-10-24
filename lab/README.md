@@ -1,5 +1,5 @@
 <h1 align="center"> Работа с Latex</h1>
-<p  align="center"><img src="Логотип.png" ></p>
+<p  align="center"><img src="Images/Логотип.png" ></p>
 Для регистрации можно перйти по ссылке
 
 <a href="https://www.overleaf.com/">OverLeaf</a>
