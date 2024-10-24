@@ -1,9 +1,9 @@
 # Работа в LaTeX 
 Для редактирования кода LaTeX можно использовать сайт [Overleaf](https://www.overleaf.com "Главная страница Overleaf")
 После регистрации откроется страница с проектами. Для создания нового документа с помощью LaTeX нужно нажать соответствующую кнопку
-![Главная страница Overleaf](https://github.com/iis-42x70x/RPIIS/blob/Бурбас_Д/Lab_3_/images_latex/beginning_latex.png)
+![Главная страница Overleaf](/images_latex/beginning_latex.png)
 Когда вы создали новый проект вот так выглядит интерфейс
-![Интерфейс редактирования документа]([/images_latex/editing_latex.png](https://github.com/iis-42x70x/RPIIS/blob/Бурбас_Д/Lab_3_/images_latex/editing_latex.png))
+![Интерфейс редактирования документа](/images_latex/editing_latex.png)
 В Overleaf также присутствует очень удобная функция: вы можете кликнуть по тексту в окне предпросмотра и Overleaf покажет как этот текст реализован в коде LaTeX в Окне редактирования кода.
 ## Подключение пакетов
 Для комфортной работы с LaTeX рекомендуется подключить специальные пакеты
