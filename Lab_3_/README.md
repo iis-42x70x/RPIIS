@@ -38,6 +38,7 @@
 \end{figure}
 ```
 Вот как выглядит это в pdf
+
 ![Пример картинки LaTeX](https://github.com/iis-42x70x/RPIIS/blob/Бурбас_Д/Lab_3_/images_latex/figure_example.png)
 ## Создание нумерации заголовков секций римскими цифрами
 Для этого необходимо написать в преамбуле следующую команду
@@ -49,11 +50,13 @@
 \section{Introduction}
 ```
 Вот как выглядит это в pdf
+
 ![Пример секции Introduction](https://github.com/iis-42x70x/RPIIS/blob/Бурбас_Д/Lab_3_/images_latex/roman_section_example1.png)
 ```
 \section{The cognitive abilities level and the interoperable behaviour. State of art}
-Вот как выглядит это в pdf
 ```
+Вот как выглядит это в pdf
+
 ![Пример секции The cognitive abilities](https://github.com/iis-42x70x/RPIIS/blob/Бурбас_Д/Lab_3_/images_latex/roman_section_example2.png)
 ## Работа с библиографиями
 ```
@@ -93,6 +96,7 @@ Basic approaches], Samara, Izdatel’stvo Samarskogo universiteta,
 \end{thebibliography}
 ```
 Вот как выглядит это в pdf
+
 ![Пример библиографии](https://github.com/iis-42x70x/RPIIS/blob/Бурбас_Д/Lab_3_/images_latex/biblio_example.png)
 ## Создание заголовка главы
 Для создания заголовка главы необходимо для начала написать в преамбуле команды по форматированию текста заголовка:
@@ -111,6 +115,7 @@ Email: kozlova@bsu.by}
 \maketitle
 ```
 Вот как выглядит это в pdf
+
 ![Пример Заголовка](https://github.com/iis-42x70x/RPIIS/blob/Бурбас_Д/Lab_3_/images_latex/headline_example.png)
 ## Переключение языка
 Для переключения языка(к примеру на русский) можно использовать команду
