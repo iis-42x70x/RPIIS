@@ -7,7 +7,7 @@
 ### УСЛОВИЕ
 
 - Сверстать три страницы научной статьи с использованием системы верстки текстов TeX.
-- На странице [OSTIS Research Papers Collection (246-248)](https://proc.ostis.net/proc/Proceedings%20OSTIS-2024.pdf) необходимо взять доклад, соответствующий варианту индивидуального задания.
+- На странице [OSTIS Research Papers Collection (231-233)](https://proc.ostis.net/proc/Proceedings%20OSTIS-2024.pdf) необходимо взять доклад, соответствующий варианту индивидуального задания.
 
 ### [РЕЗУЛЬТАТ](zxc.pdf)
 
