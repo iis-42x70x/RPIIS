@@ -49,7 +49,7 @@
 25. git rebase {name} <br>![16](img/25.png)
 26. устранить конфликт → git add {file} → git rebase --continue <br>![16](img/26_1.png)  ![16](img/26_2.png)  ![16](img/26_3.png)
 27. git rebase --abort <br>![16](img/27.png)
-28. git rebase --skip <br>![16](imag/28.png)
+28. git rebase --skip <br>![16](img/28.png)
 29. git push <br>![16](img/29-1.png)
 30. git fetch → git merge  /  git pull <br>![16](img/30.png)
 31. git pull origin {name} <br>![16](img/31.png)
