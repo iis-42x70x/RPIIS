@@ -56,7 +56,7 @@
  <p  align="center"><img src="Римские цифры.jpg" width=700px height=200px ></p>
  
  ## Вот так выглядит документ при его редактировании
-  <p  align="center"><img src="images/21.png"></p>
+  <p  align="center"><img src="Обзор.jpg"></p>
 
 ## Цель: работа с Git и GitHub, а также научиться оформлять MarkDown  файлы
 
