@@ -15,7 +15,7 @@
 ![laba1](https://github.com/user-attachments/assets/130dad1f-25f2-4dfe-b7a1-983aa92e9c4c)
 
 ## Прилагаемые файлы/ссылки:
-* [main.tex](https://github.com/iis-42x70x/RPIIS/blob/%D0%92%D0%B5%D0%B3%D0%B5%D1%80%D0%B0_%D0%9C/sem1/lab3/main.tex) - исходный файл вёрстки
+* [main.tex](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D1%80%D0%B1%D1%83%D0%BD%D0%BE%D0%B2%D0%B0_%D0%9C/sem1/Laba3/main.tex) - исходный файл вёрстки
 * [laba1.pdf](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D1%80%D0%B1%D1%83%D0%BD%D0%BE%D0%B2%D0%B0_%D0%9C/sem1/Laba3/laba1.png) - готовый pdf-файл с вёрсткой
 * [Гайд](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes) от создателей overleaf(LaTeX за 30 минут
 
@@ -36,3 +36,7 @@
 * `git status` - прорверяет статус текущего репозитория;
 * `git commit -m "Ваше сообщение"` - непосредственно сам коммит с его описанием;
 * `git push` - отправляет локальную ветку на удаленный репозиторий.
+* `git log` - посмотреть протокол(лог) коммитов;
+* `git stash` - скрыть изменения по сравнению с последним коммитом.
+
+ ![](git.png)
