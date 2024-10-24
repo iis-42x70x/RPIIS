@@ -13,7 +13,7 @@
 
 Более подробный гайд можно почитать [тут](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes).
 
-![Screnshot]https://github.com/iis-42x70x/RPIIS/blob/Дорош_М/sem1/лаба1/image.png
+![Screnshot](https://github.com/iis-42x70x/RPIIS/blob/Дорош_М/sem1/лаба1/image.png)
 # Лабораторная работа 3
 
 ### Цель:
