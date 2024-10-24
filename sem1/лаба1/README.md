@@ -13,8 +13,7 @@
 
 Более подробный гайд можно почитать [тут](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes).
 
-<img width="1227" alt="Снимок экрана 2024-09-25 в 11 10 42" src="https://github.com/user-attachments/assets/fde3834a-e350-4260-aade-cb12de04c9e6">
-
+![Screnshot]https://github.com/iis-42x70x/RPIIS/blob/Дорош_М/sem1/лаба1/image.png
 # Лабораторная работа 3
 
 ### Цель:
