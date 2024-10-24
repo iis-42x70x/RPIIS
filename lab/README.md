@@ -1,5 +1,5 @@
 <h1 align="center"> Работа с Latex</h1>
-<p  align="center"><img src="Images/" ></p>
+<p  align="center"><img src="Images/latex-97866_1280.webp" ></p>
 Для регистрации можно перйти по ссылке
 
 <a href="https://www.overleaf.com/">OverLeaf</a>
