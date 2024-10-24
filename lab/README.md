@@ -5,7 +5,7 @@
 <a href="https://www.overleaf.com/">OverLeaf</a>
 
 Для начала проекта нужно нажать на кнопку
-<p  align="center"><img src="Начало проекта.jpg" ></p>
+<p  align="center"><img src="Images/Начало проекта.jpg" ></p>
 
 ### Пакеты для работы с Latex
 ```
@@ -35,7 +35,7 @@
 \end{itemize}
 ```
  а вот как выглядит это в **pdf**
- <p  align="center"><img src="Cписок.jpg" ></p>
+ <p  align="center"><img src="Images/Cписок.jpg" ></p>
 
 ### Вставка картинок
 ```
@@ -45,7 +45,7 @@
 ```
  а вот как выглядит это в **pdf**
 
-  <p  align="center"><img src="Фото 1.jpg" width=400px height=300px></p>
+  <p  align="center"><img src="Images/Фото 1.jpg" width=400px height=300px></p>
 
  ### Работа римскими цифрами
  ```
@@ -53,14 +53,14 @@
 ```
 а вот как выглядит это в **pdf**
 </p>
- <p  align="center"><img src="Римские цифры.jpg" width=700px height=200px ></p>
+ <p  align="center"><img src="Images/Римские цифры.jpg" width=700px height=200px ></p>
  
  ## Вот так выглядит документ при его редактировании
-  <p  align="center"><img src="Обзор.jpg"></p>
+  <p  align="center"><img src="Images/Обзор.jpg"></p>
 
 ## Цель: работа с Git и GitHub, а также научиться оформлять MarkDown  файлы
 
- <p  ><img src="images/555.png"  ></p>
+ <p  ><img src="Images/images/555.png"  ></p>
  <p><b>Git</b> (произносится «гит») — распределённая система управления версиями.</p>
 
  [Git](https://git-scm.com/)
