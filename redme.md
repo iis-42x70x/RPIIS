@@ -12,7 +12,7 @@
 
 Для корректной работы в LaTeX нужно подключить специальные пакеты, в данной работе были использованы следующие:
 
-...
+```
 \usepackage{graphicx} % Required for inserting images
 \usepackage{inputenc}
 \usepackage{biblatex}
@@ -20,7 +20,7 @@
 \usepackage{scn} 
 \usepackage{setspace}
 \usepackage[russian]{babel} 
-...
+```
 
 ## Вставка фото и подпись под ней
 
