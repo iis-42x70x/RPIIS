@@ -51,6 +51,7 @@
 29. отправить изменения из локального репозитория для указанной ветки в удалённый репозиторий <br>![16](images/29.png)
 30. git fetch <br>![16](images/30.png)
 31. git fetch origin master {name} <br>![16](images/31.png)
+
 32. git clone {name} {name}(создание копии репозитория) <br>![16](images/32.png)
 33. git rm/mv {name} (удаление/переименование файла) <br>![16](images/33.png)
 34. git rebase -i HEAD~n <br>
