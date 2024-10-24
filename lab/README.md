@@ -53,14 +53,14 @@
 ```
 Вот так это выглядит в **pdf**
 </p>
- <p  align="center"><img src="Images/Римские цифры.jpg" width=700px height=200px ></p>
+ <p  align="center"><img src="Images/Римские цифры.jpg" width=600px height=200px ></p>
  
  ## Вот так выглядит документ при его редактировании
   <p  align="center"><img src="Images/Обзор.jpg"></p>
 
 ## Цель: работа с Git и GitHub, а также научиться оформлять MarkDown  файлы
 
- <p  ><img src="Images/images/555.png"  ></p>
+ <p  ><img src="Images/555.png"  ></p>
  <p><b>Git</b> (произносится «гит») — распределённая система управления версиями.</p>
 
  [Git](https://git-scm.com/)
