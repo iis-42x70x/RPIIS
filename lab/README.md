@@ -7,7 +7,7 @@
 Для начала проекта нужно нажать на кнопку
 <p  align="center"><img src="Начало проекта.jpg" ></p>
 
-### Для работы с Latex нужно подключитьспециальные пакеты
+### Для работы с Latex нужно подключить специальные пакеты
 ```
 \documentclass[10pt, a4paper]{article}%создание базы , шрифт 10
 \usepackage{graphicx} %подключение пакета для картинок
@@ -39,14 +39,9 @@
 
 ### Вставка картинок
 ```
-\begin{center}
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=4.35cm]{figs/Picture.png}
-    \caption{Figure 5.The first variant of mutual placement of objects.}
-    \label{fig:first}
-\end{figure}
-\end{center}
+\centering
+\includegraphics[width=\linewidth]{zzzzzzzzzzzz.jpg}
+\caption{\small Figure 1. An example of a structure prior to filtering.}
 ```
  а вот как выглядит это в **pdf**
 
@@ -61,7 +56,7 @@
  <p  align="center"><img src="Римские цифры.jpg" width=700px height=200px ></p>
  
  ## Вот так выглядит документ при его редактировании
-  <p  align="center"><img src="images/21.png"  ></p>
+  <p  align="center"><img src="images/21.png"></p>
 
 ## Цель: работа с Git и GitHub, а также научиться оформлять MarkDown  файлы
 
