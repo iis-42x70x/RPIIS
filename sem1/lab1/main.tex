@@ -1,0 +1,433 @@
+\documentclass[twocolumn]{scndocument}
+\usepackage{import}
+\usepackage{scn}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\textbf{\thepage}}
+\DeactivateBG
+\usepackage[version=4]{mhchem}
+\renewcommand{\theenumi}{\arabic{enumi})} 
+\renewcommand{\labelenumi}{\theenumi} 
+
+
+\begin{document}
+
+\setcounter{page}{150}
+
+The current state of art of existing medical decision support systems is presented in [4]–[7] and demonstrates that almost every system is focused on a specific disease or group of diseases.
+
+To date, a large number of private, highly specialized decision support systems have been developed. For
+example, SkyChain is designed for diagnosing lung,
+liver, breast, and melanoma cancer. The IDDAP system
+identifies potential infectious diseases and disease states
+based on the constructed ontology of the subject area.
+MYCIN is an interactive expert system for diagnosis and
+treatment of infectious diseases [8]. In [9], an intelligent
+system for personalized human health monitoring based
+on biomedical signal processing is designed using the
+Internet of Things, cloud computing, big data processing
+and neural network.
+
+The number of localized problem statements and their
+solutions is so large that it is almost impossible to catalog
+them and have a common source of information about
+them. Localized solutions can be found in various information and search engines: PubMed, Scopus, Google
+Scholar, WoS.
+
+It is difficult for medical staff to use several systems at
+once in practice, and it is expensive to develop and maintain such systems. Most of the existing systems focus on
+diagnostics on late stages of disease, while virtually none
+of the existing system considers the diagnosis in the early
+stages of the disease.
+
+In terms of diagnostic methods, this article focuses on
+non-invasive methods of examination for early stages of
+the disease. Since they are highly informative, do not
+require long additional preparation of the patient, significant time expenditures, and also during the procedure
+the integrity of the skin is preserved.
+
+\begin{center}
+\vspace{-3pt}
+III. Problem Statement
+\vspace{-3pt}
+\end{center}
+
+The design and implementation of intelligent noninvasive diagnostic system will require the consideration
+of identification of technological platform capable to
+process and support the non-invasive diagnostics. The
+methodological approach should address the solution of
+at least three steps:
+
+The first step is to investigate promising methodological directions (variants) of non-invasive signals suitable
+for implementation of intelligent diagnostics: FunctionalSpectral Diagnostics (FSD-diagnostics); preliminary diagnostics based on the assessment of basic parameters
+of functional state (such as electrocardiogram (ECG),
+arterial blood pressure, heart rate (pulse, HR), temperature distribution in the local skin area, carbon dioxide
+volume in exhaled air CO2, arterial blood oxygen saturation SpO2); bioimpedance analysis; Zakharyin-Ged zone
+diagnostics; Nakatani method diagnostics; frequencyresonance diagnostics.
+
+The second step is to formulate general requirements
+to the diagnostic decision support system.
+
+The Decision Support System for Diagnostics is designed for doctors and patients.
+
+When developing a decision support system for human
+diagnostics, we believe it is reasonable to shift the
+focus of attention not only to the development of an
+intelligent system, but also to the issues of integration
+and compatibility of different solutions and approaches,
+and their subsequent joint development.
+
+When developing a decision support system for human
+diagnostics, we believe it is reasonable to shift the
+focus of attention not only to the development of an
+intelligent system, but also to the issues of integration
+and compatibility of different solutions and approaches,
+and their subsequent joint development.
+
+The third step is to justify the choice of technology
+for the development of an intelligent system.
+
+Following the formulation of methodological approach, the technological requirements of the system can
+be summarized as following. The proposed intelligent
+non-invasive diagnostics system should:
+
+\vspace{-5pt}
+\begin{itemize}
+    \setlength{\itemsep}{-3pt} 
+    \setlength{\parsep}{-3pt}
+    \item be oriented to the design and development (improvement) of the system;
+    \item provide the possibility of integration of heterogeneous data pipelines:
+    \item process different types of data
+    \item ensure standardization of data representations
+(forms of representation, information processing
+models);
+    \item support modular system architecture that provides
+the possibility of adding new components and new
+data types, and their integration into the system;
+    \item ensure integration with modern emerging technologies.
+    \item ensure compatibility of interfacing with different
+systems, their docking.
+\end{itemize}
+\vspace{-5pt}
+
+The choice of technology to be developed should
+include the possibility of strengthening technological
+sovereignty. Since full technological dependence of countries on monopolistic corporations, which we are now
+witnessing, is a "path dependence" in the current situation. One of the solutions is the development of opensource projects and focusing on efficient exploitation of
+open-source libraries openly available for research and
+industrial use free of charge.
+
+\begin{center}
+\vspace{-3pt}
+IV. Proposed Approach
+\vspace{-3pt}
+\end{center}
+
+The purpose of the system is to assist physicians in
+establishing a diagnosis. For this purpose, it is necessary
+to establish in the system the principles of diagnosis
+formation, the structure of the diagnosis, as well as
+to provide a transparent mechanism of reasoning when
+making a diagnosis or when proposing several diagnostic
+hypotheses. Knowledge driven systems solve these problems.
+
+To define a technical solution it is necessary to take
+into account the three key elements: (1) comprehensibility of the reasoning process, (2) heterogeneous data
+representation, and data and (3) interface standardisation.
+
+Firstly, when designing decision support systems in
+medicine, it is necessary to take into account that for
+practical application these systems require explainability of the reasoning process with provision of reasoning
+on how the results obtained, as well as the ability to
+modify the knowledge used in the system in a timely
+manner. Fulfillment of such requirements is ensured by
+the ontological approach [10], on the basis of which
+knowledge bases (KB) in terms and structure familiar
+to specialists can be created.
+
+Secondly, since different types of data are used as
+input data, it is necessary to integrate heterogeneous data
+pipelines, which is ensured by the ontological approach.
+
+Thirdly, when building decision support systems, one
+of the problems is to provide a uniform description and
+interpretation of data, regardless of the place and time
+of their receipt in the overall system. One of the ways to
+solve this problem can be the introduction of ontological
+modeling technologies.
+
+A number of other advantages of the ontological
+approach should be emphasized. Ontologies use logical
+formalisms, which makes them convenient for use in the
+development of complex systems. Ontologies are characterized by flexibility, which allows combining information from different sources and building new knowledge
+on its basis. The main purpose of creating any ontology
+is to model a certain subject area, in turn, this forms
+the core of the system, and other modules are easily
+integrated with this module. Also the knowledge stored
+in ontological form has a high potential for reuse. Each
+ontology contains some fragment of conceptual knowledge of the subject area and hence ontology systems are
+called knowledge-based systems.
+
+A diagnosis ontology includes a structure for describing information, rules for interpreting it and applying it
+to diagnosis.
+
+In view of the above, it is reasonable to use the
+ontological approach.
+
+Logical-semantic systems are based on ontologies.
+Artificial intelligence systems based on logical-semantic
+knowledge processing work with conceptual apparatus.
+Logical-semantic systems work with knowledge representations in the form of ontologies, realized, for example, in the form of a knowledge graph, where concepts
+and other objects correspond to the nodes of the graph
+and relations between them — to the edges of the graph.
+
+As applied to the tasks of non-invasive diagnostics
+logical-semantic systems will allow to build parallel
+hypotheses and form a diagnosis (more or less probable),
+which is an advantage of their use.
+
+Alternative development tools include ontology editors
+Protégé, Ontolingua, OntoEdit and others. Recently, the
+number of publicly available ontology editors has been
+increased. However, the main problem is that ontology
+editors are considered in isolation from implementation
+technology.
+
+The most effective technology for creating ontological
+systems is the domestic technology of complex life cycle support of semantically compatible intelligent computer
+systems of new generation (Open Semantic Technology
+of Intelligent Systems — OSTIS) [11], [12].
+
+OSTIS technology is an open semantic technology
+for component-based design of hybrid and interoperable
+intelligent systems.
+
+The OSTIS technology is based on the OSTIS standard, which is a standard of semantic computer systems
+that provides
+
+\vspace{-5pt}
+\begin{itemize}
+    \setlength{\itemsep}{-3pt} 
+    \setlength{\parsep}{-3pt}
+    \item semantic compatibility of systems complying with
+this standard;
+    \item methods of building such computer systems and
+their improvement in the process of operation;
+    \item means of building and improving these systems,
+including language tools, libraries of standard technical solutions, as well as tools (means of synthesis
+and modification; means of analysis, verification,
+diagnosis, testing; means of [10].
+\end{itemize}
+\vspace{-5pt}
+
+It should be noted that one of the most important
+features of systems built on the basis of OSTIS technology is their platform independence. It has an orientation
+on the semantic representation of knowledge, which
+is completely abstracted from the peculiarities of the
+technical realization of intelligent systems.
+
+It is important to consider the possibility to use already
+developed ontologies on medicine (on various resources),
+pre-transforming them into OSTIS format with further
+processing of the expert (adaptation to specific tasks).
+For example, it is possible to use "Knowledge bases
+of medical terminology and observations", ontology for
+representing knowledge about diagnostics of diseases and
+syndromes realized on the cloud platform IACPaaS [13]
+and others.
+
+\begin{center}
+\vspace{-3pt}
+V. Description of the system operation principle
+\vspace{-3pt}
+\end{center}
+
+Problem Statement. We aim design the architecture
+of medical decision support system for patient diagnosis
+based on non-invasive diagnostics.
+
+Tools for realization — OSTIS technology.
+
+The architecture of the OSTIS system for medical
+applications consists of the following components:
+
+\vspace{-5pt}
+\begin{itemize}
+    \setlength{\itemsep}{-3pt} 
+    \setlength{\parsep}{-3pt}
+    \item OSTIS Knowledge Bases — Can describe any type
+of knowledge, while being easily augmented with
+new types of knowledge. Can include such ontologies as disease model, etc.
+    \item OSTIS problem solver is based on multi-agent approach and allows easy integration and combination
+of any problem-solving models.
+    \item The OSTIS interface is a subsystem with its
+own knowledge-base and problem solver (separate
+knowledge base and problem solver).
+\end{itemize}
+\vspace{-5pt}
+
+The intelligent diagnostic decision support system will
+include the following components:
+
+\vspace{-5pt}
+\begin{itemize}
+    \setlength{\itemsep}{-3pt} 
+    \setlength{\parsep}{-3pt}
+    \item Block of input data collection and storage
+    \item Data processing unit
+    \item Block of diagnostic conclusions formation (mechanism of logical conclusion, mechanism of "reasoning" when making a diagnosis, allowing to get
+an idea of what information was the basis for the
+diagnosis).
+    \item Block of consulting doctors and patient — issuing
+a response to the end user of the system about the
+results of diagnostics, recommendation on further
+actions.
+\end{itemize}
+\vspace{-5pt}
+
+\begin{center}
+\vspace{-3pt}
+VI. Non-Invasive Diagnostic Methods
+\vspace{-3pt}
+\end{center}
+
+The term "non-invasive" can be translated as "without
+disturbing the skin".
+
+The following criteria are taken into account when for
+choosing a non-invasive diagnostic method:
+
+\vspace{-5pt}
+\begin{itemize}
+    \setlength{\itemsep}{-3pt} 
+    \setlength{\parsep}{-3pt}
+    \item simplicity of the procedure;
+    \item safety and painlessness for the person;
+    \item examination time;
+    \item the number of features (e. g., markers);
+    \item the number of body systems covered.
+\end{itemize}
+\vspace{-5pt}
+
+Intelligent diagnostics of the human condition is focused on a set of data and considers the human body as
+a whole.
+
+Non-invasive human diagnostics can be carried out in
+several directions (variants) of functional diagnostics.
+
+\vspace{-5pt}
+\begin{enumerate}
+    \setlength{\itemsep}{-3pt} 
+    \setlength{\parsep}{-3pt}
+    \item  Functional spectral-dynamic diagnostics (FSDdiagnostics) for early diagnosis of diseases [14].
+    \item  Bioimpedance analysis [15].
+    \item Preliminary diagnosis based on the evaluation of
+basic parameters of the functional state, such as
+electrocardiogram (ECG), arterial blood pressure,
+heart rate (pulse, HR), temperature distribution in
+the local skin area, volume of carbon dioxide in
+exhaled air \textit{\ce{CO2}}, arterial blood oxygen saturation
+\textit{\ce{SpO2}}. These measurements can be carried out, for
+example, using the device "Patient Monitor" [2],
+[16].
+    \item Diagnosis by Zakharyin-Ged zones [17].
+    \item Diagnosis by the Nakatani method [18].
+    \item Frequency-resonance diagnostics (bioresonance).
+\end{enumerate}
+\vspace{-5pt}
+
+The choice of features mentioned above is justified by
+their prevalence and technological efficiency.
+
+
+For each identified feature the principle of passivity
+of the main mode of diagnostics (without influence on
+the organism) or the principle of activity of the mode
+of diagnostics (influence on the organism is present)
+becomes an important indicator
+
+The passive indicators include: FSD-diagnostics;
+Zakharyin-Ged zone diagnostics; measurement of electrocardiogram (ECG), arterial blood pressure, heart rate
+(pulse, HR), temperature distribution in the local area of
+the skin, volume of carbon dioxide in exhaled air \textit{\ce{CO2}},
+arterial blood oxygen saturation \textit{\ce{SpO2}}.
+
+The active indicators include: bioimpedance analysis,
+Nakatani method diagnostics, frequency-resonance diagnostics.
+
+Let’s consider the in great detail non-invasive diagnostic methods mentioned above.
+
+\begin{flushleft}
+\vspace{-3pt}
+\textit{A. FSD-diagnostics}
+\vspace{-3pt}
+\end{flushleft}
+
+The most effective diagnostic technology is the technology of functional spectral-dynamic diagnostics (FSDdiagnostics) applied to solve the tasks of health dynamics monitoring [14]. This is due to the fact that
+FSD-diagnostics is effective with respect to common
+infectious and non-infectious diseases, including latent
+(hidden) stages and actual risks of their development.
+FSD provides a priori sufficiency (due to markers).
+
+The FSD diagnostic technology is focused on the
+detection of disease risks (that is often used during early
+diagnosis). The sensor is a metal electrode that records
+a wave electromagnetic signal in the sound range.
+
+The core principle of the spectral-dynamic method is
+to analyze the electrical oscillations of the body field in
+the frequency range from 20 hertz to 11 kilohertz with
+an amplitude of 1 millivolt.
+
+FSD diagnosis involves the following operations [19]:
+
+\vspace{-5pt}
+\begin{itemize}
+    \setlength{\itemsep}{-3pt} 
+    \setlength{\parsep}{-3pt}
+    \item  tool: a sensor (metal electrode) is applied to the
+patient’s skin surface for 35 sec;
+    \item  data collection: recording of the body wave signal
+in the frequency range from 20 Hz to 11 kHz (EMF
+audio/\+-\--+/*[-range) is performed;
+    \item signal processing: spectral analysis of the signal
+based on Dobeshi wavelet transform 3;
+    \item detection problem: recognizing the presence of
+spectral correspondences with similar spectra of
+electronic copies of reference diagnostic markers;
+    \item spectral correspondence (similarity of the marker
+with the corresponding part of the patient’s spectrum) expressed in percent is the main indicator for
+the physician who issues a diagnostic report;
+    \item the diagnostic report contains indications of risks or
+presence of infectious and non-infectious diseases.
+\end{itemize}
+\vspace{-5pt}
+
+Distinctive features of FSD-diagnostics from existing
+diagnostic technologies are: the principle of pattern
+recognition instead of the principle of parameter measurement; the principle of passivity of the main mode of
+diagnostics (without impact on the body); the possibility
+of automation of nosological diagnostics (recognition of
+the disease itself or nosological risk). The examination
+is performed in less than one minute, and its diagnostic
+analysis can take up to two hours.
+
+\begin{flushleft}
+\vspace{-3pt}
+\textit{B. Bioimpedance analysis (bioimpedanceometry)}
+\vspace{-3pt}
+\end{flushleft}
+
+Bioimpedance analysis (from "biological" and 
+"impedance" — complex electrical resistance,
+"bioimpedance" — electrical resistance of biological
+tissues) — analysis of the amount of fat and fluid in
+the body, muscle and bone mass and metabolism, a
+method of rapid diagnosis of human body composition
+by measuring the electrical resistance between different
+points on the human skin.
+
+ 
+\end{document}
