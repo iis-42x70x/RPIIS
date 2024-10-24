@@ -34,7 +34,7 @@
 \item Translation of a linearized sc-text into a natural language.
 \end{itemize}
 ```
- а вот как выглядит это в **pdf**
+Вот так это выглядит в **pdf**
  <p  align="center"><img src="Images/Cписок.jpg" ></p>
 
 ### Вставка картинок
@@ -43,7 +43,7 @@
 \includegraphics[width=\linewidth]{zzzzzzzzzzzz.jpg}
 \caption{\small Figure 1. An example of a structure prior to filtering.}
 ```
- а вот как выглядит это в **pdf**
+Вот так это выглядит в **pdf**
 
   <p  align="center"><img src="Images/Фото 1.jpg" width=400px height=300px></p>
 
@@ -51,7 +51,7 @@
  ```
 \centerline{\MakeUppercase{\romannumeral 3}. Introduction}
 ```
-а вот как выглядит это в **pdf**
+Вот так это выглядит в **pdf**
 </p>
  <p  align="center"><img src="Images/Римские цифры.jpg" width=700px height=200px ></p>
  
