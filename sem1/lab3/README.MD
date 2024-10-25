@@ -57,6 +57,8 @@
 ```
 как это будет выглядить
  <p  align="center"><img src="images/skrin1.png" ></p>
+
+
 ### Добавление изображений с ссылкой
 ```
  \begin{figure}[H]
