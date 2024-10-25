@@ -5,14 +5,16 @@
 ### В результате этой работы должен получиться один pdf файл и один tex файл с исходниками статьи
 #### Команды используемые в Latex
 
-'''
+```
 \begin{figure}[H]     
     \centering
     \includegraphics[width=8cm]{Figure 2.}
         \caption{ IoT system architecture based on neural network with OSTIS
 technology.}
-'''
-'''
+```
+##### Команда позволяющая вставить изображени е и подпись к нему
+
+```
 \begin{verbatim}
  {
        "data_type": "acceleration",
@@ -30,4 +32,15 @@ technology.}
        }
 
 \end{verbatim}
-'''
+```
+##### Команда позваляющая вставить код 
+
+![Снимок экрана 2024-10-25 131039](https://github.com/user-attachments/assets/a32dab52-9475-4bd7-96f2-3c1c978cd865)
+# Лабораторная работа 3
+## Цель работы:
+### Познакомиться с программами git, освоить их программные аргументы.
+
+
+
+
+
