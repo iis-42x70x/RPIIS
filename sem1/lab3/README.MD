@@ -56,7 +56,7 @@
 \end{thebibliography}
 ```
 как это будет выглядить
-![](skrin1.png)
+ <p  align="center"><img src="images/skrin1.png" ></p>
 ### Добавление изображений с ссылкой
 ```
  \begin{figure}[H]
@@ -72,7 +72,7 @@
 
 ```
 как это будет выглядеть 
-![](skrin2.png)
+ <p  align="center"><img src="images/skrin2.png" ></p>
 
  
 ###  Так же могут прикодиться комманды
@@ -98,4 +98,4 @@
 
 Более подробно с основными командами Git можно ознакомиться по [ссылке](https://habr.com/ru/articles/587558/).
     
-![](pic.jpg)
+ <p  align="center"><img src="images/pic.jpg" ></p>
