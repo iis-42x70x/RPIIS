@@ -55,5 +55,4 @@
 33. git  rm/mv {name} (удалениее/переименование файла) <br>![16](images/33.png)
 34. git rebase -i HEAD~n <br>
 35. git revert HEAD <br>![16](35.png)
-34. git rebase -i HEAD~n <br>
-35. git revert HEAD <br>![16](35.png)
+
