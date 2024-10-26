@@ -12,7 +12,7 @@ std::vector< std::vector<bool> > converseGraph(
 		)
 {
 	std::vector< std::vector<bool> > gC(g.size(),
-										std::vector<bool>(g.size()));
+					    std::vector<bool>(g.size()));
 
 	for (size_t i = 0; i < g.size(); i++)
 	{
@@ -26,7 +26,7 @@ std::vector< std::vector<bool> > converseGraph(
 }
 
 void topologicalSortDFS(const std::vector< std::vector<bool> >& g, size_t vertex,
-						std::vector<bool>& explored, std::vector<size_t>& order)
+			std::vector<bool>& explored, std::vector<size_t>& order)
 {
 	explored[vertex] = true;
 
@@ -60,7 +60,7 @@ std::vector<size_t> topologicalSort(const std::vector< std::vector<bool> >& g)
 }
 
 void getComponent(const std::vector< std::vector<bool> >& gC, size_t vertex,
-				  std::vector<bool>& explored, std::vector<size_t>& component)
+		  std::vector<bool>& explored, std::vector<size_t>& component)
 {
 	explored[vertex] = true;
 
@@ -92,7 +92,7 @@ std::vector< std::vector<size_t> > stronglyConnectedComponents(
 		{
 			std::vector<size_t> currentComponent;
 			getComponent(gC, currentVertex, explored,
-						 currentComponent);
+				     currentComponent);
 			components.push_back(currentComponent);
 		}
 	}
@@ -108,7 +108,7 @@ void userExecution()
 
 	std::cout << "Введите матрицу смежности графа:\n";
 	std::vector< std::vector<bool> > g(vertexCount,
-									   std::vector<bool>(vertexCount));
+					   std::vector<bool>(vertexCount));
 	for (size_t i = 0; i < vertexCount; i++)
 	{
 		for (size_t j = 0; j < vertexCount; j++)
@@ -130,10 +130,12 @@ void userExecution()
 	{
 		std::cout << "Все вершины данного графа, входящие " <<
 		             ((i + 1 == 2) ? "во " : "в ") << i + 1 << "-ю"
-					 " вершину графа конденсации: ";
-		for (size_t j = 0; j < gSCC[i].size(); j++) {
+			     " вершину графа конденсации: ";
+		for (size_t j = 0; j < gSCC[i].size(); j++)
+		{
 			std::cout << gSCC[i][j] + 1;
-			if (j + 1 < gSCC[i].size()) {
+			if (j + 1 < gSCC[i].size())
+			{
 				std::cout << ", ";
 			}
 		}
@@ -172,7 +174,7 @@ void runTestCase(int testCaseNumber)
 	std::cin >> vertexCount;
 
 	std::vector< std::vector<bool> > g(vertexCount,
-									   std::vector<bool>(vertexCount));
+					   std::vector<bool>(vertexCount));
 	for (size_t i = 0; i < vertexCount; i++)
 	{
 		for (size_t j = 0; j < vertexCount; j++)
@@ -205,10 +207,12 @@ void runTestCase(int testCaseNumber)
 	{
 		std::cout << "Все вершины данного графа, входящие " <<
 		             ((i + 1 == 2) ? "во " : "в ") << i + 1 << "-ю"
-					 " вершину графа конденсации: ";
-		for (size_t j = 0; j < gSCC[i].size(); j++) {
+			     " вершину графа конденсации: ";
+		for (size_t j = 0; j < gSCC[i].size(); j++)
+		{
 			std::cout << gSCC[i][j] + 1;
-			if (j + 1 < gSCC[i].size()) {
+			if (j + 1 < gSCC[i].size())
+			{
 				std::cout << ", ";
 			}
 		}
