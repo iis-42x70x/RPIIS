@@ -200,7 +200,7 @@ std::vector< std::vector<size_t> > stronglyConnectedComponents(const std::vector
 	return components;
 }
 ```
-    3. Выведем граф конденсации в консоль.
+3. Выведем граф конденсации в консоль.
 ```C++
     for (size_t i = 1; i <= gSCC.size(); i++)
 	{
