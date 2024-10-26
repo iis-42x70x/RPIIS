@@ -7,12 +7,9 @@
 
 using std::size_t;
 
-std::vector< std::vector<bool> > converseGraph(
-		const std::vector< std::vector<bool> >& g
-		)
+std::vector< std::vector<bool> > converseGraph(const std::vector< std::vector<bool> >& g)
 {
-	std::vector< std::vector<bool> > gC(g.size(),
-										std::vector<bool>(g.size()));
+	std::vector< std::vector<bool> > gC(g.size(),std::vector<bool>(g.size()));
 	
 	for (size_t i = 0; i < g.size(); i++)
 	{
@@ -25,8 +22,7 @@ std::vector< std::vector<bool> > converseGraph(
 	return gC;
 }
 
-void topologicalSortDFS(const std::vector< std::vector<bool> >& g, size_t vertex,
-                        std::vector<bool>& explored, std::vector<size_t>& order)
+void topologicalSortDFS(const std::vector< std::vector<bool> >& g, size_t vertex, std::vector<bool>& explored, std::vector<size_t>& order)
 {
 	explored[vertex] = true;
 	
@@ -59,8 +55,7 @@ std::vector<size_t> topologicalSort(const std::vector< std::vector<bool> >& g)
 	return order;
 }
 
-void getComponent(const std::vector< std::vector<bool> >& gC, size_t vertex,
-                  std::vector<bool>& explored, std::vector<size_t>& component)
+void getComponent(const std::vector< std::vector<bool> >& gC, size_t vertex, std::vector<bool>& explored, std::vector<size_t>& component)
 {
 	explored[vertex] = true;
 	
@@ -75,9 +70,7 @@ void getComponent(const std::vector< std::vector<bool> >& gC, size_t vertex,
 	}
 }
 
-std::vector< std::vector<size_t> > stronglyConnectedComponents(
-		const std::vector< std::vector<bool> >& g
-		)
+std::vector< std::vector<size_t> > stronglyConnectedComponents(const std::vector< std::vector<bool> >& g)
 {
 	std::vector<size_t> order = topologicalSort(g);
 	std::vector< std::vector<bool> > gC = converseGraph(g);
@@ -106,8 +99,7 @@ void userExecution()
 	std::cin >> vertexCount;
 	
 	std::cout << "Введите матрицу смежности графа:\n";
-	std::vector< std::vector<bool> > g(vertexCount,
-	                                   std::vector<bool>(vertexCount));
+	std::vector< std::vector<bool> > g(vertexCount,std::vector<bool>(vertexCount));
 	for (size_t i = 0; i < vertexCount; i++)
 	{
 		for (size_t j = 0; j < vertexCount; j++)
@@ -127,9 +119,7 @@ void userExecution()
 	std::cout << "\nПРИМЕЧАНИЕ: Вершины нумеруются с единицы.\n\n";
 	for (size_t i = 0; i < gSCC.size(); i++)
 	{
-		std::cout << "Все вершины данного графа, входящие " <<
-		             ((i + 1 == 2) ? "во " : "в ") << i + 1 << "-ю"
-		             " вершину графа конденсации: ";
+		std::cout << "Все вершины данного графа, входящие " << ((i + 1 == 2) ? "во " : "в ") << i + 1 << "-ю вершину графа конденсации: ";
 		for (size_t j = 0; j < gSCC[i].size(); j++)
 		{
 			std::cout << gSCC[i][j] + 1;
@@ -167,13 +157,12 @@ void userExecution()
 
 void runTestCase(int testCaseNumber)
 {
-	std::cout << "Тестовые пример №" << testCaseNumber << ":\n";
+	std::cout << "Тестовый пример №" << testCaseNumber << ":\n";
 	
 	size_t vertexCount;
 	std::cin >> vertexCount;
 	
-	std::vector< std::vector<bool> > g(vertexCount,
-	                                   std::vector<bool>(vertexCount));
+	std::vector< std::vector<bool> > g(vertexCount, std::vector<bool>(vertexCount));
 	for (size_t i = 0; i < vertexCount; i++)
 	{
 		for (size_t j = 0; j < vertexCount; j++)
@@ -204,9 +193,7 @@ void runTestCase(int testCaseNumber)
 	std::cout << "\nПРИМЕЧАНИЕ: Вершины нумеруются с единицы.\n\n";
 	for (size_t i = 0; i < gSCC.size(); i++)
 	{
-		std::cout << "Все вершины данного графа, входящие " <<
-		             ((i + 1 == 2) ? "во " : "в ") << i + 1 << "-ю"
-		             " вершину графа конденсации: ";
+		std::cout << "Все вершины данного графа, входящие " << ((i + 1 == 2) ? "во " : "в ") << i + 1 << "-ю вершину графа конденсации: ";
 		for (size_t j = 0; j < gSCC[i].size(); j++)
 		{
 			std::cout << gSCC[i][j] + 1;
@@ -247,9 +234,7 @@ int main()
 {
 	std::setlocale(LC_ALL, "rus");
 	
-	std::cout << "Вы хотите ввести значения для выполнения программы "
-	             "самостоятельно или проверить программу на пяти заранее "
-	             "определённых тестовых примерах?\n"
+	std::cout << "Вы хотите ввести значения для выполнения программы самостоятельно или проверить программу на пяти заранее определённых тестовых примерах?\n"
 	             "Для ввода своих значений введите в консоль 1.\n"
 	             "Для проверки на тестовых примерах введите 2.\n"
 	             "Для выхода из программы введите любое другое число.\n";
