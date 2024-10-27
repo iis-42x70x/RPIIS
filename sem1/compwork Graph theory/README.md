@@ -177,7 +177,8 @@ std::vector<size_t> topologicalSort(const std::vector< std::vector<bool> >& g)
 	return order;
 }
 ```
-2. На обратном графе _G<sup>С</sup>_ запустить серию обходов в глубину этого графа в порядке, определяемом порядком топологической сортировки (массив _order_).  Каждое множество вершин, достигнутое в результате очередного запуска обхода, и будет очередной компонентой сильной связности.
+`
+	2. На обратном графе _G<sup>С</sup>_ запустить серию обходов в глубину этого графа в порядке, определяемом порядком топологической сортировки (массив _order_).  Каждое множество вершин, достигнутое в результате очередного запуска обхода, и будет очередной компонентой сильной связности.
 ```C++
 /*
  * g - матрица смежности графа.
@@ -207,8 +208,6 @@ void getComponent(const std::vector< std::vector<bool> >& gC, size_t vertex, std
 
 std::vector< std::vector<size_t> > stronglyConnectedComponents(const std::vector< std::vector<bool> >& g)
 {
-	std::vector< std::vector<bool> > gC = converseGraph(g);
-	
 	std::vector<bool> explored(gC.size(), false);
 	std::vector< std::vector<size_t> > components;
 	
@@ -226,7 +225,8 @@ std::vector< std::vector<size_t> > stronglyConnectedComponents(const std::vector
 	return components;
 }
 ```
-3. Выведем граф конденсации в консоль.
+`
+	3. Выведем граф конденсации в консоль.
 ```C++
 for (size_t i = 1; i <= gSCC.size(); i++)
 {
