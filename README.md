@@ -25,6 +25,7 @@
 + Для сдачи работы необходимо выполнить все задания и составить отчёт с тем, как эти задания выполнялись
 
 ### Основные команды:
-
++ git status ![git status](https://github.com/iis-42x70x/RPIIS/blob/%D0%A1%D0%BE%D0%BB%D0%BE%D0%BC%D0%B0%D1%85%D0%B0_%D0%90/png/git%20status.png)
++ git add ![git add](https://github.com/iis-42x70x/RPIIS/blob/%D0%A1%D0%BE%D0%BB%D0%BE%D0%BC%D0%B0%D1%85%D0%B0_%D0%90/png/git%20add.png)
 
 
