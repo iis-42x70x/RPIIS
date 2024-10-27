@@ -25,7 +25,7 @@
 + Для сдачи работы необходимо выполнить все задания и составить отчёт с тем, как эти задания выполнялись
 
 ### Основные команды:
-+ git status ![git status](https://github.com/iis-42x70x/RPIIS/tree/Соломаха_А/png/git status.png)
-+ git add ![git add](https://github.com/iis-42x70x/RPIIS/tree/Соломаха_А/png/git add.png)
++ git status ![git status](https://github.com/iis-42x70x/RPIIS/tree/Соломаха_А/png/git_status.png)
++ git add ![git add](https://github.com/iis-42x70x/RPIIS/tree/Соломаха_А/png/git_add.png)
 
 
