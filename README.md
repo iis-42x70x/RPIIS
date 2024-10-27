@@ -37,6 +37,9 @@ GitHub — это платформа, где можно хранить, дели
 =======
 + git status ![git status](https://github.com/iis-42x70x/RPIIS/tree/Соломаха_А/png/git_status.png)
 + git add ![git add]([https://github.com/iis-42x70x/RPIIS/tree/Соломаха_А/png/git_add.png](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.geeksforgeeks.org%2Fwhat-is-git-add%2F&psig=AOvVaw1PQaUDR0nXo5zjxDKr44y9&ust=1730104839480000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKCGpcqYrokDFQAAAAAdAAAAABAE))
+<<<<<<< HEAD
+>>>>>>> 16c58aea630aa09c3a3ad02f1bef26e7f3c4fdc2
+=======
 >>>>>>> 16c58aea630aa09c3a3ad02f1bef26e7f3c4fdc2
 
 
