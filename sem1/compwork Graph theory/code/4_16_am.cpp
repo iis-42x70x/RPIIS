@@ -99,7 +99,7 @@ void userExecution()
 	std::cin >> vertexCount;
 	
 	std::cout << "Введите матрицу смежности графа:\n";
-	std::vector< std::vector<bool> > g(vertexCount,std::vector<bool>(vertexCount));
+	std::vector< std::vector<bool> > g(vertexCount, std::vector<bool>(vertexCount));
 	for (size_t i = 0; i < vertexCount; i++)
 	{
 		for (size_t j = 0; j < vertexCount; j++)
@@ -234,7 +234,8 @@ int main()
 {
 	std::setlocale(LC_ALL, "rus");
 	
-	std::cout << "Вы хотите ввести значения для выполнения программы самостоятельно или проверить программу на пяти заранее определённых тестовых примерах?\n"
+	std::cout << "Вы хотите ввести значения для выполнения программы самостоятельно или проверить "
+		     "программу на пяти заранее определённых тестовых примерах?\n"
 	             "Для ввода своих значений введите в консоль 1.\n"
 	             "Для проверки на тестовых примерах введите 2.\n"
 	             "Для выхода из программы введите любое другое число.\n";
