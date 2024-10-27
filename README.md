@@ -26,6 +26,6 @@
 
 ### Основные команды:
 + git status ![git status](https://github.com/iis-42x70x/RPIIS/tree/Соломаха_А/png/git_status.png)
-+ git add ![git add](https://github.com/iis-42x70x/RPIIS/tree/Соломаха_А/png/git_add.png)
++ git add ![git add]([https://github.com/iis-42x70x/RPIIS/tree/Соломаха_А/png/git_add.png](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.geeksforgeeks.org%2Fwhat-is-git-add%2F&psig=AOvVaw1PQaUDR0nXo5zjxDKr44y9&ust=1730104839480000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKCGpcqYrokDFQAAAAAdAAAAABAE))
 
 
