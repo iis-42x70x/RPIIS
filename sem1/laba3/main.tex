@@ -1,0 +1,231 @@
+\documentclass[12pt,a4paper]{scndocument}
+
+\usepackage{scn}
+\usepackage{multicol} %колонки
+\usepackage{setspace} %межстрочный интервал
+\usepackage{fancyhdr} %настройки верхнего и нижнего колонтитулов в документе.
+\usepackage{newtxtext, newtxmath} % Задать шрифт Times New Roman
+\usepackage{enumitem} %списки
+\usepackage[left=2.5cm,right=2.5cm,top=3cm,bottom=3cm]{geometry}
+
+\setlist[itemize]{noitemsep,topsep=0pt, leftmargin=7mm}
+\fancyhf{} % очищает все верхние и нижние колонтитулы.
+\renewcommand{\headrulewidth}{0pt} % remove the header rule
+\cfoot{\textbf{\thepage}} % жирные номера страниц
+\pagestyle{fancy}
+\setcounter{page}{144} % настройка нумерации страниц
+\setlength{\columnsep}{0.5cm} % интервал между колонками
+
+\begin{document}
+\begin{multicols}{2}
+\begin{SCn}
+\scnidtf {Glossary of the \textit{OSTIS Standard} terms and concepts}
+\scnidtf {Semantically interoperable dictionary of concepts arranged in lexicographic order of their terms}
+\scnidtf {A tool to ensure consistent and interoperable activities for the development of new generation intelligent computer systems}
+\scnidtf {A variant of displaying the \textit{OSTIS Standard} as a sequence of concepts and their dictionary specifications, presented in lexicographical order of the terms of these concepts}
+\scnidtf {The result of different perspectives consistency in the field of information technology}
+
+\scnrelto{\textit{form of presentation}}{\textit{OSTIS Standard}} 
+\scnsubset{\textit{OSTIS Standard}}
+\scniselement{\textit{knowledge base fragment}}
+\scniselement{\textit{semantic dictionary}}
+\begin{scnrelfromset}{\textit{generalised decomposition}}
+           \scnitem{\textit{A sequence of concepts and their dictionary specifications, arranged in lexicographic order of the terms of these concepts}}
+           \begin{scnindent}
+           \scnidtf{Dynamically formed atomic or non-atomic section of the\textit{ OSTIS Metasystem} knowledge base, representing a sequence of concepts and their dictionary specifications of the \textit{OSTIS Standard}, arranged in lexicographic order of the terms of these concepts}
+         \scniselement{\textit{dynamic structure}}
+         \scnsubset{\textit{OSTIS Standard}}
+         \begin{scnindent}
+         \scnsubset{\textit{Knowledge base of the OSTIS Metasystem}}
+         \end{scnindent}
+         \vspace{5pt}
+         \scnsuperset{\textit{Documentation on the development and use of the OSTIS Glossary}}
+         \end{scnindent}
+           \scnitem{\textit{OSTIS Glossary browsing and navigation subsystem}}
+           \begin{scnindent}
+           \scnidtf{Collective of agents providing the \textit{OSTIS Glossary} generation from the \textit{OSTIS Standard} and its viewing in the system}
+           \scnsubset{\textit{Problem solver of the OSTIS Metasystem}}
+           \end{scnindent}
+         \end{scnrelfromset}
+         \scnheader{\textbf{\textit{Documentation on the development and use of the OSTIS Glossary}}}
+         \scniselement{\textit{knowledge base section}}
+         \scniselement{\textit{ostis-documentation}}
+         \begin{scnreltovector}{\textit{section concatenation}}
+         \scnitem{\textit{Principles and rules of the development and consistency of the OSTIS Glossary and the OSTIS Standard}
+         \scnitem{\textit{Rules of placement and specification of the OSTIS Glossary objects}}
+         \scnitem{\textit{Rules of identification of the OSTIS Glossary objects}}
+         \scnitem{\textit{Rules of visualisation of the OSTIS Glossary object specification}}
+         \scnitem{\textit{Principles of interaction between users and computer systems with the OSTIS Glossary}}
+         \scnitem{\textit{Structure of the OSTIS Glossary}}
+         \scnitem{\textit{Features and advantages of the OSTIS Glossary}}
+         \scnitem{\textit{Author team of the OSTIS Glossary}}
+         \scnitem{\textit{Prospects for development of the OSTIS Glossary}}}
+         \end{scnreltovector}
+\end{SCn}
+
+We will consider the specifications of the \textit{OSTIS Glossary} generation agents from the \textit{OSTIS Standard}, as well as the specifications of the \textit{OSTIS Glossary} browsing agents.
+
+
+\medskip{\setlength{\parindent}{0pt}
+\textit{B. Specification of the OSTIS Glossary Formation Agents from the OSTIS Standard}}
+
+
+The \textit{OSTIS Glossary} is nothing but a variant of the \textit{OSTIS Standard} display. It is up to a specialised module to display the \textit{OSTIS Glossary} to the end user.
+
+Within the \textit{OSTIS Technology}, the only kind of entities performing transformations in the memory of systems are agents — some entities capable of performing actions in the memory of these systems, belonging to some specific class of actions.
+
+In order to map the \textit{OSTIS Glossary}, the following tasks must be performed automatically:
+\begin{itemize}
+\item to find and transform information from the \textit{OSTIS Standard} into some dictionary form, in which all information is represented as a lexicographic sequence of concepts and their specifications;
+\item to integrate several sections of the same dictionary among themselves;
+\item to be able to filter the dictionary depending on the characteristics of the end user.
+\end{itemize}
+
+The following agents have been developed to solve these problems:
+\begin{itemize}
+\item The \textit{OSTIS Glossary} section formation agent, which deals with the transformation of a logically stated the \textit{OSTIS Standard} section into an the \textit{OSTIS Glossary} section in which all objects are ordered lexicographically;
+\item The \textit{OSTIS Glossary} section concatenation agent, designed to set the sequence between several generated the \textit{OSTIS Glossary} sections;
+\item The \textit{OSTIS Glossary} section filtering agents, forming:
+\end{itemize}
+\newpage
+\begin{itemize}
+
+\item[--] a simplified section of the \textit{OSTIS Glossary} that contains objects without their specifications, but arranged in lexicographic order;
+\item[--] simplified section of the \textit{OSTIS Glossary}, which contains objects with their specifications without theoretical-multiplicity relations, arranged in lexicographic order;
+\item[--] simplified section of the \textit{OSTIS Glossary}, which contains objects with their specifications without didactic links, arranged in lexicographic order.
+\end{itemize}
+
+The purpose of the \textit{OSTIS Glossary} section agent is to create a sequence of all objects belonging to the corresponding section of the \textit{OSTIS Standard} in lexicographic order. This agent implements the following algorithm:
+\begin{itemize}
+\item Step 1: A section already existing in the knowledge base is specified as an argument.
+\item Step 2. A new section of the \textit{OSTIS Glossary} is created and knowledge base objects and their corresponding dictionary specifications are added to it.
+\item Step 3. All objects are organised in alphabetical order.
+\end{itemize}
+
+The \textit{OSTIS Glossary} section filtering agent allows you to simplify the display of the section for convenient use for specific purposes. The principle of operation is as follows:
+\begin{itemize}
+\item Step 1: The \textit{OSTIS Glossary} section and the display option are specified as an argument.
+\item Step 2: Depending on the display option the agent changes the structure of the \textit{OSTIS Glossary} section.
+\end{itemize}
+\medskip{\setlength{\parindent}{0pt}
+\textit{C. Specification of agents for navigating the OSTIS Glossary}}
+
+One of the important tasks is the need to search for information in the \textit{OSTIS Glossary} fast enough. To solve this problem, search agents have been developed, in particular:
+\begin{itemize}
+    \item An agent for searching authors of a given object;
+    \item An agent for searching analogues of a given object;
+    \item An agent for searching for differences between a given object and its analogues;
+    \item An agent for searching for objects developed by a given scientist;
+    \item An agent for searching the definition of a given concept;
+    \item Agent for searching relations defined on the concept;
+    \item Agent for searching for concepts through which the given concept is defined;
+    \item An agent for searching all entities that are specialized with respect to the given concept;
+    \item An agent for searching authors of the specification of a given entity;
+    \item An agent for searching identification rules for a given entity;
+    \item and others.
+\end{itemize}
+\medskip{\setlength{\parindent}{0pt}
+\textit{D. Author team of the OSTIS Glossary}}
+
+
+\medskip{A key feature and also a key advantage of the \textit{OSTIS Glossary} is its author team. Obviously, the authors of this paper are members of the author team of the \textit{OSTIS Glossary}.}
+
+The \textbf{\textit{\underline{highlight}}} of the whole the \textit{OSTIS Glossary} development activity lies in the authors themselves, the developers of the \textit{OSTIS Glossary} — most of those involved in the development of the \textit{OSTIS Glossary} and the writing of this paper are first-year students of the speciality "Artificial intelligence". The impetus for the creation of this creative team is as follows:
+\begin{itemize}
+\item First-year students have sufficient and, most importantly, "fresh" (!) learning experience: they understand and realise the problems related to the form of presentation and search of educational material, "gluing" information from different academic disciplines, application of the learned information in practice. Who but first-year students, who have gone through all the problems of pre-university education, are able to realise, understand and describe them in a form that will be understandable not only to highly qualified specialists, but also to the new generation of first-year students.
+\item Students are full of ambition and enthusiasm. The aspiration of a young person to learn new information, to create something unique contributes to the development of the whole society. From the school bench, students are the backbone of all activities for the development and improvement of all mankind. The \textit{OSTIS Glossary} is a good starting point for the development of students.
+\item In addition to all this, students benefit greatly. Studying at such practice-oriented specialities as "Artificial intelligence", students not only study and get all the necessary information for developing themselves as professionals in this field, but also develop social qualities, i.e. become personalities, which is very important for their future work. Scientific-research activity, first of all, is not a creative activity, but a social one, and only effective social interaction will help to create solutions to existing problems in society.
+\item It should be recognised that the participation of students in such activities is also beneficial for the \textit{OSTIS Technology} itself. Undoubtedly, the quality of any technology is determined by the level of preparedness of its developers. But every technology exists and develops as long as there is not only some need in it, but also when there is a constant replenishing and growing creative team of interoperable people.
+\item Yes, it should be noted that students are more interoperable than many other existing specialists in the world. It is easier to get in touch with them, it
+\newpage
+is easier to communicate, to agree, to solve tasks together. The key problem of the current state of the whole society is that it is not capable of solving problems of a serious enough level.
+\end{itemize}
+
+
+Creating and organising such a team is not the easiest
+task. Let’s reveal the secret of how to form such a team:
+\begin{itemize}
+\item First of all, it is important that the initiators of all these activities are not just teachers who are motivated by student learning and development, but also teachers who are engaged in both science and application development.
+\item And most importantly, such specialists should realise that nothing in the world is done by one person, that it is necessary not only to improve oneself, but also to contribute to the development and improvement of others, and only in this case society will be able to develop harmoniously in all its directions.
+\end{itemize}
+
+Students and teachers have the same requirements.
+They \underline{must} possess:
+\begin{itemize}
+\item A high level of professional qualities, including
+\begin{itemize}
+\item a high level of system culture, i.e. the ability to think abstractly, argue a point of view, draw correct conclusions, etc.;
+\item a high level of mathematical culture, i.e. the culture of formalisation;
+\item – a high level of technological and engineering culture, i.e. the ability to apply theoretical knowledge in practice, invent and implement ideas, etc;
+\end{itemize}
+\item a high level of social qualities, including:
+\begin{itemize}
+\item a high level of interoperability (!), as defined by:
+\begin{itemize}
+\item  a high level of social responsibility, i.e. responsibility for the tasks they have to perform;
+\item a high level of social engagement, i.e. the ability to make decisions, to create ideas, to be the engine of the team;
+\item a high level of agreement ability, i.e. the ability to create mutually beneficial conditions with other team members;
+\end{itemize}
+\item a high level of moral and ethical qualities.
+\end{itemize}
+\end{itemize}
+
+The following directions of development of the current
+Author team of the \textit{OSTIS Glossary} are worth mentioning:
+\begin{itemize}
+    \item to create a favourable environment and conditions for the development and training of the members of this team;
+    \item to create conditions for the rapid entry of new people;
+    \item to create conditions for the accumulation and reuse of experience in the team.
+\end{itemize}
+
+\medskip{\setlength{\parindent}{0pt}
+\textit{E. Prospects for development of the OSTIS Glossary}}
+
+The following directions can be set for the \textit{OSTIS Glossary}:
+\begin{itemize}
+    \item to improve the text of the OSTIS Glossary, which implies improving the text of the OSTIS Standard, including:
+    \begin{itemize}
+        \item to provide a complete specification of the objects described within the\textit{ OSTIS Glossary};
+        \item to provide sufficiently complete didactic information in the specifications of these objects, including:
+        \begin{itemize}
+            \item full description of authors, bibliographic sources of these objects;
+            \item comparative description with similar objects within the \textit{OSTIS Glossary};
+            \item a sufficiently detailed description of the explanatory information to the basic information of these objects
+        \end{itemize}
+    \end{itemize}
+    \item translation of concept terms into other natural languages, including English;
+    \item to improve the tools for browsing and navigating the \textit{OSTIS Glossary};
+    \item improvement of tools to automate the process of updating the \textit{OSTIS Ecosystem} knowledge base;
+    \item development of the Author team of the \textit{OSTIS Glossary} and attraction of new specialists and developers
+\end{itemize}
+\begin{center}
+    \RomanNumeralCaps{5}. Conclusion
+\end{center}
+
+In summary, the result of this work is a comprehensive
+tool to ensure consistent \underline{consistent} and \underline{comatible} comatible activities both in
+the development of new generation intelligent systems
+and in any other field — the \textit{OSTIS Glossary}, allowing:
+\begin{itemize}
+    \item to represent any information in the same form which:
+    \begin{itemize}
+        \item makes this information understandable and consistent not only for humans, but also for computers;
+        \item simplifies the processing of this information;
+        \item simplifies the convergence and integration of different types of knowledge;
+        \item makes it possible to integrate information from different information sources;
+    \end{itemize}
+    \item to describe and structure information both from one subject domain and information at "junctions" between subject domains which:
+    \begin{itemize}
+        \item makes it easier to provide consistency of existing information and addition of new information;
+        \item makes it easier to find this information and integrate new information;
+        \item makes it possible to build knowledge libraries, i.e. to reuse existing knowledge;
+        \item makes it possible to describe information in different external languages in a consistent form;
+    \end{itemize}
+    \item to standardise the description and visualization of information of various kinds, which:
+\end{itemize}
+\newpage
+
+\end{multicols}
+\end{document}
+
+\end{document}
