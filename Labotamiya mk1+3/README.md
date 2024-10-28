@@ -4,7 +4,7 @@
 
 
 <h1 align="center"> Работа с LaTeX в OverLeaf</h1>
-<p  align="center"><img src="overleaf-o-logo-primary.jpg"></p>
+<p  align="center"><img src="picks/overleaf-o-logo-primary.jpg"></p>
 
 
 ### Надоели потери покетов - так подключи их сам!
@@ -41,7 +41,7 @@
 \end{tabular}
 ```
  УФф как красиво выглядит в pdf
- <p  align="center"><img src="image_3.png" ></p>
+ <p  align="center"><img src="picks/image_3.png" ></p>
 
 ### Оформление нумерации:
 ```
@@ -62,7 +62,7 @@ to the client.
 \end{enumerate}
 ```
  Итоговый результат:
- <p  align="center"><img src="photo_4.jpg" ></p>
+ <p  align="center"><img src="picks/photo_4.jpg" ></p>
 
 
 ### Оформление картинки через ctrl_v:
@@ -78,7 +78,7 @@ to the client.
 ```
  Вот эту картинку
 
-  <p  align="center"><img src="image.png" ></p>
+  <p  align="center"><img src="picks/image.png" ></p>
 
 ### Написание уравнений:
 ```
@@ -89,7 +89,7 @@ to the client.
 ```
  Как в учебнике:
 
-  <p  align="center"><img src="photo_2.jpg" ></p>
+  <p  align="center"><img src="picks/photo_2.jpg" ></p>
 
 
 
@@ -99,7 +99,7 @@ to the client.
 ```
 <p align="center" 
 </p>
- <p  align="center"><img src="image_3.png"  ></p>
+ <p  align="center"><img src="picks/image_3.png"  ></p>
  
 
 ## В рамках ЛР З необходимо было добавить исходники ЛР 1 в выданную ветку репозитория RPIIS в отдельную папку, сформировать README.md файл, в котором добавить условие задание ЛР 1, описать цель и выводы по ЛР 3. Целью ЛР 3 является изучение основ использования git: создание репозиториев, просмотр предыдущих версий файлов репозитория, коммит новых изменений и файлов, откат изменений, изменение глобальных/локальных настроек и создание веток, устранение конфликтов и прочий функционал системы контроля версий.
@@ -107,43 +107,43 @@ to the client.
  
  Создать локальный репозиторий в текущей папке:
    
-   git init
+    git init
    
 
  Посмотреть статус текущего репозитория:
    
-   git status
+    git status
    
 
 
 Добавить файл в контекст, который будет коммититься:
    
-   git add <имя_файла>
+    git add <имя_файла>
    
 
 Создать коммит на основе текущего контекста и указать для него комментарий:
    
-   git commit -m "Комментарий к коммиту"
+    git commit -m "Комментарий к коммиту"
    
 
  Создать коммит, включающий изменения всех наблюдаемых файлов и указать для него комментарий:
    
-   git commit -a -m "Комментарий к коммиту"
+    git commit -a -m "Комментарий к коммиту"
    
 
  Посмотреть протокол (лог) коммитов:
    
-   git log
+    git log
    
 
  Посмотреть информацию о текущих настройках:
    
-   git config --list
+    git config --list
    
 
  Убрать файл из контекста:
    
-   git reset <имя_файла>
+    git reset <имя_файла>
    
 
  Посмотреть изменения в файле по сравнению с последним коммитом:
