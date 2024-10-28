@@ -89,6 +89,7 @@
 
 22. как посмотреть в каких файлах конфликты<br>![Снимок экрана 2024-10-23 233847](https://github.com/user-attachments/assets/d34d8718-c527-4a85-8db8-3d01b03bdd3b)
 
+
 23. как устранить конфликты: <br>![Снимок экрана 2024-10-24 101434](https://github.com/user-attachments/assets/13f6baaa-9ea5-4889-bf6b-0de5b95b407d)
 
 
