@@ -53,6 +53,7 @@
 [Задания по гиту](https://docs.google.com/document/d/1pkqZWOlte5j6PuPpz7w03tPkw64ctuUwELoI-qctYVQ/edit?tab=t.0)
 
 Для сдачи работы необходимо выполнить все задания и составить отчёт с тем, как эти задания выполнялись
+<p  align="left"><img src="image4.png" ></p>
 
 ### Основные команды Git:
 * `git init` - инициализация нового репозитория
