@@ -46,9 +46,11 @@
 7. посмотреть протокол(лог) коммитов <br>![image](https://github.com/user-attachments/assets/4604fd6c-aea0-44b7-8509-f0e35e56efca)
 
 
-8. посмотреть информацию о текущих настройках <br>![Снимок экрана 2024-10-23 213302](https://github.com/user-attachments/assets/24ba9ac1-8761-467c-845e-1cc361da9817)
+8. посмотреть информацию о текущих настройках <br>![image](https://github.com/user-attachments/assets/a0f6e89a-3701-4590-9b10-a6aeb5fdb0cb)
 
-9. убрать файл из контекста <br>![Снимок экрана 2024-10-23 213654](https://github.com/user-attachments/assets/e69ffa8c-7a63-4d62-a406-3169b6035e4f)
+
+9. убрать файл из контекста <br>![image](https://github.com/user-attachments/assets/f8191134-e7c8-4603-be54-60fe1ae4ba81)
+
 
 10. посмотреть изменения в файле по сравнению с последним коммитом <br>![Снимок экрана 2024-10-23 213844](https://github.com/user-attachments/assets/a2491385-4292-40ba-8c8d-8a6216f8cc05)
 
