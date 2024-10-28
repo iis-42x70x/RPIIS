@@ -52,11 +52,14 @@
 9. убрать файл из контекста <br>![image](https://github.com/user-attachments/assets/f8191134-e7c8-4603-be54-60fe1ae4ba81)
 
 
-10. посмотреть изменения в файле по сравнению с последним коммитом <br>![Снимок экрана 2024-10-23 213844](https://github.com/user-attachments/assets/a2491385-4292-40ba-8c8d-8a6216f8cc05)
+10. посмотреть изменения в файле по сравнению с последним коммитом <br>![image](https://github.com/user-attachments/assets/58663d60-682f-4ca8-914a-a50721d4efd8)
 
-11. убрать изменения относительно последнего коммита из файла <br>![Снимок экрана 2024-10-23 214129](https://github.com/user-attachments/assets/e8674ac5-7d15-419d-857a-fdfde2056683)
 
-12. добавить в контекст коммита все измененные и созданный файлы <br>![Снимок экрана 2024-10-23 214213](https://github.com/user-attachments/assets/2af1f393-2433-4a3c-9ac5-9b3e0d2fb1de)
+11. убрать изменения относительно последнего коммита из файла <br>![image](https://github.com/user-attachments/assets/ac66a984-8cbb-4b4b-8345-22fadca8372b)
+
+
+12. добавить в контекст коммита все измененные и созданный файлы <br>![image](https://github.com/user-attachments/assets/0a700aeb-7489-4f2e-a5d1-94cbf49bd58e)
+
 
 13. изменить глобальные/локальные настройки <br>![Снимок экрана 2024-10-23 230526](https://github.com/user-attachments/assets/d1f960d9-41d7-4a60-8ba5-405d3997a8f1)
 
