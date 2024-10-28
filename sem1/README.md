@@ -61,22 +61,30 @@
 12. добавить в контекст коммита все измененные и созданный файлы <br>![image](https://github.com/user-attachments/assets/0a700aeb-7489-4f2e-a5d1-94cbf49bd58e)
 
 
-13. изменить глобальные/локальные настройки <br>![Снимок экрана 2024-10-23 230526](https://github.com/user-attachments/assets/d1f960d9-41d7-4a60-8ba5-405d3997a8f1)
+13. изменить глобальные/локальные настройки <br>![image](https://github.com/user-attachments/assets/9e81c633-0e7e-4c68-8108-08087e15dc17)
 
 
-14. переписать имя пользователя <br>![Снимок экрана 2024-10-23 230526](https://github.com/user-attachments/assets/882bed4c-0f8f-4914-9d36-fb03862398be)
 
-15. просмотреть существующие ветки <br>![Снимок экрана 2024-10-23 230804](https://github.com/user-attachments/assets/31fe2f50-b248-4780-bb33-c4a22aa26e02)
+14. переписать имя пользователя <br>![image](https://github.com/user-attachments/assets/9f3a4161-0ec8-4086-8451-1a5682216c23)
 
-16. создать новую ветку <br>![Снимок экрана 2024-10-23 230945](https://github.com/user-attachments/assets/99493ebd-4d16-4938-a3d2-9b88fa1f7f18)
 
-17. переключиться на другую ветку <br>![Снимок экрана 2024-10-23 231048](https://github.com/user-attachments/assets/539f7c9e-0663-4105-8509-05d4724eb464)
+15. просмотреть существующие ветки <br>![image](https://github.com/user-attachments/assets/0e2bb376-6372-4a22-82ff-78047b873881)
 
-18. создать новую ветку и сразу же переключиться на неё <br>![Снимок экрана 2024-10-23 231209](https://github.com/user-attachments/assets/86601f60-5366-40ff-b2e2-88895dbf3667)
 
-19. удалить ветку/удалить ветку, даже если она не примержена <br>![Снимок экрана 2024-10-23 231433](https://github.com/user-attachments/assets/83c2e319-2bf4-479d-a838-adbc4c49d865)
+16. создать новую ветку <br>![image](https://github.com/user-attachments/assets/df58bcb2-3474-49d3-a0b9-9275b050b319)
 
-20. примержить изменения из указанной ветки в текущую <br>![Снимок экрана 2024-10-23 231606](https://github.com/user-attachments/assets/df566817-3a6f-4156-abbe-9d14a63ac7dd)
+
+17. переключиться на другую ветку <br>![image](https://github.com/user-attachments/assets/22b15cc8-f4e4-4d37-ae71-7d1d4b2299c8)
+
+
+18. создать новую ветку и сразу же переключиться на неё <br>![image](https://github.com/user-attachments/assets/179d4c15-1d93-49ce-839c-43b31b2d61f1)
+
+
+19. удалить ветку/удалить ветку, даже если она не примержена <br>![image](https://github.com/user-attachments/assets/7413af03-9cf9-4615-a63d-0fb943d331d8)
+
+
+20. примержить изменения из указанной ветки в текущую <br>![image](https://github.com/user-attachments/assets/4db7af0b-2f4c-4bfe-836f-775bb44da583)
+
 21. в каком случае могут появиться конфликты? сделать конфликт: Конфликт возникает, когда в двух ветках была изменена одна и та же строка в файле или когда некий файл удален в одной ветке и отредактирован в другой. Как правило, конфликты возникают при работе в команде. <br>![Снимок экрана 2024-10-23 233523](https://github.com/user-attachments/assets/8857893a-1b85-4251-9494-2b5acd0aac29)
 
 22. как посмотреть в каких файлах конфликты<br>![Снимок экрана 2024-10-23 233847](https://github.com/user-attachments/assets/d34d8718-c527-4a85-8db8-3d01b03bdd3b)
