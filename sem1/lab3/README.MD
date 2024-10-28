@@ -61,6 +61,7 @@
 </p>
  <p  align="center"><img src="images/skrin1.png" ></p>
 ![](skrin1.png)
+![alt text](figures/skrin1.png)
 
 
 ### Добавление изображений с ссылкой
