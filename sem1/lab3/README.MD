@@ -75,7 +75,7 @@
 
 ```
 как это будет выглядеть 
- <p  align="center"><img src="images/skrin2.png" ></p>
+ <p  align="center"><img src="pic/skrin2.png" ></p>
 
  
 ###  Так же могут прикодиться комманды
@@ -101,4 +101,4 @@
 
 Более подробно с основными командами Git можно ознакомиться по [ссылке](https://habr.com/ru/articles/587558/).
     
- <p  align="center"><img src="images/pic.jpg" ></p>
+ <p  align="center"><img src="pic/pic.jpg" ></p>
