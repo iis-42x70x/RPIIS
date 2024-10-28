@@ -43,22 +43,22 @@
 
 7. посмотреть протокол(лог) коммитов <br>![Снимок экрана 2024-10-23 213153](https://github.com/user-attachments/assets/a3261af6-a2aa-4add-b535-9a35475dda62)
 
-8. посмотреть информацию о текущих настройках <br>!![Снимок экрана 2024-10-23 213302](https://github.com/user-attachments/assets/24ba9ac1-8761-467c-845e-1cc361da9817)
+8. посмотреть информацию о текущих настройках <br>![Снимок экрана 2024-10-23 213302](https://github.com/user-attachments/assets/24ba9ac1-8761-467c-845e-1cc361da9817)
 
-9. убрать файл из контекста <br>!![Снимок экрана 2024-10-23 213654](https://github.com/user-attachments/assets/e69ffa8c-7a63-4d62-a406-3169b6035e4f)
+9. убрать файл из контекста <br>![Снимок экрана 2024-10-23 213654](https://github.com/user-attachments/assets/e69ffa8c-7a63-4d62-a406-3169b6035e4f)
 
-10. посмотреть изменения в файле по сравнению с последним коммитом <br>!![Снимок экрана 2024-10-23 213844](https://github.com/user-attachments/assets/a2491385-4292-40ba-8c8d-8a6216f8cc05)
+10. посмотреть изменения в файле по сравнению с последним коммитом <br>![Снимок экрана 2024-10-23 213844](https://github.com/user-attachments/assets/a2491385-4292-40ba-8c8d-8a6216f8cc05)
 
-11. убрать изменения относительно последнего коммита из файла <br>!![Снимок экрана 2024-10-23 214129](https://github.com/user-attachments/assets/e8674ac5-7d15-419d-857a-fdfde2056683)
+11. убрать изменения относительно последнего коммита из файла <br>![Снимок экрана 2024-10-23 214129](https://github.com/user-attachments/assets/e8674ac5-7d15-419d-857a-fdfde2056683)
 
-12. добавить в контекст коммита все измененные и созданный файлы <br>!![Снимок экрана 2024-10-23 214213](https://github.com/user-attachments/assets/2af1f393-2433-4a3c-9ac5-9b3e0d2fb1de)
+12. добавить в контекст коммита все измененные и созданный файлы <br>![Снимок экрана 2024-10-23 214213](https://github.com/user-attachments/assets/2af1f393-2433-4a3c-9ac5-9b3e0d2fb1de)
 
 13. изменить глобальные/локальные настройки <br>![Снимок экрана 2024-10-23 230526](https://github.com/user-attachments/assets/d1f960d9-41d7-4a60-8ba5-405d3997a8f1)
 
 
 14. переписать имя пользователя <br>![Снимок экрана 2024-10-23 230526](https://github.com/user-attachments/assets/882bed4c-0f8f-4914-9d36-fb03862398be)
 
-15. просмотреть существующие ветки <br>!![Снимок экрана 2024-10-23 230804](https://github.com/user-attachments/assets/31fe2f50-b248-4780-bb33-c4a22aa26e02)
+15. просмотреть существующие ветки <br>![Снимок экрана 2024-10-23 230804](https://github.com/user-attachments/assets/31fe2f50-b248-4780-bb33-c4a22aa26e02)
 
 16. создать новую ветку <br>![Снимок экрана 2024-10-23 230945](https://github.com/user-attachments/assets/99493ebd-4d16-4938-a3d2-9b88fa1f7f18)
 
@@ -73,7 +73,7 @@
 
 22. как посмотреть в каких файлах конфликты<br>![Снимок экрана 2024-10-23 233847](https://github.com/user-attachments/assets/d34d8718-c527-4a85-8db8-3d01b03bdd3b)
 
-23. как устранить конфликты: <br>!![Снимок экрана 2024-10-24 101434](https://github.com/user-attachments/assets/13f6baaa-9ea5-4889-bf6b-0de5b95b407d)
+23. как устранить конфликты: <br>![Снимок экрана 2024-10-24 101434](https://github.com/user-attachments/assets/13f6baaa-9ea5-4889-bf6b-0de5b95b407d)
 
 
 
