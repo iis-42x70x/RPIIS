@@ -97,7 +97,8 @@
 24. как переключиться на указанный коммит <br>![Снимок экрана 2024-10-24 100727](https://github.com/user-attachments/assets/9c7c2d77-4ab0-4ec3-8b91-7036cf4a8f1a)
 
 
-25. сделать ребазирование(rebase) текущей ветки <br>![Снимок экрана 2024-10-24 105150](https://github.com/user-attachments/assets/37c21fde-312a-4a91-bb3e-053615ba8c53)
+25. сделать ребазирование(rebase) текущей ветки <br>![image](https://github.com/user-attachments/assets/90187f84-02a5-4311-927f-3008d5b477bb)
+
 
 
 26. отменить ребазирование во время конфликтов: git rebase --abort.
