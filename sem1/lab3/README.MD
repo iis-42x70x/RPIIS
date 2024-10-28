@@ -56,6 +56,9 @@
 \end{thebibliography}
 ```
 как это будет выглядить
+<p align="center">
+ <img width="200px" src="skrin1.png" alt="qr"/>
+</p>
  <p  align="center"><img src="images/skrin1.png" ></p>
 
 
