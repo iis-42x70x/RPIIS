@@ -10,15 +10,15 @@
 
 Для выполнения лабораторной работы я использовал следующие библиотеки:
 
-![Библиотеки](/readme_images/image1.png)
+<image src="/readme_images/image1.png" alt="Библиотеки">
 
 Вот как выглядит итог:
 
-![Первая страница](/readme_images/image2.png)
+<image src="/readme_images/image2.png" alt="Первая страница">
 
-![Вторая страница](/readme_images/image3.png)
+<image src="/readme_images/image3.png" alt="Вторая страница">
 
-![Третья страница](/readme_images/image4.png)
+<image src="/readme_images/image4.png" alt="Третья страница">
 
 ## Выводы по лабораторной работе №3
 - Я получил практические навыки работы в консоли, использования консольных команд git.
