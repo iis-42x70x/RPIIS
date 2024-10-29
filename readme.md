@@ -51,7 +51,7 @@ models (further formalization of missing concepts,
 fix typos and etc.);
 \end{itemize}
 
-а вот как выглядит это в **pdf**
+вид в **pdf**
   <p  align="center"><img src="2.jpg" width=400px height=700px></p>
 
 ## Выделение текста
