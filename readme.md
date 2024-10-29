@@ -26,6 +26,9 @@
 
 ```\includegraphics[width=1\linewidth]{image1.jpg}```
 
+вид в **pdf**
+  <p  align="center"><img src="1.jpg" width=400px height=300px></p>
+
 ## Римские цифры
 Команда была изменена для нумерации заголовков с помощью римских цифр
 
@@ -47,6 +50,9 @@ satisfaction.
 models (further formalization of missing concepts,
 fix typos and etc.);
 \end{itemize}
+
+а вот как выглядит это в **pdf**
+  <p  align="center"><img src="2.jpg" width=400px height=700px></p>
 
 ## Выделение текста
 
