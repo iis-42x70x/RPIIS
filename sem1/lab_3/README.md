@@ -6,5 +6,19 @@
 ## Цель лабораторной работы №3
 - Познакомиться с программами git, освоить их программные аргументы.
 
+## Заметки по лабораторной работе
+
+Для выполнения лабораторной работы я использовал следующие библиотеки:
+
+![Библиотеки](https://github.com/iis-42x70x/RPIIS/tree/Мяло_В/sem1/lab_3/readme_images/image1.png)
+
+Вот как выглядит итог:
+
+![Первая страница]{https://github.com/iis-42x70x/RPIIS/tree/Мяло_В/sem1/lab_3/readme_images/image2.png}
+
+![Вторая страница]{https://github.com/iis-42x70x/RPIIS/tree/Мяло_В/sem1/lab_3/readme_images/image3.png}
+
+![Третья страница]{https://github.com/iis-42x70x/RPIIS/tree/Мяло_В/sem1/lab_3/readme_images/image4.png}
+
 ## Выводы по лабораторной работе №3
 - Я получил практические навыки работы в консоли, использования консольных команд git.
