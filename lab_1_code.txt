@@ -1,0 +1,266 @@
+\documentclass[11pt,a4paper,two column ]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[margin=1.2cm, left=1.5cm, top=1.5cm, right=1.5cm,bottom=1.7cm]{geometry}
+\usepackage{hyperref}
+\graphicspath{ {images/} }
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[english, russian]{babel}
+\usepackage[<options>]{natbib}
+
+\setcounter{page}{291}
+\begin{document}
+
+Pre-trained CNN models trained on general image
+datasets can be fine-tuned using ultrasound images con-taining artifacts. By leveraging the feature representations
+learned from diverse datasets, transfer learning enables
+the CNN to adapt to artifact-rich ultrasound images more
+effectively.
+\par
+By training CNNs to recognize and process artifacts
+in ultrasound images, it can enhance the robustness and
+reliability of automated diagnostic systems, ultimately
+improving patient care and outcomes in ultrasonic diagnostic imaging.
+\par
+Another difficulty is the structure of the organ itself.
+Although the thyroid gland was chosen as an example
+for research in this article as one of the easiest organs
+to analyze, it has its own characteristics. The thyroid
+gland consists of lobes. On both sides of the organ there
+are carotid arteries, in which there is an active blood
+flow, sometimes it looks pulsating on ultrasound. This
+may prevent the neural network from performing a high-quality analysis. Moreover, in the middle of the organ
+is the larynx, which also needs to be distinguished from
+pathology.
+\par
+However, the thyroid gland is still an easy organ to
+diagnose. In comparison, for example, with abdominal
+organs, thyroid ultrasound rarely shows a nebula associated with a large amount of subcutaneous fat in the
+patient.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.49\textwidth]{images/1.jpg} 
+    \caption{\footnotesize{Thyroid gland ultrasonography example \hyperlink{link1}{[11]}}}
+    \label{fig:mesh1}
+\end{figure}
+\par
+Due to the fact that every person has a larynx and
+carotid arteries, the neural network will learn to isolate
+them and accept them as normal thanks to a large training
+sample.
+\par
+In the picture 6, the round blackouts on the sides of
+the thyroid gland are the carotid arteries. And the round
+gray area in the middle is the larynx.
+\begin{center}
+     \makeuppercase{\romannumeral 7}. OSTIS Technology integration
+\end{center} 
+\par Working with artificial intelligence is not limited to
+neural networks alone. One of the strong representatives
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.49\textwidth]{images/2.jpg}
+    \caption{\footnotesize{Thyroid gland ultrasonography in longitudinal projection
+example \hyperlink{link2}{[12]}}}
+    \label{fig:mesh2}
+\end{figure}
+of symbolic artificial intelligence is OSTIS Technology.
+\hyperlink{link3}{[13]}
+\par By integrating this technology into the described
+project, the following results can be achieved:
+    \par 1) Thanks to the implementation of OSTIS, it is
+possible to additionally train the neural network not only
+on ongoing research, but also on feedback from medical
+experts.
+    \par 2) An intelligent assistant system can be integrated
+into the application, which will determine not only the
+presence or absence of pathology, but will also be able
+to analyze the general state of the patient’s health and
+draw conclusions about what a particular problem in the
+body is related to.
+     \par 3) The treatment regimen for some pathologies is
+described by protocols and is similar in different patients.
+Thus, the system integrated with OSTIS will be able not
+only to check for problems in the organ, but also to offer
+appropriate treatment. Thus, the doctor will not have to
+write it himself. It will only be enough to edit a ready-made treatment regimen.
+    \par 4) OSTIS is based on a knowledge base. Therefore, the
+system takes all the information from there and draws
+conclusions based on it. Although neural networks are
+a fairly productive tool, they have a large percentage
+of error. OSTIS will help to minimize the number of
+incorrect answers and reduce the reliability of the system
+analysis to 99%.
+
+\begin{center}
+    VII. Conclusion
+\end{center}
+\par Medical ultrasonography, a widely-used diagnostic
+imaging modality, plays a pivotal role in healthcare by
+providing real-time images of internal organs and tissues.
+However, the manual interpretation of ultrasound images
+can be challenging and time-consuming, often requiring specialized expertise. In recent years, significant
+advancements in artificial intelligence (AI) and image
+analysis techniques have revolutionized medical imaging,
+paving the way for the automation of ultrasonography
+interpretation through intelligent image analysis. 
+\par This article provides a comprehensive overview of the
+application of AI in medical ultrasonography and its
+potential to enhance diagnostic accuracy, efficiency, and
+patient care. It proposes one of the solutions which can
+help to minimize the number of errors associated with the
+human factor. After all, an ultrasound diagnostic doctor
+should be extremely attentive and focused throughout the
+entire work shift. However, the study may take place
+at night, the person may be in poor health, there may
+be too many patients, the doctor may not have enough
+experience. These factors directly affect the quality of the
+study and the timeliness of diagnosis of life-threatening
+pathologies.
+\par At the moment, artificial intelligence is rarely used on
+a large scale due to the fact that it cannot completely
+replace humans. Especially in such an area as medicine.
+This sphere doesn’t forgive mistakes. The option proposed here is a compromise between using only artificial
+intelligence and only human power.
+\par The article describes an algorithm for creating an
+intelligent system for determining thyroid pathologies
+using image analysis. During the work, the advantages
+and disadvantages of this approach were considered, and
+options for overcoming the difficulties that will have to
+be faced during the implementation of the project were
+proposed. The subject area was also analyzed, the process
+of ultrasound examination, the principle of operation of
+the ultrasound machine were described. Moreover, an
+analysis of existing publications and projects on related
+topics was carried out.
+\par Integration of the system with OSTIS technology was
+also proposed.
+\par The automation of medical ultrasonography through
+intelligent image analysis holds great promise for improving diagnostic accuracy, efficiency, and patient outcomes. By harnessing the power of AI and deep learning
+techniques, clinicians can leverage advanced tools to
+enhance their diagnostic capabilities and provide better
+patient care. However, further research, validation, and
+collaboration between clinicians, researchers, and technologists are essential to overcome challenges and realize
+the full potential of AI-driven automatization in medical
+imaging.
+\begin{center}
+    References
+\end{center}
+
+\footnotesize 
+\begin{thebibliography}{13}
+\bibliographystyle{plain}
+\renewcommand{\bibname}{}
+\setlength{\parskip}{-0.1cm}{
+
+  \hypertarget{link5}{  \bibitem Thyroid. [Online]. Available: \url
+    { https://en.wikipedia.org/wiki/Thyroid}}
+  \hypertarget{link4}{ \bibitem  (2020, Sep) How do ultrasound examinations work?
+[Online]. Available:\url
+{https://www.informedhealth.org/how-do-ultrasound-examinations-work.html}}
+  \hypertarget{link6}{ \bibitem  (2023, Dec) ultrasound. [Online]. Available:\url
+{https://www.nibib.nih.gov/science-education/science-topics/ultrasound}}
+    \bibitem  (2017) Clinical ultrasound diagnosis of the thyroid gland. [Online]. Available:\url
+    { https://ultrasonicthyroid.ru/part-1}
+     \bibitem  (2004) Dopplerography — doppler ultrasound examination of the thyroid gland. [Online]. Available:\url 
+     {https://dr-md.ru/doppler.html}
+     \bibitem  Doppler. [Online]. Available:\url {https://radiopaedia.org/articles/thyroid-inferno}
+     \bibitem  C.-L. Cao, Q.-L. Li, J. Tong, L.-N. Shi, Wen-Xiao, L. Y. Xu,J. Cheng, T.-T. Du, J. li, and X.-W. Cui, “Artificial intelligence in thyroid ultrasound,” \textit{Frontiers in Oncology}, May 2023.
+     \bibitem  Samsung ultrasound system. [Online]. Available:\url {https://www.samsunghealthcare.com/en/products/UltrasoundSystem}
+      \bibitem C. M. Vasile, A. L. Udris,toiu, A. E. Ghenea, M. Popescu,C. Gheonea, C. E. Niculescu, A. M. Ungureanu, S,tefan Udris,toiu,A. I. Drocaş, L. G. Gruionu, G. Gruionu, A. V. Iacob, , and D. O.Alexandru, “Intelligent diagnosis of thyroid ultrasound imaging using an ensemble of deep learning methods,”\textit{ Medicina (Kaunas)},
+      p. 395, Apr 2021.
+      \bibitem  T. Hoeser and C. Kuenzer, “Object detection and image segmentation with deep learning on earth observation data: A review-part i: Evolution and recent trends,” \textit{Remote Sensing}, vol. 12, May 2020.
+     \hypertarget{link1}{ \bibitem  Thyroid gland. [Online]. Available:\url
+      {https://gormonia.com/ru/services} }
+     \hypertarget{link2}{  \bibitem  Interpretation of ultrasound of the thyroid gland. 4th lesson for patients. [Online]. Available:\url {https://dzen.ru/a/XvA7FQxUFi9_RiGv}}
+     \hypertarget{link3}{ \bibitem  Ostis project. [Online]. Available: \url{https://github.com/ostis-ai} }
+    \end{thebibliography}
+    
+      \begin{center}
+         \normalsize {\textbf{АВТОМАТИЗАЦИЯ УЛЬТРАЗВУКОВОГО ИССЛЕДОВАНИЯ ЩИТОВИДНОЙ ЖЕЛЕЗЫ С ПОМОЩЬЮ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА}
+         \par Черкас Е. О.}
+          \end{center}
+        \par Эта статья предлагает алгоритм автоматизации процесса медицинской ультразвуковой диагностики с помощью интеллектуального анализа. Действия описаны
+на примере исследования щитовидной железы. Дополнительная проверка результата со стороны нейронной
+сети позволяет начинающим докторам чувствовать
+себя более уверенно и минимизировать влияние человеческого фактора на качество диагностики.
+    \par \begin{flushright}
+        { Received 02.04.2024}
+    \end{flushright}
+
+
+\title{\textbf{Chest X-ray Image Processing Based on
+Radiologists’ Textual Annotations}} 
+\author{Aleksandra Kosareva, Dzmitry Paulenka, Eduard Snezhko\\
+\textit{The United Institute of Informatics Problems of the National Academy of Sciences of Belarus}\\
+\And
+Biomedical Image Analysis Department, https://image.org.by\\
+Minsk, Belarus\\
+Email: kosarevaaleksandra4317@gmail.com, dmitri.pavlenko@gmail.com,\\
+eduard.snezhko@gmail.com}
+\maketitle
+
+
+\par \small\textbf{\textit{Abstract}—More than 11,000 chest x-ray images and their
+corresponding text annotations were analyzed, and the first
+pilot studies on image processing tailored to text annotations
+of radiology specialists were conducted. An image processing pipeline for a database and for a neural network has
+been developed. The prediction of the parameter "Overall
+percent of abnormal volume" was performed and the mean
+absolute error (MAE) for the InceptionResNet50V2 neural
+network model was 11.073.}
+\par \textbf{\textit{Keywords}—medical image processing, medical image
+analysis, deep learning, computer-aided diagnosis, chest x-ray, textual annotations of lung lesions}
+\begin{center}
+    I. Introduction
+\end{center}
+\par In this article the main efforts are made to analyze
+and prepare Chest X-ray (CXR) images and corresponding text data annotations. A total of 11,493 non-empty
+CXR images were downloaded (in fact there are 13,521
+instances, however 2,028 of them were empty and not
+downloaded from TB Portals \hyperlink{link5}{[1]} website).
+\par On the CASE BROWSER \hyperlink{link4}{[2]} website CXR text annotation can be viewed as in Fig. 1 along the following
+path:
+\par Patient: № $\rightarrow$ Case $\rightarrow$ View Imaging Study $\rightarrow$ Diagnostic Report
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.37\textwidth]{images/2024-09-09_204448.jpg}
+    \caption{\footnotesize{ CXR textual annotation on the CASE BROWSER \hyperlink{link4}{[2]} website.}}
+    \label{fig:mesh3}
+\end{figure}
+\par All CXR textual data in corresponding JSON files as
+well as on the CASE BROWSER \hyperlink{link4}{[2]} and TB DEPOT \hyperlink{link6}{[3]}
+websites are divided into three blocks of information
+(Fig. 2):
+\par \footnotesize{This work was carried out with the financial support of the
+ISTC-PR150 "Belarus TB Database and TB Portal" project.}
+\begin{itemize}
+    \item anonymized patient information (gender, age, country, diagnosis, etc.);
+    \item CXR radiologists’ textual annotations, which is currently being analyzed in this article;
+    \item treatment history, which includes medications and
+treatment days.
+\end{itemize}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.45\textwidth]{images/2024-09-09_204507.jpg}
+    \caption{\footnotesize{CXR case information on the TB DEPOT \hyperlink{link6}{[3]} website.}}
+    \label{fig:mesh4}
+\end{figure}
+\par Second data block in Fig. 2 or "CXR annotations" can
+also be roughly divided into three groups:
+\begin{itemize}
+    \item CXR annotations, as if it were a computed tomography (CT) scan, in total 106 images;
+    \item CXR annotations of the six lobes of the lung (sextants) with twenty parameters for each sextant, in
+total 546,364 non-empty text annotations in 9,154
+CXR images;
+\item CXR annotations of the lung as a whole using
+six parameters, see "Overall Characteristics" tab in
+Fig. 1, in total 11,387 CXR images.
+\end{itemize}
+For clarity, the image categories are shown in the diagram below, Fig. 3.
+\par The results of the analyses of the annotations of these
+groups are summarized below. Further, after the data
+\end{document}
