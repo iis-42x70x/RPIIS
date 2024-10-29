@@ -31,15 +31,79 @@
 
 ```\renewcommand{\thesection}{\textnormal{\Roman{section}.}}```
 
-# Работа с Git'ом
+## Ссылка на фото
 
-Для выполнения L3
-Были использованы Github & Git
+```
+\ref{Figure 1}
+```
 
-*Github — веб-сервис хостинга проектов и их совместной разработки на базе Git*
+## Создание списка
+\begin{itemize}
+\item  Improving system performance and especially accelerating system response time to user requests.
+It is connect with productivity and overall user
+satisfaction.
 
-[Github](https://github.com/)
+\item Continuous updating and refactoring ontological
+models (further formalization of missing concepts,
+fix typos and etc.);
+\end{itemize}
 
-*Git — система управления версиями*
+## Выделение текста
 
-[Git](https://git-scm.com/)
+```
+\textbf{text}
+```
+
+## Подчеркивание текста
+
+```
+\underline{text}
+```
+
+## Вертикальный отступ между строками 
+
+```
+\vspace{2 mm}
+```
+
+## Переход на новую страницу
+```
+\newpage
+```
+
+
+<h1 align="center"> Лабораторная работа №3 </h1>
+
+## Цель: работа с Git и GitHub
+
+ <p><b>Git</b> (произносится «гит») — распределённая система управления версиями.</p>
+
+ [Git](https://git-scm.com/)
+
+ <a href="https://github.com/">GitHub</a>
+ 
+ ### Основные команды:
+
+<p>1. Проверка стасуса</p>
+
+ ```
+ git status
+ ```
+<p>2. Добавление файлов</p>
+
+```
+git add .
+```
+<p>3. Создание коммита с комментарием к нему</p>
+
+```
+git commit -m "message"
+```
+<p>4. Загрузка на определенную ветку в GitHub</p>
+
+```
+git push origin <название ветки>
+```
+
+### Выводы: 
+Git позволяет сохранять изменения локально и при необходимости возвращаться к предыдущим версиям проекта. Также можно создать удалённую копию на хостинг-платформе, которая работает с Git, и поделиться результатом с другими, что упрощает работу в команде. За ввполнение лабораторной работы были изучены принципы работы с Git и GitHub, в том числе написание документации README
