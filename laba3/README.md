@@ -22,18 +22,18 @@ LaTeX - это высококачественная система набора 
 * % - для комментариев.
 
 ##Вот как выглядит документ при редактировании
-<p  ><img src="images/pic1.png"  ></p>
+<p><img src="images/pic1.png"  ></p>
 
 ##Итоговый вариант в png
-<p  ><img src="images/pic2.png"  ></p>
-<p  ><img src="images/pic3.png"  ></p>
-<p  ><img src="images/pic4.png"  ></p>
+<p><img src="images/pic2.png"  ></p>
+<p><img src="images/pic3.png"  ></p>
+<p><img src="images/pic4.png"  ></p>
 
 #Лабораторная работа 3
 
 ## Цель: работа с Git и GitHub, а также научиться оформлять MarkDown  файлы
 
- <p  ><img src="images/pic5.png"  ></p>
+ <p><img src="images/pic5.png"  ></p>
  <p><b>Git</b> — распределённая система управления версиями.</p>
 
  [Git](https://git-scm.com/)
