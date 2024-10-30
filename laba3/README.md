@@ -22,12 +22,12 @@ LaTeX - это высококачественная система набора 
 * % - для комментариев.
 
 ##Вот как выглядит документ при редактировании
-<p  align="center"><img src="images/1.png"  ></p>
+![Слева окно редактирования. Справа - листы](images/1.png)
 
 ##Итоговый вариант в png
-<p  align="center"><img src="images/2.png"  ></p>
-<p  align="center"><img src="images/3.png"  ></p>
-<p  align="center"><img src="images/4.png"  ></p>
+![1 лист](images/2.png)
+![2 лист](images/3.png)
+![3 лист](images/4.png)
 
 #Лабораторная работа 3
 
