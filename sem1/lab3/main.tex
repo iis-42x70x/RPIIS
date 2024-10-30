@@ -1,0 +1,353 @@
+\documentclass[10pt,two column]{article}
+\usepackage{scn}
+\usepackage{CJKutf8}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol} %колонки
+\usepackage{setspace} %межстрочный интервал
+\usepackage{ragged2e}% выравнивания текста по ширине в документе.
+\usepackage{fancyhdr} %настройки верхнего и нижнего колонтитулов в документе.
+\usepackage{indentfirst} %чтобы была красная строка
+\usepackage{titlesec} %стилей заголовков разделов в документе.
+\usepackage{enumitem} %настройки списков в документе.
+\usepackage{graphicx}%Вставка картинок правильная
+\usepackage{float}%"Плавающие" картинки
+\usepackage{wrapfig}%Обтекание фигур (таблиц, картинок и прочего)
+\usepackage{amssymb}%для вставки символов
+\usepackage[left=1.9cm,right=1.9cm, top=1.1cm,bottom=2.5cm]{geometry}
+
+\justifying % выравнивает текст по ширине.
+\fancyhf{} %очищает все верхние и нижние колонтитулы.
+\renewcommand{\headrulewidth}{0pt} % remove the header rule
+\cfoot{\vskip -1.5cm \thepage} %устанавливает номер страницы в нижнем колонтитуле.
+
+\linespread{0.84} %устанавливает межстрочный интервал в 0.84.
+
+
+\setlength{\columnsep}{0.5cm}
+
+
+\setcounter{page}{249}
+\renewcommand{\thesection}{\textbf{\Roman{section}}} %устанавливает стиль нумерации разделов в виде заглавных римских цифр.
+
+\titleformat{\section}{\centering\sc}{\thesection.}{0cm}{}[] %настраивает стиль заголовков разделов.
+
+\title{ \huge \textbf{ IoT Network for Diagnosis of Parkinson’s
+disease Using Neural Networks and OSTIS } }
+\newcommand{\SCnSpecialChar}{\textsf{C\kern-0.1emS}}
+
+
+\begin{multicols}{2}
+\author{
+    Vishniakou Uladzimir \\
+    \small{ \textit{Belarusian State University of} }\\
+    \small{ \textit{Informatics and Radioelectronics} }\\
+    \small{ Minsk, Belarus }\\
+    \small{ vish@bsuir.by }
+    \and
+    Yiwei Xia \\
+    \small{ \textit{Belarusian State University of} }\\
+    \small{ \textit{Informatics and Radioelectronics} }\\
+    \small{ Minsk, Belarus } \\
+    \small{ xiayiwei4@gmail.com }
+}
+\end{multicols}
+\date{}
+
+
+
+\begin{document}
+
+\maketitle 
+
+\setlength{\parindent}{0.4cm}
+\small{
+\textbf{Abstract—The aim of the work is to propose a model for the diagnosis of Parkinson’s disease (PD) within the
+framework of the Internet of Things (IoT) using OSTIS.
+The report is devoted to the development of the Internet
+of Things for the diagnosis of Parkinson’s disease (PD)
+using OSTIS technology. The structure of the ontology
+for describing the elements of PD disease is given. The
+construction of an IT diagnostic network of the PD is
+considered, which uses the semantic capabilities of the
+OSTIS platform for processing and analyzing medical data
+of the PD. The elements of the description of the knowledge
+base, solvers and user interfaces for PD using a componentbased approach are presented.
+}
+
+\textbf{ \textit{Keywords}—Internet of Things network, IT diagnostics
+of Parkinson’s disease (PD), PD ontology, neural networks,
+knowledge base, OSTIS
+}
+}
+\singlespacing
+\section{ \textbf{ DIAGNOSIS METHOD APPLIED TO
+PARKINSON’S DISEASE} } 
+
+The early diagnosis of Parkinson’s disease has been a
+challenge for the medical community, and usually about
+60 \% of nigrostriatal neurons have degenerated and 80 \%
+of striatal dopamine is depleted by the time the disease
+is diagnosed [1]. Currently, the diagnosis of the disease
+is based on medical history, clinical signs and symptoms,
+and response to antiparkinsonian drugs, but because the
+disease starts slowly and clinical symptoms appear only
+when the nigrostriatal dopamine neurons are depleted to
+a certain extent, patients are often at an advanced stage
+of the disease when they are diagnosed, missing the best
+time for treatment. Therefore, the development of new
+treatments in this field depends on two main aspects:
+
+\begin{enumerate}[label=\arabic*)]
+    \item The early diagnosis of the disease.
+    \item The correct and constant evaluation of the effectiveness of the treatment.
+\end{enumerate}
+
+In article [2] we proposed the method for complex
+recognition of Parkinson’s disease using machine learning, based on markers of voice analysis and changes in patient movements on known data sets. The time-frequency
+function, (the wavelet function) and the Meyer kepstral
+coefficient function are used. The KNN algorithm and
+the algorithm of a two-layer neural network were used
+for training and testing on publicly available datasets on
+speech changes and motion retardation in Parkinson’s disease. A Bayesian optimizer was also used to improve the
+hyperparameters of the KNN algorithm. The constructed
+models achieved an accuracy of 94.7 \% and 96.2 \% on a
+data set on speech changes in patients with Parkinson’s
+disease and a data set on slowing down the movement of
+patients, respectively. The recognition results are close to
+the world level. The proposed technique is intended for
+use in the IoT network of IT diagnostics of PD.
+
+\section{\textbf{KNOWLEDGE BASE AND ONTOLOGY}}
+The construction of the Intelligent Parkinson’s Disease
+Diagnosis System is based on the following three main
+components:
+\begin{enumerate}[label=\arabic*)]
+    \item Knowledge Base: Collects and stores knowledge and
+data about Parkinson’s Disease;
+    \item Problem Solver: Utilizes information from the
+knowledge base to solve specific problems;
+    \item Interaction Interface: Provides a way for doctors and
+patients to interact with the system.
+\end{enumerate}
+
+A. \hspace{0.1cm} Construction of the Knowledge Base for the Intelligent Parkinson’s Disease OSTIS System \\
+The ontology construction of the knowledge base of
+the Smart Parkinson’s Disease Diagnostic OSTIS system
+is subdivided into the following areas.
+\begin{SCn}
+\scnheader{Parkinson's Disease Ontology}
+\scnsubset{ontology}
+\scnsubset{ostis-system}
+\scnsubset{Familial neurodegenerative disease}
+\begin{scnrelfromset}{Decomposition*:}{
+    \scnitem{Basic Classification of Parkinson’s Disease}
+    \scnitem{Clinical Features of Parkinson’s Disease}
+    \scnitem{Parkinson-Plus Syndromes [3]}
+    \scnitem{Etiology of Parkinson’s Disease}
+    \scnitem{Neuropathology of Parkinson’s Disease}
+    \scnitem{Information Models of Parkinson’s Disease}
+    \begin{scnindent}
+     \begin{scnrelfromset}{Decomposition*:}{
+        \scnitem{Research Models [4]}
+        \scnitem{Predictive Analytic Models}
+    }
+    \end{scnrelfromset}
+    \end{scnindent}
+}
+\end{scnrelfromset}
+\newpage
+
+\scnheader{Predictive Analytic Models}
+\begin{scnrelfromset}{Decomposition*:}{
+    \scnitem{Medical Imaging Data [5]}
+    \scnidtf{Processing MRI, PET, SPECT, etc., imaging data for the diagnosis and research of Parkinson’s Disease.}
+    \scnitem{Biomarkers [6]}
+    \scnidtf{Analyzing $\alpha$-synuclein, inflammatory markers, oxidative stress markers, etc., to monitor disease progression.}
+    \scnitem{Genetic Information [7]}
+    \scnidtf{Analyzing Single Nucleotide Polymorphisms (SNPs) and gene mutations associated with an increased risk of Parkinson’s Disease.}
+    \scnitem{Clinical Feature Data Processor}
+    \begin{scnrelfromset}{Decomposition*:}{
+        \scnitem{Motion Data Processor}
+        \scnitem{Voice Data Processor}
+    }
+    \end{scnrelfromset}
+}
+\end{scnrelfromset}
+\scnheader{Voice Data Processor}
+\scnidtf{Changes in speech and language in patients with
+Parkinson’s Disease, such as softer voice, slower
+speech, and reduced intonation variability, can be
+quantified through voice analysis technology, serving
+as a tool for assessing the disease and its progression.}
+\begin{scnrelfromset}{Decomposition*:}{
+    \scnitem{Specific Voice Data Collection Methods}
+    \begin{scnrelfromset}{Decomposition*:}{
+        \scnitem{Model Selector}
+        \begin{scnrelfromset}{Decomposition*:}{
+            \scnitem{LSTM Model}
+            \scnitem{GRU Model}
+            \scnitem{KNN Model}
+            \scnitem{Random Forest Model}
+        }
+        \end{scnrelfromset}
+        \scnitem{Voice Data Feature Analyzer}
+        \begin{scnrelfromset}{Decomposition*:}{
+            \scnitem{Voice Feature Analyzer:}
+            \scnitem{Raw Voice Data Processor}
+        }
+        \end{scnrelfromset}
+    }
+    \end{scnrelfromset}
+}
+\end{scnrelfromset}
+\scnheader{Motion Data Processor}
+\scnidtf{Involves patient’s motor abilities and control, including tremors, muscle rigidity, bradykinesia, gait, and
+balance issues, analyzed through motion analysis technologies like wearable devices or motion capture
+systems.}
+\begin{scnrelfromset}{Decomposition*:}{
+    \scnitem{Specific Motion Data Collection Methods}
+    \begin{scnrelfromset}{Decomposition*:}{
+        \scnitem{Model Selector}
+        \begin{scnrelfromset}{Decomposition*:}{
+            \scnitem{LSTM Model}
+            \scnitem{GRU Model}
+            \scnitem{KNN Model}
+            \scnitem{Random Forest Model}
+        }
+        \end{scnrelfromset}
+        \scnitem{Motion Data Feature Analyzer}
+        \begin{scnrelfromset}{Decomposition*:}{
+            \scnitem{db6 Wavelet Feature Analyzer:}
+            \scnitem{Raw Motion Data Processor}
+        }
+        \end{scnrelfromset}
+    }
+    \end{scnrelfromset}
+}    
+\end{scnrelfromset}
+\end{SCn}
+B.  \textit{Problem Solver for the Intelligent Parkinson’s Disease Diagnosis System} \\
+The task resolver of the Intelligent Parkinson’s Disease Diagnosis System is a collective of interacting scagents that facilitate the resolution of diagnostic and management issues related to Parkinson’s disease. Herein is a fundamental decomposition of the task resolver for the Intelligent Parkinson’s Disease Diagnosis System, based on the principal sc-agent classes designated for Parkinson’s disease diagnostic purposes. 
+\begin{SCn}
+\scnheader{Intelligent Parkinson’s Disease Diagnosis System Problem
+Solver}
+\begin{scnrelfromset}{Decomposition}{
+    \scnitem{Clinical Data Analysis abstract sc-agent}
+    \begin{scnindent}
+        \begin{scnrelfromset}{Decomposition}{
+        \scnitem{Motion Data Analysis abstract sc-agent}
+        \scnitem{Voice Data Analysis abstract sc-agent}
+        \scnitem{Genetic Information Analysis abstract sc-agent}
+        }
+        \end{scnrelfromset}
+    \end{scnindent}
+    \scnitem{Symptom Severity Assessment abstract sc-agent}
+    \scnitem{Medical Database and Diagnostic Tool Interface abstract sc-agent}
+    \begin{scnindent}
+        \begin{scnrelfromset}{Decomposition}{
+            \scnitem{Medical Imaging Database Access abstract sc-agent}
+            \scnitem{Biomarker Analysis abstract sc-agent}
+            \scnitem{Time Series Analysis abstract sc-agent}
+        }
+        \end{scnrelfromset}
+    \end{scnindent}
+    \scnitem{Symptom and Treatment Plan Correlation abstract sc-agent}
+    \scnitem{Diagnosis and Treatment Knowledge Base Verification abstract sc-agent}
+    \begin{scnindent}
+        \begin{scnrelfromset}{Decomposition}{
+        \scnitem{Treatment Plan Efficacy Verification abstract sc-agent}
+        \scnitem{Disease Diagnosis Accuracy Verification abstract sc-agent}
+        \scnitem{Patient Data Privacy and Security Protection abstract sc-agent}
+        }
+        \end{scnrelfromset}
+    \end{scnindent}
+    \scnitem{Intelligent Question-Answering abstract sc-agent}
+    \begin{scnindent}
+         \begin{scnrelfromset}{Decomposition}{
+             \scnitem{User Interaction abstract sc-agent}
+             \scnitem{Medical Knowledge Graph}
+             \scnitem{Answer Generation abstract sc-agent}
+        }
+        \end{scnrelfromset}
+    \end{scnindent}
+   
+}    
+\end{scnrelfromset}
+\newpage
+\begin{figure}
+    \includegraphics[width=\linewidth]{graphics/1.png}
+    \caption{Framework Diagram for the Intelligent Parkinson’s Disease OSTIS System’s Automated Diagnostic and Question-Answering Tool.}
+\end{figure}
+\section{\textbf{SYSTEM ARCHITECTURE OVERVIEW}}
+\setlength{\parindent}{0.4cm}
+This section offers a comprehensive overview of the
+architectural underpinnings governing the deployment of
+our Parkinson’s disease diagnosis model [2] within the
+IoT framework. It expounds upon the intricate interplay
+between system components designed to facilitate efficient data processing, storage, and presentation. Fig
+1 illustrates an IoT system architecture enhanced with
+neural network capabilities using OSTIS technology. \\
+IoT Device (Client): Data collection and preprocessing
+occur on the client-side. This could be a smart device
+such as a sensor or a smartphone, responsible for data
+acquisition and preliminary data preprocessing and feature extraction. \\
+Local Flask Server [8]: The Flask server is located
+locally and serves as the receiver for data from the IoT
+device. It acts as an intermediary for data transmission,
+forwarding the received feature data to the OSTIS server. \\
+OSTIS [9] Server: The OSTIS server is a knowledge
+graph platform that receives and processes data from the
+local Flask server. Running on this server is a Neural
+Network Predictor Agent responsible for loading internal
+neural network model files. \\
+Neural Network Predictor Agent: This agent is responsible for loading and executing neural network models,
+processing incoming feature data, and making predictions. Predictions can be associated with knowledge
+within the OSTIS system and ultimately saved to a local
+database. \\
+Local Database: The local database is used to store the
+prediction results returned from the OSTIS server, along
+with other relevant information. \\
+The workflow of the entire system is as follows: \\
+\begin{enumerate}[label=\arabic*)]
+    \item IoT device collects and preprocesses data.
+    \item Preprocessed data is sent to the local Flask server.
+    \item The local Flask server forwards the data to the OSTIS server.
+    \item The Neural Network Predictor Agent on the OSTIS server loads the neural network model and processes the data.
+    \item Determining the subclass, type, and subtype based on the Parkinson’s disease diagnostic classifier, i. e., the types of diagnostic entities in medical ontology;
+    \item Establishing the inherent attributes and characteristics of the diagnostic category;
+    \item Determining the values of features for that diagnostic category;
+    \item Resolving polysemy in the diagnostic process;
+    \item Establishing the corresponding connections between diagnostic entities and concepts with medical semantic features in the knowledge base;
+    \item Establishing relationships between diagnostic entities belonging to a specific category of Parkinson’s disease.
+    \item The processed results are associated with the knowledge graph and finally saved to the local database. 
+\end{enumerate} \\
+This system allows real-time data processing and complex object recognition in an IoT environment, combining data with a knowledge graph to support advanced
+analysis and decision-making. Proper configuration and
+management of each component are required to ensure
+the efficient operation of the system.
+\section{\textbf{IOT DEVICE AND DATA COLLECTION}}
+Within this subsection, we embark on an in-depth
+exploration of the IoT device deployed for data collection.
+We elucidate its pivotal role in the acquisition of two
+critical data modalities: movement data and audio data.
+We delve into the intricacies of data preprocessing and
+transmission to the local server, underscoring the cardinal
+importance of real-time data acquisition capabilities. As
+shown in Figure 2, the IoT system architecture based on
+neural network with OSTIS technology is illustrated. \\
+First, let us introduce the IoT device used. The device
+plays a key role in data acquisition by capturing two
+important data types: motion data and audio data. Motion
+data records the movement characteristics of Parkinson’s
+patients, while audio data captures their sound characteristics. \\
+To capture the acceleration data of the cell phone: \\
+\begin{enumerate}[label=\arabic*)]
+    \item use a third-party library in Python (PySensors) to access the phone’s acceleration sensor.
+    \item set up the sensor parameters, setting the sampling rate to 64hz and the sensor precision to 16 bits.
+    \item create a data storage structure to hold the acquired acceleration data.
+    \item In a loop, periodically read the acceleration sensor data and store it in the data structure.
+    \item Store the data in a local file for further processing and analysis.
+\end{enumerate}
+Collect the voice data from the cell phone:
+\end{SCn}
+\end{document}
