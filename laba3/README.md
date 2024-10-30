@@ -25,15 +25,15 @@ LaTeX - это высококачественная система набора 
 ![Слева окно редактирования. Справа - листы](images/1.png)
 
 ##Итоговый вариант в png
-![1 лист](images/2.png)
-![2 лист](images/3.png)
-![3 лист](images/4.png)
+![1 лист](images/pic2.png)
+![2 лист](images/pic3.png)
+![3 лист](images/pic4.png)
 
 #Лабораторная работа 3
 
 ## Цель: работа с Git и GitHub, а также научиться оформлять MarkDown  файлы
 
- <p  ><img src="images/5.png"  ></p>
+ <p  ><img src="images/pic5.png"  ></p>
  <p><b>Git</b> — распределённая система управления версиями.</p>
 
  [Git](https://git-scm.com/)
