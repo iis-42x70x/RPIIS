@@ -1,5 +1,5 @@
 ## Лабараторная 1
-\documentclass[pt, a4paper, twocolumn]{article}
++ \documentclass[pt, a4paper, twocolumn]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
 \usepackage{graphicx}
