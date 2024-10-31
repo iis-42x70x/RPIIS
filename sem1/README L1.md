@@ -1,6 +1,6 @@
 ## Лабараторная 1
-+ \documentclass[pt, a4paper, twocolumn]{article}
-\usepackage[utf8]{inputenc}
+  \documentclass[pt, a4paper, twocolumn]{article}
+  \usepackage[utf8]{inputenc}
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{amsmath}
