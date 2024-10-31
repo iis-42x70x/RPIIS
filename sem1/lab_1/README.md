@@ -9,15 +9,21 @@
 
 На странице https://proc.ostis.net/proc/Proceedings%20OSTIS-2024.pdf были выбраны страницы 15 варианта индивидуального задания: 150-152
 ## Условие лабораторной работы №1
-![](./photo/uslovie).
+![](./photo/uslovie.png)
 ## Использованные пакеты
--\usepackage{graphicx} 
--\usepackage{multicol}
--\usepackage{enumerate}
--\usepackage{enumitem}
--\usepackage{fancyhdr}
--\usepackage{setspace}
--\usepackage[left=20mm, right=20mm, top=21mm, bottom=25mm]{geometry}
+\usepackage{graphicx}
+
+\usepackage{multicol}
+
+\usepackage{enumerate}
+
+\usepackage{enumitem}
+
+\usepackage{fancyhdr}
+
+\usepackage{setspace}
+
+\usepackage[...]{geometry}
 ## Основные аспекты выполнения работы
 1. Исользование римских цифр с помощью команды 
 \newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
