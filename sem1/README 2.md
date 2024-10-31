@@ -27,5 +27,6 @@ https://drive.google.com/file/d/15UcfGq9P8zdkgdlPHtJdGVvWgEZp1g2t/view?usp=shari
 
 ### Контрольные вопросы:
 Необходимо на практике уметь выполнять всевозможные действия с репозиторием и отвечать на теоретические вопросы из списка заданий
-### Результат  https://docs.google.com/document/d/1VPl4-vyldi-AKu1GCJjcnBGnUTqsMomd/edit?usp=sharing&ouid=112330153848748327274&rtpof=true&sd=true
+### Результат  
+https://docs.google.com/document/d/1VPl4-vyldi-AKu1GCJjcnBGnUTqsMomd/edit?usp=sharing&ouid=112330153848748327274&rtpof=true&sd=true
 ## ЦЕЛЬ
