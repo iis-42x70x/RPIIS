@@ -27,5 +27,5 @@ https://github.com/iis-42x70x/RPIIS/blob/%D0%9B%D0%B8%D1%82%D0%B2%D0%B8%D0%BD%D0
 ### Контрольные вопросы:
 Необходимо на практике уметь выполнять всевозможные действия с репозиторием и отвечать на теоретические вопросы из списка заданий
 ### Результат  
-https://docs.google.com/document/d/1VPl4-vyldi-AKu1GCJjcnBGnUTqsMomd/edit?usp=sharing&ouid=112330153848748327274&rtpof=true&sd=true
+https://github.com/iis-42x70x/RPIIS/blob/%D0%9B%D0%B8%D1%82%D0%B2%D0%B8%D0%BD%D0%BE%D0%B2-%D0%95/sem1/%D0%BF%D0%B8%D0%BE%D0%B8%D0%B2%D0%B8%D1%81%20%D0%BB%D0%B0%D0%B1%203.pdf
 ## ЦЕЛЬ
