@@ -35,7 +35,7 @@
 
 
 3. что такое ветка и какая ветка является обычно основной: ветка в Git — это набор коммитов, расположенных в хронологическом порядке.
-4. добавить файл в контекст, который будет коммититься <br>![image](https://github.com/user-attachments/assets/99e0dc18-d51b-4be6-9413-f0bb5dca7a5c)
+4. добавить файл в контекст, который будет коммититься <br>![image](https://github.com/user-attachments/assets/1792a2e1-dc2d-4d5f-867e-bdcc303a275c)
 
 5. cоздать коммит на основе текущего контекста и указать для него комментарий <br>![image](https://github.com/user-attachments/assets/8c42ced5-daa0-4384-8ef2-db1da4eda569)
 
