@@ -4,7 +4,7 @@
 <a href="https://www.overleaf.com/">OverLeaf</a>
 
 Для начала проекта нужно нажать на кнопку
-<p  align="center"><img src="Images/Начало проекта.jpg" ></p>
+<p  align="center"><img src="Снимок экрана 2024-11-03 123548.png" ></p>
 
 ### Пакеты для работы с Latex
 ```
@@ -34,7 +34,7 @@
 \end{itemize}
 ```
 Вот так это выглядит в **pdf**
- <p  align="center"><img src="Images/Cписок.jpg" ></p>
+ <p  align="center"><img src="Снимок экрана 2024-11-03 123616.png" ></p>
 
 ### Вставка картинок
 ```
@@ -44,7 +44,7 @@
 ```
 Вот так это выглядит в **pdf**
 
-  <p  align="center"><img src="Images/Фото 1.jpg" width=400px height=300px></p>
+  <p  align="center"><img src="Снимок экрана 2024-11-03 123634.png" width=400px height=300px></p>
 
  ### Работа римскими цифрами
  ```
@@ -52,14 +52,14 @@
 ```
 Вот так это выглядит в **pdf**
 </p>
- <p  align="center"><img src="Images/Римские цифры.jpg" width=600px height=200px ></p>
+ <p  align="center"><img src="Снимок экрана 2024-11-03 123647.png" width=600px height=200px ></p>
  
  ## Вот так выглядит документ при его редактировании
-  <p  align="center"><img src="Images/Обзор.jpg"></p>
+  <p  align="center"><img src="Снимок экрана 2024-11-03 123706.png"></p>
 
 ## Цель: работа с Git и GitHub, а также научиться оформлять MarkDown  файлы
 
- <p  ><img src="Images/555.png"  ></p>
+ <p  ><img src="Снимок экрана 2024-11-03 123721.png"  ></p>
  <p><b>Git</b> (произносится «гит») — распределённая система управления версиями.</p>
 
  [Git](https://git-scm.com/)
