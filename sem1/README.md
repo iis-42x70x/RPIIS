@@ -1,5 +1,5 @@
 Гугл-диск со условиями и материалами для подготовки к лабораторным занятиям доступен
-[по ссылке](https://drive.google.com/drive/folders/16fEpAx6KRqgLw5d04KHxVPeL6GJhixnS)
+[по ссылке](https://drive.google.com/drive/folders/16fEpAx6KRqgLw5d04KHxVPeL6GJhixnS) Егро лох
 
 ## Лабораторная работа №1
 В рамках ЛР 1 необходимо создать исполняемый файл в соответствии с заданным вариантом.
