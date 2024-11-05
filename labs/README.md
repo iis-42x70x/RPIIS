@@ -35,7 +35,7 @@
 
 Использование `git log`:
 
-![Image alt](https://github.com/{username}/{repository}/raw/{branch}/{path}/image.png)
+![Image alt](https://github.com/dekada314/RPIIS/blob/patch-1/labs/screens/git_log.jpg)
 
 Использование `git checkout -b` и `git branch`:
 
