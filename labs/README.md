@@ -13,7 +13,7 @@
 Для оформления списка источников использовать \bibliography команду  
 Пример выполнения данной лабораторной:
 
-![Image alt](https://github.com/{username}/{repository}/raw/{branch}/{path}/image.png)
+![labs1 text](https://github.com/dekada314/RPIIS/blob/patch-1/labs/screens/lab1_text)
 
 # Лабораторная работа 3
 
