@@ -11,7 +11,7 @@
 * `\begin{itemize} ... \end{itemize}` - список без нумерации
 *  `\fontsize{10}{13}\selectfont` - первое — это размер шрифта в pt, второе — расстояние между строками в pt
 * `\begin{multicols}{2} ... \end{multicols}` - разделяет текст на две колонки
-*  `\setlength\parindent{10pt}` - устанавливает отступ обзаца
+*  `\scnheader` - наименование понятия
   Более подробно с _LaTex_ можно ознакомиться по ссылке (https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
   ![](ss1.png)
   ![](ss2.png)
