@@ -94,7 +94,7 @@
 
 
 
-24. как переключиться на указанный коммит <br>![Снимок экрана 2024-10-24 100727](https://github.com/user-attachments/assets/9c7c2d77-4ab0-4ec3-8b91-7036cf4a8f1a)
+24. как переключиться на указанный коммит git commit {Хэш коммита} <br>![Снимок экрана 2024-10-24 100727](https://github.com/user-attachments/assets/9c7c2d77-4ab0-4ec3-8b91-7036cf4a8f1a)
 
 
 25. сделать ребазирование(rebase) текущей ветки <br>![image](https://github.com/user-attachments/assets/019c2c60-6374-4670-ab94-300a6356d186)
