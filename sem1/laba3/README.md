@@ -14,7 +14,7 @@
   ![](ss2.png)
 ### Прилагаемые файлы/ссылки:
 * main.tex (https://github.com/iis-42x70x/RPIIS/blob/%D0%98%D1%81%D0%B0%D0%B5%D0%BD%D0%BA%D0%BE_%D0%95/sem1/laba3/main.tex) - исходный файл вёрстки
-* lab_nastya_1.pdf (https://github.com/iis-42x70x/RPIIS/blob/%D0%98%D1%81%D0%B0%D0%B5%D0%BD%D0%BA%D0%BE_%D0%95/sem1/laba3/pioivis1%20(3).pdf) - готовый pdf-файл с вёрсткой
+* pioivis1 (3).pdf (https://github.com/iis-42x70x/RPIIS/blob/%D0%98%D1%81%D0%B0%D0%B5%D0%BD%D0%BA%D0%BE_%D0%95/sem1/laba3/pioivis1%20(3).pdf) - готовый pdf-файл с вёрсткой
 * Гайд (https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes) от создателей overleaf(LaTeX за 30 минут)
 # Лабараторная работа №3
 ### Цель:*Ознакомится с системой управлениями версиями Git и веб-сервисом GitHub*
