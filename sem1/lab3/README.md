@@ -14,9 +14,9 @@
 
 Подробный гайд на LaTex можно посмотреть [тут](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes).
 
-![lab1.1](https://github.com/iis-42x70x/RPIIS/blob/Белковская_М/lab_3/Снимок%20экрана%202024-10-23%20063913.png)
+![lab1.1](https://github.com/iis-42x70x/RPIIS/blob/Белковская_М/sem1/lab3/Снимок%20экрана%202024-10-23%20063913.png)
 
-![lab1.2](https://github.com/iis-42x70x/RPIIS/blob/Белковская_М/lab_3/Снимок%20экрана%202024-10-23%20063948.png)
+![lab1.2](https://github.com/iis-42x70x/RPIIS/blob/Белковская_М/sem1/lab3/Снимок%20экрана%202024-10-23%20063948.png)
 
 # Лабораторная работа 3
 
