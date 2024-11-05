@@ -5,8 +5,8 @@
 Для написания формального текста предлагается воспользоваться пакетом макросов “scn-latex”. Для оформления списка источников использовать \bibliography команду
 
 ### Основные команды:* \par - абзац
-* \begin{itemize} ... \end{itemize} - список без нумерации* \fontsize{10}{13}\selectfont - первое — это размер шрифта в pt, второе — расстояние между строками в pt
-* \begin{multicols}{2} ... \end{multicols} - разделяет текст на две колонки* \setlength\parindent{10pt} - устанавливает отступ обзаца
+* `\begin{itemize} ... \end{itemize}` - список без нумерации* `\fontsize{10}{13}\selectfont` - первое — это размер шрифта в pt, второе — расстояние между строками в pt
+* `\begin{multicols}{2} ... \end{multicols}` - разделяет текст на две колонки* `\setlength\parindent{10pt}` - устанавливает отступ обзаца
   Более подробно с _LaTex_ можно ознакомиться по ссылке (https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
   ![](ss1.png)
   ![](ss2.png)
