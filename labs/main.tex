@@ -1,0 +1,361 @@
+\documentclass[10pt, a4paper]{article}
+
+\usepackage{multicol} 
+\usepackage{amsmath}
+\usepackage[left=1.9cm,right=1.9cm, top=2.2cm,bottom=2.5cm]{geometry}
+\linespread{1.05}
+\usepackage{amssymb}
+\setcounter{page}{69}
+\title{pioivis1}
+
+
+
+\begin{document}
+\begin{multicols}{2}
+
+\begin{itemize}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+    \item \textit{n$_{chmax}$} $\in$  ($\mathbb{N}$ $\cup$ \{0\}) — the maximum number of file segments in sc-memor;
+    \item \textit{m$_{ch}$ $\in$ M} — the object that synchronizes access to CH, \textit{n$_{chle}$ andn$_{chmax}$};
+    \item \textit{$tr \subset TRM$} — rules (terms) for finding terms in strings;
+    \item \textit{TSO} — correspondence between string terms and file cell numbers with these sc-memory strings;
+    \item \textit{SOF} — correspondence between file cell numbers with strings in sc-memory and ostis-system files of which these strings are contents;
+    \item \textit{FSO} — correspondence between ostis-system files and file cell numbers with sc-memory strings, which are the contents of these strings;
+    \item \textit{FSPI = \{allocate, free, dump, load\}} — internal programming interface of file storage in sc- memory.
+\end{itemize}
+
+Unlike sc-element storage, where the cell size is fixed and cells can be allocated in advance as some fixed sequence, this cannot be done in file storage, because cells can store strings of unknown length in advance. Therefore, the accounting of released cells, their fragmentation and defragmentation processes may be more complicated. In this connection, the problem of external fragmentation is not solved in this model, as it is solved in the sc-element storage model.
+
+Each file cell \textit{s$_{ij}$ $\in$ STR , $\exists!$ s$_{ij}$ $\in$ ch$_{i}$, ch$_{i}$ $\in$ CH} has some unique internal address fa = ⟨i,j⟩ $\in$ $FA \subset A$. That is, the following statement is always true:
+\begin{center}
+    \textit{($\forall$ s$_{ij}$ $\in$ STR,$\exists!$ fa $\in$ FA:(s$_{ij}$ $\in$ chi) $\land$ (chi $\in$ CH) $\land$ (fa = ⟨i,j⟩))}.
+\end{center}
+
+The \textit{allocate} and \textit{free} operations can be defined for file segment cells. Their algorithms are quite simple, so they will not be considered.
+
+File storage specifies operations to enable saving dump and loading load of all sc-memory.
+
+This model is focused on the fact that any string can be partitioned into a set of terms, by which, using the TSO mapping, we can determine the indexes of strings that contain these terms [23], [24]. Then, by string indexes it is possible to obtain: from CH — the strings themselves, from SOF — the ostis-system files that contain these lines. Using the FSO mapping it is possible to find the string, which is contained by the given ostis-system file.
+\begin{center}
+\textit{TSO = TRM × FA,}
+
+\textit{SOF = F A × F N, F SO = F N × F A, $F N \subset N$.}
+\end{center}
+
+The model of storage of external information constructions in sc-memory provides:
+\begin{itemize}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+    \item storing of the contents of ostis-system files;
+    \item setting the contents to a given ostis file;
+    \item retrieving contents from a specified ostis file;
+    \item retrieving ostis-files by their contents;
+    \item obtaining ostis-system files by their content sub-string.
+\end{itemize}
+The advantages of this model are as follows:
+\begin{itemize}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+    \item asymptotic complexity of adding new strings to the storage is \textit{O(1)} without taking into account the complexity of access time to file storage segments;
+    \item asymptotic complexity of searching ostis-system files and their contents is \textit{O(1)} without taking into account the complexity of access time to segments and cells of the file storage and correspondences
+between ostis-system files and their contents.
+\end{itemize}
+\textit{C. Model of storage of subscriptions to events in sc-memory}
+
+\textit{The model of storage of subscription to events in sc-memory can be specified by the following tuple}
+\begin{center}
+    \textit{RS = ⟨V,m$_{v}$,RSPI⟩,}
+\end{center}
+where
+\begin{itemize}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+    \item \textit{V = \{v$_{1}$, v$_{2}$, ..., v$_{i}$, ..., v$_{n}$\}, i = $\overline{1,  n}$} is set of
+subscriptions to events in sc-memory of size n;
+    \item \textit{vi = ⟨e, t$_{v}$, a$_{v}$, m$_{v}$⟩ $\in$ V} is a subscription to an
+event in sc-memory;
+    \item \textit{e} is an sc-element (a cell) in sc-memory that is being
+"listened";
+    \item  \textit{t$_{v}$ $\in$ T$_{v}$} is a type of event in sc-memory;
+    \item  \textit{ag$_{v}$ $\in$ AG} is an agent subscribed to an event;
+    \item  \textit{m$_{v}$ $\in$ M} is an object that synchronizes access to
+subscription elements;
+    \item \textit{RSPI = {subscribe,unsubscribe,notify}} — internal programming interface of storage of subscriptions to events in sc-memory.
+    
+\end{itemize}
+
+All cells in sc-memory can E be listenable $E_{l} \subseteq E$
+and non-listenable $E_{nl} \subseteq E$. For them, the following statements are true:
+
+\begin{itemize}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+    \item \textit{E$_{l}$ $\cup$  E$_{nl}$ = E,E$_{n}$ $\cap$ E$_{nl}$ = $\varnothing$,}
+    
+    \item \textit{E$_{l}$ $\cap$ E$_{e}$ = E$_{l}$, E$_{l}$ $\cap$ E$_{f}$ = $\varnothing$,}
+    
+    \item \textit{E$_{nl}$ $\cap$ E$_{e}$ = E$_{nl}$, E$_{l}$ $\cap$ E$_{f}$ = $\emptyset$,}
+
+    
+\end{itemize}
+\begin{center}
+
+    \textit{T$_{v}$ = \{aoc, aic, roc, ric, re, cc},\}
+\end{center}
+where
+\begin{itemize}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+    \item \textit{aoc} is the event of adding an outgoing sc-connector
+from the listened sc-element;
+    \item \textit{aic} is the event of adding an incoming sc-connector
+to the listened sc-element;
+    \item \textit{roc} is the event of removing an outgoing sc-
+connector from the listened sc-element;
+    \item \textit{ric} is the event of removing an incoming sc-
+connector from the listened sc-element;
+    \item \textit{re} is the event of removing the listened sc-element;
+    \item \textit{cc }is the event of changing the content of the listened
+ostis-system file.
+\end{itemize}
+
+
+For the sets of listened and unlistened cells, the corresponding transitions can be defined in the form of:
+\begin{itemize}
+    \item operation of creating a subscription to an event in sc-memory subscribe  \textit{E × T$_{v}$ × AG → E$_{l}$}:
+
+\begin{equation*}
+subscribe(e,t_{v},ag_{v}) =
+\begin{cases}
+   e_{ij}  \in E_{l},\ \ \ if  e_{ij} \in E_{e}, 
+   \\
+   Error,\ \ \ \  \  if e_{ij} \notin E_{e}.
+ \end{cases}
+\end{equation*}
+    \item operation of removing a subscription to an event in
+sc-memory \textit{unsubscribe : E$_{l}$ → E$_{nl}$}:
+
+\begin{equation*}
+unsubscribe(e_{ij}) =
+ \begin{cases}
+   e_{ij} \in E_{l},  \ \ if e_{ij} \in E_{e}, 
+   \\
+   Error,\ \ \ \  if \ e _{ij} \notin E_{e}.
+ \end{cases}
+\end{equation*}
+\end{itemize}
+
+In addition, the following operation can be defined for
+the set of listened events \textit{notify : (E$_{l}$ × C) $\cup$ E$_{l}$ → P$_{w}$}:
+\begin{equation*}
+notify(e_{l}, c) = 
+ \begin{cases}
+   p \in P_{w} \ if \ e_{l} \in E_{l},c \in C,Inc(e_{l},c),
+   \\
+   Error, otherwise;
+ \end{cases}
+\end{equation*}
+
+The notify operation can be used to notify (initiate) a process about a new event (creation of an outgoing arc \textit{c} from sc-element \textit{e$_{l}$}, deletion of element \textit{e$_{l}$}, etc.).
+
+The model of storage of subscriptions to events pro- vides:
+\begin{itemize}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+    \item storing of event subscriptions in sc-memory;
+    \item ability to subscribe and unsubscribe to an event in
+sc-memory;
+    \item a bility to notify about an event in sc-memory.
+\end{itemize}
+\textit{D. Model of storage of processes in sc-memory}
+
+
+\textit{The model of storage of processes in sc-memory can
+be defined as}
+\begin{center}
+    \textit{PS = ⟨P$_{a}$,Q$_{wp}$,n$_{map}$,PS,PSF,PAG,PSPI⟩,}
+\end{center}
+where
+\begin{itemize}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+    \item \textit{$Pa \subseteq P$} is the set of active processes in sc-memory;
+    \item \textit{Q$_{wp}$} is the queue of processes waiting to start in
+sc-memory;
+    \item \textit{n$_{map}$} is the the maximum possible number of active
+processes at a given time, $|Qwp|$ $\leq$ n$_{map}$;
+    \item \textit{PS} is the mapping between active processes and
+sc-element storage segments;
+    \item \textit{PSF} is the mapping between active processes and
+file storage segments;
+    \item \textit{PAG} is the mapping between active processes and
+agents;
+    \item \textit{RSPI = \{activate, deactivate}\} — internal pro-
+gramming interface of storage of sc-memory pro- cesses.
+\end{itemize}
+
+\begin{center}
+\textit{PS = (P$_{a} \cup P_{w} $) × S,}
+
+\textit{PSF = (P$_{a} \cup P_{w}$) × CH,}
+
+\textit{PAG = (P$_{a} \cup P_{w}$) × AG.}
+
+\end{center}
+
+The \textit{PS} and \textit{PSF} mappins are used to assign processes to segments of the sc-element storage and file storage. If there are enough free segments in the stor- age, each process is assigned separate segments in both storages.
+
+All processes in sc-memory P can be waiting $P_{w} \subseteq P$, active $P_{a}\subseteq P$ or finished $P_{f} \subseteq P$ .
+
+In this case, each active and waiting process corresponds to an agent that executes it:
+\begin{center}
+    \textit{($\forall$ p  $\in$ P$_{a}$,$\exists$!ag $\in$ AG : (⟨p,ag⟩ $\in$ PAG)),}
+    
+    \textit{($\forall$  p  $\in$ P$_{w}$ ,$\exists$!ag $\in$ AG : (⟨p,ag⟩ $\in$ PAG)).}
+\end{center}
+
+The following statements are true for all types of
+processes:
+\begin{itemize}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+    \item \textit{P$_{w} \cup P_{a} \cup P_{f} =P,P_{w} \cap P_{a} \cap P_{f} = \varnothing$;}
+    
+    \item \textit{$|P_{a}| \leq n_{map}$.}
+\end{itemize}
+
+Transition between waiting and active processes can
+be defined as the function activate : P$_{w}$ → P$_{a}$:
+\begin{equation*}
+activate(pw) =
+ \begin{cases}
+ pw \in  P_{a}, 
+                \begin{cases}
+                ((\exists s_{i} \in  _{f}) \land (n_{s} \leq n_{s_{max}}))
+                \\
+                ((\exists ch_{i} \in CH) \land (n_{ch} \leq n_{ch_{max}})),
+                \end{cases}
+               
+
+\\
+ Error, \ \ \ \ \ otherwise;
+ \end{cases}
+\end{equation*}
+
+Transition between active and finished processes can
+be defined as the function deactivate : P$_{a}$ → P$_{f}$ :
+\begin{equation*}
+deactivate(pa) = 
+ \begin{cases}
+    p_{a} \in P_{f},\ \  if, p_{a} \in P_{a},
+   \\
+   Error, \ \ \ \ otherwise
+ \end{cases}
+\end{equation*}
+
+A process is considered to be finished if it is not active
+and not waiting:
+\begin{center}
+    \textit{((p $\in$ P$_{f}$ )  $\Leftrightarrow$ ((¬p $\in$ P$_{a}$) $\land$ (¬p $\in$ P$_{w}$))).}
+\end{center}
+
+The model of storage of sc-memory processes pro-
+vides:
+
+\begin{itemize}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+    \item efficient one-to-one allocation of writer-processes to sc-element storage and file storage segments;
+    \item queuing new processes when the device’s processing power is limited, and activating processes from the queue when some active process has finished its work.
+    
+\end{itemize}
+
+\textit{E. Model of coordinated access (synchronization) of processes to sc-memory}
+
+Each synchronization object m $\in$ M can be represented as [25], [26], [27]:
+\begin{center}
+    \textit{m = ⟨c$_{ar}$, f$_{aw}$, Q$_{rw}$, m$_{u}$⟩,}
+\end{center}
+where
+
+\begin{itemize}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+    \item c$_{ar}$ is the active reader count;
+    \item f$_{aw}$ is the flag that shows whether a reader is active
+at a given moment;
+    \item Q$_{rw}$ is the queue of readers and writers;
+    \item m$_{u}$ is the object used to synchronize access to
+elements of a given synchronization object.
+\end{itemize}
+
+The queue of readers and writers is a sequence of requests to acquire a particular resource:
+\begin{center}
+    \textit{Q$_{rw}$ =⟨q$_{1}$,q$_{2}$,...,q$_{j}$,...,q$_{m}$⟩.}
+\end{center}
+
+Each request q$_{j}$ includes a unique thread identifier id$_{j}$ , a thread type (reader or writer) tt$_{j}$ , and a condition variable that allows messages to be exchanged between processes (threads) cv$_{j}$:
+\begin{center}
+    \textit{q$_{j}$ = ⟨id$_{j}$,tt$_{j}$,cv$_{j}$⟩.}
+\end{center}
+
+
+This queue ensures that no thread is left hungry.
+
+To coordinate access to data structures in sc-memory, mechanisms for acquiring and releasing resources for reader-threads P$_{r}$ (hereinafter — readers) and writer- threads P$_{w}$ (hereinafter — writers) are required.
+
+\begin{center}
+    \textit{P = P$_{r}$ $\cup$ P$_{w}$.}
+\end{center}
+These mechanisms should include:
+\begin{itemize}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+    \item a reader resource acquisition operation (\textit{acquire\_read}) that allows a reader-thread to acquire a synchronization object to start reading the resource and suspend the execution of all other writer-threads while there are readers in the reader-writer queue;
+    \item  a reader resource release operation (\textit{release\_read}) that allows a reader-thread to release the synchronization object after finishing reading the resource and notify all other writer-threads to execute if there are no active readers in the reader-writer queue after releasing the synchronization object;
+    \item a writer resource acquisition operation (\textit{acquire\_write}) that allows a writer-thread to acquire a synchronization object to start modifying the resource and suspend execution of all other reader-threads and writer-threads while there is an active writer in the reader-writer queue;
+    \item a writer resource release operation (\textit{release\_write}) that allows a writer-thread to release the synchronization object after the resource modification is complete and notify all other reader-threads and writer-threads to execute if there are no active readers in the reader-writer queue after the synchronization object is released;
+    \item a reader multi-resource acquisition operation (\textit{acquire\_read\_n}) that allows a reader-thread to acquire multiple synchronization objects for reading in the order necessary to prevent deadlocks;
+    \item a reader multi-resource release operation (\textit{re-lease\_read\_n}) that allows a reader-thread to release multiple synchronization objects in the reverse order of acquisition;
+    \item a writer multi-resource acquisition operation (\textit{acquire\_write\_n}) that allows a writer-thread to acquire multiple synchronization objects to modify in the order necessary to prevent deadlocks;
+    \item a writer multi-resource release operation (\textit{release\_write\_n}) that allows a writer-thread to release multiple synchronization objects in the reverse order of acquisition.
+\end{itemize}
+
+ Allocation of sc-memory to writers can be done segment-by-segment using a specialized table Tps, which allows to determine whether a given vacant sc-memory segment has been acquired by another writer:
+
+ \begin{center}
+    \textit{s : S → S$_{v}$, $T_{ps} \subseteq$ P$_{w}$ × S$_{v}$.}
+\end{center}
+
+Let us recall that a free sc-memory segment can be either a segment with vacant cells or a segment with released cells. When allocating sc-memory, the first thing that is done is to search for vacant segments that are not used by other writers.
+If no such segments are found, new segments are allocated. If there is no available space in the sc-memory for new segments, writers can use segments from the list of engaged vacant segments.
+
+To ensure coordinated read access to segments, each segment contains a unique synchronization object.
+\begin{center}
+    \textit{m$_{s}$ : S × M → S$_{m}$,}
+\end{center}
+\begin{center}
+    \textit{m$_{ch}$ : CH × Mw → CH$_{m}$.}
+\end{center}
+
+In addition to segments, synchronization objects are also temporarily assigned to sc-memory cells and events to be registered in it. Synchronization objects of sc- memory cells can be stored in a specialized table Tem. These objects are used to synchronize access to the sc- element information contained in the sc-memory ele- ment:
+\begin{center}
+    \textit{T$_{em} \subseteq$A×M.}
+\end{center}
+
+These objects synchronize the subscription and unsub- scription to events through a single table, as well as the initiation of the sc-agents themselves
+
+\begin{center}
+\textit{v$_{i}$ = ⟨t$^ i_{v}$, A$^i_{v}$, m$^i_{v}$⟩, t$^i_{v}$ $\in$ T$_{v}$,A$^i_{v}$ $\subseteq$ A$_{v}$ ,m$^i_{v}$ $\in$ M, v$_{m}$ : V × M → V$_{m}$.}
+\end{center}
+
+The model of synchronization of process access to sc- memory provides:
+
+\begin{itemize}
+    \item parallel access to sc-memory, i.e. the possibility of parallel execution of actions in sc-memory without violating correctness of data structures in it;
+\end{itemize}
+
+\end{multicols}
+\end{document}
+
