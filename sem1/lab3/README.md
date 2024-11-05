@@ -19,7 +19,7 @@
   ![](overleaf2.png)
   ![](overleaf3.png)
 ### Прилагаемые файлы/ссылки:
-* [main.tex] - исходный файл вёрстки
+* [main.tex](https://github.com/iis-42x70x/RPIIS/blob/Шепелевич_К/sem1/lab3/main.tex) - исходный файл вёрстки
 * [lab1.pdf] - готовый pdf-файл с вёрсткой
 * [Гайд](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes) от создателей overleaf(LaTeX за 30 минут)
 # Лабараторная работа №3
