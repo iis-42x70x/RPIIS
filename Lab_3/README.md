@@ -12,7 +12,7 @@
         \caption{ IoT system architecture based on neural network with OSTIS
 technology.}
 ```
-##### Команда позволяющая вставить изображени е и подпись к нему
+##### Команда позволяющая вставить изображение и подпись к нему
 
 ```
 \begin{verbatim}
