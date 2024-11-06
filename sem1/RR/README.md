@@ -53,10 +53,10 @@ Cycle {
      }
 ~~~
 ### Тестовые примеры
-<p><img src="images/b.jpg">
-<p><img src="images/c.jpg">
+<p><img src="pages/b.jpg">
+<p><img src="pages/c.jpg">
 ### Детализация
-<p><img src="images/c.jpg">
+<p><img src="pages/c.jpg">
 ### Ввод
 У нас введено количество Графов равно 8.
 Количество ребер равно 5.
