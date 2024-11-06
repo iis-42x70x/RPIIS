@@ -19,7 +19,8 @@
 * [laba1.pdf](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D1%80%D0%B1%D1%83%D0%BD%D0%BE%D0%B2%D0%B0_%D0%9C/sem1/Laba3/laba1.pdf) - готовый pdf-файл с вёрсткой
 * [Гайд](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes) от создателей overleaf(LaTeX за 30 минут
 
-
+## Вывод:
+Познакомилась с системой верстки текстов **TeX**, языком верстки **TeX** и издательской системой **LaTeX**.
 
 
 
@@ -42,4 +43,4 @@
  ![](laba1.png)
  
 ## Вывод:
-Изучила основные команды в Git.
+Изучила основные команды в Git: git init, git add, git status, git commit -m, git push, git log, git stash. 
