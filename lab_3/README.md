@@ -1,10 +1,10 @@
-#ЛР3:
+## ЛР3:
 
-#Цели: познакомиться с программами git, освоить их программные аргументы.
+# Цели: познакомиться с программами git, освоить их программные аргументы.
 
-#Выводы: Я научился на практике выполнять всевозможные действия с репозиторием и отвечать на теоретические вопросы из списка заданий, связанных с работой в консоли github (git bash) 
+# Выводы: Я научился на практике выполнять всевозможные действия с репозиторием и отвечать на теоретические вопросы из списка заданий, связанных с работой в консоли github (git bash) 
 
-#Основные команды: 
+# Основные команды: 
 
 git init
 
@@ -27,14 +27,14 @@ git push origin
 
 git pull origin
 
-#ЛР1 
+# ЛР1 
 
-#Основные вопросы и команды по Latex:
+# Основные вопросы и команды по Latex:
 
 Настройка отступа: \usepackage[left = 25mm, top = 8mm, right = 25mm, bottom =25 mm, nohead, nofoot]{geometry}
 
-#Scn: 
-
+# Scn: 
+``` Latex
 \usepackage{scn} <br/>
 \begin{scnindent} <br/>
  &nbsp;    \scnitem{}<br/>
@@ -47,14 +47,16 @@ git pull origin
  &nbsp;       \end{scnrelfromset}<br/>
  &nbsp;   \end{scnindent}<br/>
 \end{scnindent}
-
-#Римские цифры: 
-
+```
+# Римские цифры: 
+``` Latex
 \newcommand{\RomanNumeralCaps}[1]<br/>
     &nbsp; {\MakeUppercase{\romannumeral #1}}<br/>
 \RomanNumeralCaps{Your Number}
+```
+# Специальные символы:
 
-#Специальные символы:
-
+``` Latex
 "$\supset$"
 "$\ni$"
+```
