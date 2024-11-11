@@ -13,31 +13,32 @@
 ## Batch файл
 - ### Код программы :computer:
 ```batch
-@echo off
-chcp 65001 
-set /p "N=Введите числовое значение для N (интервал в секундах): "
-set /p "M=Введите числовое значение для M (максимальное время работы в секундах): "
-set /a "total_time=0"
-set /a "counter=1"
-set "current_path=%~dp0folder_%counter%"
-mkdir "%current_path%"
+@echo off 
+chcp 65001  
+set /p "N=Введите числовое значение для N (интервал в секундах): " 
+set /p "M=Введите числовое значение для M (максимальное время работы в секундах): " 
+set /a "total_time=0" 
+set /a "counter=1" 
+set "current_path=%~dp0folder_%counter%" 
+mkdir "%current_path%" 
 timeout /t %N% >nul
-:loop
-    if %total_time% geq %M% goto :end
-    set "file_path=%current_path%\%counter%.txt"
-    set /a "total_time+=N"
-    echo Общее время работы скрипта: %total_time% секунд > "%file_path%"
-    echo Новый файл %counter% был создан
-    set /a "counter+=1"
-    set "current_path=%current_path%\folder_%counter%"
-    mkdir "%current_path%"
-    timeout /t %N% >nul
-goto :loop
-:end
-set /a "total_folders=counter-1"
-echo Скрипт завершил работу. Общее количество созданных папок: %total_folders%
+set /a "total_time+=N" 
+:loop 
+    if %total_time% gtr %M% goto :end 
+    set "file_path=%current_path%\%counter%.txt" 
+   
+    echo Общее время работы скрипта: %total_time% секунд > "%file_path%" 
+    echo Новый файл %counter% был создан 
+    set /a "counter+=1" 
+    set "current_path=%current_path%\folder_%counter%" 
+    mkdir "%current_path%" 
+ set /a "total_time+=N" 
+    timeout /t %N% >nul 
+goto :loop 
+:end 
+set /a "total_folders=counter-1" 
+echo Скрипт завершил работу. Общее количество созданных папок: %total_folders% 
 pause
-
 ```
 ### Пример работы кода
 ![](1.png)
@@ -62,11 +63,16 @@ set /a "total_time=0"
 set /a "counter=1"
 ```
 Создает первую папку folder_1 в том же каталоге, где находится скрипт.
-Команда timeout /t %N% >nul останавливает выполнение на N секунд и скрывает сообщение об ожидании.
 ```
 set "current_path=%~dp0folder_%counter%"
 mkdir "%current_path%"
+
+```
+Пауза на N секунд, затем total_time увеличивается на N, отражая общее время работы.
+
+```
 timeout /t %N% >nul
+set /a "total_time+=N"
 ```
 Начало основного цикла скрипта. Всё, что следует после этого ярлыка :loop, будет повторяться.
 ```
@@ -77,10 +83,8 @@ timeout /t %N% >nul
 if %total_time% geq %M% goto :end
 ```
 Устанавливает путь к новому файлу %counter%.txt, который будет создан в текущей папке.
-Обновляет total_time, добавляя к нему интервал N.
 ```
 set "file_path=%current_path%\%counter%.txt"
-set /a "total_time+=N"
 ```
 Записывает в файл file_path строку с текущим общим временем работы скрипта.
 ```
@@ -100,8 +104,9 @@ set /a "counter+=1"
 set "current_path=%current_path%\folder_%counter%"
 mkdir "%current_path%"
 ```
-Вводит задержку на N секунд перед следующим циклом.
+Увеличивает total_time на N, затем выполняет паузу на N секунд.
 ```
+set /a "total_time+=N" 
 timeout /t %N% >nul
 ```
 Переход к началу основного цикла (:loop), если не достигнут предел по времени.
@@ -136,14 +141,15 @@ counter=1
 current_path="$(pwd)/folder_$counter"
 mkdir -p "$current_path"
 sleep "$N"
-while (( total_time < M )); do
-    file_path="$current_path/$counter.txt"
-    ((total_time += N))
+((total_time+=N))
+while ((total_time < M)); do
+    file_path="$current_path/$counter.txt" 
     echo "Общее время работы скрипта: $total_time секунд" > "$file_path"
     echo "Новый файл $counter был создан"
     ((counter++))
     current_path="$current_path/folder_$counter"
     mkdir -p "$current_path"
+    ((total_time+=N))
     sleep "$N"
 done
 total_folders=$((counter - 1))
@@ -178,15 +184,17 @@ mkdir -p "$current_path"
 ```
 sleep "$N"
 ```
+Увеличивает значение переменной total_time на N, поскольку прошло N секунд с начала работы.
+```
+((total_time+=N))
+```
 Начало основного цикла. Выполняется, пока значение total_time меньше M.
 ```
 while (( total_time < M )); do
 ```
 file_path="$current_path/$counter.txt" — задает путь к файлу, который будет создан в текущей папке.
-((total_time += N)) — добавляет значение N к total_time, отслеживая общее время работы.
 ```
    file_path="$current_path/$counter.txt"
-((total_time += N))
 ```
 Выводит сообщение о создании нового файла.
 ```
@@ -195,12 +203,14 @@ file_path="$current_path/$counter.txt" — задает путь к файлу, 
 ```
 ((counter++)) — увеличивает значение счетчика для следующего файла и папки.
 current_path="$current_path/folder_$counter" — обновляет путь к папке, добавляя вложенную директорию.
+Добавляет интервал N к total_time, чтобы отразить общее время работы после очередного цикла ожидания.
 mkdir -p "$current_path" — создает новую папку внутри предыдущей.
 
 ```
 ((counter++))
 current_path="$current_path/folder_$counter"
 mkdir -p "$current_path"
+((total_time+=N))
 sleep "$N"
 ```
 Завершает выполнение цикла while, когда total_time достигает или превышает значение M.
