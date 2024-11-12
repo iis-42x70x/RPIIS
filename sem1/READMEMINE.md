@@ -475,4 +475,6 @@ InceptionResNet50V2.
 ```
 
 #### А здесь картинка с готовыми страницами:
-<p  align="center"><img src="Images/Cписок.jpg" ></p>
+<p  align="center"><img src="Скрины/Стр300.jpg" ></p>
+<p  align="center"><img src="Скрины/Стр301.jpg" ></p>
+<p  align="center"><img src="Скрины/Стр302.jpg" ></p>
