@@ -1,5 +1,4 @@
 @echo off
-chcp 65001
 
 REM вводим путь к папке и формат файла
 set folder_path=%1
@@ -13,11 +12,13 @@ if "%file_format%"=="" (
 
 REM Подсчет количества файлов с заданным расширением в папке
 set count=0
-for /f %%a in ('dir "%folder_path%\"*.%file_format%"" /b /a-d ^| find /c /v ""') do set count=%%a
+for /f %%a in ('dir "%folder_path%\"*.%file_format%"" /b /a-d ^| find /C /V ""') do (
+    set count=%%a
+) 
 echo Количество файлов формата %file_format% - %count%
 
-set /a remainder=%count% %% 2 
-if %remainder%==0 (
+set /a ost=%count% %% 2 
+if %ost%==0 (
     rem Получаем список процессов и считаем количество строк, исключая заголовок
     for /f "tokens=*" %%A in ('tasklist ^| find /C /V ""') do set Processes=%%A 
     echo Число активных процессов - %Processes%  
