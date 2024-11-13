@@ -40,8 +40,6 @@
     \item some of the most common GI diseases include peptic ulcer disease, gastric and duodenal ulcers, gastritis, colitis, irritable bowel syndrome (IBS), gallstones, pancreatitis, and GI cancer;
 \end{itemize}
 ```
-Так будет выглядеть в PDF:
-<p align = "center"><img src="spis.png" ></p>
 
 ### Вставка картинок: 
 ```
@@ -51,8 +49,6 @@
     \label{ris:fourth}
 \end{figure}
 ```
-Так будет выглядеть в PDF:
-<p align = "center"><img src="kar.png" ></p>
 
 ### Pабота с римскими цифрами:
 ```
@@ -60,8 +56,6 @@
     \RomanNumeralCaps{6}. Conclusion 
 \end{center}
 ```
-Так будет выглядеть в PDF:
-<p align = "center"><img src="rim.png" ></p>
 
 <h1 align="center"> Лабораторная работа №3 </h1>
 
