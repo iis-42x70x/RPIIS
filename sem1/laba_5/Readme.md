@@ -16,9 +16,9 @@
  Вывести все эти рандомные значения по убыванию в файл result.txt.
 ## Ход работы:
 Код для Windows:
-![picW](./pictures/picture_w.png)
+![picW](./pictures/picture_w.PNG)
 Код для Linux:
-![picL](./pictures/picture_l.png) 
+![picL](./pictures/picture_l.PNG) 
 ## Основные команды:
 Для Windows
 * echo off - для отключения вывода выполняемых команд;
