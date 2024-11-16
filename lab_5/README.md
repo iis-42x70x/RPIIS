@@ -22,4 +22,4 @@ for /L %%i in (1,1,!max!) do (
 )
 
 echo Created !fileCount! files.
-endlocal```
+endlocal
