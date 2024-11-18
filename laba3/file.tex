@@ -1,0 +1,331 @@
+Ivan, [24.09.2024 9:20]
+\documentclass[a4paper,10pt,twocolumn]{article}
+\usepackage{lipsum} 
+\usepackage[margin=1.5cm,top=1.5cm]{geometry} % for setting margins
+\usepackage{graphicx}
+\title{\textbf{IoT Network for Diagnosis of Parkinson’s\\
+disease Using Neural Networks and OSTIS}}
+\date{}
+
+\begin{document}
+\maketitle
+\begin{center}
+    Vishniakou Uladzimir\\
+\textit{Belarusian State University of\\
+Informatics and Radioelectronics}\\
+Minsk, Belarus\\
+vish@bsuir.by
+\end{center}
+
+\textbf{\textit{Abstract}—The aim of the work is to propose a model
+for the diagnosis of Parkinson’s disease (PD) within the
+framework of the Internet of Things (IoT) using OSTIS.
+The report is devoted to the development of the Internet
+of Things for the diagnosis of Parkinson’s disease (PD)
+using OSTIS technology. The structure of the ontology
+for describing the elements of PD disease is given. The
+construction of an IT diagnostic network of the PD is
+considered, which uses the semantic capabilities of the
+OSTIS platform for processing and analyzing medical data
+of the PD. The elements of the description of the knowledge
+base, solvers and user interfaces for PD using a component based approach are presented.\\ \vspace{0mm} \textit{Keywords}—Internet of Things network, IT diagnostics of Parkinson’s disease (PD), PD ontology, neural networks,
+knowledge base, OSTIS}
+
+\section*{I. DIAGNOSIS METHOD APPLIED TO
+PARKINSON’S DISEASE}
+The early diagnosis of Parkinson’s disease has been a
+challenge for the medical community, and usually about
+60 % of nigrostriatal neurons have degenerated and 80 %
+of striatal dopamine is depleted by the time the disease
+is diagnosed [1]. Currently, the diagnosis of the disease
+is based on medical history, clinical signs and symptoms,
+and response to antiparkinsonian drugs, but because the
+disease starts slowly and clinical symptoms appear only
+when the nigrostriatal dopamine neurons are depleted to
+a certain extent, patients are often at an advanced stage
+of the disease when they are diagnosed, missing the best
+time for treatment. Therefore, the development of new
+treatments in this field depends on two main aspects:\\
+1) The early diagnosis of the disease.\\
+2) The correct and constant evaluation of the effective ness of the treatment.\\ \vspace{0mm}In article [2] we proposed the method for complex recognition of Parkinson’s disease using machine learning, based on markers of voice analysis and changes in patient movements on known data sets. The time-frequency
+function, (the wavelet function) and the Meyer kepstral
+coefficient function are used. The KNN algorithm and
+the algorithm of a two-layer neural network were used
+for training and testing on publicly available datasets on
+\begin{center}
+  Yiwei Xia\\
+\textit{Belarusian State University of\\
+Informatics and Radioelectronics}\\
+Minsk, Belarus\\
+xiayiwei4@gmail.com
+\end{center}
+
+
+speech changes and motion retardation in Parkinson’s disease. A Bayesian optimizer was also used to improve the
+hyperparameters of the KNN algorithm. The constructed
+models achieved an accuracy of 94.7 \% and 96.2 \% on a
+data set on speech changes in patients with Parkinson’s
+disease and a data set on slowing down the movement of
+patients, respectively. The recognition results are close to
+the world level. The proposed technique is intended for
+use in the IoT network of IT diagnostics of PD.
+
+Ivan, [24.09.2024 9:20]
+\section*{II. KNOWLEDGE BASE AND ONTOLOGY}
+The construction of the Intelligent Parkinson’s Disease
+Diagnosis System is based on the following three main
+components:\\
+1) Knowledge Base: Collects and stores knowledge and
+data about Parkinson’s Disease;\\
+2) Problem Solver: Utilizes information from the
+knowledge base to solve specific problems;\\
+3) Interaction Interface: Provides a way for doctors and
+patients to interact with the system.\\
+\\ \textit{A. Construction of the Knowledge Base for the Intelligent
+Parkinson’s Disease OSTIS System}\\
+\\The ontology construction of the knowledge base of
+the Smart Parkinson’s Disease Diagnostic OSTIS system
+is subdivided into the following areas\\
+\\ \textbf{\textit{Parkinson’s Disease Ontology}}\\
+\subset ontology\\
+\subset ostis-system\\
+\subset Familial neurodegenerative disease\\
+\Rightarrow Decomposition*:*:\\
+
+\{\bullet Basic Classification of Parkinson’s Disease\\
+\bullet Clinical Features of Parkinson’s Disease\\
+\bullet Parkinson-Plus Syndromes [3]\\
+\bullet Etiology of Parkinson’s Disease\\
+\bullet Neuropathology of Parkinson’s Disease\\
+\bullet Information Models of Parkinson’s Diseas\\
+\Rightarrow Decomposition*:*:\\
+\{\bullet Models [4]\\
+\bullet Predictive Analytic Models\\
+\}\\
+\textbf{\textit{Predictive Analytic Models}}\\
+\Rightarrow \textbf{\textit{Decomposition*:*:}} 
+ \begin{itemize}
+      \{ \bullet \item \textit{Medical Imaging Data [5]}  \\
+     \== [Processing MRI, PET, SPECT, etc., imaging\\ data for the diagnosis and research of Parkin\\son's Disease.]\\
+        \bullet \item \textit{Biomarkers [6]} \\
+      \item \== Analyzing \alpha-synuclein, inflammatory mark\\ers, oxidative stress markers, etc., to monitor\\disease progression.\\
+     \bullet \textit{Genetic Information [7]}\\
+        \== Analyzing Single Nucleotide Polymorphisms \\(SNPs) and gene mutations associated with an\\ increased risk of Parkinson's Disease.}
+\end{itemize}
+\bullet \textit{Clinical Feature Data Processor} \\
+\Rightarrow \textit{Decomposition*:*:} \\
+\{ 
+    \begin{itemize}
+     \{ \bullet  \item \textbf{Motion Data Processor}\\
+      \bullet  \item \textbf{Voice Data Processor}\\
+        \}\\
+    \end{itemize}
+\}
+\subsection*{\textit{Voice Data Processor}}
+\==[Changes in speech and language in patients with
+Parkinson’s Disease, such as softer voice, slower
+speech, and reduced intonation variability, can be
+quantified through voice analysis technology, serving
+as a tool for assessing the disease and its progression.]
+
+
+\Rightarrow \textit{Decomposition*:*:} 
+    \begin{itemize}
+      \{  \item \bullet \textit{Specific Voice Data Collection Methods}\\
+       \Rightarrow \textit{Decomposition*:*:} \\
+            
+              \{ \bullet  \item \textit{Model Selector}\\
+                 \Rightarrow \textit{Decomposition*:*:} \\
+                
+                    
+\{ \bullet    \item LSTM Model\\
+\bullet    \item GRU Model\\
+\bullet     \item KNN Model\\
+\bullet      \item Random Forest Model\\
+\end{itemize}
+                \} \\
+              \bullet  \item \textbf{Voice Data Feature Analyzer} \\
+                 \Rightarrow \textit{Decomposition*:*:}\\
+        \bullet \textit{Voice Feature Analyzer}\\
+        \bullet \textit{ Raw Voice Data Processor}\\
+                \{ 
+                    
+                
+        
+    
+
+
+ \subsection*{\textbf{\textit{{Motion Data Processor}}}}
+\textit{[Involves patient's motor abilities and control, including tremors, muscle rigidity, bradykinesia, gait, and balance issues, analyzed through motion analysis technologies like wearable devices or motion capture systems.]}
+
+Ivan, [24.09.2024 9:20]
+\Rightarrow \textit{Decomposition*:*:} 
+ 
+     \{ \bullet  \textit{Specific Motion Data Collection Methods}\\
+        \Rightarrow \textit{Decomposition*:*:}
+        
+            \begin{itemize}
+                 \{ \bullet  \textit{Model Selector}\\
+               \Rightarrow \textit{Decomposition*:*:}  \\
+                  \{ \bullet  LSTM Model\\
+                    \bullet    GRU Model\\
+                     \bullet   KNN Model\\
+                     \bullet   Random Forest Model\\
+                        \}\\
+             \end{itemize}
+ \bullet   Motion Data Feature Analyzer \\
+  \Rightarrow \textit{Decomposition*:*:}\\
+\{ \bullet db6 Wavelet Feature\\
+Analyzer:\\
+\bullet Raw Motion Data Processor                     
+\textit{B. Problem Solver for the Intelligent Parkinson’s Disease\\
+Diagnosis System}\\
+  \\  The task resolver of the Intelligent Parkinson’s Disease Diagnosis System is a collective of interacting sc-agents that facilitate the resolution of diagnostic and
+management issues related to Parkinson’s disease. Herein
+is a fundamental decomposition of the task resolver for
+the Intelligent Parkinson’s Disease Diagnosis System,
+based on the principal sc-agent classes designated for
+Parkinson’s disease diagnostic purposes      \\
+\\
+\textbf{\textit{Intelligent Parkinson’s Disease Diagnosis System Problem
+Solver}}\\
+\Rightarrow \textit{Decomposition*:*:} 
+
+\{ \bullet \textit{Clinical Data Analysis abstract sc-agent}\\
+\Rightarrow \textit{Decomposition*:*:}   \\
+\{ \bullet \textit{Motion Data Analysis abstract sc-agent}\\
+\bullet \textit{Voice Data Analysis abstract\\
+sc-agent}\\
+\bullet \textit{ Genetic Information Analysis\\ abstract sc-agent}\\
+\}\\
+\bullet Symptom Severity Assessment \\ abstract
+sc-agent\\
+\bullet Medical Database and Diagnostic Tool\\
+Interface abstract sc-agent\\
+\Rightarrow \textit{Decomposition*:*:} \\
+ \{ \bullet  Medical Imaging Database\\
+Access abstract sc-agent\\
+\bullet Biomarker Analysis abstract\\
+sc-agent\\
+\bullet Time Series Analysis abstract\\
+sc-agent\\
+\}\\
+\bullet Symptom and Treatment Plan Correlation\\
+abstract sc-agent\\
+\bullet Diagnosis and Treatment Knowledge Base\\
+Verification abstract sc-agent\\
+\Rightarrow \textit{Decomposition*:*:} \\
+\{ \bullet Treatment Plan Efficacy\\
+Verification abstract sc-agent\\
+\bullet Disease Diagnosis Accuracy\\
+Verification abstract sc-agent\\
+\bullet Patient Data Privacy and\\
+Security Protection abstract \\sc-agent\\
+\}
+\bullet Intelligent Question-Answering abstract\\
+sc-agent\\
+\Rightarrow \textit{Decomposition*:*:} \\
+\{ \bullet User Interaction abstract\\
+sc-agent\\
+\bullet Medical Knowledge Graph\\
+\bullet Answer Generation abstract\\
+sc-agent\\
+\}\\
+\}
+\newpage
+\begin{figure}
+    \centering
+    \vspace{0cm}
+    \includegraphics[width=1\linewidth]{laba1.png}
+    \caption{Framework Diagram for the Intelligent Parkinson’s Disease
+OSTIS System’s Automated Diagnostic and Question-Answering Tool.}
+\end{figure}
+\hfill \break
+ \title{III. SYSTEM ARCHITECTURE OVERVIEW}\\
+\begin{flushleft}
+This section offers a comprehensive overview of the
+architectural underpinnings governing the deployment of
+our Parkinson’s disease diagnosis model [2] within the
+IoT framework. It expounds upon the intricate interplay
+between system components designed to facilitate efficient data processing, storage, and presentation. Fig
+1 illustrates an IoT system architecture enhanced with
+neural network capabilities using OSTIS technology.
+
+Ivan, [24.09.2024 9:20]
+\hspace{1cm} IoT Device (Client): Data collection and preprocessing
+occur on the client-side. This could be a smart device
+such as a sensor or a smartphone, responsible for data
+acquisition and preliminary data preprocessing and feature extraction\\
+\hspace{1cm}Local Flask Server [8]: The Flask server is located
+locally and serves as the receiver for data from the IoT
+device. It acts as an intermediary for data transmission,
+forwarding the received feature data to the OSTIS server.\\
+\hspace{1cm}OSTIS [9] Server: The OSTIS server is a knowledge
+graph platform that receives and processes data from the
+local Flask server. Running on this server is a Neural
+Network Predictor Agent responsible for loading internal
+neural network model files.\\
+\hspace{1cm}Neural Network Predictor Agent: This agent is responsible for loading and executing neural network models,
+processing incoming feature data, and making predictions. Predictions can be associated with knowledge
+within the OSTIS system and ultimately saved to a local
+database.\\
+\hspace{1cm}Local Database: The local database is used to store the
+prediction results returned from the OSTIS server, along
+with other relevant information.\\
+\hspace{1cm}The workflow of the entire system is as follows:
+1) IoT device collects and preprocesses data.\\
+2) Preprocessed data is sent to the local Flask server.\\
+3) The local Flask server forwards the data to the\\
+OSTIS server.\\
+4) The Neural Network Predictor Agent on the OSTIS
+server loads the neural network model and processes
+the data.\\
+5) Determining the subclass, type, and subtype based
+on the Parkinson’s disease diagnostic classifier, i. e.,
+the types of diagnostic entities in medical ontology;\\
+
+6) Establishing the inherent attributes and characteristics of the diagnostic category;\\
+7) Determining the values of features for that diagnostic category;\\
+8) Resolving polysemy in the diagnostic process;\\
+9) Establishing the corresponding connections between
+diagnostic entities and concepts with medical semantic features in the knowledge base;\\
+10) Establishing relationships between diagnostic entities belonging to a specific category of Parkinson’s
+disease.\\
+11) The processed results are associated with the knowledge graph and finally saved to the local database.\\
+\hspace{1cm}This system allows real-time data processing and complex object recognition in an IoT environment, combining data with a knowledge graph to support advanced
+analysis and decision-making. Proper configuration and
+management of each component are required to ensure
+the efficient operation of the system.\\
+\hspace{5cm}
+\\ \hspace{0.7cm}\title{IV. IOT DEVICE AND DATA COLLECTION}\\
+\hspace{8cm}
+\hspace{1cm}Within this subsection, we embark on an in-depth
+exploration of the IoT device deployed for data collection.
+We elucidate its pivotal role in the acquisition of two
+critical data modalities: movement data and audio data.
+We delve into the intricacies of data preprocessing and
+transmission to the local server, underscoring the cardinal
+importance of real-time data acquisition capabilities. As
+shown in Figure 2, the IoT system architecture based on
+neural network with OSTIS technology is illustrated.\\
+\hspace{1cm}First, let us introduce the IoT device used. The device
+plays a key role in data acquisition by capturing two
+important data types: motion data and audio data. Motion
+data records the movement characteristics of Parkinson’s
+patients, while audio data captures their sound character istics.\\
+\hspace{1cm}To capture the acceleration data of the cell phone:\\
+1) use a third-party library in Python (PySensors) to
+access the phone’s acceleration sensor.\\
+2) set up the sensor parameters, setting the sampling
+rate to 64hz and the sensor precision to 16 bits.\\
+3) create a data storage structure to hold the acquired
+acceleration data.\\
+4) In a loop, periodically read the acceleration sensor
+data and store it in the data structure.\\
+5) Store the data in a local file for further processing
+and analysis.\\
+Collect the voice data from the cell phone:
+
+Ivan, [24.09.2024 9:20]
+\end{flushleft}
+\end{document}
