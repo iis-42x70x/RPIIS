@@ -64,7 +64,7 @@ git add "Имя файла"
 ```
 git commit -m "Название коммита"
 ```
-![Снимок экрана от 2024-10-21 08-58-47](https://github.com/user-attachments/assets/b0d53ce9-20ea-4acc-8fc5-ce9e30134df9)
+
 
 6.Создание коммита, включающего изменения всех наблюдаемых файлов и указать для него комментарий
 ```
@@ -74,31 +74,30 @@ git commit -a -m "Название коммита"
 ```
 git log
 ```
-![Снимок экрана от 2024-10-21 09-04-49](https://github.com/user-attachments/assets/d4b55533-1839-4ea4-b782-b71819f08a9c)
+
 
 8.Просмотр информации о текущих настройках
 ```
 git config --list
 ```
-![Снимок экрана от 2024-10-21 09-07-15](https://github.com/user-attachments/assets/044491eb-232a-481e-95db-2df78437db0c)
 
 9.Убрать файл из контекста
 ```
 git reset "Имя файла"
 ```
-![Снимок экрана от 2024-10-21 09-10-44](https://github.com/user-attachments/assets/235de9db-3cef-4fd0-94e7-db7db5f01fec)
+
 
 10.Посмотреть изменения в файле между коммитами
 ```
 git diff <commit hash> <commit hash>
 ```
-![Снимок экрана от 2024-10-21 09-16-49](https://github.com/user-attachments/assets/2371621c-4e89-40ad-b4cf-23668b3cf925)
+
 
 11.Убрать изменения относительно последнего коммита из файла
 ```
 git restore "Имя файла"
 ```
-![Снимок экрана от 2024-10-21 09-43-51](https://github.com/user-attachments/assets/c6e9b190-64ca-4b8c-96ec-aa137d88682d)
+
 
 12.Добавить в контекст коммита все измененные и созданные файлы
 ```
@@ -119,7 +118,7 @@ git config --global user.email "ваш_email@example.com"
 git branch(Для локальных веток)
 git branch -a(Для локальных и удаленных)
 ```
-![Снимок экрана от 2024-10-21 09-30-18](https://github.com/user-attachments/assets/227aa551-dd28-4858-8a5d-fc4c8bb6a57a)
+
 
 16.Создать новую ветку
 ```
@@ -129,7 +128,7 @@ git branch "Имя ветки"
 ```
 git checkout "Имя ветки"
 ```
-![Снимок экрана от 2024-10-21 09-32-37](https://github.com/user-attachments/assets/6f4c12ae-03a6-4814-9e3e-30e9f71bcb7b)
+
 
 18.Создать новую ветку и сразу же переключиться на неё
 ```
@@ -151,7 +150,7 @@ git merge "Имя ветки"
 ```
 git checkout "commit hash"
 ```
-![Снимок экрана от 2024-10-21 18-18-39](https://github.com/user-attachments/assets/c3cc5699-1792-466b-82c4-447de2ac89a9)
+
 
 25-28.Информацию о git rebase можно узнать [ТУТ](https://selectel.ru/blog/tutorials/how-to-rebase-commits-and-branches/)
 
