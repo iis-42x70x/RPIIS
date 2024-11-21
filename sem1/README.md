@@ -115,4 +115,5 @@
 
 32. переименовать последний коммит <br>![Снимок экрана 2024-10-24 124343](https://github.com/user-attachments/assets/efa2da86-6529-4609-b1b6-93fb91d3ff3d)
 33. переименовать не последний коммит: git rebase -i HEAD~n.
-34. скрыть изменения по сравнению с последним коммитом: git revert HEAD.
+34. скрыть изменения по сравне[lab3piv.pdf](https://github.com/user-attachments/files/17848028/lab3piv.pdf)
+нию с последним коммитом: git revert HEAD.
