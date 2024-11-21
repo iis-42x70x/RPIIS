@@ -1,0 +1,24 @@
+#!/bin/bash
+
+read -p "Write the path to the folder: " folder
+
+if [ ! -d "$folder" ]; then
+    echo "This folder does't exist"
+    exit 1
+fi
+
+find "$folder" -type f | while read -r file; do
+    word_count=$(wc -w < "$file")
+    
+
+    filename=$(basename "$file")
+    dirpath=$(dirname "$file")
+    
+
+    new_name="${word_count}_${filename}"
+    
+
+    mv "$file" "$dirpath/$new_name"
+done
+
+echo "Renaming over"
