@@ -3,9 +3,6 @@
 Выполнялась ЛР 5 в cmd(Windows) и в терминале(Linux). Результат выполнения лабораторной добавлен в ветку.
 
 
-<h1 align="center"> Работа с LaTeX в OverLeaf</h1>
-<p  align="center"><img src="picks/overleaf-o-logo-primary.jpg"></p>
-
 
 ### Код программы в cmd(Windows):
 ```
