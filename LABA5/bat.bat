@@ -3,12 +3,14 @@ setlocal enabledelayedexpansion
 chcp 65001
 
 if "%~1"=="" (
+    echo Укажите путь к папке
     exit /b
 )
 
 set "folder=%~1"
 
 if not exist "!folder!" (
+ echo Данной папки нет
     exit /b
 )
 
