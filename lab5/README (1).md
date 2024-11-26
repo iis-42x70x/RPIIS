@@ -13,32 +13,37 @@
 ## Batch файл
 - ### Код программы :computer:
 ```batch
-@echo off 
-chcp 65001  
-set /p "N=Введите числовое значение для N (интервал в секундах): " 
-set /p "M=Введите числовое значение для M (максимальное время работы в секундах): " 
-set /a "total_time=0" 
-set /a "counter=1" 
-set "current_path=%~dp0folder_%counter%" 
-mkdir "%current_path%" 
-timeout /t %N% >nul
-set /a "total_time+=N" 
-:loop 
-    if %total_time% gtr %M% goto :end 
-    set "file_path=%current_path%\%counter%.txt" 
-   
-    echo Общее время работы скрипта: %total_time% секунд > "%file_path%" 
-    echo Новый файл %counter% был создан 
-    set /a "counter+=1" 
-    set "current_path=%current_path%\folder_%counter%" 
-    mkdir "%current_path%" 
- set /a "total_time+=N" 
-    timeout /t %N% >nul 
-goto :loop 
-:end 
-set /a "total_folders=counter-1" 
-echo Скрипт завершил работу. Общее количество созданных папок: %total_folders% 
-pause
+@echo off
+chcp 65001
+setlocal
+if "%~2"=="" (    
+    echo Необходимы два аргумента: путь к первой и второй папке.
+    exit /b 1
+)
+set "iz=%~1"
+set "v=%~2"
+    	
+if not exist "%iz%" (
+	echo Данной папки нет - %iz%
+    	exit /b 1
+)
+if not exist "%v%" (
+	echo Данной папки нет - %v%
+    	exit /b 1
+)
+pushd "%iz%"
+for %%F in (*) do (
+	if /I "%%~xF"==".txt" (
+        echo Перемещение файла %%F в %v%       
+        move /Y "%%F" "%v%\"
+) else (        
+	echo Устанавливаем атрибут "только чтение" для файла %%F
+        attrib +r "%%F"   
+)
+)
+popd
+echo Выполнение завершено.
+endlocal
 ```
 ### Пример работы кода
 ![](1.png)
