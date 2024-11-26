@@ -138,33 +138,32 @@ pause
 - ### Код программы :computer:
 ```bash
 #!/bin/bash
-export LANG=ru_RU.UTF-8
-read -p "Введите числовое значение для N (интервал в секундах): " N
-read -p "Введите числовое значение для M (максимальное время работы в секундах): " M
 
-total_time=0
-counter=1
-current_path="$(pwd)/folder_$counter"
-mkdir -p "$current_path"
+    echo "Необходимы два аргумента: путь к первой и второй папке."    exit 1
+fi
+iz="$1"
+v="$2"
 
-while (( total_time < M )); do
-    file_path="$current_path/$counter.txt"
-sleep "$N"
- ((total_time += N))
-    echo "Общее время работы скрипта: $total_time секунд" > "$file_path"
-    echo "Новый файл $counter был создан"
+if [ ! -d "$iz" ]; then    
+   echo "Данной папки нет - $iz"
+   exit 1 
+fi
+if [ ! -d "$v" ]; then
+    echo "Данной папки нет - $v"   
+    exit 1
+fi
 
-    ((counter++))
-    current_path="$current_path/folder_$counter"
-    mkdir -p "$current_path"
-    
-   
-    
+if [ -f "$file" ]; then        
+    if [[ "$file" == *.txt ]]; then
+           echo "Перемещение файла $(basename "$file") в $v"            
+           mv "$file" "$v"
+        else            
+          echo "Устанавливаем атрибут 'только чтение' для файла $(basename "$file")"
+          chmod 444 "$file"        
+fi
+fi 
 done
-
-total_folders=$((counter - 1))
-echo "Скрипт завершил работу. Общее количество созданных папок: $total_folders"
-
+echo "Выполнение завершено."
 ```
 ### Пояснение кода
 Указывает, что скрипт должен выполняться с использованием интерпретатора bash.
