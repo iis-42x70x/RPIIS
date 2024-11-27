@@ -23,7 +23,7 @@
 
 ## Результат 
 batch:
-<img src="D:\Screenshot from 2024-11-27 18-57-34.png">
+<img src="D:\Screenshot1.png">
 
 
 
