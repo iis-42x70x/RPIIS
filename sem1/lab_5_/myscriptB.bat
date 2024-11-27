@@ -4,9 +4,9 @@ if "%size%"=="" (
   echo Ne zadan parametr razmer of file!
   exit /b
 )
-fsutil file createnew file.txt %size%
+fsutil file createnew generated_file.txt %size%
 for /f "tokens=1-5 delims=.: " %%j in ('
- dir/a-d/tc "C:\Users\user\Desktop\file.txt"^| findstr/rc:"^[^ ]"
+ dir/a-d/tc ".\generated_file.txt"^| findstr/rc:"^[^ ]"
 ') do (
   set /a hours=%%m
   set /a minutes=%%n
@@ -21,5 +21,5 @@ echo %num_dir%
 for /L %%i in (1,1,%num_dir%) do (
   md %%i
   cd %%i
-  echo. > "%hours%"-"%minutes%"
+  echo. > "%hours%"_"%minutes%"
 )
