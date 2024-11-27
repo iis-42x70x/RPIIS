@@ -23,8 +23,10 @@
 
 ## Результат 
 batch:
-<img src="D:\Screenshot1.png">
 
+<img src="Screenshot1.png" height="300" >
+
+bash:
 
 
 ## Вывод
