@@ -53,6 +53,7 @@ dental offices, and chain clinics. ArchiMed+ is
 easily scalable, offers many integrations including
 third-party labs, labeling system, telemedicine and
 more.
+
   \item  Medesk — this cloud-based medical information
 system is used in more than 20 countries around
 the world and in 72 regions of Russia. It is suitable
@@ -60,18 +61,23 @@ for healthcare institutions of any size, from private
 clinics to networks. electronic medical records,
 CRM, telemedicine and solutions for managers and
 physicians are available in Medesk.
+
  \item  KMIS is a complex MIS suitable for automation
 of any medical institutions, the feature of which is
 integration with Federal systems.
+
  \item  MEDMIS is a relatively young MIS that entered
 the market in 2017. In 4 years, MEDMIS has
 been used by more than 200 medical organizations.
 MEDMIS is constantly evolving and gaining momentum: updates are released once a week.
+
  \item  MedAngel is an MIS with the possibility of individual customization for the specifics of the clinic’s
 work. There is only a boxed version of the program
 with open code. The system is modular, you can
 assemble a personalized kit.
+
 \end{enumerate}
+
 Это будет выглядеть так:
 <p  align="center">
     <img src="pic 2.png" width ""height"" >
