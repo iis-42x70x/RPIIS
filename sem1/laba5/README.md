@@ -78,7 +78,7 @@ done
 ### Полезные сайты:
 Подойдёт для тех, кто начал работать с bat файлами: [ссылка](https://help.reg.ru/support/servery-vps/oblachnyye-servery/rabota-s-serverom/kak-sozdat-bat-fayl-i-rabotat-s-nim#0).
 
-Также можно почитать это: [ссылка](https://habr.com/ru/sandbox/168937/).
+Также можно почитать это: [batch script](https://habr.com/ru/sandbox/168937/).
 
 А здесь можно почитать про sh файлы: [ссылка](https://selectel.ru/blog/tutorials/linux-bash-scripting-guide/).
 
