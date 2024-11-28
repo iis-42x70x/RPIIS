@@ -42,9 +42,13 @@
 3) Работа со списками в latex:
 
    \begin{multicols}{2}
+   
 \setlength{\parindent}{0.8cm}
+
 \setlength{\parindent}{0.4cm}
-\fontsize{10}{15}\selectfont  
+
+\fontsize{10}{15}\selectfont 
+
 \begin{enumerate}
 
     \item  ArchiMed+ is a versatile medical software that
@@ -85,8 +89,11 @@ assemble a personalized kit.
 4) Работа с римскими цифрами:
 
 \setcounter{section}{1} %устанавливает стиль нумерации разделов в виде заглавных римских цифр.
+
 \begin{multicols}{2}
+
 \section {Proposed approach}
+
 \end{multicols}
 
 Как это выглядит:
