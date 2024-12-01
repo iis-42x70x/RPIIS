@@ -5,8 +5,8 @@
 
 ### Используемые наборы ПО:
 * `OS MS Windows 11 23H2`
-![](new-windows-logo.png)
 * `WSL (Windows Subsystem for Linux) - Ubuntu-24.04`
+![](new-windows-logo.png)
 ![](wsl_vodo4ka.png)
 
 ### Прилагаемые файлы/ссылки:
