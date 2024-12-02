@@ -114,7 +114,84 @@ Cycle {
 ## Поиск числа вершинной связности
 Алгоритм поиска числа вершинной связности реализован в функции vertexConnectivity. Мы используем модифицированный алгоритм Форда-Фалкерсона для нахождения минимального разреза в графе.
 
-![](./images/код1.png)
+```
+int vertexConnectivity(const vector<vector<int>>& matrix) 
+{
+    int n = matrix.size();
+    // Начальное значение для минимального разреза ставим максимально большим
+    int minCut = INT_MAX;
+
+    for (int source = 0; source < n; ++source) 
+    {
+        for (int target = source + 1; target < n; ++target) 
+        {
+            // Копируем исходную матрицу
+            vector<vector<int>> graph = matrix;
+            // Вектор для хранения пути
+            vector<int> parent(n, -1);
+            // Вектор для хранения посещенных вершин
+            vector<bool> visited(n, false);
+
+            // Лямбда функция для BFS 
+            auto bfs = [&](int s, int t) -> bool 
+                {
+                fill(visited.begin(), visited.end(), false);
+                queue<int> q;
+                q.push(s);
+                visited[s] = true;
+                parent[s] = -1;
+
+                while (!q.empty()) 
+                {
+                    int u = q.front();
+                    q.pop();
+
+                    for (int v = 0; v < n; ++v) 
+                    {
+                        // Если вершина не посещена и есть ребро
+                        if (!visited[v] && graph[u][v] > 0) 
+                        {
+                            if (v == t) 
+                            {
+                                parent[v] = u;
+                                return true;
+                            }
+                            q.push(v);
+                            parent[v] = u;
+                            visited[v] = true;
+                        }
+                    }
+                }
+                return false;
+                };
+
+            int maxFlow = 0;
+            
+            while (bfs(source, target)) // Пока существует путь от источника к цели 
+            {
+                int pathFlow = INT_MAX;
+                
+                for (int v = target; v != source; v = parent[v]) // Нахожу минимальный поток в пути 
+                {
+                    int u = parent[v];
+                    pathFlow = min(pathFlow, graph[u][v]);
+                }
+              
+                for (int v = target; v != source; v = parent[v]) // Обновляю остаточную емкость ребер
+                {
+                    int u = parent[v];
+                    graph[u][v] -= pathFlow;
+                    graph[v][u] += pathFlow;
+                }
+                maxFlow += pathFlow;
+            }
+          
+            minCut = min(minCut, maxFlow); // Обновляю минимальный разрез
+        }
+    }
+    return minCut;
+}
+```
 
 Основные шаги алгоритма:
 Инициализация: Начальное значение minCut установлено в INT_MAX.
