@@ -286,7 +286,7 @@ auto bfs = [&](int s, int t) -> bool {
 
 8. Харари Ф. Теория графов: монография. — Москва: Мир, 1973.
 
-9. [GitHub]([https://www.google.com/](https://github.com/));
+9. GitHub[GitHub]([https://www.google.com/](https://github.com/));
 
 
 
