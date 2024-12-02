@@ -2,9 +2,7 @@
 [по ссылке](https://drive.google.com/drive/folders/16fEpAx6KRqgLw5d04KHxVPeL6GJhixnS)
 
 ## Лабораторная работа №1
-В рамках ЛР 1 необходимо создать исполняемый файл в соответствии с заданным вариантом.
-Список заданий для ЛР 1 доступен 
-[по ссылке](https://docs.google.com/document/d/1LoQUc3vnl5gvPJD2AASKpqAh-MAW2DTD95snxD1PNmw/edit)
+[Лабораторная работа №1](file:///C:/%D0%90%D1%88%D1%83%D0%B9%D0%BA%D0%BE%20%D0%92/%D0%9F%D0%98%D0%92%D0%9E/lab1%20(1).pdf)
 
 ## Лабораторная работа №2
 В рамках ЛР 2 необходимо 
