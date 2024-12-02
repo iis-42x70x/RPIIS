@@ -97,11 +97,6 @@ void read_file(int &vertex, int &edge, vector<vector<pair<int, int>>> &graph, in
     }
 
     for (int i= 0;i < 5; i++) {
-        if (i> 0) { // пропускаем пустую строку между тестами
-            string emptyLine;
-            getline(file, emptyLine);
-        }
-
         file >> vertex >> edge;
         graph.clear();
         graph.resize(vertex);
