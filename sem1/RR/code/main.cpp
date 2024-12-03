@@ -146,6 +146,7 @@ int main() {
 
 
 /*
+//другие варианты кода
 #include <iostream>
 #include <vector>
 
