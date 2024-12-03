@@ -1,6 +1,6 @@
 @echo off
 rem Получаем сегодняшнюю дату
-for /F "tokens=1,2 delims= " %%A in ('date /t' do set today=%%B%%A
+for /F "tokens=1,2 delims= " %%A in ('date /t') do set today=%%B%%A
 rem Считаем количество активных процессов и сохраняем в переменную total.
 rem Используем команду 'tasklist' для получения списка процессов.
 rem 'find /c' считает количество строк.
