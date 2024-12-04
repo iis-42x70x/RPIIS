@@ -317,7 +317,7 @@ fin.close();
 
 ![Граф3](https://github.com/iis-32170x/RPIIS/blob/Давыдов_Р/RR/Tests/graph3.PNG)
 
-$\color{light blue}{\textsf { Матрица 3: }}$
+$\color{light_blue}{\textsf { Матрица 3: }}$
 ```
 1 1 0 1
 1 0 1 0
