@@ -3,7 +3,7 @@
 * Освоить командные оболочки shell (для OS семейства Unix) и cmd (для OS семейства MS Windows): изучить основные встроенные команды, научиться писать файлы сценариев, научиться соотносить командные оболочки для разных OS.
 * Освоить командное окружение для OS семейства Unix(утилиты из пакета GNU Core Utilities), и соответствующие им утилиты для OS семейства MS Windows.
 ### Задание:
-Вариант 95:
+*Вариант 95:*
 
 Создать файл sh и bat, который выполняет следующее:
 
@@ -18,32 +18,25 @@
 @echo off
 chcp 1251 >nul
 
-:: Проверяем, был ли передан параметр (время)
 if "%~1"=="" (
     echo Укажите время в формате HH:MM в качестве параметра.
     exit /b
 )
-
-:: Получаем текущие часы и минуты из системного времени
+ 
 for /f "tokens=1-2 delims=:" %%A in ("%time%") do set /a "h=%%A, m=%%B"
 
-:: Разделяем переданное время (параметр) на часы и минуты
 for /f "tokens=1-2 delims=:" %%A in ("%~1") do set /a "th=%%A, tm=%%B"
 
-:: Рассчитываем разницу во времени в минутах
 set /a wait_mins=(th*60 + tm) - (h*60 + m)
 if %wait_mins% lss 0 set /a wait_mins+=1440
 
-:: Сообщаем о времени ожидания
 echo Ожидание %wait_mins% минут...
 timeout /t %wait_mins% /nobreak >nul
 
-:: Указываем путь к рабочему столу и создаем папку
 set "desk=%USERPROFILE%\Desktop"
 set "folder=%desk%\ScheduledTask"
 mkdir "%folder%"
 
-:: Создаем лог-файл и записываем данные
 set "log=%folder%\SystemInfo.txt"
 
 echo Данные о сети: >> "%log%"
@@ -58,7 +51,6 @@ echo Запущенные процессы: >> "%log%"
 tasklist >> "%log%"
 echo. >> "%log%"
 
-:: Сообщаем об окончании задачи
 echo Задача выполнена. Данные записаны в "%log%".
 ```
 ### Sh файл:
@@ -66,34 +58,29 @@ echo Задача выполнена. Данные записаны в "%log%".
 
 ```
 #!/bin/bash
-
-if [ $# -ne 2 ]; then
-  echo "Usage: $0 <source_directory> <destination_directory>"
-  exit 1
+if [ -z "$1" ]; then
+echo "Укажите время выполнения в формате HH:MM"
+exit 1
 fi
-
-SRC_DIR=$1
-DST_DIR=$2
-
-if [ ! -d "$SRC_DIR" ]; then
-  echo "Данной папки нет - $SRC_DIR"
-  exit 1
+FOLDER=~/Desktop/NetworkInfo
+mkdir -p "$FOLDER"
+while true; do
+CURRENT_TIME=$(date +%H:%M)
+if [ "$CURRENT_TIME" == "$1" ]; then
+break
 fi
-
-if [ ! -d "$DST_DIR" ]; then
-  echo "Данной папки нет - $DST_DIR"
-  exit 1
-fi
-
-for file in "$SRC_DIR"/*; do
-  if [ -f "$file" ]; then
-    if [[ "$file" != *.txt ]]; then
-      chmod 444 "$file"
-    else
-      mv "$file" "$DST_DIR"
-    fi
-  fi
+sleep 60
 done
+{
+echo "Дата и время: $(date)"
+echo "Информация о сети:"
+ifconfig
+echo "Информация об ОС:"
+uname -a
+echo "Запущенные процессы:"
+ps aux
+} > "$FOLDER/info.txt"
+echo "Данные записаны в $FOLDER/info.txt"
 
 ```
 ### Полезные сайты:
