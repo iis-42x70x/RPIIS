@@ -1,4 +1,5 @@
 # Расчетная работа ПиОИвИС
+#<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=33&pause=1000&color=5B1182&random=false&width=435&lines=%D0%A0%D0%B0%D1%81%D1%87%D0%B5%D1%82%D0%BD%D0%B0%D1%8F+%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0" alt="Typing SVG" /></a>
 
 ## Цель: 
 
