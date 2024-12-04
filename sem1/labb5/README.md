@@ -60,8 +60,8 @@ open_brackets=0
 close_brackets=0
 
 while IFS= read -r line; do
-    open_brackets=$((open_brackets + $(grep -o "{" <<< "$line" | wc -l)))
-    close_brackets=$((close_brackets + $(grep -o "}" <<< "$line" | wc -l)))
+    open_brackets=$((open_brackets + $(grep -o "(" <<< "$line" | wc -l)))
+    close_brackets=$((close_brackets + $(grep -o ")" <<< "$line" | wc -l)))
 done < "$file"
 
 if [ "$open_brackets" -eq "$close_brackets" ]; then
