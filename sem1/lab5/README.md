@@ -58,12 +58,15 @@ echo Задача выполнена. Данные записаны в "%log%".
 
 ```
 #!/bin/bash
+
 if [ -z "$1" ]; then
 echo "Укажите время выполнения в формате HH:MM"
 exit 1
 fi
+
 FOLDER=~/Desktop/NetworkInfo
 mkdir -p "$FOLDER"
+
 while true; do
 CURRENT_TIME=$(date +%H:%M)
 if [ "$CURRENT_TIME" == "$1" ]; then
@@ -73,13 +76,18 @@ sleep 60
 done
 {
 echo "Дата и время: $(date)"
+
 echo "Информация о сети:"
 ifconfig
+
 echo "Информация об ОС:"
 uname -a
+
 echo "Запущенные процессы:"
 ps aux
-} > "$FOLDER/info.txt"
+}
+> "$FOLDER/info.txt"
+
 echo "Данные записаны в $FOLDER/info.txt"
 
 ```
