@@ -1,4 +1,5 @@
 # <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=33&pause=1000&color=5B1182&random=false&width=435&lines=%D0%A0%D0%B0%D1%81%D1%87%D0%B5%D1%82%D0%BD%D0%B0%D1%8F+%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0" alt="Typing SVG" /></a>
+---
 ## <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=29&pause=1000&color=7D1CA9&background=37143F16&random=false&width=435&lines=%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5" alt="Typing SVG" /></a>
 
 ### <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=24&pause=1000&color=D740F7&random=false&width=435&lines=%D0%A6%D0%B5%D0%BB%D1%8C" alt="Typing SVG" /></a>
