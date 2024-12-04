@@ -138,14 +138,14 @@ int main()
 ```
 ## <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Italic&weight=500&size=24&pause=1000&color=D740F7&width=435&lines=%D0%A0%D0%B0%D0%B7%D0%B1%D0%BE%D1%80+%D0%BA%D0%BE%D0%B4%D0%B0" alt="Typing SVG" /></a>
 
-Подключаем библиотеку для работы с файлами и пространство имён std 
+- `Подключаем библиотеку для работы с файлами и пространство имён std`
 ```C++
 #include <iostream>
 #include <fstream>
 using namespace std;
 ```
 
-Устанавливаем русскую локализацию, создаём переменную для пути к файлу и для самого файла
+- `Устанавливаем русскую локализацию, создаём переменную для пути к файлу и для самого файла`
 ```C++
 setlocale(LC_ALL, "RUSSIAN");
 string path = "matrix.txt";
@@ -153,7 +153,7 @@ ifstream fin;
 fin.open(path);
 ```
 
-Если файл не удалось найти, выводим в консоль сообщение об ошибке
+- `Если файл не удалось найти, выводим в консоль сообщение об ошибке`
 ```C++
 if (!fin.is_open())
 {
