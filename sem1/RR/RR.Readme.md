@@ -136,7 +136,7 @@ int main()
 
 }
 ```
-## Разбор кода:
+## <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Italic&weight=500&size=24&pause=1000&color=D740F7&width=435&lines=%D0%A0%D0%B0%D0%B7%D0%B1%D0%BE%D1%80+%D0%BA%D0%BE%D0%B4%D0%B0" alt="Typing SVG" /></a>
 
 Подключаем библиотеку для работы с файлами и пространство имён std 
 ```C++
