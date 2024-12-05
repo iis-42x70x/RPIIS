@@ -24,7 +24,7 @@
 ## Результат 
 batch:
 
-
+<img src="photo_bat.jpg" >
 
 bash:
 
