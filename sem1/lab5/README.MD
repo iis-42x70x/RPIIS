@@ -19,10 +19,10 @@
 * `TARGET_DIR` - значением первого аргумента.
 ## Пояснения L
  прописываем это в консоль:
-$cd Documents
-$cd пиоивис
-$touch pm.sh
-$bash pm.sh/home/masha/Documents/пиоивис/ыыы
+* $cd Documents
+* $cd пиоивис
+* $touch pm.sh
+* $bash pm.sh/home/masha/Documents/пиоивис/ыыы
 
 
 ## Среда разработки
