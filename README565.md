@@ -86,51 +86,35 @@ fi
 @echo off
 setlocal enabledelayedexpansion
 
-:: Проверка наличия двух аргументов
-if "%~1"=="" (
-    echo Использование: %0 ^<путь_к_файлу1^> ^<путь_к_файлу2^>
-    exit /b 1
-)
-if "%~2"=="" (
-    echo Использование: %0 ^<путь_к_файлу1^> ^<путь_к_файлу2^>
-    exit /b 1
-)
+set /p path="Vvedite pyt k failum - "
+echo %path%
 
-set "file1=%~1"
-set "file2=%~2"
 
-:: Проверка существования файлов
-if not exist "!file1!" (
-    echo Один или оба файла не существуют.
-    exit /b 1
-)
-if not exist "!file2!" (
-    echo Один или оба файла не существуют.
-    exit /b 1
-)
 
 :: Подсчет строк в файлах
-for /f %%A in ('find /c /v "" ^< "!file1!"') do set lines1=%%A
-for /f %%A in ('find /c /v "" ^< "!file2!"') do set lines2=%%A
+cd /d "%path%"
+for /f %%A in ('find /c /v "" ^< "%path%/file1.txt"') do set lines1=%%A
+
+cd /d "%path2%"
+for /f %%A in ('find /c /v "" ^< "%path%/file2.txt"') do set lines2=%%A
 
 if !lines1! equ !lines2! (
-    echo Количество строк одинаковое
+    echo Kolichestvo strok odinakovoe
 ) else (
-    echo Количество строк разное
+    echo Kolichestvo strok raznoe )
 
     :: Подсчет слов в файлах
-    for /f %%A in ('find /v "" ^< "!file1!" ^| find /c /v ""') do set words1=%%A
-    for /f %%A in ('find /v "" ^< "!file2!" ^| find /c /v ""') do set words2=%%A
+    for /f %%A in ('find /v "" ^< "%path%/file1.txt" ^| find /c /v ""') do set words1=%%A
+    for /f %%A in ('find /v "" ^< "%path%/file2.txt" ^| find /c /v ""') do set words2=%%A
 
     if !words1! equ !words2! (
-        echo Количество слов одинаковое
+        echo Kolichestvo clov odinakovoe
     ) else (
-        echo Количество слов разное
+        echo Kolichestvo clov raznoe
     )
 
     :: Завершение программы через 7 секунд
     timeout /t 7 >nul
-)
 
 ```
 Переменные: file1,file2 - имя файлов 
@@ -138,4 +122,5 @@ if !lines1! equ !lines2! (
 Чтобы создать bat file необходимо: 
 В консоли вввеисти :
 ``` compare_files.bat C:path\to\file1.txt C:path\to\file2.txt```
+
 compare_files.bat-имя бат файла
