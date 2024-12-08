@@ -6,13 +6,13 @@
 ♥ Изучить основы теории графов, способы представления графов, базовые алгоритмы для работы с графам. ♥
 
 ---
-### <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=24&pause=1000&color=D740F7&random=false&width=435&lines=%D0%97%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5" alt="Typing SVG" /></a>
+### Задание
 >*☆ 1.8 определить вид графа ☆*
 
 Реализовать на С++ код, определяющий двусвязный граф. Граф представлен в виде матрицы инцидентности.
 
 ---
-### <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=24&pause=1000&color=D740F7&random=false&width=435&lines=%D0%9A%D0%BB%D1%8E%D1%87%D0%B5%D0%B2%D1%8B%D0%B5+%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D1%8F" alt="Typing SVG" /></a>
+### Ключевые понятия 
 
 * $\color{violet}{\textsf {Граф }}$  -  математическая абстракция реальной системы любой природы, объекты которой обладают парными связями.
 (совокупность точек, соединенных линиями. Точки называются вершинами, или узлами, а линии – ребрами, или дугами.)
@@ -23,116 +23,10 @@
 
 * $\color{violet}{\textsf{ Двусвязный граф }}$ - связный и неделимый граф в том смысле, что удаление любой вершины не приведёт к потере связности.
 
-## <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Italic&weight=500&size=24&pause=1000&color=D740F7&width=435&lines=%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC+%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F" alt="Typing SVG" /></a>
+## Решение
 
 На вход алгоритму подаётся матрица инцидентности. По ней необходимо проверить, инцидентна ли каждая вершина как минимум двум рёбрам. 
 
-## <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Italic&weight=500&size=24&pause=1000&color=D740F7&width=435&lines=%D0%A0%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F+%D0%BD%D0%B0+%D0%A1%2B%2B" alt="Typing SVG" /></a>
-```C++
-#include <iostream>
-#include <fstream>
-using namespace std;
-
-int main()
-{
-	setlocale(LC_ALL, "RUSSIAN");
-	string path = "matrix.txt";
-	ifstream fin;
-	fin.open(path);
-	if (!fin.is_open())
-	{
-		cout << "Файл не найлен\n";
-	}
-	else
-	{
-        int count = 0;
-        int temp;
-
-        while (!fin.eof())
-        {
-            fin >> temp;
-            count++;
-        }
-        
-        fin.seekg(0, ios::beg);
-        fin.clear();
-
-        
-        int count_space = 0;
-        char symbol;
-        while (!fin.eof())
-        {           
-            fin.get(symbol);
-            if (symbol == ' ') 
-                count_space++;
-            if (symbol == '\n')
-                break;
-        }
-        
-
-        
-        fin.seekg(0, ios::beg);
-        fin.clear();
-
-        
-
-        int rows = count / (count_space + 1);
-        int columns = count_space + 1;
-
-        double** matrix;
-        matrix = new double* [rows];
-        for (int i = 0; i < rows; i++)
-            matrix[i] = new double[columns];
-
-        
-        for (int i = 0; i < rows; i++)
-            for (int j = 0; j < columns; j++)
-                fin >> matrix[i][j];
-
-        
-        for (int i = 0; i < rows; i++)
-        {
-            for (int j = 0; j < columns; j++)
-                cout << matrix[i][j] << "\t";
-            cout << "\n";
-        }
-
-
-        bool check2sv = true;        
-        for (int i = 0; i < rows; i++) 
-        {
-            int count1 = 0;
-            for (int j = 0; j < columns; j++)
-            {
-                if (matrix[i][j] == 1)
-                {
-                    count1++;                   
-                }
-                
-            }
-            if (count1 < 2) {
-                
-                check2sv = false;
-            }
-        }
-
-        if (check2sv != false)
-        {
-            cout << "Граф двусвязный\n";
-        }
-        else
-        {
-            cout << "Граф не двусвязный\n";
-        }
-        
-
-        for (int i = 0; i < rows; i++)
-            delete[] matrix[i];
-        delete[] matrix;
-
-        fin.close();
-        
-	}
 
 }
 ```
