@@ -1,0 +1,80 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+using namespace std;
+
+void DFS(int **MS, int n, int v, vector<bool> &was) {
+    was[v] = true;
+    for (int i = 0; i < n; i++) {
+        if (MS[v][i] == 1 && !was[i]) {
+            DFS(MS, n, i, was);
+        }
+    }
+}
+
+bool sv(int **MS, int n) {
+    vector<bool> was(n, false);  
+    DFS(MS, n, 0, was);  
+    for (int i = 0; i < n; i++) {
+        if (!was[i]) {
+            return false;
+        }
+    }
+    return true; 
+}
+
+bool chet(int **MS, int n) {
+    for (int i = 0; i < n; i++) {
+        int d = 0; 
+        for (int j = 0; j < n; j++) {
+            d += MS[i][j];  
+        }
+        if (d % 2 != 0) {  
+            return false;
+        }
+    }
+    return true;  
+}
+
+int main() {
+    ifstream inputF("matrix.txt");
+    string line;
+    getline(inputF, line);
+    int n = line.size();  
+    if (n < 2) {
+        cout << "Error. 1 is not correct matrix" << endl; 
+    }
+    int **MS = new int *[n];
+    for (int i = 0; i < n; i++) {
+        MS[i] = new int[n]; 
+    }
+    MS[0][0] = line[0] - '0';  
+    for (int j = 1; j < n; j++) {
+        MS[0][j] = line[j] - '0';
+    }
+    for (int i = 1; i < n; i++) {
+        getline(inputF, line); 
+        for (int j = 0; j < n; j++) {
+            MS[i][j] = line[j] - '0';  
+        }
+    }
+    inputF.close();  
+    cout << "Matrix:" << endl;
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            cout << MS[i][j] << " ";
+        }
+        cout << endl;
+    }
+    if (chet(MS, n) && sv(MS, n)) {
+        cout << "EULER CIRCLE EXISTS";
+    }
+    else {
+        cout << "NO Euler Circle";
+    }
+    for (int i = 0; i < n; ++i) {
+        delete[] MS[i];
+    }
+    delete[] MS;
+}

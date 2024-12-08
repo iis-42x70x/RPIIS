@@ -1,0 +1,266 @@
+\documentclass[8pt,a4paper]{article}
+\usepackage{fontspec}
+\usepackage[top=1cm, left=2cm, right=2cm,bottom=2cm]{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\setmainfont{Times New Roman}
+\date{}
+\title{\textbf{Расчётная работа\\
+Теория графов}}
+
+\begin{document}
+\maketitle
+\vspace{-1cm} 
+
+\Large\textbf{Цели работы:} 
+\begin{itemize}
+ \item\Large Ознакомиться  с Теорией Графов.
+ \item\Large Ознакомиться с формами представления графа.
+ \item\Large Выполнить теоретико-графовую задачу.
+\end{itemize}
+
+\Large\textbf{Задачи:} 
+\begin{itemize}
+ \item\Large Реализовать алгоритм решения заданного варианта.
+ \item\Large Использовать язык C/C++ для решения поставленной задачи.
+ \item\Large Предоставить тест работы программы.
+\end{itemize}
+
+\Large\textbf{Вариант: 5.2} 
+\begin{itemize}
+ \item\Large Проверить неориентированный граф на наличие
+ 
+Эйлерова цикла.
+
+(представленный матрицой смежности - далее МС)
+\end{itemize}
+
+\newpage
+\vspace*{0.5cm}
+\begin{center}
+    \LARGE\textbf{Список ключевых понятий:} 
+\end{center}
+
+\begin{itemize}
+ \item\Large \textbf{Граф} — это представление
+некоторого множества \textbf{точек} и способа их соединения \textbf{(ребра)}; для наших
+целей метрические свойства несущественны. Исходя из этого мы можем представить
+рисунок 1.1 и 1.2 одним и тем же графом 1.3 либо 1.4. Хоть рисунок 1.4 не похож на 1.3, по существу они выражают ту же связь между точками, что и 1.3; 1.1; 1.2.
+\end{itemize}
+\begin{itemize}
+    \item \textbf{Степенью} вершины называется число ребер, концом которых
+является эта вершина. Степень вершины Т = 3. Степень вершины R = 2. Рис. 1.4.
+\end{itemize}
+\begin{itemize}
+    \item \textbf{Связный граф} - граф, в котором существует путь
+между любыми двумя вершинами.
+\end{itemize}
+\begin{itemize}
+    \item \textbf{МС} графа G с множеством вершин {v1, ..., vn}
+(соответствующей данной нумерации вершин) называется матрица А=(аij)
+размера n×n, в которой элемент аij равен числу ребер в G, соединяющих vi и vj.
+Например, на рис. 1.5 дана матрица смежности графа 1.3/ 1.4
+\end{itemize}
+\begin{itemize}
+    \item Графы, в которых существует
+цепь, кончающаяся в начальной вершине и проходящая ровно один раз
+через каждое ребро или через каждую вершину. Такие графы называются
+\textbf{эйлеровыми}. А цикл 1 - 2 - 3 - 1 есть \textbf{Эйлеров Цикл}. Достаточное основание для наличия такого цикла в графе: 1) Граф связан; 2) У каждой вершины чётная степень.Рисунок 1.6 - пример эйлерова графа
+\end{itemize}
+\begin{figure}[ht]
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[height=8cm]{image1.png} 
+\end{minipage}
+\hspace{0.2\textwidth}
+\begin{minipage}{0.35\textwidth}
+    \begin{center}
+\LARGE{        
+    0 1 1 1 0 \\
+    
+    1 0 1 1 0 \\
+    
+    1 1 0 1 1 \\
+    
+    1 1 1 0 1 \\
+    
+    0 0 1 1 0 \\
+}
+\par
+\end{center}
+\begin{center}
+    \small\textbf{{Рис. 1.5.}}
+\end{center}
+\end{minipage}
+\end{figure}
+\includegraphics[height=3cm]{img2.png}
+\small\caption\textbf{ Рис. 1.6.}
+
+\newpage
+\vspace*{0.5cm}
+\begin{center}
+    \LARGE\textbf{Описание алгоритма нахождения:} 
+\end{center}
+
+\begin{enumerate}[label=\bfseries\Large\arabic*, itemsep=2em]
+ \item\Large На вход программа получает файл с МС. 
+ \item\Large Программа считывает данные из файла и записывает их \par в 
+ двумерный динамический массив.
+ \item\Large МС в виде массива передаётся в функцию \textit{chet}.
+ \item\Large В \textit{chet} просиходит проверка степени каждой вершины, если все степени вершин чётные, то фунция вернёт \textit{true}.
+ \item\Large МС в виде массива передаётся в функцию \textit{sv}.
+ \item\Large \textit{sv} проверяет граф на связность вызывая фунцию \textit{DFS}.
+ \item\Large \textit{DFS - Depth First Search} (поиск в глубину) - Если из вершины 0 можно достичь все остальные вершины, то граф связан, и функция возвращает true. Если хотя бы одна вершина недостижима, возвращается false. Если между вершинами v и i существует ребро (то есть, в матрице смежности MS[v][i] равно 1) и вершина i ещё не была посещена (was[i] == false), то снова вызываем функцию \textit{DFS} с вершины i.
+ \item\Large Если оба условия выполнены (чётная степень всех вершин и связность графа) программа выводит сообщение \textit{"EULER CIRCLE EXISTS"}.
+\end{enumerate}
+
+\newpage
+\vspace*{0.4cm}
+\begin{center}
+    \LARGE\textbf{Тестовые примеры} 
+\end{center}
+
+\Large\textbf{Пример №1}
+\par
+МС для примера №1 рис. 1.7
+ \begin{figure}[ht]
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[height=6cm]{img3.png}
+\end{minipage}
+\hspace{0.2\textwidth}
+\begin{minipage}{0.35\textwidth}
+    \begin{center}
+\LARGE{        
+    0 1 1 \\ 
+    
+    1 0 1 \\
+    
+    1 1 0 \\
+
+}
+\par
+\end{center}
+\begin{center}
+    \small\textbf{{Рис. 1.7}}
+\end{center}
+\end{minipage}
+\Large\textbf{Результат работы программы:}
+
+\textit {Matrix:}
+
+\textit {0 1 1}
+
+\textit {1 0 1}
+
+\textit {1 1 0}
+
+\textit {EULER CIRCLE EXISTS}
+
+\end{figure}
+
+\Large\textbf{Пример №2}
+\par
+МС для примера №2 рис. 1.8
+ \begin{figure}[ht]
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[height=6cm]{img4.png}
+\end{minipage}
+\hspace{0.2\textwidth}
+\begin{minipage}{0.35\textwidth}
+    \begin{center}
+\LARGE{        
+    0 1 0 0\\ 
+    
+    1 0 0 0\\
+    
+    0 0 0 0 \\
+
+    0 0 0 0\\
+
+}
+\par
+\end{center}
+\begin{center}
+    \small\textbf{{Рис. 1.8}}
+\end{center}
+\end{minipage}
+\Large\textbf{Результат работы программы:}
+
+\textit {Matrix:}
+
+\textit {0 1 0 0}
+
+\textit {1 0 0 0}
+
+\textit {0 0 0 0}
+
+\textit {0 0 0 0}
+
+\textit {NO Euler Circle}
+
+\end{figure}
+
+\newpage
+
+\Large\textbf{Пример №3}
+\par
+МС для примера №3 рис. 1.9
+ \begin{figure}[ht]
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[height=6cm]{img5.png}
+\end{minipage}
+\hspace{0.2\textwidth}
+\begin{minipage}{0.35\textwidth}
+    \begin{center}
+\LARGE{        
+    0 1 1 1 0\\ 
+    
+    1 0 1 1 0\\
+    
+    1 1 0 1 1\\
+
+    1 1 1 0 1\\
+
+    0 0 1 1 0\\
+}
+\par
+\end{center}
+\begin{center}
+    \small\textbf{{Рис. 1.9}}
+\end{center}
+\end{minipage}
+\Large\textbf{Результат работы программы:}
+
+\textit {Matrix:}
+
+\textit {0 1 1 1 0}
+
+\textit {1 0 1 1 0}
+
+\textit {1 1 0 1 1}
+
+\textit {1 1 1 0 1}
+
+\textit {0 0 1 1 0}
+
+\textit {NO Euler Circle}
+
+\end{figure}
+\begin{center}
+    \LARGE\textbf{Выводы}
+\end{center}
+В расчетной работе создали программу на языке С++, которая находит наличие Эйлерова Цикла в неориентированном графе на основании его матрицы смежности и логических операций.
+
+\vspace*{0.5cm}
+
+\Large\textbf{Использованная литература:}
+\begin{itemize}
+    \item \href{https://ikfia.ysn.ru/wp-content/uploads/2018/01/Uilson1977ru.pdf}{Введение в Теорию Графов. Р. Уилсон}
+    \item \href{https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/}{Depth First Search or DFS for a Graph}
+    \item \href{https://graphonline.ru/}{Работа с графами онлайн}
+\end{itemize}
+\end{document}
