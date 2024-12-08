@@ -27,26 +27,7 @@
 
 На вход алгоритму подаётся матрица инцидентности. По ней необходимо проверить, инцидентна ли каждая вершина как минимум двум рёбрам. 
 
-
-}
-```
-## <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Italic&weight=500&size=24&pause=1000&color=D740F7&width=435&lines=%D0%A0%D0%B0%D0%B7%D0%B1%D0%BE%D1%80+%D0%BA%D0%BE%D0%B4%D0%B0" alt="Typing SVG" /></a>
-
-- `Подключаем библиотеку для работы с файлами и пространство имён std`
-```C++
-#include <iostream>
-#include <fstream>
-using namespace std;
-```
-
-- `Устанавливаем русскую локализацию, создаём переменную для пути к файлу и для самого файла`
-```C++
-setlocale(LC_ALL, "RUSSIAN");
-string path = "matrix.txt";
-ifstream fin;
-fin.open(path);
-```
-
+* Разбор кода
 - `Если файл не удалось найти, выводим в консоль сообщение об ошибке`
 ```C++
 if (!fin.is_open())
@@ -223,7 +204,7 @@ $\color{light_blue}{\textsf { Матрица 3: }}$
 
 ![result3](https://github.com/iis-32170x/RPIIS/blob/Давыдов_Р/RR/Tests/output3.PNG)
 
-## <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Italic&weight=500&size=24&pause=1000&color=D740F7&width=435&lines=%D0%92%D1%8B%D0%B2%D0%BE%D0%B4%D1%8B" alt="Typing SVG" /></a>
+## Выводы
 В результате выполнения расчётной работы приобрёл следующие навыки:
 
 * $\color{violet}{\textsf { Изучил основы теории графов }}$
