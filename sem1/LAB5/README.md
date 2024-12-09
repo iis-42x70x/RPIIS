@@ -13,7 +13,7 @@
 
 
 ## Bash файл
-- ### Код программы :computer:
+- ### Код
 ```bash
 #!/bin/bash
 
@@ -47,14 +47,14 @@ echo "$random_values" | sort -nr > result.txt
 echo "Results have been written to result.txt"
 ```
 ## Вспомогательный Bash файл
-- ### Код программы :computer:
+- ### Код
 ```bash
 #!/bin/bash
 echo $((RANDOM % 100 + 1))
 ```
 
 ## Batch файл
-- ### Код программы :computer:
+- ### Код
 ```batch
 @echo off
 setlocal enabledelayedexpansion
@@ -87,7 +87,7 @@ echo Random values written to result.txt.
 exit /b
 ```
 ## Вспомогательный Batch файл
-- ### Код программы :computer:
+- ### Код
 ```batch
 @echo off
 set /a "rand=%random% * 1000 / 32768 + 1"
