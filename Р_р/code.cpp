@@ -1,56 +1,72 @@
 #include <iostream>
 #include <vector>
-
 using namespace std;
-
-int countChords(vector<vector<int>> incidenceMatrix) {
-    int n = incidenceMatrix.size();
-    int chords = 0;
-
-    for (int i = 0; i < n; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (incidenceMatrix[i][j] == 0) {
-                int k = -1;
-                for (int l = 0; l < n; l++) {
-                    if (incidenceMatrix[i][l] == 1 && incidenceMatrix[j][l] == 1) {
-                        k = l;
-                        break;
-                    }
-                }
-
-                if (k != -1) {
-                    bool isChord = true;
-                    for (int m = 0; m < n; m++) {
-                        if (m != i && m != j && incidenceMatrix[i][m] == 1 && incidenceMatrix[j][m] == 1 && incidenceMatrix[k][m] == 1) {
-                            isChord = false;
-                            break;
-                        }
-                    }
-
-                    if (isChord) {
-                        chords++;
-                    }
-                }
-            }
-        }
-    }
-    return chords;
-}
-
+const int MAX_NODES = 100;
 int main() {
-    setlocale(LC_ALL, "RU");
-    vector<vector<int>> incidenceMatrix = {
-        {1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0},
-        {1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
-        {0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1},
-        {0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-        {0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0},
-        {0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0},
-        {0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0}
-    };
+	setlocale(LC_ALL, "RU");
+	int nodes, edges;
+	cout << "Введите количество вершин и рёбер: ";
+	cin >> nodes >> edges;
+	vector<vector<int>> incidenceMatrix(nodes, vector<int>(edges));
+	cout << "Введите матрицу инцидентности: ";
+	for (int i = 0; i < nodes; i++) {
+		for (int j = 0; j < edges; j++) {
+			cin >> incidenceMatrix[i][j];
+		}
+	}
+	vector<int> edgeStatus(edges, true);
+	vector<vector<int>> cycles;
+	for (int i = 0; i < edges; i++) {
+		if (edgeStatus[i]) {
+			vector<int> cycle;
+			int current = i;
+			vector<bool> visited(edges, false);
+			do {
+				int node1 = -1, node2 = -1;
+				for (int j = 0; j < nodes; j++) {
+					if (incidenceMatrix[j][current] == 1) {
+						if (node1 == -1) {
+							node1 = j;
+						}
+						else {
+							node2 = j;
+							break;
+						}
+					}
+				}
+				cycle.push_back(current);
+				visited[current] = true;
+				edgeStatus[current] = false;
+				for (int j = 0; j < edges; j++) {
 
-    int result = countChords(incidenceMatrix);
-    cout << "Число хорд в неориентированном графе: " << result << endl;
-    return 0;
+					if (visited[j]) {
+						continue;
+					}
+					if (incidenceMatrix[node1][j] == 1 || incidenceMatrix[node2][j] == 1) {
+						current = j;
+						break;
+					}
+				}
+			} while (current != i);
+			if (cycle.size() >= 4) {
+				cycles.push_back(cycle);
+			}
+		}
+	}
+	cout << "Циклы:\n";
+	for (int i = 0; i < cycles.size(); i++) {
+		cout << "Цикл " << i + 1 << ": ";
+		for (int j = 0; j < cycles[i].size(); j++) {
+			cout << cycles[i][j] << " ";
+		}
+		cout << endl;
+	}
+	cout << "Хорды:\n";
+	for (int i = 0; i < edges; i++) {
+		if (edgeStatus[i]) {
+			cout << i << " ";
+		}
+	}
+	cout << endl;
+	return 0;
 }
