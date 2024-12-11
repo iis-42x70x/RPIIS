@@ -27,7 +27,7 @@
 
 Графический пример обхода в ширину:
 
-<p><img scr="images/simplegraph.png"></p>
+<p><img src="images/simplegraph.png"></p>
 
 ## Алгоритм решения
 
@@ -41,7 +41,7 @@
 
 Исходный граф:
 
-<p><img scr="images/graph1.png"></p>
+<p><img src="images/graph1.png"></p>
 
 Теперь представим этот граф:
 
