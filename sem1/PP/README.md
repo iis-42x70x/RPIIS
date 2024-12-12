@@ -91,7 +91,6 @@
 
 using namespace std;
 
-// Функция для нахождения длины кратчайшего цикла
 int shortestCycle(vector<vector<int>>& adjMatrix, int numberofsize) {
     int minCycle = numeric_limits<int>::max();
 
@@ -143,7 +142,6 @@ int main() {
     int numberof_usl;
     inputFile >> numberof_usl;
 
-    // Считываем матрицу смежности
     vector<vector<int>> adjMatrix(numberof_usl, vector<int>(numberof_usl, 0));
     for (int i = 0; i < numberof_usl; i++) {
         for (int j = 0; j < numberof_usl; j++) {
@@ -153,7 +151,6 @@ int main() {
 
     inputFile.close();
 
-    // Находим обхват графа
     int cycleLength = shortestCycle(adjMatrix, numberof_usl);
     if (cycleLength == -1) {
         outputFile << "Обхват графа: бесконечность" << endl;
