@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\gitrep\\pioivis\\RPIIS\\sem1\\lab_rr\\source\\lab_rr\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DB7C509F-396A-4C84-ACF3-632AD648F3C6}|lab_rr\\lab_rr.vcxproj|E:\\gitrep\\pioivis\\RPIIS\\sem1\\lab_rr\\source\\lab_rr\\lab_rr\\lab_rr.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DB7C509F-396A-4C84-ACF3-632AD648F3C6}|lab_rr\\lab_rr.vcxproj|solutionrelative:lab_rr\\lab_rr.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "lab_rr.cpp",
+              "DocumentMoniker": "E:\\gitrep\\pioivis\\RPIIS\\sem1\\lab_rr\\source\\lab_rr\\lab_rr\\lab_rr.cpp",
+              "RelativeDocumentMoniker": "lab_rr\\lab_rr.cpp",
+              "ToolTip": "E:\\gitrep\\pioivis\\RPIIS\\sem1\\lab_rr\\source\\lab_rr\\lab_rr\\lab_rr.cpp",
+              "RelativeToolTip": "lab_rr\\lab_rr.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwCUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-04T09:39:50.261Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

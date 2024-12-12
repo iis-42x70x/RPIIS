@@ -1,0 +1,10 @@
+﻿  lab_rr.cpp
+E:\gitrep\pioivis\RPIIS\sem1\lab_rr\source\lab_rr\lab_rr\lab_rr.cpp(41,40): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+E:\gitrep\pioivis\RPIIS\sem1\lab_rr\source\lab_rr\lab_rr\lab_rr.cpp(42,50): warning C4267: аргумент: преобразование из "size_t" в "_Ty"; возможна потеря данных
+E:\gitrep\pioivis\RPIIS\sem1\lab_rr\source\lab_rr\lab_rr\lab_rr.cpp(42,50): warning C4267:         with
+E:\gitrep\pioivis\RPIIS\sem1\lab_rr\source\lab_rr\lab_rr\lab_rr.cpp(42,50): warning C4267:         [
+E:\gitrep\pioivis\RPIIS\sem1\lab_rr\source\lab_rr\lab_rr\lab_rr.cpp(42,50): warning C4267:             _Ty=int
+E:\gitrep\pioivis\RPIIS\sem1\lab_rr\source\lab_rr\lab_rr\lab_rr.cpp(42,50): warning C4267:         ]
+E:\gitrep\pioivis\RPIIS\sem1\lab_rr\source\lab_rr\lab_rr\lab_rr.cpp(47,27): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+E:\gitrep\pioivis\RPIIS\sem1\lab_rr\source\lab_rr\lab_rr\lab_rr.cpp(89,44): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+  lab_rr.vcxproj -> E:\gitrep\pioivis\RPIIS\sem1\lab_rr\source\lab_rr\x64\Debug\lab_rr.exe
