@@ -14,7 +14,9 @@
 
 ### Литература для изучения:
 * [selectel.ru](https://selectel.ru/blog/bat-file/)
+  
 * [habr.com](https://habr.com/ru/sandbox/168937/)
+  
 * [Гайд работы с Ubuntu и bash](https://youtube.com/playlist?list=PL0lO_mIqDDFUwVWvVitxG2oXA6a-Nq-Qq&si=2gRFrJWybrUjOdxC)
 
 ### Поставленная задача:
@@ -24,10 +26,12 @@
 
 ### Итоговые варианты:
 * [laba5.sh](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D0%B2%D0%BE%D1%80_%D0%93/sem1/laba5/laba5.sh)
+  
 * [laba5.bat](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D0%B2%D0%BE%D1%80_%D0%93/sem1/laba5/laba5.bat)
 
 ### Особенности bat:
 *В bat-файле "tokens=1,2 delims=," для получения только первого и второго значения(второе значение будет между первой и второй запятой) из ответа введённой далее команды
+
 *В случае если процесс запущен не пользователем, а системой - в строку "Пользователь:" записывается "System"
 
 ### Особенности bash:
