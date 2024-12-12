@@ -23,68 +23,6 @@
 3) Метод добавления рёбер
 4) Метод последовательного построения
 ## Выполнение расчётной работы
-## Задание графа матрицей смежности на С++
-```
-int input_graph(vector<vector<int>>& matr_adjacency_graph,int count_vert_inp){
-    matr_adjacency_graph.resize(count_vert_inp,vector<int>(count_vert_inp));
-    for (int i=0; i<count_vert_inp; i++) {
-        for (int j=0; j<count_vert_inp; j++) {
-            cin >> matr_adjacency_graph[i][j];
-            while (matr_adjacency_graph[i][j] !=1 &&matr_adjacency_graph[i][j]!=0) {
-                cerr << "Wrong input matrix! Input only 1 or 0!\n";
-                exit(1);
-            }
-        }
-    }
-    return 0;
-}
-```
-## Пример алгоритма проверки графа на планарность на С++
-```
-int is_planar_graph(vector<vector<int>>matr_adj,int count_vertex){
-    int count_edge=0;
-    if(count_vertex<5)cout << "Graph is planar\n";
-    if (count_vertex>=5) {
-        for (int a=0; a<count_vertex-4; a++) {
-            for (int b=0; b<count_vertex-4; b++) {
-                for (int i=0; i<5; i++) {
-                    for (int j=i+1; j<5; j++) {
-                        if (matr_adj[i+a][b+j]==1 && matr_adj[b+j][a+i]==1) {
-                            count_edge++;
-                        }
-                        if (count_edge==10) {
-                            cout << "Graph is non-planar\n";
-                            return 0;
-                        }
-                    }
-                }
-//                cout << k<<" "<<b<<" "<< count_edge<<"\n";
-                count_edge=0;
-            }
-        }
-        for (int x=0; x<count_vertex-5; x++) {
-            for (int y=0; y<count_vertex-5; y++) {
-                for (int i=0; i<3; i++) {
-                    for (int j=0; j<3; j++) {
-                        if (matr_adj[x+5-i][y+j]==1 &&matr_adj[x+i][y+3+j]) {
-                            count_edge++;
-                            if (count_edge==9) {
-                                cout << "Graph is non-planar\n";
-                                return 0;
-                            }
-//                            cout << x<< " "<<y << " "<< count_edge<<"\n";
-                        }
-                    }
-                }
-                count_edge=0;
-            }
-        }
-    }
-    cout << "Graph is planar\n"<<count_edge;
-    
-    return 0;
-}
-```
 ## Пример выполнения кода
 * Пример для графа К5\
 Матрица смежности
