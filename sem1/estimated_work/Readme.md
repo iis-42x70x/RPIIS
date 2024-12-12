@@ -26,7 +26,7 @@
         
     - [*2.2 Реализация алгоритма*](#реализация-алгоритма)
 
-- [*4 Выводы*](#выводы)
+- [*3 Выводы*](#выводы)
 
 - [*Список литературы*](#список-литературы)
 
@@ -91,7 +91,7 @@
 
 <p align="center">
 <image
-  src="graphs/graph(5).png"
+  src="graphs/graph (5).png"
   caption="Транспонированный граф"
   style="width: 400px;">
   <p align="center">Рис. 2</p>
@@ -117,7 +117,7 @@
 
 <p align="center">
 <image
-  src="graphs/graph(1).png"
+  src="graphs/graph (1).png"
   style="width: 400px;">
   <p align="center">Граф №1</p>
 </p>
@@ -136,7 +136,7 @@
 
 <p align="center">
 <image
-  src="graphs/graph(3).png"
+  src="graphs/graph (3).png"
   style="width: 400px;">
   <p align="center">Граф №2</p>
 </p>
@@ -154,7 +154,7 @@
 
 <p align="center">
 <image
-  src="graphs/graph(2).png"
+  src="graphs/graph (2).png"
   style="width: 400px;">
   <p align="center">Граф №3</p>
 </p>
@@ -175,7 +175,7 @@
 
 <p align="center">
 <image
-  src="graphs/graph(4).png"
+  src="graphs/graph (4).png"
   style="width: 400px;">
   <p align="center">Граф №4</p>
 </p>
