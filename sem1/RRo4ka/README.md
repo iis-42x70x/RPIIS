@@ -29,7 +29,7 @@
    
 Пример кода:
 
-* [laba5.sh](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D0%B2%D0%BE%D1%80_%D0%93/sem1/RRo4ka/laba5.sh)
+* [graph.sh](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D0%B2%D0%BE%D1%80_%D0%93/sem1/RRo4ka/laba5.sh)
 
 
 ### Пример Работы программы
