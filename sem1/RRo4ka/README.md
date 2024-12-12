@@ -40,7 +40,7 @@
 ![Image](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D0%B2%D0%BE%D1%80_%D0%93/sem1/RRo4ka/example4.png)
 ![Image](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D0%B2%D0%BE%D1%80_%D0%93/sem1/RRo4ka/example3.png)
 
-### Изображение графов K<sub>5</sub> и K<sub>3,3</sub> графически
+### Представление графов K<sub>5</sub> и K<sub>3,3</sub> графически
 
 ![Image](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D0%B2%D0%BE%D1%80_%D0%93/sem1/RRo4ka/k33k5.png)
 
