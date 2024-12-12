@@ -168,9 +168,11 @@ std::string example(short int x) {
     }
     system("cls");
     if (is_planar(matrix, p, q)) {
+        delete[] matrix;
         return "The graph is planar";
     }
     else {
+        delete[] matrix;
         return "The graph is not planar";
     }
 }
