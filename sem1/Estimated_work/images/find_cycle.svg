@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172.67 139.65">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #fff;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-family: Arial-BoldMT, Arial;
+        font-size: 18px;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g id="_Слой_1-2" data-name="Слой 1">
+    <circle class="cls-1" cx="15.17" cy="44.81" r="14.17"/>
+    <text class="cls-2" transform="translate(10.17 51.25)"><tspan x="0" y="0">1</tspan></text>
+    <circle class="cls-1" cx="86.33" cy="44.81" r="14.17"/>
+    <text class="cls-2" transform="translate(81.33 51.25)"><tspan x="0" y="0">2</tspan></text>
+    <circle class="cls-1" cx="157.49" cy="44.81" r="14.17"/>
+    <text class="cls-2" transform="translate(152.49 51.25)"><tspan x="0" y="0">3</tspan></text>
+    <circle class="cls-1" cx="157.49" cy="124.48" r="14.17"/>
+    <text class="cls-2" transform="translate(152.49 130.92)"><tspan x="0" y="0">4</tspan></text>
+    <circle class="cls-1" cx="86.33" cy="124.48" r="14.17"/>
+    <text class="cls-2" transform="translate(81.33 130.92)"><tspan x="0" y="0">5</tspan></text>
+    <circle class="cls-1" cx="15.17" cy="124.48" r="14.17"/>
+    <text class="cls-2" transform="translate(10.17 130.92)"><tspan x="0" y="0">6</tspan></text>
+    <line class="cls-1" x1="157.49" y1="58.98" x2="157.49" y2="110.31"/>
+    <line class="cls-1" x1="143.32" y1="44.81" x2="100.51" y2="44.81"/>
+    <line class="cls-1" x1="72.16" y1="44.81" x2="29.35" y2="44.81"/>
+    <line class="cls-1" x1="15.17" y1="58.98" x2="15.17" y2="110.31"/>
+    <line class="cls-1" x1="29.35" y1="124.48" x2="72.16" y2="124.48"/>
+    <line class="cls-1" x1="100.51" y1="124.48" x2="143.32" y2="124.48"/>
+    <text class="cls-2" transform="translate(78.31 89.86)"><tspan x="0" y="0">Г2</tspan></text>
+    <text class="cls-2" transform="translate(104.44 15.94)"><tspan x="0" y="0">Г1</tspan></text>
+  </g>
+</svg>
