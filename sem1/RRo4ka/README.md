@@ -277,7 +277,7 @@ int main() {
 
 ### Пример Работы программы
 
-![Image](https://github.com/iis-42x70x/RPIIS/edit/Говор_Г/sem1/RRo4ka/example.png)
+![Image](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D0%B2%D0%BE%D1%80_%D0%93/sem1/RRo4ka/example.png)
 
 
 
