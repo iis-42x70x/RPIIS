@@ -17,6 +17,7 @@
 ## Ход работы:
 Код для Windows:
 ![picW](./pictures/picture_w.PNG)
+
 Код для Linux:
 ![picL](./pictures/picture_l.PNG) 
 ## Основные команды:
