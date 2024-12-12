@@ -86,7 +86,7 @@ int is_planar_graph(vector<vector<int>>matr_adj,int count_vertex){
 }
 ```
 ## Пример выполнения кода
-* Пример для графа К5
+* Пример для графа К5\
 Матрица смежности
 ```
 0 1 1 1 1
@@ -96,7 +96,7 @@ int is_planar_graph(vector<vector<int>>matr_adj,int count_vertex){
 1 1 1 1 0
 ```
 ![Граф К5](https://github.com/iis-42x70x/RPIIS/blob/Бурбас_Д/sem1/RR/images/graph_nonplanar_k5.png)
-* Пример для графа К3,3
+* Пример для графа К3,3\
 Матрица смежности
 ```
 0 0 0 1 1 1
@@ -107,7 +107,7 @@ int is_planar_graph(vector<vector<int>>matr_adj,int count_vertex){
 1 1 1 0 0 0
 ```
 ![Граф К3,3](https://github.com/iis-42x70x/RPIIS/blob/Бурбас_Д/sem1/RR/images/graph_nonplanar_k3.png)
-* Пример для графа содержащего К3,3
+* Пример для графа содержащего К3,3\
 Матрица смежности
 ```
 0 0 1 0 1 1 0 1 1 1 
@@ -122,7 +122,7 @@ int is_planar_graph(vector<vector<int>>matr_adj,int count_vertex){
 1 0 1 0 1 1 1 1 1 0
 ```
 ![Граф содержащий К3,3](https://github.com/iis-42x70x/RPIIS/blob/Бурбас_Д/sem1/RR/images/graph_non_incl_k3.png)
-* Пример для планарного графа
+* Пример для планарного графа\
 Матрица смежности
 ```
 0 1 0 1 0
@@ -133,7 +133,7 @@ int is_planar_graph(vector<vector<int>>matr_adj,int count_vertex){
 ```
 ![Планарный граф](https://github.com/iis-42x70x/RPIIS/blob/Бурбас_Д/sem1/RR/images/planar_graph.png)
 ## Вывод
-В результате выполнения рассчетной работы я познакомился и научился работать с такой структурой данных, как графы, а также научился производить объединение графов.
+В результате выполнения рассчетной работы я познакомился и научился работать с такой структурой данных, как графы, а также научился воспроизводить проверку планарности графов.
 ## Полезные источники
 * Wikipedia Теория графов [Электронный ресурс]. – Режим доступа: (https://ru.wikipedia.org/wiki/Теория_графов)
 * Habr Основы теории графов [Электронный ресурс]. – Режим доступа: (https://habr.com/en/companies/otus/articles/568026/)
