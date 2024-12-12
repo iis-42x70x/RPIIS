@@ -13,7 +13,7 @@
 Сверстать три страницы научной статьи с использованием системы верстки текстов TeX. На [странице](https://proc.ostis.net/proc/Proceedings%20OSTIS-2024.pdf) необходимо взять доклад, соответствующий варианту индивидуального задания.
 Для верстки документа рекомендованно использовать online редактор [Overleaf](https://www.overleaf.com) или любые другие LaTeX редакторы.
 
-![](./Photo/Overlief.png)
+![](./Photo/Overleaf.png)
 
 ## Основные команды:
 
@@ -23,9 +23,9 @@
 * `\columnbreak`-конец столбца
 * `\begin{itemize}...\end{itemize}`- создание не пронумерованного списка
 
-![](./Photo/LaTeX.png)
+![](./Photo/Latex.png)
 
-![](./Photo/LaTeX1.png)
+![](./Photo/Latex1.png)
 
 ## Вывод 
 
