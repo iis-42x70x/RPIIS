@@ -41,7 +41,7 @@
 
 Исходный граф:
 
-<p><img src="images/graph1.png"></p>
+<p><img src="images/graph52.png"></p>
 
 Теперь представим этот граф:
 
