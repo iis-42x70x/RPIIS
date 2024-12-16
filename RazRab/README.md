@@ -1,154 +1,64 @@
 В рамках расчётной работы необходимо было сделать 2.13 (системой смежности) заданиие из  [сборника](https://drive.google.com/file/d/1-rSQZex8jW-2DlY2kko18gU1oUAtEGHl/view) заданий.
+2. Определить числовую характеристику графа: 13. (3) Обхват орграфа cc(си).
 
 Выполнялась  РР в VisualStudio 2022. Результат выполнения лабораторной добавлен в ветку.
 
+Ориентированный граф (кратко орграф) — граф, рёбрам которого присвоено направление. Направленные рёбра именуются также дугами, а в некоторых источниках и просто рёбрами. Граф, ни одному ребру которого не присвоено направление, называется неориентированным графом или неорграфом.
+
+Обхват графа — длина наименьшего цикла, содержащегося в данном графе. Если граф не содержит циклов (то есть является ациклическим графом), его обхват по определению равен бесконечности. 
+
+Программа нахождения обхвата орграфа находилась при помощи поиска в глубину (DFS, Depth-First Search) — это алгоритм для обхода или поиска в графах, включая орграфы (ориентированные графы). Основная идея заключается в том, чтобы идти как можно глубже по каждому пути, прежде чем возвращаться назад и исследовать другие пути. 
+Основные шаги и принципы работы DFS: Начало с Узла: 
+
+1)Выбрать начальный узел (вершину) графа.
+
+2)Посещение Узла: Пометить узел как посещённый.
+
+3)Рекурсивное Посещение Соседей: Для каждого соседнего узла, если он не был посещён, рекурсивно примените к нему DFS.
+
+4)Возврат: Когда все соседи узла посещены, вернутса к предыдущему узлу и продолжить обход.
 
 
-### Код программы в :
-```
-#include <iostream>
-#include <limits.h>
-using namespace std;
 
-const int MV = 1000;
-int ms[MV][MV];
-bool visited[MV];
-int dist[MV]; 
-
-void DFS(int v, int n, int start, int& minCycle) {
-    visited[v] = true;
-    for (int i = 0; i < n; i++) {
-        if (ms[v][i] == 1) {
-            if (!visited[i]) {
-                dist[i] = dist[v] + 1;
-                DFS(i, n, start, minCycle);
-            }
-            else if (i == start) {
-                minCycle = min(minCycle, dist[v] + 1);
-            }
-        }
-    }
-    visited[v] = false;
-}
-
-int main() {
-    int n, e;
-    cout << "Vvedite kolichestvo vershin: ";
-    cin >> n;
-    cout << "Vvedite kolichestvo reber: ";
-    cin >> e;
-
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            ms[i][j] = 0;
-        }
-    }
-
-    cout << "Vvedite rebra (format: vershina1 vershina2):" << endl;
-    for (int i = 0; i < e; i++) {
-        int u, v;
-        cin >> u >> v;
-        ms[u][v] = 1; 
-    }
-
-    int minCycle = INT_MAX;
-
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            visited[j] = false;
-            dist[j] = 0;
-        }
-        DFS(i, n, i, minCycle);
-    }
-
-    if (minCycle == INT_MAX) {
-        cout << "Obhvat ne nayden." << endl;
-    }
-    else {
-        cout << "Obhvat orgrafa: " << minCycle << endl;
-    }
-
-    return 0;
-}
-
-```
-
-
-#include <iostream>
-#include <limits.h>
-using namespace std;
-Подключаем библиотеки для использования cout, sin. И для использования лимитов таких как INT_MAX.
-
-const int MV = 1000;
-int ms[MV][MV];
-bool visited[MV];
-int dist[MV]; 
-Объявляем переменные: максимальное количество вершин, матрицу смежности, массив, который хранит значение посещённости, и массив дистанции.
-
-void DFS(int v, int n, int start, int& minCycle) {
-    visited[v] = true;
-    for (int i = 0; i < n; i++) {
-        if (ms[v][i] == 1) {
-            if (!visited[i]) {
-                dist[i] = dist[v] + 1;
-                DFS(i, n, start, minCycle);
-            }
-            else if (i == start) {
-                minCycle = min(minCycle, dist[v] + 1);
-            }
-        }
-    }
-    visited[v] = false;
-}
-
-Этот код работает по принципу поиска в глубину A.K.A. DFS(Depth First Search).
-
-int main() {
-    int n, e;
-    cout << "Vvedite kolichestvo vershin: ";
-    cin >> n;
-    cout << "Vvedite kolichestvo reber: ";
-    cin >> e;
-
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            ms[i][j] = 0;
-        }
-    }
-Вводим количество вершин и рёбер. И инициализируем матрицу смежности.
-
-cout << "Vvedite rebra (format: vershina1 vershina2):" << endl;
-for (int i = 0; i < e; i++) {
-    int u, v;
-    cin >> u >> v;
-    ms[u][v] = 1; 
-}
-Вводим список смежности, и приравнием МС к 1.
-
-    int minCycle = INT_MAX;
-
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            visited[j] = false;
-            dist[j] = 0;
-        }
-        DFS(i, n, i, minCycle);
-    }
-
-    if (minCycle == INT_MAX) {
-        cout << "Obkhvat ne nayden." << endl;
-    }
-    else {
-        cout << "Obkhvat orgrafa: " << minCycle << endl;
-    }
-
-    return 0;
-}
-Инициализация массивов, и вывод результатов.
-
- Вот для примера орграф:
+ Пример 1:
  <p  align="center"><img src="picks/1.png" ></p>
 
- И вот что выдаёт. Ответ правильный.
+ Ответ:
  <p  align="center"><img src="picks/2.png" ></p>
+
+
+ Пример 2:
+ <p  align="center"><img src="picks/3.png" ></p>
+
+ Ответ:
+ <p  align="center"><img src="picks/4.png" ></p>
+
+
+ Пример 3:
+ <p  align="center"><img src="picks/5.png" ></p>
+
+ Ответ:
+ <p  align="center"><img src="picks/6.png" ></p>
+
+
+ Пример 4:
+ <p  align="center"><img src="picks/7.png" ></p>
+
+ Ответ:
+ <p  align="center"><img src="picks/8.png" ></p>
+
+
+ Пример 5:
+ <p  align="center"><img src="picks/9.png" ></p>
+
+ Ответ:
+ <p  align="center"><img src="picks/10.png" ></p>
+
+
+
+Литературные источники:
+https://habr.com/ru/companies/otus/articles/568026/
+https://blog.skillfactory.ru/glossary/orientirovannyj-graf/
+https://youtu.be/3-XLRh2M5YI?si=sLVmw5h-6Y6qq7XK
+
 
