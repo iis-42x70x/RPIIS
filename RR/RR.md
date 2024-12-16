@@ -9,100 +9,110 @@
 Найти максимальный путь между заданными вершинами. 
 
 ### Вариант: 
-5.18 (матрица смежности)
+5.15 (матрица инцидентности)
 
 ### Определения:
 
-`Матрица смежности` — это квадратная целочисленная матрица размера n × n, в которой значение элемента a i, j равно числу рёбер из i-й вершины графа в j-ю вершину.
+`Матрица инцидентности` — одна из форм представления графа, в которой указываются связи между инцидентными элементами графа (ребро(дуга) и вершина). Столбцы матрицы соответствуют ребрам, строки — вершинам. Ненулевое значение в ячейке матрицы указывает связь между вершиной и ребром (их инцидентность).
+
+`Инцидентность` — понятие, используемое только в отношении ребра и вершины. Две вершины или два ребра не могут быть инцидентны.
 
 `Граф` — математическая абстракция реальной системы любой природы, объекты которой обладают парными связями. Граф как математический объект есть совокупность двух множеств — множества самих объектов, называемого множеством вершин, и множества их парных связей, называемого множеством рёбер. Элемент множества рёбер есть пара элементов множества вершин.
-
-`Взвешенный граф` - граф, в котором ребра имеют определенное значение(вес).
 
 `Неориентированный граф` - это граф, где рёбра не имеют направления, что делает связь между вершинами двусторонней.
 
 ### Алгоритм:
-1. Определить количество вершин.
-2. Создать и ввести матрицу инцидентности.
-3. Запросить начальную и конечную точку.
-3. Создать массив visited[] для отслеживания посещенных вершин.
-5. Проверить граф на неориентированность.
-6. Вызвать функцию, которая в глубину пройдется от начальной точки до конечной и вернет максимальный путь.
-7. Проверить есть ли связь между данными точками и вывести результат.
 
 ## Код программы:
 ```cpp
 #include <iostream>
 #include <vector>
-#include <limits.h>
+#include <algorithm>
 
 using namespace std;
 
-bool isneop(const vector<vector<int>>& graph) {
-    int n = graph.size();
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
-            if (graph[i][j] != graph[j][i]) {
-                return false; 
+// Функция для поиска мостов (DFS)
+
+void dfs(int v, int parent, vector<vector<int>>& adj, vector<int>& visited, vector<int>& tin, vector<int>& low, int& timer, vector<pair<int, int>>& bridges) {
+    visited[v] = 1;
+    tin[v] = low[v] = timer++;
+
+    for (int to : adj[v]) {
+        if (to == parent) continue; // Пропускаем ребро к родительской вершине
+        if (visited[to]) {
+            // Обновляем значение low, если "to" уже посещена
+            low[v] = min(low[v], tin[to]);
+        }
+        else {
+            dfs(to, v, adj, visited, tin, low, timer, bridges);
+            low[v] = min(low[v], low[to]);
+            if (low[to] > tin[v]) {
+                bridges.emplace_back(v, to);
             }
         }
     }
-    return true; 
 }
 
-void poisk(int start, int endt, const vector<vector<int>>& graph, vector<bool>& visit, int now, int& maxp) {
-    if (start == endt) {
-        maxp = max(maxp, now);
+// Преобразование матрицы инцидентности в список смежности
+vector<vector<int>> matrixToAdjList(const vector<vector<int>>& incMatrix) {
+    int n = incMatrix.size(); // Число вершин
+    int m = incMatrix[0].size(); // Число рёбер
+    vector<vector<int>> adj(n);
 
-        return;
-    }
-
-    visit[start] = true;
-
-    for (int i = 0; i < graph.size(); i++) {
-        if (!visit[i] && graph[start][i] > 0) { 
-            poisk(i, endt, graph, visit, now + graph[start][i], maxp);
+    for (int j = 0; j < m; ++j) {
+        int u = -1, v = -1;
+        for (int i = 0; i < n; ++i) {
+            if (incMatrix[i][j] == 1) {
+                if (u == -1) u = i;
+                else v = i;
+            }
+        }
+        if (u != -1 && v != -1) {
+            adj[u].push_back(v);
+            adj[v].push_back(u);
         }
     }
-
-    visit[start] = false; 
+    return adj;
 }
 
 int main() {
-    setlocale(LC_ALL, "Russian");
-    int n;
-    cout << "Введите количество вершин графа: ";
-    cin >> n;
+    int n, m;
+    setlocale(LC_ALL, "Rus");
+    cout << "Введите количество вершин и рёбер: ";
+    cin >> n >> m;
 
-    vector<vector<int>> graph(n, vector<int>(n));
-    cout << "Введите матрицу смежности:" << endl;
+    vector<vector<int>> incMatrix(n, vector<int>(m));
+    cout << "Введите матрицу инцидентности (строки - вершины, столбцы - рёбра):\n";
     for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
-            cin >> graph[i][j];
+        for (int j = 0; j < m; ++j) {
+            cin >> incMatrix[i][j];
         }
     }
-    if (!isneop(graph)) {
-        cout << "Граф не является неориентированным." << endl;
-        return 1;
+
+    // Преобразуем матрицу инцидентности в список смежности
+    vector<vector<int>> adj = matrixToAdjList(incMatrix);
+
+    // Подготовка переменных для алгоритма
+    vector<int> visited(n, 0), tin(n, -1), low(n, -1);
+    vector<pair<int, int>> bridges;
+    int timer = 0;
+
+    // Запускаем DFS для поиска мостов
+    for (int i = 0; i < n; ++i) {
+        if (!visited[i]) {
+            dfs(i, -1, adj, visited, tin, low, timer, bridges);
+        }
     }
-    int start, end;
-    cout << "Введите начальную и конечную вершину(счет начинается с 0): ";
-    cin >> start >> end;
 
-    vector<bool> visited(n, false);
-    int maxp = INT_MIN;
-
-    poisk(start, end, graph, visited, 0, maxp);
-
-    if (maxp == INT_MIN) {
-        cout << "Нет пути между вершинами " << start << " и " << end << "." << endl;
-    }
-    else {
-        cout << "Наибольший вес пути между вершинами " << start << " и " << end << ": " << maxp << endl;
+    // Вывод мостов
+    cout << "Мосты в графе:\n";
+    for (const auto& bridge : bridges) {
+        cout << bridge.first << " - " << bridge.second << "\n";
     }
 
     return 0;
 }
+
 ```
 ## Пример графа:
 ![](график1.png)
@@ -122,4 +132,5 @@ int main() {
 
  ## Вывод
  В результате выполнения данной работы изучил и применил базовые алгоритмы для работы с графами.
+  
   
