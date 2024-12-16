@@ -74,7 +74,9 @@ for /l %%i in (1,1,!totalFolders!) do (
 )
 
 echo Готово!
-## Shell-файл
+```
+
+## Batch-файл
 ```bash
 #!/bin/bash
 
@@ -135,3 +137,4 @@ for ((i = 1; i <= totalFolders; i++)); do
 done
 
 echo "Готово!"
+```
