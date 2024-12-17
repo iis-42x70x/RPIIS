@@ -42,8 +42,6 @@ import random
 
 class Graph:
     def __init__(self, girth):
-        if girth < 3:
-            raise ValueError("Длина цикла должна быть не менее 3.")
         self.girth = girth
         self.graph = nx.Graph()
         self.edges = []
@@ -51,22 +49,23 @@ class Graph:
 
     def create_nodes(self):
         self.picks = [k for k in range(1,self.girth - 1)]
-        for k in range(random.randint(1,4)):
-            self.picks.append(girth+k)
-        self.graph.add_nodes_from(self.picks)
 
     def create_circular_edges(self):
         self.edges.append((1, self.girth))
         for k in range(1, self.girth):
             self.edges.append((k, k + 1))
 
-    def add_nodes_and_edges(self):
-        add_random = random.choice(self.picks[1:-2])
-        for k in range(random.randint(1,4)):
+    def add_branches(self):
+        self.node1 = random.choice(self.picks)
+        self.node2 = random.choice(self.picks)
+        self.add_nodes = self.girth - abs(self.node1 - self.node2) - 1
+        for k in range(1,self.add_nodes):
             self.graph.add_node(girth+k)
-            self.edges.append((girth+k,add_random))
-            self.edges.append((girth+k,add_random+2))
+        self.graph.add_edge(self.girth+1,self.node1)
+        self.graph.add_edge(self.girth+self.add_nodes,self.node2)
         self.graph.add_edges_from(self.edges)
+        for k in range(self.girth + 1, self.girth + self.add_nodes):
+            self.graph.add_edge(k, k + 1)
 
     def build_and_show_adjacency_matrix(self):
         print(f"Матрица смежности для клетки, обхвата {girth}:")
@@ -84,10 +83,13 @@ class Graph:
         plt.show()
 
 girth = int(input("Введите обхват графа: "))
+if girth < 3:
+    raise ValueError("Длина цикла должна быть не менее 3.")
+
 graph = Graph(girth)
 graph.create_nodes()
 graph.create_circular_edges()
-graph.add_nodes_and_edges()
+graph.add_branches()
 graph.build_and_show_adjacency_matrix()
 graph.visualize_graph()
 
