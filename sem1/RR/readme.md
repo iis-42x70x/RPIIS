@@ -55,7 +55,7 @@
 #### Описание проверки
 Пусть дан граф:
 
-<p  align="center"><img src="pic/дер.png" width="400" height="790"></p>
+<p  align="center"><img src="pic/дер.png" width="800" height="400"></p>
 
 
 Входные данные для данного графа :
