@@ -41,7 +41,40 @@ def max_simple_cut(incidence_matrix=None, adjacency_matrix=None):
 ```
 ### Мы используем deque, чтобы работать с очередью, которая позволит нам осуществлять обход в ширину (BFS). deque — это расширяемая очередь, которая может быстро добавлять и удалять элементы с обоих концов.
 
+### Функция is_connected
+``` Python
+def is_connected(subset, adjacency_list):
+    if not subset:
+        return False
 
+    visited = set()
+    queue = deque([subset[0]])
+
+    while queue:
+        node = queue.popleft()
+        if node not in visited:
+            visited.add(node)
+            queue.extend([neighbor for neighbor in adjacency_list[node] if neighbor in subset])
+
+    return len(visited) == len(subset)
+```
+Параметры:
+
+- subset: список вершин графа, который мы проверяем на связность.
+- adjacency_list: словарь, представляющий смежности для всех вершин в графе.
+- Проверка на пустой subset:
+  В начале функция проверяет, является ли subset пустым. Если это так, функция немедленно возвращает False, так как пустой набор вершин не может быть связан.
+- Инициализация:
+  visited — пустой набор для отслеживания посещенных вершин.
+  queue — очередь, в которую добавляется первая вершина из subset.
+- Обход в ширину (BFS):
+  В цикле while до тех пор, пока queue не опустеет:
+  Берется вершина node из начала очереди.
+  Если эта вершина еще не посещена, она добавляется в visited.
+  Из этой вершины добавляются все смежные вершины, которые также принадлежат subset, в queue для дальнейшего обхода.
+- Проверка связности:
+  В конце проверяется, была ли вся вершина subset посещена. Если visited содержит все элементы subset, это означает, что subset связано, и функция возвращает True.
+  В противном случае, если не все вершины были посещены, возвращается False.
 ### Преобразование матрицы смежности в матрицу инцидентности (если необходимо)
 ``` Python
 def convert_adjacency_to_incidence(adjacency_matrix):
