@@ -45,14 +45,12 @@
 
 ### Чтение матрицы смежности из файла
 Граф задаётся матрицей смежности, хранящейся в текстовом файле.
-е ребро имеет направление от од
 ```cpp
 0 1 0 0
 0 0 1 0
 1 0 0 1
 0 0 0 0
 ```
-а конденсации для орграфа
 
 ```cpp
 vector<vector<int>> readAdjacencyMatrix(const string& filename) {
@@ -81,12 +79,13 @@ vector<vector<int>> readAdjacencyMatrix(const string& filename) {
 }
 ```
 
- • getline: Считывает строку из файла.
- • stoi: Преобразует строку в число.
- • matrix.push_back(row): Добавляет строку в матрицу.
+ - getline: Считывает строку из файла.
+ - stoi: Преобразует строку в число.
+ - matrix.push_back(row): Добавляет строку в матрицу.
 
-Первый DFS: Формирование стека завершения
+### Первый DFS: Формирование стека завершения
 
+```cpp
 void dfs1(int start, const vector<vector<int>>& matrix, vector<bool>& visited, stack<int>& finishStack) {
     stack<int> s;
     s.push(start);
@@ -106,16 +105,18 @@ void dfs1(int start, const vector<vector<int>>& matrix, vector<bool>& visited, s
         }
     }
 }
+```
 
- • Цель: Проходим граф в глубину и сохраняем вершины в стек finishStack в порядке завершения их обработки.
- • Параметры:
- • start — стартовая вершина.
- • matrix — матрица смежности графа.
- • visited — массив посещённых вершин.
- • finishStack — стек для хранения порядка завершения вершин.
+ - Цель: Проходим граф в глубину и сохраняем вершины в стек finishStack в порядке завершения их обработки.
+ - Параметры:
+ - start — стартовая вершина.
+ - matrix — матрица смежности графа.
+ - visited — массив посещённых вершин.
+ - finishStack — стек для хранения порядка завершения вершин.
 
-Транспонирование графа
+### Транспонирование графа
 
+```cpp
 vector<vector<int>> transpose(V, vector<int>(V, 0));
 for (int u = 0; u < V; u++) {
     for (int v = 0; v < V; v++) {
@@ -124,12 +125,14 @@ for (int u = 0; u < V; u++) {
         }
     }
 }
+```
 
- • Цель: Меняем направления всех рёбер.
+ - Цель: Меняем направления всех рёбер.
 Если в исходном графе было ребро u -> v, то в транспонированном — v -> u.
 
-Второй DFS: Нахождение КСС
+### Второй DFS: Нахождение КСС
 
+```cpp
 void dfs2(int start, const vector<vector<int>>& transpose, vector<bool>& visited, vector<int>& component) {
     stack<int> s;
     s.push(start);
@@ -149,5 +152,73 @@ void dfs2(int start, const vector<vector<int>>& transpose, vector<bool>& visited
         }
     }
 }
+```
 
- • Цель: Найти все вершины, принадлежащие текущей КСС.
+ - Цель: Найти все вершины, принадлежащие текущей КСС.
+ - component.push_back(node): Добавляем вершину в текущую компоненту сильной связности.
+
+### Построение графа конденсации
+
+```cpp
+set<pair<int, int>> edges;
+for (int u = 0; u < V; u++) {
+    for (int v = 0; v < V; v++) {
+        if (graph[u][v] && componentMap[u] != componentMap[v]) {
+            edges.insert({componentMap[u], componentMap[v]});
+        }
+    }
+}
+```
+
+ - Цель: Для каждой пары вершин u и v проверяем:
+ - Если вершины принадлежат разным КСС, добавляем ребро между соответствующими вершинами графа конденсации.
+
+### Вывод результатов
+
+```cpp
+cout << "Компоненты сильной связности:" << endl;
+for (int i = 0; i < stronglyConnectedComponents.size(); i++) {
+    cout << "КСС " << i << ": ";
+    for (int v : stronglyConnectedComponents[i]) {
+        cout << v << " ";
+    }
+    cout << endl;
+}
+```
+
+```cpp
+cout << "\nГраф конденсации:" << endl;
+if (edges.empty()) {
+    cout << "Рёбер между КСС нет." << endl;
+} else {
+    for (auto edge : edges) {
+        cout << edge.first << " -> " << edge.second << endl;
+    }
+}
+```
+
+### Вывод
+
+Пример:
+
+Для входного файла graph.txt:
+
+```cpp
+0 1 0 0
+0 0 1 0
+1 0 0 1
+0 0 0 0
+```
+
+Результаты:
+
+```shell
+Компоненты сильной связности:
+КСС 0: 3
+КСС 1: 0 1 2
+
+Граф конденсации:
+0 -> 1
+```
+
+Алгоритм корректно разделяет граф на КСС и строит граф конденсации.
