@@ -142,7 +142,7 @@ graph.visualize_graph()
 
 
 
- ![{B62CF8B9-F75D-4F5A-9B38-1BF3E18D3D15}](https://github.com/user-attachments/assets/e59d1946-99a0-45f3-8ae9-fa5cc87fa9c6)
+ ![{B62CF8B9-F75D-4F5A-9B38-1BF3E18D3D15}]([https://github.com/user-attachments/assets/e59d1946-99a0-45f3-8ae9-fa5cc87fa9c6](https://github.com/dekada314/RPIIS/blob/patch-1/labs/screens/ex1.jpg))
 
 ## Вывод
 В результате я приобрела следующие навыки:
