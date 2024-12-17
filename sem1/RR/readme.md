@@ -35,7 +35,24 @@
 <p  align="center"><img src="pic/сп2.jpg" ></p>
   
 
-## Тесты:
+### Тесты:
+
+## Тест1:
+
+  <p  align="center"><img src="pic/1.png" ></p>
+
+## Тест2:
+
+  <p  align="center"><img src="pic/2.png" ></p>
+  
+## Тест3:
+
+  <p  align="center"><img src="pic/3.png" ></p>
+  
+
+## Тест4:
+
+  <p  align="center"><img src="pic/4.png" ></p>
 
 
 
