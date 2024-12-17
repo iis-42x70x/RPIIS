@@ -32,7 +32,7 @@
 
 ## Реализация на Python
 
-Код, выполняющий алгоритм
+Код, выполняющий генерацию
 ``` python
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -114,36 +114,35 @@ graph.visualize_graph()
 Программа позволяет пользователю вводить обхват графа, затем строит граф, используя эту значение. Программа случайно генерирует последовательсть вершин и соединяющих их ребер. Программа выводит графическое представление и матрицу смежности созданного графа.
 
 ### Пример работы программы 
+# Пример 1
 
-- Возьмем граф:
+- Запускаем прогрмму и вводим обхват графа.
 
-
-
-![надо](https://github.com/user-attachments/assets/77ed0302-205f-4ed5-9beb-e1c89f687ee0)
-
-- Составим для него матрицу инцидентности:
-
-
-
-![{7F5F7801-12F1-4F8A-94AF-C96A8F151C4D}](https://github.com/user-attachments/assets/e0bd9c08-014a-4182-a7b4-e94700f8512b)
-
-- Запускаем прогрмму вводим обхват графа.
-
-
-
-
-![{87D55169-B1A6-41AC-A6DC-3C4E2050A432}](https://github.com/user-attachments/assets/b5071f79-9b72-467c-93a8-3363aa8d15e2)
 - Получаем матрицу смежности:
 
 
 
- ![{B62CF8B9-F75D-4F5A-9B38-1BF3E18D3D15}](https://github.com/user-attachments/assets/e59d1946-99a0-45f3-8ae9-fa5cc87fa9c6)
+ ![{B62CF8B9-F75D-4F5A-9B38-1BF3E18D3D15}](https://github.com/dekada314/RPIIS/blob/patch-1/РР/screens/matrix1.jpg)
 - Получаем графическое представление:
 
 
 
  ![{B62CF8B9-F75D-4F5A-9B38-1BF3E18D3D15}](https://github.com/dekada314/RPIIS/blob/patch-1/РР/screens/ex1.jpg))
 
+# Пример 2
+
+- Запускаем прогрмму и вводим обхват графа.
+
+- Получаем матрицу смежности:
+
+
+
+ ![{B62CF8B9-F75D-4F5A-9B38-1BF3E18D3D15}](https://github.com/dekada314/RPIIS/blob/patch-1/РР/screens/matrix2.jpg)
+- Получаем графическое представление:
+
+
+
+ ![{B62CF8B9-F75D-4F5A-9B38-1BF3E18D3D15}](https://github.com/dekada314/RPIIS/blob/patch-1/РР/screens/ex2.jpg))
 ## Вывод
 В результате я приобрела следующие навыки:
 - изучил основы теории графов
