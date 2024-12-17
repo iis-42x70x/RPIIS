@@ -60,39 +60,47 @@
 
 ```
 // Функция для проверки ацикличности неориентированного графа с использованием поиска циклов через DFS
-bool isAcyclicUndirected(const vector<vector<int>>& adjMatrix, int n) 
+bool dfs(int** adjMatrix, bool* visited, int* parent, int v, int n) 
 {
-    vector<bool> visited(n, false);
-    vector<int> parent(n, -1);
-
-    function<bool(int)> dfs = [&](int v) {
-        visited[v] = true;
-        for (int u = 0; u < n; ++u) {
-            if (adjMatrix[v][u]) {
-                if (!visited[u]) {
-                    parent[u] = v;
-                    if (dfs(u)) {
-                        return true;
-                    }
-                }
-                else if (parent[v] != u) {
+    visited[v] = true;
+    for (int u = 0; u < n; ++u) {
+        if (adjMatrix[v][u]) {
+            if (!visited[u]) {
+                parent[u] = v;
+                if (dfs(adjMatrix, visited, parent, u, n)) {
                     return true;
                 }
             }
+            else if (parent[v] != u) {
+                return true;
+            }
         }
-        return false;
-        };
+    }
+    return false;
+}
+
+bool isAcyclicUndirected(int** adjMatrix, int n) {
+    bool* visited = new bool[n]();
+    int* parent = new int[n]();
+    for (int i = 0; i < n; ++i) {
+        parent[i] = -1;
+    }
 
     for (int i = 0; i < n; ++i) {
         if (!visited[i]) {
-            if (dfs(i)) {
+            if (dfs(adjMatrix, visited, parent, i, n)) {
+                delete[] visited;
+                delete[] parent;
                 return false;
             }
         }
     }
 
+    delete[] visited;
+    delete[] parent;
     return true;
 }
+
 ```
 
 - Топологическая сортировка графа — это способ нумерации вершин ориентированного графа, при котором каждое ребро ведёт из вершины с меньшим номером в вершину с большим номером. Алгоритм тривиально определяется через DFS. Будем присваивать номера в убывающем порядке: от большего к меньшему (и, соответственно, от дальнего к ближнему).
@@ -101,9 +109,9 @@ bool isAcyclicUndirected(const vector<vector<int>>& adjMatrix, int n)
 
 ```
 // Функция для проверки ацикличности ориентированного графа с использованием метода топологической сортировки
-bool isAcyclicDirected(const vector<vector<int>>& adjMatrix, int n)
+bool isAcyclicDirected(int** adjMatrix, int n) 
 {
-    vector<int> inDegree(n, 0);
+    int* inDegree = new int[n]();
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
             if (adjMatrix[i][j]) {
@@ -112,29 +120,33 @@ bool isAcyclicDirected(const vector<vector<int>>& adjMatrix, int n)
         }
     }
 
-    queue<int> q;
+    // Использование динамического массива в качестве очереди
+    int* queue = new int[n];
+    int front = 0, rear = 0;
+
     for (int i = 0; i < n; ++i) {
         if (inDegree[i] == 0) {
-            q.push(i);
+            queue[rear++] = i;
         }
     }
 
     int count = 0;
-    while (!q.empty()) {
-        int v = q.front();
-        q.pop();
+    while (front != rear) {
+        int v = queue[front++];
         count++;
 
         for (int i = 0; i < n; ++i) {
             if (adjMatrix[v][i]) {
                 inDegree[i]--;
                 if (inDegree[i] == 0) {
-                    q.push(i);
+                    queue[rear++] = i;
                 }
             }
         }
     }
 
+    delete[] inDegree;
+    delete[] queue;
     return count == n;
 }
 ```
@@ -145,9 +157,7 @@ bool isAcyclicDirected(const vector<vector<int>>& adjMatrix, int n)
 * **Подключаем нужные библиотеки, импорт всего пространства имен std.**
 ```
 #include <iostream>
-#include <vector>
-#include <queue>
-#include <functional>
+#include <iomanip>
 
 using namespace std;
 ```
@@ -155,6 +165,23 @@ using namespace std;
 
 * **Основная часть**.
 ```
+// Функция для вывода матрицы смежности
+void printAdjMatrix(int** adjMatrix, int n) {
+    cout << "Матрица смежности:" << endl;
+    cout << "  о";
+    for (int i = 0; i < n; ++i) {
+        cout << setw(2) << "(" << i << ")";
+    }
+    cout << endl;
+    for (int i = 0; i < n; ++i) {
+        cout << setw(2) << "(" << i << ")";
+        for (int j = 0; j < n; ++j) {
+            cout << setw(2) << adjMatrix[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
 int main() {
     setlocale(LC_ALL, "RU");
     int n;
@@ -165,7 +192,12 @@ int main() {
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }
 
-    vector<vector<int>> adjMatrix(n, vector<int>(n, 0));
+    // Создание матрицы смежности
+    int** adjMatrix = new int* [n];
+    for (int i = 0; i < n; ++i) {
+        adjMatrix[i] = new int[n]();
+    }
+
     int m;
     cout << "Введите количество рёбер графа: ";
     while (!(cin >> m) || m < 0) {
@@ -195,6 +227,8 @@ int main() {
         }
     }
 
+    printAdjMatrix(adjMatrix, n);
+
     if (type == 1) {
         if (isAcyclicDirected(adjMatrix, n)) {
             cout << "Ориентированный граф является ациклическим." << endl;
@@ -212,13 +246,19 @@ int main() {
         }
     }
 
+    // Освобождение памяти
+    for (int i = 0; i < n; ++i) {
+        delete[] adjMatrix[i];
+    }
+    delete[] adjMatrix;
+
     return 0;
 }
-
 ```
 
-### Тест
+## Тест
 
+### Проверка №1
 - Тестовые значения:
  
   **количество вершин графа** — 3
@@ -227,6 +267,25 @@ int main() {
   
 ![Вывод консоли](cmd1.png)
 
+### Проверка №2
+- Тестовые значения:
+
+  **количество вершин графа** — 3
+  
+  **количество ребер графа** — 4
+  
+![Вывод консоли](cmd2.png)
+
+### Проверка №3
+- Тестовые значения:
+
+  **количество вершин графа** — 3
+  
+  **количество ребер графа** — 3
+  
+![Вывод консоли](cmd3.png)
+
+### Проверка №4
 - Тестовые значения:
 
   **количество вершин графа** — 3
