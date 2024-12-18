@@ -306,5 +306,5 @@
 7. [Теорема Понтрягина-Куратовского](https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%9F%D0%BE%D0%BD%D1%82%D1%80%D1%8F%D0%B3%D0%B8%D0%BD%D0%B0_%E2%80%94_%D0%9A%D1%83%D1%80%D0%B0%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE)
 8. [Теория графов. Термины и определения в картинках](https://habr.com/ru/companies/otus/articles/568026/)
 
-## Pepe
+## Chill guy
 ![ChillGuy](https://media1.tenor.com/m/Jo0PbgBIZzAAAAAd/chill-guy-my-new-character.gif)
