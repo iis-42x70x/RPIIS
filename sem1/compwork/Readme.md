@@ -73,7 +73,8 @@
 Надеюсь, это поможет! Если у тебя есть еще вопросы, не стесняйся спрашивать!
 
 ## Реализация на C++
-`#include <iostream>
+```
+#include <iostream>
 #include <vector>
 #include <windows.h>
 
@@ -189,7 +190,7 @@ int main()
     runTests();
     return 0;
 }
-`
+```
 
 ## Разбор кода:
 
