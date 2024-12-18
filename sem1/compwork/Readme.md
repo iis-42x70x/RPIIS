@@ -193,6 +193,7 @@ int main()
 ```
 
 ## Тесты
+1.
 ![Снимок экрана 2024-12-18 182710](https://github.com/user-attachments/assets/0b514134-4b46-4872-82a4-89c982bb41db)
 Ввод:
 ```
@@ -205,6 +206,17 @@ int main()
 Вывод:
 ![Снимок экрана 2024-12-18 185117](https://github.com/user-attachments/assets/2c606e21-41ae-4863-b2d8-6179a3ddf159)
 
+2.
+![Снимок экрана 2024-12-18 182556](https://github.com/user-attachments/assets/e05936fa-98cc-4005-b5f1-5a3b67cd984d)
+Ввод:
+```
+0 1 1 0 1
+1 0 0 1 1
+1 0 0 1 1
+0 1 1 0 1
+1 1 1 1 0
+```
+![image](https://github.com/user-attachments/assets/fd354c3b-214f-4567-bc8f-d149dd4e5343)
 
 ## Вывод
  
