@@ -216,7 +216,50 @@ int main()
 0 1 1 0 1
 1 1 1 1 0
 ```
+Вывод:
 ![image](https://github.com/user-attachments/assets/fd354c3b-214f-4567-bc8f-d149dd4e5343)
+
+3.
+![Снимок экрана 2024-12-18 183435](https://github.com/user-attachments/assets/7c3dc9fb-d1cc-47a3-922b-f4300b42b25c)
+
+Ввод:
+```
+0 1 1 0 0 0
+1 0 0 1 0 0
+1 0 0 1 1 0
+0 1 1 0 0 1
+0 1 0 0 0 1
+0 0 0 1 1 0
+```
+Вывод:
+![image](https://github.com/user-attachments/assets/a000d1d2-efee-4bc3-b169-bc0aaa57ea4a)
+
+4.
+![Снимок экрана 2024-12-18 184252](https://github.com/user-attachments/assets/e566e1e2-7231-4ac9-81fb-e698765a40ec)
+
+Ввод:
+```
+0 1 1 0 0
+0 0 0 1 0
+1 0 0 1 0
+1 1 1 0 1
+0 0 0 1 0
+```
+Вывод:
+![image](https://github.com/user-attachments/assets/8404ec0a-a568-4baf-9657-e20c39075fcd)
+
+5.
+![image](https://github.com/user-attachments/assets/f69f7e98-d017-4f2a-b211-64c0d6e4c493)
+Ввод:
+```
+0 1 1 0 0
+0 0 0 1 1
+1 0 0 1 0
+1 1 1 0 1
+0 1 0 1 0
+```
+Вывод:
+![image](https://github.com/user-attachments/assets/67a40b21-9a82-409f-9f20-5f034209d8fa)
 
 ## Вывод
  
