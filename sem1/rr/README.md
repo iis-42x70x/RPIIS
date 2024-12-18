@@ -58,7 +58,7 @@ using namespace std;
 
 * **Функция DFS**
 * **Функция для поиска компонент связности неориентированного графа с использованием поиска циклов через DFS**
-  
+
   ```c++
   void poisk_komp(vector < vector<int> > graph, int v) {
     int kol = 1;
@@ -81,10 +81,9 @@ using namespace std;
             cout << komp[i][j] << ' ';
         }
         cout << endl;
-    }
-}
-
-
+    }}
+* **Задание графов списком смежности**
+  
 * **Основная часть**.
   
 ```c++
@@ -104,6 +103,27 @@ int main()
 
 ## Тест
 
+### Граф 1
+
+<p ><img src="g1.png"></p>
+
+### Граф 2
+
+<p ><img src="g2.png"></p>
+
+### Граф 3
+
+<p ><img src="g3.png"></p>
+
+### Граф 4
+
+<p ><img src="g4.png"></p>
+
+### Граф 5
+
+<p ><img src="g5.png"></p>
+
+![Вывод консоли](test.png)
 
 
 ## Вывод
