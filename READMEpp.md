@@ -22,10 +22,8 @@
 
 ### Тестовые примеры:
 ![Снимок экрана 2024-12-17 212410](https://github.com/user-attachments/assets/e5d796d2-1fe1-47da-a10d-3f9a8b49eec0)
-![Снимок экрана 2024-12-17 212410](https://github.com/user-attachments/assets/dd4bb27f-4637-439f-8681-cab5edb6ccc6)
-![Снимок экрана 2024-12-17 212410](https://github.com/user-attachments/assets/30e7e559-d283-4e1e-be4e-a735647964c0)
-![Снимок экрана 2024-12-17 212410](https://github.com/user-attachments/assets/c1602c12-78bb-48e2-9850-026ab6e9a058)
-![Снимок экрана 2024-12-17 212410](https://github.com/user-attachments/assets/28d1f2e3-9657-4e2d-bbaa-cecc34fdfe78)
+![Снимок экрана 2024-12-17 212410](https://github.com/user-attachments/assets/adb4cb64-b9fe-457f-bacb-f26cbdab87fc)
+
 
 ![граф1](https://github.com/user-attachments/assets/71e5d989-bf51-458e-83b8-d7a8f4fecd17)
 
