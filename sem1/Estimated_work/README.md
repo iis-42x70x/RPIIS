@@ -307,4 +307,4 @@
 8. [Теория графов. Термины и определения в картинках](https://habr.com/ru/companies/otus/articles/568026/)
 
 ## Pepe
-![pepe](https://i.pinimg.com/originals/26/36/7b/26367b882196bab0348c173ec61d9268.gif)
+![ChillGuy](https://media1.tenor.com/m/Jo0PbgBIZzAAAAAd/chill-guy-my-new-character.gif)
