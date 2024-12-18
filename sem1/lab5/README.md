@@ -15,14 +15,14 @@
 
 ### Основные команды:
 #### Для sh файла:
- * 
- *
- * 
+ * find . -maxdepth 1 -name '*.txt' -exec stat --format='%W %n' {} + | sort -n | awk '{print $2}'
+ * ls -S *.txt 
+   
 
 #### Для bat файла:
- * 
- * 
- * 
+ * dir /T:C /O:-D "*.txt" 
+ * dir /O:S "*.txt"
+
 
 ### Мой вариант выполненной работы.
 **bat файл**
@@ -84,8 +84,8 @@ else
 fi
 chet=$((count % 2))
 if [ "$chet" -eq 0 ]; then
-    ls -lt --time=creation *.txt > sorted_files.txt  
-    echo "File list saved to sorted_files.txt"
+     find . -maxdepth 1 -name '*.txt' -exec stat --format='%W %n' {} + | sort -n | awk '{print $2}' > sorted_files_by_date.txt 
+    echo "File list saved to sorted_files_by_date.txt"
 else
     ls -S *.txt > files_sorted_by_size.txt  
     echo "File list saved to files_sorted_by_size.txt"
