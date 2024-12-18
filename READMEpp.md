@@ -21,11 +21,6 @@
 
 
 ### Тестовые примеры:
-![Снимок экрана 2024-12-17 212410](https://github.com/user-attachments/assets/e5d796d2-1fe1-47da-a10d-3f9a8b49eec0)
-![Снимок экрана 2024-12-17 212635](https://github.com/user-attachments/assets/d26ecf21-f08a-45cc-96e8-9bbc8acde234)
-![Снимок экрана 2024-12-17 212747](https://github.com/user-attachments/assets/d99fb6a6-4396-486e-b2fb-82f50b72d961)
-![Снимок экрана 2024-12-17 213309](https://github.com/user-attachments/assets/c518994a-6208-4577-9db9-f0e028249c19)
-![Снимок экрана 2024-12-17 213741](https://github.com/user-attachments/assets/fe6a1eee-282b-4ef8-8406-708da1ff4c07)
 
 
 
@@ -34,13 +29,13 @@
 ![Снимок экрана 2024-12-17 212410](https://github.com/user-attachments/assets/e5d796d2-1fe1-47da-a10d-3f9a8b49eec0)
 Вывод программы: Граф не связный
 
-![Граф2](https://github.com/user-attachments/assets/81597546-85ac-4223-a715-41ed125d0c3d)
+
 
 Матрица 2:
 ![Снимок экрана 2024-12-17 212635](https://github.com/user-attachments/assets/d26ecf21-f08a-45cc-96e8-9bbc8acde234)
 Вывод программы:  Граф не связный
 
-![Граф3](https://github.com/user-attachments/assets/1d75f926-d215-4aa0-b94b-f66cf2e8bf32)
+
 
 Матрица 3:
 ![Снимок экрана 2024-12-17 212747](https://github.com/user-attachments/assets/d99fb6a6-4396-486e-b2fb-82f50b72d961)
