@@ -42,7 +42,10 @@
 
 ### Тестовые примеры
 
-#### 1
+### 1.
+
+#### Ввод
+
   ```
    5
    4
@@ -52,9 +55,13 @@
    4 5
    ```
    <img width="520" alt="Снимок экрана 2024-12-17 в 23 54 57" src="https://github.com/user-attachments/assets/7db33f64-e71b-49eb-b1ff-92b8509ee6a2" />
+
+   #### Вывод
    <img width="369" alt="Снимок экрана 2024-12-17 в 23 57 19" src="https://github.com/user-attachments/assets/c7e799cb-9aed-4795-a9bb-b8917e30dd64" />
 
-#### 2
+### 2.
+
+#### Ввод
   ```
    4
    4
@@ -64,18 +71,26 @@
    4 1
    ```
    <img width="352" alt="Снимок экрана 2024-12-17 в 23 58 21" src="https://github.com/user-attachments/assets/774da6d7-55dc-4ea4-af90-2855e51afb93" />
+
+   #### Вывод
    <img width="275" alt="Снимок экрана 2024-12-18 в 00 01 23" src="https://github.com/user-attachments/assets/898cd7ba-f4e8-44a6-bf87-b968fe4d0f9c" />
 
-### 3
+### 3.
+
+#### Ввод
 ```
 3
 1
 1 2
 ```
 <img width="281" alt="Снимок экрана 2024-12-18 в 00 03 43" src="https://github.com/user-attachments/assets/f8aea5d9-9473-487c-937f-12e1012d4455" />
+
+#### Вывод
 <img width="278" alt="image" src="https://github.com/user-attachments/assets/023296ea-bbc7-4f38-a31c-69315651719a" />
 
-### 4
+### 4.
+
+#### Ввод
 ```
 4
 8
@@ -89,9 +104,13 @@
 4 1
 ```
 <img width="316" alt="Снимок экрана 2024-12-18 в 00 05 21" src="https://github.com/user-attachments/assets/069382d3-6c06-4bf2-81c8-268980884545" />
+
+#### Вывод
 <img width="344" alt="image" src="https://github.com/user-attachments/assets/84768268-1215-47c6-8295-610b578f91b2" />
 
-### 5
+### 5.
+
+#### Ввод
 ```
 4
 6
@@ -103,6 +122,8 @@
 3 4
 ```
 <img width="267" alt="image" src="https://github.com/user-attachments/assets/191784f2-9e7b-485d-90a7-eed2f24681a0" />
+
+#### Вывод
 <img width="273" alt="Снимок экрана 2024-12-18 в 00 10 40" src="https://github.com/user-attachments/assets/cbb0ad84-f5e5-454e-bfae-00b966e57389" />
 
 ### Источники
