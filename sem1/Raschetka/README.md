@@ -18,7 +18,7 @@
 ![Пример графа](images/граф.webp)
 
 
-<b>`Граф`</b> — математическая абстракция реальной системы любой природы, объекты которой обладают парными связями. Граф как математический объект есть совокупность двух множеств — множества самих объектов, называемого множеством вершин, и множества их парных связей, называемого множеством рёбер.
+**`Граф`** — математическая абстракция реальной системы любой природы, объекты которой обладают парными связями. Граф как математический объект есть совокупность двух множеств — множества самих объектов, называемого множеством вершин, и множества их парных связей, называемого множеством рёбер.
 
 - **`Ориентированный граф`** — это такой граф, в котором все связки
 являются дугами:
@@ -59,111 +59,38 @@
 Пример из кода:
 
 ```c++
-// Функция для проверки ацикличности неориентированного графа с использованием поиска циклов через DFS
-bool dfs(int** adjMatrix, bool* visited, int* parent, int v, int n) 
-{
-    visited[v] = true;
-    for (int u = 0; u < n; ++u) {
-        if (adjMatrix[v][u]) {
-            if (!visited[u]) {
-                parent[u] = v;
-                if (dfs(adjMatrix, visited, parent, u, n)) {
-                    return true;
+void dfsDir(int v, int adjMatrix[N][N], bool vis[N], bool St[N], bool& hasc) {
+    if (!vis[v]) {
+        vis[v] = true;
+        St[v] = true;
+
+        for (int i = 0; i < N; ++i) {
+            if (adjMatrix[v][i]) {
+                if (!vis[i]) {
+                    dfsDir(i, adjMatrix, vis, St, hasc);
+                    if (hasc) return;
+                }
+                else if (St[i]) {
+                    hasc = true;
+                    return;
                 }
             }
-            else if (parent[v] != u) {
-                return true;
-            }
         }
     }
-    return false;
+    St[v] = false;
 }
-
-bool isAcyclicUndirected(int** adjMatrix, int n) {
-    bool* visited = new bool[n]();
-    int* parent = new int[n]();
-    for (int i = 0; i < n; ++i) {
-        parent[i] = -1;
-    }
-
-    for (int i = 0; i < n; ++i) {
-        if (!visited[i]) {
-            if (dfs(adjMatrix, visited, parent, i, n)) {
-                delete[] visited;
-                delete[] parent;
-                return false;
-            }
-        }
-    }
-
-    delete[] visited;
-    delete[] parent;
-    return true;
-}
-
 ```
 
 - Топологическая сортировка графа — это способ нумерации вершин ориентированного графа, при котором каждое ребро ведёт из вершины с меньшим номером в вершину с большим номером. Алгоритм тривиально определяется через DFS. Будем присваивать номера в убывающем порядке: от большего к меньшему (и, соответственно, от дальнего к ближнему).
 <p ><img src="images/ts.jpg"></p>
-Пример из кода:
 
-```c++
-// Функция для проверки ацикличности ориентированного графа с использованием метода топологической сортировки
-bool isAcyclicDirected(int** adjMatrix, int n) 
-{
-    int* inDegree = new int[n]();
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
-            if (adjMatrix[i][j]) {
-                inDegree[j]++;
-            }
-        }
-    }
 
-    // Использование динамического массива в качестве очереди
-    int* queue = new int[n];
-    int front = 0, rear = 0;
-
-    for (int i = 0; i < n; ++i) {
-        if (inDegree[i] == 0) {
-            queue[rear++] = i;
-        }
-    }
-
-    int count = 0;
-    while (front != rear) {
-        int v = queue[front++];
-        count++;
-
-        for (int i = 0; i < n; ++i) {
-            if (adjMatrix[v][i]) {
-                inDegree[i]--;
-                if (inDegree[i] == 0) {
-                    queue[rear++] = i;
-                }
-            }
-        }
-    }
-
-    delete[] inDegree;
-    delete[] queue;
-    return count == n;
-}
-```
 
 ## Выполнение расчётной работы
 
 ### Алгоритм
 
-#### Входные данные
-
-На вход алгоритму подаются :
-
-1. Колличество вершин графа.
-
-2. Колличество рёбер графа.
-
-3. Задаётся направление рёбер.
+####
 
 
 
@@ -180,92 +107,74 @@ using namespace std;
 
 * **Основная часть**.
 ```c++
-// Функция для вывода матрицы смежности
-void printAdjMatrix(int** adjMatrix, int n) {
+   void printAdjMatrix(int adjMatrix[N][N], int n) {
     cout << "Матрица смежности:" << endl;
-    cout << "  о";
+    cout << "  o  ";
     for (int i = 0; i < n; ++i) {
-        cout << setw(2) << "(" << i << ")";
+        cout << setw(1) <<"("<< i<< ")";
     }
     cout << endl;
     for (int i = 0; i < n; ++i) {
         cout << setw(2) << "(" << i << ")";
         for (int j = 0; j < n; ++j) {
-            cout << setw(2) << adjMatrix[i][j] << " ";
+            cout << setw(3) << adjMatrix[i][j];
         }
         cout << endl;
     }
 }
 
+
 int main() {
     setlocale(LC_ALL, "RU");
     int n;
     cout << "Введите количество вершин графа: ";
-    while (!(cin >> n) || n <= 0) {
-        cout << "Ошибка ввода! Введите положительное целое число: ";
+    while (!(cin >> n) || n <= 0 || n > N) {
+        cout << "Ошибка ввода! Введите положительное целое число, не превышающее " << N << ": ";
         cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        while (cin.get() != '\n');  // Очищаем буфер ввода
     }
 
-    // Создание матрицы смежности
-    int** adjMatrix = new int* [n];
+    int adjMatrix[N][N] = { 0 };
+    cout << "Введите матрицу смежности:" << endl;
     for (int i = 0; i < n; ++i) {
-        adjMatrix[i] = new int[n]();
-    }
-
-    int m;
-    cout << "Введите количество рёбер графа: ";
-    while (!(cin >> m) || m < 0) {
-        cout << "Ошибка ввода! Введите неотрицательное целое число: ";
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-    }
-
-    cout << "Введите рёбра графа (u v) и тип графа (0 - неориентированный, 1 - ориентированный):" << endl;
-    int type;
-    while (!(cin >> type) || (type != 0 && type != 1)) {
-        cout << "Ошибка ввода! Введите 0 для неориентированного графа или 1 для ориентированного: ";
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-    }
-
-    for (int i = 0; i < m; ++i) {
-        int u, v;
-        while (!(cin >> u >> v) || u < 0 || u >= n || v < 0 || v >= n) {
-            cout << "Ошибка ввода! Введите корректные вершины (0 <= u, v < " << n << "): ";
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        }
-        adjMatrix[u][v] = 1;
-        if (type == 0) {
-            adjMatrix[v][u] = 1; // Для неориентированного графа
+        for (int j = 0; j < n; ++j) {
+            while (!(cin >> adjMatrix[i][j])) {
+                cout << "Ошибка ввода! Пожалуйста, введите целое число: ";
+                cin.clear();
+                while (cin.get() != '\n'); 
+            }
         }
     }
 
     printAdjMatrix(adjMatrix, n);
 
-    if (type == 1) {
-        if (isAcyclicDirected(adjMatrix, n)) {
-            cout << "Ориентированный граф является ациклическим." << endl;
+    char graph;
+    cout << "Граф ориентированный (o) или неориентированный (n)? ";
+    while (!(cin >> graph) || (graph != 'n' && graph != 'o')) {
+        cout << "Ошибка ввода! Введите n для неориентированного графа или o для ориентированного: ";
+        cin.clear();
+        while (cin.get() != '\n');  // Очищаем буфер ввода
+    }
+
+    if (graph == 'o') {
+        if (DirAcGr(adjMatrix, n)) {
+            cout << "Граф ориентированный и ациклический." << endl;
         }
         else {
-            cout << "Ориентированный граф является циклическим." << endl;
+            cout << "Граф ориентированный и содержит циклы." << endl;
+        }
+    }
+    else if (graph == 'n') {
+        if (UndirAcGr(adjMatrix, n)) {
+            cout << "Граф неориентированный и ациклический." << endl;
+        }
+        else {
+            cout << "Граф неориентированный и содержит циклы." << endl;
         }
     }
     else {
-        if (isAcyclicUndirected(adjMatrix, n)) {
-            cout << "Неориентированный граф является ациклическим." << endl;
-        }
-        else {
-            cout << "Неориентированный граф является циклическим." << endl;
-        }
+        cout << "Некорректный ввод типа графа." << endl;
     }
-
-    // Освобождение памяти
-    for (int i = 0; i < n; ++i) {
-        delete[] adjMatrix[i];
-    }
-    delete[] adjMatrix;
 
     return 0;
 }
@@ -274,39 +183,15 @@ int main() {
 ## Тест
 
 ### Проверка №1
-- Тестовые значения:
- 
-  **количество вершин графа** — 3
-  
-  **количество ребер графа** — 2
-  
-![Вывод консоли](images/cmd1.png)
+  ![Вывод консоли](images/cmd1.png)
 
 ### Проверка №2
-- Тестовые значения:
-
-  **количество вершин графа** — 3
-  
-  **количество ребер графа** — 4
-  
 ![Вывод консоли](images/cmd2.png)
 
 ### Проверка №3
-- Тестовые значения:
-
-  **количество вершин графа** — 3
-  
-  **количество ребер графа** — 3
-  
 ![Вывод консоли](images/cmd3.png)
 
 ### Проверка №4
-- Тестовые значения:
-
-  **количество вершин графа** — 3
-  
-  **количество ребер графа** — 4
-  
 ![Вывод консоли](images/cmd4.png)
 
 
