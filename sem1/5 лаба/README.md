@@ -54,7 +54,7 @@
 *Для Windows:*
 
 <p  align="center">
-    <img src="D:\УЧЁБА\ПиОИвИС\5 лаба\skrin3.jpg" width ""height"" >
+    <img src="skrin3.jpg" width ""height"" >
 </p>
 
 Основные использованные команды:
