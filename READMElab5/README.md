@@ -18,11 +18,84 @@
 
 Код для Windows:
 
-<img src="images/win.png" alt="Код для Windows">
+```batch
+  @echo off
+set /p number="input any number: "
+set /p path="Input a path: "
+
+call :checkNumber
+call :checkPath
+goto :passed
+
+rem "function that validates input 'number' variable"
+:checkNumber
+if "%number%"=="" (echo the "number" variable isn't defined & goto :exit)
+for /f "tokens=* delims=0" %%a in ("%number%") do (set number=%%a)
+if "%number%" == "" (set number=0 & exit /b)
+set /a "isInteger=number*1"
+if NOT %isInteger% == %number% (echo the input number doesn't have number type & goto :exit)
+exit /b
+
+rem "function that validates input 'path' variable"
+:checkPath
+if "%path%"=="" (echo the "path" variable isn't defined & goto :exit)
+if not exist "%path%" (echo the entered path doesn't exist & goto :exit)
+exit /b
+
+
+:passed
+set dateStr=%date%
+type nul > %dateStr%.txt
+for /f "tokens=1,2 delims= " %%i in (%path%) do (if %%i geq %number% (echo %%i %%j >> %dateStr%.txt))
+
+:exit
+pause
+```
 
 Код для Linux:
 
-<img src="images/lin.png" alt="Код для Linux">
+```bash
+read -p "Input any number: " number
+read -rp "Input a path: " path
+
+number=$(echo $number | sed 's/^0*//')
+isPassed=1
+checkNumber() {
+ if [ "$number" == "" ]; then
+  isPassed=0
+  echo "the 'number' variable isn't defined"
+ elif ! [[ $number =~ ^-?[0-9]+$ ]]; then
+  isPassed=0
+  echo "the 'number' variable doesn't have number type"
+ fi
+}
+checkPath() {
+ if [ "$path" == "" ]; then
+  isPassed=0
+  echo "the 'path' variable isn't defined"
+ elif ! [ -e $path ]; then
+  isPassed=0
+  echo "the entered path doesn't exist"
+ fi
+}
+checkNumber
+checkPath
+if [ $isPassed -eq 1 ]; then
+ fileName="$(printf "%(%d.%m.%Y)T").txt"
+ if [ -e $fileName ]; then
+     rm "$fileName"
+ fi
+ touch "$fileName"
+ cat $path | while read line 
+ do
+    read -a data <<< "$line"
+    if [[ ${data[0]} -ge $number ]]
+    then
+     echo "${data[0]} ${data[1]}" >> "$fileName"
+    fi
+ done
+fi
+```
 
 #### Переменные:
 
