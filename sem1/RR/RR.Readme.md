@@ -175,7 +175,7 @@ fin.close();
 
 Граф 2:
 
-![Граф2](https://github.com/iis-32170x/RPIIS/blob/Давыдов_Р/RR/Tests/graph2.PNG)
+![граф2](https://github.com/user-attachments/assets/45ea1d76-fa35-4193-a149-0bb8caedeac4)
 
 Матрица 2:
 ```
