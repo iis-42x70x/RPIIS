@@ -86,112 +86,80 @@
 #include <fstream> 
 using namespace std;
 
-//////////////////////
-struct Edge { 
+struct Edge {
     int to;        // информация о конечной вершине *to* и весе *weight* ребра
     int weight;
 };
-/////////////////////
 
+int findEccentricity(vector<vector<Edge>>& adjList, int start, int n) {
+    vector<int> dist(n, INT_MAX);
+    dist[start] = 0;
 
-
-
-
-
-
-/////////////вычисление эксцентриситета заданной вершины//////////
-int findEccentricity(vector<vector<Edge>>& adjList, int start, int n) { //список смежности *adjList*, n-общее количество вершин
-    vector<int> dist(n, INT_MAX);//вектор *dist* для хранения расстояний от заданной вершины до всех остальных вершин (изначально расстояние от вершины *start* до любой другой вершины ∞)
-    dist[start] = 0; //расстояние вершины *start* до самой себя
-
-    queue<int> q; //создаем очередь для хранения вершин, которые мы будем рассматривать
+    queue<int> q;
     q.push(start);
 
     while (!q.empty()) {
         int cur = q.front();
         q.pop();
 
-        for (const Edge& edge : adjList[cur]) { // для каждого ребра *edge*, инцидентного текущей вершине cur (adjList[cur]-ребра, инцидентные вершине) выполняем:
-            int neighbor = edge.to; // *neighbor*- номер соседней вершины для вершины *cur*
-            int weight = edge.weight; //*weight* -вес ребра
+        for (const Edge& edge : adjList[cur]) {
+            int neighbor = edge.to;
+            int weight = edge.weight;
 
-            if (dist[neighbor] > dist[cur] + weight) { //Если найден новый более короткий путь к вершине *neighbor*, то его расстояние обновляется, и вершина добавляется в очередь для дальнейшего рассмотрения. Этот процесс продолжается до тех пор, пока не будут рассмотрены все возможные пути и найдены кратчайшие расстояния от стартовой вершины до всех других вершин в графе.
+            if (dist[neighbor] > dist[cur] + weight) {
                 dist[neighbor] = dist[cur] + weight;
                 q.push(neighbor);
             }
         }
     }
 
-    int maxDist = 0; 
-    for (int i = 0; i < n; ++i) { //находим эксцентриситет вершины (максимальное удаление(расстояние) от данной вершины)
-        maxDist = max(maxDist, dist[i]); //в каждой итерации цикла используется функция max, которая возвращает большее из двух значений
+    int maxDist = 0;
+    for (int i = 0; i < n; ++i) {
+        maxDist = max(maxDist, dist[i]);
     }
 
     return maxDist;
 }
-///////////////////////////////////////////////////////////////////////
 
-
-
-
-
-
-
-/////////нахождение радиуса графа/////////////////////////////////////
-int findGraphRadius(vector<vector<Edge>>& adjList, int n) { 
+int findGraphRadius(vector<vector<Edge>>& adjList, int n) {
     int minEccentricity = INT_MAX;
 
-    for (int i = 0; i < n; ++i) { //проходим по всем вершинам графа и вычисляем эксцентриситет каждой вершины с помощью ф-ии *findEccentricity*
+    for (int i = 0; i < n; ++i) {
         int eccentricity = findEccentricity(adjList, i, n);
-        minEccentricity = min(minEccentricity, eccentricity); //находим минимальный эксцентриситет, который и будет радиусом
+        minEccentricity = min(minEccentricity, eccentricity);
     }
 
-    if (minEccentricity == INT_MAX) { //если граф пустой или несвязный
-        return -1; 
-    }
-    else {
-        return minEccentricity;
-    }
+    return (minEccentricity == INT_MAX) ? -1 : minEccentricity;
 }
-/////////////////////////////////////////////////////////////////////
 
-
-
-
-
-
-
-///////считывание данных из файлов//////////////////////////////////
 void run_testcase(const char* file) {
-    ifstream input(file); //открываем файл 
-    if (!input.is_open()) { //проверяет, успешно ли был открыт файл 
+    ifstream input(file);
+    if (!input.is_open()) {
         cerr << "Nevozmozhno otkryt fayl: " << file << endl;
         return;
     }
 
     int n, m;
-    input >> n >> m; //считываем кол-во вершин n и кол-во ребер m (первая строка текстового файла)
+    input >> n >> m;
 
-    vector<vector<Edge>> adjList(n); 
-    
+    vector<vector<Edge>> adjList(n);
+
     cout << "Spisok smezhnosti: " << endl;
     for (int i = 0; i < m; i++) {
         int u, v, w;
-        input >> u >> v >> w; //вершины u и v, вес w
-        u--, v--; //тк в файле вершины пронумерованы с 1, а в коде используется индексация с 0
+        input >> u >> v >> w;
+        u--, v--;
 
-        Edge edge_to_v = { v, w }; //ребро, направленное к вершине v с весом w
-        Edge edge_to_u = { u, w }; //ребро, направленное к вершине u с весом w
+        Edge edge_to_v = { v, w };
+        Edge edge_to_u = { u, w };
 
-        adjList[u].push_back(edge_to_v); //добавляем созданное ребро *edge_to_v* в список смежности для вершины u
-        adjList[v].push_back(edge_to_u); ////добавляем созданное ребро *edge_to_u* в список смежности для вершины v
-        cout << u+1 << "<->" << v + 1 << " " << w << endl; //выводим список смежности
-        cout << endl;
-
+        adjList[u].push_back(edge_to_v);
+        adjList[v].push_back(edge_to_u);
+        cout << u + 1 << "<->" << v + 1 << " " << w << endl;
     }
 
-    input.close(); //закрываем поток ввода
-    
+    input.close();
+
     int graphRadius = findGraphRadius(adjList, n);
     if (graphRadius == -1) {
         cout << "Graf nesvyaznyy ili pustoy " << endl;
@@ -201,23 +169,45 @@ void run_testcase(const char* file) {
     }
     cout << "--------------------------------------------------\n";
 }
-//////////////////////////////////////////////////////////////////////////////
 
-
-
-
-
-
-////////запуск тестовых случаев/////////////////////////////////////////////
 int main() {
     setlocale(LC_ALL, "ru");
 
-    // Run the test cases 
-    run_testcase("graph1.txt");
-    run_testcase("graph2.txt");
-    run_testcase("graph3.txt");
-    run_testcase("graph4.txt");
-    run_testcase("graph5.txt");
+    int choice;
+    do {
+        cout << "Выберите граф для анализа:\n";
+        cout << "1. graph1.txt\n";
+        cout << "2. graph2.txt\n";
+        cout << "3. graph3.txt\n";
+        cout << "4. graph4.txt\n";
+        cout << "5. graph5.txt\n";
+        cout << "0. Выход\n";
+        cout << "Ваш выбор: ";
+        cin >> choice;
+
+        switch (choice) {
+        case 1:
+            run_testcase("graph1.txt");
+            break;
+        case 2:
+            run_testcase("graph2.txt");
+            break;
+        case 3:
+            run_testcase("graph3.txt");
+            break;
+        case 4:
+            run_testcase("graph4.txt");
+            break;
+        case 5:
+            run_testcase("graph5.txt");
+            break;
+        case 0:
+            cout << "Выход из программы." << endl;
+            break;
+        default:
+            cout << "Неверный выбор. Пожалуйста, попробуйте снова." << endl;
+        }
+    } while (choice != 0);
 
     return 0;
 }
