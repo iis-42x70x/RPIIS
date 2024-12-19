@@ -103,8 +103,7 @@ using namespace std;
     graph[6] = { 2,5 };
     print(graph);
     }
-
-  
+ ```
 * **Основная часть**.
   
 ```c++
