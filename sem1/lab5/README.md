@@ -7,8 +7,9 @@
 + научиться соотносить командные оболочки для разных OS.
 + Освоить командное окружение для OS семейства Unix(утилиты из пакета GNU Core Utilities), и соответствующие им утилиты для OS семейства MS Windows.
 ### Условия задания
-Вариант 53. Создать файл sh и bat, который выполняет следующее: 
-На вход пакетному файлу приходит относительный путь к папке (как параметр пакетного файла). Если такой папки нет, то писать “Данной папки нет” и завершить выполнение программы. Если такая папка есть, то в ней и в ее подкаталогах находить все пакетные файлы (файлы sh или bat) и запускаем их в алфавитном порядке (по названию файла). Каждый из скриптов внутри может возвращать какое-то рандомное значение. Вывести все эти рандомные значения по убыванию в файл result.txt.
+Вариант 78. Создать файл sh и bat, который выполняет следующее: 
+На вход пакетному файлу приходит путь к папке (как параметр пакетного файла). В заданной папке найти самый маленький txt файл. Создать файл result.txt и вывести в него содержимое найденного файла в обратном порядке.
+
 
 
 
@@ -17,34 +18,36 @@
 ```bash
 #!/bin/bash
 
+# Проверяем, что передан путь к папке
 if [ -z "$1" ]; then
-    echo "Usage: $0 <folder_path>"
-    exit 1
-fi
-folder="$1"
-if [ ! -d "$folder" ]; then
-    echo "There is no such folder"
+    echo "Ошибка: Не указан путь к папке."
     exit 1
 fi
 
-scripts=$(find "$folder" -type f -name "*.sh" | sort)
-random_values=""
+DIRECTORY=$1
 
-for script in $scripts; do
-    random_value=$(bash "$script")
-    echo $random_value
-    if echo "$random_value" | grep -q '^[0-9]\+$'; then
-        random_values="$random_values$random_value"'\n'
-    fi
-done
-
-if [ -z "$random_values" ]; then
-    echo "No valid random values found."
+# Проверяем, существует ли папка
+if [ ! -d "$DIRECTORY" ]; then
+    echo "Ошибка: Указанная папка не существует."
     exit 1
 fi
 
-echo "$random_values" | sort -nr > result.txt
-echo "Results have been written to result.txt"
+# Ищем самый маленький txt файл в папке
+SMALLEST_FILE=$(find "$DIRECTORY" -type f -name "*.txt" -printf "%s %p\n" | sort -n | head -n 1 | awk '{print $2}')
+
+# Проверяем, найден ли файл
+if [ -z "$SMALLEST_FILE" ]; then
+    echo "Ошибка: В папке нет txt файлов."
+    exit 1
+fi
+
+# Создаём result.txt и записываем содержимое найденного файла в обратном порядке
+if [ -f "result.txt" ]; then
+    rm result.txt
+fi
+tac "$SMALLEST_FILE" > result.txt
+
+echo "Результат записан в result.txt."
 ```
 ## Вспомогательный Bash файл
 - ### Код
