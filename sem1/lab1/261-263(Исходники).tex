@@ -1,1 +1,140 @@
+\documentclass[a4paper,8pt]{article}
+% \usepackage[utf8]{inputenc} % Поддержка UTF-8 (для русских букв)
+\usepackage[english, russian]{babel} % Поддержка русского языка
+\usepackage{graphicx} % для вставки изображений
+\usepackage{amsmath} % для математических функций
+\usepackage{caption} % для подписей к рисункам
+\usepackage{float} % для фиксации размещения рисунков
+\usepackage{hyperref} % для ссылок
+\usepackage{xcolor} % для цветного текста
+\usepackage{multicol}
+\usepackage{geometry} % Пакет для настройки полей страницы
+\geometry{
+    a4paper,
+    left=2cm,    % Левый отступ
+    right=2cm,   % Правый отступ
+    top=2cm,     % Верхний отступ
+    bottom=2cm   % Нижний отступ
+}
+%\setlength{\parskip}{0pt} % Интервал между абзацами
 
+% Пакет для изменения отступов перед и после заголовков
+\usepackage{titlesec}
+
+\usepackage[
+    sorting=none % = as cited order
+]{biblatex} % Подключение библиографии
+\addbibresource{references.bib} % Имя файла с библиографией
+\usepackage{url}
+
+% Настройка отступов для заголовка subsection
+\titlespacing*{\subsection}
+{0pt}{15pt}{15pt} % {слева}{перед заголовком}{после заголовка}
+
+\date{}
+
+\setcounter{page}{261}
+
+\begin{document}
+\begin{multicols}{2}
+elements of the series. A neural network with one hidden layer and one output neuron is used. The number of neurons in the hidden layer (90) is three times larger than the size of the time window.
+
+In the output layer, there is 1 neuron acting as a summation unit. A fully connected linear layer (nn.Linear) is used with the ReLU activation function. For regularization, neuron dropout is used with a dropout probability of 0.015. The mean squared error (MSE) loss function (nn.MSELoss()) is used. The optimization method used is torch.optim. Adam with a learning rate of 0.002. Preprocessing of the original series with scaling to the interval [0, 1] is not performed because it introduces additional error into the raw data and leads to additional overhead costs for scaling before and after training.
+
+A short time series of 64 samples is used. The interval between samples is 2s. The duration of the series is 128s. The original series is divided into two datasets — train (70\% - 43 samples) and test (30\% — 21 samples). Considering that tw = 30, the number of examples for training is 14. Training is conducted for 100 epochs. The batch size is set to 1. The training time for the neural network with the specified architecture on the dataset \texttt{\~{}} 2s. The prediction execution time, with forecasting future 40 samples ≪ 1s.
+
+\subsection*{\centering \MakeUppercase{\romannumeral 8}. Description of NN Models Usage Process in the Control System}
+
+After obtaining the model for the current state, the main process transfers information about the model to the prediction process. The name of the model file is passed to the predict\_file\_q queue, and the current utilization data set for forecasting is passed to the predict\_list\_q queue. The prediction process checks for the presence of data in the specified queues at intervals corresponding to the data collection frequency. After reading the data from the queues, the prediction is executed, and the forecasted data is passed to the model\_result\_q queue. After receiving the forecast results for the current state, the main process calculates the maximum average utilization (P) across computational modules for the forecast window (Z).
+
+Next, max(R, P) is computed – the maximum between the current utilization value and the maximum forecasted value. This value, together with the code of the current state, the number of computational modules, and the stabilization limit, is used to make a decision about scaling the system. At the same time, if max(R, P) exceeds the addition threshold (A), a decision is made to add resources to the managed system. If max(R, P) is less than the removal threshold (D), a decision is made to remove resources. After the decision is made, a command is sent to the state change block.
+
+\subsection*{\centering \MakeUppercase{\romannumeral 9}. Example of the System Under Workload}
+
+As an example, Figure 5 illustrates the operation of the system under workload, gradually increasing to 600 users performing various requests to the system over approximately 0.5 hours.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{фото1.PNG}
+    \caption*{Figure 5. Model System Workload (Number of Users and RPS).}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{фото2.PNG}
+    \caption*{Figure 6. Forecast 1 for state S1.}
+\end{figure}
+
+As a result of the run, the system changed its state 6 times, with 4 changes being proactive and 2 being reactive.
+
+Figure 6 shows an example of utilization forecast for computational modules in state S1 (green color represents the original data, blue color represents the forecast).
+
+Figure 7 illustrates the situation with a reactive state change (sharp peak around the 112th sample). In this
+
+case, the neural network model did not win, although it
+predicted the state change threshold exceedance (50\%).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{фото3.PNG}
+    \caption*{Figure 7. Forecast 51 for state S1.}
+\end{figure}
+
+This situation shows that the complexity of the process increases as the number of users (the number of requests to the system). The neural model does not account for the change in complexity, as the complexity (architecture) of the model itself does not change.
+
+\subsection*{\centering \MakeUppercase{\romannumeral 10}. Results}
+
+The problem related with making real-time decisions in managing the computational resources of a critical IT service under conditions of uncertainty in external load was discussed in the article. As a result of the conducted research, the model system of critical IT service was developed. The architecture of the combined management system are proposed. The technology for real-time decision-making is developed and described, which has been implemented in practice. Experimental researches have been conducted, confirming the workability of the proposed technology.
+
+The original multi-model approach to forecasting problem in case of generating control decisions is proposed, which enhances the adaptive properties and stability of the managed system to external workload. This approach allows to create a library of neural models capable of making forecasts needed parameters for various system states. It becomes possible to further complicate the predictor through the use of ensembles of models. At the same time, a more complex architecture (potentially capable of more accurate predictions) requires increased training time, which reduces the speed of decision making. This situation clearly shows that fast decision-making with preparing a more accurate forecast for a complex signal requires not only an improvement in the algorithm but also more computing resources with high performance.
+
+\nocite{*}
+\defbibheading{bibliography}[\refname]{\section*{\centering References}}
+
+\printbibliography % Печать списка литературы
+
+\section*{\centering НЕЙРОСЕТЕВАЯ ТЕХНОЛОГИЯ ОПЕРАТИВНОГО УПРАВЛЕНИЯ ИТ СЕРВИСОМ}
+
+\subsection*{\centering Краснопрошин В. В., Старовойтов А. А.}
+
+В работе иссследуется актуальная прикладная проблема, связанная с созданием систем принятия оперативных решений для управления ресурсами критически важных ИТ сервисов. Неопределенность внешней нагрузки является важным фактором, влияющим на оперативное управление. Для улучшения работы систем управления предлагается подход на основе мультимодельного нейросетевого прогнозирования. Описана модельная система критично ИТ сервиса. Предложена оригинальная технология, структура и архитектура системы управления. Проведены эксперименты, которые подтвердили работоспособность указанной технологии. Received 13.03.2024
+
+\end{multicols}
+
+\section*{\centering Stabilization of Parameters of Technological
+Operations in the Presence of External Control
+Actions}
+
+\begin{multicols}{2}
+
+\section*{\centering Viktor Smorodin \textit{Department of Mathematical Problems of Control and Informatics Francisk Skorina Gomel State University} Gomel, Belarus Email: smorodin@gsu.bys}
+
+\textbf{\textit{Abstract}—A new technique for formalizing probabilistic technological processes when stabilizing the parameters of functioning of technological operations using open semantic technologies for designing intelligent systems is proposed. To stabilize the parameters of technological operations in real time, a procedure for adapting control to variable external control influences is presented based on the neuroregulators algorithms of an intelligent stabilization system that implement control feedback. The principles of development and implementation of intelligent system for stabilizing parameters and a controller for an automated process control system are described.}
+
+\textbf{Keywords—formalization methodology, neuroregulator algorithms, simulation models, stabilization of controlled parameters, controller}
+
+\subsection*{\centering I. Introduction}
+
+The operating efficiency of the created automated control systems for real objects largely depends on the quality and adequacy of mathematical models of the research object, which are used at the control system design stage [1]. For this reason, the most significant scientific results in the field of research of the operation of automated production systems and control systems are the development of effective algorithms for adaptive control of automated production based on new methods of neural network modeling of the research object [2] – [4]. The current stage of development of industrial automation means requires ensuring interoperability and semantic compatibility of heterogeneous components of intelligent systems [5].
+
+The paper presents a methodology for synthesizing feedback loops for controlling the technological cycle of automated production based on the use of open semantic technologies for designing intelligent computer systems and algorithms for neural network modeling of control feedback loops.
+
+\section*{\centering Vladislav Prokhorenko \textit{Department of Mathematical Problems of Control and Informatics Francisk Skorina Gomel State University} Gomel, Belarus Email: shnysct@proton.me}
+
+\subsection*{\centering II. Problems of stabilization of technological cycle
+parameters}
+
+The problem of determining the optimal parameters for controlling technological systems in real time is an important problem of production management in the presence of external control influences during technological operations and random disturbances associated with the design and reliability characteristics of the equipment.
+
+This paper proposes a solution to the problem of stabilizing the parameters of the technological cycle based on the creation of a new generation intelligent computer system capable of stabilizing the parameters of the technological cycle in the presence of external disturbances in real time. 
+
+The use of mathematical models of neural networks within the framework of this approach ensures the creation of a new generation of intelligent systems for adapting the control of complex technical complexes, determining optimal control parameters and stabilizing the controlled variables of technological operations in specified ranges of acceptable values depending on external control influences and random disturbances.
+
+The versatility of the proposed approach is determined by a limited set of parameterized procedures that implement algorithms for creating a knowledge base open for expansion based on the ontology of the “probabilistic technological production processes” subject area. The practical and economic significance of the results obtained are determined by the new opportunities provided by the study of existing and design of new complex technological objects.
+
+The construction of a new generation intelligent computer system involves the following development stages:
+
+- methods for formalizing the technological production process based on the use of the ontology of the subject area “technological production processes with probabilistic characteristics”;
+
+\end{multicols}
+\end{document}
