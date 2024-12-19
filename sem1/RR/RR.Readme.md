@@ -156,7 +156,7 @@ fin.close();
 ## Тесты:
 Граф 1:
 
-[<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0" version="25.0.3">
+[Upl<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0" version="25.0.3">
   <diagram name="Страница — 1" id="QlIfwaH9CSsmxjdis58g">
     <mxGraphModel dx="875" dy="475" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -215,7 +215,7 @@ fin.close();
     </mxGraphModel>
   </diagram>
 </mxfile>
-Uploading граф1.drawio…]()
+oading граф1.drawio…]()
 
 
 Матрица 1:
