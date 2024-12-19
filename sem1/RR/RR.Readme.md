@@ -194,7 +194,7 @@ fin.close();
 
 Граф 3:
 
-![Граф3](https://github.com/iis-32170x/RPIIS/blob/Давыдов_Р/RR/Tests/graph3.PNG)
+![граф3](https://github.com/user-attachments/assets/77f819fe-2f20-4d07-a4d2-c037bfd30553)
 
 $\color{light_blue}{\textsf { Матрица 3: }}$
 ```
