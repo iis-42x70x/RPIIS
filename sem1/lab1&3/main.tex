@@ -1,0 +1,378 @@
+\documentclass[10pt, letterpaper, twoside]{article}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[paperwidth=230mm,paperheight=280mm]{geometry}
+\usepackage{layout}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+
+\geometry{
+ total={180mm,200mm},
+ left=25mm,
+ right=25mm,
+ top=21mm,
+ bottom=25mm,
+ }
+\begin{document}
+\setcounter{page}{96}
+\begin{multicols}{2}
+In the context of the above-mentioned works, we
+have formulated the task of developing a concept for
+the construction of intelligent robotic systems based on
+the use of knowledge, as well as outlined the basic
+requirements for such systems:
+\begin{itemize}[noitemsep]
+   
+
+\item  support of heterogeneous components of the robot
+system, i. e. support of a single open interface of
+interaction;
+
+\item the possibility of transferring the knowledge accumulated
+by the system during its operation to other
+robotic systems with minimal changes;
+
+\item adaptive design, i. e. the ability to change the composition
+of the system components without having
+to change the interaction logic;
+
+\item support for self-modification of the system;
+\item the ability of the system to expand and/or improve
+its set of sensors and effectors;
+
+\item the ability of the system to analyze the quality of
+its physical and software components.
+
+ \end{itemize}
+These requirements correspond to the properties of
+cybernetic systems given in the OSTIS technology standard
+[6]. This technology is a reasonable choice for
+designing an intelligent robotic system, as it ensures the
+achievability of these properties.
+
+In the process of building the concept of developing
+systems of this type, it is necessary to form a list of
+recommendations and general rules for designing intelligent
+robotic systems, and to realize an applied intelligent
+robotic system on the basis of the outlined theoretical
+provisions.
+
+\begin{center}
+\MakeUppercase{\romannumeral3}. Proposed concept
+\end{center}
+
+The proposed robotic system design concept is developed
+using OSTIS technology.
+
+The fundamental possibility of integrating a physical
+robotic system and OSTIS in the context of controlling
+this system is based on the developed ontology that
+includes a description of the basic physical components
+of such a system (i. e., manipulators, transporters, etc.),
+as well as the classes of actions that can be performed
+by such components.
+
+As a formal basis for knowledge representation within
+the framework of OSTIS Technology, a unified semantic
+network with a set-theoretic interpretation is used. This
+representation model is called SC-code (Semantic Computer
+code). The elements of the semantic network are
+called sc-nodes and sc-connectors (sc-arc, sc-edges) [6].
+
+Systems built on the basis of OSTIS Technology
+are called ostis-systems. Any ostis-system consists of a
+knowledge base, a problem solver and a user interface.
+The basis of the knowledge base is a hierarchical system
+of subject domains (SDs) and their corresponding
+ontologies. Ontologies contain descriptions of concepts
+necessary for formalization of knowledge within SD.
+Any knowledge describing some problem, its context
+and specification of solution methods can be represented
+in the form of SC-code constructs. Thus, unification
+of representation and consistency of different types of
+knowledge describing problems, their context and solution
+methods is ensured.
+
+Benefits that can be achieved by using OSTIS as a
+design tool for intelligent robotic systems include:
+\begin{itemize}[noitemsep]
+\item the possibility of isolating extracted knowledge,
+independent of the manipulator types used, and
+reapplying it to other robotic systems under development,
+eliminating the need to code single-type
+operations;
+
+\item convenient means of visualization, for example, with
+the use of SCg, which allows to determine the
+working conditions of the components of robotic
+systems;
+
+\item use of open interaction interfaces that allow adding
+other physical components on the fly;
+\item explainability of the system operation modes, which
+allows tracking the occurrence of emergency situations
+with the formation of a detailed, humanunderstandable
+report.
+ \end{itemize}
+\begin{center}
+
+\MakeUppercase{\romannumeral4}. Robotics system design
+
+\end{center}
+ According to the proposed concept, we have carried
+out the design and development of a collaborative robotic
+intelligent system.
+
+The main purpose of the developed system is to sort
+objects of a certain type while maintaining the ability to
+flexibly modify the filtering condition of objects. This
+type of robotic systems is popular and widely used
+in production conditions to select objects with certain
+properties (for example, to reject manufactured products
+or to organize them for subsequent packaging of only the
+same type of goods). Such an operation, if automated, significantly
+simplifies manual labor in production, reducing
+the amount of monotonous work performed.
+
+The physical part of the system consists of the following
+components:
+\begin{itemize}[noitemsep]
+\item manipulators (2 units);
+
+\item transporter;
+
+\item single-board computer;
+
+\item storage devices (general and for target objects);
+
+\item tube;
+
+\item camera;
+
+\item ultrasonic sensor;
+
+\item power supply;
+
+\item indicator lamp;
+
+\item auxiliary components such as conductors, relays,
+voltage converters, and so on.
+ \end{itemize}
+The scheme of the main physical components of the
+system is shown in Fig. 1.
+
+The main components of the software part of the
+proposed robotic system, as well as of any ostis-system,
+are \textbf{knowledge base} and \textbf{problem solvers}. The user interface is the standard OSTIS technology tools for
+viewing and editing knowledge bases. The computer
+vision module, including a neural network model for
+object detection, is also a program component.
+\begin{center}
+\begin{minipage}{.4\textwidth}
+    \includegraphics[width=\linewidth]{пиво1.jpg}
+    \scriptsize
+    \begin{center}
+        
+
+    \caption{\textsl{Figure 1. The scheme of the main physical components of the system}}
+        \end{center}
+    \label{fig:enter-label1}
+\end{minipage}
+\end{center}
+The functioning scenario of the developed system is
+reduced to the following main actions:
+
+1) picking up the object from the tube by the feeding
+manipulator and moving it to the beginning of the
+conveyor;
+
+2) switching on the conveyor and moving the object
+until the sensor is triggered;
+
+3) disconnection of the conveyor at the moment of
+sensor actuation;
+
+4) recognition of the object (type and color) by means
+of the installed camera;
+
+5) moving the object from the conveyor belt to the
+target object storage by means of the sorting arm,
+if the recognized type and color match the set type
+and color;
+
+6) switching on the conveyor belt and moving the
+object to the general storage;
+
+7) switching off the transporter after the fulfillment of
+item 6.
+
+8) switching on the green signal of the indicator when
+there are objects in the tube;
+9) switching on the red indicator signal when there are
+no objects in the tube.
+
+Let’s describe the physical components of the system
+in more detail.
+\vspace{3mm}
+
+\textsl{A. Physical components}
+\vspace{3mm}
+
+\textbf{Manipulators} are used for gripping and moving objects.
+In this project, we used manipulators with different
+types of grippers that are widely available on the market
+— mechanical (pincer) grippers (Fig. 2) and vacuum
+grippers (Fig. 3).
+
+\textbf{Transporter} is intended for moving objects to the
+specified point of technological operation (Fig. 4).
+
+\textbf{Single} Board Computer — a specialized computer
+on which the OSTIS platform is deployed and the logic
+for controlling the system operation is implemented. In
+our implementation, the SBC Raspberry PI 5 (Fig. \ref{fig:enter-label5}) [7]
+was used for this purpose.
+
+\begin{center}
+\begin{minipage}{.4\textwidth}
+    \includegraphics[width=\linewidth]{пиво2.jpg}
+    \scriptsize
+    \begin{center}
+        
+
+    \caption{\textsl{Figure 2. Manipulator with mechanical gripper}}
+    
+        \end{center}
+    \label{fig:enter-label2}
+\end{minipage}
+\end{center}
+\begin{center}
+\begin{minipage}{.4\textwidth}
+    \includegraphics[width=\linewidth]{пиво3.jpg}
+    \scriptsize
+    \begin{center}
+        
+
+    \caption{\textsl{Figure 3. Manipulator with vacuum gripper}}
+        \end{center}
+    \label{fig:enter-label3}
+\end{minipage}
+\end{center}
+
+\textbf{Storages} — special containers used to store objects of
+a certain type (Fig. 6).
+
+\textbf{Tube} – a container for storing objects that is shaped
+to be gripped by a manipulator (Fig. 7).
+
+\textbf{Camera} is used to detect objects in the field of
+view and determine their characteristics. We used a 2
+megapixel FullHD backlit camera ZONE 51 LENS.
+
+\textbf{Ultrasonic sensor} is used to identify situations in
+which the object is in a given point of the conveyor. For our project we used the HC-SR04 sensor (Fig. 8) [8].
+Power supply is required to power all physical devices
+in the system. We used a 360-watt, 24-volt, 15-amp
+power supply.
+
+\textbf{Indicator lamp} is intended for light indication of the
+\begin{center}
+\begin{minipage}{.4\textwidth}
+    \includegraphics[width=\linewidth]{пиво4.jpg}
+    \scriptsize
+    \begin{center}
+        
+
+    \caption{\textsl{Figure 4. Transporter part}}
+        \end{center}
+    \label{fig:enter-label4}
+\end{minipage}
+\end{center}
+\begin{center}
+\begin{minipage}{.4\textwidth}
+    \includegraphics[width=\linewidth]{пиво5.jpg}
+    \scriptsize
+    \begin{center}
+        
+
+    \caption{\textsl{Figure 5. SBC Raspberry PI 5 with heat sink installed}}
+        \end{center}
+    \label{fig:enter-label5}
+\end{minipage}
+\end{center}
+system status. In our project we used a TD-50 lamp with
+two color options (red and green) (Fig. 9).
+\vspace{3mm}
+
+\textsl{B. Program components: knowledge base}
+\vspace{3mm}
+
+The ontological approach is used for knowledge structuring,
+the essence of which is to represent the knowledge
+base as a hierarchy of subject domains and their
+corresponding ontologies. OSTIS technology provides a
+basic set of ontologies on the basis of which ontologies
+of applied ostis-systems are built.
+
+The following subject domains are identified for the
+considered intelligent robotic system:
+\begin{center}
+\begin{minipage}{.4\textwidth}
+    \includegraphics[width=\linewidth]{пиво6.jpg}
+    \scriptsize
+    \begin{center}
+        
+
+    \caption{\textsl{Figure 6. Storage for objects with placed objects}}
+        \end{center}
+    \label{fig:enter-label6}
+\end{minipage}
+\end{center}
+\begin{center}
+\begin{minipage}{.4\textwidth}
+    \includegraphics[width=\linewidth]{пиво7.jpg}
+    \scriptsize
+    \begin{center}
+        
+
+    \caption{\textsl{Figure 7. Fragment of the tube with placed objects}}
+        \end{center}
+    \label{fig:enter-label7}
+\end{minipage}
+\end{center}
+\begin{center}
+\begin{minipage}{.4\textwidth}
+    \includegraphics[width=\linewidth]{пиво8.jpg}
+    \scriptsize
+    \begin{center}
+        
+
+    \caption{\textsl{Figure 8. Ultrasonic sensor}}
+        \end{center}
+    \label{fig:enter-label8}
+\end{minipage}
+\end{center}
+\begin{center}
+\begin{minipage}{.4\textwidth}
+    \includegraphics[width=\linewidth]{пиво9.jpg}
+    \scriptsize
+    \begin{center}
+        
+
+    \caption{\textsl{Figure 9. TD-50 indicator lamp}}
+        \end{center}
+    \label{fig:enter-label9}
+\end{minipage}
+\end{center}
+\begin{itemize}[noitemsep]
+\item Subject domain and its corresponding robotic device
+ontology;
+ \end{itemize}
+
+
+
+\end{multicols}
+\end{document}
