@@ -168,7 +168,8 @@ fin.close();
 
 Результат 1:
 
-![result1](https://github.com/iis-32170x/RPIIS/blob/Давыдов_Р/RR/Tests/output1.PNG)
+![Screenshot 2024-12-19 220720](https://github.com/user-attachments/assets/5325bb83-af2e-4644-910d-22415547e514)
+
 
 Граф 2:
 
@@ -186,7 +187,8 @@ fin.close();
 
 Результат 2:
 
-![result2](https://github.com/iis-32170x/RPIIS/blob/Давыдов_Р/RR/Tests/output2.PNG)
+![Screenshot 2024-12-19 220601](https://github.com/user-attachments/assets/9dad1f3e-5204-4099-85a9-da4b5c35730a)
+
 
 Граф 3:
 
@@ -202,7 +204,8 @@ $\color{light_blue}{\textsf { Матрица 3: }}$
 
 Результат 3:
 
-![result3](https://github.com/iis-32170x/RPIIS/blob/Давыдов_Р/RR/Tests/output3.PNG)
+![Screenshot 2024-12-19 220831](https://github.com/user-attachments/assets/88db7138-180d-4596-8056-1f1182b4d343)
+
 
 ## Выводы
 В результате выполнения расчётной работы приобрёл следующие навыки:
