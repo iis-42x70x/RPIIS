@@ -1,106 +1,57 @@
-﻿#include <fstream>
 #include <iostream>
+#include <vector>
 using namespace std;
 
-int main()
-{
-	setlocale(LC_ALL, "RUSSIAN");
+int main() {
+    setlocale(LC_ALL, "RUSSIAN");
 
-	string path = "matrix.txt";
-	ifstream fin;
-	fin.open(path);
-	if (!fin.is_open())
-	{
-		cout << "Файл не найлен\n";
-	}
-	else
-	{
+    int rows, columns;
+    cout << "Введите количество строк: ";
+    cin >> rows;
+    cout << "Введите количество столбцов: ";
+    cin >> columns;
+
+    // Создаем матрицу
+    vector<vector<double>> matrix(rows, vector<double>(columns));
+
+    // Вводим данные в матрицу
+    cout << "Введите элементы матрицы (по строкам):\n";
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < columns; j++) {
+            cin >> matrix[i][j];
+        }
+    }
+
+    // Выводим матрицу
+    cout << "Введенная матрица:\n";
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < columns; j++) {
+            cout << matrix[i][j] << "\t";
+        }
+        cout << "\n";
+    }
+
+    // Проверяем двусвязность графа
+    bool isDoublyConnected = true;
+    for (int i = 0; i < rows; i++) {
         int count = 0;
-        int temp;
-
-        while (!fin.eof())
-        {
-            fin >> temp;
-            count++;
-        }
-        
-        fin.seekg(0, ios::beg);
-        fin.clear();
-
-        
-        int count_space = 0;
-        char symbol;
-        while (!fin.eof())
-        {           
-            fin.get(symbol);
-            if (symbol == ' ') count_space++;
-            if (symbol == '\n') break;
-        }
-        
-
-        
-        fin.seekg(0, ios::beg);
-        fin.clear();
-
-        
-
-        int rows = count / (count_space + 1);
-        int columns = count_space + 1;
-
-        double** matrix;
-        matrix = new double* [rows];
-        for (int i = 0; i < rows; i++) matrix[i] = new double[columns];
-
-        
-        for (int i = 0; i < rows; i++)
-            for (int j = 0; j < columns; j++)
-                fin >> matrix[i][j];
-
-        
-        for (int i = 0; i < rows; i++)
-        {
-            for (int j = 0; j < columns; j++)
-                cout << matrix[i][j] << "\t";
-            cout << "\n";
-        }
-
-
-        bool check2sv = true;        
-        for (int i = 0; i < rows; i++) 
-        {
-            int count = 0;
-            for (int j = 0; j < columns; j++)
-            {
-                if (matrix[i][j] == 1)
-                {
-                    count++;                   
-                }
-                
-            }
-            if (count < 2) {
-                
-                check2sv = false;
+        for (int j = 0; j < columns; j++) {
+            if (matrix[i][j] == 1) {
+                count++;
             }
         }
-
-        if (check2sv != false)
-        {
-            cout << "Граф двусвязный\n";
+        if (count < 2) {
+            isDoublyConnected = false;
+            break;
         }
-        else
-        {
-            cout << "Граф не двусвязный\n";
-        }
-        
+    }
 
-        for (int i = 0; i < rows; i++)
-            delete[] matrix[i];
-        delete[] matrix;
+    if (isDoublyConnected) {
+        cout << "Граф двусвязный\n";
+    }
+    else {
+        cout << "Граф не двусвязный\n";
+    }
 
-        fin.close();
-        
-	}
-
-	
-	
+    return 0;
 }
