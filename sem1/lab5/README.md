@@ -18,49 +18,33 @@
 ```bash
 #!/bin/bash
 
-# Проверяем, что передан путь к папке
 if [ -z "$1" ]; then
-    echo "Ошибка: Не указан путь к папке."
+    echo "Usage: $0 <folder_path>"
     exit 1
 fi
 
-DIRECTORY=$1
+folder="$1"
 
-# Проверяем, существует ли папка
-if [ ! -d "$DIRECTORY" ]; then
-    echo "Ошибка: Указанная папка не существует."
+if [ ! -d "$folder" ]; then
+    echo "There is no such folder."
     exit 1
 fi
 
-# Ищем самый маленький txt файл в папке
-SMALLEST_FILE=$(find "$DIRECTORY" -type f -name "*.txt" -printf "%s %p\n" | sort -n | head -n 1 | awk '{print $2}')
+smallest_file=$(find "$folder" -type f -name "*.txt" -exec ls -lS {} + | head -n 1 | awk '{print $NF}')
 
-# Проверяем, найден ли файл
-if [ -z "$SMALLEST_FILE" ]; then
-    echo "Ошибка: В папке нет txt файлов."
+if [ -z "$smallest_file" ]; then
+    echo "No txt files found in the folder."
     exit 1
 fi
 
-# Создаём result.txt и записываем содержимое найденного файла в обратном порядке
-if [ -f "result.txt" ]; then
-    rm result.txt
-fi
-tac "$SMALLEST_FILE" > result.txt
-
-echo "Результат записан в result.txt."
-```
-## Вспомогательный Bash файл
-- ### Код
-```bash
-#!/bin/bash
-echo $((RANDOM % 100 + 1))
+tac "$smallest_file" > result.txt
+echo "The reversed content of the smallest file has been written to result.txt."
 ```
 
 ## Batch файл
 - ### Код
 ```batch
 @echo off
-setlocal enabledelayedexpansion
 
 if "%~1"=="" (
     echo Please provide a folder path.
@@ -69,32 +53,31 @@ if "%~1"=="" (
 
 set "folder=%~1"
 
-if not exist "!folder!" (
+if not exist "%folder%" (
     echo There is no such folder.
     exit /b
 )
-do
-set "tempfile=%temp%\batfiles_results.txt"
-echo. > "!tempfile!"
 
-for /r "!folder!" %%f in (*.bat) do (
-    echo Reading file: %%f
-    for /f "delims=" %%v in ('type "%%f"') do (
-        echo %%v >> "!tempfile!"
+set "smallest_file="
+for /r "%folder%" %%f in (*.txt) do (
+    if not defined smallest_file (
+        set "smallest_file=%%f"
+    ) else (
+        for %%a in ("%%f") do for %%b in ("%smallest_file%") do (
+            if %%~za lss %%~zb (
+                set "smallest_file=%%f"
+            )
+        )
     )
 )
 
-sort /r "!tempfile!" >> result.txt
-del "!tempfile!"
-echo Random values written to result.txt.
-exit /b
-```
-## Вспомогательный Batch файл
-- ### Код
-```batch
-@echo off
-set /a "rand=%random% * 1000 / 32768 + 1"
-echo %rand%
+if not defined smallest_file (
+    echo No txt files found in the folder.
+    exit /b
+)
+
+type "%smallest_file%" | more /e | findstr /v "^" > result.txt
+echo The reversed content of the smallest file has been written to result.txt.
 ```
 ### Выводы: 
  В ходе выполнения лабораторной работы по освоению командных оболочек cmd (для операционных систем семейства MS Windows) и shell (для операционных систем семейства Unix) были получены практические навыки работы с консольными программами и командами в различных операционных системах. 
