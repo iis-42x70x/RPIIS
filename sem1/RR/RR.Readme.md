@@ -156,7 +156,67 @@ fin.close();
 ## Тесты:
 Граф 1:
 
-![Граф1](https://github.com/iis-32170x/RPIIS/blob/Давыдов_Р/RR/Tests/graph1.PNG)
+[<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0" version="25.0.3">
+  <diagram name="Страница — 1" id="QlIfwaH9CSsmxjdis58g">
+    <mxGraphModel dx="875" dy="475" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="s-h3j425qyUi5nawH-Rl-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF66FF;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="160" y="180" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s-h3j425qyUi5nawH-Rl-3" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF66FF;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="360" y="290" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s-h3j425qyUi5nawH-Rl-4" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF66FF;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="360" y="80" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s-h3j425qyUi5nawH-Rl-5" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF66FF;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="500" y="180" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s-h3j425qyUi5nawH-Rl-6" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#9d00a8;entryX=1;entryY=1;entryDx=0;entryDy=0;exitX=0.055;exitY=0.27;exitDx=0;exitDy=0;exitPerimeter=0;strokeWidth=5;" edge="1" parent="1" source="s-h3j425qyUi5nawH-Rl-3" target="s-h3j425qyUi5nawH-Rl-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="320" as="sourcePoint" />
+            <mxPoint x="350" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s-h3j425qyUi5nawH-Rl-8" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;strokeWidth=5;strokeColor=#9d00a8;" edge="1" parent="1" source="s-h3j425qyUi5nawH-Rl-2" target="s-h3j425qyUi5nawH-Rl-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="320" as="sourcePoint" />
+            <mxPoint x="350" y="270" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s-h3j425qyUi5nawH-Rl-9" value="" style="endArrow=none;html=1;rounded=0;exitX=0.938;exitY=0.271;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.396;entryY=0.987;entryDx=0;entryDy=0;strokeWidth=5;entryPerimeter=0;strokeColor=#9d00a8;" edge="1" parent="1" source="s-h3j425qyUi5nawH-Rl-3" target="s-h3j425qyUi5nawH-Rl-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="300" as="sourcePoint" />
+            <mxPoint x="360" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s-h3j425qyUi5nawH-Rl-10" value="" style="endArrow=none;html=1;rounded=0;exitX=0.954;exitY=0.671;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;strokeWidth=5;strokeColor=#9d00a8;" edge="1" parent="1" source="s-h3j425qyUi5nawH-Rl-4" target="s-h3j425qyUi5nawH-Rl-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="300" as="sourcePoint" />
+            <mxPoint x="360" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s-h3j425qyUi5nawH-Rl-12" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;1&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="170" y="200" width="60" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="s-h3j425qyUi5nawH-Rl-14" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;2&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="105" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="s-h3j425qyUi5nawH-Rl-16" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;3&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="510" y="205" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="s-h3j425qyUi5nawH-Rl-17" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;4&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="315" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+Uploading граф1.drawio…]()
+
 
 Матрица 1:
 ```
