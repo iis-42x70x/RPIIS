@@ -72,7 +72,7 @@ using namespace std;
     }
     
 * **Функция для вывода графа на консоль и его максимальной степени**
-* 
+
   ```c++
     void print(const vector<vector<int>>& graph) {
     cout << "Граф:" << endl;
