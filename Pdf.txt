@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\begin{document}
+
+\title{\textbf{Расчётная работа \\ Теория графов}}
+\author{}
+\date{}
+\maketitle
+\section*{Цели работы}
+\begin{itemize}
+    \item Ознакомиться с теорией графов.
+    \item Выполнить предоставленную задачу.
+\end{itemize}
+\section*{Задачи}
+\begin{itemize}
+    \item Написать алгоритм решения задачи на языке C++.
+\end{itemize}
+
+\section*{Вариант задания}
+\textbf{Номер варианта:} 5.1 \\
+\textbf{Условие:} Определить эксцентриситет каждой вершины в неориентированном графе.
+
+\section*{Список ключевых понятий}
+\begin{itemize}
+    \item \textbf{Граф}: Совокупность вершин и рёбер, соединяющих некоторые пары вершин.
+    \item \textbf{Матрица смежности}: Квадратная матрица, описывающая связи между вершинами графа.
+    \item \textbf{Эксцентриситет вершины}: Максимальное расстояние от данной вершины до любой другой достижимой вершины.
+    \item \textbf{Обход в ширину (BFS)}: Алгоритм поиска в графе, используемый для нахождения кратчайших путей.
+\end{itemize}
+
+\section*{Тестовые примеры}
+
+\subsection*{Пример 1}
+\begin{pmatrix}
+0 & 1 & 0 & 0 & 1 \\
+1 & 0 & 1 & 1 & 0 \\
+0 & 1 & 0 & 1 & 0 \\
+0 & 1 & 1 & 0 & 1 \\
+1 & 0 & 0 & 1 & 0 \\
+\end{pmatrix}
+
+\subsection*{Пример 2}
+\begin{pmatrix}
+0 & 1 & 0 & 1 \\
+1 & 0 & 1 & 0 \\
+0 & 1 & 0 & 1 \\
+1 & 0 & 1 & 0 \\
+\end{pmatrix}
+
+
+\subsection*{Пример 3}
+\begin{pmatrix}
+0 & 1 & 1 \\
+1 & 0 & 1 \\
+1 & 1 & 0 \\
+\end{pmatrix}
+
+\section*{Объяснение основных моментов кода}
+\subsection*{Процесс преобразования входных данных (на примере 1)}
+\textbf{Входные данные:}
+\begin{verbatim}
+5
+0 1 0 0 1
+1 0 1 1 0
+0 1 0 1 0
+0 1 1 0 1
+1 0 0 1 0
+\end{verbatim}
+\textbf{Шаги выполнения:}
+\begin{itemize}
+    \item Считывается размер графа $n = 5$.
+    \item Матрица заполняется следующим образом:
+    \begin{verbatim}
+    0 1 0 0 1
+    1 0 1 1 0
+    0 1 0 1 0
+    0 1 1 0 1
+    1 0 0 1 0
+    \end{verbatim}
+    \item Алгоритм BFS запускается для каждой вершины, чтобы определить минимальные расстояния до всех остальных вершин.
+    \item На основе полученных расстояний вычисляется эксцентриситет:
+    \begin{itemize}
+        \item Вершина 0: расстояния $[0, 1, 2, 2, 1]$, эксцентриситет = 2.
+        \item Вершина 1: расстояния $[1, 0, 1, 1, 2]$, эксцентриситет = 2.
+        \item Вершина 2: расстояния $[2, 1, 0, 1, 2]$, эксцентриситет = 2.
+        \item Вершина 3: расстояния $[2, 1, 1, 0, 1]$, эксцентриситет = 2.
+        \item Вершина 4: расстояния $[1, 2, 2, 1, 0]$, эксцентриситет = 2.
+    \end{itemize}
+\end{itemize}
+\textbf{Вывод для примера 1:}
+\begin{verbatim}
+Vertex 0 eccentricity: 2
+Vertex 1 eccentricity: 2
+Vertex 2 eccentricity: 2
+Vertex 3 eccentricity: 2
+Vertex 4 eccentricity: 2
+\end{verbatim}
+
+\section*{Выводы}
+В результате выполнения данной работы было выполнено:
+\begin{itemize}
+    \item Изучение теории графов.
+    \item Реализация алгоритма на языке C++ для нахождения эксцентриситета вершин графа.
+    \item Тестирование алгоритма на нескольких примерах.
+\end{itemize}
+Программа корректно определяет эксцентриситет каждой вершины для заданных матриц смежности.
+
+\section*{Список литературы}
+\begin{enumerate}
+    \item \href{https://ru.scribd.com/document/353820157/%D0%9E%D1%80%D0%B5-%D0%9E-%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F-%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2-pdf}{Оре О. Теория графов.}
+    \item \href{https://stugum.wordpress.com/wp-content/uploads/2014/03/harary-graph-theory.pdf}{Харари, Ф. Теория графов}
+    \item \href{https://mportal.narod.ru/Graphs/Search.html}{и mportal.narod.ru.}
+\end{enumerate}
+
+\end{document}

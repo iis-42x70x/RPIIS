@@ -1,0 +1,59 @@
+#include <iostream>
+#include <vector>
+#include <fstream>
+#include <queue>
+#include <limits.h>
+
+using namespace std;
+
+typedef vector<vector<int>> Matrix;
+
+Matrix loadMatrix() {
+    ifstream f("Matrix1.txt");
+    if (!f) {
+        cerr << "Cannot open file: matrix.txt" << endl;
+        exit(1);
+    }
+    int n;
+    f >> n;
+    Matrix matrix(n, vector<int>(n));
+    for (auto& row : matrix)
+        for (auto& val : row)
+            f >> val;
+    return matrix;
+}
+
+vector<int> bfs(const Matrix& graph, int start) {
+    int n = graph.size();
+    vector<int> dist(n, INT_MAX);
+    queue<int> q;
+    dist[start] = 0;
+    q.push(start);
+    while (!q.empty()) {
+        int v = q.front();
+        q.pop();
+        for (int u = 0; u < n; ++u) {
+            if (graph[v][u] && dist[u] == INT_MAX) {
+                dist[u] = dist[v] + 1;
+                q.push(u);
+            }
+        }
+    }
+    return dist;
+}
+
+void printEccentricities(const Matrix& graph) {
+    for (int i = 0; i < graph.size(); ++i) {
+        int ecc = 0;
+        for (int d : bfs(graph, i))
+            if (d != INT_MAX)
+                ecc = max(ecc, d);
+        cout << "Vertex " << i << " eccentricity: " << ecc << endl;
+    }
+}
+
+int main() {
+    Matrix graph = loadMatrix();
+    printEccentricities(graph);
+    return 0;
+}
