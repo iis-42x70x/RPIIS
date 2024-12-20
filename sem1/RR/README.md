@@ -65,20 +65,24 @@
 ![ex2](https://github.com/iis-42x70x/RPIIS/blob/%D0%91%D0%B5%D0%BB%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%9C/sem1/RR/%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%201.2.png)
 ![ex2](https://github.com/iis-42x70x/RPIIS/blob/%D0%91%D0%B5%D0%BB%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%9C/sem1/RR/%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%201.png)
 
-2)
+## 2)
 ![ex2](https://github.com/iis-42x70x/RPIIS/blob/%D0%91%D0%B5%D0%BB%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%9C/sem1/RR/%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%202.1.png)
 ![ex2](https://github.com/iis-42x70x/RPIIS/blob/%D0%91%D0%B5%D0%BB%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%9C/sem1/RR/%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%202.2.png)
 
-3)
+## 3)
 ![ex2](https://github.com/iis-42x70x/RPIIS/blob/%D0%91%D0%B5%D0%BB%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%9C/sem1/RR/%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%203.png)
-![ex2]()
+![ex2](https://github.com/iis-42x70x/RPIIS/blob/%D0%91%D0%B5%D0%BB%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%9C/sem1/RR/%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%203.1.png)
 
-4)![ex2](https://github.com/iis-42x70x/RPIIS/blob/%D0%91%D0%B5%D0%BB%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%9C/sem1/RR/%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%204.png)
-![ex2] 
+## 4)
+![ex2](https://github.com/iis-42x70x/RPIIS/blob/%D0%91%D0%B5%D0%BB%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%9C/sem1/RR/%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%204.png)
+![ex2](https://github.com/iis-42x70x/RPIIS/blob/%D0%91%D0%B5%D0%BB%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%9C/sem1/RR/%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%204.1.png) 
 
-5)![ex2](https://github.com/iis-42x70x/RPIIS/blob/%D0%91%D0%B5%D0%BB%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%9C/sem1/RR/%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%205.1.png)
+## 5)
+![ex2](https://github.com/iis-42x70x/RPIIS/blob/%D0%91%D0%B5%D0%BB%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%9C/sem1/RR/%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%205.1.png)
 ![ex2](https://github.com/iis-42x70x/RPIIS/blob/%D0%91%D0%B5%D0%BB%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%9C/sem1/RR/%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%205.png)
 ## Вывод:
 В ходе выполнения данной расчетной работы были изучены основные понятия о графах, о способах их представления(матрица инцидентности графа). Для решения поставленной задачи мною был составлен и записан алгоритм языке программирования C++.
+
+Использованные источники: Хабр, Википедия, Граф Онлайн, Studfiles
 
 
