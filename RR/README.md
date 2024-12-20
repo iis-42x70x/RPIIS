@@ -193,7 +193,7 @@ void printMatrix(const vector<vector<int>>& matrix) {
 
 - Рассмотрим пятый тестовый пример:
 
-  ![1st test](photo/graph(3).png)
+  ![1st test](photo/graph(4).png)
 
 Ниже матрицы смежности для графов:
 
