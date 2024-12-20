@@ -22,7 +22,7 @@
 `Обход в ширину (breadth-first search, BFS)` — это алгоритм поиска в древовидной структуре данных узла, удовлетворяющего заданному свойству.
 
 Картинка отображающая суть поиска в ширину:
-![bfs](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/%D0%A0%D0%A0/imgs/bfs.png)
+![bfs](https://github.com/iis-42x70x/RPIIS/blob/949046495b3da4f0673abc8a37ee1a3b3fcae2ba/sem1/%D0%A0%D0%A0/bfs.png)
 
 <h2>Алгоритм решения</h2>
 
@@ -34,7 +34,7 @@
 
 Рассмотрим алгоримт на простом примере:<br>
 Найдем обхват матрицы ниже<br>
-![graph1](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/%D0%A0%D0%A0/imgs/graph1.png)
+![graph1](https://github.com/iis-42x70x/RPIIS/blob/949046495b3da4f0673abc8a37ee1a3b3fcae2ba/sem1/%D0%A0%D0%A0/graph1.png)
 ```
 Матрица инцидентности этого графа:
 -1 0 0 1 0
@@ -223,7 +223,7 @@ int main() {
 0 0 1 -1 -1
 Обхват: 3
 ```
-![graph1](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/%D0%A0%D0%A0/imgs/graph1.png)
+![graph1](https://github.com/iis-42x70x/RPIIS/blob/949046495b3da4f0673abc8a37ee1a3b3fcae2ba/sem1/%D0%A0%D0%A0/graph1.png)
 ```
 граф 2
 -1 0 1
@@ -231,7 +231,7 @@ int main() {
 0 1 -1
 Обхват: 3
 ```
-![graph2](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/%D0%A0%D0%A0/imgs/graph2.png)
+![graph2](https://github.com/iis-42x70x/RPIIS/blob/949046495b3da4f0673abc8a37ee1a3b3fcae2ba/sem1/%D0%A0%D0%A0/graph2.png)
 ```
 граф 3
 -1 0 0 0 1
@@ -241,7 +241,7 @@ int main() {
 0 0 0 1 -1
 Обхват: 5
 ```
-![graph3](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/%D0%A0%D0%A0/imgs/graph3.png)
+![graph3](https://github.com/iis-42x70x/RPIIS/blob/949046495b3da4f0673abc8a37ee1a3b3fcae2ba/sem1/%D0%A0%D0%A0/graph3.png)
 ```
 граф 4
 -1 0 0 0 1 -1
@@ -251,7 +251,7 @@ int main() {
 0 0 0 1 -1 0
 Обхват: 3
 ```
-![graph4](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/%D0%A0%D0%A0/imgs/graph4.png)
+![graph4](https://github.com/iis-42x70x/RPIIS/blob/949046495b3da4f0673abc8a37ee1a3b3fcae2ba/sem1/%D0%A0%D0%A0/graph4.png)
 ```
 граф 5
 -1 0 0 0 0 0 1 0 0 0
@@ -263,7 +263,7 @@ int main() {
 0 0 0 0 0 1 -1 0 0 0
 Обхват: 4
 ```
-![graph5](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/%D0%A0%D0%A0/imgs/graph5.png)
+![graph5](https://github.com/iis-42x70x/RPIIS/blob/949046495b3da4f0673abc8a37ee1a3b3fcae2ba/sem1/%D0%A0%D0%A0/graph5.png)
 ```
 граф 6
 -1 0 0 0 1
@@ -272,7 +272,7 @@ int main() {
 0 0 0 1 -1
 Обхват: бесконечность
 ```
-![graph6](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/%D0%A0%D0%A0/imgs/graph6.png)
+![graph6](https://github.com/iis-42x70x/RPIIS/blob/949046495b3da4f0673abc8a37ee1a3b3fcae2ba/sem1/%D0%A0%D0%A0/graph6.png)
 
 <h2>Вывод</h2>
 
