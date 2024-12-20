@@ -148,7 +148,9 @@ $\color{light_blue}{\textsf { Матрица 3: }}$
 * $\color{violet}{\textsf { Изучил базовые алгоритмы для работы с графами }}$
 
 * $\color{violet}{\textsf { Изучил базовые алгоритмы работы с файлами в C++ }}$
-  ###`Ссылки на источники :`
+  ### Ссылки на источники :
   https://youtu.be/vMFwwgtEZSI?si=90UlHlsQePWP9M4u
+  
   https://youtu.be/-ljOgvsySG8?si=IHEAtygrR-a237yB
+  
   https://youtu.be/fCfPjm8u89U?si=qmGKs1WPrqynj34w
