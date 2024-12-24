@@ -10,6 +10,8 @@
 
 * `Linux - Ubuntu-24.04`
 
+![img](https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Ubuntu-logo-2022.svg/2560px-Ubuntu-logo-2022.svg.png)
+
 ### Литература для изучения:
 * [selectel.ru](https://selectel.ru/blog/bat-file/)
   
