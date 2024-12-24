@@ -22,9 +22,9 @@
 
 
 ### Итоговые варианты:
-* [laba5.sh](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D0%B2%D0%BE%D1%80_%D0%93/sem1/laba5/laba5.sh)
-  
-* [laba5.bat](https://github.com/iis-42x70x/RPIIS/blob/%D0%93%D0%BE%D0%B2%D0%BE%D1%80_%D0%93/sem1/laba5/laba5.bat)
+* [myscript.sh](https://github.com/iis-42x70x/RPIIS/blob/%D0%A0%D0%B0%D0%B7%D1%83%D0%BC%D0%BE%D0%B2_%D0%92/sem1/laba5/myscript.sh)
+
+* [myscript.bat](https://github.com/iis-42x70x/RPIIS/blob/%D0%A0%D0%B0%D0%B7%D1%83%D0%BC%D0%BE%D0%B2_%D0%92/sem1/laba5/myscript.bat)
 
 ### Особенности bat:
 * В bat-файле "for ..." -- цикл для поиска файлов с расширением .doc
