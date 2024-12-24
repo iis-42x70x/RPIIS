@@ -6,7 +6,7 @@
 ### Используемые наборы ПО:
 * `OS MS Windows 11`
 
-![img](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyVdigO7-wpx0vu8VPgD9ZdS3R-k22JitEkQ&s)
+![img](https://banner2.cleanpng.com/20180502/vgq/avdtnffy0.webp)
 
 * `Linux - Ubuntu-24.04`
 
