@@ -6,7 +6,7 @@
 ### Используемые наборы ПО:
 * `OS MS Windows 11`
 
-![img](https://png.klev.club/uploads/posts/2024-04/png-klev-club-6dza-p-logotip-vindovs-11-png-3.png)
+![img](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyVdigO7-wpx0vu8VPgD9ZdS3R-k22JitEkQ&s)
 
 * `Linux - Ubuntu-24.04`
 
