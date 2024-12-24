@@ -6,7 +6,7 @@
 ### Используемые наборы ПО:
 * `OS MS Windows 11`
 
-![img](https://banner2.cleanpng.com/20180502/vgq/avdtnffy0.webp)
+![img](https://github.com/iis-42x70x/RPIIS/blob/%D0%A0%D0%B0%D0%B7%D1%83%D0%BC%D0%BE%D0%B2_%D0%92/sem1/laba5/png-klev-club-6dza-p-logotip-vindovs-11-png-3-removebg-preview.png)
 
 * `Linux - Ubuntu-24.04`
 
