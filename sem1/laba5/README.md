@@ -1,12 +1,12 @@
-# [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Computer+science+student)](https://git.io/typing-svg)
-
-Лабараторная работа №5
+# Лабараторная работа №5
 ### Поставленные цель:
 * Освоить командные оболочки shell (для OS семейства Unix) и cmd (для OS семейства MS Windows)
 * Освоить командное окружение для OS семейства Unix(утилиты из пакета GNU Core Utilities)
 
 ### Используемые наборы ПО:
 * `OS MS Windows 11`
+
+![img](https://png.klev.club/uploads/posts/2024-04/png-klev-club-6dza-p-logotip-vindovs-11-png-3.png)
 
 * `Linux - Ubuntu-24.04`
 
