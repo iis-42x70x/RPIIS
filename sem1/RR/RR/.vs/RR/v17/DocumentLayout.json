@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Student\\Pioivis\\RR\\RR\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E089AFA0-B9C2-4954-80F6-EA4AB4389897}|RR\\RR.vcxproj|D:\\Student\\Pioivis\\RR\\RR\\RR\\RR.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E089AFA0-B9C2-4954-80F6-EA4AB4389897}|RR\\RR.vcxproj|solutionrelative:RR\\RR.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RR.cpp",
+              "DocumentMoniker": "D:\\Student\\Pioivis\\RR\\RR\\RR\\RR.cpp",
+              "RelativeDocumentMoniker": "RR\\RR.cpp",
+              "ToolTip": "D:\\Student\\Pioivis\\RR\\RR\\RR\\RR.cpp",
+              "RelativeToolTip": "RR\\RR.cpp",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAAB8AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-25T11:12:07.284Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

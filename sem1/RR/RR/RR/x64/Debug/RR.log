@@ -1,0 +1,3 @@
+﻿  RR.cpp
+D:\Student\Pioivis\RR\RR\RR\RR.cpp(10,17): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  RR.vcxproj -> D:\Student\Pioivis\RR\RR\x64\Debug\RR.exe
