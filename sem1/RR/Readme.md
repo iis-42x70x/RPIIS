@@ -49,7 +49,7 @@ using namespace std;
 
 int main() {
     setlocale(LC_ALL, "Russian");
-    int n; // Количество вершин графа
+    int n; 
     cout << "Введите количество вершин графа: ";
     cin >> n;
 
@@ -62,8 +62,8 @@ int main() {
         }
     }
 
-    int minOnes = INT_MAX; // Инициализируем минимальное количество единиц большим значением
-    int rowWithMinOnes = -1; // Индекс строки с наименьшим количеством единиц
+    int minOnes = INT_MAX; 
+    int rowWithMinOnes = -1; 
 
     for (int i = 0; i < n; ++i) {
         int countOnes = 0;
@@ -74,7 +74,7 @@ int main() {
             }
         }
 
-        // Обновляем минимальное количество единиц и индекс строки, если текущий счетчик меньше
+        
         if (countOnes < minOnes) {
             minOnes = countOnes;
             rowWithMinOnes = i + 1; // Запоминаем строку (считаем строки от 1)
