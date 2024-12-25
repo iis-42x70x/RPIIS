@@ -1,0 +1,8 @@
+AsusSystemAnalysis.exe        4520 Services                   0     16 468 K 
+RzSDKService.exe              4496 Services                   0      6 372 K 
+GameManagerService.exe        4512 Services                   0     29 508 K 
+OfficeClickToRun.exe          4844 Services                   0     43 012 K 
+ArmouryHtmlDebugServer.ex    26120 Console                   10      1 076 K 
+RzChromaConnectServer         6760 Services                   0      5 096 K 
+SearchFilterHost.exe         17040 Services                   0      7 556 K 
+Memory Compression            2856 Services                   0     65 984 K 
