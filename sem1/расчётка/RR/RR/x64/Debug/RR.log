@@ -1,0 +1,7 @@
+﻿  RR.cpp
+C:\Users\Николай\source\repos\student\pioivis\RR\RR\RR.cpp(35,49): warning C4267: =: преобразование из "size_t" в "_Ty"; возможна потеря данных
+C:\Users\Николай\source\repos\student\pioivis\RR\RR\RR.cpp(35,49): warning C4267:         with
+C:\Users\Николай\source\repos\student\pioivis\RR\RR\RR.cpp(35,49): warning C4267:         [
+C:\Users\Николай\source\repos\student\pioivis\RR\RR\RR.cpp(35,49): warning C4267:             _Ty=int
+C:\Users\Николай\source\repos\student\pioivis\RR\RR\RR.cpp(35,49): warning C4267:         ]
+  RR.vcxproj -> C:\Users\Николай\source\repos\student\pioivis\RR\x64\Debug\RR.exe
