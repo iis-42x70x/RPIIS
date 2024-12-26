@@ -41,6 +41,8 @@
 Минимальная степень данного графа равна 1 (в вершине 6).
 
 ## Код
+
+ ```
 #include <iostream>
 #include <vector>
 #include <limits.h>
@@ -85,6 +87,7 @@ int main() {
 
     return 0;
 }
+ ```
 
 ## Вывод
 
