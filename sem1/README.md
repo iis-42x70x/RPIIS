@@ -7,10 +7,8 @@
 
 # Работа с LaTeX 
 
-Для выполнения лабораторной был использован [OverLeaf](https://www.overleaf.com)
+Для выполнения лабораторной был использован онлайн редактор Latex [OverLeaf](https://www.overleaf.com)
 
-Для регистрации можно перейти по ссылке:
-[OverLeaf](https://www.overleaf.com)
 
 ## Лабораторная работа №3
 ### ЦЕЛЬ
