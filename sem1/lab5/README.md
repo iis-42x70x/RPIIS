@@ -46,18 +46,22 @@ echo "The reversed content of the smallest file has been written to result.txt."
 ```batch
 @echo off
 
+:: Проверяем, был ли передан аргумент
 if "%~1"=="" (
     echo Please provide a folder path.
     exit /b
 )
 
+:: Сохраняем путь к папке
 set "folder=%~1"
 
+:: Проверяем, существует ли папка
 if not exist "%folder%" (
     echo There is no such folder.
     exit /b
 )
 
+:: Ищем самый маленький файл
 set "smallest_file="
 for /r "%folder%" %%f in (*.txt) do (
     if not defined smallest_file (
@@ -71,13 +75,16 @@ for /r "%folder%" %%f in (*.txt) do (
     )
 )
 
+:: Проверяем, был ли найден файл
 if not defined smallest_file (
     echo No txt files found in the folder.
     exit /b
 )
 
-type "%smallest_file%" | more /e | findstr /v "^" > result.txt
-echo The reversed content of the smallest file has been written to result.txt.
+:: Читаем и записываем содержимое файла с правильной кодировкой
+powershell -Command "Get-Content -LiteralPath '%smallest_file%' -Encoding UTF8 | Out-File -FilePath 'result.txt' -Encoding UTF8"
+echo The content of the smallest file has been written to result.txt.
+
 ```
 ### Выводы: 
  В ходе выполнения лабораторной работы по освоению командных оболочек cmd (для операционных систем семейства MS Windows) и shell (для операционных систем семейства Unix) были получены практические навыки работы с консольными программами и командами в различных операционных системах. 
