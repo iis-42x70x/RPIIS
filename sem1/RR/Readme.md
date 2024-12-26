@@ -72,7 +72,7 @@
  ```
 Минимальная степень 3.
 
-4)![graph (11)]()
+4)![graph (11)](https://github.com/iis-42x70x/RPIIS/blob/%D0%92%D0%B5%D0%B3%D0%B5%D1%80%D0%B0_%D0%9C/sem1/RR/%7B76CC0003-8F12-4A32-AA75-AFB8D8A46B67%7D.png)
  ```
  |1 2 3 4 5
 1|0 1 1 1 1
