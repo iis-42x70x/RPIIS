@@ -51,39 +51,37 @@ using namespace std;
 
 int main() {
     setlocale(LC_ALL, "Russian");
-    int n; 
+    int n; // Количество вершин графа
     cout << "Введите количество вершин графа: ";
     cin >> n;
 
-    vector<vector<int>> adjacencyMatrix(n, vector<int>(n)); // Матрица смежности
+    vector<vector<int>> Matrix(n, vector<int>(n)); // Матрица смежности
 
     cout << "Введите матрицу смежности:" << endl;
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
-            cin >> adjacencyMatrix[i][j];
+            cin >> Matrix[i][j];
         }
     }
 
-    int minOnes = INT_MAX; 
-    int rowWithMinOnes = -1; 
+    int min = INT_MAX; // Инициализируем минимальное количество единиц большим значением
 
     for (int i = 0; i < n; ++i) {
-        int countOnes = 0;
+        int count1 = 0;
 
         for (int j = 0; j < n; ++j) {
-            if (adjacencyMatrix[i][j] == 1) {
-                countOnes++;
+            if (Matrix[i][j] == 1) {
+                count1++;
             }
         }
 
-        
-        if (countOnes < minOnes) {
-            minOnes = countOnes;
-            rowWithMinOnes = i + 1; // Запоминаем строку (считаем строки от 1)
+        // Обновляем минимальное количество единиц и индекс строки, если текущий счетчик меньше
+        if (count1 < min) {
+            min = count1;
         }
     }
 
-    cout <<  "Наименьшая степень вершин графа: " << minOnes  << endl;
+    cout <<  "Наименьшая степень вершин графа: " << min  << endl;
 
     return 0;
 }
