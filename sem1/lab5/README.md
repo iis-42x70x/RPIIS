@@ -18,27 +18,43 @@
 ```bash
 #!/bin/bash
 
+# Проверяем, был ли передан аргумент
 if [ -z "$1" ]; then
-    echo "Usage: $0 <folder_path>"
-    exit 1
+  echo "Please provide a folder path."
+  exit 1
 fi
 
+# Сохраняем путь к папке
 folder="$1"
 
+# Проверяем, существует ли папка
 if [ ! -d "$folder" ]; then
-    echo "There is no such folder."
-    exit 1
+  echo "There is no such folder."
+  exit 1
 fi
 
-smallest_file=$(find "$folder" -type f -name "*.txt" -exec ls -lS {} + | head -n 1 | awk '{print $NF}')
+# Ищем самый маленький файл
+smallest_file=""
+find "$folder" -type f -name "*.txt" -print0 | while IFS= read -r -d $'\0' file; do
+  if [ -z "$smallest_file" ]; then
+    smallest_file="$file"
+  else
+    if [ $(stat -c %s "$file") -lt $(stat -c %s "$smallest_file") ]; then
+      smallest_file="$file"
+    fi
+  fi
+done
 
+# Проверяем, был ли найден файл
 if [ -z "$smallest_file" ]; then
-    echo "No txt files found in the folder."
-    exit 1
+  echo "No txt files found in the folder."
+  exit 1
 fi
 
-tac "$smallest_file" > result.txt
-echo "The reversed content of the smallest file has been written to result.txt."
+# Читаем и записываем содержимое файла с кодировкой UTF-8
+cat "$smallest_file" > result.txt
+
+echo "The content of the smallest file has been written to result.txt."
 ```
 
 ## Batch файл
