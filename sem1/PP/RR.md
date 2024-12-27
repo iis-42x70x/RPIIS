@@ -61,7 +61,7 @@
 ---
 
 ### Виды графов
-![alt text]("pictures/examples.png")
+![alt text](pictures/examples.png)
 ----------
 
 
