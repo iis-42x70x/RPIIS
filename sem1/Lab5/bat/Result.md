@@ -1,0 +1,4 @@
+# Результат Бат файла
+```
+C:\Users\faraz\Downloads\Telegram Desktop, 109732418 bytes, 1498 files
+```
