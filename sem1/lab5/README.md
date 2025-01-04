@@ -20,8 +20,8 @@
 
 # Проверяем, был ли передан аргумент
 if [ -z "$1" ]; then
-  echo "Please provide a folder path."
-  exit 1
+    echo "Please provide a folder path."
+    exit 1
 fi
 
 # Сохраняем путь к папке
@@ -29,31 +29,30 @@ folder="$1"
 
 # Проверяем, существует ли папка
 if [ ! -d "$folder" ]; then
-  echo "There is no such folder."
-  exit 1
+    echo "There is no such folder."
+    exit 1
 fi
 
 # Ищем самый маленький файл
 smallest_file=""
-find "$folder" -type f -name "*.txt" -print0 | while IFS= read -r -d $'\0' file; do
-  if [ -z "$smallest_file" ]; then
-    smallest_file="$file"
-  else
-    if [ $(stat -c %s "$file") -lt $(stat -c %s "$smallest_file") ]; then
-      smallest_file="$file"
+smallest_size=""
+
+while IFS= read -r -d '' file; do
+    current_size=$(stat -c%s "$file")
+    if [ -z "$smallest_file" ] || [ "$current_size" -lt "$smallest_size" ]; then
+        smallest_file="$file"
+        smallest_size="$current_size"
     fi
-  fi
-done
+done < <(find "$folder" -type f -name "*.txt" -print0)
 
 # Проверяем, был ли найден файл
 if [ -z "$smallest_file" ]; then
-  echo "No txt files found in the folder."
-  exit 1
+    echo "No txt files found in the folder."
+    exit 1
 fi
 
-# Читаем и записываем содержимое файла с кодировкой UTF-8
+# Читаем и записываем содержимое файла с правильной кодировкой
 cat "$smallest_file" > result.txt
-
 echo "The content of the smallest file has been written to result.txt."
 ```
 
