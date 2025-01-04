@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+bool graph[100][100];
+
+int main()
+{
+    bool isAcyclic = false;
+    int n, m, i, j;
+    cout << "Enter number of vertexes = ";
+    cin >> n;
+    cout << "Enter number of cycles = ";
+    cin >> m;
+    for (i = 0; i < m; i++)
+    {
+        int u, v;
+        cout << "Enter edge u(" << i + 1 << ") = ";
+        cin >> u;
+        cout << "Enter edge v(" << i + 1 << ") = ";
+        cin >> v;
+        u--, v--;
+        graph[u][v] = graph[v][u] = true;
+    }
+    for (i = 0; i < n; i++)
+    {
+        int c = 0;
+        for (j = 0; j < n; j++)
+        {
+            if (graph[i][j])
+            {
+                c++;
+            }
+        }
+        if (c == 1)
+        {
+            isAcyclic = true;
+        }
+        else isAcyclic = false;
+        cout << c << " edges adjacent to vertex " << i + 1 << endl;
+    }
+    if (isAcyclic == true)
+    {
+        cout << "Current graph is acyclic";
+    }
+    else cout << "Current graph is not acyclic";
+}
