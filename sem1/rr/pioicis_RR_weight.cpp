@@ -1,19 +1,10 @@
-﻿// пользователю предлагается ввести граф 
-// программа выводит граф кротчайших путей в виде матрицы смежности
-// программа работает для внг и вог
-
-#include <iostream>
+﻿#include <iostream>
 #include <vector>
 #include <queue>
 #include <iomanip>
 #define INT_MAX 2147483647
 
 using namespace std;
-
-void input(int& n, vector<vector<int>>& vec)
-{
-
-}
 
 void output(vector<vector<int>>& ans, int n) 
 {
@@ -36,7 +27,7 @@ void bfs(vector<vector<int>>& graph)
     vector<vector<int>> ans(n, vector<int>(n, 0));     // матрица смежности кратчайших путей
     vector<int> len(n, INT_MAX);      // вектор кратчайших путей
     vector<int> prev(n, -1);
-    queue<int> node;       // очередь вершин, которым предстоит 
+    queue<int> node;       // очередь вершин, которым предстоит проверка
 
     len[0] = 0;
     node.push(0);
@@ -60,49 +51,25 @@ void bfs(vector<vector<int>>& graph)
             }
         }
     }
+    output(ans, n);
 }
 
 int main() {
     setlocale(LC_ALL, "ru");
 
-    int n = 7;
+    int n = 5;
     vector<vector<int>> graph(n, vector<int>(n, 0));
 
-
-    
-    // неориентриванный
-    //           0  1  2  3  4  5  6 
-    /*graph[0] = { 0, 5, 3, 0, 0, 0, 0 };
-    graph[1] = { 5, 0, 2, 6, 0, 0, 0 };
-    graph[2] = { 3, 2, 0, 0, 4, 0, 0 };
-    graph[3] = { 0, 6, 0, 0, 1, 2, 0 };
-    graph[4] = { 0, 0, 4, 1, 0, 1, 7 };
-    graph[5] = { 0, 0, 0, 2, 1, 0, 3 };
-    graph[6] = { 0, 0, 0, 0, 7, 3, 0 };*/
-
-    /*  ans      0  1  2  3  4  5  6
-    graph[0] = { 0, 5, 3, 0, 0, 0, 0 };
-    graph[1] = { 5, 0, 0, 0, 0, 0, 0 };
-    graph[2] = { 3, 0, 0, 0, 4, 0, 0 };
-    graph[3] = { 0, 0, 0, 0, 1, 0, 0 };
-    graph[4] = { 0, 0, 4, 1, 0, 1, 0 };
-    graph[5] = { 0, 0, 0, 0, 1, 0, 3 };
-    graph[6] = { 0, 0, 0, 0, 0, 3, 0 };
-    */
-
     // ориентированный 
-    //           0  1  2  3  4  5  6 
-    graph[0] = { 0, 5, 3, 0, 0, 0, 0 };
-    graph[1] = { 0, 0, 0, 6, 0, 0, 0 };
-    graph[2] = { 0, 2, 0, 0, 4, 0, 0 };
-    graph[3] = { 0, 0, 0, 0, 1, 2, 0 };
-    graph[4] = { 0, 0, 0, 1, 0, 1, 7 };
-    graph[5] = { 0, 0, 0, 0, 0, 0, 3 };
-    graph[6] = { 0, 0, 0, 0, 0, 0, 0 };
+    //           0  1  2  3  4  5  6  7
+    graph[0] = { 0, 6, 3, 0, 0 };
+    graph[1] = { 0, 0, 0, 1, 0 };
+    graph[2] = { 0, 2, 0, 0, 4 };
+    graph[3] = { 0, 0, 0, 0, 1 };
+    graph[4] = { 0, 0, 0, 0, 0 };
     
     vector<vector<int>> ans = graph;
     bfs(ans);
-    output(ans, n);
 
 
     return 0;
