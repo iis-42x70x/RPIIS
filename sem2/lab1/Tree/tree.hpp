@@ -1,5 +1,5 @@
 #ifndef TREE_HPP
-#define TREE_HPP 1.2
+#define TREE_HPP 1.21
 
 #include <cstdlib> // size_t
 #include <iostream> // std::ostream, std::endl
@@ -62,7 +62,7 @@ private:
 				}
 			}
 			throw std::out_of_range("Can\'t insert one more child. The amount of children is already " +
-			                        std::to_string(ARITY) + "!");
+			        std::to_string(ARITY) + "!");
 		}
 		
 		/**
@@ -121,7 +121,7 @@ private:
 	 * @throws std::invalid_argument, если в качестве пути указана некорректная строка.
 	 */
 	void m_insertNode(const char *currentStep, const T &val,
-	                  size_t currentBrotherIndex, m_Node *currentNode)
+	        size_t currentBrotherIndex, m_Node *currentNode)
 	{
 		switch (*currentStep)
 		{
@@ -132,12 +132,10 @@ private:
 				if (currentNode->children[0] != nullptr)
 				{
 					this->m_insertNode(currentStep + 1, val,
-					                   0, currentNode->children[0]);
+					        0, currentNode->children[0]);
+					break;
 				}
-				else
-				{
-					throw std::domain_error("There is no such node.");
-				}
+				throw std::domain_error("There is no such node.");
 				break;
 			case 'r': // вправо (к брату, схема доступа: текущ.->родитель->след. сын)
 				if (currentNode->parent != nullptr)
@@ -145,14 +143,12 @@ private:
 					if (currentNode->parent->children[currentBrotherIndex + 1] != nullptr)
 					{
 						this->m_insertNode(currentStep + 1, val,
-						                   currentBrotherIndex + 1,
-						                   currentNode->parent->children[currentBrotherIndex + 1]);
+							currentBrotherIndex + 1,
+						        currentNode->parent->children[currentBrotherIndex + 1]);
+						break;
 					}
 				}
-				else
-				{
-					throw std::domain_error("There is no such node.");
-				}
+				throw std::domain_error("There is no such node.");
 				break;
 			default:
 				throw std::invalid_argument("Invalid path.");
@@ -171,7 +167,7 @@ private:
 	 * @throws std::invalid_argument, если в качестве пути указана некорректная строка.
 	 */
 	void m_removeNode(const char *currentStep,
-	                  size_t currentBrotherIndex, m_Node *&currentNode)
+	        size_t currentBrotherIndex, m_Node *&currentNode)
 	{
 		switch (*currentStep)
 		{
@@ -185,12 +181,10 @@ private:
 				if (currentNode->children[0] != nullptr)
 				{
 					this->m_removeNode(currentStep + 1,
-					                   0, currentNode->children[0]);
+					        0, currentNode->children[0]);
+					break;
 				}
-				else
-				{
-					throw std::domain_error("There is no such node.");
-				}
+				throw std::domain_error("There is no such node.");
 				break;
 			case 'r': // вправо
 				if (currentNode->parent != nullptr)
@@ -198,14 +192,12 @@ private:
 					if (currentNode->parent->children[currentBrotherIndex + 1] != nullptr)
 					{
 						this->m_removeNode(currentStep + 1,
-						                   currentBrotherIndex + 1,
-						                   currentNode->parent->children[currentBrotherIndex + 1]);
+						        currentBrotherIndex + 1,
+					        	currentNode->parent->children[currentBrotherIndex + 1]);
+						break;
 					}
 				}
-				else
-				{
-					throw std::domain_error("There is no such node.");
-				}
+				throw std::domain_error("There is no such node.");
 				break;
 			default:
 				throw std::invalid_argument("Invalid path.");
