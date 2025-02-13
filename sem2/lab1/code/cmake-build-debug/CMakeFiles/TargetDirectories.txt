@@ -1,0 +1,3 @@
+C:/Users/Redmi/2sem_OAIP/pioivis/cmake-build-debug/CMakeFiles/pioivis.dir
+C:/Users/Redmi/2sem_OAIP/pioivis/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Redmi/2sem_OAIP/pioivis/cmake-build-debug/CMakeFiles/rebuild_cache.dir
