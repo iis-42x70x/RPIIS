@@ -1,5 +1,5 @@
 #ifndef TREE_HPP
-#define TREE_HPP 1.1
+#define TREE_HPP 1.2
 
 #include <cstdlib> // size_t
 #include <iostream> // std::ostream, std::endl
@@ -35,7 +35,7 @@ private:
 		 * @param par - родитель.
 		 */
 		explicit m_Node(const T &val = T(), m_Node *par = nullptr)
-				: value(val), parent(par)
+			: value(val), parent(par)
 		{
 			for (size_t i = 0; i < ARITY; i++)
 			{
@@ -85,10 +85,10 @@ private:
 		}
 		
 		/**
-		 * @brief Вывод дерева на экран.
+		 * @brief Вывод вершины на экран.
 		 *
 		 * @param out - поток вывода.
-		 * @param current_level - текущий уровк
+		 * @param current_level - текущий уровень.
 		 */
 		void print(std::ostream &out, size_t current_level = 0)
 		{
@@ -219,7 +219,7 @@ public:
 	 * @param rootVal - значение, находящееся в корне дерева.
 	 */
 	explicit Tree(const T &rootVal = T())
-			: m_root(new m_Node(rootVal))
+		: m_root(new m_Node(rootVal))
 	{}
 	
 	/**
@@ -243,6 +243,11 @@ public:
 		this->m_removeNode(path, 0, this->m_root);
 	}
 	
+	/**
+	 * @brief Вывод дерева на экран.
+	 * 
+	 * @param out - поток вывода.
+	 */
 	void print(std::ostream &out) const
 	{
 		this->m_root->print(out);
