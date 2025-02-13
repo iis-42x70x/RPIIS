@@ -11,32 +11,58 @@
 ~~~
 #include "pch.h"
 #include <iostream>
-#include <queue>
+#include <vector>
 #include <string>
 #include <gtest/gtest.h>
 using namespace std;
 
+class Node {
+public:
+    string data;
+    Node* next;
+    Node(string s) : data(s), next(nullptr) {}
+};
+
 class Solution {
 public:
+    Solution() : head(nullptr) {}
+
     void Take(int n) {
-        if (n > queue1.size() || n < 0) {
-            cout << "Error" << endl;
+        Node* temp = head;
+        if (n <= 0) {
+            cout << "Error\n";
             return;
         }
-        else {
-            for (int i = 0; i < n - 1; i++) {
-                queue1.pop();
+        int counter = 1;
+        while (temp) {
+            if (counter == n) {
+                cout << temp->data << '\n';
+                return;
             }
-            cout << queue1.front() << endl;
+            else {
+                counter++;
+                temp = temp->next;
+            }
         }
+        cout << "Error\n";
     }
-    
+
     void setQueue(string s) {
-        queue1.push(s);
+        Node* newnode = new Node(s);
+        if (!head) {
+            head = newnode;
+        }
+        else {
+            Node* temp = head;
+            while (temp->next) {
+                temp = temp->next;
+            }
+            temp->next = newnode;
+        }
     }
 
 private:
-    queue<string> queue1;
+    Node* head;
 };
 
 TEST(SolutionTest, TestAdd) {
@@ -44,7 +70,7 @@ TEST(SolutionTest, TestAdd) {
     testing::internal::CaptureStdout();
     sol.setQueue("One");
     sol.setQueue("Two");
-    sol.setQueue("Tree");
+    sol.setQueue("Three");
     sol.Take(2);
     string output = testing::internal::GetCapturedStdout();
     EXPECT_EQ(output, "Two\n");
@@ -55,7 +81,7 @@ TEST(SolutionTest, TestOverflow) {
     testing::internal::CaptureStdout();
     sol.setQueue("One");
     sol.setQueue("Two");
-    sol.setQueue("Tree");
+    sol.setQueue("Three");
     sol.Take(4);
     string output = testing::internal::GetCapturedStdout();
     EXPECT_EQ(output, "Error\n");
@@ -69,10 +95,11 @@ TEST(SolutionTest, TestHollowQueue) {
     EXPECT_EQ(output, "Error\n");
 }
 
-int main(int argc, char **argv) {
+int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
+
 ~~~
 
 ### Разбор кода
