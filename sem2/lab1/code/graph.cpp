@@ -121,7 +121,7 @@ void delete_edge(vector<vector<pair<int, int>>>& graph, int vertex, int& edges) 
         cout << "у графа нет ребер";
     }
     if (!flag) {
-        cout << "такого ре=бра не сущестувет";
+        cout << "такого ребра не сущестувет";
     }
 
 }

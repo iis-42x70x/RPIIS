@@ -52,25 +52,25 @@ int main() {
             }
                 break;
             case 3: {
-                insert_new_edge(graph, vertex, edges);
+                delete_edge(graph, vertex, edges);
                 vivod_graphs(graph, vertex);
                 cout << endl;
+
             }
                 break;
             case 4: {
-                delete_edge(graph, vertex, edges);
+                insert_new_edge(graph, vertex, edges);
                 vivod_graphs(graph, vertex);
                 cout << endl;
             }
                 break;
             case 5: {
                 BFS(graph);
-            }
+            }break;
             case 6:{
                 cout<<"Вы вышли из программы";
                 return 0;
-            }
-                break;
+            } break;
             default: {
                 cout << "Введите корректно число!!!"<<endl;
             }
