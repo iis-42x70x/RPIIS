@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 233 151.88">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #fff;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-family: Arial-BoldMT, Arial;
+        font-size: 18px;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g id="_Слой_1-2" data-name="Слой 1">
+    <path class="cls-1" d="M113.14,18.22C31.64-29.14,1,31.94,1,72.23c0,76.35,59.74,102.73,112.14,54.01"/>
+    <circle class="cls-1" cx="46.54" cy="32.36" r="14.17"/>
+    <text class="cls-2" transform="translate(41.53 38.81)"><tspan x="0" y="0">1</tspan></text>
+    <circle class="cls-1" cx="117.7" cy="32.36" r="14.17"/>
+    <text class="cls-2" transform="translate(112.69 38.81)"><tspan x="0" y="0">2</tspan></text>
+    <circle class="cls-1" cx="188.86" cy="32.36" r="14.17"/>
+    <text class="cls-2" transform="translate(183.85 38.81)"><tspan x="0" y="0">3</tspan></text>
+    <circle class="cls-1" cx="188.86" cy="112.03" r="14.17"/>
+    <text class="cls-2" transform="translate(183.85 118.48)"><tspan x="0" y="0">4</tspan></text>
+    <circle class="cls-1" cx="117.7" cy="112.03" r="14.17"/>
+    <text class="cls-2" transform="translate(112.69 118.48)"><tspan x="0" y="0">5</tspan></text>
+    <circle class="cls-1" cx="46.54" cy="112.03" r="14.17"/>
+    <text class="cls-2" transform="translate(41.53 118.48)"><tspan x="0" y="0">6</tspan></text>
+    <circle class="cls-1" cx="82.12" cy="81.07" r="14.17"/>
+    <text class="cls-2" transform="translate(77.11 87.51)"><tspan x="0" y="0">7</tspan></text>
+    <line class="cls-1" x1="57.2" y1="41.69" x2="174.68" y2="105.52"/>
+    <line class="cls-1" x1="188.86" y1="46.54" x2="188.86" y2="97.86"/>
+    <line class="cls-1" x1="174.68" y1="32.36" x2="131.87" y2="32.36"/>
+    <line class="cls-1" x1="103.52" y1="32.36" x2="60.71" y2="32.36"/>
+    <line class="cls-1" x1="130.32" y1="38.81" x2="182.75" y2="99.27"/>
+    <line class="cls-1" x1="53.05" y1="99.27" x2="69.49" y2="87.51"/>
+    <line class="cls-1" x1="94.74" y1="87.51" x2="108.7" y2="101.99"/>
+    <line class="cls-1" x1="46.54" y1="46.54" x2="46.54" y2="97.86"/>
+    <line class="cls-1" x1="60.71" y1="112.03" x2="103.52" y2="112.03"/>
+    <line class="cls-1" x1="131.87" y1="112.03" x2="174.68" y2="112.03"/>
+    <path class="cls-1" d="M203.03,32.36c37.53,26.81,34.23,64.37,14.7,93.85-19.29,29.11-85.77,29.92-95.57-.72"/>
+  </g>
+</svg>
