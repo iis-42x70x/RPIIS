@@ -7,7 +7,6 @@ include_directories(.)
 
 add_executable(lab_1
         main.cpp
-        Node.hpp
         Queue.cpp
         Queue.hpp
         tests.hpp)

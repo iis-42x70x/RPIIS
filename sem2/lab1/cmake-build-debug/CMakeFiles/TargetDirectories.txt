@@ -1,0 +1,3 @@
+D:/pivo_git/sem2/lab1/cmake-build-debug/CMakeFiles/lab_1.dir
+D:/pivo_git/sem2/lab1/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/pivo_git/sem2/lab1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

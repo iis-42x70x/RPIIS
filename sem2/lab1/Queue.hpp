@@ -1,10 +1,17 @@
 #ifndef QUEUE_HPP
 #define QUEUE_HPP
 
-#include "Node.hpp"
+#include <iostream>
 
 class Queue{
     private:
+        struct Node {
+            std::string data;
+            Node* next;
+            
+            Node(std::string newData) 
+            : data(newData), next(nullptr){}
+        };
         Node* head;
         Node* lastNode;
     public:
