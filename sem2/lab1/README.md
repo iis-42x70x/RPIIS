@@ -199,7 +199,6 @@ void BFS(vector<vector<pair<int, int>>> graph) {
 }
 
 ```
-<hr>
 
 ## Результаты тестов ##
 
@@ -209,7 +208,7 @@ void BFS(vector<vector<pair<int, int>>> graph) {
 </p>
 <p></p>
 <p align="center">
-<img src="images/fifth.png" width=70% >
+<img src="images/fifth.png" width=60% >
 </p>
 <hr>
 
@@ -221,7 +220,7 @@ void BFS(vector<vector<pair<int, int>>> graph) {
 
 <p></p>
 <p align="center">
-<img src="images/test2_2.png" width=70% >
+<img src="images/test2_2.png" width=60% >
 </p>
 
 <hr>
@@ -234,7 +233,7 @@ void BFS(vector<vector<pair<int, int>>> graph) {
 
 <p></p>
 <p align="center">
-<img src="images/test3_3.png" width=70% >
+<img src="images/test3_3.png" width=60% >
 </p>
 
 <hr>
@@ -247,7 +246,7 @@ void BFS(vector<vector<pair<int, int>>> graph) {
 
 <p></p>
 <p align="center">
-<img src="images/test4_4.png" width=70% >
+<img src="images/test4_4.png" width=60% >
 </p>
 
 <hr>
@@ -260,7 +259,7 @@ void BFS(vector<vector<pair<int, int>>> graph) {
 
 <p></p>
 <p align="center">
-<img src="images/test5_5.png" width=70% >
+<img src="images/test5_5.png" width=60% >
 </p>
 <hr>
 
