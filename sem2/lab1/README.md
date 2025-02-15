@@ -199,6 +199,7 @@ void BFS(vector<vector<pair<int, int>>> graph) {
 }
 
 ```
+<hr>
 
 ## Результаты тестов ##
 
