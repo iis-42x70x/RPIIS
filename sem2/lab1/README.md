@@ -170,4 +170,114 @@ void delete_edge(vector<vector<pair<int, int>>>& graph, int vertex, int& edges) 
 
 ### Обход в ширину ###
 
-<img src="images/third.gif" width:700px>
+<img src="images/third.webp">
+
+
+Обход графа требует, чтобы алгоритм посещал, проверял и/или обновлял каждый непосещенный узел в древовидной структуре. Обходы графа классифицируются по порядку, в котором они посещают узлы графа.
+
+Алгоритм BFS запускает операцию с первого или начального узла графа и тщательно его обходит. Как только он успешно пересекает начальный узел, затем посещается и помечается следующая непройденная вершина графа.
+
+```
+void BFS(vector<vector<pair<int, int>>> graph) {
+    vector<bool> used(graph.size(), false);
+    queue<int> q;
+    q.push(0);
+    used[0] = true;
+
+    while (!q.empty()) {
+        int cur = q.front();
+        q.pop();
+        cout << "BFS находится в вершине " << cur + 1 << endl;
+
+        for (auto neighbor : graph[cur]) {
+            if (!used[neighbor.first]) {
+                q.push(neighbor.first);
+                used[neighbor.first] = true;
+            }
+        }
+    }
+}
+
+```
+
+## Результаты тестов ##
+
+**Test1**
+<p align="center">
+<img src="images/test1.png" width=80% >
+</p>
+<p></p>
+<img src="images/fifth.png">
+<hr>
+
+**Test2**
+
+<p align="center">
+<img src="images/test2.png" width=80% >
+</p>
+
+<p></p>
+<img src="images/test2_2.png">
+
+<hr>
+
+**Test3**
+
+<p align="center">
+<img src="images/test3.png" width=80% >
+</p>
+
+<p></p>
+<img src="images/test3_3.png">
+
+<hr>
+
+**Test4**
+
+<p align="center">
+<img src="images/test4.png" width=80% >
+</p>
+
+<p></p>
+<img src="images/test4_4.png">
+
+<hr>
+
+**Test5**
+
+<p align="center">
+<img src="images/test5.png" width=80% >
+</p>
+
+<p></p>
+<img src="images/test5_5.png" >
+<hr>
+
+## Вывод:
+
+В результате лабораторной работы:
+
+Ознакомился с понятием  ориентированного графа и всех других определений, связанных с таким видом графов.
+
+Реализовал некоторые операции над ориентированным графом на языке программирования С++. А также на разобрал алгоритм обхода в ширину(BFS).
+
+## Используемые  источники
+
+### Свободная энциклопедия "Википедия" [Электронный ресурс]-Режим доступа
+
+* https://ru.m.wikipedia.org/wiki/
+
+### Сайт "Олимпиадное программирование в Бресте и Беларуси" [Электронный ресурс]- режим доступа:
+**Информация о графах и их представлении в памяти компбютера**
+* https://brestprog.by/topics/graphs/
+
+**Обход в ширину**
+* https://brestprog.by/topics/bfs
+
+* https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
+
+### Сайт "Skillfactory media" [Электронный ресурс]- режим доступа:
+
+**Ориентриованный граф**
+
+* https://blog.skillfactory.ru/glossary/orientirovannyj-graf/
