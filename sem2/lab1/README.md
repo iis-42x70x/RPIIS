@@ -44,11 +44,11 @@
 <p>Вставляем 4 в первый список</p>
 <p>Удаляем 3 из второго списка</p>
 <p>Выводим списки</p>
+<p><a href="https://ibb.co/qFPHzx7k"><img src="https://i.ibb.co/Hpkc0XBn/image.png" alt="image" border="0"></a></p>
 <p>Сортируем первый список</p>
 <p>Ищем 0 в первом списке</p>
 <p>Ищем список объединения</p>
 <p>Ищем список пересечения</p>
 <p>Очищяем память</p>
 <p>Выходим из программы</p>
-<p><a href="https://ibb.co/qFPHzx7k"><img src="https://i.ibb.co/Hpkc0XBn/image.png" alt="image" border="0"></a></p>
 <p><a href="https://ibb.co/ZRJGRtvj"><img src="https://i.ibb.co/spPbpkcf/image.png" alt="image" border="0"></a></p>
