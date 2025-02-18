@@ -39,4 +39,5 @@
 <p>12.<b>Пересечение двух списков (Intersection).</b>Этот алгоритм находит пересечение двух списков, то есть общие элементы между двумя списками. Для каждого элемента первого списка алгоритм проверяет, существует ли он во втором списке, и добавляет его в новый список, если такой элемент найден.</p>
 <b>Результаты тестирвоания</b>
 <p><a href="https://ibb.co/5Ww5TZ0y"><img src="https://i.ibb.co/xSdMhZk0/image.png" alt="image" border="0"></a></p>
-<p></p>
+<p><a href="https://ibb.co/qFPHzx7k"><img src="https://i.ibb.co/Hpkc0XBn/image.png" alt="image" border="0"></a></p>
+<p><a href="https://ibb.co/ZRJGRtvj"><img src="https://i.ibb.co/spPbpkcf/image.png" alt="image" border="0"></a></p>
