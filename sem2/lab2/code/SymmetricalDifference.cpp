@@ -12,8 +12,8 @@
 #include <fstream>   // std::ifstream
 #include <cstdlib>   // size_t
 #include <string>    // std::string
-#include <cmath>     // std::abs
 #include <exception> // std::exception
+#include <clocale>   // setlocale
 
 #include "Set.hpp"
 
@@ -40,8 +40,8 @@ size_t getSetsCount(std::ifstream &fin)
 	}
 	catch (const std::exception &ex)
 	{
-		std::cout << "The sets count value is invalid! Please, fix the file."
-			"\n";
+		std::cout << "The sets count value is invalid! Please, fix "
+		"the file.\n";
 		exit(EXIT_FAILURE);
 	}
 	
@@ -71,7 +71,8 @@ Set<int> getNextSet(std::ifstream &fin)
 	}
 	catch (const std::exception &ex)
 	{
-		std::cout << "The set size is invalid! Please, fix the file.\n";
+		std::cout << "The set size is invalid! Please, fix the file."
+			"\n";
 		exit(EXIT_FAILURE);
 	}
 	
@@ -88,8 +89,8 @@ Set<int> getNextSet(std::ifstream &fin)
 		}
 		catch (const std::exception &ex)
 		{
-			std::cout << "The set element value is invalid! Please, fix the"
-						 "file.\n";
+			std::cout << "The set element value is invalid! "
+				"Please, fix the file.\n";
 			exit(EXIT_FAILURE);
 		}
 		
@@ -126,8 +127,8 @@ Set<int> symmetricalDifference(Set<int> a, Set<int> b)
 		if (!s.isFound(bElements[i]))
 		{
 			s.insert(bElements[i],
-			         std::abs((int)a.getMultiplicity(bElements[i]) -
-			                  (int)b.getMultiplicity(bElements[i])));
+				std::abs((int)a.getMultiplicity(bElements[i]) -
+			        	(int)b.getMultiplicity(bElements[i])));
 		}
 	}
 	
@@ -140,6 +141,8 @@ Set<int> symmetricalDifference(Set<int> a, Set<int> b)
 
 int main(/*[[maybe_unused]]*/int argc, const char *argv[])
 {
+	setlocale(LC_ALL, "rus");
+
 	const std::string FILE_PATH = argv[1];
 	
 	Set<int> result;
@@ -155,7 +158,7 @@ int main(/*[[maybe_unused]]*/int argc, const char *argv[])
 	fin.close();
 	
         std::cout << "Симметрическая разность всех перечисленных в файле "
-                "множеств равна множеству:\n{ ";
+        	"множеств равна множеству:\n{ ";
 
 	int *resultElements = nullptr;
 	result.getElements(resultElements);
