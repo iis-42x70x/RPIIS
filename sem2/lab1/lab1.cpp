@@ -153,8 +153,8 @@ int main()
 		cin >> elem2;
 		Spis2 = InSpis(Spis2, elem2);
 	}
+	menu();
 	do {
-		menu();
 		cin >> choice;
 		switch (choice) {
 		case 1:
