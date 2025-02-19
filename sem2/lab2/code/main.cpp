@@ -8,11 +8,12 @@
                  разности для всех этих множеств
 ******************************************************************************/
 
-#include <iostream> // std::cout
-#include <fstream>  // std::ifstream
-#include <cstdlib>  // size_t
-#include <string>   // std::string
-#include <cmath>    // std::abs
+#include <iostream>  // std::cout
+#include <fstream>   // std::ifstream
+#include <cstdlib>   // size_t
+#include <string>    // std::string
+#include <cmath>     // std::abs
+#include <exception> // std::exception
 
 #include "Set.hpp"
 
@@ -23,11 +24,28 @@
  * @return size_t - количество множеств.
  */
 size_t getSetsCount(std::ifstream &fin)
-{	
-	size_t setsCount;
-	fin >> setsCount;
+{
+	std::string setsCountStr;
+	fin >> setsCountStr;
 	
-	return setsCount;
+	long long setsCount = 0;
+	try
+	{
+		setsCount = std::stoll(setsCountStr);
+
+                if (setsCount <= 0)
+		{
+			throw std::exception();
+		}
+	}
+	catch (const std::exception &ex)
+	{
+		std::cout << "The sets count value is invalid! Please, fix the file."
+			"\n";
+		exit(EXIT_FAILURE);
+	}
+	
+	return (size_t)setsCount;
 }
 
 /**
@@ -38,14 +56,42 @@ size_t getSetsCount(std::ifstream &fin)
  */
 Set<int> getNextSet(std::ifstream &fin)
 {
-	size_t setSize;
-	fin >> setSize;
+	std::string setSizeStr;
+	fin >> setSizeStr;
+	
+	long long setSize = 0;
+	try
+	{
+		setSize = std::stoul(setSizeStr);
+
+                if (setSize <= 0)
+		{
+			throw std::exception();
+		}
+	}
+	catch (const std::exception &ex)
+	{
+		std::cout << "The set size is invalid! Please, fix the file.\n";
+		exit(EXIT_FAILURE);
+	}
 	
 	Set<int> s;
-	for (size_t i = 0; i < setSize; i++)
+	for (size_t i = 0; i < (size_t)setSize; i++)
 	{
-		int currentElement;
-		fin >> currentElement;
+		std::string currentElementStr;
+		fin >> currentElementStr;
+		
+		int currentElement = 0;
+		try
+		{
+			currentElement = std::stoi(currentElementStr);
+		}
+		catch (const std::exception &ex)
+		{
+			std::cout << "The set element value is invalid! Please, fix the"
+						 "file.\n";
+			exit(EXIT_FAILURE);
+		}
 		
 		s.insert(currentElement, 1);
 	}
@@ -89,15 +135,16 @@ Set<int> symmetricalDifference(Set<int> a, Set<int> b)
 	delete[] bElements;
 	
 	return s;
+
 }
 
-int main(/* [[maybe_unused]] */int argc, const char *argv[])
+int main(/*[[maybe_unused]]*/int argc, const char *argv[])
 {
 	const std::string FILE_PATH = argv[1];
 	
 	Set<int> result;
 	
-        std::ifstream fin(FILE_PATH);
+	std::ifstream fin(FILE_PATH);
 	size_t setsCount = getSetsCount(fin);
 	for (size_t i = 0; i < setsCount; i++)
 	{
@@ -105,8 +152,11 @@ int main(/* [[maybe_unused]] */int argc, const char *argv[])
 		
 		result = symmetricalDifference(result, currentSet);
 	}
-        fin.close();
+	fin.close();
 	
+        std::cout << "Симметрическая разность всех перечисленных в файле "
+                "множеств равна множеству:\n{ ";
+
 	int *resultElements = nullptr;
 	result.getElements(resultElements);
 	for (size_t i = 0; i < result.getSize(); i++)
@@ -118,7 +168,8 @@ int main(/* [[maybe_unused]] */int argc, const char *argv[])
 			std::cout << resultElements[i] << ' ';
 		}
 	}
-	
+	std::cout << "}\n";
+
 	delete[] resultElements;
 	
 	return EXIT_SUCCESS;
