@@ -1,0 +1,14 @@
+#pragma once
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+
+
+using namespace std;
+void displaySets(vector<string> sets);
+void readFile(vector<string>& sets, ifstream& inputFile);
+void bubbleSort(vector<string>& items);
+string sortSubset(const string& subset);
+vector<string> extractAndSortElements(const string& setString);
+void unionSets(vector<string>& sets, string& initialResult);
