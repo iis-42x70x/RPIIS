@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/olgap/ontologies/2025/2/untitled-ontology-5"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/olgap/ontologies/2025/2/untitled-ontology-5">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#вещество"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#вредные_эффекты"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#запах"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#материал"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#нефтепродукт"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#область_деятельности"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#углеводород"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#химическая_формула"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#химическое_соединение"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#цвет"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#агрегатное_состояние"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#быть_исходным_сырьем"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#включение"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#входить_в_состав"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#запах"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#название"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#свойства"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#синтезироваться_в_промышленных_масштабах"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#цветовая_характеристика"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#широко_применяться_в"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhH"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#С6Н6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#бензин"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#бензол"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#бесцветный"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#другие_компоненты_нефти"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#жидкость"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#канцерогенность"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#краситель"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#лекарство"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#нефть"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#органическое"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#пластмасса"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#промышленность"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#простейший_ароматический"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#синтетическая_резина"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#сладковатый_запах"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#сырая_нефть"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#токсичность"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#химическая_формула"/>
+        <NamedIndividual IRI="#PhH"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#химическая_формула"/>
+        <NamedIndividual IRI="#С6Н6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#нефтепродукт"/>
+        <NamedIndividual IRI="#бензин"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#вещество"/>
+        <NamedIndividual IRI="#бензол"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#углеводород"/>
+        <NamedIndividual IRI="#бензол"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#цвет"/>
+        <NamedIndividual IRI="#бесцветный"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#вещество"/>
+        <NamedIndividual IRI="#жидкость"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#вредные_эффекты"/>
+        <NamedIndividual IRI="#канцерогенность"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#вещество"/>
+        <NamedIndividual IRI="#краситель"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#вещество"/>
+        <NamedIndividual IRI="#лекарство"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#вещество"/>
+        <NamedIndividual IRI="#нефть"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#химическое_соединение"/>
+        <NamedIndividual IRI="#органическое"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#материал"/>
+        <NamedIndividual IRI="#пластмасса"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#нефтепродукт"/>
+        <NamedIndividual IRI="#пластмасса"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#область_деятельности"/>
+        <NamedIndividual IRI="#промышленность"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#углеводород"/>
+        <NamedIndividual IRI="#простейший_ароматический"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#включение"/>
+            <Class IRI="#углеводород"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#простейший_ароматический"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#материал"/>
+        <NamedIndividual IRI="#синтетическая_резина"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#нефтепродукт"/>
+        <NamedIndividual IRI="#синтетическая_резина"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#запах"/>
+        <NamedIndividual IRI="#сладковатый_запах"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#вредные_эффекты"/>
+        <NamedIndividual IRI="#токсичность"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#название"/>
+        <NamedIndividual IRI="#PhH"/>
+        <NamedIndividual IRI="#бензол"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#название"/>
+        <NamedIndividual IRI="#С6Н6"/>
+        <NamedIndividual IRI="#бензол"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#входить_в_состав"/>
+        <NamedIndividual IRI="#бензин"/>
+        <NamedIndividual IRI="#бензол"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#агрегатное_состояние"/>
+        <NamedIndividual IRI="#бензол"/>
+        <NamedIndividual IRI="#жидкость"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#быть_исходным_сырьем"/>
+        <NamedIndividual IRI="#бензол"/>
+        <NamedIndividual IRI="#краситель"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#быть_исходным_сырьем"/>
+        <NamedIndividual IRI="#бензол"/>
+        <NamedIndividual IRI="#лекарство"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#быть_исходным_сырьем"/>
+        <NamedIndividual IRI="#бензол"/>
+        <NamedIndividual IRI="#пластмасса"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#быть_исходным_сырьем"/>
+        <NamedIndividual IRI="#бензол"/>
+        <NamedIndividual IRI="#синтетическая_резина"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#запах"/>
+        <NamedIndividual IRI="#бензол"/>
+        <NamedIndividual IRI="#сладковатый_запах"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#свойства"/>
+        <NamedIndividual IRI="#бензол"/>
+        <NamedIndividual IRI="#канцерогенность"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#свойства"/>
+        <NamedIndividual IRI="#бензол"/>
+        <NamedIndividual IRI="#токсичность"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#синтезироваться_в_промышленных_масштабах"/>
+        <NamedIndividual IRI="#бензол"/>
+        <NamedIndividual IRI="#другие_компоненты_нефти"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#цветовая_характеристика"/>
+        <NamedIndividual IRI="#бензол"/>
+        <NamedIndividual IRI="#бесцветный"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#широко_применяться_в"/>
+        <NamedIndividual IRI="#бензол"/>
+        <NamedIndividual IRI="#промышленность"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#входить_в_состав"/>
+        <NamedIndividual IRI="#другие_компоненты_нефти"/>
+        <NamedIndividual IRI="#нефть"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#агрегатное_состояние"/>
+        <NamedIndividual IRI="#нефть"/>
+        <NamedIndividual IRI="#жидкость"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#включение"/>
+        <NamedIndividual IRI="#органическое"/>
+        <NamedIndividual IRI="#бензол"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#запах"/>
+        <NamedIndividual IRI="#сладковатый_запах"/>
+        <NamedIndividual IRI="#бензол"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#входить_в_состав"/>
+        <NamedIndividual IRI="#сырая_нефть"/>
+        <NamedIndividual IRI="#нефть"/>
+    </ObjectPropertyAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi -->
+
