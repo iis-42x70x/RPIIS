@@ -1,2 +1,4 @@
-﻿  кч.cpp
+﻿  кчд.cpp
+C:\Users\boyarskiu\source\repos\Красно-черное дерево\Красно-черное дерево\кчд.cpp(322,1): warning C4715: kolvoNodes: значение возвращается не при всех путях выполнения
+C:\Users\boyarskiu\source\repos\Красно-черное дерево\Красно-черное дерево\кчд.cpp(331,1): warning C4715: keymass: значение возвращается не при всех путях выполнения
   Красно-черное дерево.vcxproj -> C:\Users\boyarskiu\source\repos\Красно-черное дерево\x64\Debug\Красно-черное дерево.exe

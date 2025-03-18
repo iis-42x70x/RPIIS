@@ -20,18 +20,21 @@ public:
 		this->parent = leaf;
 	}
 	~Node() {
-		//std::cout << "udalen uzel: " << key << std::endl;
-		//if (left != leaf&&left!=nullptr) {
-		//	delete left; // Рекурсивно вызываем деструктор для левого поддерева
-		//}
-		//if (right != leaf&&right != nullptr) {
-		//	delete right; // Рекурсивно вызываем деструктор для правого поддерева
-		//}
+		/*std::cout << "udalen uzel: " << key << std::endl;*/
+		if (left != leaf&&left!=nullptr&&left!=NULL) {
+			delete left; // Рекурсивно вызываем деструктор для левого поддерева
+		}
+		if (right != leaf&&right != nullptr&&right != NULL) {
+			delete right; // Рекурсивно вызываем деструктор для правого поддерева
+		}
 	}
 };
 class Tree {
 public:
 	Node* root;
+	Tree() {
+		tree.root = leaf;
+	}
 	~Tree() {
 		deleteTree(root);
 		delete leaf;
@@ -39,7 +42,7 @@ public:
 
 private:
 	void deleteTree(Node* node) {
-		if (node == leaf) return;
+		if (node == leaf||node==NULL||node==nullptr) return;
 		deleteTree(node->left);
 		deleteTree(node->right);
 		delete node;
@@ -48,16 +51,19 @@ private:
 void Insert(Tree &tree, int key, int info);
 //void CreateNode(Node* node, int key, int info);
 bool NodeExists(Node* node);
-void balanceTree(Tree tree, Node* newNode);
-void swap(Node* a, Node* b);
-void leftRotate(Tree tree, Node* Nodet);
-void rightRotate(Tree tree, Node* newNode);
+void balanceTree(Tree &tree, Node* newNode);
+void swapN(Node* &a, Node* &b);
+void leftRotate(Tree &tree, Node* &Nodet);
+void rightRotate(Tree &tree, Node* &newNode);
 Node* search(Node* node, int key);
 void removeN(Tree &tree, int key);
 int getChildrenCount(Node* node);
 Node* getmin(Node* node);
 Node* getmax(Node* node);
-void transplantNode(Tree tree, Node* toNode, Node* fromNode);
+void transplantNode(Tree &tree, Node* &toNode, Node* &fromNode);
 Node* getChildorMock(Node* node);
-void fixRulesAfterRemoval(Tree tree, Node* node);
+void fixRulesAfterRemoval(Tree &tree, Node* &node);
+int* keymass(Node* node, int*& mass, int &kolvo);
+int kolvoNodes(Node* node, int& kolvo);
 int searchfor(Node* node, int key, int kakoi);
+void printTree(Node* node);
