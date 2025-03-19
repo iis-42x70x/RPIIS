@@ -227,9 +227,16 @@ void removeN(Tree &tree, int key) {
 			transplantNode(tree, minNode, child);
 		}
 		if (removedNodeColor == 0)fixRulesAfterRemoval(tree, child);
-	delete child;
+		delete nodeToDelete;
 }
-void fixRulesAfterRemoval(Tree &tree, Node* &node) {
+void transplantNode(Tree& tree, Node*& toNode, Node*& fromNode) {
+	if (toNode == tree.root)tree.root = fromNode;
+	else if (toNode == toNode->parent->left)toNode->parent->left = fromNode;
+	else toNode->parent->right = fromNode;
+	fromNode->parent = toNode->parent;
+	return;
+}
+void fixRulesAfterRemoval(Tree &tree, Node* node) {
 while(node != tree.root && node->color == 0) { 
 Node* brother; 
 if(node == node->parent->left) { 
@@ -241,14 +248,14 @@ if(node == node->parent->left) {
 		brother = node->parent->right;
 	}
 	if(brother->left->color == 0 && brother->right->color == 0) { 
+		if (NodeExists(brother))
 		brother->color = 1; 
-		node->parent->left = node->left;
-		node->parent->left->right = node->right;
 		node = node->parent; 
 	} 
 	else { 
 		if (brother->right->color == 0) {
 			brother->left->color = 0;
+			if (NodeExists(brother))
 			brother->color = 1;
 			rightRotate(tree, brother);
 			brother = node->parent->right;
@@ -257,8 +264,6 @@ if(node == node->parent->left) {
 		node->parent->color = 0; 
 		brother->right->color = 0; 
 		leftRotate(tree, node->parent); 
-		tree.root->left = node->left;
-		tree.root->left->right = node->right;
 		node = tree.root; 
 		} 
 } 
@@ -277,6 +282,7 @@ else {
      else { 
 		if (brother->left->color == 0) {
 			brother->right->color = 0;
+			if (NodeExists(brother))
 			brother->color = 1;
 			leftRotate(tree, brother);
 			brother = node->parent->left;
@@ -285,20 +291,11 @@ else {
 		node->parent->color = 0; 
 		brother->left->color = 0; 
 		rightRotate(tree, node->parent); 
-		tree.root->right= node->right;
-		tree.root->right->left = node->left;
 		node = tree.root; 
 			} 
 		} 
 	} 
 node->color = 0; 
-}
-void transplantNode(Tree &tree, Node* &toNode, Node* &fromNode) {
-	if (toNode == tree.root)tree.root = fromNode;
-	else if (toNode == toNode->parent->left)toNode->parent->left = fromNode;
-	else toNode->parent->right = fromNode;
-	fromNode->parent = toNode->parent;
-	return;
 }
 int getChildrenCount(Node* node) {
 	int count = 0;

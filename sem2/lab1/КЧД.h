@@ -56,7 +56,7 @@ Node* getmin(Node* node);
 Node* getmax(Node* node);
 void transplantNode(Tree &tree, Node* &toNode, Node* &fromNode);
 Node* getChildorMock(Node* node);
-void fixRulesAfterRemoval(Tree &tree, Node* &node);
+void fixRulesAfterRemoval(Tree &tree, Node* node);
 void keymass(Node* node, int*& mass, int &kolvo);
 void kolvoNodes(Node* node, int& kolvo);
 int searchfor(Node* node, int key, int kakoi);
