@@ -211,15 +211,15 @@ Node* search(Node* node, int key) {
 }
 void removeN(Tree &tree, int key) {
 	Node* nodeToDelete = search(tree.root, key);
+	bool removedNodeColor = nodeToDelete->color;
+	Node* child;
 	if (nodeToDelete == leaf) return;
-		bool removedNodeColor = nodeToDelete->color;
-		Node* child;
 		if (getChildrenCount(nodeToDelete) < 2) {
 			child = getChildorMock(nodeToDelete);
 			transplantNode(tree, nodeToDelete, child);
 		}
 		else {
-			Node* minNode = getmin(nodeToDelete->right);
+			Node* minNode = NodeExists(nodeToDelete->right->left)? nodeToDelete->right->left:nodeToDelete->right;
 			nodeToDelete->key = minNode->key;
 			nodeToDelete->info = minNode->info;
 			removedNodeColor = minNode->color;
@@ -227,8 +227,7 @@ void removeN(Tree &tree, int key) {
 			transplantNode(tree, minNode, child);
 		}
 		if (removedNodeColor == 0)fixRulesAfterRemoval(tree, child);
-		delete nodeToDelete;
-	
+	delete child;
 }
 void fixRulesAfterRemoval(Tree &tree, Node* &node) {
 while(node != tree.root && node->color == 0) { 
@@ -243,6 +242,8 @@ if(node == node->parent->left) {
 	}
 	if(brother->left->color == 0 && brother->right->color == 0) { 
 		brother->color = 1; 
+		node->parent->left = node->left;
+		node->parent->left->right = node->right;
 		node = node->parent; 
 	} 
 	else { 
@@ -256,6 +257,8 @@ if(node == node->parent->left) {
 		node->parent->color = 0; 
 		brother->right->color = 0; 
 		leftRotate(tree, node->parent); 
+		tree.root->left = node->left;
+		tree.root->left->right = node->right;
 		node = tree.root; 
 		} 
 } 
@@ -271,7 +274,7 @@ else {
 		rightRotate(tree, node->parent); 
 		brother = node->parent->left; 
 	} 
-else { 
+     else { 
 		if (brother->left->color == 0) {
 			brother->right->color = 0;
 			brother->color = 1;
@@ -282,12 +285,14 @@ else {
 		node->parent->color = 0; 
 		brother->left->color = 0; 
 		rightRotate(tree, node->parent); 
+		tree.root->right= node->right;
+		tree.root->right->left = node->left;
 		node = tree.root; 
 			} 
 		} 
 	} 
 node->color = 0; 
-	}
+}
 void transplantNode(Tree &tree, Node* &toNode, Node* &fromNode) {
 	if (toNode == tree.root)tree.root = fromNode;
 	else if (toNode == toNode->parent->left)toNode->parent->left = fromNode;
@@ -314,41 +319,37 @@ Node* getmax(Node* node) {
 Node* getChildorMock(Node* node) {
 	return NodeExists(node->left) ? node->left : node->right;
 }
-int kolvoNodes(Node* node,int &kolvo) {
-	if (node == leaf) return kolvo;
-	kolvo++;
+void kolvoNodes(Node* node,int &kolvo) {
+	if (node == leaf) return;
 	kolvoNodes(node->left,kolvo);
+	kolvo++;
 	kolvoNodes(node->right,kolvo);
 }
-int* keymass(Node* node,int* &mass, int &kolvo) {
-	if (node == leaf)return mass;
+void keymass(Node* node,int* &mass, int &kolvo) {
+	if (node == leaf)return;
 	keymass(node->left, mass, kolvo);
-	mass[kolvo] = node->info;
-	kolvo--;
+	mass[kolvo--] = node->info;
 	keymass(node->right, mass, kolvo);
 }
 int searchfor(Node* node, int key, int kakoi) {
 	Node* iskomoe = search(node, key);
 	int kolvo = 0;
-	kolvo = kolvoNodes(tree.root, kolvo);
-	int* mass = new int(kolvo);
+	kolvoNodes(tree.root, kolvo);
+	int* mass = new int[kolvo];
 	int kol = kolvo;
-	mass = keymass(node, mass, kolvo);
-	int helpp;
+	keymass(node, mass, kolvo);
+	int helpp=0;
 	if (kakoi) {
+		helpp = (getmax(node))->info;
 		for (int i = kol; i > 0; i--) 
-			if (key < mass[i]) helpp = mass[i];
-			delete[] mass;
-			return helpp;
-		
+			if (key < mass[i]&&mass[i] <= helpp) helpp = mass[i];
 	}
 	else {
 		for (int i = 0; i < kol; i++) 
-			if (key >= mass[i]) helpp = mass[i];
-			delete[] mass;
-			return helpp;
-		
+			if (key > mass[i]&&mass[i] >= helpp) helpp = mass[i];
 	}
+	delete[] new int(kolvo);
+	return helpp;
 }
 void printTree(Node* node) {
 	if (node == leaf) return;
@@ -360,9 +361,9 @@ int main() {
 	
 	int kod,key,kolvo; 
 	leaf->color = 0;
-	leaf->right = nullptr;
-	leaf->left = nullptr;
-	leaf->parent =nullptr;
+	leaf->right = leaf;
+	leaf->left = leaf;
+	leaf->parent =leaf;
 	tree.root = leaf;
 	while (true) {
 		std::cout << "\n\tVvedite zapros:\n\tdobavit` element(-y) -1\n\tFind element po key - 2\n\tUdalt` element po key - 3\n\tFind max element - 4\n\t Find min element - 5\n\tFind max blijh element - 6\n\tFind min blijh element - 7\n\tObhod dereva sleva na pravo - 8\n\tZakryt program - 9\n\t";
@@ -429,6 +430,7 @@ int main() {
 		case 8:
 			std::cout << "\nDerevo:\n";
 			printTree(tree.root);
+			std::cout << "\n" << tree.root->info<<"\n";
 			break;
 		case 9:
 			return -105;

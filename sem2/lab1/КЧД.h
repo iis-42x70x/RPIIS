@@ -20,13 +20,7 @@ public:
 		this->parent = leaf;
 	}
 	~Node() {
-		/*std::cout << "udalen uzel: " << key << std::endl;*/
-		if (left != leaf&&left!=nullptr&&left!=NULL) {
-			delete left; // Рекурсивно вызываем деструктор для левого поддерева
-		}
-		if (right != leaf&&right != nullptr&&right != NULL) {
-			delete right; // Рекурсивно вызываем деструктор для правого поддерева
-		}
+		std::cout << "udalen uzel: " << key << std::endl;
 	}
 };
 class Tree {
@@ -63,7 +57,7 @@ Node* getmax(Node* node);
 void transplantNode(Tree &tree, Node* &toNode, Node* &fromNode);
 Node* getChildorMock(Node* node);
 void fixRulesAfterRemoval(Tree &tree, Node* &node);
-int* keymass(Node* node, int*& mass, int &kolvo);
-int kolvoNodes(Node* node, int& kolvo);
+void keymass(Node* node, int*& mass, int &kolvo);
+void kolvoNodes(Node* node, int& kolvo);
 int searchfor(Node* node, int key, int kakoi);
 void printTree(Node* node);
