@@ -26,10 +26,9 @@
 В ходе выполнения работы познакомился созданием библиотек в С++, познакомился с концепцией реализация в .срр файлах, декларация $-$ в .hpp,познакомился с Google C++ Testing Framework,реализоавал библиотеку для работы c однонаправленным списком,а также создал систему тестов,которая проверяет корректность созданной библиотеки.
 ## <p align="center">Используемые источники и материалы:</p>
 - https://stackoverflow.com/questions/1208028/significance-of-a-inl-file-in-c (.inl)
-- https://www.cyberforum.ru/cpp-beginners/thread2600085.html (про .inl, .h и .cpp)
-- https://www.youtube.com/watch?v=SajrPhE6FoQ (реализация однонаправленного списка от SimleCode)
+- https://www.cyberforum.ru/cpp-beginners/thread2600085.html (про .h и .cpp)
+- https://www.youtube.com/watch?v=SajrPhE6FoQ (реализация однонаправленного списка от SimpleCode)
 - https://habr.com/ru/articles/667880/ (googletest)
 - http://google.github.io/googletest/ (googletest)
-- https://habr.com/ru/articles/155467/ (cmake)
 - https://chat.deepseek.com (помощь в освоении материала)
 
