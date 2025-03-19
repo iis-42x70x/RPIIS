@@ -33,9 +33,9 @@
 
 **Средний диаметр графа** — это среднее значение всех кратчайших путей между всеми парами вершин в графе.
 
+---
+
 ### Основные алгоритмы для работы с графами 
-
-
 
 **Обход в ширину**
 
@@ -92,11 +92,11 @@
 4 2 3 5
 5 3 4
 ```
-![image]()
+![image](https://github.com/iis-42x70x/RPIIS/blob/Балюк_М/sem1/RR/images/console3.png)
 
 ### Графическое представление графа:
 
-![image]()
+![image](https://github.com/iis-42x70x/RPIIS/blob/Балюк_М/sem1/RR/images/example3.png)
 
 ### Тест №4
 
@@ -106,11 +106,11 @@
 2 0 1 3
 3 0 1 2
 ```
-![image]()
+![image](https://github.com/iis-42x70x/RPIIS/blob/Балюк_М/sem1/RR/images/console4.png)
 
 ### Графическое представление графа:
 
-![image]()
+![image](https://github.com/iis-42x70x/RPIIS/blob/Балюк_М/sem1/RR/images/example4.png)
 
 ### Тест №5
 
@@ -122,11 +122,11 @@
 4 3
 5 3
 ```
-![image]()
+![image](https://github.com/iis-42x70x/RPIIS/blob/Балюк_М/sem1/RR/images/console5.png)
 
 ### Графическое представление графа:
 
-![image]()
+![image](https://github.com/iis-42x70x/RPIIS/blob/Балюк_М/sem1/RR/images/example5.png)
 
 ---
 
