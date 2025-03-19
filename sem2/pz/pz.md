@@ -5,10 +5,13 @@
 ![image](https://github.com/user-attachments/assets/d714c418-8a6c-4f94-a781-4e0ed7006ac5)
 
 KBE:
+-------
 
-![image](https://github.com/user-attachments/assets/365117ec-6416-4692-907f-98accac6da13)
+![image](https://github.com/user-attachments/assets/8d9eb6b7-4f00-4df2-a866-5a671bc4a67a)
+
 
 Protege:
+-----
 
 Описание классов:
 
