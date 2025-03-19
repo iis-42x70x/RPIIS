@@ -234,20 +234,30 @@ void Sort(Node*& head, Node*& tail) {
 Проверяет, пуст ли список или содержит только один элемент. Если да — завершает выполнение. Далее применяется сортировка пузырьком
 ## Тесты:
 * Тест 1
-![]()
+  
+![](https://github.com/iis-42x70x/RPIIS/blob/Балюк_М/sem2/lab1/pictures/test1.jpg)
 
 * Тест 2
-  ![]()
+  
+![](https://github.com/iis-42x70x/RPIIS/blob/Балюк_М/sem2/lab1/pictures/test2.jpg)
 
 * Тест 3
-  ![]()
-  ![]()
+  
+![](https://github.com/iis-42x70x/RPIIS/blob/Балюк_М/sem2/lab1/pictures/test3.1.jpg)
+
+![](https://github.com/iis-42x70x/RPIIS/blob/Балюк_М/sem2/lab1/pictures/test3.2.jpg)
 
 * Тест 4
-  ![]()
+  
+![](https://github.com/iis-42x70x/RPIIS/blob/Балюк_М/sem2/lab1/pictures/test4.jpg)
 
 * Тест 5
-  ![]()
+  
+![](https://github.com/iis-42x70x/RPIIS/blob/Балюк_М/sem2/lab1/pictures/test5.jpg)
+
+* Тест 6
+  
+![](https://github.com/iis-42x70x/RPIIS/blob/Балюк_М/sem2/lab1/pictures/test6.jpg)
 
   ## Вывод
 
