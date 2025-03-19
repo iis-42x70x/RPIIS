@@ -22,6 +22,8 @@
 ## <p align="center">Результаты Тестов:</p>
 ![Снимок экрана от 2025-03-19 19-10-35](https://github.com/user-attachments/assets/e0d0e19d-9160-45fe-ab7a-98c318efff13)
 ![Снимок экрана от 2025-03-19 19-10-57](https://github.com/user-attachments/assets/103f2f96-b23b-4c7a-a00a-c5ab0ce6cb7a)
+## <p align="center">Вывод</p>
+В ходе выполнения работы познакомился созданием библиотек в С++, познакомился с концепцией реализация в .срр файлах, декларация $-$ в .hpp (узнал о файле .inl), познакомился с классами в С++, познакомился с Google C++ Testing Framework, познакомился с шаблонами, познакомился с исключениями, реализоавал библиотеку для работы c однонаправленным списком,а также создал систему тестов,которая проверяет корректность созданной библиотеки, собрал проект с помощью cmake.
 ## <p align="center">Используемые источники и материалы:</p>
 - https://stackoverflow.com/questions/1208028/significance-of-a-inl-file-in-c (.inl)
 - https://www.cyberforum.ru/cpp-beginners/thread2600085.html (про .inl, .h и .cpp)
