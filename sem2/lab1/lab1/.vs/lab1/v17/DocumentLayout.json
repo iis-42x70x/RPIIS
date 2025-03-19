@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Student\\sem_2\\Pioivis\\lab1\\lab1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DBAFD94C-0765-4ADE-A318-C097641E43C4}|lab1\\lab1.vcxproj|D:\\Student\\sem_2\\Pioivis\\lab1\\lab1\\lab1\\bid_list.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DBAFD94C-0765-4ADE-A318-C097641E43C4}|lab1\\lab1.vcxproj|solutionrelative:lab1\\bid_list.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBAFD94C-0765-4ADE-A318-C097641E43C4}|lab1\\lab1.vcxproj|D:\\Student\\sem_2\\Pioivis\\lab1\\lab1\\lab1\\lab1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DBAFD94C-0765-4ADE-A318-C097641E43C4}|lab1\\lab1.vcxproj|solutionrelative:lab1\\lab1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBAFD94C-0765-4ADE-A318-C097641E43C4}|lab1\\lab1.vcxproj|D:\\Student\\sem_2\\Pioivis\\lab1\\lab1\\lab1\\bid_list.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DBAFD94C-0765-4ADE-A318-C097641E43C4}|lab1\\lab1.vcxproj|solutionrelative:lab1\\bid_list.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "bid_list.cpp",
+              "DocumentMoniker": "D:\\Student\\sem_2\\Pioivis\\lab1\\lab1\\lab1\\bid_list.cpp",
+              "RelativeDocumentMoniker": "lab1\\bid_list.cpp",
+              "ToolTip": "D:\\Student\\sem_2\\Pioivis\\lab1\\lab1\\lab1\\bid_list.cpp",
+              "RelativeToolTip": "lab1\\bid_list.cpp",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAwHYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-04T13:55:37.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "bid_list.hpp",
+              "DocumentMoniker": "D:\\Student\\sem_2\\Pioivis\\lab1\\lab1\\lab1\\bid_list.hpp",
+              "RelativeDocumentMoniker": "lab1\\bid_list.hpp",
+              "ToolTip": "D:\\Student\\sem_2\\Pioivis\\lab1\\lab1\\lab1\\bid_list.hpp",
+              "RelativeToolTip": "lab1\\bid_list.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-04T13:57:42.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "lab1.cpp",
+              "DocumentMoniker": "D:\\Student\\sem_2\\Pioivis\\lab1\\lab1\\lab1\\lab1.cpp",
+              "RelativeDocumentMoniker": "lab1\\lab1.cpp",
+              "ToolTip": "D:\\Student\\sem_2\\Pioivis\\lab1\\lab1\\lab1\\lab1.cpp",
+              "RelativeToolTip": "lab1\\lab1.cpp",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAAAGkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-03T12:37:47.356Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
