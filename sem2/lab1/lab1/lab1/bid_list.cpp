@@ -48,10 +48,21 @@ void push(Node*& head, Node*& tail, int value, int element) {
 }
 
 void push_element(Node*& head, Node*& tail, int value) {
-	int n = 0;
-	cout << "Введите номер элемент на место которого вы желаете вставить элемент " << value <<": ";
-	cin >> n;
-	if(!exist_in(head,n)){
+	int n;
+	while (true) {
+		system("cls");
+		cout << "Введите номер элемент на место которого вы желаете вставить элемент " << value << ": ";
+		if (!(cin >> n)) {
+			cin.clear();
+			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			system("cls");
+			cout << "Некоректный ввод\n";
+			system("pause");
+			continue;
+		}
+		else break;
+	}
+	if (!Find(head, tail, n)) {
 		cout << "Данного элемента не существует в списке." << endl;
 		return;
 	}
@@ -155,7 +166,7 @@ void unification(Node*& unihead, Node*& unitail, Node*& head1, Node*& tail1, Nod
 	Node* temp2 = head2;
 	while (temp2) {
 		//if (!exist_in(head1, temp2->info)) {
-			push_tail(unihead, unitail, temp2->info);
+		push_tail(unihead, unitail, temp2->info);
 		//}
 		temp2 = temp2->next;
 	}
@@ -180,12 +191,34 @@ void clear(Node*& head, Node*& tail) {
 void create(Node*& head, Node*& tail) {
 	clear(head, tail);
 	int size;
-	cout << "Введите количество элементов списка: ";
-	cin >> size;
+	while (true) {
+		system("cls");
+		cout << "Введите количество элементов списка: ";
+		if (!(cin >> size)) {
+			cin.clear();
+			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			system("cls");
+			cout << "Некоректный ввод\n";
+			system("pause");
+			continue;
+		}
+		else break;
+	}
 	for (int i = 0; i < size; i++) {
-		int n = 0;
-		cout << "Введите " << i + 1 << " элемент списка: ";
-		cin >> n;
+		int n;
+		while (true) {
+			cout << "Введите " << i + 1 << " элемент списка: ";
+			if (!(cin >> n)) {
+				cin.clear();
+				cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+				system("cls");
+				cout << "Некоректный ввод\n";
+				system("pause");
+				system("cls");
+				continue;
+			}
+			else break;
+		}
 		push_tail(head, tail, n);
 	}
 }

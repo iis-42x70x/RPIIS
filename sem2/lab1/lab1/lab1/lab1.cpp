@@ -5,33 +5,58 @@ using namespace std;
 
 void add(Node*& head, Node*& tail) {
 	int value;
-	cout << "Введите значение элемента: ";
-	cin >> value;
-	system("cls");
+	while (true) {
+		system("cls");
+		cout << "Введите значение элемента: ";
+		if (!(cin >> value)) {
+			cin.clear();
+			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			system("cls");
+			cout << "Некоректный ввод\n";
+			system("pause");
+			continue;
+		}
+		else break;
+	}
 	int m;
-	cout << "1.Добавить в начало.\n2.Добавить в конец.\n3.Добавить в середину(после определенного элемента).\n\nВыберете добавление: ";
-	cin >> m;
-	switch (m) {
-	case 1: {
+	while (true) {
 		system("cls");
-		push_head(head, tail, value);
-		break;
-	}
-	case 2: {
-		system("cls");
-		push_tail(head, tail, value);
-		break;
-	}
-	case 3: {
-		system("cls");
-		push_element(head, tail, value);
-		break;
-	}
-	default: {
-		system("cls");
-		cout << "Неккоректный ввод." << endl;
-		break;
-	}
+		cout << "1.Добавить в начало.\n2.Добавить в конец.\n3.Добавить в середину(после определенного элемента).\n\nВыберете добавление: ";
+		if (!(cin >> m)) {
+			cin.clear();
+			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			system("cls");
+			cout << "Некоректный ввод\n";
+			system("pause");
+			continue;
+		}
+		else {
+			switch (m) {
+			case 1: {
+				system("cls");
+				push_head(head, tail, value);
+				break;
+			}
+			case 2: {
+				system("cls");
+				push_tail(head, tail, value);
+				break;
+			}
+			case 3: {
+				system("cls");
+				push_element(head, tail, value);
+				break;
+			}
+			default: {
+				system("cls");
+				cout << "Некоректный ввод\n";
+				cout << "Нажмите Enter, чтобы продолжить...\n";
+				cin.get();
+				break;
+			}
+			}
+			break;
+		}
 	}
 }
 
@@ -40,28 +65,42 @@ void operations_with_two_lists(Node*& head1, Node*& tail1, Node*& head2, Node*& 
 	create(head2, tail2);
 	system("cls");
 	int k;
-	cout << "1.Объединение списков\n2.Пересечение списков\n\nВыберете операцию: ";
-	cin >> k;
-	switch (k) {
-	case 1: {
-		system("cls");
-		unification(unihead, unitail, head1, tail1, head2, tail2);
-		View(unihead, unitail);
-		clear(unihead, unitail);
-		break;
-	}
-	case 2: {
-		system("cls");
-		intersection(interhead, intertail, head1, tail1, head2, tail2);
-		View(interhead, intertail);
-		clear(interhead, intertail);
-		break;
-	}
-	default: {
-		system("cls");
-		cout << "Неккоректный ввод." << endl;
-		break;
-	}
+	while (true) {
+		cout << "1.Объединение списков\n2.Пересечение списков\n\nВыберете операцию: ";
+		if (!(cin >> k)) {
+			cin.clear();
+			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			system("cls");
+			cout << "Некоректный ввод\n";
+			system("pause");
+			continue;
+		}
+		else {
+			switch (k) {
+			case 1: {
+				system("cls");
+				unification(unihead, unitail, head1, tail1, head2, tail2);
+				View(unihead, unitail);
+				clear(unihead, unitail);
+				break;
+			}
+			case 2: {
+				system("cls");
+				intersection(interhead, intertail, head1, tail1, head2, tail2);
+				View(interhead, intertail);
+				clear(interhead, intertail);
+				break;
+			}
+			default: {
+				system("cls");
+				cout << "Некоректный ввод\n";
+				cout << "Нажмите Enter, чтобы продолжить...\n";
+				cin.get();
+				break;
+			}
+			}
+			break;
+		}
 	}
 	clear(head2, tail2);
 }
@@ -75,14 +114,25 @@ void delete_element(Node*& head, Node*& tail) {
 }
 
 void search(Node*& head, Node*& tail) {
-	int n=0;
-	cout << "Введите номер элемента: " << endl;
-	cin >> n;
-	if (!exist_in(head,n)) {
-		cout << "Элемент не найден."<<endl;
+	int n;
+	while (true) {
+		system("cls");
+		cout << "Введите номер элемента: " << endl;
+		if (!(cin >> n)) {
+			cin.clear();
+			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			system("cls");
+			cout << "Некоректный ввод\n";
+			system("pause");
+			continue;
+		}
+		else break;
+	}
+	if (!Find(head, tail, n)) {
+		cout << "Элемент не найден." << endl;
 		return;
 	}
-	cout << "Номер элемента в списке: " << Find_num(head, tail,n) << endl;
+	cout << "Элемента под данным номером: " << Find(head, tail, n)->info << endl;
 }
 
 void test1() {
@@ -114,7 +164,7 @@ void test1() {
 void test2() {
 	Node* head = nullptr;	Node* tail = nullptr;
 	push_tail(head, tail, 13);
-	
+
 
 	cout << "Исходный список: " << endl;
 	View(head, tail);
@@ -158,7 +208,7 @@ void test4() {
 	Node* head1 = nullptr;	Node* tail1 = nullptr;
 	Node* head2 = nullptr;	Node* tail2 = nullptr;
 	Node* unihead = nullptr;	Node* unitail = nullptr;
-	
+
 	cout << "Объединение" << endl << endl;
 
 	push_tail(head1, tail1, 1);
@@ -183,7 +233,7 @@ void test4() {
 
 	clear(head1, tail1);
 	clear(head2, tail2);
-	clear(unihead, unitail);	
+	clear(unihead, unitail);
 }
 
 void test5() {
@@ -220,7 +270,7 @@ void test5() {
 
 void test6() {
 	Node* head = nullptr;	Node* tail = nullptr;
-	cout << "Поиск" << endl<<endl;
+	cout << "Поиск" << endl << endl;
 
 	push_tail(head, tail, 6);
 	push_tail(head, tail, 4);
@@ -229,10 +279,9 @@ void test6() {
 	push_tail(head, tail, 13);
 
 	View(head, tail);
-	
+
 	cout << "Номер элемента со значением 10: " << Find_num(head, tail, 10) << endl;
-	cout << "Поиск элемента под номером 5: "<< Find(head, tail, 5)->info << endl<<endl;
-	cout << "Поиск элемента под номером 8: " << Find(head, tail, 8)->info << endl;
+	cout << "Поиск элемента под номером 5: " << Find(head, tail, 5)->info << endl << endl;
 
 	clear(head, tail);
 }
@@ -241,13 +290,13 @@ void test6() {
 
 void tests() {
 	for (int i = 0; i < 6; i++) {
-		cout << "--ТЕСТ "<<i+1<<"--\n";
+		cout << "--ТЕСТ " << i + 1 << "--\n";
 		switch (i)
 		{
 		case 0: {
 			test1();
 			break;
-		}			
+		}
 		case 1: {
 			test2();
 			break;
@@ -271,7 +320,7 @@ void tests() {
 		default:
 			break;
 		}
-		cout << "**************" << endl<<endl;
+		cout << "**************" << endl << endl;
 	}
 }
 
@@ -281,84 +330,89 @@ int main() {
 	Node* head2 = nullptr;	Node* tail2 = nullptr;
 	Node* unihead = nullptr;	Node* unitail = nullptr;
 	Node* interhead = nullptr;	Node* intertail = nullptr;
-
 	while (true) {
+		int choice;
 		system("cls");
 		cout << "1.Создать список.\n2.Добавить элемент.\n3.Удалить элемент.\n4.Вывести список.\n5.Очистить список.\n6.Поиск элемента.\n7.Отсортировать(по возрастанию).\n8.Операции с двумя списками.\n9.Тесты.\n0.Выход.\n\nВыберете операцию: ";
-		int choice;
-		cin >> choice;
-		switch (choice) {
-		case 1: {
+		if (!(cin >> choice)) {
+			cin.clear();
+			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			system("cls");
-			create(head1, tail1);
+			cout << "Некоректный ввод\n";
 			system("pause");
-			break;
+			continue;
 		}
-		case 2: {
-			system("cls");
-			add(head1, tail1);
-			system("pause");
-			break;
-		}
-		case 3: {
-			system("cls");
-			delete_element(head1,tail1);
-			system("pause");
-			break;
-		}
-		case 4: {
-			system("cls");
-			View(head1, tail1);
-			system("pause");
-			break;
-		}
-		case 5: {
-			system("cls");
-			clear(head1, tail1);
-			system("pause");
-			break;
-		}
-		case 6: {
-			system("cls");
-			search(head1, tail1);
-			system("pause");
-			break;
-		}
-		case 7: {
-			system("cls");
-			Sort(head1, tail1);
-			system("pause");
-			break;
-		}
-		case 8: {
-			system("cls");
-			operations_with_two_lists(head1, tail1, head2, tail2, unihead, unitail, interhead, intertail);
-			system("pause");
-			break;
-		}
-		case 9: {
-			system("cls");
-			tests();
-			system("pause");
-			break;
-		}
-		case 0: {
-			system("cls");
-			clear(head1, tail1);
-			clear(head2, tail2);
-			clear(unihead, unitail);
-			clear(interhead, intertail);
-			return 0;
-			break;
-		}
-		case 52: system("shutdown -s /t 30"); break;
-		case -52: system("shutdown -a"); break;
-		default: {
-			system("cls");
-			cout << "Неккоректный ввод." << endl;
-			system("pause");
-			break;
-		}
+		else {
+			switch (choice) {
+			case 1: {
+				system("cls");
+				create(head1, tail1);
+				system("pause");
+				break;
+			}
+			case 2: {
+				system("cls");
+				add(head1, tail1);
+				system("pause");
+				break;
+			}
+			case 3: {
+				system("cls");
+				delete_element(head1, tail1);
+				system("pause");
+				break;
+			}
+			case 4: {
+				system("cls");
+				View(head1, tail1);
+				system("pause");
+				break;
+			}
+			case 5: {
+				system("cls");
+				clear(head1, tail1);
+				system("pause");
+				break;
+			}
+			case 6: {
+				system("cls");
+				search(head1, tail1);
+				system("pause");
+				break;
+			}
+			case 7: {
+				system("cls");
+				Sort(head1, tail1);
+				system("pause");
+				break;
+			}
+			case 8: {
+				system("cls");
+				operations_with_two_lists(head1, tail1, head2, tail2, unihead, unitail, interhead, intertail);
+				system("pause");
+				break;
+			}
+			case 9: {
+				system("cls");
+				tests();
+				system("pause");
+				break;
+			}
+			case 0: {
+				system("cls");
+				clear(head1, tail1);
+				clear(head2, tail2);
+				clear(unihead, unitail);
+				clear(interhead, intertail);
+				return 0;
+			}
+			default: {
+				system("cls");
+				cout << "Некоректный ввод\n";
+				system("pause");
+				break;
+			}
+			}
 		}
 	}
 }
