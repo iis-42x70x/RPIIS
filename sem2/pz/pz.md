@@ -7,7 +7,8 @@
 KBE:
 -------
 
-![image](https://github.com/user-attachments/assets/8d9eb6b7-4f00-4df2-a866-5a671bc4a67a)
+![image](https://github.com/user-attachments/assets/ee057882-95fa-4acc-aa87-a4c497cfc0a3)
+
 
 
 Protege:
@@ -23,7 +24,7 @@ Protege:
 
 Экземпляры классов:
 
-![image](https://github.com/user-attachments/assets/8c9dae34-d469-4af1-a679-e63d0e13b728)
+![image](https://github.com/user-attachments/assets/931fac95-7670-4cbb-998a-fcca1fe50b93)
 
 Связывание экземпляров классов с отношениями и классами:
 
