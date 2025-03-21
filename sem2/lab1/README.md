@@ -78,4 +78,5 @@
 
 ## Литература
 http://e-maxx.ru/algo/segment_tree#4
+
 https://brestprog.by/topics/segmenttree/
