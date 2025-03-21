@@ -61,11 +61,11 @@
 4 3 
 5 3
 ```
-![image]()
+![image](https://github.com/iis-42x70x/RPIIS/blob/Балюк_М/sem1/RR/images/console1.png)
 
 ### Графическое представление графа:
 
-![image]()
+![image](https://github.com/iis-42x70x/RPIIS/blob/Балюк_М/sem1/RR/images/example1.png)
 
 ### Тест №2
 
@@ -76,11 +76,11 @@
 3 4
 4 3
 ```
-![image]()
+![image[]()](https://github.com/iis-42x70x/RPIIS/blob/Балюк_М/sem1/RR/images/console2.png)
 
 ### Графическое представление графа:
 
-![image]()
+![image](https://github.com/iis-42x70x/RPIIS/blob/Балюк_М/sem1/RR/images/example2.png)
 
 ### Тест №3
 
