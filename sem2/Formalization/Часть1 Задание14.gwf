@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GWF version="2.0">
     <staticSector>
-        <node type="node/const/perm/general" idtf="" shapeColor="193" id="1866707175552" parent="0" x="-8.98876" y="458.427" haveBus="false" idtf_pos="0">
-            <content type="0" mime_type="" content_visibility="false" file_name=""/>
-        </node>
         <node type="node/const/perm/group" idtf="Месяц" shapeColor="0" id="1866707177840" parent="0" left="0" top="0" right="62" bottom="28" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="1068.54" y="342.697" haveBus="false" idtf_pos="0">
             <content type="0" mime_type="" content_visibility="false" file_name=""/>
         </node>
