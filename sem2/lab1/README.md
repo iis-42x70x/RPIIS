@@ -93,7 +93,37 @@ bool contains(int element) const {
     return std::find(elements.begin(), elements.end(), element) != elements.end();
 }
 ```
+## Файл Header.h:
+```
+#ifndef SET_H
+#define SET_H
 
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+class Set {
+public:
+    std::vector<int> elements;
+
+    // Добавление элемента
+    void insert(int element);
+
+    // Отображение элементов
+    void display() const;
+
+    // Наличие элемента
+    bool contains(int element) const;
+
+    // Объединение двух множеств
+    Set unite(const Set& other) const;
+
+    // Пересечение
+    bool intersects(const Set& other) const;
+};
+
+#endif // SET_H
+```
 ## Тестовая программа:
 ```
 #include "Header.h"
