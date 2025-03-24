@@ -230,9 +230,12 @@ int main() {
 ## Вывод: 
 в ходе лабораторной работы освоили навыки работы со структурами и классами языка программирования C++. Разработали библиотеку для создания множеств с помощью std::vector, проверки их пересекаемости, объединения и поиска множества с заданным элементов, а также тестовую программу для проверки работы библиотеки.
 ## Источники:
-https://metanit.com/cpp/tutorial/7.4.php
 
+Классы:
 https://education.yandex.ru/handbook/cpp/article/classes
+
+Векторы:
+https://metanit.com/cpp/tutorial/7.4.php
 
 https://codelessons.dev/ru/vektory-v-c-dlya-nachinayushhix/
 
