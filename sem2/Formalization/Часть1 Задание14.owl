@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+    <owl:Ontology rdf:about="http://example.org/ontology"/>
+
+    <!-- Классы -->
+    <owl:Class rdf:about="#Месяц"/>
+    <owl:Class rdf:about="#Число"/>
+    <owl:Class rdf:about="#Утверждение"/>
+    <owl:Class rdf:about="#Река"/>
+    <owl:Class rdf:about="#ИзмерениеСФиксированнойЕдиницейИзмерения"/>
+    <owl:Class rdf:about="#ЖелезнодорожнаяСтанция"/>
+    <owl:Class rdf:about="#Население"/>
+    <owl:Class rdf:about="#Люди"/>
+    <owl:Class rdf:about="#РайонныйЦентр"/>
+    <owl:Class rdf:about="#ГродненскаяОбласть"/>
+    <owl:Class rdf:about="#СлонимскийРайон"/>
+    <owl:Class rdf:about="#Беларусь"/>
+    <owl:Class rdf:about="#ГородБеларуси"/>
+    <owl:Class rdf:about="#Страна"/>
+    <owl:Class rdf:about="#СторонаСвета"/>
+    
+    <!-- Свойства -->
+    <owl:ObjectProperty rdf:about="#имеетЧисло"/>
+    <owl:ObjectProperty rdf:about="#имеетУтверждение"/>
+    <owl:ObjectProperty rdf:about="#имеетРеку"/>
+    <owl:ObjectProperty rdf:about="#имеетИзмерение"/>
+    <owl:ObjectProperty rdf:about="#расположенВ"/>
+    <owl:ObjectProperty rdf:about="#являетсяЧастью"/>
+
+    <!-- Связи между классами -->
+    <rdf:Description rdf:about="#Месяц">
+        <rdfs:subClassOf rdf:resource="#Число"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#Число">
+        <rdfs:subClassOf rdf:resource="#Утверждение"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#Река">
+        <rdfs:subClassOf rdf:resource="#ИзмерениеСФиксированнойЕдиницейИзмерения"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#Население">
+        <rdfs:subClassOf rdf:resource="#Люди"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#СлонимскийРайон">
+        <rdfs:subClassOf rdf:resource="#ГродненскаяОбласть"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#ГродненскаяОбласть">
+        <rdfs:subClassOf rdf:resource="#Беларусь"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#ГородБеларуси">
+        <rdfs:subClassOf rdf:resource="#СторонаСвета"/>
+    </rdf:Description>
+
+</rdf:RDF>
