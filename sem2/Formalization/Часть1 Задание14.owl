@@ -1,1 +1,290 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5">
+    <Prefix name="" IRI="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="untitled-ontology-5" IRI="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#"/>
+    <Declaration>
+        <Class IRI="#высказывание"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#город_Беларуси"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#измерение_с_фиксированной_единицей_измерения"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#месяц"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#область_Беларуси"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#район_Беларуси"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#река"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#сторона_света"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#страна"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#число"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#железнодорожная_станция"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#наиболее_древний"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#показывание"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#принадлежность"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#районный_центр"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#расположение"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#утверждение"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#юго-восток"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#юго-запад"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#январь"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#дата"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#измерение_в_километрахх"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#население"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#число_января"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Барановичи"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Беларусь"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Волковыск"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Гродненская"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Гродно"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Жировичский_православный_монастырь"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Исса"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Лев_Сапега"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Минск"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Слоним"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Слонимский_район"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Щара"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#герб_Лев"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#город_Беларуси"/>
+        <NamedIndividual IRI="#Барановичи"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#страна"/>
+        <NamedIndividual IRI="#Беларусь"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#город_Беларуси"/>
+        <NamedIndividual IRI="#Волковыск"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#область_Беларуси"/>
+        <NamedIndividual IRI="#Гродненская"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#город_Беларуси"/>
+        <NamedIndividual IRI="#Гродно"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#река"/>
+        <NamedIndividual IRI="#Исса"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#город_Беларуси"/>
+        <NamedIndividual IRI="#Минск"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#город_Беларуси"/>
+        <NamedIndividual IRI="#Слоним"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#район_Беларуси"/>
+        <NamedIndividual IRI="#Слонимский_район"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#река"/>
+        <NamedIndividual IRI="#Щара"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#расположение"/>
+        <NamedIndividual IRI="#Гродно"/>
+        <NamedIndividual IRI="#Слоним"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#юго-восток"/>
+        <NamedIndividual IRI="#Гродно"/>
+        <NamedIndividual IRI="#Слоним"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#расположение"/>
+        <NamedIndividual IRI="#Жировичский_православный_монастырь"/>
+        <NamedIndividual IRI="#Слоним"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#расположение"/>
+        <NamedIndividual IRI="#Минск"/>
+        <NamedIndividual IRI="#Слоним"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#юго-запад"/>
+        <NamedIndividual IRI="#Минск"/>
+        <NamedIndividual IRI="#Слоним"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#железнодорожная_станция"/>
+        <NamedIndividual IRI="#Слоним"/>
+        <NamedIndividual IRI="#Барановичи"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#железнодорожная_станция"/>
+        <NamedIndividual IRI="#Слоним"/>
+        <NamedIndividual IRI="#Волковыск"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#наиболее_древний"/>
+        <NamedIndividual IRI="#Слоним"/>
+        <NamedIndividual IRI="#Беларусь"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#принадлежность"/>
+        <NamedIndividual IRI="#Слоним"/>
+        <NamedIndividual IRI="#Лев_Сапега"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#районный_центр"/>
+        <NamedIndividual IRI="#Слоним"/>
+        <NamedIndividual IRI="#Слонимский_район"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#расположение"/>
+        <NamedIndividual IRI="#Слоним"/>
+        <NamedIndividual IRI="#Гродненская"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#расположение"/>
+        <NamedIndividual IRI="#Слоним"/>
+        <NamedIndividual IRI="#Исса"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#расположение"/>
+        <NamedIndividual IRI="#Слоним"/>
+        <NamedIndividual IRI="#Щара"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#показывание"/>
+        <NamedIndividual IRI="#герб_Лев"/>
+        <NamedIndividual IRI="#Лев_Сапега"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#утверждение"/>
+        <NamedIndividual IRI="#герб_Лев"/>
+        <NamedIndividual IRI="#герб_Лев"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#измерение_в_километрахх"/>
+        <NamedIndividual IRI="#Гродно"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">143</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#измерение_в_километрахх"/>
+        <NamedIndividual IRI="#Жировичский_православный_монастырь"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#измерение_в_километрахх"/>
+        <NamedIndividual IRI="#Минск"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">195</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#дата"/>
+        <NamedIndividual IRI="#Слоним"/>
+        <Literal>01.01.2013</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#население"/>
+        <NamedIndividual IRI="#Слоним"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">48977</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#дата"/>
+        <NamedIndividual IRI="#герб_Лев"/>
+        <Literal>04.01.1591</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#юго-восток"/>
+        <Class IRI="#сторона_света"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#юго-запад"/>
+        <Class IRI="#сторона_света"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#январь"/>
+        <Class IRI="#месяц"/>
+    </ObjectPropertyDomain>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
 
