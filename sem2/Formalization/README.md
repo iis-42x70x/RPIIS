@@ -15,7 +15,8 @@ a) в Protégé:
 
 
 b) в KBE: 
-<img src="https://ltdfoto.ru/images/2025/03/24/SNIMOK-EKRANA_20250324_212924.png" alt="SNIMOK-EKRANA_20250324_212924.png" border="0" />
+<img src="https://ltdfoto.ru/images/2025/03/25/SNIMOK-EKRANA_20250325_203419.png" alt="SNIMOK-EKRANA_20250325_203419.png" border="0" />
+
 
 2. Заданное математическое выражение формализовать при помощи стандартов технологии OSTIS, используя редактор KBE и язык SCg.  
 **Математическое выражение(вариант 3):**  
