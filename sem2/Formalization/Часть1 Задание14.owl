@@ -240,17 +240,17 @@
         <NamedIndividual IRI="#герб_Лев"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#измерение_в_километрахх"/>
+        <DataProperty IRI="#измерение_в_километрах"/>
         <NamedIndividual IRI="#Гродно"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">143</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#измерение_в_километрахх"/>
+        <DataProperty IRI="#измерение_в_километрах"/>
         <NamedIndividual IRI="#Жировичский_православный_монастырь"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#измерение_в_километрахх"/>
+        <DataProperty IRI="#измерение_в_километрах"/>
         <NamedIndividual IRI="#Минск"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">195</Literal>
     </DataPropertyAssertion>
