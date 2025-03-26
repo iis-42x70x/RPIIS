@@ -153,6 +153,75 @@ void printTree(int* t, int v, int tl, int tr, int level = 0) {
 
 
 ## Тесты
+```cpp
+#include "pch.h"
+#include <gtest/gtest.h>
+
+TEST(BuildTest, BuildsCorrectTree) {
+    int mas[] = { 1, 3, 5, 7, 9, 11 , 6 };
+    int n = sizeof(mas) / sizeof(mas[0]);
+    int* t = new int[4 * n];
+
+    build(mas, 1, 0, n - 1, t);
+
+    EXPECT_EQ(t[1], 11); // Корень дерева должен содержать максимальное значение
+    EXPECT_EQ(t[2], 7);  // Левый ребенок корня
+    EXPECT_EQ(t[3], 11); // Правый ребенок корня
+
+    delete[] t;
+}
+
+TEST(MaxTest, FindsMaximumOnSegment) {
+    int mas[] = { 1, 3, 5, 7, 9, 11 };
+    int n = sizeof(mas) / sizeof(mas[0]);
+    int* t = new int[4 * n];
+    build(mas, 1, 0, n - 1, t);
+    EXPECT_EQ(Max(1, 0, n - 1, 0, 5, t), 11); // Максимум на всем массиве
+    EXPECT_EQ(Max(1, 0, n - 1, 1, 3, t), 7);  // Максимум на отрезке [1, 3]
+    EXPECT_EQ(Max(1, 0, n - 1, 4, 4, t), 9);  // Максимум на отрезке [4, 4]
+
+    delete[] t;
+}
+
+TEST(ModTest, ModifiesElementCorrectly) {
+    int mas[] = { 1, 3, 5, 7, 9, 11 };
+    int n = sizeof(mas) / sizeof(mas[0]);
+    int* t = new int[4 * n];
+
+    build(mas, 1, 0, n - 1, t);
+    Mod(1, 0, n - 1, 2, 10, t); // Изменяем элемент с индексом 2 на 10
+
+    EXPECT_EQ(Max(1, 0, n - 1, 0, 5, t), 11); // Максимум должен остаться 11
+    EXPECT_EQ(Max(1, 0, n - 1, 2, 2, t), 10); // Проверяем измененный элемент
+
+    delete[] t;
+}
+
+TEST(PrintTreeTest, PrintsTreeCorrectly) {
+    int mas[] = { 1, 3, 5, 7, 9, 11 };
+    int n = sizeof(mas) / sizeof(mas[0]);
+    int* t = new int[4 * n];
+
+    build(mas, 1, 0, n - 1, t);
+
+    // Тестирование вывода дерева
+    testing::internal::CaptureStdout();
+    printTree(t, 1, 0, n - 1, 0);
+    std::string output = testing::internal::GetCapturedStdout();
+
+    // Проверяем, что вывод содержит ожидаемые значения
+    EXPECT_TRUE(output.find("11") != std::string::npos);
+    EXPECT_TRUE(output.find("7") != std::string::npos);
+    EXPECT_TRUE(output.find("9") != std::string::npos);
+
+    delete[] t;
+}
+
+int main(int argc, char** argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
+```
 1. BuildTest - тестирование построения дерева
 Проверяет корректность построения дерева из исходного массива
 
