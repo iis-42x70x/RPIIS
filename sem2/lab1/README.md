@@ -79,4 +79,4 @@
 
 В резуальате данной лабораторной работы была реализована структура данных стек, а также был разработан набор тестов для данной библиотеки.
 
-![Turlip](https://tenor.com/ru/view/ed-truck-gif-16953965977450495008)
+![Turlip](https://tenor.com/ru/view/dog-doge-dance-dog-dance-gif-20043602.gif)
