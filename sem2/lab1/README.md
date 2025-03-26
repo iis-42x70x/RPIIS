@@ -81,7 +81,7 @@ abracadabra
 ```
 10110101001100010110101 - результат кодирования
 
-![EXAMPLE](haffmantreeexample.PNG)
+![EXAMPLE](haffmantreeexample.png)
 ---
 ### Выводы
 В ходе выполнения работы я:
