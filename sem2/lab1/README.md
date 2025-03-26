@@ -79,4 +79,4 @@
 
 В резуальате данной лабораторной работы была реализована структура данных стек, а также был разработан набор тестов для данной библиотеки.
 
-![Turlip](https://tenor.com/mk/search/fat-dog-meme-gifs)
+![Turlip](https://tenor.com/ru/view/pug-dance-moves-cute-gif-17357329)
