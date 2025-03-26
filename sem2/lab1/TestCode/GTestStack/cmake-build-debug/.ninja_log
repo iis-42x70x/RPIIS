@@ -1,0 +1,23 @@
+# ninja log v6
+6	2366	7640955058419675	gtest/lib/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj	8986a31d5791c09e
+2	6225	7640955058376492	gtest/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	8984e2333f67d535
+6226	9143	7640955120622531	lib/libgtest.a	d42bd9f36e7167a8
+9143	9469	7640955149793620	lib/libgmock.a	6b8a985663c87543
+2351	8099	7640964920094866	gtest/Google_Tests_run.exe	988cf8fbdee0ee90
+5	1135	7640955153637222	gtest/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	4f849971bdac1a42
+8	2350	7640964896668635	gtest/CMakeFiles/Google_Tests_run.dir/test.cpp.obj	f858ef0f22302b0e
+8	64	7640955523545019	lib/libgtest_main.a	193283c6797372c
+9	2236	7640966575699552	gtest/CMakeFiles/Google_Tests_run.dir/test.cpp.obj	f858ef0f22302b0e
+2237	7797	7640966597975384	gtest/Google_Tests_run.exe	988cf8fbdee0ee90
+10	2284	7640968195761526	gtest/CMakeFiles/Google_Tests_run.dir/test.cpp.obj	f858ef0f22302b0e
+2285	7781	7640968218509802	gtest/Google_Tests_run.exe	988cf8fbdee0ee90
+11	2216	7640968823807816	gtest/CMakeFiles/Google_Tests_run.dir/test.cpp.obj	f858ef0f22302b0e
+2217	7818	7640968845872239	gtest/Google_Tests_run.exe	988cf8fbdee0ee90
+8	2254	7645125118846716	gtest/CMakeFiles/Google_Tests_run.dir/test.cpp.obj	f858ef0f22302b0e
+2255	7954	7645125141300125	gtest/Google_Tests_run.exe	988cf8fbdee0ee90
+10	2249	7645132158454392	gtest/CMakeFiles/Google_Tests_run.dir/test.cpp.obj	f858ef0f22302b0e
+2250	7866	7645132180861111	gtest/Google_Tests_run.exe	988cf8fbdee0ee90
+8	2197	7645132394392832	gtest/CMakeFiles/Google_Tests_run.dir/test.cpp.obj	f858ef0f22302b0e
+2198	7772	7645132416289540	gtest/Google_Tests_run.exe	988cf8fbdee0ee90
+8	2280	7645133341408095	gtest/CMakeFiles/Google_Tests_run.dir/test.cpp.obj	f858ef0f22302b0e
+2280	7823	7645133364133456	gtest/Google_Tests_run.exe	988cf8fbdee0ee90

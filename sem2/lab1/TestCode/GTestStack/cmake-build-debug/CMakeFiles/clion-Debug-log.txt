@@ -1,0 +1,4 @@
+"D:\fiels\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=D:/fiels/CLion 2024.3.4/bin/ninja/win/x64/ninja.exe" -G Ninja -S D:\Study\GTestStack -B D:\Study\GTestStack\cmake-build-debug
+-- Configuring done (0.2s)
+-- Generating done (0.1s)
+-- Build files have been written to: D:/Study/GTestStack/cmake-build-debug
