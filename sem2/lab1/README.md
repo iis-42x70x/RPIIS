@@ -70,4 +70,4 @@
 ### Как подключить тесты к CLion можно посмотреть [тут](https://habr.com/ru/articles/667880/)!
 
 Код тестов будет находиться [тут]()
-iurgrfi;egfsuiefsyebfsuyevbusivevu
+iurgrfi;egfsuiefsyebfsuyevbusivevukbrdugbsugldrkgdrg
