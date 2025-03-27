@@ -14,7 +14,12 @@ int main() {
     int strlength = input.length();
 
     counter = fillingcounter(input, strlength, counter);
+    if (counter.size() < 2) {
+    cout << "error";
+    return 0;
+    }
 
+    
     int counterlen = counter.size();
 
     counter = sortcounter(counterlen, counter);
