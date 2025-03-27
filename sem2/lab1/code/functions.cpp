@@ -1,6 +1,5 @@
-#include "Header.h"
+#include "header.h"
 
-//считаем количество букв в предложении и записываем букву и частоту в массив пар
 vector <pair<string, int>> fillingcounter(string str, int strlength, vector <pair<string, int>> counter) {
     for (int i = 1; i < strlength;i++) {
         bool check = false;
@@ -20,8 +19,7 @@ vector <pair<string, int>> fillingcounter(string str, int strlength, vector <pai
     }
     return counter;
 }
-
-// сортируем массив частоты в порядке убывания частоты символа
+// ��������� ������ ������� � ������� �������� ������� �������
 vector <pair<string, int>> sortcounter(int length, vector <pair<string, int>> counter)
 {
     for (int i = 0;i < length;i++) {
@@ -33,8 +31,7 @@ vector <pair<string, int>> sortcounter(int length, vector <pair<string, int>> co
     }
     return counter;
 }
-
-//создаем очередь
+//������� �������
 vector <Node> makequeue(vector <Node> queue, vector <pair<string, int>> counter, int length) {
     for (int i = 0;i < length;i++) {
         queue.push_back(Node());
@@ -46,16 +43,14 @@ vector <Node> makequeue(vector <Node> queue, vector <pair<string, int>> counter,
     }
     return queue;
 }
-
-//создаем массив где хранится зашифрованные символы 
+//������� ������ ��� �������� ������������� �������
 vector <pair<string, string>> makeencodinglist(vector <pair<string, string>> encoding, vector <pair<string, int>> counter, int length) {
     for (int i = 0;i < length;i++) {
         encoding.push_back({ counter[i].first,"" });
     }
     return encoding;
 }
-
-//сортируем очередь
+//��������� �������
 vector <Node> sortqueue(vector <Node> queue, int queuesize) {
     for (int i = queuesize - 1;i > 0;i--) {
         if (queue[i - 1].freq < queue[i].freq) {
@@ -69,8 +64,7 @@ vector <Node> sortqueue(vector <Node> queue, int queuesize) {
     }
     return queue;
 }
-
-//добавлем два последних элемента очереди в дерево и возвращаем в очередь родительскую ячейку
+//�������� ��� ��������� �������� ������� � ������ � ���������� � ������� ������������ ������
 vector <Node> maketree(vector <Node> tree, vector <Node> queue) {
     int treelen = 0;
 
@@ -102,8 +96,7 @@ vector <Node> maketree(vector <Node> tree, vector <Node> queue) {
     }
     return tree;
 }
-
-//линкуем ячейки древа
+//������� ������ �����
 vector <Node> linkingtree(vector <Node> tree, int treelen) {
     for (int i = 2;i < treelen;i++)
     {
@@ -127,8 +120,7 @@ vector <Node> linkingtree(vector <Node> tree, int treelen) {
     }
     return tree;
 }
-
-//шифруем каждый символ при помощи передвидения по дереву и записываем результат шифровки в массив пар
+//������� ������ ������ ��� ������ ������������ �� ������ � ���������� ��������� �������� � ������ ���
 string encode(string ch, string str, Node currentnode) {
     if (currentnode.leftchild != NULL && currentnode.rightchild != NULL) {
         Node leftchild = *currentnode.leftchild;
@@ -145,17 +137,15 @@ string encode(string ch, string str, Node currentnode) {
     }
     else return str;
 }
-
-//заполняем массив с шифровками и выводим зашифрованные символы по отдельности
+//��������� ������ � ���������� � ������� ������������� ������� �� �����������
 vector <pair<string, string>> fillencodedsymbols(vector <pair<string, string>> encoding, Node currentnode) {
     for (int i = 0;i < encoding.size();i++) {
         encoding[i].second = encode(encoding[i].first, encoding[i].second, currentnode);
-        cout << encoding[i].first << ":  " << encoding[i].second << endl;
+        //cout << encoding[i].first << ":  " << encoding[i].second << endl;
     }
     return encoding;
 }
-
-//шифруем изначальное предложение при помощи массива с шифровкой
+//������� ����������� ����������� ��� ������ ������� � ���������
 string showencodedstr(string encodedstr, vector <pair<string, string>> encoding, int strlength, int encodinglen, string str) {
     for (int i = 0; i < strlength;i++) {
         for (int j = 0; j < encodinglen;j++) {
@@ -169,9 +159,9 @@ string showencodedstr(string encodedstr, vector <pair<string, string>> encoding,
     }
     return encodedstr;
 }
-
-//расшифровываем зашифрованное сообщение при помощи перемещения по дереву
+/*�������������� ������������� ��������� ��� ������ ����������� �� ������
 string decode(Node currentnode, int k, string str, string encodedstr, Node tree) {
+
     if (k != 0) {
         if (encodedstr[k - 1] == '\0') {
             return str;
@@ -189,4 +179,49 @@ string decode(Node currentnode, int k, string str, string encodedstr, Node tree)
             return decode(*currentnode.leftchild, k + 1, str, encodedstr, tree);
         }
     }
+}*/
+//main
+string result(string input) {
+    vector <pair<string, int>> counter;
+    vector <Node> tree;
+
+    counter.push_back({ "", 1 });
+    counter[0].first += input[0];
+
+    int strlength = input.length();
+
+    counter = fillingcounter(input, strlength, counter);
+
+    if (counter.size()<2)
+        return "error";
+
+    int counterlen = counter.size();
+
+    counter = sortcounter(counterlen, counter);
+
+    vector <Node> queue;
+    vector <pair<string, string>> encoding;
+
+    queue = makequeue(queue, counter, counterlen);
+
+    encoding = makeencodinglist(encoding, counter, counterlen);
+
+    tree = maketree(tree, queue);
+    tree = linkingtree(tree, tree.size());
+
+    Node currentnode = tree[tree.size() - 1];
+
+    encoding = fillencodedsymbols(encoding,currentnode);
+
+    string encodedstr = "";
+
+    encodedstr = showencodedstr(encodedstr, encoding, strlength, counterlen, input);
+
+    /*currentnode = tree[tree.size() - 1];
+    string str2 = "";
+    cout << endl;
+    str2 = decode(tree[tree.size() - 1], 0, str2, encodedstr, tree[tree.size() - 1]);
+    cout << str2;*/
+
+    return encodedstr;
 }
