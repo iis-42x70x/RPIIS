@@ -16,30 +16,36 @@ int main() {
     do {
         clear_console();
         print_menu();
-        std::cin >> choice;
-
-        switch (choice) {
-        case 1:
+        if (!(std::cin >> choice)) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             clear_console();
-            run_tests();
-            break;
-        case 2:
-            clear_console();
-            manual_input();
-            break;
-        case 3:
-            clear_console();
-            std::cout << "Выход из программы.\n";
-            break;
-        default:
-            std::cout << "Неверный ввод. Попробуйте снова.\n";
-            break;
-        }
-
-        if (choice != 3) {
-            std::cout << "Нажмите Enter, чтобы продолжить...";
-            std::cin.ignore();
+            std::cout << "Incorrect input...\n";
+            std::cout << "Нажмите Enter, чтобы продолжить...\n";
             std::cin.get();
+        }
+        else {
+            switch (choice) {
+            case 1:
+                clear_console();
+                run_tests();
+                break;
+            case 2:
+                clear_console();
+                manual_input();
+                break;
+            case 3:
+                clear_console();
+                std::cout << "Выход из программы.\n";
+                break;
+            default:
+                clear_console();
+                std::cout << "Неверный ввод. Попробуйте снова.\n";
+                std::cout << "Нажмите Enter, чтобы продолжить...\n";
+                std::cin.get();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                break;
+            }
         }
     } while (choice != 3);
 
@@ -82,14 +88,32 @@ void run_tests() {
         std::cout << "\n";
 
         int key_to_delete;
-        std::cout << "Введите ключ для удаления: ";
-        std::cin >> key_to_delete;
+        while (true) {
+            std::cout << "Введите ключ для удаления: ";
+            if (!(std::cin >> key_to_delete)) {
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cout << "Incorrect input...\n";
+                continue;
+            }
+            break;
+        }
 
         if (Tree.search(key_to_delete)) {
             std::cout << "Ключ " << key_to_delete << " найден!\n";
-            std::cout << "Удалить? (1 - Да, 0 - Нет): ";
             int choice;
-            std::cin >> choice;
+            while (true) {
+                std::cout << "Удалить? (1 - Да, 0 - Нет): ";
+                if (!(std::cin >> choice)) {
+                    std::cin.clear();
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                    std::cout << "Incorrect input...\n";
+                    continue;
+                }
+                if (choice == 0 || choice == 1) break;
+                std::cout << "Введите 0 или 1\n";
+            }
+
             if (choice == 1) {
                 Tree.remove(key_to_delete);
                 std::cout << "Дерево после удаления: ";
@@ -112,16 +136,40 @@ void run_tests() {
 void manual_input() {
     BTree Tree;
     int num_of_keys;
-    std::cout << "Введите количество ключей для вставки в дерево: ";
-    std::cin >> num_of_keys;
+    do {
+        std::cout << "Введите количество ключей для вставки в дерево: ";
+        if (!(std::cin >> num_of_keys)) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            clear_console();
+            std::cout << "Incorrect input...\n";
+            std::cout << "Нажмите Enter, чтобы продолжить...\n";
+            std::cin.get();
+        }
+        else {
+            if (num_of_keys <= 0) {
+                std::cout << "Incorret input..." << std::endl;
+            }
+            else break;
+        }
+    } while (true);
 
     for (int i = 0; i < num_of_keys; ++i) {
         int key;
-        std::cout << "Введите " << i + 1 << " ключ: ";
-        std::cin >> key;
-        if (!Tree.insert(key)) {
-            std::cout << "Ключи не должны повторяться..." << std::endl;
-            i--;
+        while (true) {
+            std::cout << "Введите " << i + 1 << " ключ: ";
+            if (!(std::cin >> key)) {
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cout << "Incorrect input...\n";
+                continue;
+            }
+
+            if (!Tree.insert(key)) {
+                std::cout << "Ключи не должны повторяться..." << std::endl;
+                continue;
+            }
+            break;
         }
     }
     std::cout << "Обход дерева: ";
@@ -129,14 +177,32 @@ void manual_input() {
     std::cout << "\n";
 
     int key_to_search;
-    std::cout << "Введите ключ для поиска: ";
-    std::cin >> key_to_search;
+    while (true) {
+        std::cout << "Введите ключ для поиска: ";
+        if (!(std::cin >> key_to_search)) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Incorrect input...\n";
+            continue;
+        }
+        break;
+    }
 
     if (Tree.search(key_to_search)) {
         std::cout << "Ключ " << key_to_search << " найден!\n";
-        std::cout << "Удалить? (1 - Да, 0 - Нет): ";
         int choice;
-        std::cin >> choice;
+        while (true) {
+            std::cout << "Удалить? (1 - Да, 0 - Нет): ";
+            if (!(std::cin >> choice)) {
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cout << "Incorrect input...\n";
+                continue;
+            }
+            if (choice == 0 || choice == 1) break;
+            std::cout << "Введите 0 или 1\n";
+        }
+
         if (choice == 1) {
             Tree.remove(key_to_search);
             std::cout << "Дерево после удаления: ";
