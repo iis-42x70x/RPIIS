@@ -240,7 +240,7 @@ class List{
 
 ### Пересечение
   
-![Intersection](https://github.com/iis-42x70x/RPIIS/blob/Мацукевич_З/sem2/lab1/img/intersection.png
+![Intersection](https://github.com/iis-42x70x/RPIIS/blob/Мацукевич_З/sem2/lab1/img/intersection.png)
 
 
 
