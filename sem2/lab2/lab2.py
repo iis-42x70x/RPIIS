@@ -134,17 +134,3 @@ class Multitude:
         return self._from_tuple_to_str(tuple(answer))
 
 
-a = Multitude("A", "{o,{},A}")
-b = Multitude("B", "{o,<1,2>,{},{o,{},A}}")
-c = Multitude("C", "{a, b, D, {o,{},{o,{},A}}}")
-d = Multitude("D", "{a, {o,{},A}}")
-e = Multitude("E", "{o, <1,2>, {a, A}}")
-
-
-
-print(b.substraction(a))
-print(c.substraction(e))
-print(b.substraction(e))
-print(a.substraction(d))
-print(d.substraction(c))
-
