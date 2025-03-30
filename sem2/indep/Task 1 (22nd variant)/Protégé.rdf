@@ -1,0 +1,504 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions/"
+     xml:base="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:scorpions="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#hasAlbumsSales -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#hasAlbumsSales">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#RockBand"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#AlbumsSales"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#hasCulturalStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#hasCulturalStatus">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#RockBand"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#CulturalStatus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#hasFamousSong -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#hasFamousSong">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#RockBand"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Song"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#hasGenre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#hasGenre">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#RockBand"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Genre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#hasOrigin -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#hasOrigin">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#RockBand"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Origin"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#hasPopularity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#hasPopularity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#RockBand"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Popularity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#hasRanking -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#hasRanking">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#hasPopularity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Popularity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Ranking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#hasTour -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#hasTour">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#RockBand"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Tour"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#originCity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#originCity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#hasOrigin"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Origin"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#City"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#originCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#originCountry">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#hasOrigin"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Origin"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#beGloballyPopular -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#beGloballyPopular">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Popularity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#beLastTour -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#beLastTour">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Tour"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#beNationalTop -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#beNationalTop">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Popularity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#formationYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#formationYear">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Origin"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#organization -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#organization">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Ranking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#rankingPosition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#rankingPosition">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Ranking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#salesDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#salesDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#salesVolume -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#salesVolume">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#RockBand"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#tourStartYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#tourStartYear">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Tour"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#AlbumsSales -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#AlbumsSales">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#City -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#City">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#ClassicRock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#ClassicRock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Country">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#CulturalStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#CulturalStatus">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Genre">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#LyricalGuitarBallad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#LyricalGuitarBallad">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Origin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Origin">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Popularity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Popularity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Ranking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Ranking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Popularity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#RockBand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#RockBand">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Song -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Song">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Tour -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Tour">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#ClassicRock_Instance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#ClassicRock_Instance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#ClassicRock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Germany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Germany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#GetYourStingAndBlackout -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#GetYourStingAndBlackout">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Tour"/>
+        <scorpions:beLastTour rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scorpions:beLastTour>
+        <scorpions:tourStartYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</scorpions:tourStartYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Hannover -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Hannover">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Legendary -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Legendary">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#CulturalStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#LyricalGuitarBallad_Instance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#LyricalGuitarBallad_Instance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#LyricalGuitarBallad"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#RockYouLikeAHurricane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#RockYouLikeAHurricane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Song"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Scorpions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Scorpions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#RockBand"/>
+        <scorpions:hasAlbumsSales rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#ScorpionsAlbumsSales"/>
+        <scorpions:hasCulturalStatus rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Legendary"/>
+        <scorpions:hasFamousSong rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#RockYouLikeAHurricane"/>
+        <scorpions:hasFamousSong rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#SendMeAnAngel"/>
+        <scorpions:hasFamousSong rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#StillLovingYou"/>
+        <scorpions:hasFamousSong rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#WindOfChange"/>
+        <scorpions:hasGenre rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#ClassicRock_Instance"/>
+        <scorpions:hasGenre rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#LyricalGuitarBallad_Instance"/>
+        <scorpions:hasOrigin rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#ScorpionsOrigin"/>
+        <scorpions:hasPopularity rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#ScorpionsPopularity"/>
+        <scorpions:hasTour rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#GetYourStingAndBlackout"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#ScorpionsAlbumsSales -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#ScorpionsAlbumsSales">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#AlbumsSales"/>
+        <scorpions:salesDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-01-29T00:00:00</scorpions:salesDate>
+        <scorpions:salesVolume rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000000</scorpions:salesVolume>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#ScorpionsOrigin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#ScorpionsOrigin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Origin"/>
+        <scorpions:originCity rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Hannover"/>
+        <scorpions:originCountry rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Germany"/>
+        <scorpions:formationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1965</scorpions:formationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#ScorpionsPopularity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#ScorpionsPopularity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Popularity"/>
+        <scorpions:hasRanking rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#TheGreatestHardRockArtists"/>
+        <scorpions:beGloballyPopular rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scorpions:beGloballyPopular>
+        <scorpions:beNationalTop rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scorpions:beNationalTop>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#SendMeAnAngel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#SendMeAnAngel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Song"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#StillLovingYou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#StillLovingYou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Song"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#TheGreatestHardRockArtists -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#TheGreatestHardRockArtists">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Ranking"/>
+        <scorpions:organization>VH1</scorpions:organization>
+        <scorpions:rankingPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</scorpions:rankingPosition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#WindOfChange -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#WindOfChange">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maximvashkevich/ontologies/2025/2/scorpions#Song"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
