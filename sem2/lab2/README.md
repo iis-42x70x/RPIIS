@@ -348,9 +348,12 @@ void Do_Symm_Diff(Set MultiSet[], string path) {
 
 В процессе лабораторной работы был создан алгоритм для формирования множества, которое соответствует симметрической разности произвольного количества исходных множеств с учетом кратных вхождений элементов.
 
+
+
 ## Используемые источники:
 
 * [Задание](https://drive.google.com/drive/folders/1_xy849HXgTDetxSMlFd0KikTBo8-xalN)
 * [Понятие мультимножества](https://ru.wikipedia.org/wiki/Мультимножество)
 * [Исключение и обработка ошибок](https://learn.microsoft.com/ru-ru/cpp/cpp/errors-and-exception-handling-modern-cpp?view=msvc-170)
 * [Работа с файлами в C++](https://purecodecpp.com/archives/2751)
+* [GoogleTests](https://github.com/google/googletest/blob/main/docs/primer.md)
