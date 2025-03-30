@@ -1,0 +1,499 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/redmi/ontologies/2025/2/untitled-ontology-9"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/redmi/ontologies/2025/2/untitled-ontology-9">
+    <Prefix name="" IRI="http://www.semanticweb.org/redmi/ontologies/2025/2/untitled-ontology-9/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#many_genres"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#music_works"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#people"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#people_of_Polish_nationality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#people_who_work"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#work_with_dance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#works_of_art"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chopin&apos;s_works"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#creating_masterpieces"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#poeticized_and_dramatized_dances"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#revive_on_a_romantic_basis"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#turn_into_an_independent_work"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#have_a_date_of_birth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#have_a_death_date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#have_a_middle_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#have_a_period_of_time_when_was_created"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#have_a_profession"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#have_the_place_of_birth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#have_the_place_of_death"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#number_of_works"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ballad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#concert"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#etude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fantasy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#impromptu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mazurka"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#nocturne"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#polonaise"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#prelude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#scherzo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sonata"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#songs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#waltz"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#other_Chopin&apos;s_works"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#many_genres"/>
+        <Class IRI="#Chopin&apos;s_works"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#music_works"/>
+        <Class IRI="#many_genres"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#people_of_Polish_nationality"/>
+        <Class IRI="#people"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#people_who_work"/>
+        <Class IRI="#people"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#work_with_dance"/>
+        <Class IRI="#many_genres"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chopin&apos;s_works"/>
+        <Class IRI="#works_of_art"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#many_genres"/>
+        <Class IRI="#people"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#people"/>
+        <Class IRI="#works_of_art"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#people_of_Polish_nationality"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#people_who_work"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#music_works"/>
+        <NamedIndividual IRI="#ballad"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#music_works"/>
+        <NamedIndividual IRI="#concert"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#music_works"/>
+        <NamedIndividual IRI="#etude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#music_works"/>
+        <NamedIndividual IRI="#fantasy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#music_works"/>
+        <NamedIndividual IRI="#impromptu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#work_with_dance"/>
+        <NamedIndividual IRI="#mazurka"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#music_works"/>
+        <NamedIndividual IRI="#nocturne"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#work_with_dance"/>
+        <NamedIndividual IRI="#polonaise"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#music_works"/>
+        <NamedIndividual IRI="#prelude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#music_works"/>
+        <NamedIndividual IRI="#scherzo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#music_works"/>
+        <NamedIndividual IRI="#sonata"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#music_works"/>
+        <NamedIndividual IRI="#songs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#work_with_dance"/>
+        <NamedIndividual IRI="#waltz"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chopin&apos;s_works"/>
+        <NamedIndividual IRI="#other_Chopin&apos;s_works"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#creating_masterpieces"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <NamedIndividual IRI="#ballad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#creating_masterpieces"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <NamedIndividual IRI="#concert"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#creating_masterpieces"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <NamedIndividual IRI="#etude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#creating_masterpieces"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <NamedIndividual IRI="#fantasy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#creating_masterpieces"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <NamedIndividual IRI="#impromptu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#creating_masterpieces"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <NamedIndividual IRI="#mazurka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#creating_masterpieces"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <NamedIndividual IRI="#nocturne"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#creating_masterpieces"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <NamedIndividual IRI="#polonaise"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#creating_masterpieces"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <NamedIndividual IRI="#prelude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#creating_masterpieces"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <NamedIndividual IRI="#scherzo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#creating_masterpieces"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <NamedIndividual IRI="#sonata"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#creating_masterpieces"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <NamedIndividual IRI="#songs"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#creating_masterpieces"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <NamedIndividual IRI="#waltz"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#creating_masterpieces"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <NamedIndividual IRI="#other_Chopin&apos;s_works"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#poeticized_and_dramatized_dances"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <NamedIndividual IRI="#mazurka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#poeticized_and_dramatized_dances"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <NamedIndividual IRI="#polonaise"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#poeticized_and_dramatized_dances"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <NamedIndividual IRI="#waltz"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#revive_on_a_romantic_basis"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <NamedIndividual IRI="#prelude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#turn_into_an_independent_work"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <NamedIndividual IRI="#scherzo"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#have_a_date_of_birth"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <Literal>February 22, 1810</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#have_a_death_date"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <Literal>October 17, 1849</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#have_a_middle_name"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <Literal>Frederic Franciszek Chopin</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#have_a_profession"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <Literal>composer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#have_a_profession"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <Literal>teacher</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#have_a_profession"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <Literal>virtuoso pianist</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#have_the_place_of_birth"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <Literal>village of Zelazowa-Wola, near Warsaw</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#have_the_place_of_death"/>
+        <NamedIndividual IRI="#Frederic_Francois_Chopin"/>
+        <Literal>Paris</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#have_a_period_of_time_when_was_created"/>
+        <NamedIndividual IRI="#ballad"/>
+        <Literal>1835-1842</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#number_of_works"/>
+        <NamedIndividual IRI="#ballad"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#have_a_period_of_time_when_was_created"/>
+        <NamedIndividual IRI="#concert"/>
+        <Literal>1829-1830</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#number_of_works"/>
+        <NamedIndividual IRI="#concert"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#have_a_period_of_time_when_was_created"/>
+        <NamedIndividual IRI="#etude"/>
+        <Literal>1828-1844</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#number_of_works"/>
+        <NamedIndividual IRI="#etude"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#have_a_period_of_time_when_was_created"/>
+        <NamedIndividual IRI="#fantasy"/>
+        <Literal>1841-1841</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#number_of_works"/>
+        <NamedIndividual IRI="#fantasy"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#have_a_period_of_time_when_was_created"/>
+        <NamedIndividual IRI="#scherzo"/>
+        <Literal>1832-1842</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#number_of_works"/>
+        <NamedIndividual IRI="#scherzo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#have_a_period_of_time_when_was_created"/>
+        <NamedIndividual IRI="#sonata"/>
+        <Literal>1828-1844</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#number_of_works"/>
+        <NamedIndividual IRI="#sonata"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#poeticized_and_dramatized_dances"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#creating_masterpieces"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#poeticized_and_dramatized_dances"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#revive_on_a_romantic_basis"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#turn_into_an_independent_work"/>
+    </InverseFunctionalObjectProperty>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#poeticized_and_dramatized_dances"/>
+        <Class IRI="#work_with_dance"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#have_a_profession"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#have_the_place_of_death"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#have_a_middle_name"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#have_a_date_of_birth"/>
+        <Class IRI="#people"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#have_a_death_date"/>
+        <Class IRI="#people"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#have_a_profession"/>
+        <Class IRI="#people_who_work"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#have_the_place_of_birth"/>
+        <Class IRI="#people"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#have_the_place_of_death"/>
+        <Class IRI="#people"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#have_a_date_of_birth"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#have_a_death_date"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#have_a_middle_name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#have_a_period_of_time_when_was_created"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#have_a_profession"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#have_the_place_of_birth"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#have_the_place_of_death"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#number_of_works"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
