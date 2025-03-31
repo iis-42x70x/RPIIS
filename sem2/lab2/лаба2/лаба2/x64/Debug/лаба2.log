@@ -1,0 +1,8 @@
+﻿  Source.cpp
+C:\Users\Dasha\source\repos\Пиоивис\сем2\лаба2\лаба2\Source.cpp(33,29): warning C4244: инициализация: преобразование "__int64" в "int", возможна потеря данных
+C:\Users\Dasha\source\repos\Пиоивис\сем2\лаба2\лаба2\Source.cpp(34,30): warning C4244: инициализация: преобразование "__int64" в "int", возможна потеря данных
+C:\Users\Dasha\source\repos\Пиоивис\сем2\лаба2\лаба2\Source.cpp(35,28): warning C4244: инициализация: преобразование "__int64" в "int", возможна потеря данных
+C:\Users\Dasha\source\repos\Пиоивис\сем2\лаба2\лаба2\Source.cpp(36,29): warning C4244: инициализация: преобразование "__int64" в "int", возможна потеря данных
+  лаба2.cpp
+  Создание кода...
+  лаба2.vcxproj -> C:\Users\Dasha\source\repos\Пиоивис\сем2\лаба2\x64\Debug\лаба2.exe
