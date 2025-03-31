@@ -16,4 +16,15 @@
 3. Элемент множества - Объекты, из которых состоит множество, называют элементами множества или точками множества.
 ***
 ### Описание используемых алгоритмов
-Код разбит на четыре файла **[main.cpp]()** **[boolean.cpp]()** **[boolean.h]()**
+Код разбит на три файла **[main.cpp](https://github.com/iis-42x70x/RPIIS/blob/%D0%91%D0%B8%D0%B1%D0%BA%D0%BE_%D0%92/sem2/lab2/code/main.cpp)** **[boolean.cpp](https://github.com/iis-42x70x/RPIIS/blob/%D0%91%D0%B8%D0%B1%D0%BA%D0%BE_%D0%92/sem2/lab2/code/boolean.cpp)** **[boolean.h](https://github.com/iis-42x70x/RPIIS/blob/%D0%91%D0%B8%D0%B1%D0%BA%D0%BE_%D0%92/sem2/lab2/code/boolean.h)**
+разберем каждый.
+1. **Основные библиотеки:**
+
+   1.1 *для данной лабораторной работы используются библиотеки:*
+
+```cpp
+#include <vector> //
+#include <fstream>
+#include <iostream>
+#include <cstring>
+```
