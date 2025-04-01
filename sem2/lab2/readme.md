@@ -25,314 +25,290 @@ _**Реализовать программу, формирующую множе�
 
 - **`Булеан`** — это множество всех подмножеств C, включая пустое множество и само множество C.
 
-![булеан](images/symdif.png)
+![булеан](bulean.svg.png)
 
-## Описание алгоритмов над множествами:
-
-### Алгоритм добавления элемента:
-
-* _При некорректном указании файла или его отсутствии выводится сообщение "Ошибка открытия файла!", после чего выполнение программы прекращается (это связано с функцией запуска программы, описанной ниже)._
-- _В противном случае файл считывается по символам, причем первое мультимножество сохраняется в `MultiSet[0]`, а второе — в `MultiSet[1]`._
-     - _В зависимости от типа считанного символа (цифра, фигурная скобка, запятая, пробел, переменная и т.д.), он помещается в соответствующее поле мультимножества, будь то элемент, кратность или просто счетчик скобок, который служит для определения начала и конца другого мультимножества или подмножества внутри него._
+# Описание алгоритмов
+## Файл Header.h
+Заголовочный файл Header.h представляет собой часть программы, связанной с обработкой множеств и их свойствами. Он содержит декларации функций и подключает необходимые библиотеки.
 ```c++
-void GetSets(Set MultiSet[], string path) {
-    ifstream file;
-    file.open(path);
+#pragma once
+#ifndef HEADER_H 
+#define HEADER_H 
+  
+#include <iostream>
+#include <vector>
+#include <string>
+#include <fstream>
 
-    if (!file.is_open()) {
-        throw runtime_error("Ошибка открытия файла!");
+using namespace std;
+ 
+// Декларации функций
+bool IsBalanced(const string& input);
+bool IsValidCharacter(char c);
+bool ValidateStructure(const string& input);
+int Add(vector<string>& Set, const string& input_str);
+int Check_Elements(const vector<string>& set);
+void PrintSubset(const vector<string>& subset);
+void Generate_Boolean(const vector<string>& set, vector<vector<string>>& boolean, vector<string>& el_of_boolean, int index);
+void RemoveOuterBraces(string& line);
+
+#endif
+
+```
+## Файл main.cpp
+Файл main.cpp считывает строки из текстового файла, обрабатывает данные множества, формирует булеан и выводит результат.
+```c++
+#include "Header.h"
+
+int main() {
+    setlocale(LC_ALL, "ru");
+
+    ifstream fin("Set.txt");
+    if (!fin.is_open()) {
+        cout << "Ошибка открытия файла!" << endl;
+        return 1;
     }
 
-    int curr_brackets_count = 0;
-    char ch;
-    int m = -1;
-    MultiSet[0].set_count = m + 1;
-    int elem_in_set = 0;
+    string line;
+    while (getline(fin, line)) {
+        string noSpaces;
+        for (char c : line) {
+            if (c != ' ') noSpaces += c;
+        }
+        line = noSpaces;
 
-    while (file.get(ch)) {
-        if (ch == '{') {
-            if (curr_brackets_count > 0) {
-                MultiSet[m].Elem[elem_in_set].element.push_back(ch);
-                MultiSet[m].Elem[elem_in_set].code_num += ch;
-                curr_brackets_count++;
-            }
-            else {
-                m++;
-                MultiSet[0].set_count = m + 1;
-                elem_in_set = 0;
-                curr_brackets_count++;
+        size_t equalPos = line.find('=');
+        if (equalPos != string::npos) {
+            line = line.substr(equalPos + 1);
+        }
+
+        if (!ValidateStructure(line)) {
+            cout << "Ошибка: некорректное множество \"" << line << "\"." << endl;
+            continue;
+        }
+
+        RemoveOuterBraces(line);
+
+        vector<string> set;
+        vector<vector<string>> boolean;
+        vector<string> el_of_boolean;
+
+        if (Add(set, line) || Check_Elements(set)) continue;
+
+        cout << "Введённое множество: { ";
+        for (size_t i = 0; i < set.size(); i++) {
+            cout << set[i];
+            if (i < set.size() - 1) cout << ", ";
+        }
+        cout << " }" << endl;
+
+        Generate_Boolean(set, boolean, el_of_boolean, 0);
+
+        cout << "Булеан заданного множества:\n";
+        for (const auto& s : boolean) {
+            PrintSubset(s);
+            cout << endl;
+        }
+    }
+
+    fin.close();
+    return 0;
+}
+
+
+```
+
+## Файл Set.txt
+В файл Set.txt записываются исходные множества для формирования булеана.
+```c++
+A={o,{},A}
+a={@, wew, *}
+B={2, <1,a>}
+
+```
+## Файл Source.cpp(описание функций в нём)
+Файл представляет реализацию программы для работы с множествами, включающую их валидацию, обработку, генерацию булеана (множества всех подмножеств) и форматированный вывод.
+
+### bool IsBalanced(Проверка на сбалансированность всех типов скобок)
+ * Проверяет, сбалансированы ли скобки в строке (фигурные {}, угловые <> и круглые ()).
+ * Алгоритм:
+ * Использует стек (vector<char>).
+ * При нахождении открывающей скобки добавляет её в стек.
+ * При нахождении закрывающей скобки проверяет, соответствует ли она последней открытой скобке (извлекаемой из стека).
+ * Если стек не пуст после прохода строки, или закрывающая скобка не соответствует открывающей, строка считается несбалансированной.
+```c++
+bool IsBalanced(const string& input) {
+    vector<char> stack;
+
+    for (char c : input) {
+        if (c == '{' || c == '<' || c == '(') {
+            stack.push_back(c);
+        }
+        else if (c == '}' || c == '>' || c == ')') {
+            if (stack.empty()) return false;
+
+            char openBracket = stack.back();
+            stack.pop_back();
+
+            if ((c == '}' && openBracket != '{') ||
+                (c == '>' && openBracket != '<') ||
+                (c == ')' && openBracket != '(')) {
+                return false;
             }
         }
-        else if (ch == ',') {
-            if (curr_brackets_count == 1) {
-                elem_in_set++;
-            }
-            else {
-                MultiSet[m].Elem[elem_in_set].element.push_back(ch);
-                MultiSet[m].Elem[elem_in_set].code_num += ch;
-            }
+    }
+    return stack.empty();
+}
+
+
+```
+### bool IsValidCharacter(Проверка на допустимые символы)
+ * Проверяет, является ли символ допустимым (буква, цифра, пробел или один из предопределённых специальных символов {}, <, >, (), ,).
+ * Алгоритм:
+ * Использует диапазоны значений символов и сравнения.
+
+```c++
+bool IsValidCharacter(char c) {
+    return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') ||
+        c == '{' || c == '}' || c == '<' || c == '>' ||
+        c == '(' || c == ')' || c == ',' || c == ' ';
+}
+```
+### bool ValidateStructure(Проверка структуры множества) 
+* Проверяет, соответствует ли структура строки правилам множества.
+* Алгоритм:
+* Итерируется по каждому символу строки, используя функцию IsValidCharacter.
+* Если встречается недопустимый символ, возвращает ошибку.
+* Дополнительно вызывает функцию IsBalanced для проверки корректности расстановки скобок.
+```c++
+bool ValidateStructure(const string& input) {
+    for (char c : input) {
+        if (!IsValidCharacter(c)) {
+            cout << "Ошибка: обнаружен недопустимый символ \"" << c << "\"." << endl;
+            return false;
         }
-        else if (isdigit(ch)) {
-            if (curr_brackets_count == 1) {
-                if (MultiSet[m].Elem[elem_in_set].multiplicity == 1 && !MultiSet[m].Elem[elem_in_set].IsAlone) {
-                    MultiSet[m].Elem[elem_in_set].multiplicity = (ch - '0');
-                    MultiSet[m].Elem[elem_in_set].IsAlone = true;
-                }
-                else {
-                    MultiSet[m].Elem[elem_in_set].multiplicity = MultiSet[m].Elem[elem_in_set].multiplicity * 10 + (ch - '0');
-                }
+    }
+    return IsBalanced(input);
+}
+```
+### int Add(Добавление элементов множества)
+* Разбивает строку множества на отдельные элементы и добавляет их в вектор Set.
+*  Алгоритм:
+*  Идёт посимвольно по строке, отслеживая уровни вложенности скобок (braceCount, angleCount, roundCount).
+*  Если встречается символ ,, проверяет, находится ли он вне вложенных структур; если да, завершает текущий элемент и добавляет его в множество.
+*  После завершения строки проверяет, сбалансированы ли все типы скобок.
+```c++
+int Add(vector<string>& Set, const string& input_str) {
+    string currentElement;
+    int braceCount = 0, angleCount = 0, roundCount = 0;
+
+    for (char s : input_str) {
+        if (s == '{') braceCount++;
+        if (s == '}') braceCount--;
+        if (s == '<') angleCount++;
+        if (s == '>') angleCount--;
+        if (s == '(') roundCount++;
+        if (s == ')') roundCount--;
+
+        if (s == ',' && braceCount == 0 && angleCount == 0 && roundCount == 0) {
+            if (!currentElement.empty()) {
+                Set.push_back(currentElement);
+                currentElement.clear();
             }
-            else {
-                MultiSet[m].Elem[elem_in_set].element.push_back(ch);
-                MultiSet[m].Elem[elem_in_set].code_num += ch;
-            }
-        }
-        else if (ch == '}') {
-            if (curr_brackets_count > 1) {
-                MultiSet[m].Elem[elem_in_set].element.push_back(ch);
-                MultiSet[m].Elem[elem_in_set].code_num += ch;
-                curr_brackets_count--;
-            }
-            else {
-                MultiSet[m].elem_count = elem_in_set + 1;
-                curr_brackets_count--;
-            }
-        }
-        else if (ch == ' ' || ch == '\n') {
-            // Пропускаем пробелы и переносы строк
         }
         else {
-            MultiSet[m].Elem[elem_in_set].element.push_back(ch);
-            MultiSet[m].Elem[elem_in_set].code_num += ch;
+            currentElement.push_back(s);
         }
     }
-    MultiSet[0].brackets_count = curr_brackets_count;
-    file.close();
-}
-```
-### Отображение мультимножеств из файла в консоль.
 
-- _Каждое мультимножество выводится поэлементно, включая кратность элементов и сами элементы, при этом разделяя их запятыми._
-
-```c++
-void SeeSets(Set MultiSet[]) {
-    for (int i = 0; i < MultiSet[0].set_count; i++) {
-        cout << "МНОЖЕСТВО № " << i + 1 << ": \n\n\t{ ";
-        for (int j = 0; j < MultiSet[i].elem_count; j++) {
-            if (MultiSet[i].Elem[j].multiplicity == 1) {
-                if (j != MultiSet[i].elem_count - 1) {
-                    cout << MultiSet[i].Elem[j].element << ", ";
-                }
-                else {
-                    cout << MultiSet[i].Elem[j].element;
-                }
-            }
-            else {
-                if (j != MultiSet[i].elem_count - 1) {
-                    cout << MultiSet[i].Elem[j].multiplicity << MultiSet[i].Elem[j].element << ", ";
-                }
-                else {
-                    cout << MultiSet[i].Elem[j].multiplicity << MultiSet[i].Elem[j].element;
-                }
-            }
-        }
-        cout << "} \n\n\n";
+    if (!currentElement.empty()) {
+        Set.push_back(currentElement);
     }
+
+    return (braceCount == 0 && angleCount == 0 && roundCount == 0) ? 0 : 1;
 }
 ```
-### Приведение считанных мультимножеств к стандартному типу
-
-* _Все муьтимножества типа `{а,а,а,d,d,а,а,с,в}` к стандартному виду `{5а,2d,c,в}`_
-     - _Производится обход всех элементов мультимножества._
-     - _В случае обнаружения одинаковых элементов их кратности суммируются, после чего результат записывается в один элемент. Количество элементов в мультимножестве уменьшается._
-     - _В противном случае элемент остается без изменений в исходном виде._
-
+### int Check_Elements(Проверка на уникальность элементов) 
+* Проверяет множество на наличие повторяющихся элементов. 
+* Алгоритм:
+* Использует два вложенных цикла для сравнения каждого элемента множества с остальными.
+* Если обнаруживаются дубликаты, возвращает ошибку.
 ```c++
-void OneType(Set MultiSet[]) {
-    for (int i = 0; i < MultiSet[0].set_count; i++) {
-        for (int j = 0; j < MultiSet[i].elem_count; j++) {
-            for (int k = j + 1; k < MultiSet[i].elem_count; k++) {
-                if (((MultiSet[i].Elem[j].element == MultiSet[i].Elem[k].element) &&
-                    ((MultiSet[i].Elem[j].multiplicity != MultiSet[i].Elem[k].multiplicity) ||
-                        (MultiSet[i].Elem[j].multiplicity == 1 && MultiSet[i].Elem[k].multiplicity == 1))) ||
-                    (MultiSet[i].Elem[j].code_num == MultiSet[i].Elem[k].code_num)) {
-                    MultiSet[i].Elem[j].multiplicity += MultiSet[i].Elem[k].multiplicity;
-                    for (int t = k; t < MultiSet[i].elem_count - 1; t++) {
-                        MultiSet[i].Elem[t] = MultiSet[i].Elem[t + 1];
-                    }
-                    MultiSet[i].elem_count--;
-                    k--;
-                }
+int Check_Elements(const vector<string>& set) {
+    for (size_t i = 0; i < set.size(); i++) {
+        for (size_t j = i + 1; j < set.size(); j++) {
+            if (set[i] == set[j]) {
+                cout << "Ошибка: множество содержит повторяющийся элемент \"" << set[i] << "\"." << endl;
+                return 1;
             }
         }
+    }
+    return 0;
+}
+```
+### void PrintSubset(Печать подмножества) 
+* Форматированно выводит подмножество на консоль.
+* Алгоритм:
+* Итерируется по элементам подмножества, добавляя их в вывод с разделением через запятую.
+```c++
+void PrintSubset(const vector<string>& subset) {
+    cout << "{ ";
+    for (size_t j = 0; j < subset.size(); j++) {
+        cout << subset[j];
+        if (j < subset.size() - 1) cout << ", ";
+    }
+    cout << " }";
+}
+```
+### void Generate_Boolean(Генерация булеана) 
+* Генерирует булеан множества (все возможные подмножества).
+* Алгоритм:
+* Рекурсивный метод.
+* На каждом шаге добавляет текущее подмножество (el_of_boolean) в итоговый вектор булеана.
+* Идёт по элементам множества с текущего индекса, добавляя элемент в подмножество и вызывая функцию рекурсивно для следующего индекса.
+* После возврата из рекурсии удаляет последний добавленный элемент из текущего подмножества.
+```c++
+void Generate_Boolean(const vector<string>& set, vector<vector<string>>& boolean, vector<string>& el_of_boolean, int index) {
+    boolean.push_back(el_of_boolean);
+    for (size_t i = index; i < set.size(); i++) {
+        el_of_boolean.push_back(set[i]);
+        Generate_Boolean(set, boolean, el_of_boolean, i + 1);
+        el_of_boolean.pop_back();
     }
 }
 ```
-
-### Функция симметрической разности
-  
-- _При сравнении элементов двух множеств необходимо следовать определенному алгоритму:_ 
-     - _В случае нахождения одинаковых элементов, мы вычисляем разность их кратностей:_
-
-       ■ _Если кратность равна нулю, то эти элементы уничтожаются и не включаются в результат симметрической разности._
-
-       ■ _Если кратность больше нуля, записываем элемент с новой кратностью, равной разнице между кратностями элементов из двух множеств._
-
-       ■ _В случае кратности меньше нуля, умножаем ее на -1 и также записываем элемент с новой кратностью, определяемой разностью кратностей элементов из обоих множеств._
-
-     - _Если одинаковых элементов не найдено, то в результат включаются элементы только из первого множества._ 
-- _После этого необходимо сравнить элементы второго множества с элементами первого._ 
-     - _При обнаружении одинаковых элементов их не рассматриваем повторно, так как они уже были учтены в разности элементов множеств._
-     - _Если же элементы из второго множества отсутствуют в первом, то они включаются в разность `В_А`._
-
-- _В итоге объединяем разности `А_В` и `В_А`, и результат записываем как `АВ`._
-  
+### void RemoveOuterBraces(Удаление внешних фигурных или угловых скобок) 
+* Удаляет внешние фигурные {} или угловые <> скобки из строки.
+* Алгоритм:
+* Если первый и последний символы строки — парные открывающая и закрывающая скобки, обрезает строку, удаляя эти символы.
 ```c++
-void SymmDiff(Set MultiSet[]) {
-    Set A = MultiSet[0];
-    if (MultiSet[0].brackets_count == 0) {
-        int n = 1;
-        while (n < MultiSet[0].set_count) {
-            Set A_B, B_A, AB;
-            A_B.elem_count = 0;
-            B_A.elem_count = 0;
-            AB.elem_count = 0;
-            int a_b = 0, b_a = 0, ab = 0;
-
-            for (int i = 0; i < A.elem_count; i++) {
-                bool the_same = false;
-                for (int j = 0; j < MultiSet[n].elem_count; j++) {
-                    if ((A.Elem[i].element == MultiSet[n].Elem[j].element) ||
-                        (A.Elem[i].code_num == MultiSet[n].Elem[j].code_num)) {
-                        int mcy = A.Elem[i].multiplicity - MultiSet[n].Elem[j].multiplicity;
-                        if (mcy == 0) {
-                            // Элементы полностью совпадают
-                        }
-                        else if (mcy > 0) {
-                            A_B.Elem[a_b] = A.Elem[i];
-                            A_B.Elem[a_b].multiplicity = mcy;
-                            a_b++;
-                            A_B.elem_count++;
-                        }
-                        else {
-                            mcy *= -1;
-                            B_A.Elem[b_a] = MultiSet[n].Elem[j];
-                            B_A.Elem[b_a].multiplicity = mcy;
-                            b_a++;
-                            B_A.elem_count++;
-                        }
-                        the_same = true;
-                        break;
-                    }
-                }
-                if (!the_same) {
-                    A_B.Elem[a_b] = A.Elem[i];
-                    a_b++;
-                    A_B.elem_count++;
-                }
-            }
-
-            for (int i = 0; i < MultiSet[n].elem_count; i++) {
-                bool the_same = false;
-                for (int j = 0; j < A.elem_count; j++) {
-                    if ((A.Elem[j].element == MultiSet[n].Elem[i].element) ||
-                        (A.Elem[j].code_num == MultiSet[n].Elem[i].code_num)) {
-                        the_same = true;
-                        break;
-                    }
-                }
-                if (!the_same) {
-                    B_A.Elem[b_a] = MultiSet[n].Elem[i];
-                    b_a++;
-                    B_A.elem_count++;
-                }
-            }
-
-            // Объединяем A_B и B_A в AB
-            for (int i = 0; i < A_B.elem_count; i++) {
-                AB.Elem[ab] = A_B.Elem[i];
-                ab++;
-                AB.elem_count++;
-            }
-            for (int i = 0; i < B_A.elem_count; i++) {
-                AB.Elem[ab] = B_A.Elem[i];
-                ab++;
-                AB.elem_count++;
-            }
-
-            A = AB;
-            n++;
-        }
-
-        cout << "\nРЕЗУЛЬТАТ ВЫЧИСЛЕНИЯ СИММЕТРИЧЕСКОЙ РАЗНОСТИ:\n\n\t{ ";
-        for (int j = 0; j < A.elem_count; j++) {
-            if (A.Elem[j].multiplicity == 1) {
-                if (j != A.elem_count - 1) {
-                    cout << A.Elem[j].element << ", ";
-                }
-                else {
-                    cout << A.Elem[j].element;
-                }
-            }
-            else {
-                if (j != A.elem_count - 1) {
-                    cout << A.Elem[j].multiplicity << A.Elem[j].element << ", ";
-                }
-                else {
-                    cout << A.Elem[j].multiplicity << A.Elem[j].element;
-                }
-            }
-        }
-        cout << " }\n";
-        MultiSet[0] = A;
+void RemoveOuterBraces(string& line) {
+    if ((line.front() == '{' && line.back() == '}') || (line.front() == '<' && line.back() == '>')) {
+        line = line.substr(1, line.size() - 2);
     }
-    else {
-        cout << "Некорректный ввод!\n";
-    }
-}
-```
-
-### Запуск всех функций с обработкой исключений:
-- _Функция `Do_Symm_Diff` пытается выполнить функцию `GetSets`, которая выдает ошибку, если файл введен некорректно. 
-Если возникает проблема с файлом, `Do_Symm_Diff` перехватывает исключение и выводит сообщение об ошибке в консоль, что приводит к остановке выполнения всей программы. 
-В противном случае продолжается выполнение остальных функций._
-  
-```c++
-void Do_Symm_Diff(Set MultiSet[], string path) {
-    try {
-        GetSets(MultiSet, path);
-    }
-    catch (const exception& e) {
-        cerr << e.what() << endl;
-        return;
-    }
-
-    OneType(MultiSet);
-    SeeSets(MultiSet);
-    SymmDiff(MultiSet);
 }
 ```
 
 <h1 align="center">Примеры реализации программы</h1>
 
-* ### Тест №1 
-![Вывод консоли](images/tst1.png)
-![Текстовый файл](images/txt1.png)
+* ### Тест №1
+  Для множества А={0, {}, A}
+![Вывод консоли](test1.png)
 
-* ### Тест №2 
-![Вывод консоли](images/tst2.png)
-![Текстовый файл](images/txt2.png)
+* ### Тест №2
+   Для множества B={1, 2}
+![Вывод консоли](test2.png)
 
-* ### Тест №3 
-![Вывод консоли](images/tst3.png)
-![Текстовый файл](images/txt3.png)
+* ### Тест №3
+   Для множества A={15, <1, 2>}
+![Вывод консоли](test3.png)
 
-* ### Тест №4 
-![Вывод консоли](images/tst4.png)
-![Текстовый файл](images/txt4.png)
+* ### Тест №4
+   Для множества A={{, wew, *}
+![Вывод консоли](test4.png)
 
 * ### Google Test 
-![Вывод консоли](images/gtest.png)
+![Вывод консоли](gtest.png)
 
 <h1 align="center">Вывод:</h1>
 
