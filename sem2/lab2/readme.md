@@ -320,6 +320,6 @@ void RemoveOuterBraces(string& line) {
 
 * [Задание](https://drive.google.com/drive/folders/1_xy849HXgTDetxSMlFd0KikTBo8-xalN)
 * [Введение в теорию множеств](om/ru/articles/457312/)
-* [Примеры реализаций]([https://learn.microsoft.com/ru-ru/cpp/cpp/errors-and-exception-handling-modern-cpp?view=msvc-170](https://www.cyberforum.ru/cpp-beginners/thread2506254.html))
-* [Сборка проектов в C++]([https://purecodecpp.com/archives/2751](https://habr.com/ru/companies/ruvds/articles/871940/))
+* [Примеры реализаций](https://www.cyberforum.ru/cpp-beginners/thread2506254.html)
+* [Сборка проектов в C++](https://habr.com/ru/companies/ruvds/articles/871940/)
 * [GoogleTests](https://github.com/google/googletest/blob/main/docs/primer.md)
