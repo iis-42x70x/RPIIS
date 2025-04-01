@@ -23,7 +23,7 @@ b) в KBE:
 <img src="https://ltdfoto.ru/images/2025/03/24/SNIMOK-EKRANA_20250324_212711.png" alt="SNIMOK-EKRANA_20250324_212711.png" border="0" />
  
 # Решение:  
-<img src="https://ltdfoto.ru/images/2025/03/24/SNIMOK-EKRANA_20250324_212818.png" alt="SNIMOK-EKRANA_20250324_212818.png" border="0" />
+<img src="https://ltdfoto.ru/images/2025/04/01/SNIMOK-EKRANA_20250401_152118.png" alt="SNIMOK-EKRANA_20250401_152118.png" border="0" />
 
 
 
