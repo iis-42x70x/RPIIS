@@ -45,7 +45,7 @@ void CreatePermutations(vector<string>& elements) {
     int count = 1;
     do {
         cout << count++ << ": <";
-        for (size_t i = 0; i < elements.size(); ++i) {
+        for (int i = 0; i < elements.size(); ++i) {
             cout << elements[i];
             if (i != elements.size() - 1) cout << ", ";
         }
