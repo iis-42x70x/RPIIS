@@ -9,7 +9,38 @@ _Симметрическая разность_ - неориентированн
 
 # Реализация
 
-## Функция ```extractAndSortElements```
+
+## Функция ```readSet```
+```c++
+Element* readSet(int& count) {
+    std::cout << "Введите количество элементов в множестве: ";
+    std::cin >> count;
+    
+    Element* elements = new Element[count];
+    for (int i = 0; i < count; i++) {
+        std::cout << "Элемент " << i+1 << " - число (1) или множество (2)? ";
+        int choice;
+        std::cin >> choice;
+        
+        if (choice == 1) {
+            int val;
+            std::cout << "Введите значение: ";
+            std::cin >> val;
+            elements[i] = Element(val);
+        } else {
+            int subCount;
+            Element* subElements = readSet(subCount);
+            elements[i] = Element(subElements, subCount);
+            delete[] subElements;
+        }
+    }
+    return elements;
+}
+
+```
+Эта функция рекурсивно считывает множество элементов, где каждый элемент может быть либо числом, либо вложенным множеством. Она создает и возвращает массив элементов Element.
+
+## Функция ```calculateSymmetricDifference```
 ```c++
 Element* calculateSymmetricDifference(Element** sets, int* counts, int setCount, int& resultCount) {
     if (setCount == 0) {
@@ -57,3 +88,6 @@ Element* calculateSymmetricDifference(Element** sets, int* counts, int setCount,
 }
 
 ```
+
+Функция ```calculateSymmetricDifference``` объединяет два множества, оставляя только уникальные элементы, которые есть либо в первом, либо во втором, но не в обоих сразу. Результат сохраняется в новое множество и может быть выведен или использован дальше.
+
