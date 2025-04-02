@@ -129,6 +129,43 @@ lab1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1.dir/build.make CMakeFiles/lab1.dir/build
 .PHONY : lab1/fast
 
+#=============================================================================
+# Target rules for targets named lab1-tests
+
+# Build rule for target.
+lab1-tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab1-tests
+.PHONY : lab1-tests
+
+# fast build rule for target.
+lab1-tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1-tests.dir/build.make CMakeFiles/lab1-tests.dir/build
+.PHONY : lab1-tests/fast
+
+b-tree_tree.o: b-tree_tree.cpp.o
+.PHONY : b-tree_tree.o
+
+# target to build an object file
+b-tree_tree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1-tests.dir/build.make CMakeFiles/lab1-tests.dir/b-tree_tree.cpp.o
+.PHONY : b-tree_tree.cpp.o
+
+b-tree_tree.i: b-tree_tree.cpp.i
+.PHONY : b-tree_tree.i
+
+# target to preprocess a source file
+b-tree_tree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1-tests.dir/build.make CMakeFiles/lab1-tests.dir/b-tree_tree.cpp.i
+.PHONY : b-tree_tree.cpp.i
+
+b-tree_tree.s: b-tree_tree.cpp.s
+.PHONY : b-tree_tree.s
+
+# target to generate assembly for a file
+b-tree_tree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1-tests.dir/build.make CMakeFiles/lab1-tests.dir/b-tree_tree.cpp.s
+.PHONY : b-tree_tree.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -153,6 +190,78 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1.dir/build.make CMakeFiles/lab1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+test1.o: test1.cpp.o
+.PHONY : test1.o
+
+# target to build an object file
+test1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1-tests.dir/build.make CMakeFiles/lab1-tests.dir/test1.cpp.o
+.PHONY : test1.cpp.o
+
+test1.i: test1.cpp.i
+.PHONY : test1.i
+
+# target to preprocess a source file
+test1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1-tests.dir/build.make CMakeFiles/lab1-tests.dir/test1.cpp.i
+.PHONY : test1.cpp.i
+
+test1.s: test1.cpp.s
+.PHONY : test1.s
+
+# target to generate assembly for a file
+test1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1-tests.dir/build.make CMakeFiles/lab1-tests.dir/test1.cpp.s
+.PHONY : test1.cpp.s
+
+test2.o: test2.cpp.o
+.PHONY : test2.o
+
+# target to build an object file
+test2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1-tests.dir/build.make CMakeFiles/lab1-tests.dir/test2.cpp.o
+.PHONY : test2.cpp.o
+
+test2.i: test2.cpp.i
+.PHONY : test2.i
+
+# target to preprocess a source file
+test2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1-tests.dir/build.make CMakeFiles/lab1-tests.dir/test2.cpp.i
+.PHONY : test2.cpp.i
+
+test2.s: test2.cpp.s
+.PHONY : test2.s
+
+# target to generate assembly for a file
+test2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1-tests.dir/build.make CMakeFiles/lab1-tests.dir/test2.cpp.s
+.PHONY : test2.cpp.s
+
+test3.o: test3.cpp.o
+.PHONY : test3.o
+
+# target to build an object file
+test3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1-tests.dir/build.make CMakeFiles/lab1-tests.dir/test3.cpp.o
+.PHONY : test3.cpp.o
+
+test3.i: test3.cpp.i
+.PHONY : test3.i
+
+# target to preprocess a source file
+test3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1-tests.dir/build.make CMakeFiles/lab1-tests.dir/test3.cpp.i
+.PHONY : test3.cpp.i
+
+test3.s: test3.cpp.s
+.PHONY : test3.s
+
+# target to generate assembly for a file
+test3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1-tests.dir/build.make CMakeFiles/lab1-tests.dir/test3.cpp.s
+.PHONY : test3.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +271,22 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... lab1"
+	@echo "... lab1-tests"
+	@echo "... b-tree_tree.o"
+	@echo "... b-tree_tree.i"
+	@echo "... b-tree_tree.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... test1.o"
+	@echo "... test1.i"
+	@echo "... test1.s"
+	@echo "... test2.o"
+	@echo "... test2.i"
+	@echo "... test2.s"
+	@echo "... test3.o"
+	@echo "... test3.i"
+	@echo "... test3.s"
 .PHONY : help
 
 

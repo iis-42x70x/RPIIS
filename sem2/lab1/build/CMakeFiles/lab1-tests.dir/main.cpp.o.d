@@ -1,4 +1,4 @@
-CMakeFiles/lab1.dir/main.cpp.o: \
+CMakeFiles/lab1-tests.dir/main.cpp.o: \
   /Users/tatanasolovej/RPIIS/sem2/lab1/main.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__assert \

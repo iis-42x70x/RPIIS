@@ -1,9 +1,9 @@
 #include <gtest/gtest.h>
-#include "B-Tree.h"
+#include "library.h"
  
 
 // Тестирование функции поиска в B-дереве
-TEST(BTreeTest, SearchTest) {
+TEST(BTreeTest, SearchTest1) {
     BTree tree(3); 
 
     tree.insert_key(1);
@@ -21,7 +21,7 @@ TEST(BTreeTest, SearchTest) {
 }
 
 // Тестирование функции вставки в B-дерево
-TEST(BTreeTest, InsertTest) {
+TEST(BTreeTest, InsertTest1) {
     BTree tree(3); 
 
     tree.insert_key(1);
@@ -37,7 +37,7 @@ TEST(BTreeTest, InsertTest) {
 }
 
 // Тестирование функции удаления из B-дерева
-TEST(BTreeTest, RemoveTest) {
+TEST(BTreeTest, RemoveTest1) {
     BTree tree(3); 
 
     tree.insert_key(1);
@@ -51,10 +51,4 @@ TEST(BTreeTest, RemoveTest) {
     tree.delete_key(3);
     // Проверяем, что элемент действительно удален
     ASSERT_TRUE(tree.search_key(3) == nullptr);
-}
-
-// Запуск всех тестов
-int main(int argc, char** argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
 }

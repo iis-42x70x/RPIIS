@@ -1,5 +1,5 @@
-CMakeFiles/lab1.dir/main.cpp.o: \
-  /Users/tatanasolovej/RPIIS/sem2/lab1/main.cpp \
+CMakeFiles/lab1.dir/b_tree-tree_main.cpp.o: \
+  /Users/tatanasolovej/RPIIS/sem2/lab1/b_tree-tree_main.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__assert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__assertion_handler \
@@ -956,5 +956,5 @@ CMakeFiles/lab1.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/formatter_tuple.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/print \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/unistd.h \
-  /Users/tatanasolovej/RPIIS/sem2/lab1/B-Tree.h \
+  /Users/tatanasolovej/RPIIS/sem2/lab1/library.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/sstream

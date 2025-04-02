@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include <sstream> //библиотека для работы со строками
 #include <queue> //библиотека для работы с очередями
@@ -726,7 +728,6 @@ void BTree::delete_key(int k)
 		return;
 	}
 
-	// Вызов функции удаления для узла
 	//Вызываем рекурсивную функцию delete_key(k), которая удаляет k в поддереве с корнем root
 	root->delete_key(k);
 
@@ -735,6 +736,7 @@ void BTree::delete_key(int k)
 	//Если узел стал пустым, он больше не нужен
 	{
 		BTreeNode* tmp = root;
+
 		//Если root был листом - просто удаляем его
 		if (root->leaf)
 			root = NULL;

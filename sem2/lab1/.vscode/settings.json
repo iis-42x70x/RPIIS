@@ -16,7 +16,7 @@
         "vector": "cpp",
         "fstream": "cpp",
         "new": "cpp",
-        "iomanip": "cpp"
-        
+        "iomanip": "cpp",
+        "sstream": "cpp"
     }
 }

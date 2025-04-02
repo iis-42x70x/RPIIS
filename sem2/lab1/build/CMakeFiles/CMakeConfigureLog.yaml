@@ -469,3 +469,43 @@ events:
       LTO support using: LLVM version 16.0.0 (static support for 29, runtime is 29)
       TAPI support using: Apple TAPI version 16.0.0 (tapi-1600.0.11.9)
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/opt/homebrew/share/cmake/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/opt/homebrew/lib/cmake/GTest/GTestConfig.cmake:29 (find_dependency)"
+      - "/opt/homebrew/share/cmake/Modules/FindGTest.cmake:197 (find_package)"
+      - "CMakeLists.txt:9 (find_package)"
+    directories:
+      source: "/Users/tatanasolovej/RPIIS/sem2/lab1/build/CMakeFiles/CMakeScratch/TryCompile-NZyEdN"
+      binary: "/Users/tatanasolovej/RPIIS/sem2/lab1/build/CMakeFiles/CMakeScratch/TryCompile-NZyEdN"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tatanasolovej/RPIIS/sem2/lab1/build/CMakeFiles/CMakeScratch/TryCompile-NZyEdN'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_79700/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_79700.dir/build.make CMakeFiles/cmTC_79700.dir/build
+        Building C object CMakeFiles/cmTC_79700.dir/src.c.o
+        /Library/Developer/CommandLineTools/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -MD -MT CMakeFiles/cmTC_79700.dir/src.c.o -MF CMakeFiles/cmTC_79700.dir/src.c.o.d -o CMakeFiles/cmTC_79700.dir/src.c.o -c /Users/tatanasolovej/RPIIS/sem2/lab1/build/CMakeFiles/CMakeScratch/TryCompile-NZyEdN/src.c
+        Linking C executable cmTC_79700
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79700.dir/link.txt --verbose=1
+        /Library/Developer/CommandLineTools/usr/bin/cc  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_79700.dir/src.c.o -o cmTC_79700
+        
+      exitCode: 0
+...

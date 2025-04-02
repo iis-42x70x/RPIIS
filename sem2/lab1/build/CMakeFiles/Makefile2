@@ -64,10 +64,12 @@ CMAKE_BINARY_DIR = /Users/tatanasolovej/RPIIS/sem2/lab1/build
 
 # The main recursive "all" target.
 all: CMakeFiles/lab1.dir/all
+all: CMakeFiles/lab1-tests.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/lab1.dir/codegen
+codegen: CMakeFiles/lab1-tests.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -76,6 +78,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/lab1.dir/clean
+clean: CMakeFiles/lab1-tests.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -109,6 +112,38 @@ CMakeFiles/lab1.dir/codegen:
 CMakeFiles/lab1.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1.dir/build.make CMakeFiles/lab1.dir/clean
 .PHONY : CMakeFiles/lab1.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/lab1-tests.dir
+
+# All Build rule for target.
+CMakeFiles/lab1-tests.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1-tests.dir/build.make CMakeFiles/lab1-tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1-tests.dir/build.make CMakeFiles/lab1-tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/tatanasolovej/RPIIS/sem2/lab1/build/CMakeFiles --progress-num=3,4,5,6,7 "Built target lab1-tests"
+.PHONY : CMakeFiles/lab1-tests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/lab1-tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tatanasolovej/RPIIS/sem2/lab1/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lab1-tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tatanasolovej/RPIIS/sem2/lab1/build/CMakeFiles 0
+.PHONY : CMakeFiles/lab1-tests.dir/rule
+
+# Convenience name for target.
+lab1-tests: CMakeFiles/lab1-tests.dir/rule
+.PHONY : lab1-tests
+
+# codegen rule for target.
+CMakeFiles/lab1-tests.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1-tests.dir/build.make CMakeFiles/lab1-tests.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/tatanasolovej/RPIIS/sem2/lab1/build/CMakeFiles --progress-num=3,4,5,6,7 "Finished codegen for target lab1-tests"
+.PHONY : CMakeFiles/lab1-tests.dir/codegen
+
+# clean rule for target.
+CMakeFiles/lab1-tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1-tests.dir/build.make CMakeFiles/lab1-tests.dir/clean
+.PHONY : CMakeFiles/lab1-tests.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
