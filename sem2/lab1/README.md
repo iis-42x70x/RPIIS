@@ -93,3 +93,74 @@ void addChild(Treenode*& parent, int n) {
     }
 }
 ```
+### Функция удаления выбранного узла.
+ Функция ```deleteNode``` yдаляет узел ```nodeToDelete``` из списка потомков ```parent``` и рекурсивно удаляет все его дочерние узлы.
+ 
+ ```c++
+void deleteNode(Treenode* parent, Treenode* nodeToDelete) {
+    if (!parent || !nodeToDelete)
+        return;
+    for (int i = 0; i < parent->children.size(); i++) {
+        if (parent->children[i] == nodeToDelete) {
+            for (int j = i; j < parent->children.size()-1; j++) {
+                parent->children[j] = parent->children[j + 1];
+            }
+            parent->children.resize(parent->children.size() - 1);
+            break;
+        }
+    }
+    while (!nodeToDelete->children.empty()) {
+        deleteNode(nodeToDelete, nodeToDelete->children.back());
+    }
+    delete nodeToDelete;
+}
+void findtodelete(Treenode* parent) {
+    if (!parent) {
+        cout << "Ошибка: Дерево пустое!\n";
+        return;
+    }
+    int o; int depth;
+    cout << "Введите уровень дерева" << endl;
+    cin >> depth;
+    Treenode* g = parent;
+    for (int i = 0; i < depth; i++) {
+       
+        for (int j = 0; j < g->children.size(); j++) {
+            cout << j + 1 << ":"<< g->children[j]->data << " ";
+        }
+        cout << "Выберите номер узла " << endl;
+        
+        cin >> o;
+        if (o < 1 || o > g->children.size()) {
+            cout << "Ошибка: Неверный номер узла!\n";
+            return;
+        }
+        parent = g;
+        g = g->children[o - 1];
+
+        deleteNode(parent, g);
+    }
+}
+```
+### Разбор Функций:
+## Функция   ```findtodelete```  
+
+Проверяет, существует ли дерево (```parent```). Если нет — выводит ошибку.
+Запрашивает у пользователя уровень ```depth```, на котором нужно удалить узел.
+Начинает поиск узла, спускаясь ```depth``` уровней вниз:
+Выводит список дочерних узлов текущего узла.
+Пользователь выбирает, к какому потомку перейти.
+Если номер введен неверно, выводит ошибку и завершает работу.
+После нахождения нужного узла вызывает ```deleteNode```, передавая в него родителя и найденный узел.
+## Функция   ```deleteNode```
+Ищет ```nodeToDelete``` среди детей parent.
+Если находит, сдвигает оставшиеся элементы вектора ```children``` влево.
+Уменьшает размер ```children``` (удаляя последний дубликат).
+Рекурсивно удаляет всех потомков ```nodeToDelete```, начиная с последних элементов (чтобы избежать ошибок).
+Освобождает память (```delete nodeToDelete```).
+
+## Вывод
+В ходе выполнения данной лабораторной работы я:
+- Изучил принцип работы N-арного дерева.
+- Приобрёл навыки разработки библиотек в C++.
+- Разработал библиотеку алгоритмов обработки структуры данных N-арного дерева.
