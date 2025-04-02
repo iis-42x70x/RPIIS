@@ -91,5 +91,5 @@ Element* calculateSymmetricDifference(Element** sets, int* counts, int setCount,
 
 Функция ```calculateSymmetricDifference``` объединяет два множества, оставляя только уникальные элементы, которые есть либо в первом, либо во втором, но не в обоих сразу. Результат сохраняется в новое множество и может быть выведен или использован дальше.
 ## Пример работы программы
-![{0701CE8C-0CF8-433E-BA5C-DD653BB62794}](https://github.com/user-attachments/assets/37f84dc9-ac72-43b0-8d44-ac98c9d2e04c)
+![{0701CE8C-0CF8-433E-BA5C-DD653BB62794}](https://github.com/iis-42x70x/RPIIS/blob/Аникеенко_А/sem2/lab2/Снимок%20экрана%202025-04-02%20в%2022.10.10.png)
 
