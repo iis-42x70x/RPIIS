@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4/"
+     xml:base="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-4="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#имеетБлижайшийМонастырь -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#имеетБлижайшийМонастырь">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Город"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Монастырь"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#имеетГерб -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#имеетГерб">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Город"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Герб"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#имеетЖДСтанцию -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#имеетЖДСтанцию">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Город"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#ЖДСтанция"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#лежитНаРеках -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#лежитНаРеках">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Город"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Река"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#расположенВОбласти -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#расположенВОбласти">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Город"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Область"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#являетсяРайоннымЦентром -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#являетсяРайоннымЦентром">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Город"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Район"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#годУтвержденияГерба -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#годУтвержденияГерба">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#население -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#население">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#расстояниеДоГродно -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#расстояниеДоГродно">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#расстояниеДоМинска -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#расстояниеДоМинска">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Герб -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Герб"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Город -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Город"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#ЖДСтанция -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#ЖДСтанция"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Монастырь -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Монастырь"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Область -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Область"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Район -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Район"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Река -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Река"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#ГродненскаяОбласть -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#ГродненскаяОбласть">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Область"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#ЖировичскийМонастырь -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#ЖировичскийМонастырь">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Монастырь"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Исса -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Исса">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Река"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Лев -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Лев">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Герб"/>
+        <untitled-ontology-4:годУтвержденияГерба rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1591-01-04</untitled-ontology-4:годУтвержденияГерба>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Слоним -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Слоним">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Город"/>
+        <untitled-ontology-4:имеетБлижайшийМонастырь rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#ЖировичскийМонастырь"/>
+        <untitled-ontology-4:имеетЖДСтанцию rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#СлонимЖДСтанция"/>
+        <untitled-ontology-4:лежитНаРеках rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Исса"/>
+        <untitled-ontology-4:лежитНаРеках rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Щара"/>
+        <untitled-ontology-4:расположенВОбласти rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#ГродненскаяОбласть"/>
+        <untitled-ontology-4:являетсяРайоннымЦентром rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#СлонимскийРайон"/>
+        <untitled-ontology-4:население rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48977</untitled-ontology-4:население>
+        <untitled-ontology-4:расстояниеДоГродно rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">143</untitled-ontology-4:расстояниеДоГродно>
+        <untitled-ontology-4:расстояниеДоМинска rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">195</untitled-ontology-4:расстояниеДоМинска>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#СлонимЖДСтанция -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#СлонимЖДСтанция">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#ЖДСтанция"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#СлонимскийРайон -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#СлонимскийРайон">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Район"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Щара -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Щара">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/2/untitled-ontology-4#Река"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
