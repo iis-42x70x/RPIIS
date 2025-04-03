@@ -26,85 +26,81 @@ initialize(const std::vector<std::vector<int>>& inputTable) копирует п�
 ```C++
 void YoungTableau::initialize(int row_number)
 {
-	if (hasDuplicates()) {
-		std::cout << "Ошибка: Таблица содержит дубликаты элементов.\n";
-		return;  // Прекращаем инициализацию
-	}
-	if (!table.empty())
-	{
-		for (auto& row : table)
-			row.clear();
-		table.clear();
-	}
-	this->row_number = row_number; // Инициализация поля row_number
-	for (int i = 0; i < row_number; i++)
-	{
-		table.push_back({});
-	}
+    if (hasDuplicates()) {
+        cout << "Ошибка: Таблица содержит дубликаты элементов.\n";
+        return;  // Прекращаем инициализацию
+    }
+    if (!table.empty())
+    {
+        for (size_t i = 0; i < table.size(); i++)
+            table[i].clear();
+        table.clear();
+    }
+    this->row_number = row_number; // Инициализация поля row_number
+    for (int i = 0; i < row_number; i++)
+    {
+        table.push_back({});
+    }
 }
 size_t YoungTableau::width()
 {
-	return table.size();
+    return table.size();
 }
 
-void YoungTableau::initialize(const std::vector<std::vector<int>>& inputTable) {
-	table = inputTable;
+void YoungTableau::initialize(const vector<vector<int>>& inputTable) {
+    table = inputTable;
 
-	// 1. Сортируем каждую строку по возрастанию
-	for (auto& row : table) {
-		std::sort(row.begin(), row.end());
-	}
+    for (size_t i = 0; i < table.size(); i++) {
+        sort(table[i].begin(), table[i].end());
+    }
 
-	// 2. Обеспечиваем порядок в столбцах (просеивание вниз)
-	for (int col = 0; col < table[0].size(); ++col) {
-		for (int row = 1; row < table.size(); ++row) {
-			if (table[row].size() > col && table[row - 1][col] > table[row][col]) {
-				std::swap(table[row - 1][col], table[row][col]);
-
-				// Просеивание вниз
-				int r = row;
-				while (r + 1 < table.size() && table[r + 1].size() > col && table[r + 1][col] < table[r][col]) {
-					std::swap(table[r][col], table[r + 1][col]);
-					r++;
-				}
-			}
-		}
-	}
+    for (size_t col = 0; col < table[0].size(); ++col) {
+        for (size_t row = 1; row < table.size(); ++row) {
+            if (table[row].size() > col && table[row - 1][col] > table[row][col]) {
+                swap(table[row - 1][col], table[row][col]);
+                size_t r = row;
+                while (r + 1 < table.size() && table[r + 1].size() > col && table[r + 1][col] < table[r][col]) {
+                    swap(table[r][col], table[r + 1][col]);
+                    r++;
+                }
+            }
+        }
+    }
 }
 ```
 add(int line_number, int element) добавляет элемент в указанную строку таблицы. Если номер строки некорректен, выводит ошибку и завершает выполнение. Затем добавляет элемент в конец выбранной строки. После этого выполняет "просеивание вверх" (bubble-up), сравнивая добавленный элемент с его потенциальными родителями в строке и столбце. Если родительский элемент больше, происходит обмен значениями, и процесс продолжается, пока порядок в таблице не будет восстановлен или пока не будет достигнут верхний левый угол таблицы.
 ```C++
 void YoungTableau::add(int line_number, int element)
 {
-	if (line_number > table.size())
-	{
-		std::cout << "Ошибка: Недопустимый номер строки.\n";
-		return;
-	}
+    if (line_number > table.size())
+    {
+        cout << "Ошибка: Недопустимый номер строки.\n";
+        return;
+    }
 
-	auto& row = table[line_number - 1];
-	row.push_back(element);
+    vector<int>& row = table[line_number - 1];
+    row.push_back(element);
 
-	// Просеивание вверх (bubble-up)
-	int rowIndex = line_number - 1;
-	int colIndex = row.size() - 1;
+    // Просеивание вверх (bubble-up)
+    int rowIndex = line_number - 1;
+    int colIndex = row.size() - 1;
 
-	while (rowIndex > 0 || colIndex > 0)
-	{
-		int parentRow = rowIndex > 0 ? rowIndex - 1 : rowIndex;
-		int parentCol = colIndex > 0 ? colIndex - 1 : colIndex;
+    while (rowIndex > 0 || colIndex > 0)
+    {
+        int parentRow = rowIndex > 0 ? rowIndex - 1 : rowIndex;
+        int parentCol = colIndex > 0 ? colIndex - 1 : colIndex;
 
-		if (table[parentRow][parentCol] > table[rowIndex][colIndex])
-		{
-			std::swap(table[parentRow][parentCol], table[rowIndex][colIndex]);
-			rowIndex = parentRow;
-			colIndex = parentCol;
-		}
-		else
-		{
-			break;
-		}
-	}
+        if (table[parentRow][parentCol] > table[rowIndex][colIndex])
+        {
+            swap(table[parentRow][parentCol], table[rowIndex][colIndex]);
+            rowIndex = parentRow;
+            colIndex = parentCol;
+        }
+        else
+        {
+            break;
+        }
+    }
 }
 ```
 
