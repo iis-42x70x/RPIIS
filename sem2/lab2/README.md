@@ -45,7 +45,7 @@ _**Реализовать программу, формирующую множе�
 - _В противном случае файл считывается по символам, причем первое мультимножество сохраняется в `MultiSet[0]`, а второе — в `MultiSet[1]`._
      - _В зависимости от типа считанного символа (цифра, фигурная скобка, запятая, пробел, переменная и т.д.), он помещается в соответствующее поле мультимножества, будь то элемент, кратность или просто счетчик скобок, который служит для определения начала и конца другого мультимножества или подмножества внутри него._
 ```c++
-void GetSets(Set MultiSet[], string path) {
+void Sets(Set MultiSet[], string path) {
     ifstream file;
     file.open(path);
 
@@ -125,7 +125,7 @@ void GetSets(Set MultiSet[], string path) {
 - _Каждое мультимножество выводится поэлементно, включая кратность элементов и сами элементы, при этом разделяя их запятыми._
 
 ```c++
-void SeeSets(Set MultiSet[]) {
+void ViewSets(Set MultiSet[]) {
     for (int i = 0; i < MultiSet[0].set_count; i++) {
         cout << "МНОЖЕСТВО № " << i + 1 << ": \n\n\t{ ";
         for (int j = 0; j < MultiSet[i].elem_count; j++) {
@@ -198,7 +198,7 @@ void OneType(Set MultiSet[]) {
 - _В итоге объединяем разности `А_В` и `В_А`, и результат записываем как `АВ`._
   
 ```c++
-void SymmDiff(Set MultiSet[]) {
+void SymDif(Set MultiSet[]) {
     Set A = MultiSet[0];
     if (MultiSet[0].brackets_count == 0) {
         int n = 1;
@@ -303,12 +303,12 @@ void SymmDiff(Set MultiSet[]) {
 ```
 
 ### Запуск всех функций с обработкой исключений:
-- _Функция `Do_Symm_Diff` пытается выполнить функцию `GetSets`, которая выдает ошибку, если файл введен некорректно. 
-Если возникает проблема с файлом, `Do_Symm_Diff` перехватывает исключение и выводит сообщение об ошибке в консоль, что приводит к остановке выполнения всей программы. 
+- _Функция `Perform_SymDif` пытается выполнить функцию `Sets`, которая выдает ошибку, если файл введен некорректно. 
+Если возникает проблема с файлом, `Perform_SymDif` перехватывает исключение и выводит сообщение об ошибке в консоль, что приводит к остановке выполнения всей программы. 
 В противном случае продолжается выполнение остальных функций._
   
 ```c++
-void Do_Symm_Diff(Set MultiSet[], string path) {
+void Perform_SymDif(Set MultiSet[], string path) {
     try {
         GetSets(MultiSet, path);
     }
@@ -318,8 +318,8 @@ void Do_Symm_Diff(Set MultiSet[], string path) {
     }
 
     OneType(MultiSet);
-    SeeSets(MultiSet);
-    SymmDiff(MultiSet);
+    ViewSets(MultiSet);
+    SymDif(MultiSet);
 }
 ```
 
