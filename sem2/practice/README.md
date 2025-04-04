@@ -10,31 +10,31 @@
 
 ## Первая задача
 
-![IMG_1](sem2/practice/images/img1.png)
+![IMG_1](img/img1.png)
 
 ### Её реализация в КВЕ
 
-![IMG_2](images/img2.jpg)
+![IMG_2](img/img2.jpg)
 
 ### Её реализация в Protege
 
-![IMG_5](images/)
+![IMG_5](imп/)
 
-![IMG_6](images/)
+![IMG_6](img/)
 
-![IMG_7](images/)
+![IMG_7](img/)
 
-![IMG_8](images/)
+![IMG_8](img/)
 
 ---
 
 ## Вторая задача
 
-![IMG_4](images/img4.png)
+![IMG_4](img/img4.png)
 
 ### Её реализация в КВЕ
 
-![IMG_3](images/img3.jpg)
+![IMG_3](img/img3.jpg)
 
 ---
 
