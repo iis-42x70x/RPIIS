@@ -10,7 +10,7 @@
 
 ## Первая задача
 
-![IMG_1](images/img1.png)
+![IMG_1](sem2/practice/images/img1.png)
 
 ### Её реализация в КВЕ
 
