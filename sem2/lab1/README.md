@@ -55,7 +55,7 @@
 ```
 ### Пример работы:
 
-![екриамсто](sem2/lab1/example_of_work.png)
+![екриамсто](https://github.com/iis-42x70x/RPIIS/blob/%D0%9A%D0%BE%D0%BB%D1%82%D1%83%D0%BD_%D0%90/sem2/lab1/example_of_work.png)
 
 ### Описание:
 - Корень всегда чёрный (`15` чёрный).
