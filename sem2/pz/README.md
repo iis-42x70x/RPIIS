@@ -2,7 +2,7 @@
 ---
 * Задание 1 (вариант 15)
 
-<img src="images/KBEscreenshot">
+<img src="images/task1.png">
 
 KBE:
 -------
