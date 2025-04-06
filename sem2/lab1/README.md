@@ -1,4 +1,3 @@
-![rgbrdyvrbtdb](https://github.com/iis-42x70x/RPIIS/blob/Koltun_A/sem2/lab1/example_of_work.png)
 # Красно-чёрное дерево (Red-Black Tree)
 
 ## 1. Цель
@@ -56,7 +55,7 @@
 ```
 ### Пример работы:
 
-![rgbrdyvrbtdb](https://github.com/iis-42x70x/RPIIS/blob/Koltun_A/sem2/lab1/example_of_work.png)
+![](https://github.com/iis-42x70x/RPIIS/blob/Koltun_A/sem2/lab1/example_of_work.png)
 
 ### Описание:
 - Корень всегда чёрный (`15` чёрный).
