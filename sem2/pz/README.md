@@ -7,7 +7,7 @@
 KBE:
 -------
 
-<img src="images/KBEscreenshot.png">
+<img src="images/KBE1.png">
 
 
 
