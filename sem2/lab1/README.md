@@ -54,9 +54,8 @@
           20 (Ч)
 ```
 ### Пример работы:
-```
 ![Push front/back](https://github.com/iis-42x70x/RPIIS/raw/Koltun_A/sem2/lab1/example_of_work.png)
-```
+
 ### Описание:
 - Корень всегда чёрный (`15` чёрный).
 - Красные узлы не идут подряд.
