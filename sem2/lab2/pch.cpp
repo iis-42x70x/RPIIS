@@ -93,7 +93,13 @@ void StringToElement(element& el, string s, int start, int end) {
     int count = 0;
     if (s[start] == '<') el.type = ORSET;
     else el.type = SET;
-    for (int i = start+1; i <= end-1; i++) {
+    if (end - start == 1) {
+        el.setik.resize(el.setik[count].setik.size() + 1);
+        el.setik[0].value = "";
+        el.setik[0].type = STRING;
+        return;
+    }
+    for (int i = start + 1; i <= end - 1; i++) {
         if (letter(s[i])) {
             val = "";
             while ((letter(s[i]) || digit(s[i]) || s[i] == '_') && i <= end - 1) {
@@ -108,20 +114,20 @@ void StringToElement(element& el, string s, int start, int end) {
         }
 
         else if (digit(s[i]) || s[i] == '-') {
-                val = "";
+            val = "";
             if (s[i] == '-') {
                 val += s[i];
                 i++;
             }
-                while (digit(s[i]) && i <= end - 1) {
-                    val += s[i];
-                    i++;
-                }
-                i--;
-                el.setik.resize(el.setik.size() + 1);
-                el.setik[count].value = val;
-                el.setik[count].type = STRING;
-                count++;
+            while (digit(s[i]) && i <= end - 1) {
+                val += s[i];
+                i++;
+            }
+            i--;
+            el.setik.resize(el.setik.size() + 1);
+            el.setik[count].value = val;
+            el.setik[count].type = STRING;
+            count++;
         }
 
         else if (s[i] == '{') {
@@ -133,13 +139,7 @@ void StringToElement(element& el, string s, int start, int end) {
                 k++;
             }
             el.setik.resize(el.setik.size() + 1);
-            if (k - i == 2) {
-                el.setik[count].type = SET;
-                el.setik[count].setik.resize(el.setik[count].setik.size() + 1);
-                el.setik[count].setik[0].value = "";
-                el.setik[count].setik[0].type = STRING;
-            }
-            else StringToElement(el.setik[count], s, i, k--);
+            StringToElement(el.setik[count], s, i, k--);
             count++;
             i = k--;
         }
@@ -154,13 +154,7 @@ void StringToElement(element& el, string s, int start, int end) {
                 k++;
             }
             el.setik.resize(el.setik.size() + 1);
-            if (k - i == 2) {
-                el.setik[count].type = ORSET;
-                el.setik[count].setik.resize(el.setik[count].setik.size() + 1);
-                el.setik[count].setik[0].value = "";
-                el.setik[count].setik[0].type = STRING;
-            }
-            else StringToElement(el.setik[count], s, i, k--);
+            StringToElement(el.setik[count], s, i, k--);
             count++;
             i = k--;
         }
