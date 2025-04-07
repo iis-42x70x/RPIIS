@@ -2,107 +2,285 @@
 
 ## Цели:
 * Выполнить свой вариант работы;
-* Реализовать решение варианта на высокоуровневом ЯП
+* Реализовать решение варианта на высокоуровневом ЯП(В моём случае C++)
 ## Вариант:
-Для выполнения работы был выдан вариант 4: разность множеств.
+Реализовать программу, формирующую множество равное разности двух исходных множеств (без учёта кратных вхождений элементов).
 ## Реализация:
-**Данная программа написана на Python.**
 
-Для начала нужно определить способ задания множества. Оно задавалось в виде {A, B, {C, <D, E>, F}} (пример).
+**Данная программа написана на C++.**
 
-Для начала был создан файл SETS.py, в котором был написан класс Diff, в котором были реализованы следующие функции для работы со множествами:
+Для начала нужно определить способ задания множества. Оно задавалось в виде {A, B, {C, <D, E>, F}}.
+
+В файле `Set.hpp` описаны функции для данных типа `Set`(множество). В файле `Tuple.hpp` - для типа `Tuple`. В файле `Difference.hpp` описана сама реализация нахождения разности 2-х множеств.
+
 ### 1. Нормализация множества
 Данная функция нормализует множество, приводя его в каноническую форму:
 ```
-def normalize_set(self, set_data):
-    if isinstance(set_data, (list, tuple)):
-        normalized_elements = sorted((self.normalize_set(e) for e in set_data), key=str)
-        return tuple(normalized_elements)
-    else:
-        return set_data
+Set <string> getSet(ifstream &file)
+{
+	Set <string> s;
+	string Str;
+	getline(file, Str);
+
+	if (Str.front() != '{' || Str.back() != '}')
+	{
+		cout << "The set is invalid. Please, fix the file.\n";
+		exit(EXIT_FAILURE);
+	}
+	Str.erase(Str.begin());
+	Str.pop_back();
+
+	if( Str.size() == 0)
+		return s;
+
+	for(int i = 0; i<Str.size();){
+		if(Str[i] == ' ')
+			Str.erase(i,1);
+		else	
+			i++;
+	}
+	for(int i = 0; i<Str.size(); i++){
+		if(Str[i] == ',')
+			Str[i] = ' ';
+	}
+	for(int i=0; i<Str.size()-1; i++){
+		if(Str[i] != ' ' && Str[i+1] != ' '){
+			Str.insert(i+1, " ");
+		}
+	}
+
+	if (!bracketsAreCorrect(Str)) {
+		cout << "The set is invalid. Please, fix the file.\n";
+		exit(EXIT_FAILURE);
+	}
+
+	for (int i = 0; i < Str.size(); i++) {
+		if (!isalpha(Str[i]) && !isdigit(Str[i]) &&
+			Str[i] != ' ' && Str[i] != ',' &&
+		    Str[i] != '}' && Str[i] != '{' &&
+		    Str[i] != '<' && Str[i] != '>')
+		{
+			cout << "The set is invalid. Please, fix the file.\n";
+			exit(EXIT_FAILURE);
+		}
+	}
+
+	s = getSetByString(Str, 0);
+	
+	return s;
+}
 ```
 ### 2. Нахождение разности
 Данная функция, по сути, делает почти всю работу программы:
 ```
-def find_difference_ruchkami(self, set_a, set_b):
-    normalized_a = self.normalize_set(set_a)
-    normalized_b = self.normalize_set(set_b)
-
-    difference = []
-    for i in normalized_a:
-        if i not in normalized_b:
-            difference.append(i)
-    return difference
+template<typename T>
+Set<T> Difference(Set<T> a, Set<T> b)
+{
+	Set<T> s;
+	
+    for(size_t i = 0; i < a.getsize(); i++){
+        bool foundInB = false;
+        for(size_t j = 0; j < b.getsize(); j++){
+            if(a.elements[i] == b.elements[j]){
+                foundInB = true;
+                break;
+            }
+        }
+        if(!foundInB)
+            s.add(a.elements[i]);
+    }
+	
+	return s;
+}
 
 ```
 ### 3. Функция для правильной обработки множества
-Данная функция очень важна при считывании сложных множеств типа {a, {b, {c}}} или {{{{{}}}}}. Инициализируется счетчик вложенности множества и список для хранения элементов в правильном порядке:
+Данная рекурсивная функция считывает множество из строки и сохраняет его в структуру типа `Set`. 
 ```
-    def parse_tuple(self, tuple_str):
-        tuple_str = tuple_str.strip()
-        if not tuple_str.startswith('<') or not tuple_str.endswith('>'):
-            raise ValueError(f"Invalid tuple format: '{tuple_str}'")
-
-        tuple_str = tuple_str[1:-1].strip()
-        elements = tuple_str.split(',')
-        if len(elements) != 2:
-            raise ValueError(f"Invalid tuple format: '{tuple_str}' (must have exactly 2 elements)")
-
-        parsed_elements = []
-        for element in elements:
-            element = element.strip()
-            parsed_elements.append(self.parse_element(element))
-
-        return tuple(parsed_elements)
+Set<string> getSetByString(string &setStr, size_t beginIdx)
+{
+	Set<string> s;
+	string currentValue;
+	for (size_t i = beginIdx; i < setStr.size(); i++)
+	{
+		if (setStr[i] == ' ')
+		{
+			if (currentValue == "{")
+			{
+				s.add(getSetByString(setStr, i + 1));
+				setStr.erase(i - 1, findClosestClosingBrace(setStr, i) - i + 3);
+				i -= 2;
+			}
+			else if (currentValue == "}")
+			{
+				return s;
+			}
+			else if (currentValue == "<")
+			{	
+				s.add(getTupleByString(setStr, i + 1));
+				setStr.erase(i - 1, findClosestClosingAngleBracket(setStr, i) - i + 3);
+				i -= 2;
+			}
+			else
+			{
+				if (!currentValue.empty()) {
+					s.add(currentValue);
+				}
+			}
+			currentValue.clear();
+		}
+		else
+		{
+			currentValue.push_back(setStr[i]);
+		}
+	}
+	
+	if (currentValue == "}")
+	{
+		return s;
+	}
+	if (!currentValue.empty())
+	{
+		s.add(currentValue);
+	}
+	
+	return s;
+}
 ```
-Примечание: функция, описанная выше, используется для обработки непосредственно кортежа из 2 элементов, для множеств функцию можно найти в основном коде.
+Реализована аналогичная функция для считывания ориентированных множеств.
 
-## Unit-тесты
+## Тесты
 
-Для данной программы были написаны 19 тестов, которые были реализованы в файле **teests.py** и импортированы из библиотки ***unittest***. Ниже приведены некоторые тесты из данной программы:
-### 1. Тест для проверки дубликатов:
+### 1:
+
+Входные данные:
 ```
-def test_parse_set_with_duplicates(self):
-    set_str = "{A, B, B, C}"
-    with self.assertRaises(ValueError) as context:
-        self.diff.parse_set(set_str)
-    self.assertTrue("Duplicate elements found in the set" in str(context.exception))
+{ < 1 , 2, { 4 , 3 } >,5 }
+{ 5,< 1,2 { 3,4 } > }
 ```
-### 2. Тест для правильного чтения множества с кортежами из файла:
-``` 
-def test_read_from_file_with_tuples(self):
-    with open("test_input.txt", "w") as file:
-        file.write("{A, <B, C>, D}\n")
-        file.write("{<B, C>, D, E}\n")
-
-    set_a, set_b = self.diff.read_from_file("test_input.txt")
-    self.assertEqual(set_a, ["A", ("B", "C"), "D"])
-    self.assertEqual(set_b, [("B", "C"), "D", "E"])
+Результат программы:
 ```
-### 3. Тест для проверки на корректность скобок:
-```
-def test_read_from_file_invalid_format_missing_brace(self):
-    with open("test_input.txt", "w") as file:
-        file.write("{A, B, C\n")  # Пропущена закрывающая скобка
-        file.write("{C, D, E, F}\n")
-
-    with self.assertRaises(ValueError) as context:
-        self.diff.read_from_file("test_input.txt")
-    self.assertTrue("Invalid set format: missing '{' or '}'" in str(context.exception))
-
-    os.remove("test_input.txt")
+Inputed sets:
+{ < 1, 2, { 4, 3 } >, 5 }
+{ 5, < 1, 2, { 3, 4 } > }
+Difference:
+{  }
 ```
 
-При успешном выполнении всех тестов мы увидим следующее сообщение:
+### 2:
 
+Входные данные:
 ```
-...................
-----------------------------------------------------------------------
-Ran 19 tests in 0.013s
+{}
+{}
+```
+Результат программы:
+```
+Inputed sets:
+{  }
+{  }
+Difference:
+{  }
+```
 
-OK
+### 3:
+
+Входные данные:
 ```
+{ <a, b  }
+{<>}
+```
+Результат программы:
+```
+The set is invalid. Please, fix the file.
+```
+
+### 4:
+
+Входные данные:
+```
+{ < <a, b>, c>, d }
+{ < <a,b >, c> }
+```
+Результат программы:
+```
+Inputed sets:
+{ < < a, b >, c >, d }
+{ < < a, b >, c > }
+Difference:
+{ d }
+```
+
+### 5:
+
+Входные данные:
+```
+{a, <e, {b, c}, d> }
+{<d, {b,c}, e>}
+```
+Результат программы:
+```
+Inputed sets:
+{ a, < e, { b, c }, d > }
+{ < d, { b, c }, e > }
+Difference:
+{ a, < e, { b, c }, d > }
+```
+
+### 6:
+
+Входные данные:
+```
+{{{a}}}
+{{{b}}}
+```
+Результат программы:
+```
+Inputed sets:
+{ { { a } } }
+{ { { b } } }
+Difference:
+{ { { a } } }
+```
+
+
+### 7:
+
+Входные данные:
+```
+{{<a,b>}}
+{{<a,b>}}
+```
+Результат программы:
+```
+Inputed sets:
+{ { < a, b > } }
+{ { < a, b > } }
+Difference:
+{  }
+```
+
+### 8:
+
+Входные данные:
+```
+{{<a,b>}}
+{{<b,a>}}
+```
+Результат программы:
+```
+Inputed sets:
+{ { < a, b > } }
+{ { < b, a > } }
+Difference:
+{ { < a, b > } }
+```
+
+Все тесты выполнены верно, программа выполняет свои функции.
 
 ## Вывод
-В ходе данной лабораторной работы была реализована библиотека для работы со множествами и находжения разности между ними и перенесена на ЯП Python. 
+В ходе данной лабораторной работы:
+- Была реализована библиотека для работы с множествами
+- Функции библиотеки позволяют находить разность двух множеств (без учёта кратных вхождений элементов).
+- Алгоритм перенесён на ЯП С++. 
 
