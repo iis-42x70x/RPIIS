@@ -1,0 +1,447 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/hp/ontologies/2025/3/untitled-ontology-2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/hp/ontologies/2025/3/untitled-ontology-2">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/Rdv8lTlH4wulqT6RazBsaO"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#вид_заражения"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#деревня"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#интервал_времени"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#мера_воздействия"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#мероприятие"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#место"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#площадь"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#промежуток_времени"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#река"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#сторона_света"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#страна"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#трагедия"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://webprotege.stanford.edu/R86ZqPqju1Nc6KqF36RT681"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://webprotege.stanford.edu/RCMU05gZoVqYDEyU8fmpslr"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://webprotege.stanford.edu/RCNz7tEP6TjVydDE95qgBKN"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://webprotege.stanford.edu/RDC4OTpoGZx2mPPB9qeL6xi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://webprotege.stanford.edu/RDLtspOXCia08McSYk7m2A4"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#включение"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#иметь"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#масштаб"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#направление"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#по_состоянию_на"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#расположение"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#расположенный_в"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#с_какого_года_проводится"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#частота"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#часть_поражённой_территории"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#что_произошло"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RBDLLV2Q0decnHDMAP3JYNm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RyBWngLk0Jsj3TyJJ98g0D"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Беларусь"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Западная_Березина"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Марафон_Налибоки"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Минская_возвышенность"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Налибоки"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Налибокская_пуща"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Нёман"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ошмянская_возвышенность"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Уса"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#авария_на_ЧАЭС"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#восток"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ежегодно"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#заражение"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#лесной_массив"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#название"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#несколько_деревень"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#правые_притоки"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#радиоактивное"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#район_г._Иванец"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#север"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#статус_С_правом_на_отселение"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#частично"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2009_год"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2013_год"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#96_тыс._га"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#страна"/>
+        <NamedIndividual IRI="#Беларусь"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#река"/>
+        <NamedIndividual IRI="#Западная_Березина"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#мероприятие"/>
+        <NamedIndividual IRI="#Марафон_Налибоки"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#деревня"/>
+        <NamedIndividual IRI="#Налибоки"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#река"/>
+        <NamedIndividual IRI="#Нёман"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#река"/>
+        <NamedIndividual IRI="#Уса"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#трагедия"/>
+        <NamedIndividual IRI="#авария_на_ЧАЭС"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#сторона_света"/>
+        <NamedIndividual IRI="#восток"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#интервал_времени"/>
+        <NamedIndividual IRI="#ежегодно"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Rdv8lTlH4wulqT6RazBsaO"/>
+        <NamedIndividual IRI="#заражение"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#вид_заражения"/>
+        <NamedIndividual IRI="#радиоактивное"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#место"/>
+        <NamedIndividual IRI="#район_г._Иванец"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#сторона_света"/>
+        <NamedIndividual IRI="#север"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#мера_воздействия"/>
+        <NamedIndividual IRI="#частично"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#промежуток_времени"/>
+        <NamedIndividual IRI="#2009_год"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#промежуток_времени"/>
+        <NamedIndividual IRI="#2013_год"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#площадь"/>
+        <NamedIndividual IRI="#96_тыс._га"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://webprotege.stanford.edu/RCNz7tEP6TjVydDE95qgBKN"/>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RBDLLV2Q0decnHDMAP3JYNm"/>
+        <NamedIndividual IRI="#заражение"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#включение"/>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RyBWngLk0Jsj3TyJJ98g0D"/>
+        <NamedIndividual IRI="#Западная_Березина"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#включение"/>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RyBWngLk0Jsj3TyJJ98g0D"/>
+        <NamedIndividual IRI="#Уса"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#включение"/>
+        <NamedIndividual IRI="#Западная_Березина"/>
+        <NamedIndividual IRI="#правые_притоки"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#с_какого_года_проводится"/>
+        <NamedIndividual IRI="#Марафон_Налибоки"/>
+        <NamedIndividual IRI="#2009_год"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#частота"/>
+        <NamedIndividual IRI="#Марафон_Налибоки"/>
+        <NamedIndividual IRI="#ежегодно"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#направление"/>
+        <NamedIndividual IRI="#Минская_возвышенность"/>
+        <NamedIndividual IRI="#восток"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#расположенный_в"/>
+        <NamedIndividual IRI="#Налибоки"/>
+        <NamedIndividual IRI="#Налибокская_пуща"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#включение"/>
+        <NamedIndividual IRI="#Налибокская_пуща"/>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RBDLLV2Q0decnHDMAP3JYNm"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#включение"/>
+        <NamedIndividual IRI="#Налибокская_пуща"/>
+        <NamedIndividual IRI="#Марафон_Налибоки"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#включение"/>
+        <NamedIndividual IRI="#Налибокская_пуща"/>
+        <NamedIndividual IRI="#лесной_массив"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#включение"/>
+        <NamedIndividual IRI="#Налибокская_пуща"/>
+        <NamedIndividual IRI="#название"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#включение"/>
+        <NamedIndividual IRI="#Налибокская_пуща"/>
+        <NamedIndividual IRI="#несколько_деревень"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#включение"/>
+        <NamedIndividual IRI="#Налибокская_пуща"/>
+        <NamedIndividual IRI="#96_тыс._га"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#направление"/>
+        <NamedIndividual IRI="#Ошмянская_возвышенность"/>
+        <NamedIndividual IRI="#север"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#включение"/>
+        <NamedIndividual IRI="#Уса"/>
+        <NamedIndividual IRI="#правые_притоки"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#часть_поражённой_территории"/>
+        <NamedIndividual IRI="#авария_на_ЧАЭС"/>
+        <NamedIndividual IRI="#район_г._Иванец"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://webprotege.stanford.edu/RDLtspOXCia08McSYk7m2A4"/>
+        <NamedIndividual IRI="#заражение"/>
+        <NamedIndividual IRI="#авария_на_ЧАЭС"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#включение"/>
+        <NamedIndividual IRI="#заражение"/>
+        <NamedIndividual IRI="#радиоактивное"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#масштаб"/>
+        <NamedIndividual IRI="#заражение"/>
+        <NamedIndividual IRI="#частично"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://webprotege.stanford.edu/RCMU05gZoVqYDEyU8fmpslr"/>
+        <NamedIndividual IRI="#лесной_массив"/>
+        <NamedIndividual IRI="#Минская_возвышенность"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://webprotege.stanford.edu/RDC4OTpoGZx2mPPB9qeL6xi"/>
+        <NamedIndividual IRI="#лесной_массив"/>
+        <NamedIndividual IRI="#Ошмянская_возвышенность"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#расположение"/>
+        <NamedIndividual IRI="#лесной_массив"/>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RyBWngLk0Jsj3TyJJ98g0D"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#расположение"/>
+        <NamedIndividual IRI="#лесной_массив"/>
+        <NamedIndividual IRI="#Беларусь"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://webprotege.stanford.edu/R86ZqPqju1Nc6KqF36RT681"/>
+        <NamedIndividual IRI="#название"/>
+        <NamedIndividual IRI="#Налибоки"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#иметь"/>
+        <NamedIndividual IRI="#несколько_деревень"/>
+        <NamedIndividual IRI="#статус_С_правом_на_отселение"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#включение"/>
+        <NamedIndividual IRI="#правые_притоки"/>
+        <NamedIndividual IRI="#Нёман"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#по_состоянию_на"/>
+        <NamedIndividual IRI="#статус_С_правом_на_отселение"/>
+        <NamedIndividual IRI="#2013_год"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://webprotege.stanford.edu/RCMU05gZoVqYDEyU8fmpslr"/>
+        <ObjectProperty IRI="#расположение"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://webprotege.stanford.edu/RDC4OTpoGZx2mPPB9qeL6xi"/>
+        <ObjectProperty IRI="#расположение"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://webprotege.stanford.edu/RDLtspOXCia08McSYk7m2A4"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R86ZqPqju1Nc6KqF36RT681</IRI>
+        <Literal>происхождение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RBDLLV2Q0decnHDMAP3JYNm</IRI>
+        <Literal>территория</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RCMU05gZoVqYDEyU8fmpslr</IRI>
+        <Literal>от</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RCNz7tEP6TjVydDE95qgBKN</IRI>
+        <Literal>подверглась</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RDC4OTpoGZx2mPPB9qeL6xi</IRI>
+        <Literal>до</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RDLtspOXCia08McSYk7m2A4</IRI>
+        <Literal>в следствии чего</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/Rdv8lTlH4wulqT6RazBsaO</IRI>
+        <Literal>вид воздействия</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RyBWngLk0Jsj3TyJJ98g0D</IRI>
+        <Literal>бассейны</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi -->
+
