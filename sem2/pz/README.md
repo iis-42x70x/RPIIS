@@ -85,7 +85,7 @@ Protege:
 
 * Задание 2 (вариант 6)
 
-<img src="images/task2.png">
+<img src="images/2task.png">
 
 KBE:
 -------
