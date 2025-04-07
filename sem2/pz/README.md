@@ -20,11 +20,11 @@ Protege:
 
 Описание отношений, связывающих между собой экземпляры классов:
 
-<img src="images/svazi.png">
+<img src="images/sviazi.png">
 
 Экземпляры классов:
 
-<img src="images/KBEscreen.png">
+<img src="images/individuals.png">
 
 Связывание экземпляров классов с отношениями и классами:
 
