@@ -81,3 +81,14 @@ Protege:
 <img src="images/objzap.png">
 
 <img src="images/objzaraj.png">
+
+
+* Задание 2 (вариант 6)
+
+<img src="images/task2.png">
+
+KBE:
+-------
+
+<img src="images/KBE2.png">
+
