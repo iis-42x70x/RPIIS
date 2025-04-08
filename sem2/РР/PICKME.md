@@ -18,3 +18,31 @@
 **Граф конденсации** —  ориентированный граф, в котором каждая компнента сильной связности сжаты до одной вершины.
 
 ![м](https://github.com/user-attachments/assets/af2e94be-46b9-4c44-bc0c-0cb6e4958ab2)
+
+### Тестовые примеры:
+Примечание: Слева — входные данные, справа — выходные
+#### Тест 1
+
+![image](https://github.com/user-attachments/assets/d04d5766-a98e-4e55-b124-9c14cbb2879b)
+
+#### Тест 2
+
+![image](https://github.com/user-attachments/assets/3cbdbdca-c214-49b3-a0a9-187ca7894b29)
+
+#### Тест 3
+
+![3](https://github.com/user-attachments/assets/a5f18c8b-5a8b-4b2d-beda-be618ef66bd5)
+
+#### Тест 4
+
+![4](https://github.com/user-attachments/assets/8a197a2f-4b46-4355-a355-947a6b59dcc2)
+
+
+
+
+
+
+
+
+
+
