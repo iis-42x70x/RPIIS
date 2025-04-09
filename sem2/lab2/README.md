@@ -28,16 +28,15 @@
 ## **Описание используемых алгоритмов:**
 1. **Обеспечение наличия файла входных данных (`ensure_input_file`)**
  
-  1.1 Через условный оператор реализуется ввод множест
+  1.1 Проверяется существование файла input.txt. Если файл отсутствует, он создаётся с данными по умолчанию.
   
-```cpp
+```py
 
-  if (sets_count < 100) {
-                std::cout << "Введите множество номер " << sets_count + 1 << "\n";
-                std::getline(std::cin, sets[sets_count]);
-                sets[sets_count] = removeSpaces(sets[sets_count]);
-                sets_count++;
-            }  
+  def ensure_input_file():
+    if not os.path.exists("input.txt"):
+        with open("input.txt", "w") as file:
+            file.write("A={1,2,3} B={2,3,4}\n")
+
 ```
 
 
