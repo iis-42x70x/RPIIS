@@ -111,7 +111,7 @@ vector<string> extractElements(const string& setString) {
 
 ```
 Ну и наконец, функцию с самим объединением множеств
-```С++
+```C++
 void unionSets(vector<string>& sets, string& initialResult) {
     if (sets.empty()) {
         cout << "Нет множеств для объединения" << endl;
