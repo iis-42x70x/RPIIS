@@ -19,7 +19,8 @@ private:
   int elementCount;
   vector<vector<int>> powerSet;
 
-  bool checkelement(const char* element);
+  bool parseInput(const char* input);
+  void extractElements(const char* input);
 public:
   boolean();
   bool readInputFromFile(const char* filename);

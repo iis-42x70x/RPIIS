@@ -69,7 +69,70 @@ bool boolean :: checkelement(const char* element){
   return true;
 }
 ```
-3. **Функция чтения из файла**
+3. **Функция для проверки содержания мнножества(проверка на { } и < >)**
+```cpp
+void boolean::extractElements(const char* input) {
+    char temp[max_length];
+    strncpy(temp, input, max_length - 1);
+    temp[max_length - 1] = '\0';
+
+    int braceLevel = 0;
+    int angleBracketLevel = 0;
+    int startPos = 0;
+    bool inElement = false;
+
+    for (int i = 0; temp[i] != '\0' && elementCount < max_element; i++) {
+        if (temp[i] == '{') {
+            braceLevel++;
+            if (braceLevel == 1 && angleBracketLevel == 0) {
+                startPos = i;
+                inElement = true;
+            }
+        }
+        else if (temp[i] == '}') {
+            braceLevel--;
+            if (braceLevel == 0 && angleBracketLevel == 0 && inElement) {
+                strncpy(inputSet[elementCount], temp + startPos, i - startPos + 1);
+                inputSet[elementCount][i - startPos + 1] = '\0';
+                elementCount++;
+                inElement = false;
+            }
+        }
+        else if (temp[i] == '<') {
+            angleBracketLevel++;
+            if (angleBracketLevel == 1 && braceLevel == 0) {
+                startPos = i;
+                inElement = true;
+            }
+        }
+        else if (temp[i] == '>') {
+            angleBracketLevel--;
+            if (angleBracketLevel == 0 && braceLevel == 0 && inElement) {
+                strncpy(inputSet[elementCount], temp + startPos, i - startPos + 1);
+                inputSet[elementCount][i - startPos + 1] = '\0';
+                elementCount++;
+                inElement = false;
+            }
+        }
+        else if (temp[i] == ',' && braceLevel == 0 && angleBracketLevel == 0) {
+            continue;
+        }
+        else if (braceLevel == 0 && angleBracketLevel == 0 && !inElement && temp[i] != ' ') {
+            startPos = i;
+            while (temp[i] != '\0' && temp[i] != ',' && temp[i] != ' ' &&
+                   temp[i] != '{' && temp[i] != '<') {
+                i++;
+            }
+            strncpy(inputSet[elementCount], temp + startPos, i - startPos);
+            inputSet[elementCount][i - startPos] = '\0';
+            elementCount++;
+            if (temp[i] == '\0') break;
+            i--; // компенсируем инкремент в цикле for
+        }
+    }
+}
+```
+4. **Функция чтения из файла**
 ```cpp
 bool boolean :: readInputFromFile(const char* filename){
   ifstream inputFile(filename); // Используем ifstream для чтения однобайтовых символов.
@@ -93,7 +156,7 @@ bool boolean :: readInputFromFile(const char* filename){
   return true;
 }
 ```
-4. **Генерация булеана**
+5. **Генерация булеана**
 ```cpp
 void boolean :: generateBoolean(){
   powerSet.clear();
@@ -119,7 +182,7 @@ void boolean :: generateBoolean(){
 можно взять **n = 3** тогда то количество множеств в булеане будет равно 2^3 = 8. После мы перебираем все возможные биты
 i = 0 - 7(000,001,...,111). И исходя их этого будет выводиться множество всех подмножеств, то есть булеан.
 
-5.**Функция для вывода результата(в консоль)**
+6. **Функция для вывода результата(в консоль)**
 ```cpp
 void boolean :: printResult() const{
   cout << "ELEM " << elementCount << endl; // Количество элементов
@@ -134,7 +197,7 @@ void boolean :: printResult() const{
   }
 }
 ```
-6. **Функция для записи в файл**
+7. **Функция для записи в файл**
 ```cpp
 bool boolean :: writeOutputFile(const char* filename) const{
   ofstream outputFile(filename); // ofstream используется для записи данных в файл
@@ -182,7 +245,7 @@ int main() {
 ## Примеры работы программы:
 1. Нужно задать множество в ***input.txt***
 
-![img_1.png](img_1.png)
+
 
 2. После в консоли вы сможете увидеть результат выполнения вашего кода:
 
