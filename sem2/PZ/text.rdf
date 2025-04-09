@@ -1,0 +1,374 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5/"
+     xml:base="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-5="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#быть_особенностью -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#быть_особенностью">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#акцент"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#брейк"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#размер"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#темп"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#направление_современной_музыки"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#включать_в_свой_состав -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#включать_в_свой_состав">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#направление_современной_музыки"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#музыкальный_инструмент"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#имеет_происхождение_из -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#имеет_происхождение_из">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#направление_современной_музыки"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#страна"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#период_возникновения -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#период_возникновения">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#направление_современной_музыки"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#Временной_период"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#период_распространения -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#период_распространения">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#направление_современной_музыки"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#Временной_период"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#признан_королем -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#признан_королем">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#Временной_период -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#Временной_период"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#автор_песен -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#автор_песен"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#акцент -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#акцент">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#музыкальные_особенности"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#брейк -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#брейк">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#музыкальные_особенности"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#музыкальные_особенности -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#музыкальные_особенности"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#музыкальный_инструмент -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#музыкальный_инструмент"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#направление_музыки -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#направление_музыки"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#направление_современной_музыки -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#направление_современной_музыки">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#направление_музыки"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#певец -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#певец"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#размер -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#размер">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#музыкальные_особенности"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#рисунок_баса -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#рисунок_баса">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#музыкальные_особенности"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#страна -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#страна"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#темп -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#темп">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#музыкальные_особенности"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#Боб_Марли -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#Боб_Марли">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#автор_песен"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#певец"/>
+        <untitled-ontology-5:признан_королем rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#регги"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#Ямайка -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#Ямайка">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#страна"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#агрессивный_темп -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#агрессивный_темп">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#темп"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#агрессивный_темп"/>
+        <owl:assertionProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#быть_особенностью"/>
+        <owl:targetIndividual rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#регги"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#аккомпанемент_на_2-й_доле -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#аккомпанемент_на_2-й_доле">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#акцент"/>
+        <untitled-ontology-5:быть_особенностью rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#регги"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#аккомпанемент_на_4-й_доле -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#аккомпанемент_на_4-й_доле">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#акцент"/>
+        <untitled-ontology-5:быть_особенностью rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#регги"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#бас-гитара -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#бас-гитара">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#музыкальный_инструмент"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#брейк_на_высоких_тонах -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#брейк_на_высоких_тонах">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#брейк"/>
+        <untitled-ontology-5:быть_особенностью rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#регги"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#быстрый_темп -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#быстрый_темп">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#темп"/>
+        <untitled-ontology-5:быть_особенностью rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#регги"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#духовые -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#духовые">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#музыкальный_инструмент"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#конец_1960-х -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#конец_1960-х">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#Временной_период"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#начало_1970-х -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#начало_1970-х">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#Временной_период"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#регги -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#регги">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#направление_современной_музыки"/>
+        <untitled-ontology-5:включать_в_свой_состав rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#бас-гитара"/>
+        <untitled-ontology-5:включать_в_свой_состав rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#духовые"/>
+        <untitled-ontology-5:включать_в_свой_состав rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#ударные"/>
+        <untitled-ontology-5:включать_в_свой_состав rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#электрогитара"/>
+        <untitled-ontology-5:включать_в_свой_состав rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#электроорган"/>
+        <untitled-ontology-5:имеет_происхождение_из rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#Ямайка"/>
+        <untitled-ontology-5:период_возникновения rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#конец_1960-х"/>
+        <untitled-ontology-5:период_распространения rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#начало_1970-х"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#синкопированный_рисунок_баса -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#синкопированный_рисунок_баса">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#рисунок_баса"/>
+        <untitled-ontology-5:быть_особенностью rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#регги"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#тимбалес -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#тимбалес">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#музыкальные_особенности"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#музыкальный_инструмент"/>
+        <untitled-ontology-5:быть_особенностью rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#регги"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#ударные -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#ударные">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#музыкальный_инструмент"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#умеренный_темп -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#умеренный_темп">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#темп"/>
+        <untitled-ontology-5:быть_особенностью rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#регги"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#электрогитара -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#электрогитара">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#музыкальный_инструмент"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#электроорган -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#электроорган">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#музыкальный_инструмент"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#4/4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#4/4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#размер"/>
+        <untitled-ontology-5:быть_особенностью rdf:resource="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-5#регги"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
