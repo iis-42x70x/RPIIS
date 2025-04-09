@@ -1,0 +1,225 @@
+📚# Лабораторная работа №2. Множества
+❓## Цель работы
+- Научиться работать с множествами.
+- Научиться разрабатывать алгоритм выполнения операции объединения произвольного количества амножеств с учетом кратности вхождиения элементов.
+#️⃣## Задачи
+- Разработать алгоритм одной из операций над множествами.
+- Разработать систему тестов, которые продемонстрировали бы работоспособность реализованного алгоритма.
+## Вариант
+Мой вариант – вариант 10 [методички](https://drive.google.com/drive/folders/1_xy849HXgTDetxSMlFd0KikTBo8-xalN). Нужно реализовать алгоритм вычисления декртова произведения N множеств.
+📋## Список используемых при решении задачи понятий
+- Множество – одно из ключевых понятий математики, представляющее собой набор, совокупность объектов любой природы.
+- Элементы множества – объекты, составляющие множество.
+- Объект принадлежит множеству тогда и только тогда, когда он является его элементом.
+- Говорят, что если объект принадлежит множеству, то существует вхождение этого элемента в множество. Допускается неограниченное количество вхождений
+одного объекта в какое-либо множество.
+- Множеством с кратными вхождениями элементов называют множество _S_ тогда и только тогда, когда существует _x_ такой, что истинно _S|x|_ > 1.
+
+## Реализация
+Создадим два файла, один для декларации и второй для реализации.
+Создадим необходимый заголовчный файл:
+```С++
+#ifndef SETSOPERATIONS_H
+#define SETSOPERATIONS_H
+
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <map>
+using namespace std;
+
+
+void displaySets(vector<string> sets);
+void readFile(vector<string>& sets, ifstream& inputFile);
+vector<string> extractElements(const string& setString);
+void unionSets(vector<string>& sets, string& initialResult);
+
+#endif
+```
+Для начала нужно организовать чтение из файла. Делать это будем построчно с закидыванием каждой строки(множества) в созданный вектор
+```C++
+#include "SetOperations.h"
+
+void displaySets(vector<string> sets) {
+    if (sets.empty()) {
+        cout << "Нет загруженных множеств" << endl;
+        return;
+    }
+    
+    for (size_t i = 0; i < sets.size(); i++) {
+        cout << "Множество " << i + 1 << " :" << endl;
+        cout << "{" << sets[i] << "}" << endl;
+    }
+    cout << "Всего множеств: " << sets.size() << endl;
+    cout << "----------------------" << endl;
+}
+
+void readFile(vector<string>& sets, ifstream& inputFile) {
+    if (!inputFile.is_open()) {
+        return;
+    }
+    
+    string line;
+    while (getline(inputFile, line)) {
+        if (!line.empty()) {
+            sets.push_back(line);
+        }
+    }
+    inputFile.close();
+}
+```
+Теперь создадим функцию, чтобы найти все самостоятельные элементы в множестве. Чтобы программа различала и подмножества, и кортежи, добавим соответствующие счетчики и необходимую логику реализации
+```C++
+vector<string> extractElements(const string& setString) {
+    vector<string> elements;
+    string currentElement;
+    int braceDepth = 0;
+    int angleDepth = 0; 
+
+    for (char c : setString) {
+        if (c == '{' || c == '<') {
+            if (c == '{') braceDepth++;
+            if (c == '<') angleDepth++;
+            currentElement += c;
+        }
+        else if (c == '}' || c == '>') {
+            if (c == '}') braceDepth--;
+            if (c == '>') angleDepth--;
+            currentElement += c;
+            if (braceDepth < 0 || angleDepth < 0) {
+                cerr << "Ошибка: неверная вложенность скобок" << endl;
+                return elements;
+            }
+        }
+        else if (c == ' ' && braceDepth == 0 && angleDepth == 0) {
+            if (!currentElement.empty()) {
+                elements.push_back(currentElement);
+                currentElement.clear();
+            }
+        }
+        else {
+            currentElement += c;
+        }
+    }
+    if (!currentElement.empty()) {
+        elements.push_back(currentElement);
+    }
+    return elements;
+}
+
+```
+Ну и наконец, функцию с самим объединением множеств
+```С++
+void unionSets(vector<string>& sets, string& initialResult) {
+    if (sets.empty()) {
+        cout << "Нет множеств для объединения" << endl;
+        initialResult = "{}";
+        return;
+    }
+
+    map<string, int> elementMultiplicity;
+
+    for (const string& set : sets) {
+        vector<string> elements = extractElements(set);
+        map<string, int> currentSetMultiplicity;
+        for (const string& element : elements) {
+            currentSetMultiplicity[element]++;
+        }
+        
+        for (const auto& pair : currentSetMultiplicity) {
+            if (elementMultiplicity[pair.first] < pair.second) {
+                elementMultiplicity[pair.first] = pair.second;
+            }
+        }
+    }
+
+    string finalResult;
+    bool firstElement = true;
+    
+    for (const auto& pair : elementMultiplicity) {
+        string element = pair.first;
+        int count = pair.second;
+        
+        for (int i = 0; i < count; i++) {
+            if (!firstElement) {
+                finalResult += " ";
+            }
+            finalResult += element;
+            firstElement = false;
+        }
+    }
+
+    cout << "Результат объединения (" << sets.size() << " множеств):" << endl;
+    cout << "{" << finalResult << "}" << endl;
+    initialResult = "{" + finalResult + "}";
+}
+
+```
+Часть программы, с которой пользователь будет работать через консоль
+```C++
+#ifndef CARTESIAN_PRODUCT_H
+#define CARTESIAN_PRODUCT_H
+
+#include "set_element.h"
+#include <vector>
+
+std::vector<std::vector<SetElement>> cartesianProduct(const std::vector<std::vector<SetElement>>& sets);
+
+#endif
+```
+#Пример работы
+Важно! множества не обрамляются фигурными или иными скобками, так как функция для парсинга воспринимает множесво как подмножество.
+Данные в текстовом файле:
+```txt
+1, 2, {a, b}
+7, 8
+```
+Вывод программы:
+```txt
+(1,7)
+(1,8)
+(2,7)
+(2,8)
+({a,b},7)
+({a,b},8)
+```
+Еще один пример. Данные в текстовом файле:
+```txt
+1, 2, {a, b}
+7, 8
+1,2,3,{{},{1,3}}
+```
+Вывод программы:
+```txt
+(1,7,1)
+(1,7,2)
+(1,7,3)
+(1,7,{{},{1,3}})
+(1,8,1)
+(1,8,2)
+(1,8,3)
+(1,8,{{},{1,3}})
+(2,7,1)
+(2,7,2)
+(2,7,3)
+(2,7,{{},{1,3}})
+(2,8,1)
+(2,8,2)
+(2,8,3)
+(2,8,{{},{1,3}})
+({a,b},7,1)
+({a,b},7,2)
+({a,b},7,3)
+({a,b},7,{{},{1,3}})
+({a,b},8,1)
+({a,b},8,2)
+({a,b},8,3)
+({a,b},8,{{},{1,3}})
+```
+Все тесты были успешно пройдены:
+![Тесты пройдены](googletests/tests.png)
+## Вывод
+В ходе данной лабораторной работы я:
+- Научился работать с множествами
+- Научиться разрабатывать алгоритмы выполнения операций над множествами.
