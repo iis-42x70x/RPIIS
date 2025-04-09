@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/bito4ek/ontologies/2025/3/untitled-ontology-2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/bito4ek/ontologies/2025/3/untitled-ontology-2">
+    <Prefix name="" IRI="http://www.semanticweb.org/bito4ek/ontologies/2025/3/untitled-ontology-2/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Города"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Измерения"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Притоки"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Регион"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Река"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Страна"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Имеет_приток"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Левый_приток"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Протекает_по_границе"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Протекает_по_территории"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Река_в_регионе"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Длина_реки"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Длинна_по_Белоруси"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Длинна_судоходного_участка_реки"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Площадь_водосборного_бассейна"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Белорусь"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Беседь"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ветка"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Вихра"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Гомель"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Днепр"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Европа"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ипуть"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Кричев"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Остёр"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Проня"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Россия"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Славгород"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Сож"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Украина"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Чериков"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Чечерск"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#Реки_вниз_по_течению"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#Страна"/>
+        <NamedIndividual IRI="#Белорусь"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Притоки"/>
+        <NamedIndividual IRI="#Беседь"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Города"/>
+        <NamedIndividual IRI="#Ветка"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Притоки"/>
+        <NamedIndividual IRI="#Вихра"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Города"/>
+        <NamedIndividual IRI="#Гомель"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Река"/>
+        <NamedIndividual IRI="#Днепр"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Регион"/>
+        <NamedIndividual IRI="#Европа"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Притоки"/>
+        <NamedIndividual IRI="#Ипуть"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Города"/>
+        <NamedIndividual IRI="#Кричев"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Притоки"/>
+        <NamedIndividual IRI="#Остёр"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Притоки"/>
+        <NamedIndividual IRI="#Проня"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Страна"/>
+        <NamedIndividual IRI="#Россия"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Города"/>
+        <NamedIndividual IRI="#Славгород"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Река"/>
+        <NamedIndividual IRI="#Сож"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Страна"/>
+        <NamedIndividual IRI="#Украина"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Города"/>
+        <NamedIndividual IRI="#Чериков"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Города"/>
+        <NamedIndividual IRI="#Чечерск"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Левый_приток"/>
+        <NamedIndividual IRI="#Сож"/>
+        <NamedIndividual IRI="#Днепр"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Протекает_по_границе"/>
+        <NamedIndividual IRI="#Сож"/>
+        <NamedIndividual IRI="#Украина"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Протекает_по_территории"/>
+        <NamedIndividual IRI="#Сож"/>
+        <NamedIndividual IRI="#Белорусь"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Протекает_по_территории"/>
+        <NamedIndividual IRI="#Сож"/>
+        <NamedIndividual IRI="#Россия"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Река_в_регионе"/>
+        <NamedIndividual IRI="#Сож"/>
+        <NamedIndividual IRI="#Европа"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Длина_реки"/>
+        <NamedIndividual IRI="#Сож"/>
+        <Literal>648 км</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Длинна_по_Белоруси"/>
+        <NamedIndividual IRI="#Сож"/>
+        <Literal>493 по Беларуси</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Длинна_судоходного_участка_реки"/>
+        <NamedIndividual IRI="#Сож"/>
+        <Literal>373 км</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Площадь_водосборного_бассейна"/>
+        <NamedIndividual IRI="#Сож"/>
+        <Literal>42 100 км^2</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Левый_приток"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Имеет_приток"/>
+        <Class IRI="#Река"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Левый_приток"/>
+        <Class IRI="#Река"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Протекает_по_границе"/>
+        <Class IRI="#Река"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Протекает_по_территории"/>
+        <Class IRI="#Река"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Река_в_регионе"/>
+        <Class IRI="#Река"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Имеет_приток"/>
+        <Class IRI="#Притоки"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Левый_приток"/>
+        <Class IRI="#Река"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Протекает_по_границе"/>
+        <Class IRI="#Страна"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Протекает_по_территории"/>
+        <Class IRI="#Страна"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Река_в_регионе"/>
+        <Class IRI="#Регион"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Длинна_по_Белоруси"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Длинна_судоходного_участка_реки"/>
+        <DataProperty IRI="#Длинна_судоходного_участка_реки"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Длина_реки"/>
+        <Class IRI="#Река"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Длинна_по_Белоруси"/>
+        <Class IRI="#Река"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Длинна_судоходного_участка_реки"/>
+        <Class IRI="#Река"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Площадь_водосборного_бассейна"/>
+        <Class IRI="#Река"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Длина_реки"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Длинна_по_Белоруси"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Длинна_судоходного_участка_реки"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Площадь_водосборного_бассейна"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Реки_вниз_по_течению"/>
+        <IRI>#Ветка</IRI>
+        <Literal>5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Реки_вниз_по_течению"/>
+        <IRI>#Гомель</IRI>
+        <Literal>6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Реки_вниз_по_течению"/>
+        <IRI>#Кричев</IRI>
+        <Literal>1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Реки_вниз_по_течению"/>
+        <IRI>#Реки_вниз_по_течению</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Реки_вниз_по_течению"/>
+        <IRI>#Славгород</IRI>
+        <Literal>3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Реки_вниз_по_течению"/>
+        <IRI>#Чериков</IRI>
+        <Literal>2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Реки_вниз_по_течению"/>
+        <IRI>#Чечерск</IRI>
+        <Literal>4</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
