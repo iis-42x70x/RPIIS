@@ -1,181 +1,71 @@
 #include <iostream>
-#include <limits> 
+#include <vector>
+#include <climits> // для INT_MAX
 
 using namespace std;
 
-int main()
-{
-    int k, l, min, o, n, i, j;
-    min=0;
-    k = 5;
-    l = k;
-    int* counter = new int[k];
-    int mas[5][5] = { { 0, 1, 1, 1, 0}, // матрица смежности
-                      { 1, 0, 1, 1, 0},
-                      { 1, 1, 0, 0, 1},
-                      { 1, 1, 0, 0, 1},
-                      { 0, 0, 1, 1, 0},
+// Функция для нахождения минимальной степени ребра
+int findMinEdgeDegree(const vector<vector<int>>& incidenceMatrix) {
+    
+    int numVertices = incidenceMatrix.size();
+    if (numVertices == 0) return -1; //Если нет вершин (пустая матрица)
+    
+    int numEdges = incidenceMatrix[0].size();
+    if (numEdges == 0) return -1; // Если нет рёбер (0 столбцов в матрице)
+
+    // 1. найдём степени всех вершин
+    vector<int> vertexDegrees(numVertices, 0); //вектор для хранения степеней вершин
+    for (int i = 0; i < numVertices; ++i) { //Проходим по всем элементам матрицы
+        for (int j = 0; j < numEdges; ++j) { //Для каждой вершины (строки) подсчитываем количество рёбер (столбцов со значением 1)
+            if (incidenceMatrix[i][j] == 1) {
+                vertexDegrees[i]++;
+            }
+        }
+    }
+
+    // 2. для каждого ребра найдём его степень
+    int minEdgeDegree = INT_MAX;
+    for (int j = 0; j < numEdges; ++j) {
+        // Находим две вершины, соединённые ребром j
+        int u = -1, v = -1;
+        for (int i = 0; i < numVertices; ++i) {
+            if (incidenceMatrix[i][j] == 1) {
+                if (u == -1) {
+                    u = i;
+                } else {
+                    v = i;
+                    break; // в неориентированном графе ребро соединяет ровно 2 вершины
+                }
+            }
+        }
+
+        if (u == -1 || v == -1) {
+            continue; // петля или некорректное ребро (пропускаем)
+        }
+
+        // Степень ребра = deg(u) + deg(v) - 2
+        int edgeDegree = vertexDegrees[u] + vertexDegrees[v] - 2;
+        if (edgeDegree < minEdgeDegree) {
+            minEdgeDegree = edgeDegree;
+        }
+    }
+
+    /*Если граф не содержал рёбер (все проверки не сработали), возвращаем -1. 
+    Иначе - найденную минимальную степень.*/
+    return (minEdgeDegree == INT_MAX) ? -1 : minEdgeDegree;
+}
+
+int main() {
+    // Пример матрицы инцидентности (4 вершины, 5 рёбер)
+    vector<vector<int>> incidenceMatrix = {
+        {1, 1, 0, 0, 0}, // Вершина 0 инцидентна рёбрам 0 и 1
+        {1, 0, 1, 1, 0}, // Вершина 1 инцидентна рёбрам 0, 2 и 3
+        {0, 1, 1, 0, 1}, // Вершина 2 инцидентна рёбрам 1, 2 и 4
+        {0, 0, 0, 1, 1}  // Вершина 3 инцидентна рёбрам 3 и 4
     };
 
-    cout << "Выберите матрицу: \n 1 - моя заданная матрица смежности \n 2 - задать матрицу смежности самому" << endl;
-    cin >> o;
+    int minEdgeDegree = findMinEdgeDegree(incidenceMatrix);
+    cout << "Минимальная степень ребра: " << minEdgeDegree << endl;
 
-    switch(o)
-    {
-        // 1 - заданная матрица
-        case 1: { 
-            for (int i = 0; i < 5; i++)
-            {
-                counter[i] = 0;
-                for (int j = 0; j < 5; j++)
-                {
-                    if (mas[i][j]) 
-                    {
-                        if (i == j)
-                        {
-                            counter[i] += 2; // Для самосоединений
-                        } 
-                        else 
-                        {
-                            counter[i] += 1; // Для обычных рёбер
-                        }
-                    }
-                }
-            }
-
-            min = counter[0];
-
-            for (int i = 1; i < 5; i++)
-            {
-                if (counter[i] < min)
-                    min = counter[i];
-
-            }
-
-            // Расчёт суммы степеней двух соединённых вершин
-            int sumOfDegrees = 0;
-            int minSum = INT_MAX; // Переменная для хранения минимальной суммы
-            int minVertex1 = -1, minVertex2 = -1; // Для хранения вершин с минимальной суммой
-            for (int i = 0; i < 5; i++)
-            {
-                for (int j = i + 1; j < 5; j++) // j начинается с i + 1, чтобы избежать дублирования
-                {
-                    if (mas[i][j] == 1) // Если существует ребро между вершинами i и j
-                    {
-                        sumOfDegrees = counter[i] + counter[j];
-
-                        // Проверка на минимальную сумму
-                        if (sumOfDegrees < minSum)
-                        {
-                            minSum = sumOfDegrees;
-                            minVertex1 = i;
-                            minVertex2 = j;
-                        }
-                    }
-                }
-            }
-
-            // Выводим минимальную сумму
-            if (minVertex1 != -1 && minVertex2 != -1)   
-            {
-                cout << "Минимальная степень ребра: " << minSum << endl;
-            } 
-            else 
-            {
-                cout << "Нет соединенных вершин." << endl;
-            }
-
-            delete[] counter;}
-            break;
-
-        // 2 - пользовательская матрица
-        case 2:{
-            cout << "Введите размерность матрицы (nxn): " << endl;
-            cin >> n;
-            cout << endl;
-            double** mas1;
-            mas1 = new double* [n];
-            for (i = 0; i < n; i++)
-                mas1[i] = new double[n];
-
-            cout << "вводите элементы массива построчно" << endl;
-            for (i = 0; i < n; i++)
-                for (j = 0; j < n; j++)
-                {
-                    cin >> mas1[i][j];
-                }
-
-            for (int i = 0; i < n; i++)
-            {
-                counter[i] = 0;
-                for (int j = 0; j < n; j++)
-                {
-                    if (mas[i][j]) 
-                    {
-                        if (mas[i][j])
-                        {
-                                if (i == j)
-                            {
-                                counter[i] += 2; // Для самосоединений
-                            }    
-                            else 
-                            {
-                                counter[i] += 1; // Для обычных рёбер
-                            }
-                        }
-                    }
-                }
-            }
-
-            
-            min = counter[0];
-
-            for (int i = 1; i < n; i++)
-            {
-                if (counter[i] < min)
-                    min = counter[i];
-
-            }
-
-            // Расчёт суммы степеней двух соединённых вершин
-            int sumOfDegrees = 0;
-            int minSum = INT_MAX; // Переменная для хранения минимальной суммы
-            int minVertex1 = -1, minVertex2 = -1; // Для хранения вершин с минимальной суммой
-            for (int i = 0; i < n; i++)
-            {
-                for (int j = i + 1; j < n; j++) // j начинается с i + 1, чтобы избежать дублирования
-                {
-                    if (mas1[i][j] == 1) // Если существует ребро между вершинами i и j
-                    {
-                        int sumOfDegrees = counter[i] + counter[j];
-
-                        // Проверка на минимальную сумму
-                        if (sumOfDegrees < minSum)
-                        {
-                            minSum = sumOfDegrees;
-                            minVertex1 = i;
-                            minVertex2 = j;
-                        }
-                    }
-                }
-            }
-
-            // Выводим минимальную сумму
-            if (minVertex1 != -1 && minVertex2 != -1)   
-            {
-                cout << "Минимальная степень ребра: " << minSum << endl;
-            } 
-            else 
-            {
-                cout << "Нет соединенных вершин." << endl;
-            }
-
-            delete[] counter;
-            for (i = 0; i < n; i++)
-            delete[] mas1[i];
-            delete[] mas1;
-            mas1 = NULL;}
-            break;
-        }
     return 0;
 }
