@@ -57,7 +57,6 @@ void Tree::search(int value) {
 	}
 	if (a == nullptr) {
 		cout << "\n\nThe element is missing!\n\n";
-		exit(EXIT_FAILURE);
 		return;
 	}
 	else cout << "\n\nYour element has been found: " << a->info << "\n\n";

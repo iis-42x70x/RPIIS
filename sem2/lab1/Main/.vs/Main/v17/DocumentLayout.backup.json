@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\555\\Desktop\\\u0443\u0447\u0451\u0431\u0430\\\u041F\u0438\u041E\u0418\u0432\u0418\u0421\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\laba1\\Main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD155850-DB51-4A8B-AFF6-57B0B39DEE8C}|Main\\Main.vcxproj|C:\\Users\\555\\Desktop\\\u0443\u0447\u0451\u0431\u0430\\\u041F\u0438\u041E\u0418\u0432\u0418\u0421\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\laba1\\Main\\Main\\Binary Tree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{DD155850-DB51-4A8B-AFF6-57B0B39DEE8C}|Main\\Main.vcxproj|solutionrelative:Main\\Binary Tree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DD155850-DB51-4A8B-AFF6-57B0B39DEE8C}|Main\\Main.vcxproj|C:\\Users\\555\\Desktop\\\u0443\u0447\u0451\u0431\u0430\\\u041F\u0438\u041E\u0418\u0432\u0418\u0421\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\laba1\\Main\\Main\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{DD155850-DB51-4A8B-AFF6-57B0B39DEE8C}|Main\\Main.vcxproj|solutionrelative:Main\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -15,12 +11,16 @@
       "RelativeMoniker": "D:0:0:{DD155850-DB51-4A8B-AFF6-57B0B39DEE8C}|Main\\Main.vcxproj|solutionrelative:Main\\Binary Tree.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD155850-DB51-4A8B-AFF6-57B0B39DEE8C}|Main\\Main.vcxproj|C:\\Users\\555\\Desktop\\\u0443\u0447\u0451\u0431\u0430\\\u041F\u0438\u041E\u0418\u0432\u0418\u0421\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\laba1\\Main\\Main\\Node.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{DD155850-DB51-4A8B-AFF6-57B0B39DEE8C}|Main\\Main.vcxproj|solutionrelative:Main\\Node.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{DD155850-DB51-4A8B-AFF6-57B0B39DEE8C}|Main\\Main.vcxproj|C:\\Users\\555\\Desktop\\\u0443\u0447\u0451\u0431\u0430\\\u041F\u0438\u041E\u0418\u0432\u0418\u0421\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\laba1\\Main\\Main\\Binary Tree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DD155850-DB51-4A8B-AFF6-57B0B39DEE8C}|Main\\Main.vcxproj|solutionrelative:Main\\Binary Tree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD155850-DB51-4A8B-AFF6-57B0B39DEE8C}|Main\\Main.vcxproj|C:\\Users\\555\\Desktop\\\u0443\u0447\u0451\u0431\u0430\\\u041F\u0438\u041E\u0418\u0432\u0418\u0421\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\laba1\\Main\\Main\\Node.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{DD155850-DB51-4A8B-AFF6-57B0B39DEE8C}|Main\\Main.vcxproj|solutionrelative:Main\\Node.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD155850-DB51-4A8B-AFF6-57B0B39DEE8C}|Main\\Main.vcxproj|C:\\Users\\555\\Desktop\\\u0443\u0447\u0451\u0431\u0430\\\u041F\u0438\u041E\u0418\u0432\u0418\u0421\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\laba1\\Main\\Main\\Node.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DD155850-DB51-4A8B-AFF6-57B0B39DEE8C}|Main\\Main.vcxproj|solutionrelative:Main\\Node.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,69 +30,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Node.cpp",
               "DocumentMoniker": "C:\\Users\\555\\Desktop\\\u0443\u0447\u0451\u0431\u0430\\\u041F\u0438\u041E\u0418\u0432\u0418\u0421\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\laba1\\Main\\Main\\Node.cpp",
               "RelativeDocumentMoniker": "Main\\Node.cpp",
               "ToolTip": "C:\\Users\\555\\Desktop\\\u0443\u0447\u0451\u0431\u0430\\\u041F\u0438\u041E\u0418\u0432\u0418\u0421\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\laba1\\Main\\Main\\Node.cpp",
               "RelativeToolTip": "Main\\Node.cpp",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAG8AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAGEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-07T12:56:54.69Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Node.h",
               "DocumentMoniker": "C:\\Users\\555\\Desktop\\\u0443\u0447\u0451\u0431\u0430\\\u041F\u0438\u041E\u0418\u0432\u0418\u0421\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\laba1\\Main\\Main\\Node.h",
               "RelativeDocumentMoniker": "Main\\Node.h",
               "ToolTip": "C:\\Users\\555\\Desktop\\\u0443\u0447\u0451\u0431\u0430\\\u041F\u0438\u041E\u0418\u0432\u0418\u0421\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\laba1\\Main\\Main\\Node.h",
               "RelativeToolTip": "Main\\Node.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-07T12:58:10.444Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Binary Tree.cpp",
               "DocumentMoniker": "C:\\Users\\555\\Desktop\\\u0443\u0447\u0451\u0431\u0430\\\u041F\u0438\u041E\u0418\u0432\u0418\u0421\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\laba1\\Main\\Main\\Binary Tree.cpp",
               "RelativeDocumentMoniker": "Main\\Binary Tree.cpp",
-              "ToolTip": "C:\\Users\\555\\Desktop\\\u0443\u0447\u0451\u0431\u0430\\\u041F\u0438\u041E\u0418\u0432\u0418\u0421\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\laba1\\Main\\Main\\Binary Tree.cpp*",
-              "RelativeToolTip": "Main\\Binary Tree.cpp*",
-              "ViewState": "AgIAADgAAAAAAAAAAAArwEcAAAAWAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\555\\Desktop\\\u0443\u0447\u0451\u0431\u0430\\\u041F\u0438\u041E\u0418\u0432\u0418\u0421\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\laba1\\Main\\Main\\Binary Tree.cpp",
+              "RelativeToolTip": "Main\\Binary Tree.cpp",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-07T12:53:36.003Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T12:53:36.003Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Binary Tree.h",
               "DocumentMoniker": "C:\\Users\\555\\Desktop\\\u0443\u0447\u0451\u0431\u0430\\\u041F\u0438\u041E\u0418\u0432\u0418\u0421\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\laba1\\Main\\Main\\Binary Tree.h",
               "RelativeDocumentMoniker": "Main\\Binary Tree.h",
               "ToolTip": "C:\\Users\\555\\Desktop\\\u0443\u0447\u0451\u0431\u0430\\\u041F\u0438\u041E\u0418\u0432\u0418\u0421\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\laba1\\Main\\Main\\Binary Tree.h",
               "RelativeToolTip": "Main\\Binary Tree.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-07T12:53:12.976Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T12:53:12.976Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Main.cpp",
               "DocumentMoniker": "C:\\Users\\555\\Desktop\\\u0443\u0447\u0451\u0431\u0430\\\u041F\u0438\u041E\u0418\u0432\u0418\u0421\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\laba1\\Main\\Main\\Main.cpp",
               "RelativeDocumentMoniker": "Main\\Main.cpp",
               "ToolTip": "C:\\Users\\555\\Desktop\\\u0443\u0447\u0451\u0431\u0430\\\u041F\u0438\u041E\u0418\u0432\u0418\u0421\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\laba1\\Main\\Main\\Main.cpp",
               "RelativeToolTip": "Main\\Main.cpp",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACUAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-07T12:49:33.159Z",
               "EditorCaption": ""

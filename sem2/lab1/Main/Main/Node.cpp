@@ -87,17 +87,15 @@ bool Node::Sort(Node* root, int value) {
 }
 
 Node* Node::Delete(Node* root) {
-	if (root = nullptr) {
+	if (root == nullptr) {
 		cout << "\n\nThe memory is clear!\n\n";
 		return nullptr;
 	}
-	else {
-		while (root != nullptr) {
-			Delete(root->left);
-			Delete(root->right);
-			delete root;
-		}
-	}
+
+	Delete(root->left); 
+	Delete(root->right);  
+	delete root;           
+
 	return nullptr;
 }
 
