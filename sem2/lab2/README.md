@@ -283,5 +283,5 @@ TEST(SetTest, CombinedReadSetsFromFile) {
 
 ## Материалы и источники:
 
-* [itmm.unn.ru](https://itmm.unn.ru/wp-content/uploads/sites/19/2020/04/DM-MM-uchebnik.pdf) - дискретная математика, теория множеств
+* [itmm.unn.ru](https://itmm.unn.ru/wp-content/uploads/sites/19/2020/04/DM-MM-uchebnik.pdf) - учебное пособие "Дискретная математика", В.Е. Алексеев.
 * [Draw.io](draw.io) - платформа для составление схем, блок-схем
