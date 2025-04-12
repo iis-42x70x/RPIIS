@@ -50,7 +50,7 @@ A \triangle B &= \{a, d, e, f\}
 ## Структура программы:
 
 <p align="center">
-   <img alt="Пример B-дерева" src="https://github.com/iis-42x70x/RPIIS/blob/Говор_Г/sem2/lab1/img/2.png">
+   <img alt="Структура" src="https://github.com/iis-42x70x/RPIIS/blob/Говор_Г/sem2/lab2/img/1.png">
 </p>
 
 ### Прилагаемые файлы:
