@@ -61,355 +61,225 @@ A \triangle B &= \{a, d, e, f\}
 ## Тесты:
 * Тест 1
   
-<p align="center">
-   <img width = "700px" alt="Пример B-дерева" src="https://github.com/iis-42x70x/RPIIS/blob/Говор_Г/sem2/lab1/img/4.1.png">
-</p>
+```
+// Тест 1: Создание пустого множества
+TEST(SetTest, EmptySet) {
+    Set s("empty", {});
+    EXPECT_TRUE(s.getElements().empty());
+    EXPECT_EQ(s.size(), 0);
+}
+```
 
 * Тест 2
   
-<p align="center">
-   <img width = "700px" alt="Пример B-дерева" src="https://github.com/iis-42x70x/RPIIS/blob/Говор_Г/sem2/lab1/img/4.2.png">
-</p>
+```
+// Тест 2: Добавление элементов
+TEST(SetTest, AddElements) {
+    Set s("test", {});
+    s.addElement("a");
+    s.addElement("b");
+    EXPECT_EQ(s.size(), 2);
+    EXPECT_TRUE(s.contains("a"));
+    EXPECT_TRUE(s.contains("b"));
+}
+```
 
 * Тест 3
   
-<p align="center">
-   <img width = "700px" alt="Пример B-дерева" src="https://github.com/iis-42x70x/RPIIS/blob/Говор_Г/sem2/lab1/img/4.3.png">
-</p>
+```
+// Тест 3: Проверка contains()
+TEST(SetTest, ContainsCheck) {
+    Set s("test", { "a", "b", "c" });
+    EXPECT_TRUE(s.contains("a"));
+    EXPECT_FALSE(s.contains("d"));
+}
+```
 
 * Тест 4
   
-<p align="center">
-   <img width = "700px" alt="Пример B-дерева" src="https://github.com/iis-42x70x/RPIIS/blob/Говор_Г/sem2/lab1/img/4.4.png">
-</p>
+```
+// Тест 4: Симметрическая разность пустых множеств
+TEST(SetTest, SymDiffEmptySets) {
+    vector<Set> sets;
+    Set result = Set::symmetricDifference(sets);
+    EXPECT_TRUE(result.getElements().empty());
+}
+```
 
 * Тест 5
   
-<p align="center">
-   <img width = "700px" alt="Пример B-дерева" src="https://github.com/iis-42x70x/RPIIS/blob/Говор_Г/sem2/lab1/img/4.5.png">
-</p>
+```
+// Тест 5: Симметрическая разность одного множества
+TEST(SetTest, SymDiffSingleSet) {
+    vector<Set> sets = { Set("A", {"a", "b"}) };
+    Set result = Set::symmetricDifference(sets);
+    EXPECT_EQ(result.size(), 2);
+    EXPECT_TRUE(result.contains("a"));
+    EXPECT_TRUE(result.contains("b"));
+}
+```
 
-## Алгоритмы работы с B-деревьями(BTree.cpp): 
-
-### Обход дерева
+* Тест 6
   
-```C++
-void BTreeNode::traverse() {
-    int i;
-    for (i = 0; i < n; i++) {
-        if (!leaf) children[i]->traverse();
-        std::cout << keys[i] << " ";
-    }
-    if (!leaf) children[i]->traverse();
-}
-
-void BTree::traverse() {
-    if (root) root->traverse();
+```
+// Тест 6: Симметрическая разность двух непересекающихся множеств
+TEST(SetTest, SymDiffDisjointSets) {
+    vector<Set> sets = { Set("A", {"a", "b"}), Set("B", {"c", "d"}) };
+    Set result = Set::symmetricDifference(sets);
+    EXPECT_EQ(result.size(), 4);
 }
 ```
 
-* Обходит узел в порядке in-order (сначала дети, затем ключи).
-* Рекурсивно вызывает traverse() для всех дочерних узлов.
-
-### Поиск ключа в дереве
+* Тест 7
   
-```C++
-BTreeNode* BTreeNode::search(int k) {
-    int i = 0;
-    while (i < n && k > keys[i]) i++;
-    if (keys[i] == k) return this;
-    if (leaf) return nullptr;
-    return children[i]->search(k);
+```
+// Тест 7: Симметрическая разность двух пересекающихся множеств
+TEST(SetTest, SymDiffOverlappingSets) {
+    vector<Set> sets = { Set("A", {"a", "b"}), Set("B", {"b", "c"}) };
+    Set result = Set::symmetricDifference(sets);
+    EXPECT_EQ(result.size(), 2);
+    EXPECT_TRUE(result.contains("a"));
+    EXPECT_TRUE(result.contains("c"));
 }
-
-BTreeNode* BTree::search(int k) {
-    return root ? root->search(k) : nullptr;
-}
-
 ```
 
-* Выполняет линейный поиск в массиве ключей текущего узла.
-* Если ключ найден в текущем узле — возвращает указатель на этот узел.
-* Если узел является листом и ключ не найден — возвращает nullptr.
-* Иначе рекурсивно ищет ключ в нужном дочернем узле.
-
-### Вставка ключа
+* Тест 8
   
-```C++
-bool BTree::insert(int k) {
-    if (BTree::search(k) != nullptr) {
-        return false;
-    }
-    if (!root) {
-        root = new BTreeNode(t, true);
-        root->keys[0] = k;
-        root->n = 1;
-    }
-    else {
-        if (root->n == 2 * t - 1) {
-            BTreeNode* s = new BTreeNode(t, false);
-            s->children[0] = root;
-            s->splitChild(0, root);
-            int i = (s->keys[0] < k) ? 1 : 0;
-            s->children[i]->insertNonFull(k);
-            root = s;
-        }
-        else {
-            root->insertNonFull(k);
-        }
-    }
+```
+// Тест 8: Симметрическая разность трёх множеств
+TEST(SetTest, SymDiffThreeSets) {
+    vector<Set> sets = { Set("A", {"a", "b"}), Set("B", {"b", "c"}), Set("C", {"c", "d"}) };
+    Set result = Set::symmetricDifference(sets);
+    EXPECT_EQ(result.size(), 2);
+    EXPECT_TRUE(result.contains("a"));
+    EXPECT_TRUE(result.contains("d"));
 }
 ```
 
-* Проверяет, существует ли ключ (search(k)).
-* Если дерево пустое, создаёт корень.
-* Если корень полон, создаёт новый узел, делает старый корнем его дочерним узлом и разбивает старый корень.
-* Вставляет ключ в неполный узел.
-
-### Вставка ключа, если нода заполнена не до конца(<2t-1)
-
-```C++
-void BTreeNode::insertNonFull(int k) {
-    int i = n - 1;
-    if (leaf) {
-        while (i >= 0 && keys[i] > k) {
-            keys[i + 1] = keys[i];
-            i--;
-        }
-        keys[i + 1] = k;
-        n++;
-    }
-    else {
-        while (i >= 0 && keys[i] > k) i--;
-        if (children[i + 1]->n == 2 * t - 1) {
-            splitChild(i + 1, children[i + 1]);
-            if (keys[i + 1] < k) i++;
-        }
-        children[i + 1]->insertNonFull(k);
-    }
-}
-```
-
-* Если узел лист, вставляет ключ в правильное место, сдвигая элементы вправо.
-* Если узел не лист, рекурсивно спускается в нужного потомка.
-* Если у потомка уже 2*t - 1 ключей, разбивает его перед вставкой.
-
-### Разбиение дочерних нод(Если это требуется)
+* Тест 9
   
-```C++
-void BTreeNode::splitChild(int i, BTreeNode* y) {
-    BTreeNode* z = new BTreeNode(y->t, y->leaf);
-    z->n = t - 1;
-    for (int j = 0; j < t - 1; j++) z->keys[j] = y->keys[j + t];
-    if (!y->leaf) {
-        for (int j = 0; j < t; j++) z->children[j] = y->children[j + t];
-    }
-    y->n = t - 1;
-    for (int j = n; j >= i + 1; j--) children[j + 1] = children[j];
-    children[i + 1] = z;
-    for (int j = n - 1; j >= i; j--) keys[j + 1] = keys[j];
-    keys[i] = y->keys[t - 1];
-    n++;
+```
+// Тест 9: Парсинг множества из строки
+TEST(SetTest, ParseSetFromString) {
+    string line = "A = {a, b, c}";
+    Set s = parseSet(line);
+    EXPECT_EQ(s.getName(), "A");
+    EXPECT_EQ(s.size(), 3);
 }
 ```
 
-* Разбивает узел y, у которого 2*t - 1 ключей.
-* Создаёт новый узел z и переносит в него вторую половину ключей из y.
-* Средний ключ перемещается в родительский узел.
-* Обновляет массив children[] у родителя.
-
-### Удаление ключа
-
-```C++
-void BTree::remove(int k) {
-    if (!root) return;
-    root->remove(k);
-    if (root->n == 0) {
-        BTreeNode* tmp = root;
-        root = root->leaf ? nullptr : root->children[0];
-        delete tmp;
-    }
-}
-
-void BTreeNode::remove(int k) {
-    int idx = findKey(k);
-    if (idx < n && keys[idx] == k) {
-        if (leaf) removeFromLeaf(idx);
-        else removeFromNonLeaf(idx);
-    }
-    else {
-        if (leaf) return;
-        bool lastChild = (idx == n);
-        if (children[idx]->n < t) fill(idx);
-        if (lastChild && idx > n) children[idx - 1]->remove(k);
-        else children[idx]->remove(k);
-    }
-}
-
-int BTreeNode::findKey(int k) {
-    int idx = 0;
-    while (idx < n && keys[idx] < k) ++idx;
-    return idx;
+* Тест 10
+  
+```
+// Тест 10: Парсинг множества с пробелами
+TEST(SetTest, ParseSetWithSpaces) {
+    string line = "B  =  {  x ,  y  , z }";
+    Set s = parseSet(line);
+    EXPECT_EQ(s.getName(), "B");
+    EXPECT_EQ(s.size(), 3);
 }
 ```
 
-* Ищет ключ в узле:
-* * Если ключ в листе → удаляет его (removeFromLeaf).
-* * Если ключ внутренний → заменяет его преемником (removeFromNonLeaf).
-* Если ключа нет, рекурсивно удаляет его из нужного дочернего узла.
-* Если у узла перед удалением меньше t ключей, выполняет балансировку (fill).
-
-### Удаление ключа из листа
-
-```C++
-void BTreeNode::removeFromLeaf(int idx) {
-    for (int i = idx + 1; i < n; i++) keys[i - 1] = keys[i];
-    n--;
+* Тест 11
+  
+```
+// Тест 11: Удаление пробелов
+TEST(SetTest, RemoveSpaces) {
+    string input = "   a  ,         b      ,              c    ";
+    string result = removeSpaces(input);
+    EXPECT_EQ(result, "a, b, c");
 }
 ```
 
-* Просто сдвигает ключи влево и уменьшает n
+* Тест 12
+  
+```
+// Тест 12: Чтение множеств из файла
+TEST(SetTest, ReadSetsFromFile) {
+    // Создаём временный файл для теста
+    ofstream tmp("test_sets.txt");
+    tmp << "A = {a, b}\nB = {b, c}\n";
+    tmp.close();
 
-### Удаление ключа не из листа
-
-```C++
-void BTreeNode::removeFromNonLeaf(int idx) {
-    int k = keys[idx];
-    if (children[idx]->n >= t) {
-        int pred = getPred(idx);
-        keys[idx] = pred;
-        children[idx]->remove(pred);
-    }
-    else if (children[idx + 1]->n >= t) {
-        int succ = getSucc(idx);
-        keys[idx] = succ;
-        children[idx + 1]->remove(succ);
-    }
-    else {
-        merge(idx);
-        children[idx]->remove(k);
-    }
+    vector<Set> sets = readSetsFromFile("test_sets.txt");
+    EXPECT_EQ(sets.size(), 2);
+    remove("test_sets.txt");
 }
 ```
 
-* Ключ заменяется предшественником или преемником:
-* * Если children[idx] содержит >= t ключей → заменяет предшественником.
-* * Иначе, если children[idx+1] содержит >= t ключей → заменяет преемником.
-* * Если оба узла имеют менее t ключей, объединяет их и удаляет ключ из объединённого узла.
+* Тест 13
+  
+```
+// Тест 13: Обработка пустого файла
+TEST(SetTest, ReadEmptyFile) {
+    ofstream tmp("empty.txt");
+    tmp.close();
 
-### Нахождение предшествующего ключа
-
-```C++
-int BTreeNode::getPred(int idx) {
-    BTreeNode* cur = children[idx];
-    while (!cur->leaf) cur = cur->children[cur->n];
-    return cur->keys[cur->n - 1];
+    vector<Set> sets = readSetsFromFile("empty.txt");
+    EXPECT_TRUE(sets.empty());
+    remove("empty.txt");
 }
 ```
 
-* Спускается вправо по левому поддереву, пока не дойдёт до листа.
-
-### Нахождение преемника ключа
-
-```C++
-int BTreeNode::getSucc(int idx) {
-    BTreeNode* cur = children[idx + 1];
-    while (!cur->leaf) cur = cur->children[0];
-    return cur->keys[0];
+* Тест 14
+  
+```
+// Тест 14: Обработка несуществующего файла
+TEST(SetTest, ReadNonexistentFile) {
+    vector<Set> sets = readSetsFromFile("nonexistent.txt");
+    EXPECT_TRUE(sets.empty());
 }
 ```
 
-* Спускается влево по правому поддереву, пока не дойдёт до листа.
-
-### Балансировка узла
-
-```C++
-void BTreeNode::fill(int idx) {
-    if (idx != 0 && children[idx - 1]->n >= t) borrowFromPrev(idx);
-    else if (idx != n && children[idx + 1]->n >= t) borrowFromNext(idx);
-    else {
-        if (idx != n) merge(idx);
-        else merge(idx - 1);
-    }
+* Тест 15
+  
+```
+// Тест 15: Множество с повторяющимися элементами
+TEST(SetTest, SetWithDuplicates) {
+    Set s("test", { "a", "a", "b" });
+    EXPECT_EQ(s.size(), 2); // Дубликаты должны быть удалены
 }
 ```
 
-* Если children[idx] имеет менее t ключей:
-* * Если children[idx-1] имеет >= t ключей → заимствует ключ из него (borrowFromPrev).
-* * Иначе, если children[idx+1] имеет >= t ключей → заимствует ключ (borrowFromNext).
-* * Если у обоих соседей менее t ключей → объединяет с соседом (merge).
-
-
-### Заимствование ключа у левого и правого соседов
-
-```C++
-void BTreeNode::borrowFromPrev(int idx) {
-    BTreeNode* child = children[idx];
-    BTreeNode* sibling = children[idx - 1];
-    for (int i = child->n - 1; i >= 0; i--) child->keys[i + 1] = child->keys[i];
-    if (!child->leaf) {
-        for (int i = child->n; i >= 0; i--) child->children[i + 1] = child->children[i];
-    }
-    child->keys[0] = keys[idx - 1];
-    if (!child->leaf) child->children[0] = sibling->children[sibling->n];
-    keys[idx - 1] = sibling->keys[sibling->n - 1];
-    child->n++;
-    sibling->n--;
-}
-
-void BTreeNode::borrowFromNext(int idx) {
-    BTreeNode* child = children[idx];
-    BTreeNode* sibling = children[idx + 1];
-    child->keys[child->n] = keys[idx];
-    keys[idx] = sibling->keys[0];
-    if (!child->leaf) {
-        child->children[child->n + 1] = sibling->children[0];
-    }
-    for (int i = 1; i < sibling->n; i++) {
-        sibling->keys[i - 1] = sibling->keys[i];
-    }
-    if (!sibling->leaf) {
-        for (int i = 1; i <= sibling->n; i++) {
-            sibling->children[i - 1] = sibling->children[i];
-        }
-    }
-    child->n++;
-    sibling->n--;
+* Тест 16
+  
+```
+// Тест 16: Симметрическая разность с пустым множеством
+TEST(SetTest, SymDiffWithEmptySet) {
+    vector<Set> sets = { Set("A", {"a", "b"}), Set("empty", {}) };
+    Set result = Set::symmetricDifference(sets);
+    EXPECT_EQ(result.size(), 2);
+    EXPECT_TRUE(result.contains("a"));
+    EXPECT_TRUE(result.contains("b"));
 }
 ```
 
-### Объединение с соседним узлом
-
-```C++
-void BTreeNode::merge(int idx) {
-    BTreeNode* child = children[idx];
-    BTreeNode* sibling = children[idx + 1];
-    child->keys[t - 1] = keys[idx];
-    for (int i = 0; i < sibling->n; i++) {
-        child->keys[i + t] = sibling->keys[i];
-    }
-    if (!child->leaf) {
-        for (int i = 0; i <= sibling->n; i++) {
-            child->children[i + t] = sibling->children[i];
-        }
-    }
-    for (int i = idx + 1; i < n; i++) {
-        keys[i - 1] = keys[i];
-    }
-    for (int i = idx + 2; i <= n; i++) {
-        children[i - 1] = children[i];
-    }
-    child->n += sibling->n + 1;
-    n--;
-    delete sibling;
+* Тест 17
+  
+```
+// Тест 17: Комбинированный тест симметрической разности из файла для 2 множеств
+TEST(SetTest, CombinedReadSetsFromFile) {
+    // Создаём временный файл для теста
+    ofstream tmp("test_sets.txt");
+    tmp << "A_551 = {       a, b     }\nB_xs1 = {                b,  c, voidaaaaa   }\n";
+    tmp.close();
+    vector<Set> sets = readSetsFromFile("test_sets.txt");
+    Set result = Set::symmetricDifference(sets);
+    EXPECT_EQ(sets.size(), 2);
+    EXPECT_TRUE(result.contains("a"));
+    EXPECT_TRUE(result.contains("c"));
+    EXPECT_TRUE(result.contains("voidaaaaa"));
+    EXPECT_FALSE(result.contains("b"));
+    remove("test_sets.txt");
 }
 ```
 
-* Объединяет children[idx] и children[idx+1], перемещая ключ из родителя вниз.
-* Удаляет children[idx+1] и уменьшает количество ключей в родителе.
+## Результат работы тестов: 
+
+<img src="https://github.com/iis-42x70x/RPIIS/tree/Говор_Г/sem2/lab2/img/2.jpg">
 
 ## Вывод:
-* Мной была разработана библиотека по работе с B-деревьями. В ней я реализовал основные операции над B-деревом: вставка ключа, удаление ключа, поиск ключа, обход дерева.
+* Мной была разработана библиотека по работе со множествами В ней я реализовал операцию симметрической разноти между несколькими множиствами.
 
 ## Материалы и источники:
 
