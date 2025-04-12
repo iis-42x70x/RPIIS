@@ -72,7 +72,7 @@ TEST(SetTest, EmptySet) {
 
 * Тест 2
   
-```С++
+```cpp
 // Тест 2: Добавление элементов
 TEST(SetTest, AddElements) {
     Set s("test", {});
@@ -86,7 +86,7 @@ TEST(SetTest, AddElements) {
 
 * Тест 3
   
-```С++
+```cpp
 // Тест 3: Проверка contains()
 TEST(SetTest, ContainsCheck) {
     Set s("test", { "a", "b", "c" });
@@ -97,7 +97,7 @@ TEST(SetTest, ContainsCheck) {
 
 * Тест 4
   
-```С++
+```cpp
 // Тест 4: Симметрическая разность пустых множеств
 TEST(SetTest, SymDiffEmptySets) {
     vector<Set> sets;
@@ -108,7 +108,7 @@ TEST(SetTest, SymDiffEmptySets) {
 
 * Тест 5
   
-```С++
+```cpp
 // Тест 5: Симметрическая разность одного множества
 TEST(SetTest, SymDiffSingleSet) {
     vector<Set> sets = { Set("A", {"a", "b"}) };
@@ -121,7 +121,7 @@ TEST(SetTest, SymDiffSingleSet) {
 
 * Тест 6
   
-```С++
+```cpp
 // Тест 6: Симметрическая разность двух непересекающихся множеств
 TEST(SetTest, SymDiffDisjointSets) {
     vector<Set> sets = { Set("A", {"a", "b"}), Set("B", {"c", "d"}) };
@@ -132,7 +132,7 @@ TEST(SetTest, SymDiffDisjointSets) {
 
 * Тест 7
   
-```С++
+```cpp
 // Тест 7: Симметрическая разность двух пересекающихся множеств
 TEST(SetTest, SymDiffOverlappingSets) {
     vector<Set> sets = { Set("A", {"a", "b"}), Set("B", {"b", "c"}) };
@@ -145,7 +145,7 @@ TEST(SetTest, SymDiffOverlappingSets) {
 
 * Тест 8
   
-```С++
+```cpp
 // Тест 8: Симметрическая разность трёх множеств
 TEST(SetTest, SymDiffThreeSets) {
     vector<Set> sets = { Set("A", {"a", "b"}), Set("B", {"b", "c"}), Set("C", {"c", "d"}) };
@@ -158,7 +158,7 @@ TEST(SetTest, SymDiffThreeSets) {
 
 * Тест 9
   
-```С++
+```cpp
 // Тест 9: Парсинг множества из строки
 TEST(SetTest, ParseSetFromString) {
     string line = "A = {a, b, c}";
@@ -170,7 +170,7 @@ TEST(SetTest, ParseSetFromString) {
 
 * Тест 10
   
-```С++
+```cpp
 // Тест 10: Парсинг множества с пробелами
 TEST(SetTest, ParseSetWithSpaces) {
     string line = "B  =  {  x ,  y  , z }";
@@ -182,7 +182,7 @@ TEST(SetTest, ParseSetWithSpaces) {
 
 * Тест 11
   
-```С++
+```cpp
 // Тест 11: Удаление пробелов
 TEST(SetTest, RemoveSpaces) {
     string input = "   a  ,         b      ,              c    ";
@@ -193,7 +193,7 @@ TEST(SetTest, RemoveSpaces) {
 
 * Тест 12
   
-```С++
+```cpp
 // Тест 12: Чтение множеств из файла
 TEST(SetTest, ReadSetsFromFile) {
     // Создаём временный файл для теста
@@ -209,7 +209,7 @@ TEST(SetTest, ReadSetsFromFile) {
 
 * Тест 13
   
-```С++
+```cpp
 // Тест 13: Обработка пустого файла
 TEST(SetTest, ReadEmptyFile) {
     ofstream tmp("empty.txt");
@@ -223,7 +223,7 @@ TEST(SetTest, ReadEmptyFile) {
 
 * Тест 14
   
-```С++
+```cpp
 // Тест 14: Обработка несуществующего файла
 TEST(SetTest, ReadNonexistentFile) {
     vector<Set> sets = readSetsFromFile("nonexistent.txt");
@@ -233,7 +233,7 @@ TEST(SetTest, ReadNonexistentFile) {
 
 * Тест 15
   
-```С++
+```cpp
 // Тест 15: Множество с повторяющимися элементами
 TEST(SetTest, SetWithDuplicates) {
     Set s("test", { "a", "a", "b" });
@@ -243,7 +243,7 @@ TEST(SetTest, SetWithDuplicates) {
 
 * Тест 16
   
-```С++
+```cpp
 // Тест 16: Симметрическая разность с пустым множеством
 TEST(SetTest, SymDiffWithEmptySet) {
     vector<Set> sets = { Set("A", {"a", "b"}), Set("empty", {}) };
@@ -256,7 +256,7 @@ TEST(SetTest, SymDiffWithEmptySet) {
 
 * Тест 17
   
-```С++
+```cpp
 // Тест 17: Комбинированный тест симметрической разности из файла для 2 множеств
 TEST(SetTest, CombinedReadSetsFromFile) {
     // Создаём временный файл для теста
