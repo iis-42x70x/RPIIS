@@ -54,9 +54,9 @@ A \triangle B &= \{a, d, e, f\}
 </p>
 
 ### Прилагаемые файлы:
-* [main.cpp](https://github.com/iis-42x70x/RPIIS/blob/Говор_Г/sem2/lab1/code/main.cpp) - тесты
-* [BTree.cpp](https://github.com/iis-42x70x/RPIIS/blob/Говор_Г/sem2/lab1/code/BTree.cpp) - реализация
-* [BTree.hpp](https://github.com/iis-42x70x/RPIIS/blob/Говор_Г/sem2/lab1/code/BTree.hpp) - декларация
+* [test.cpp](https://github.com/iis-42x70x/RPIIS/blob/Говор_Г/sem2/lab2/code/test.cpp) - тесты
+* [Sets.cpp](https://github.com/iis-42x70x/RPIIS/blob/Говор_Г/sem2/lab2/code/Sets.cpp) - реализация методов
+* [Sets.hpp](https://github.com/iis-42x70x/RPIIS/blob/Говор_Г/sem2/lab2/code/Sets.hpp) - header-файл
 
 ## Тесты:
 * Тест 1
