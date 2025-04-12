@@ -61,7 +61,7 @@ A \triangle B &= \{a, d, e, f\}
 ## Тесты:
 * Тест 1
   
-```С++
+```cpp
 // Тест 1: Создание пустого множества
 TEST(SetTest, EmptySet) {
     Set s("empty", {});
@@ -276,7 +276,7 @@ TEST(SetTest, CombinedReadSetsFromFile) {
 
 ## Результат работы тестов: 
 
-<img src="https://github.com/iis-42x70x/RPIIS/tree/Говор_Г/sem2/lab2/img/2.png">
+<img alt="result" src="https://github.com/iis-42x70x/RPIIS/blob/Говор_Г/sem2/lab2/img/2.png">
 
 ## Вывод:
 * Мной была разработана библиотека по работе со множествами В ней я реализовал операцию симметрической разноти между несколькими множиствами.
