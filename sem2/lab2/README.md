@@ -38,11 +38,6 @@ $$
 A \triangle B = (A \setminus B) \cup (B \setminus A)
 $$
 
-Или эквивалентно:
-$$
-A \triangle B = (A \cup B) \setminus (A \cap B)
-$$
-
 **Пример:**
 ```math
 \begin{aligned}
