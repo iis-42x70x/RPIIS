@@ -283,6 +283,5 @@ TEST(SetTest, CombinedReadSetsFromFile) {
 
 ## Материалы и источники:
 
-* [YouTube](https://www.youtube.com/watch?v=WXXetwePSRk) - подробное объяснение принципа работы с B-деревьями от Volodya Mozhenkov с помощью видиоматериалы
-* [Викиконспекты](https://neerc.ifmo.ru/wiki/index.php?title=B-дерево) - особенности реализации B-деревьев на C++
+* [itmm.unn.ru](https://itmm.unn.ru/wp-content/uploads/sites/19/2020/04/DM-MM-uchebnik.pdf) - дискретная математика, теория множеств
 * [Draw.io](draw.io) - платформа для составление схем, блок-схем
