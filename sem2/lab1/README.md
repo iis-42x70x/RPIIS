@@ -409,6 +409,6 @@ void BTreeNode::merge(int idx) {
 
 ## Материалы и источники:
 
-* [YouTube](https://www.youtube.com/watch?v=WXXetwePSRk) - подробное объяснение принципа работы с B-деревьями от Volodya Mozhenkov с помощью видиоматериалы
+* [YouTube](https://www.youtube.com/watch?v=WXXetwePSRk) - подробное объяснение принципа работы с B-деревьями от Volodya Mozhenkov
 * [Викиконспекты](https://neerc.ifmo.ru/wiki/index.php?title=B-дерево) - особенности реализации B-деревьев на C++
 * [Draw.io](draw.io) - платформа для составление схем, блок-схем
