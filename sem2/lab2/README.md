@@ -53,7 +53,7 @@ A \triangle B &= \{a, d, e, f\}
    <img alt="Структура" src="https://github.com/iis-42x70x/RPIIS/blob/Говор_Г/sem2/lab2/img/1.png">
 </p>
 
-##№ Прилагаемые файлы:
+### Прилагаемые файлы:
 * [test.cpp](https://github.com/iis-42x70x/RPIIS/blob/Говор_Г/sem2/lab2/code/test.cpp) - тесты
 * [Sets.cpp](https://github.com/iis-42x70x/RPIIS/blob/Говор_Г/sem2/lab2/code/Sets.cpp) - реализация методов
 * [Sets.hpp](https://github.com/iis-42x70x/RPIIS/blob/Говор_Г/sem2/lab2/code/Sets.hpp) - header-файл
