@@ -44,13 +44,23 @@
 2. Постройте транспонированный (обратный) граф, поменяв направление всех рёбер.
 3. Выполните поиск в глубину (DFS) на транспонированном графе, начиная с вершин в порядке, противоположном порядку выхода DFS их них.
 #### Демонстрация работы на тесте 5
+В качестве перменной _graph будет передан данный sc-узел
 
 ![Й](https://github.com/user-attachments/assets/41c43ffc-12ba-4422-b483-8c125a6567c5)
 
-В качестве перменной _graph будет передан данный sc-узел
+Далее начинаем обход с вершины 0:
 
+![Ц](https://github.com/user-attachments/assets/8cf94ae9-b84e-4857-a13b-c26c2ae497f7)
 
+И продолжаем посещать вершины до тех пор, пока это возможно:
 
+![У](https://github.com/user-attachments/assets/f489ecfb-7aff-4801-ab88-5a5f95a3bfac)
+
+![К](https://github.com/user-attachments/assets/b780626e-5ae7-4fd9-addc-ead725eb4572)
+
+![Е](https://github.com/user-attachments/assets/d80396b3-8428-4c12-8647-047d89b01aa1)
+
+![н](https://github.com/user-attachments/assets/0a83d74a-555e-4871-a0a2-a05f87d19c06)
 
 
 
