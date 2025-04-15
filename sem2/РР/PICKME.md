@@ -66,6 +66,20 @@
 
 ![а](https://github.com/user-attachments/assets/7e5fd59f-c08d-4d77-b1f3-567a64f73113)
 
+Возвращаемся в предыдущую вершину (в данном случае в вершину 2) и видим, что из неё тоже некуда идти. Отмечаем:
 
+![Б](https://github.com/user-attachments/assets/4c43cbc7-c971-456d-ad05-3c6f102d25b9)
+
+Таким образом, мы действуем по следующему алгоритму: если из этой вершины ещё возможно посетить какую-то другую, то посещаем ту вершину и отмеччаем её в _visited_vertex; если же нет, выходим из вершины, записывая её в _leaving_order:
+
+В итоге, получим следующий порядок:
+
+![в](https://github.com/user-attachments/assets/98e47637-60da-416f-b487-9f744639c546)
+
+![г](https://github.com/user-attachments/assets/1283a122-106f-47ea-9876-876ecfde0b49)
+
+![д](https://github.com/user-attachments/assets/8e797541-e3fd-49fa-ba45-7487f82cfd5a)
+
+![ж](https://github.com/user-attachments/assets/827be2f9-4ae1-4a75-9791-ec3658294dec)
 
 
