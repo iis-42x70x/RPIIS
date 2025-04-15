@@ -82,4 +82,9 @@
 
 ![ж](https://github.com/user-attachments/assets/827be2f9-4ae1-4a75-9791-ec3658294dec)
 
+В результате, переменная _leaving_order имеет вид: {3, 2, 1, 4, 0}. Это означает, что следующий обход мы начнём именно с этой вершины.
+
+Транспонируем граф и отметим вершину начала обхода:
+
+![tr](https://github.com/user-attachments/assets/d4cf5ea4-861f-43dd-a5f4-04fba2d54b42)
 
