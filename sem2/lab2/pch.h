@@ -1,3 +1,8 @@
+#pragma once
+#ifndef PCH_H
+#define PCH_H
+
+#include <iostream>
 #include <string>
 #include <vector>
 #include <fstream>
@@ -16,7 +21,7 @@ struct element {
 
 bool letter(char);
 bool digit(char);
-bool space (char);
+bool space(char);
 bool ElementCompare(const element, const element);
 element intersection(const element, const element);
 void ElementCout(const element);
