@@ -1,4 +1,4 @@
-﻿/**************************************************
+/**************************************************
 Название: Нахождение булеана
 Разработчик: Кравцова Вероника Кирилловна
 Дата: 07.04.2025
@@ -164,26 +164,27 @@ void print_element(const Element* element) {
     }
 }
 
-void generate_subsets(const Set* set, int index, bool* include) {
-    if (index == set->size) {
+/**
+ * Генерирует все подмножества множества с использованием битовой маски
+ * @param set Указатель на исходное множество
+ */
+void generate_subsets(const Set* set) {
+    unsigned int total_subsets = 1 << set->size; // 2^n подмножеств
+
+    for (unsigned int mask = 0; mask < total_subsets; mask++) {
         printf("{");
         bool first = true;
+
+        // Проверяем каждый бит маски
         for (int i = 0; i < set->size; i++) {
-            if (include[i]) {
+            if (mask & (1 << i)) {  // Если i-й бит установлен
                 if (!first) printf(", ");
                 print_element(&set->elements[i]);
                 first = false;
             }
         }
         printf("}\n");
-        return;
     }
-
-    include[index] = false;
-    generate_subsets(set, index + 1, include);
-
-    include[index] = true;
-    generate_subsets(set, index + 1, include);
 }
 
 void free_element(Element* element) {
@@ -238,8 +239,7 @@ int main() {
     }
     printf("}\n\nВсе подмножества:\n");
 
-    bool include[MAX_ELEMENTS] = { false };
-    generate_subsets(&set, 0, include);
+    generate_subsets(&set);
 
     for (int i = 0; i < set.size; i++) {
         free_element(&set.elements[i]);
