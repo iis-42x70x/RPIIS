@@ -26,21 +26,28 @@ int main()
         if (!SetUniqueCheck(temp)) {
             cout << "Обнаружена неуникальность во множестве " << i << endl;
             return -1;
-       }
+        }
         sets.push_back(temp);
         temp.setik.clear();
     }
 
     input.close();
-    
+
     if (sets.size() == 0) {
         cout << "Множества не прочитаны" << endl;
         return -1;
     }
 
     temp = sets[0];
-    for (int i = 1; i < sets.size(); i++) temp = intersection(temp, sets[i]);
+    for (int i = 1; i < sets.size(); i++) {
+        if (temp.type == sets[i].type) temp = intersection(temp, sets[i]);
+        else {
+            cout << "Пересечение ориентированного и неориентированного множеств!" << endl;
+            return -1;
+        }
+    }
     cout << "Пересечение введённых множеств: ";
-    ElementCout(temp);
+    if (temp.setik.empty()) cout << "пустое множество" << endl;
+    else ElementCout(temp);
     return 0;
 }
