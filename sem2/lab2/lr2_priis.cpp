@@ -7,8 +7,8 @@
 после чего составляет и выводит все подмножества
 считанного множества.
 **************************************************/
-#pragma warning(disable : 4996)
 
+#include "find_boolean.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -16,25 +16,57 @@
 #include <stdbool.h>
 #include <locale>
 
-#define MAX_ELEMENTS 32
-#define MAX_NAME_LEN 50
-#define MAX_FILENAME_LEN 256
-#define MAX_NESTING_LEVEL 5
+int main() {
+    setlocale(LC_ALL, "ru");
+    char filename[MAX_FILENAME_LEN];
+    FILE* input;
+    Set set;
+    bool flag;
+    do {
+        do {
+            flag = false;
+            printf("Введите имя файла с множеством: ");
+            if (!fgets(filename, sizeof(filename), stdin)) {
+                printf("Ошибка чтения имени файла\n");
+                flag = true;
+            }
+            filename[strcspn(filename, "\n")] = '\0';
 
-//объявление структуры для представления переменной
-typedef struct Element {
-    char name[MAX_NAME_LEN];
-    bool is_set;
-    struct Element* elements;
-    int element_count;
-} Element;
+            input = fopen(filename, "r");
+            if (!input) {
+                printf("Не удалось открыть файл '%s'\n", filename);
+                flag = true;
+            }
+        } while (flag);
 
-//объявление структуры для представления множества
-typedef struct {
-    char name[MAX_NAME_LEN];
-    Element elements[MAX_ELEMENTS];
-    int size;
-} Set;
+
+        flag = false;
+        if (!read_set(input, &set)) {
+            printf("Ошибка чтения множества. Проверьте формат файла.\n");
+            printf("Ожидаемый формат: имя_множества = {элемент1, элемент2, {вложенный1, вложенный2}}\n");
+            fclose(input);
+            flag = true;
+        }
+    } while (flag);
+        
+    
+    fclose(input);
+    printf("\nИсходное множество '%s':\n", set.name);
+    printf("{");
+    for (int i = 0; i < set.size; i++) {
+        if (i > 0) printf(", ");
+        print_element(&set.elements[i]);
+    }
+    printf("}\n\nВсе подмножества:\n");
+
+    generate_subsets(&set);
+
+    for (int i = 0; i < set.size; i++) {
+        free_element(&set.elements[i]);
+    }
+
+    return 0;
+}
 
 //функция пропуска пробелов. передвигает указатель
 //в файле, пока символ является пробелом. в качестве
@@ -149,7 +181,8 @@ bool read_set(FILE* file, Set* set) {
     return true;
 }
 
-//функция
+//функция вывода элемента. В качестве аргументов
+//получает указатель на структуру, где хранится элемент
 void print_element(const Element* element) {
     if (element->is_set) {
         printf("{");
@@ -166,7 +199,6 @@ void print_element(const Element* element) {
 
 /**
  * Генерирует все подмножества множества с использованием битовой маски
- * @param set Указатель на исходное множество
  */
 void generate_subsets(const Set* set) {
     unsigned int total_subsets = 1 << set->size; // 2^n подмножеств
@@ -175,9 +207,8 @@ void generate_subsets(const Set* set) {
         printf("{");
         bool first = true;
 
-        // Проверяем каждый бит маски
         for (int i = 0; i < set->size; i++) {
-            if (mask & (1 << i)) {  // Если i-й бит установлен
+            if (mask & (1 << i)) {
                 if (!first) printf(", ");
                 print_element(&set->elements[i]);
                 first = false;
@@ -187,6 +218,9 @@ void generate_subsets(const Set* set) {
     }
 }
 
+//функция очищения памяти, в качестве аргумента
+//получает указатель на структуру, где
+//хранится элемент множества
 void free_element(Element* element) {
     if (element->is_set) {
         for (int i = 0; i < element->element_count; i++) {
@@ -194,56 +228,4 @@ void free_element(Element* element) {
         }
         free(element->elements);
     }
-}
-
-int main() {
-    setlocale(LC_ALL, "ru");
-    char filename[MAX_FILENAME_LEN];
-    FILE* input;
-    Set set;
-    bool flag;
-    do {
-        do {
-            flag = false;
-            printf("Введите имя файла с множеством: ");
-            if (!fgets(filename, sizeof(filename), stdin)) {
-                printf("Ошибка чтения имени файла\n");
-                flag = true;
-            }
-            filename[strcspn(filename, "\n")] = '\0';
-
-            input = fopen(filename, "r");
-            if (!input) {
-                printf("Не удалось открыть файл '%s'\n", filename);
-                flag = true;
-            }
-        } while (flag);
-
-
-        flag = false;
-        if (!read_set(input, &set)) {
-            printf("Ошибка чтения множества. Проверьте формат файла.\n");
-            printf("Ожидаемый формат: имя_множества = {элемент1, элемент2, {вложенный1, вложенный2}}\n");
-            fclose(input);
-            flag = true;
-        }
-    } while (flag);
-        
-    
-    fclose(input);
-    printf("\nИсходное множество '%s':\n", set.name);
-    printf("{");
-    for (int i = 0; i < set.size; i++) {
-        if (i > 0) printf(", ");
-        print_element(&set.elements[i]);
-    }
-    printf("}\n\nВсе подмножества:\n");
-
-    generate_subsets(&set);
-
-    for (int i = 0; i < set.size; i++) {
-        free_element(&set.elements[i]);
-    }
-
-    return 0;
 }
