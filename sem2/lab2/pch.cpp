@@ -9,11 +9,11 @@ bool digit(char f) {
     return f >= '0' && f <= '9';
 }
 
-bool space (char ch) {
+bool space(char ch) {
     return ch == ' ' || ch == '\n' || ch == '\t' || ch == '\r';
 }
 
-bool ElementCompare(const element el1, const element el2){
+bool ElementCompare(const element el1, const element el2) {
     if (el1.type != el2.type) return false;
 
     if (el1.type == STRING) {
@@ -31,7 +31,7 @@ bool ElementCompare(const element el1, const element el2){
     else if (el1.type == SET) {
         if (el1.setik.size() != el2.setik.size()) return false;
         for (int i = 0; i < el1.setik.size(); i++) {
-        bool find = false;
+            bool find = false;
             for (int j = 0; j < el2.setik.size(); j++) {
                 if (ElementCompare(el1.setik[i], el2.setik[j])) {
                     find = true;
@@ -42,7 +42,7 @@ bool ElementCompare(const element el1, const element el2){
         }
     }
     return true;
-  }
+}
 
 element intersection(const element el1, const element el2) {
     element result;
@@ -60,8 +60,9 @@ element intersection(const element el1, const element el2) {
 
     else if (el1.type == ORSET && el2.type == ORSET) {
         result.type = ORSET;
-        for (int i = 0; i < (el1.setik.size() > el2.setik.size()) ? el2.setik.size() : el1.setik.size(); i++) {
-           if (ElementCompare (el1.setik[i], el2.setik[i]))result.setik.push_back(el1.setik[i]);
+        int size =( el1.setik.size() > el2.setik.size()) ? el2.setik.size() : el1.setik.size();
+        for (int i = 0; i < size; i++) {
+            if (ElementCompare(el1.setik[i], el2.setik[i]))result.setik.push_back(el1.setik[i]);
         }
     }
     return result;
@@ -74,7 +75,7 @@ void ElementCout(const element el) {
         for (int i = 0; i < el.setik.size(); i++) {
             ElementCout(el.setik[i]);
             if (i < el.setik.size() - 1) cout << ", ";
-        } 
+        }
         cout << "}";
     }
     else if (el.type == ORSET) {
@@ -82,7 +83,7 @@ void ElementCout(const element el) {
         for (int i = 0; i < el.setik.size(); i++) {
             ElementCout(el.setik[i]);
             if (i < el.setik.size() - 1) cout << ", ";
-        } 
+        }
         cout << ">";
     }
 }
@@ -94,7 +95,7 @@ void StringToElement(element& el, string s, int start, int end) {
     if (s[start] == '<') el.type = ORSET;
     else el.type = SET;
     if (end - start == 1) {
-        el.setik.resize(el.setik[count].setik.size() + 1);
+        el.setik.resize(el.setik.size() + 1);
         el.setik[0].value = "";
         el.setik[0].type = STRING;
         return;
@@ -186,20 +187,21 @@ bool StringCheck(string& str) {
     if (str.empty() || (str[0] != '{' && str[0] != '<')) return false;
     if ((str[0] == '{' && str[str.size() - 1] != '}') || (str[0] == '<' && str[str.size() - 1] != '>')) return false;
 
+
     for (int i = 0; i < str.size(); i++) {
         if (letter(str[i])) {
             i++;
             while ((letter(str[i]) || digit(str[i]) || str[i] == '_') && i < str.size()) i++;
-            int j= i;
+            int j = i;
             i--;
-            while (space(str[j]) && j<str.size()) j++;
+            while (space(str[j]) && j < str.size()) j++;
             if (j == str.size()) return false;
             else if (str[j] != '}' && str[j] != '>' && str[j] != ',') return false;
         }
         else if (space(str[i])) {
             for (int j = i + 1; j < str.size(); j++)str[j - 1] = str[j];
-        str.pop_back();
-        i--;
+            str.pop_back();
+            i--;
         }
     }
 
@@ -250,6 +252,8 @@ bool StringCheck(string& str) {
                 if (bra.empty() || bra.top() != '<') return false;
                 bra.pop();
             }
+
+            if (j > 0 && j < str.size() - 1 && bra.empty()) return false;
         }
     }
     if (!bra.empty()) return false;
