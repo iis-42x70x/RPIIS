@@ -21,5 +21,16 @@
 # Решение:
 ***
 1. Формализация текста:
-   - в [**Protégé**]()уау
+   - в [**Protégé**](https://github.com/iis-42x70x/RPIIS/blob/%D0%91%D0%B8%D0%B1%D0%BA%D0%BE_%D0%92/sem2/Formalization/Decision/Protege.owx)
+   - в [**KBE**](https://github.com/iis-42x70x/RPIIS/blob/%D0%91%D0%B8%D0%B1%D0%BA%D0%BE_%D0%92/sem2/Formalization/Decision/textpioivis.gwf)
+   ![img_3.png](img_3.png)
+2. Формализация математического выражения:
+   - в [**KBE**](https://github.com/iis-42x70x/RPIIS/blob/%D0%91%D0%B8%D0%B1%D0%BA%D0%BE_%D0%92/sem2/Formalization/Decision/pioivisKBE.gwf) 
+   ![img_4.png](img_4.png)
+
+# Вывод:
+***
+В ходе работы заданный текст был формализован при помощи стандартов консорциума W3C, используя редактор Protégé, а также
+при помощи стандартов технологии OSTIS, используя редактор KBE и язык SCg. Кроме того, при помощи тех же стандартов
+технологии OSTIS, используя редактор KBE и язык SCg, было формализовано математическое выражение.
 
