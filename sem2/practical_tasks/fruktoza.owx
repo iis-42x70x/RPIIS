@@ -1,0 +1,400 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-4"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-4">
+    <Prefix name="" IRI="http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-4/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Исследования"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Люди"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Химические_соединения"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#брожение_сахара"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#жидкости"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#катализаторы"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#конденсация"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#конденсация_формальдегида"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#сахар"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#смесь_сахаров"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#тростники"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#угол_вращения"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#быть_открытым_в_ходе"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#кем_была_открыта"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#кем_была_синтезирована"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#отличаться"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#принадлежность_угла_вращения"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#присутствовать_в_составе"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#присутствовать_в_ходе"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#проходить_в_присутствии_катализатора"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#способ_синтеза"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#являться_компонентом"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#дата_исследования"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#дата_синтеза"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BaOH2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CaOH2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Бутлеров"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Дюбрунфо"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#глюкоза"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#конденсация_муравьиного_альдегида"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#молочнокислое_брожение_сахара"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#сахар"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#сахарный_тростник"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#сахароза"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#спиртовое_брожение_сахара"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#угол_вращения_глюкозы"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#угол_вращения_сахара"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ферментационная_жидкость"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#формоза"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#фруктоза"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#брожение_сахара"/>
+        <Class IRI="#Исследования"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#конденсация"/>
+        <Class IRI="#Исследования"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#конденсация_формальдегида"/>
+        <Class IRI="#конденсация"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#угол_вращения"/>
+        <Class IRI="#Химические_соединения"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#катализаторы"/>
+        <NamedIndividual IRI="#BaOH2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#катализаторы"/>
+        <NamedIndividual IRI="#CaOH2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Люди"/>
+        <NamedIndividual IRI="#Бутлеров"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Люди"/>
+        <NamedIndividual IRI="#Дюбрунфо"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Химические_соединения"/>
+        <NamedIndividual IRI="#глюкоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#конденсация_формальдегида"/>
+        <NamedIndividual IRI="#конденсация_муравьиного_альдегида"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#брожение_сахара"/>
+        <NamedIndividual IRI="#молочнокислое_брожение_сахара"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#сахар"/>
+        <NamedIndividual IRI="#сахар"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#тростники"/>
+        <NamedIndividual IRI="#сахарный_тростник"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Химические_соединения"/>
+        <NamedIndividual IRI="#сахароза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#брожение_сахара"/>
+        <NamedIndividual IRI="#спиртовое_брожение_сахара"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#угол_вращения"/>
+        <NamedIndividual IRI="#угол_вращения_глюкозы"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#угол_вращения"/>
+        <NamedIndividual IRI="#угол_вращения_сахара"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#жидкости"/>
+        <NamedIndividual IRI="#ферментационная_жидкость"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#смесь_сахаров"/>
+        <NamedIndividual IRI="#формоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Химические_соединения"/>
+        <NamedIndividual IRI="#фруктоза"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#проходить_в_присутствии_катализатора"/>
+        <NamedIndividual IRI="#конденсация_муравьиного_альдегида"/>
+        <NamedIndividual IRI="#BaOH2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#присутствовать_в_составе"/>
+        <NamedIndividual IRI="#сахар"/>
+        <NamedIndividual IRI="#ферментационная_жидкость"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#отличаться"/>
+        <NamedIndividual IRI="#угол_вращения_глюкозы"/>
+        <NamedIndividual IRI="#угол_вращения_сахара"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#принадлежность_угла_вращения"/>
+        <NamedIndividual IRI="#угол_вращения_глюкозы"/>
+        <NamedIndividual IRI="#глюкоза"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#отличаться"/>
+        <NamedIndividual IRI="#угол_вращения_сахара"/>
+        <NamedIndividual IRI="#угол_вращения_глюкозы"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#принадлежность_угла_вращения"/>
+        <NamedIndividual IRI="#угол_вращения_сахара"/>
+        <NamedIndividual IRI="#сахар"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#присутствовать_в_ходе"/>
+        <NamedIndividual IRI="#ферментационная_жидкость"/>
+        <NamedIndividual IRI="#молочнокислое_брожение_сахара"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#кем_была_синтезирована"/>
+        <NamedIndividual IRI="#формоза"/>
+        <NamedIndividual IRI="#Бутлеров"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#способ_синтеза"/>
+        <NamedIndividual IRI="#формоза"/>
+        <NamedIndividual IRI="#конденсация_муравьиного_альдегида"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#быть_открытым_в_ходе"/>
+        <NamedIndividual IRI="#фруктоза"/>
+        <NamedIndividual IRI="#молочнокислое_брожение_сахара"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#быть_открытым_в_ходе"/>
+        <NamedIndividual IRI="#фруктоза"/>
+        <NamedIndividual IRI="#спиртовое_брожение_сахара"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#кем_была_открыта"/>
+        <NamedIndividual IRI="#фруктоза"/>
+        <NamedIndividual IRI="#Дюбрунфо"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#являться_компонентом"/>
+        <NamedIndividual IRI="#фруктоза"/>
+        <NamedIndividual IRI="#формоза"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#дата_исследования"/>
+        <NamedIndividual IRI="#молочнокислое_брожение_сахара"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1847</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#дата_исследования"/>
+        <NamedIndividual IRI="#спиртовое_брожение_сахара"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1847</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#дата_синтеза"/>
+        <NamedIndividual IRI="#формоза"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1861</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#быть_открытым_в_ходе"/>
+        <Class IRI="#Химические_соединения"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#кем_была_открыта"/>
+        <Class IRI="#Химические_соединения"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#кем_была_синтезирована"/>
+        <Class IRI="#смесь_сахаров"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#отличаться"/>
+        <Class IRI="#угол_вращения"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#принадлежность_угла_вращения"/>
+        <Class IRI="#угол_вращения"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#присутствовать_в_составе"/>
+        <Class IRI="#сахар"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#присутствовать_в_ходе"/>
+        <Class IRI="#жидкости"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#проходить_в_присутствии_катализатора"/>
+        <Class IRI="#конденсация"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#способ_синтеза"/>
+        <Class IRI="#смесь_сахаров"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#являться_компонентом"/>
+        <Class IRI="#Химические_соединения"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#быть_открытым_в_ходе"/>
+        <Class IRI="#Исследования"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#кем_была_открыта"/>
+        <Class IRI="#Люди"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#кем_была_синтезирована"/>
+        <Class IRI="#Люди"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#отличаться"/>
+        <Class IRI="#угол_вращения"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#принадлежность_угла_вращения"/>
+        <Class IRI="#Химические_соединения"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#принадлежность_угла_вращения"/>
+        <Class IRI="#сахар"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#присутствовать_в_составе"/>
+        <Class IRI="#жидкости"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#присутствовать_в_ходе"/>
+        <Class IRI="#Исследования"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#проходить_в_присутствии_катализатора"/>
+        <Class IRI="#катализаторы"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#способ_синтеза"/>
+        <Class IRI="#конденсация"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#являться_компонентом"/>
+        <Class IRI="#смесь_сахаров"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#дата_исследования"/>
+        <Class IRI="#Исследования"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#дата_синтеза"/>
+        <Class IRI="#смесь_сахаров"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#дата_исследования"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#дата_синтеза"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
