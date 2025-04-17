@@ -1,4 +1,8 @@
-#include "Sets.hpp"
+//
+// pch.cpp
+//
+
+#include "pch.h"
 #include <fstream>
 #include <sstream>
 #include <algorithm>
@@ -90,34 +94,63 @@ Set parseSet(const string& line) {
     if (equalPos != string::npos) {
         // Извлекаем имя множества
         string name = line.substr(0, equalPos);
-        // Удаляем пробелы в имени
         name.erase(remove_if(name.begin(), name.end(), ::isspace), name.end());
-
-        // Устанавливаем имя через конструктор
         newSet = Set(name, {});
 
         // Извлекаем содержимое множества
         string content = line.substr(equalPos + 1);
         content = removeSpaces(content);
 
-        // Удаляем фигурные скобки
         size_t openBrace = content.find('{');
         size_t closeBrace = content.find('}');
 
         if (openBrace != string::npos && closeBrace != string::npos) {
             string elementsStr = content.substr(openBrace + 1, closeBrace - openBrace - 1);
 
-            // Разделяем элементы по запятым
-            stringstream ss(elementsStr);
-            string element;
+            vector<string> elements;
+            bool inTuple = false;
+            int tupleDepth = 0;  // Для отслеживания вложенности кортежей
+            string currentElement;
 
-            while (getline(ss, element, ',')) {
-                // Удаляем лишние пробелы вокруг элемента
-                element.erase(0, element.find_first_not_of(" \t\n\r\f\v"));
-                element.erase(element.find_last_not_of(" \t\n\r\f\v") + 1);
+            for (char c : elementsStr) {
+                if (c == '<') {
+                    inTuple = true;
+                    tupleDepth++;
+                    currentElement += c;
+                }
+                else if (c == '>') {
+                    tupleDepth--;
+                    currentElement += c;
+                    if (tupleDepth == 0) {
+                        inTuple = false;
+                        elements.push_back(currentElement);
+                        currentElement.clear();
+                    }
+                }
+                else if (c == ',' && !inTuple) {
+                    if (!currentElement.empty()) {
+                        elements.push_back(currentElement);
+                        currentElement.clear();
+                    }
+                }
+                else {
+                    currentElement += c;
+                }
+            }
 
-                if (!element.empty()) {
-                    newSet.addElement(element);
+            // Добавляем последний элемент, если он есть
+            if (!currentElement.empty()) {
+                elements.push_back(currentElement);
+            }
+
+            // Очищаем пробелы в начале и конце каждого элемента
+            for (const auto& element : elements) {
+                string trimmed = element;
+                trimmed.erase(0, trimmed.find_first_not_of(" \t\n\r\f\v"));
+                trimmed.erase(trimmed.find_last_not_of(" \t\n\r\f\v") + 1);
+
+                if (!trimmed.empty()) {
+                    newSet.addElement(trimmed);
                 }
             }
         }
