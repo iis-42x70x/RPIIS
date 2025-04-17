@@ -10,10 +10,10 @@
 Двусвязный (двунаправленный) список — это разновидность связного списка, при которой переход по элементам возможен в обоих направлениях (как вперед, так и назад), в отличие от односвязного (однонаправленного) списка.
 Вот термины, необходnuимые для понимания концепции двусвязных (двунаправленных) списков:
 
-Ссылка. В каждой ссылке связного списка могут храниться данные, называемые элементом.
-Следующая ссылка. В каждой ссылке связного списка содержится ссылка на следующую ссылку (Next).
-Предыдущая ссылка. В каждой ссылке связного списка содержится ссылка на предыдущую ссылку (Prev).
-Связный список содержит ссылку (связку) на первую ссылку (First) и на последнюю ссылку (Last).
+- Ссылка. В каждой ссылке связного списка могут храниться данные, называемые элементом.
+- Следующая ссылка. В каждой ссылке связного списка содержится ссылка на следующую ссылку (Next).
+- Предыдущая ссылка. В каждой ссылке связного списка содержится ссылка на предыдущую ссылку (Prev).
+- Связный список содержит ссылку (связку) на первую ссылку (First) и на последнюю ссылку (Last).
 
 ![Пример списка](https://miro.medium.com/v2/resize:fit:1100/format:webp/0*qIPvFnSs3903p0E_.jpg)
 
@@ -23,13 +23,261 @@
 
 ### Алгоритмы
 
-- **Алгоритмы**:  
-Материалы с [metanit](https://metanit.com/).
-Материалы с [metanit](https://metanit.com/). *Тоже от сюда*
+## Алгоритм 
+### Реализуем тип данных списка
+```c#
+namespace Lib
+{
+    public class DoublyNode<T>
+    {
+        public T Data { get; set; }
+        public DoublyNode<T> Previous { get; set; } // хранит ссылку
+        public DoublyNode<T> Next { get; set; }
+        public DoublyNode(T data)
+        {
+            this.Data = data;
+        }
 
-## Результаты тестирования
+        public DoublyNode()
+        {
 
-*Результаты тестирования будут дополнены.*
+        }
+    }
+
+}
+```
+
+**Основные операции:**
+- *add*- функция добавление элемента
+- *AddFirst* - функция добавления элемента в начлао списка
+- *print* - функция вывода двухсвязного списка
+- *RemoveElement* - функция удаления элемента
+- *Count* - функция для отображения количества элементов в списке
+- *IsPUSTO* - функция, которая возращает булевое значение в зависимости есть или нет элементов в списке
+- *Clear* - функция, которая удаляет список
+- *search* - функция, которая выполняет поиск в списке по значению 
+- *SortMintoMax* - функция, которая сортирует список 
+- *mergeList* - функция, которая в качестве параметров принимает два списка и сливает их в один
+- *FindIntersection* - функция, которая в качестве параметров принимает два списка и находит пересечение элементов
+
+
+### Функция add:
+
+```c#
+public void Add(T data)
+        {
+            DoublyNode<T> node = new DoublyNode<T>(data);
+            if (head == null)
+                head = node;
+            else
+            {
+                tail.Next = node;
+                node.Previous = tail;
+            }
+            tail = node;
+            count++;
+        }
+
+```
+
+### Функция AddFirst 
+
+```c#
+ public void AddFirst(T data)
+        {
+            DoublyNode<T> node = new DoublyNode<T>(data);
+            DoublyNode<T> temp = head;
+            node.Next = temp;
+            head = node;
+            if (count == 0)
+                tail = head;
+            else
+                temp.Previous = node;
+            count++;
+        }
+```
+
+### Функция print
+
+```c#
+ public void print()
+        {
+            DoublyNode<T> print = head;
+            while (print != null)
+            {
+                Console.Write(" " + print.Data);
+                print = print.Next;
+            }
+            Console.WriteLine();
+        }
+```
+
+### Функция RemoveElement
+
+```c#
+ public bool RemoveElement(T data)
+        {
+            DoublyNode<T> current = head;
+            while (current != null) // проходим по всему списку
+            {
+                if (current.Data.Equals(data)) // сравниваем 
+                {
+                    break;
+                }
+                current = current.Next;
+            }
+            if (current != null) // будет выполняться только если нашли элемент
+            {                    // если элемент не найден то элемент равна НУЛ
+                if (current.Next != null)
+                {
+                    current.Next.Previous = current.Previous;
+                }
+                else
+                {
+                    tail = current.Previous;
+                }
+                if (current.Previous != null)
+                {
+                    current.Previous.Next = current.Next;
+                }
+                else
+                {
+                    head = current.Next;
+                }
+                count--;
+                return true;
+            }
+            return false;
+        }
+```
+### Функция Count
+
+```c#
+  public int Count { get { return count; } }
+```
+### Функция IsPUSTO
+
+```c#
+ public bool IsPUSTO { get { return count == 0; } }
+```
+### Функция Clear
+
+```c#
+public void Clear()
+        {
+            head = null;
+            tail = null;
+            count = 0;
+        }
+```
+### Функция search
+
+```c#
+public bool search(T data)
+        {
+            DoublyNode<T> current = head;
+            while (current != null)
+            {
+                if (current.Data.Equals(data))
+                    return true;
+                current = current.Next;
+            }
+            return false;
+        }
+```
+### Функция SortMintoMax
+
+```c#
+ public void SortMintoMax()
+        {
+            if (head == null || head.Next == null)
+            {
+                return;
+            }
+
+            bool swapped;
+            do
+            {
+                swapped = false;
+                DoublyNode<T> current = head;
+
+                while (current.Next != null)
+                {
+                    if (Comparer<T>.Default.Compare(current.Data, current.Next.Data) > 0)
+                    {
+                        T temp = current.Data;
+                        current.Data = current.Next.Data;
+                        current.Next.Data = temp;
+                        swapped = true;
+                    }
+                    current = current.Next;
+                }
+            } while (swapped);
+        }
+```
+### Функция mergeList
+
+```c#
+ public void mergeList(MyList<T> list1, MyList<T> list2) // сливание списков
+        {
+            if (list1.IsPUSTO && list2.IsPUSTO)
+            {
+                return;
+            }
+            if (list1.IsPUSTO)
+            {
+                list1.head = list2.head;
+                list1.tail = list2.tail;
+                list1.count = list2.count;
+                return;
+            }
+            if (list2.IsPUSTO)
+            {
+                return;
+            }
+
+            list1.tail.Next = list2.head;
+            list2.head.Previous = list1.tail;
+            list1.tail = list2.tail;
+            list1.count += list2.count;
+
+            list2.head = null;
+            list2.tail = null;
+            list2.count = 0;
+        }
+```
+### Функция FindIntersection
+
+```c#
+ public MyList<T> FindIntersection(MyList<T> list1, MyList<T> list2) // пересечение
+        {
+            MyList<T> intersection = new MyList<T>();
+            DoublyNode<T> current1 = list1.head;
+
+            while (current1 != null)
+            {
+                DoublyNode<T> current2 = list2.head;
+                while (current2 != null)
+                {
+                    if (current1.Data.Equals(current2.Data))
+                    {
+                        intersection.Add(current1.Data);
+                        break;
+                    }
+                    current2 = current2.Next;
+                }
+                current1 = current1.Next;
+            }
+
+            return intersection;
+
+        }
+```
+ Алгоритмы [metanit](https://metanit.com/sharp/algoritm/2.2.php).
+
 
 ## Вывод
-В результате выполнения задания была успешно разработана библиотека для работы с двунаправленным списком, включающая полный набор алгоритмов для работы с данной структурой данных. Реализованные методы демонстрируют корректное выполнение операций по добавлению, удалению, сортировке, поиску, объединению и пересечению списков. 
+В ходе выполнения данной лабораторной работы я:
+- Изучил принцип работы двунаправленного списка.
+- Приобрёл навыки разработки библиотек в C#.
+- Разработал библиотеку алгоритмов обработки структуры данных двунаправленного списка.
