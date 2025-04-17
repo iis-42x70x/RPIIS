@@ -326,7 +326,7 @@ TEST(SetTest, ThreeSetsWithTuplesResult) {
 
 ## Результат работы тестов: 
 
-<img alt="result" src="https://github.com/iis-42x70x/RPIIS/blob/Говор_Г/sem2/lab2/img/2.png">
+<img alt="result" src="https://i.imgur.com/ssGuXvj.png">
 
 ## Вывод:
 Мной была разработана библиотека по работе со множествами В ней я реализовал операцию симметрической разноти между несколькими множиствами.
