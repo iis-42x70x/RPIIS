@@ -1,4 +1,4 @@
-#include "Sets.hpp"
+#include "pch.h"
 #include <fstream>
 
 // Тест 1: Создание пустого множества
@@ -148,3 +148,40 @@ TEST(SetTest, CombinedReadSetsFromFile) {
     remove("test_sets.txt");
 }
 
+// Тест 18: Комбинированный тест симметрической разности из файла для 2 множеств с кортежём
+TEST(SetTest, CombinedReadSetsFromFile2) {
+    // Создаём временный файл для теста
+    ofstream tmp("test_sets.txt");
+    tmp << "A_551 =  {     a      ,B,<c,<b,d   >            >}\nB= {a,B}";
+    tmp.close();
+    vector<Set> sets = readSetsFromFile("test_sets.txt");
+    Set result = Set::symmetricDifference(sets);
+    EXPECT_EQ(sets.size(), 2);
+    EXPECT_TRUE(result.contains("<c,<b,d>>"));
+    remove("test_sets.txt");
+}
+
+TEST(SetTest, ThreeSetsWithTuples) {
+    ofstream tmp("test_sets.txt");
+    tmp << "A = {a, b, <x, y>}\nB = {a, <x, y>, <z, w>}\nC = {b, <z, w>}";
+    tmp.close();
+
+    vector<Set> sets = readSetsFromFile("test_sets.txt");
+    Set result = Set::symmetricDifference(sets);
+
+    EXPECT_EQ(sets.size(), 3);
+    EXPECT_EQ(result.size(), 0);  // Ожидается пустое множество
+    remove("test_sets.txt");
+}
+
+TEST(SetTest, ThreeSetsWithTuplesResult) {
+    ofstream tmp("test_sets.txt");
+    tmp << "A = {a, b, <x, y>, <z,           w>}\nB = {a,    <x   , y>, <z, w>}\nC =            {  b   , <    z, w>}";
+    tmp.close();
+
+    vector<Set> sets = readSetsFromFile("test_sets.txt");
+    Set result = Set::symmetricDifference(sets);
+
+    EXPECT_TRUE(result.contains("<z, w>"));
+    remove("test_sets.txt");
+}
