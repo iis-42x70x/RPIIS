@@ -15,45 +15,45 @@
 равностороннего треугольника АОВ, чья площадь в семь раз меньше площади исходного круга.
 
 ### Для второй части мне был выдан вариант №8
-![KBE task2](KBE_task2.png)
+![KBE task2](./images/KBE_task2.png)
 ## Выполнение работы
 
 ### 1-ое задание
 1) **KBE**
-![KBE 1st task](KBE_task1_graph.png)
+![KBE 1st task](./images/KBE_task1_graph.png)
 2) **Protege**
-![Protege 1st task](Protege_graph.png)
+![Protege 1st task](./images/Protege_graph.png)
 ### Структура проекта в Protege
 Classes
-![Classes](protege_classes_task1.png)
+![Classes](./images/protege_classes_task1.png)
 Object properties
-![Object properties](protege_object_properties_task1.png)
+![Object properties](./images/protege_object_properties_task1.png)
 Data properties
-![Data properties](protege_data_properties_task1.png)
+![Data properties](./images/protege_data_properties_task1.png)
 Individuals by class
 
 **Class: point**
 
-![Individuals by class](protege_individuals_by_class_point.png)
+![Individuals by class](./images/protege_individuals_by_class_point.png)
 
 **Class: angle**
 
-![Individuals by class angle](protege_individuals_by_class_angle.png)
+![Individuals by class angle](./images/protege_individuals_by_class_angle.png)
 
 **Class: equilateral_triangle**
 
-![Individuals by class equilateral triangle](protege_individuals_by_class_equilateral_triangle.png)
+![Individuals by class equilateral triangle](./images/protege_individuals_by_class_equilateral_triangle.png)
 
 **Class: area**
 
-![Individuals by class](protege_individuals_by_class_area.png)
+![Individuals by class](./images/protege_individuals_by_class_area.png)
 
 **Class: circle**
 
-![Individuals by class](protege_individuals_by_class_circle.png)
+![Individuals by class](./images/protege_individuals_by_class_circle.png)
 ### 2-ое задание
 **KBE**
-![2-ое задание в KBE](KBE_task2_graph.png)
+![2-ое задание в KBE](./images/KBE_task2_graph.png)
 ## Вывод:
 Изучил правила формализации текста, выполнил задания, выданные мне преподавателем, в редакторах **KBE** и **Protege**.
 ## Используемые источники
