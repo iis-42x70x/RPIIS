@@ -26,7 +26,7 @@
 
   
 
-![Дерево Фенвика можно представить как:](sem2/lab1/fen1.jpg)
+![Дерево Фенвика можно представить как:]([sem2/lab1/Fen1.jpg](https://github.com/iis-42x70x/RPIIS/blob/%D0%9D%D0%B0%D0%B3%D0%BE%D1%80%D0%BD%D0%BE%D0%B2%D0%B0_%D0%9C/sem2/lab1/fen1.jpg))
 
  Где
  
