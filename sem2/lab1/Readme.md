@@ -130,6 +130,9 @@ main.cpp
 - Реализовала алгоритм для нахождения суммы на отрезке и замены элемента с помощью дерева Фенвика
 
 ### Источники:
-- https://habr.com/ru/articles/112828/
-- [ https://www.youtube.com/watch?v=muW1tOyqUZ4&pp=ygUb0LTQtdGA0LXQstC-INGE0LXQvdCy0LjQutCw](https://www.youtube.com/watch?v=muW1tOyqUZ4&pp=ygUb0LTQtdGA0LXQstC-INGE0LXQvdCy0LjQutCw)
-- https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%A4%D0%B5%D0%BD%D0%B2%D0%B8%D0%BA%D0%B0
+- *Дерево Фенвика / Хабр*
+  https://habr.com/ru/articles/112828/
+- *Дерево Фенвика | Бинарное индексированное дерево     Олег Стиплин*
+   [ https://www.youtube.com/watch?v=muW1tOyqUZ4&pp=ygUb0LTQtdGA0LXQstC-INGE0LXQvdCy0LjQutCw](https://www.youtube.com/watch?v=muW1tOyqUZ4&pp=ygUb0LTQtdGA0LXQstC-INGE0LXQvdCy0LjQutCw)
+- *Дерево Фенвика. Википедия*
+ https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%A4%D0%B5%D0%BD%D0%B2%D0%B8%D0%BA%D0%B0
