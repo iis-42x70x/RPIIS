@@ -24,12 +24,19 @@
 2) **Protege**
 ![Protege 1st task](./images/Protege_graph.png)
 ### Структура проекта в Protege
+
 Classes
+
 ![Classes](./images/protege_classes_task1.png)
+
 Object properties
+
 ![Object properties](./images/protege_object_properties_task1.png)
+
 Data properties
+
 ![Data properties](./images/protege_data_properties_task1.png)
+
 Individuals by class
 
 **Class: point**
