@@ -32,4 +32,5 @@ public:
 // Вспомогательные функции
 vector<Set> readSetsFromFile(const string& filename);
 Set parseSet(const string& line);
-string removeSpaces(const string& input);
+string normalizeSpaces(const string& input);
+bool isValidSetFormat(const string& input);
