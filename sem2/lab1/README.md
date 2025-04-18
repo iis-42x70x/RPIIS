@@ -163,7 +163,7 @@ public:
 
 ### Создание узла
   
-![Unification](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab1/img/create.png)
+![Unification](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab1/img/node.png)
 
 ## Вывод
 
