@@ -25,8 +25,7 @@
 - Запрос суммы: вычисление суммы элементов массива на заданном диапазоне.
 
   
-
-![Дерево Фенвика можно представить как:](https://github.com/iis-42x70x/RPIIS/edit/Нагорнова_М/raw/main/sem2/lab1/fen1.jpg)
+![fen1](https://github.com/user-attachments/assets/2e5ad64a-b898-4b48-b8e8-a898ac9e8a97)
 
  Где
  
@@ -38,9 +37,9 @@
 
 Если мы заполним значения в узлах:
 
- (((((((((тут будет вторая картинка дерева фенвика))))))))) 
+![fen2](https://github.com/user-attachments/assets/c8a8115e-30e4-4b52-8e4c-1c6813ed42c9)
 
-Основные понятия:
+### Основные понятия:
 
 **Индексы:**
 
@@ -61,18 +60,27 @@ FenwickTreee.cpp
 main.cpp
 ### Тесты
 
+ **Тест 1**
 
+ ![test1](https://github.com/user-attachments/assets/87591a38-c8db-4e7f-bdb0-531d554db132)
 
+ **Тест 2**
 
+ ![test2](https://github.com/user-attachments/assets/12aff47e-09ba-4c5a-a06d-fa523a1d550d)
 
+ **Тест 3**
 
+ ![test3](https://github.com/user-attachments/assets/5c67f8c2-b373-4fa0-a1fb-afbfadab22b9)
 
+ **Тест 4**
 
+ ![test4](https://github.com/user-attachments/assets/a98db292-d813-4f97-be9a-db7657a86414)
 
+**Тест 5**
 
+![test5](https://github.com/user-attachments/assets/c5e5fe46-cc4b-4e67-835e-0a4e788b76c3)
 
-
-
+---
 
 ### Алгоритмы работы с деревом Фенвика
 
