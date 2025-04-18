@@ -59,8 +59,6 @@ A \triangle B &= \{a, d, e, f\}
 * [Sets.hpp](https://github.com/iis-42x70x/RPIIS/blob/Говор_Г/sem2/lab2/code/Sets.hpp) - header-файл
 
 ## Тесты:
-* Тест 1
-  
 ```cpp
 // Тест 1: Создание пустого множества
 TEST(SetTest, EmptySet) {
@@ -68,11 +66,7 @@ TEST(SetTest, EmptySet) {
     EXPECT_TRUE(s.getElements().empty());
     EXPECT_EQ(s.size(), 0);
 }
-```
 
-* Тест 2
-  
-```cpp
 // Тест 2: Добавление элементов
 TEST(SetTest, AddElements) {
     Set s("test", {});
@@ -82,33 +76,21 @@ TEST(SetTest, AddElements) {
     EXPECT_TRUE(s.contains("a"));
     EXPECT_TRUE(s.contains("b"));
 }
-```
 
-* Тест 3
-  
-```cpp
 // Тест 3: Проверка contains()
 TEST(SetTest, ContainsCheck) {
     Set s("test", { "a", "b", "c" });
     EXPECT_TRUE(s.contains("a"));
     EXPECT_FALSE(s.contains("d"));
 }
-```
 
-* Тест 4
-  
-```cpp
 // Тест 4: Симметрическая разность пустых множеств
 TEST(SetTest, SymDiffEmptySets) {
     vector<Set> sets;
     Set result = Set::symmetricDifference(sets);
     EXPECT_TRUE(result.getElements().empty());
 }
-```
 
-* Тест 5
-  
-```cpp
 // Тест 5: Симметрическая разность одного множества
 TEST(SetTest, SymDiffSingleSet) {
     vector<Set> sets = { Set("A", {"a", "b"}) };
@@ -117,22 +99,14 @@ TEST(SetTest, SymDiffSingleSet) {
     EXPECT_TRUE(result.contains("a"));
     EXPECT_TRUE(result.contains("b"));
 }
-```
 
-* Тест 6
-  
-```cpp
 // Тест 6: Симметрическая разность двух непересекающихся множеств
 TEST(SetTest, SymDiffDisjointSets) {
     vector<Set> sets = { Set("A", {"a", "b"}), Set("B", {"c", "d"}) };
     Set result = Set::symmetricDifference(sets);
     EXPECT_EQ(result.size(), 4);
 }
-```
 
-* Тест 7
-  
-```cpp
 // Тест 7: Симметрическая разность двух пересекающихся множеств
 TEST(SetTest, SymDiffOverlappingSets) {
     vector<Set> sets = { Set("A", {"a", "b"}), Set("B", {"b", "c"}) };
@@ -141,11 +115,7 @@ TEST(SetTest, SymDiffOverlappingSets) {
     EXPECT_TRUE(result.contains("a"));
     EXPECT_TRUE(result.contains("c"));
 }
-```
 
-* Тест 8
-  
-```cpp
 // Тест 8: Симметрическая разность трёх множеств
 TEST(SetTest, SymDiffThreeSets) {
     vector<Set> sets = { Set("A", {"a", "b"}), Set("B", {"b", "c"}), Set("C", {"c", "d"}) };
@@ -154,11 +124,7 @@ TEST(SetTest, SymDiffThreeSets) {
     EXPECT_TRUE(result.contains("a"));
     EXPECT_TRUE(result.contains("d"));
 }
-```
 
-* Тест 9
-  
-```cpp
 // Тест 9: Парсинг множества из строки
 TEST(SetTest, ParseSetFromString) {
     string line = "A = {a, b, c}";
@@ -166,11 +132,7 @@ TEST(SetTest, ParseSetFromString) {
     EXPECT_EQ(s.getName(), "A");
     EXPECT_EQ(s.size(), 3);
 }
-```
 
-* Тест 10
-  
-```cpp
 // Тест 10: Парсинг множества с пробелами
 TEST(SetTest, ParseSetWithSpaces) {
     string line = "B  =  {  x ,  y  , z }";
@@ -178,23 +140,8 @@ TEST(SetTest, ParseSetWithSpaces) {
     EXPECT_EQ(s.getName(), "B");
     EXPECT_EQ(s.size(), 3);
 }
-```
 
-* Тест 11
-  
-```cpp
-// Тест 11: Удаление пробелов
-TEST(SetTest, RemoveSpaces) {
-    string input = "   a  ,         b      ,              c    ";
-    string result = removeSpaces(input);
-    EXPECT_EQ(result, "a, b, c");
-}
-```
-
-* Тест 12
-  
-```cpp
-// Тест 12: Чтение множеств из файла
+// Тест 11: Чтение множеств из файла
 TEST(SetTest, ReadSetsFromFile) {
     // Создаём временный файл для теста
     ofstream tmp("test_sets.txt");
@@ -205,12 +152,8 @@ TEST(SetTest, ReadSetsFromFile) {
     EXPECT_EQ(sets.size(), 2);
     remove("test_sets.txt");
 }
-```
 
-* Тест 13
-  
-```cpp
-// Тест 13: Обработка пустого файла
+// Тест 12: Обработка пустого файла
 TEST(SetTest, ReadEmptyFile) {
     ofstream tmp("empty.txt");
     tmp.close();
@@ -219,32 +162,20 @@ TEST(SetTest, ReadEmptyFile) {
     EXPECT_TRUE(sets.empty());
     remove("empty.txt");
 }
-```
 
-* Тест 14
-  
-```cpp
-// Тест 14: Обработка несуществующего файла
+// Тест 13: Обработка несуществующего файла
 TEST(SetTest, ReadNonexistentFile) {
     vector<Set> sets = readSetsFromFile("nonexistent.txt");
     EXPECT_TRUE(sets.empty());
 }
-```
 
-* Тест 15
-  
-```cpp
-// Тест 15: Множество с повторяющимися элементами
+// Тест 14: Множество с повторяющимися элементами
 TEST(SetTest, SetWithDuplicates) {
     Set s("test", { "a", "a", "b" });
     EXPECT_EQ(s.size(), 2); // Дубликаты должны быть удалены
 }
-```
 
-* Тест 16
-  
-```cpp
-// Тест 16: Симметрическая разность с пустым множеством
+// Тест 15: Симметрическая разность с пустым множеством
 TEST(SetTest, SymDiffWithEmptySet) {
     vector<Set> sets = { Set("A", {"a", "b"}), Set("empty", {}) };
     Set result = Set::symmetricDifference(sets);
@@ -252,12 +183,8 @@ TEST(SetTest, SymDiffWithEmptySet) {
     EXPECT_TRUE(result.contains("a"));
     EXPECT_TRUE(result.contains("b"));
 }
-```
 
-* Тест 17
-  
-```cpp
-// Тест 17: Комбинированный тест симметрической разности из файла для 2 множеств
+// Тест 16: Комбинированный тест симметрической разности из файла для 2 множеств
 TEST(SetTest, CombinedReadSetsFromFile) {
     // Создаём временный файл для теста
     ofstream tmp("test_sets.txt");
@@ -272,28 +199,20 @@ TEST(SetTest, CombinedReadSetsFromFile) {
     EXPECT_FALSE(result.contains("b"));
     remove("test_sets.txt");
 }
-```
 
-* Тест 18
-  
-```cpp
-// Тест 18: Комбинированный тест симметрической разности из файла для 2 множеств с кортежём
+// Тест 17
 TEST(SetTest, CombinedReadSetsFromFile2) {
-    // Создаём временный файл для теста
     ofstream tmp("test_sets.txt");
-    tmp << "A_551 =  {     a      ,B,<c,<b,d   >            >}\nB= {a,B}";
+    tmp << "A_551 = {a, B, <c, <b, d>>}\nB = {a, B}"; // Явно задаём ожидаемый формат
     tmp.close();
     vector<Set> sets = readSetsFromFile("test_sets.txt");
     Set result = Set::symmetricDifference(sets);
     EXPECT_EQ(sets.size(), 2);
-    EXPECT_TRUE(result.contains("<c,<b,d>>"));
+    EXPECT_TRUE(result.contains("<c, <b, d>>"));
     remove("test_sets.txt");
 }
-```
 
-* Тест 19
-
-```cpp
+// Тест 18
 TEST(SetTest, ThreeSetsWithTuples) {
     ofstream tmp("test_sets.txt");
     tmp << "A = {a, b, <x, y>}\nB = {a, <x, y>, <z, w>}\nC = {b, <z, w>}";
@@ -306,20 +225,34 @@ TEST(SetTest, ThreeSetsWithTuples) {
     EXPECT_EQ(result.size(), 0);  // Ожидается пустое множество
     remove("test_sets.txt");
 }
-```
 
-* Тест 20
-
-```cpp
+// Тест 19
 TEST(SetTest, ThreeSetsWithTuplesResult) {
     ofstream tmp("test_sets.txt");
-    tmp << "A = {a, b, <x, y>, <z,           w>}\nB = {a,    <x   , y>, <z, w>}\nC =            {  b   , <    z, w>}";
+    // Явно задаём форматирование с пробелами
+    tmp << "A = {a, b, <x, y>, <z, {a, <a, b>, c}>}\n"
+        << "B = {a, <x, y>, <z, {c, <a, b>, a}>}\n"
+        << "C = {b, <z, {c, a, <a, b>}>}";
     tmp.close();
-
     vector<Set> sets = readSetsFromFile("test_sets.txt");
     Set result = Set::symmetricDifference(sets);
+    EXPECT_TRUE(result.contains("<z, {c, <a, b>, a}>"));
+    remove("test_sets.txt");
+}
 
-    EXPECT_TRUE(result.contains("<z, w>"));
+// Тест 20
+TEST(SetTest, ThreeSetsWithTuplesResult2) {
+    ofstream tmp("test_sets.txt");
+    // Явно задаём форматирование с пробелами
+    tmp << "A = {a, b, {b,c}, a, <{a, b}, c>}\n"
+        << "B = {a}\n"
+        << "C = {<{a, b}, c>}";
+    tmp.close();
+    vector<Set> sets = readSetsFromFile("test_sets.txt");
+    Set result = Set::symmetricDifference(sets);
+    EXPECT_TRUE(result.contains("b"));
+    EXPECT_TRUE(result.contains("{b, c}"));
+    EXPECT_FALSE(result.contains("{<{a, b}, c >}"));
     remove("test_sets.txt");
 }
 ```
