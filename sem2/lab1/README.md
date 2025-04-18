@@ -23,7 +23,6 @@
 
 ### Алгоритмы
 
-## Алгоритм 
 ### Реализуем тип данных списка
 public class DoublyNode<T> — узел двусвязного списка с обобщённым типом T.
 
@@ -356,7 +355,201 @@ public bool search(T data)
 ```
  Алгоритмы [metanit](https://metanit.com/sharp/algoritm/2.2.php).
 ## Пример работы
-**Будет добавлен немного позднее**
+Реализуем библиотеку в программе:
+```c#
+using System;
+using Lib;
+
+namespace ProjectWithLib
+{
+    class Program
+    {
+        static void Main()
+        {
+            Random random = new Random();
+            MyList<int> list1 = new MyList<int>();
+            MyList<int> list2 = new MyList<int>();
+
+
+            int size1 = random.Next(5, 20);
+            int size2 = random.Next(5, 20);
+            for (int i = 0; i < size1; i++)
+            {
+                list1.Add(random.Next(1, 20));
+            }
+            for (int i = 0; i < size2; i++)
+            {
+                list2.Add(random.Next(1, 20));
+            }
+
+            Console.WriteLine($"Initial List 1 (Size: {size1}):");
+            list1.print();
+            Console.WriteLine($"Initial List 2 (Size: {size2}):");
+            list2.print();
+
+            while (true)
+            {
+                Console.WriteLine("Select an action:");
+                Console.WriteLine("1 - Add element");
+                Console.WriteLine("2 - Add first element");
+                Console.WriteLine("3 - Search element");
+                Console.WriteLine("4 - Remove element");
+                Console.WriteLine("5 - Sort");
+                Console.WriteLine("6 - Find intersection");
+                Console.WriteLine("7 - Merge");
+                Console.WriteLine("8 - View");
+                Console.WriteLine("9 - Exit");
+
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                if (choice >= 1 && choice <= 5)
+                {
+                    Console.WriteLine("Select the list (1 or 2): ");
+                    int listChoice = Convert.ToInt32(Console.ReadLine());
+                    MyList<int> selectedList;
+
+                    if (listChoice == 2)
+                        selectedList = list2;
+
+                    else
+                        selectedList = list1;
+
+
+                    switch (choice)
+                    {
+                        case 1:
+                            Console.Write("Enter number to add: ");
+                            int addNum = Convert.ToInt32(Console.ReadLine());
+                            selectedList.Add(addNum);
+                            Console.Write("Updated List: ");
+                            selectedList.print();
+                            break;
+
+
+
+
+                        case 2:
+                            Console.Write("Enter number to add first: ");
+                            int addFirstNum = Convert.ToInt32(Console.ReadLine());
+                            selectedList.AddFirst(addFirstNum);
+                            Console.Write("Updated List: ");
+                            selectedList.print();
+                            break;
+
+                        case 3:
+                            Console.Write("Enter number to search: ");
+                            int searchNum = Convert.ToInt32(Console.ReadLine());
+                            if (selectedList.search(searchNum))
+                                Console.WriteLine("Number found!");
+                            else
+                                Console.WriteLine("Number not found.");
+                            break;
+
+                        case 4:
+                            Console.Write("Enter number to remove: ");
+                            int removeNum = Convert.ToInt32(Console.ReadLine());
+                            if (selectedList.RemoveElement(removeNum))
+                                Console.WriteLine("Number removed successfully.");
+                            else
+                                Console.WriteLine("Number not found in the list.");
+                            break;
+
+                        case 5:
+                            Console.Write("Sorting list...");
+                            selectedList.SortMintoMax();
+                            selectedList.print();
+                            break;
+                    }
+                }
+                else
+                {
+                    switch (choice)
+                    {
+
+                        case 6:
+                            MyList<int> intersection = list1.FindIntersection(list1, list2);
+                            Console.WriteLine("Intersection of List 1 and List 2:");
+                            intersection.print();
+                            break;
+
+                        case 7:
+                            list1.mergeList(list1, list2);
+                            Console.WriteLine("Merged List:");
+                            list1.print();
+                            break;
+
+                        case 8:
+                            list1.print();
+                            list2.print();
+                            break;
+
+                        case 9:
+                            Console.WriteLine("Exiting...");
+                            return;
+
+                        default:
+                            Console.WriteLine("Invalid choice. Please try again.");
+                            break;
+                    }
+                }
+            }
+        }
+    }
+}
+```
+При запуске у нас рандомный(от 5 до 20) размер списка и рандомные(от 1 до 20) элементы списка:
+![image](https://github.com/user-attachments/assets/bf669121-9286-4f10-a9c5-44b7de67787d)
+
+Это реализуется в этой части кода:
+```c#
+  Random random = new Random();
+            MyList<int> list1 = new MyList<int>();
+            MyList<int> list2 = new MyList<int>();
+
+
+            int size1 = random.Next(5, 20);
+            int size2 = random.Next(5, 20);
+            for (int i = 0; i < size1; i++)
+            {
+                list1.Add(random.Next(1, 20));
+            }
+            for (int i = 0; i < size2; i++)
+            {
+                list2.Add(random.Next(1, 20));
+            }
+
+            Console.WriteLine($"Initial List 1 (Size: {size1}):");
+            list1.print();
+            Console.WriteLine($"Initial List 2 (Size: {size2}):");
+            list2.print();
+```
+
+Далее получаем список операций, которые можем выполнить со списком(ами):
+![image](https://github.com/user-attachments/assets/9a0bb801-bd6f-4d6a-a967-91a71774f6f0)
+
+Ну и можем проверить корректность выполнения методов из библиотеки:
+
+# Добавим элемент 667 во второй список:
+![image](https://github.com/user-attachments/assets/b81f1a8c-4c19-4373-8bc1-3d18a1d1c778)
+# Добавим элемент в начало 1-го списка:
+![image](https://github.com/user-attachments/assets/127f9113-34f7-4339-b492-3753c9c81923)
+# Так можем найти элемент:
+![image](https://github.com/user-attachments/assets/e348b4e9-5745-4f3e-beaa-ea701054d10e)
+# Удалили 667:
+![image](https://github.com/user-attachments/assets/6dc6b8a4-b19b-4a8b-ae56-7fdeb0a862d0)
+# 667 отсутствует (мы его удалили):
+![image](https://github.com/user-attachments/assets/b8d2cfdc-335a-4803-89f7-f548f9415907)
+# Отсортировали первый список: 
+![image](https://github.com/user-attachments/assets/2d552e24-802c-49d3-a73a-12c3624793a3)
+# Вот пересечение списков:
+![image](https://github.com/user-attachments/assets/5abc70dd-b612-41e1-a398-336a454cb3fa)
+# Объединение двух списков (список 1 становится объединением двух списков, второй список становится пустым):
+![image](https://github.com/user-attachments/assets/6bbd2c3b-2374-4fc1-bde7-d5d2c8bd0254)
+# Ну и последний вариант выбора(не считая завершения), просмотр:
+![image](https://github.com/user-attachments/assets/77827d90-e6b6-4f22-9e76-239ce925d2fc)
+Как можем заметить, второй список перестал существовать, а первый список увеличился(это из-за операции объежинения)
+
+
 ## Вывод
 В ходе выполнения данной лабораторной работы я:
 - Изучил принцип работы двунаправленного списка.
