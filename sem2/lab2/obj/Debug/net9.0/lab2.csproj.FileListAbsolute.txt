@@ -1,0 +1,15 @@
+D:\RPIIS\sem2\lab2\bin\Debug\net9.0\lab2.exe
+D:\RPIIS\sem2\lab2\bin\Debug\net9.0\lab2.deps.json
+D:\RPIIS\sem2\lab2\bin\Debug\net9.0\lab2.runtimeconfig.json
+D:\RPIIS\sem2\lab2\bin\Debug\net9.0\lab2.dll
+D:\RPIIS\sem2\lab2\bin\Debug\net9.0\lab2.pdb
+D:\RPIIS\sem2\lab2\obj\Debug\net9.0\lab2.GeneratedMSBuildEditorConfig.editorconfig
+D:\RPIIS\sem2\lab2\obj\Debug\net9.0\lab2.AssemblyInfoInputs.cache
+D:\RPIIS\sem2\lab2\obj\Debug\net9.0\lab2.AssemblyInfo.cs
+D:\RPIIS\sem2\lab2\obj\Debug\net9.0\lab2.csproj.CoreCompileInputs.cache
+D:\RPIIS\sem2\lab2\obj\Debug\net9.0\lab2.sourcelink.json
+D:\RPIIS\sem2\lab2\obj\Debug\net9.0\lab2.dll
+D:\RPIIS\sem2\lab2\obj\Debug\net9.0\refint\lab2.dll
+D:\RPIIS\sem2\lab2\obj\Debug\net9.0\lab2.pdb
+D:\RPIIS\sem2\lab2\obj\Debug\net9.0\lab2.genruntimeconfig.cache
+D:\RPIIS\sem2\lab2\obj\Debug\net9.0\ref\lab2.dll
