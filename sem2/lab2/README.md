@@ -58,24 +58,75 @@ void Sets(Set MultiSet[], string path) {
     int m = -1;
     MultiSet[0].set_count = m + 1;
     int elem_in_set = 0;
+    stack<char> bracket_stack; // Стек для проверки вложенных скобок элементов
+    bool in_element = false; // Флаг, указывающий, что мы внутри элемента
+    bool between_sets = false; // Флаг, указывающий на нахождение между множествами
 
     while (file.get(ch)) {
         if (ch == '{') {
             if (curr_brackets_count > 0) {
-                MultiSet[m].Elem[elem_in_set].element.push_back(ch);
-                MultiSet[m].Elem[elem_in_set].code_num += ch;
-                curr_brackets_count++;
+                throw runtime_error("Неправильная постановка скобок: вложенные множества не допускаются");
             }
-            else {
-                m++;
-                MultiSet[0].set_count = m + 1;
-                elem_in_set = 0;
-                curr_brackets_count++;
+            if (between_sets && !(ch == ' ' || ch == '\n' || ch == '\t')) {
+                throw runtime_error("Неправильная постановка скобок: множества должны быть разделены запятыми или пробелами");
             }
+            m++;
+            MultiSet[0].set_count = m + 1;
+            elem_in_set = 0;
+            curr_brackets_count++;
+            between_sets = false;
+        }
+        else if (ch == '}') {
+            if (curr_brackets_count == 0) {
+                throw runtime_error("Неправильная постановка скобок: лишняя закрывающая скобка '}'");
+            }
+
+            if (!bracket_stack.empty()) {
+                throw runtime_error("Неправильная постановка скобок: не все скобки элементов закрыты");
+            }
+
+            MultiSet[m].elem_count = elem_in_set + 1;
+            curr_brackets_count--;
+            between_sets = true;
+        }
+        else if (ch == '<' || ch == '[' || ch == '(') {
+            between_sets = false;
+            bracket_stack.push(ch);
+            MultiSet[m].Elem[elem_in_set].element.push_back(ch);
+            MultiSet[m].Elem[elem_in_set].code_num += ch;
+            in_element = true;
+        }
+        else if (ch == '>' || ch == ']' || ch == ')') {
+            between_sets = false;
+            if (bracket_stack.empty()) {
+                throw runtime_error("Неправильная постановка скобок: лишняя закрывающая скобка '" + string(1, ch) + "'");
+            }
+
+            char expected = bracket_stack.top();
+            if ((ch == '>' && expected != '<') ||
+                (ch == ']' && expected != '[') ||
+                (ch == ')' && expected != '(')) {
+                throw runtime_error("Неправильная постановка скобок: несоответствие скобок. Ожидалось '" +
+                    string(1, expected) + "', получено '" + string(1, ch) + "'");
+            }
+
+            bracket_stack.pop();
+            MultiSet[m].Elem[elem_in_set].element.push_back(ch);
+            MultiSet[m].Elem[elem_in_set].code_num += ch;
+            in_element = !bracket_stack.empty();
         }
         else if (ch == ',') {
             if (curr_brackets_count == 1) {
+                if (!bracket_stack.empty()) {
+                    throw runtime_error("Неправильная постановка скобок: не все скобки элемента закрыты перед запятой");
+                }
                 elem_in_set++;
+                in_element = false;
+                between_sets = false;
+            }
+            else if (between_sets) {
+                // Запятая между множествами - разрешено
+                between_sets = false;
             }
             else {
                 MultiSet[m].Elem[elem_in_set].element.push_back(ch);
@@ -83,7 +134,8 @@ void Sets(Set MultiSet[], string path) {
             }
         }
         else if (isdigit(ch)) {
-            if (curr_brackets_count == 1) {
+            between_sets = false;
+            if (curr_brackets_count == 1 && !in_element) {
                 if (MultiSet[m].Elem[elem_in_set].multiplicity == 1 && !MultiSet[m].Elem[elem_in_set].IsAlone) {
                     MultiSet[m].Elem[elem_in_set].multiplicity = (ch - '0');
                     MultiSet[m].Elem[elem_in_set].IsAlone = true;
@@ -97,25 +149,24 @@ void Sets(Set MultiSet[], string path) {
                 MultiSet[m].Elem[elem_in_set].code_num += ch;
             }
         }
-        else if (ch == '}') {
-            if (curr_brackets_count > 1) {
-                MultiSet[m].Elem[elem_in_set].element.push_back(ch);
-                MultiSet[m].Elem[elem_in_set].code_num += ch;
-                curr_brackets_count--;
-            }
-            else {
-                MultiSet[m].elem_count = elem_in_set + 1;
-                curr_brackets_count--;
-            }
-        }
-        else if (ch == ' ' || ch == '\n') {
-            // Пропускаем пробелы и переносы строк
+        else if (ch == ' ' || ch == '\n' || ch == '\t') {
+            // Пропускаем пробелы, переносы строк и табуляцию
+            // Но не сбрасываем between_sets, так как они могут быть разделителями между множествами
         }
         else {
+            between_sets = false;
             MultiSet[m].Elem[elem_in_set].element.push_back(ch);
             MultiSet[m].Elem[elem_in_set].code_num += ch;
         }
     }
+
+    if (curr_brackets_count != 0) {
+        throw runtime_error("Неправильная постановка скобок: не все скобки множеств закрыты");
+    }
+    if (!bracket_stack.empty()) {
+        throw runtime_error("Неправильная постановка скобок: не все скобки элементов закрыты");
+    }
+
     MultiSet[0].brackets_count = curr_brackets_count;
     file.close();
 }
