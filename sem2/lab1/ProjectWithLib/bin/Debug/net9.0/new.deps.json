@@ -8,16 +8,16 @@
     ".NETCoreApp,Version=v9.0": {
       "new/1.0.0": {
         "dependencies": {
-          "MyLib": "1.0.0.0"
+          "MyLib": "1.0.0"
         },
         "runtime": {
           "new.dll": {}
         }
       },
-      "MyLib/1.0.0.0": {
+      "MyLib/1.0.0": {
         "runtime": {
           "MyLib.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -30,8 +30,8 @@
       "serviceable": false,
       "sha512": ""
     },
-    "MyLib/1.0.0.0": {
-      "type": "reference",
+    "MyLib/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     }

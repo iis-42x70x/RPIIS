@@ -12,5 +12,9 @@
       <HintPath>D:\PPIIS\lab1\Lib\bin\Debug\net9.0\MyLib.dll</HintPath>
     </Reference>
   </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Lib\MyLib.csproj" />
+  </ItemGroup>
 
 </Project>

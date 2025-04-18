@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PPIIS\\lab1\\Lib\\MyLib.csproj": {}
+    "D:\\RPIIS\\sem2\\lab1\\Lib\\MyLib.csproj": {}
   },
   "projects": {
-    "D:\\PPIIS\\lab1\\Lib\\MyLib.csproj": {
+    "D:\\RPIIS\\sem2\\lab1\\Lib\\MyLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PPIIS\\lab1\\Lib\\MyLib.csproj",
+        "projectUniqueName": "D:\\RPIIS\\sem2\\lab1\\Lib\\MyLib.csproj",
         "projectName": "MyLib",
-        "projectPath": "D:\\PPIIS\\lab1\\Lib\\MyLib.csproj",
+        "projectPath": "D:\\RPIIS\\sem2\\lab1\\Lib\\MyLib.csproj",
         "packagesPath": "C:\\Users\\Егор\\.nuget\\packages\\",
-        "outputPath": "D:\\PPIIS\\lab1\\Lib\\obj\\",
+        "outputPath": "D:\\RPIIS\\sem2\\lab1\\Lib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Егор\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.105/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

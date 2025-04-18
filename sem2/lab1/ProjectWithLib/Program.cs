@@ -50,13 +50,11 @@ namespace ProjectWithLib
                     MyList<int> selectedList;
 
                     if (listChoice == 2)
-                    {
                         selectedList = list2;
-                    }
+
                     else
-                    {
                         selectedList = list1;
-                    }
+
 
                     switch (choice)
                     {

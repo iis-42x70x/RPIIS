@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "MyLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/MyLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyLib.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "MyLib/1.0.0": {
+      "type": "project",
+      "path": "../Lib/MyLib.csproj",
+      "msbuildProject": "../Lib/MyLib.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "MyLib >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Егор\\.nuget\\packages\\": {}
@@ -13,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PPIIS\\lab1\\ProjectWithLib\\new.csproj",
+      "projectUniqueName": "D:\\RPIIS\\sem2\\lab1\\ProjectWithLib\\new.csproj",
       "projectName": "new",
-      "projectPath": "D:\\PPIIS\\lab1\\ProjectWithLib\\new.csproj",
+      "projectPath": "D:\\RPIIS\\sem2\\lab1\\ProjectWithLib\\new.csproj",
       "packagesPath": "C:\\Users\\Егор\\.nuget\\packages\\",
-      "outputPath": "D:\\PPIIS\\lab1\\ProjectWithLib\\obj\\",
+      "outputPath": "D:\\RPIIS\\sem2\\lab1\\ProjectWithLib\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Егор\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -31,7 +50,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\RPIIS\\sem2\\lab1\\Lib\\MyLib.csproj": {
+              "projectPath": "D:\\RPIIS\\sem2\\lab1\\Lib\\MyLib.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -65,7 +88,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.105/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
