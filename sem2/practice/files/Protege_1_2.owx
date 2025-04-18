@@ -1,0 +1,398 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/dmitryburbas/ontologies/2025/3/untitled-ontology-8"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/dmitryburbas/ontologies/2025/3/untitled-ontology-8">
+    <Prefix name="" IRI="http://www.semanticweb.org/dmitryburbas/ontologies/2025/3/untitled-ontology-8/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#angle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#area"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#circle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#equilateral_triangle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#geometrical_figure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#point"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#polygon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#triangle"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#beCentralAngle"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#beInscribedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasArea"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCenter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasVertex"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMeasureUnit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasNumericValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSymbolicValue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#A"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AOB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Angle_ABC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Angle_AOB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Area_Circle_O"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Area_Triangle_AOB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#B"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#C"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Circle_O"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#O"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#angle"/>
+        <Class IRI="#geometrical_figure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#circle"/>
+        <Class IRI="#geometrical_figure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#equilateral_triangle"/>
+        <Class IRI="#triangle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#point"/>
+        <Class IRI="#geometrical_figure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#polygon"/>
+        <Class IRI="#geometrical_figure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#triangle"/>
+        <Class IRI="#polygon"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#geometrical_figure"/>
+        <NamedIndividual IRI="#A"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#point"/>
+        <NamedIndividual IRI="#A"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#equilateral_triangle"/>
+        <NamedIndividual IRI="#AOB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#geometrical_figure"/>
+        <NamedIndividual IRI="#AOB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#polygon"/>
+        <NamedIndividual IRI="#AOB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#triangle"/>
+        <NamedIndividual IRI="#AOB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#angle"/>
+        <NamedIndividual IRI="#Angle_ABC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#geometrical_figure"/>
+        <NamedIndividual IRI="#Angle_ABC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#angle"/>
+        <NamedIndividual IRI="#Angle_AOB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#geometrical_figure"/>
+        <NamedIndividual IRI="#Angle_AOB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#area"/>
+        <NamedIndividual IRI="#Area_Circle_O"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#area"/>
+        <NamedIndividual IRI="#Area_Triangle_AOB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#geometrical_figure"/>
+        <NamedIndividual IRI="#B"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#point"/>
+        <NamedIndividual IRI="#B"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#geometrical_figure"/>
+        <NamedIndividual IRI="#C"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#point"/>
+        <NamedIndividual IRI="#C"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#circle"/>
+        <NamedIndividual IRI="#Circle_O"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#geometrical_figure"/>
+        <NamedIndividual IRI="#Circle_O"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#geometrical_figure"/>
+        <NamedIndividual IRI="#O"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#point"/>
+        <NamedIndividual IRI="#O"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArea"/>
+        <NamedIndividual IRI="#AOB"/>
+        <NamedIndividual IRI="#Area_Triangle_AOB"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#AOB"/>
+        <NamedIndividual IRI="#A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#AOB"/>
+        <NamedIndividual IRI="#B"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#AOB"/>
+        <NamedIndividual IRI="#O"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#beInscribedIn"/>
+        <NamedIndividual IRI="#Angle_ABC"/>
+        <NamedIndividual IRI="#Circle_O"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#Angle_ABC"/>
+        <NamedIndividual IRI="#A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#Angle_ABC"/>
+        <NamedIndividual IRI="#B"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#Angle_ABC"/>
+        <NamedIndividual IRI="#C"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#beCentralAngle"/>
+        <NamedIndividual IRI="#Angle_AOB"/>
+        <NamedIndividual IRI="#Circle_O"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#Angle_AOB"/>
+        <NamedIndividual IRI="#A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#Angle_AOB"/>
+        <NamedIndividual IRI="#B"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#Angle_AOB"/>
+        <NamedIndividual IRI="#O"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArea"/>
+        <NamedIndividual IRI="#Circle_O"/>
+        <NamedIndividual IRI="#Area_Circle_O"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCenter"/>
+        <NamedIndividual IRI="#Circle_O"/>
+        <NamedIndividual IRI="#O"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMeasureUnit"/>
+        <NamedIndividual IRI="#Angle_ABC"/>
+        <Literal>degree</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumericValue"/>
+        <NamedIndividual IRI="#Angle_ABC"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">36.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMeasureUnit"/>
+        <NamedIndividual IRI="#Area_Circle_O"/>
+        <Literal>cm²</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumericValue"/>
+        <NamedIndividual IRI="#Area_Circle_O"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">15.70796327</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSymbolicValue"/>
+        <NamedIndividual IRI="#Area_Circle_O"/>
+        <Literal>5π</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMeasureUnit"/>
+        <NamedIndividual IRI="#Area_Triangle_AOB"/>
+        <Literal>cm²</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumericValue"/>
+        <NamedIndividual IRI="#Area_Triangle_AOB"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">2.24399475</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSymbolicValue"/>
+        <NamedIndividual IRI="#Area_Triangle_AOB"/>
+        <Literal>5π/7</Literal>
+    </DataPropertyAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasArea"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasCenter"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#beCentralAngle"/>
+        <Class IRI="#angle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#beInscribedIn"/>
+        <Class IRI="#angle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasArea"/>
+        <Class IRI="#geometrical_figure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCenter"/>
+        <Class IRI="#circle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasVertex"/>
+        <Class IRI="#angle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasVertex"/>
+        <Class IRI="#polygon"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#beCentralAngle"/>
+        <Class IRI="#circle"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#beInscribedIn"/>
+        <Class IRI="#circle"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasArea"/>
+        <Class IRI="#area"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCenter"/>
+        <Class IRI="#point"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasVertex"/>
+        <Class IRI="#point"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMeasureUnit"/>
+        <Class IRI="#angle"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMeasureUnit"/>
+        <Class IRI="#area"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasNumericValue"/>
+        <Class IRI="#angle"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasNumericValue"/>
+        <Class IRI="#area"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSymbolicValue"/>
+        <Class IRI="#angle"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSymbolicValue"/>
+        <Class IRI="#area"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMeasureUnit"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasNumericValue"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSymbolicValue"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
