@@ -47,16 +47,20 @@ namespace lab2
         }
 
         public void CreateOrientedSets(string set, uint n)
-        {
+        { 
             try
             {
                 var elements = ParseSet(set);
         
+                if (elements.Count == 0)
+                    return;
+                
                 if (n > elements.Count)
                 {
                     Console.WriteLine($"Ошибка: n = {n} больше количества элементов множества ({elements.Count})");
                     return;
                 }
+                
                 
                 var result = new List<List<string>>();
                 void Backtrack(List<string> current, HashSet<int> used)
@@ -107,6 +111,11 @@ namespace lab2
                 throw new ArgumentException("Множество должно быть в фигурных скобках.");
 
             set = set.Substring(1, set.Length - 2).Trim(); // удаляем внешние скобки, удаляем пробелы
+            
+            if (string.IsNullOrEmpty(set))
+            {
+                return new List<string>(); // Возвращаем пустой список, если set = ""
+            }
             var elements = new List<string>();
             int level = 0, start = 0;
             
