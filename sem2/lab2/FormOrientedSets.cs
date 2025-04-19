@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
+
 namespace lab2
 {
     public class FormOrientedSets : IFormOrientedSets
@@ -45,7 +46,17 @@ namespace lab2
             try
             {
                 var elements = ParseSet(set);
-        
+               
+                HashSet<string> dublicate = new HashSet<string>();
+                foreach (var item in elements)
+                {
+                    if (!dublicate.Add(item)) 
+                    {
+                        Console.WriteLine($"Ошибка: в множестве есть дубликат: {item}");
+                        return;
+                    }
+                }
+
                 if (elements.Count == 0)
                     return;
                 
@@ -135,6 +146,15 @@ namespace lab2
                 }
             }
             elements.Add(set.Substring(start).Trim()); // заносим последний элемент, у которого в конце не будет запятой(старта и до конца)
+            HashSet<string> dublicate = new HashSet<string>();
+            foreach (var item in elements)
+            {
+                if (!dublicate.Add(item)) 
+                {
+                    Console.WriteLine($"Ошибка: в множестве есть дубликат: {item}");
+                    return new List<string>();
+                }
+            }
             return elements;
         }
         
