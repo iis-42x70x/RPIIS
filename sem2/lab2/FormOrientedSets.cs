@@ -24,10 +24,8 @@ namespace lab2
             try
             {
                 
-                string filePath = Path.Combine(
-                    AppDomain.CurrentDomain.BaseDirectory, //Получаем путь,папка bin\Debug\net9.0
-                    fileName
-                );
+                string filePath = @"D:\RPIIS\sem2\lab2\set.txt";
+
 
                 
                 if (!File.Exists(filePath))
@@ -92,6 +90,7 @@ namespace lab2
                 {
                     Console.WriteLine("{" + string.Join(", ", o) + "}");
                 }
+                Console.WriteLine($"Всего комбинаций: {result.Count}");
 
             }
             catch (Exception ex)
