@@ -204,15 +204,18 @@ namespace lab2
 - ParseSet - Разбивает множество на элементы
 - Backtrack — Перебираем все возможные варианты рекурсивно.
 
+
 ### Backtrack: ###
 #### Саму суть поиска мы реализуем в этой части кода 
-![img_9.png](img_9.png)
+![image](https://github.com/user-attachments/assets/f64435be-8b3e-42d9-8b99-6c59beca570d)
+
 
 - Мы создаем list result, который будем хранить массив массивов, то есть все возможные перестановки элементов исходного множества в формате string
 - Далее в функции Backtrack прописывается вся логика. В ней мы уже закидываем полученные множества в **result**.
 - Вызываем функцию в третьей строчке(скрин), передавая в нее пустой list string-ов ***current*** и коллекцию HashSet ***used***.
 **Current** - будет хранить множество(уникальную комбинацию элементов), которое добавим в ***result***. В **used** - помечаем использованные элементы.
-![img.png](img.png)
+![image](https://github.com/user-attachments/assets/e17af7d5-1447-4ad9-93ba-52e3a52962a6)
+
 
 ## Пример работы
 Реализуем библиотеку в программе:
@@ -304,21 +307,27 @@ namespace lab2
 
 ## Вот так работает:
 ### Введем такое множество через консоль
-![img_1.png](img_1.png)
+![image](https://github.com/user-attachments/assets/6c345aab-a86e-47a9-bf27-b77d1035dc57)
+
 ### И введем сколько хотим элементов видеть элементов в итоговых множествах и увидим такой результат:
-![img_2.png](img_2.png)
+![image](https://github.com/user-attachments/assets/4d0b4e62-d97f-4432-9ae6-6607562384bc)
+
 ***чем больше введенное число - тем больше количество комбинаций, которое может получиться***
 ### Это множество, которое мы ввели, записалось в файлик set.txt:
-![img_3.png](img_3.png)
+![image](https://github.com/user-attachments/assets/07d8fc9b-d3bd-4892-a88d-96de21cc3a91)
+
 ### Так же мы можем ввести в файлик множество, которое сможем прочитать в программе, сейчас так и сделаем
-![img_4.png](img_4.png)
+![image](https://github.com/user-attachments/assets/b8182082-fa56-432f-8482-6d4850e6153c)
+
 Вот с одним элементом:
+![image](https://github.com/user-attachments/assets/95054ac6-d9ca-44e3-a90a-f0ec93280902)
 
-![img_5.png](img_5.png)
 **Обработка ошибки**
-![img_6.png](img_6.png)
+![image](https://github.com/user-attachments/assets/2b2b3c79-4e2d-4213-87c3-1d5faf1b7718)
 
-**Тут не все влезло, максимальное количество комибинаций для текущего множества** ![img_7.png](img_7.png)
+
+**Тут не все влезло, максимальное количество комибинаций для текущего множества** ![image](https://github.com/user-attachments/assets/d7bf3784-0298-484c-9ee7-71c74bd03a64)
+
 
 ## Тестирование:
 **Были написаны простеньких 5 unit-тестов:**
@@ -430,7 +439,8 @@ public void ReadFile_FileExists_ReturnsContent()
 ```
 
 ### Все тесты успешно пройдены ура:
-![img_8.png](img_8.png)
+![image](https://github.com/user-attachments/assets/ea65e1ba-6e78-49a6-822e-bca065976884)
+
 
 ## Вывод
 В ходе данной лабораторной работы я научиться разрабатывать алгоритмы выполнения операций над множествами и разрабатывать Unit-тесты
