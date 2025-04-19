@@ -15,7 +15,7 @@ namespace lab2
             catch (Exception ex)
             {
                 Console.WriteLine($"Ошибка: {ex.Message}"); 
-            }
+            }   
         }
 
    
@@ -23,11 +23,7 @@ namespace lab2
         {
             try
             {
-                
                 string filePath = @"D:\RPIIS\sem2\lab2\set.txt";
-
-
-                
                 if (!File.Exists(filePath))
                 {
                     Console.WriteLine($"Файл {fileName} не найден в {filePath}");

@@ -25,20 +25,22 @@ namespace lab2.FormOrientedSetsTests.FormOrientedSetsTests
         public void ReadFile_FileExists_ReturnsContent()
         {
             // Arrange
-            var tempFilePath = Path.GetTempFileName(); // получаем сгенерированное название файла
-            var expectedContent = "Test file content";
-            File.WriteAllText(tempFilePath, expectedContent);
+            string filePath = @"D:\RPIIS\sem2\lab2\set.txt"; // Указываем конкретный путь к файлу
+            string expectedContent = "Test file content";
 
-            var formOrientedSets = new FormOrientedSets(); // создали объект для вызова метода
+            // Создаём файл и записываем в него содержимое
+            File.WriteAllText(filePath, expectedContent);
+
+            var formOrientedSets = new FormOrientedSets(); // Создаём объект для вызова метода
 
             // Act
-            var actualContent = formOrientedSets.ReadFile(tempFilePath);
+            string actualContent = formOrientedSets.ReadFile(filePath);
 
             // Assert
             Assert.Equal(expectedContent, actualContent);
 
             // Cleanup
-            File.Delete(tempFilePath);
+            File.Delete(filePath); // Удаляем файл после завершения теста
         }
         
         [Fact]
