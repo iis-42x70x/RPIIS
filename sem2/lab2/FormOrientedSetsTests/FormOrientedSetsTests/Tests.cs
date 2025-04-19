@@ -1,9 +1,6 @@
-﻿using System;
-using System.IO;
-using lab2;
-using Xunit;
+﻿using Xunit;
 
-namespace Tests
+namespace lab2.FormOrientedSetsTests.FormOrientedSetsTests
 {
     public class FormOrientedSetsTests
     {
