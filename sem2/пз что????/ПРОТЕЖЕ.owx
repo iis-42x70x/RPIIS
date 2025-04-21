@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-12"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-12">
+    <Prefix name="" IRI="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-12/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Звезда"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Интервал"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Планета"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Человек"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#астрономический_объект"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#объект_вне_Земли"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#бывал_на"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#быть_естественным_спутником"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#место_видимой_звёздной_величины"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#место_освещения"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#наиболее_близкий"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#расстояние_между"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#являться_естественным_спутником"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Номер_по_величине"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Номер_по_яркости"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#видимая_звёздная_величина"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#измерение_в_m"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#измерение_в_а.е"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#измерение_в_диаметрах_Земли"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#измерение_в_км"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#наибольшая_освещённость"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#наименьшая_освещённость"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Земное_небо"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Человек"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#земля"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#луна"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#солнце"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#астрономический_объект"/>
+        <Class IRI="#объект_вне_Земли"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Человек"/>
+        <NamedIndividual IRI="#Человек"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Планета"/>
+        <NamedIndividual IRI="#земля"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#астрономический_объект"/>
+        <NamedIndividual IRI="#луна"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Звезда"/>
+        <NamedIndividual IRI="#солнце"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#бывал_на"/>
+        <NamedIndividual IRI="#Человек"/>
+        <NamedIndividual IRI="#луна"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#быть_естественным_спутником"/>
+        <NamedIndividual IRI="#луна"/>
+        <NamedIndividual IRI="#земля"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#место_видимой_звёздной_величины"/>
+        <NamedIndividual IRI="#луна"/>
+        <NamedIndividual IRI="#Земное_небо"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#место_освещения"/>
+        <NamedIndividual IRI="#луна"/>
+        <NamedIndividual IRI="#земля"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#наиболее_близкий"/>
+        <NamedIndividual IRI="#луна"/>
+        <NamedIndividual IRI="#солнце"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#расстояние_между"/>
+        <NamedIndividual IRI="#солнце"/>
+        <NamedIndividual IRI="#луна"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Номер_по_величине"/>
+        <NamedIndividual IRI="#луна"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Номер_по_яркости"/>
+        <NamedIndividual IRI="#луна"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#видимая_звёздная_величина"/>
+        <NamedIndividual IRI="#луна"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">12.71</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#наибольшая_освещённость"/>
+        <NamedIndividual IRI="#луна"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#наименьшая_освещённость"/>
+        <NamedIndividual IRI="#луна"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Номер_по_яркости"/>
+        <NamedIndividual IRI="#солнце"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#измерение_в_а.е"/>
+        <NamedIndividual IRI="#солнце"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.00257</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#измерение_в_диаметрах_Земли"/>
+        <NamedIndividual IRI="#солнце"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#измерение_в_км"/>
+        <NamedIndividual IRI="#солнце"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">384467</Literal>
+    </DataPropertyAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
