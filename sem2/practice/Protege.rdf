@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3/"
+     xml:base="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-3="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3/var25pz"/>
+        <rdfs:comment>Укулеле — четырёхструнный щипковый музыкальный инструмент, либо же со сдвоенными 
+струнами, т. е. — восьмиструнный. Появился в 1880-е годы как развитие брагиньи —
+миниатюрной гитары с острова Мадейра, родственной португальскому кавакиньо. Укулеле
+распространена на различных тихоокеанских островах, со времён гастролей гавайских 
+музыкантов на Тихоокеанской выставке 1915 года в Сан-Франциско. Название переводится по 
+одной версии как «прыгающая блоха», по другой — как «подарок, который пришёл сюда». 
+Гитара укулеле может быть разных форм, как стандартной, гитарообразной, так и формы 
+«ананас», в форме весла, треугольной формы, квадратной</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Происходит_из -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Происходит_из"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Проходит_в -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Проходит_в"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Проходит_на -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Проходит_на"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Распространен_на -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Распространен_на"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Распространен_со_времен -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Распространен_со_времен"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Является_развитием -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Является_развитием"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Является_родственным -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Является_родственным"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Год_прохождения -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Год_прохождения"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Количество_струн -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Количество_струн"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Название -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Название"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Переводится_как -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Переводится_как">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Название"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Появился_в -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Появился_в"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Форма_музыкального_инструмента -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Форма_музыкального_инструмента"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Географическая_область -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Географическая_область"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Город -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Город">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Географическая_область"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Государство -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Государство">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Географическая_область"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Миниатюрная_гитара -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Миниатюрная_гитара">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Музыкальный_инструмент"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Музыкальный_инструмент -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Музыкальный_инструмент"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Остров -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Остров">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Географическая_область"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Публичная_выставка -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Публичная_выставка"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Публичное_выступление -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Публичное_выступление">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Публичная_выставка"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Щипковый_инструмент -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Щипковый_инструмент">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Музыкальный_инструмент"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Брагинья -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Брагинья">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Миниатюрная_гитара"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Музыкальный_инструмент"/>
+        <untitled-ontology-3:Происходит_из rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Остров_Мадейра"/>
+        <untitled-ontology-3:Является_родственным rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Кавакиньо"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Гастроли_гавайских_музыкантов -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Гастроли_гавайских_музыкантов">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Публичное_выступление"/>
+        <untitled-ontology-3:Проходит_в rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Тихоокеанская_выставка"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Кавакиньо -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Кавакиньо">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Миниатюрная_гитара"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Музыкальный_инструмент"/>
+        <untitled-ontology-3:Происходит_из rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Португалия"/>
+        <untitled-ontology-3:Является_родственным rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Брагинья"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Остров_Мадейра -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Остров_Мадейра">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Остров"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Португалия -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Португалия">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Государство"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Сан-Франциско -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Сан-Франциско">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Город"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Тихоокеанская_выставка -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Тихоокеанская_выставка">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Публичная_выставка"/>
+        <untitled-ontology-3:Проходит_в rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Сан-Франциско"/>
+        <untitled-ontology-3:Год_прохождения rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1915</untitled-ontology-3:Год_прохождения>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Тихоокеанские_острова -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Тихоокеанские_острова">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Остров"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Укулеле -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Укулеле"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#укулеле -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#укулеле">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Музыкальный_инструмент"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Щипковый_инструмент"/>
+        <untitled-ontology-3:Распространен_на rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Тихоокеанские_острова"/>
+        <untitled-ontology-3:Распространен_со_времен rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Гастроли_гавайских_музыкантов"/>
+        <untitled-ontology-3:Является_развитием rdf:resource="http://www.semanticweb.org/juliarabaya/ontologies/2025/3/untitled-ontology-3#Брагинья"/>
+        <untitled-ontology-3:Количество_струн rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</untitled-ontology-3:Количество_струн>
+        <untitled-ontology-3:Количество_струн rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</untitled-ontology-3:Количество_струн>
+        <untitled-ontology-3:Переводится_как rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">&quot;Подарок, который пришел сюда&quot;</untitled-ontology-3:Переводится_как>
+        <untitled-ontology-3:Переводится_как rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">&quot;Прыгающая блоха&quot;</untitled-ontology-3:Переводится_как>
+        <untitled-ontology-3:Появился_в rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1880-е</untitled-ontology-3:Появился_в>
+        <untitled-ontology-3:Форма_музыкального_инструмента rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">&quot;ананас&quot;</untitled-ontology-3:Форма_музыкального_инструмента>
+        <untitled-ontology-3:Форма_музыкального_инструмента rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">&quot;весло&quot;</untitled-ontology-3:Форма_музыкального_инструмента>
+        <untitled-ontology-3:Форма_музыкального_инструмента rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">&quot;гитарообразная&quot;</untitled-ontology-3:Форма_музыкального_инструмента>
+        <untitled-ontology-3:Форма_музыкального_инструмента rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">&quot;квадратная&quot;</untitled-ontology-3:Форма_музыкального_инструмента>
+        <untitled-ontology-3:Форма_музыкального_инструмента rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">&quot;стандартная&quot;</untitled-ontology-3:Форма_музыкального_инструмента>
+        <untitled-ontology-3:Форма_музыкального_инструмента rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">&quot;треугольная&quot;</untitled-ontology-3:Форма_музыкального_инструмента>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
