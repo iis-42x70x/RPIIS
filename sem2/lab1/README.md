@@ -171,7 +171,7 @@ public:
 
 ## Источники
 
-[WikiPedia](https://ru.wikipedia.org/wiki/Дерево_(структура_данных))](https://ru.wikipedia.org/wiki/Дерево_квадрантов)
+[WikiPedia](https://ru.wikipedia.org/wiki/Дерево_квадрантов)
 
 [habr](https://habr.com/ru/articles/473066/)
 
