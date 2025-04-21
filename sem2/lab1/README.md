@@ -7,7 +7,7 @@
 ## Задачи:
 * Выполнить свой вариант лабораторной работы;
 * Перенести получившееся решение на язык программирования С++;
-* Реализовать все указанные в задании функции для кыадродерева.
+* Реализовать все указанные в задании функции для квадродерева.
 
 ## Задание
 Вариант №15: Квадродерево. Перевод матрицы в дерево. Перевод дерева в матрицу.
@@ -35,7 +35,7 @@ struct Node{
 };
 ```
 Класс состоит из структуры узла Node, хранящую значение типа int и указатели на детей этого узла.
-Также в классе описаны консьруктор и деструктор структуры.
+Также в классе описаны конструктор и деструктор структуры.
 
 ### Структура Node
 ```c++
@@ -171,9 +171,9 @@ public:
 
 ## Источники
 
-[WikiPedia]([https://www.youtube.com/watch?v=lQ-lPjbb9Ew](https://ru.wikipedia.org/wiki/Дерево_(структура_данных))](https://ru.wikipedia.org/wiki/Дерево_квадрантов))
+[WikiPedia](https://ru.wikipedia.org/wiki/Дерево_(структура_данных))](https://ru.wikipedia.org/wiki/Дерево_квадрантов)
 
-[habr]([https://prog-cpp.ru/data-dls/](https://habr.com/ru/articles/473066/))
+[habr](https://habr.com/ru/articles/473066/)
 
-[GeeksForGeeks]([https://www.bestprog.net/ru/2022/02/16/c-linear-doubly-linked-bidirectional-list-general-concepts-ru/](https://www.geeksforgeeks.org/quad-tree/?ysclid=m8f2ntg2l5180079933))
+[GeeksForGeeks](https://www.geeksforgeeks.org/quad-tree/?ysclid=m8f2ntg2l5180079933)
 
