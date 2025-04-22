@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14/"
+     xml:base="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-14="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#meeting_where -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#meeting_where">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Boat"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Meeting_point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#meeting_who -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#meeting_who">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Boat"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Raft"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#overtaking_where -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#overtaking_where">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Boat"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Overtaking_point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#overtaking_who -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#overtaking_who">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Boat"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Raft"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#reverse_where -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#reverse_where">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Boat"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Reversal_point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#has_coords -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#has_coords">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Point"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#has_flow_speed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#has_flow_speed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#River"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#has_own_speed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#has_own_speed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Boat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Boat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Boat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Floating_object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Floating_object -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Floating_object"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Meeting_point -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Meeting_point">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Point"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Overtaking_point -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Overtaking_point">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Point"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Point -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Point"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Raft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Raft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Floating_object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Reversal_point -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Reversal_point">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Point"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#River -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#River"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#boat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#boat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Boat"/>
+        <untitled-ontology-14:meeting_where rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#point_6km_below_A"/>
+        <untitled-ontology-14:meeting_who rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#raft"/>
+        <untitled-ontology-14:overtaking_where rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#point_A"/>
+        <untitled-ontology-14:overtaking_who rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#raft"/>
+        <untitled-ontology-14:reverse_where rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#reversal_point"/>
+        <untitled-ontology-14:has_own_speed>v1</untitled-ontology-14:has_own_speed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#point_6km_below_A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#point_6km_below_A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Meeting_point"/>
+        <untitled-ontology-14:has_coords>(A2, B2)</untitled-ontology-14:has_coords>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#point_A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#point_A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Overtaking_point"/>
+        <untitled-ontology-14:has_coords>(A0, B0)</untitled-ontology-14:has_coords>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#raft -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#raft">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Raft"/>
+        <untitled-ontology-14:has_own_speed>flow_speed</untitled-ontology-14:has_own_speed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#reversal_point -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#reversal_point">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#Reversal_point"/>
+        <untitled-ontology-14:has_coords>(A1, B1)</untitled-ontology-14:has_coords>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#river -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#river">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#River"/>
+        <untitled-ontology-14:has_flow_speed>v0</untitled-ontology-14:has_flow_speed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#60_minutes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-14#60_minutes"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
