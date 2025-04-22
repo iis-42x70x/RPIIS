@@ -38,20 +38,35 @@
 ```py
 
   def ensure_input_file():
+    """Создает файл input.txt с примерами, если он не существует."""
     if not os.path.exists("input.txt"):
-        with open("input.txt", "w") as file:
-            file.write("A={1,2,3} B={2,3,4}\n")
+        print("Файл input.txt не найден. Создаем новый с примером данных...")
+        default_data = "{1,2,3,3} {2,3,4}\n"  # Пример данных
+        try:
+            with open("input.txt", "w") as file:
+                file.write(default_data)
+            print(f"Файл создан с примером: {default_data}")
+            return True
+        except Exception as e:
+            print(f"Ошибка при создании файла: {e}")
+            return False
+    return True
 
 ```
 
-2.  **Считывание данных из файла (`read_input_file`)**
+2.  **Считывание данных из файла (`show_file_content`)**
 Считываются данные из последней строки файла input.txt.
   
 ```py
-def read_input_file():
-    with open("input.txt", "r") as file:
-        lines = file.readlines()
-    return lines[-1].strip()  # Берём последнюю строку
+def show_file_content():
+    """Показывает содержимое файла"""
+    try:
+        with open("input.txt", "r") as file:
+            content = file.read()
+            print("\nТекущее содержимое файла:")
+            print(content)
+    except Exception as e:
+        print(f"Ошибка чтения файла: {e}")
 
 
 ```
@@ -60,35 +75,54 @@ def read_input_file():
   
 ```py
 def overwrite_sets_in_file():
-    user_data = input("Введите два множества: ").strip()
-    with open("input.txt", "w") as file:
-        file.write(user_data + "\n")
+    """Перезаписывает множества в файл"""
+    print("\nФормат ввода:")
+    print("1. Для обычных множеств: {элемент1,элемент2} {элемент3,элемент4}")
+    print("2. Для упорядоченных множеств: <элемент1,элемент2> <элемент3,элемент4>")
+    print("Пример: {a,b,c,c} {a,b,d} или <1,2,3> <2,3,4>")
 
 
 
 ```
-4.  **Парсинг множества (`parse_set`)**
+4.  **Чтение множеств из файла (`read_sets_from_file`)**
+Читает множества из файла и возвращает последнюю строку данных, игнорируя строки с "Результат".
+  
+```py
+def read_sets_from_file():
+    """Чтение множеств из файла с проверкой формата"""
+    try:
+        with open("input.txt", "r") as file:
+            lines = [line.strip() for line in file if line.strip()]
+
+        if not lines:
+            print("Файл пуст! Сначала добавьте данные.")
+            return None
+
+
+
+```
+5.  **Парсинг множества (`parse_set`)**
 Множество из строки преобразуется в список элементов. Также проверяется корректность формата.
 ```py
 def parse_set(set_str):
-    elements = []
-    current = ""
-    for char in set_str[1:-1]:  # Убираем первые и последние символы ({ или < и } или >)
-        if char == ",":
-            elements.append(current.strip())
-            current = ""
-        else:
-            current += char
-    if current.strip():
-        elements.append(current.strip())
-    return elements, None
+    """Парсинг множества с обработкой вложенных структур"""
+    if len(set_str) < 2:
+        return None, "Слишком короткая строка множества"
+
+    delimiter_open = set_str[0]
+    delimiter_close = '}' if delimiter_open == '{' else '>'
+
+    if set_str[-1] != delimiter_close:
+        return None, f"Несоответствие скобок: ожидалось {delimiter_close}"
+
 
 
 ```
-5.  **Подсчёт количества вхождений элементов (`count_elements`)**
-Создаётся словарь, где ключ — элемент множества, а значение — количество его вхождений.
+6.  **Подсчёт количества вхождений элементов (`count_elements`)**
+Считает количество вхождений каждого элемента в списке.
 ```py
 def count_elements(elements):
+    """Подсчет количества вхождений элементов"""
     counts = {}
     for elem in elements:
         counts[elem] = counts.get(elem, 0) + 1
@@ -97,53 +131,51 @@ def count_elements(elements):
 
 
 ```
-6.  **Вычисление разности множеств с учётом кратных вхождений (`set_difference`)**
-Для каждого элемента из множества A проверяется его наличие в множестве B. Если элемент есть в B, его кратность уменьшается. Если нет — элемент добавляется в результат.
+7.  **Вычисление разности множеств с учётом кратных вхождений (`multiset_difference`)**
+Вычисляет разность двух мультимножеств, учитывая кратные вхождения.
 ```py
-def set_difference(set1, set2):
+def multiset_difference(set1, set2):
+    """Вычисление разности с учетом кратностей"""
     counts2 = count_elements(set2)
     result = []
+
     for elem in set1:
         if counts2.get(elem, 0) > 0:
             counts2[elem] -= 1
         else:
             result.append(elem)
+
     return result
 
 
 
 
 ```
-7.  **Форматирование множества (`format_set`)**
-Результат разности преобразуется обратно в строку в зависимости от типа множества (упорядоченное или неупорядоченное).
+8.  **Форматирование множества (`format_result`)**
+Форматирует список результата в строку в стиле исходного множества ({} или <>).
 ```py
-def format_set(elements, set_type):
-    if set_type == "ordered":
-        return "<" + ",".join(elements) + ">"
+def format_result(elements, original_set):
+    """Форматирование результата в тот же стиль, что и входное множество"""
+    if original_set.startswith('<'):
+        return '<' + ','.join(elements) + '>'
     else:
-        return "{" + ",".join(elements) + "}"
+        return '{' + ','.join(elements) + '}'
 
 
 
 
 ```
-8.  **Обработка строки с двумя множествами (`process_data`)**
-Строка с двумя множествами разделяется, проверяется на ошибки, затем вычисляется разность множеств.
+9.  **Сохранение результата в файл (`save_result`)**
+Сохраняет результат вычислений в файл.
 ```py
-def process_data(line):
-    set1, set2 = line.split(maxsplit=1)
-    result = set_difference(parse_set(set1.strip())[0], parse_set(set2.strip())[0])
-    return result
-
-
-
-```
-9.  **Сохранение результата в файл (`save_result_to_input`)**
-Результат вычисления разности записывается в файл.
-```py
-def save_result_to_input(result):
-    with open("input.txt", "a") as file:
-        file.write(f"Результат: {result}\n")
+def save_result(result):
+    """Сохранение результата в файл"""
+    try:
+        with open("input.txt", "a") as file:
+            file.write(f"Результат: {result}\n")
+        print("Результат сохранен в файл.")
+    except Exception as e:
+        print(f"Ошибка сохранения: {e}")
 
 
 
