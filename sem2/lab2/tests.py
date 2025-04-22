@@ -1,49 +1,47 @@
 import unittest
-from main import parse_set, set_difference, count_elements, format_set, process_data, read_input_file
+from main import ensure_input_file, parse_set, count_elements, multiset_difference, format_result, save_result
+class TestFunctions(unittest.TestCase):
+    def test_ensure_input_file(self):
+        """Проверка создания файла input.txt"""
+        import os
+        if os.path.exists("input.txt"):
+            os.remove("input.txt")
+        self.assertTrue(ensure_input_file())
+        self.assertTrue(os.path.exists("input.txt"))
 
-class TestYourProgram(unittest.TestCase):
+    def test_parse_set(self):
+        """Проверка парсинга множества"""
+        elements, error = parse_set("{1,2,3,3}")
+        self.assertEqual(elements, ['1', '2', '3', '3'])
+        self.assertIsNone(error)
 
-    def test_parse_set_valid(self):
-        """Тест: корректный парсинг множества с правильным форматом."""
-        result, err = parse_set("{1,2,3}")
-        self.assertIsNone(err, "Парсинг корректного множества должен завершиться успешно")
-        self.assertEqual(result, ["1", "2", "3"], "Результат парсинга множества неверный")
+    def test_multiset_difference(self):
+        """Проверка разности мультимножеств"""
+        set1 = ['1', '2', '3', '3']
+        set2 = ['2', '3', '4']
+        result = multiset_difference(set1, set2)
+        self.assertEqual(result, ['1', '3'])
 
-    def test_parse_set_invalid(self):
-        """Тест: некорректный формат множества."""
-        result, err = parse_set("[1,2,3]")
-        self.assertIsNotNone(err, "Некорректный формат множества должен вызывать ошибку")
-        self.assertIsNone(result, "Результат парсинга множества с некорректным форматом должен быть пустым")
+    def test_format_result(self):
+        """Проверка форматирования результата"""
+        elements = ['1', '3']
+        original_set = "{1,2,3,3}"
+        result = format_result(elements, original_set)
+        self.assertEqual(result, "{1,3}")
 
-    def test_parse_set_nested(self):
-        """Тест: корректный парсинг вложенного множества."""
-        result, err = parse_set("<1,{2,3},4>")
-        self.assertIsNone(err, "Парсинг вложенного множества должен завершиться успешно")
-        self.assertEqual(result, ["1", "{2,3}", "4"], "Результат парсинга вложенного множества неверный")
+    def test_save_result(self):
+        """Проверка сохранения результата в файл"""
+        result = "{1,3}"
+        save_result(result)
+        with open("input.txt", "r") as f:
+            content = f.read().strip()
+        self.assertTrue("Результат: {1,3}" in content)
 
     def test_count_elements(self):
-        """Тест: подсчет количества вхождений элементов."""
-        elements = ["a", "b", "a", "c", "b", "a"]
+        """Проверка подсчета количества элементов"""
+        elements = ['a', 'b', 'a', 'c', 'b', 'a']
         counts = count_elements(elements)
-        self.assertEqual(counts, {"a": 3, "b": 2, "c": 1}, "Подсчет количества элементов выполнен неверно")
-
-    def test_set_difference(self):
-        """Тест: корректное вычисление разности множеств."""
-        set1 = ["1", "2", "2", "3"]
-        set2 = ["2", "3"]
-        result = set_difference(set1, set2)
-        self.assertEqual(result, ["1", "2"], "Разность множеств вычислена неверно")
-
-    def test_format_set(self):
-        """Тест: корректное форматирование множества."""
-        elements = ["1", "2", "3"]
-        formatted_unordered = format_set(elements, "unordered")
-        self.assertEqual(formatted_unordered, "{1,2,3}", "Неверное форматирование неупорядоченного множества")
-        formatted_ordered = format_set(elements, "ordered")
-        self.assertEqual(formatted_ordered, "<1,2,3>", "Неверное форматирование упорядоченного множества")
-
-
-
+        self.assertEqual(counts, {'a': 3, 'b': 2, 'c': 1})
 
 if __name__ == "__main__":
     unittest.main()
