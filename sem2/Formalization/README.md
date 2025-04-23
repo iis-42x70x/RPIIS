@@ -30,4 +30,4 @@
 технологии OSTIS, используя редактор KBE и язык SCg, было формализовано математическое выражение.
 ***
 
-![mem](https://i.gifer.com/KC20.gif)
+![mem](https://i.gifer.com/4KI.gif)
