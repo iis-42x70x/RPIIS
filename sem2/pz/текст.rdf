@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7/"
+     xml:base="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-7="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#включение -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#включение"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#движение_вверх -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#движение_вверх"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#движение_вниз -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#движение_вниз"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#находиться_в -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#находиться_в"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#ниже -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#ниже">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#обеспечивание -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#обеспечивание">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#обогнавший -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#обогнавший"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#повернул_во -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#повернул_во"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#разность -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#разность"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#результат_разности_с_вычитаемым -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#результат_разности_с_вычитаемым"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#результат_разности_с_уменьшаемым -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#результат_разности_с_уменьшаемым"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#свойство -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#свойство"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#характеристика -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#характеристика"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#измерение_в_километрах -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#измерение_в_километрах"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#измерение_в_минутах -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#измерение_в_минутах"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#водный_объект -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#водный_объект"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#деталь -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#деталь"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#искомая_величина -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#искомая_величина"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#работа -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#работа"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#скорость -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#скорость">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#физическая_величина"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#средства_передвижения -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#средства_передвижения"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#точки_на_реке -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#точки_на_реке"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#физическая_величина -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#физическая_величина"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#время_поворота_после_1_встречи -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#время_поворота_после_1_встречи">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#физическая_величина"/>
+        <untitled-ontology-7:измерение_в_минутах rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</untitled-ontology-7:измерение_в_минутах>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#катер -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#катер">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#средства_передвижения"/>
+        <untitled-ontology-7:движение_вверх rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#река"/>
+        <untitled-ontology-7:движение_вниз rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#река"/>
+        <untitled-ontology-7:обогнавший rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#плот"/>
+        <untitled-ontology-7:повернул_во rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#время_поворота_после_1_встречи"/>
+        <untitled-ontology-7:характеристика rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#скорость_катера"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#место_встречи -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#место_встречи">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#точки_на_реке"/>
+        <untitled-ontology-7:ниже rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#пункт_А"/>
+        <untitled-ontology-7:измерение_в_километрах rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</untitled-ontology-7:измерение_в_километрах>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#место_обгона -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#место_обгона">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#точки_на_реке"/>
+        <untitled-ontology-7:находиться_в rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#пункт_А"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#мотор_катера -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#мотор_катера">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#деталь"/>
+        <untitled-ontology-7:характеристика rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#работа_в_одном_режиме"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#плот -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#плот">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#средства_передвижения"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#пункт_А -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#пункт_А">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#точки_на_реке"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#работа_в_одном_режиме -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#работа_в_одном_режиме">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#работа"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#река -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#река">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#водный_объект"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#скорость_катера -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#скорость_катера">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#скорость"/>
+        <untitled-ontology-7:включение rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#скорость_по_течению"/>
+        <untitled-ontology-7:включение rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#скорость_против_течения"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#скорость_по_течению -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#скорость_по_течению">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#скорость"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#скорость_против_течения -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#скорость_против_течения">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#скорость"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#скорость_течения_реки -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#скорость_течения_реки">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#искомая_величина"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#скорость"/>
+        <untitled-ontology-7:результат_разности_с_вычитаемым rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#скорость_против_течения"/>
+        <untitled-ontology-7:результат_разности_с_уменьшаемым rdf:resource="http://www.semanticweb.org/ксения/ontologies/2025/3/untitled-ontology-7#скорость_по_течению"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
