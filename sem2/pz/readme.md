@@ -1,5 +1,5 @@
 # Формализация текста
-## Ваиант 6
+## Вариант 6
 ### Текст: 
 ![текст](https://github.com/ksy-sky/kseniya_ganetskaya/blob/main/текст.png)
 ![текст в кбе](https://github.com/ksy-sky/kseniya_ganetskaya/blob/main/текст%20в%20кбе.png)
