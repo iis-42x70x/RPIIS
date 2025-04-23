@@ -4,7 +4,8 @@ extern Node* leaf;
 class Node {
 public:
 	int key;
-	int info;
+	/*Tree* derevo;*/
+    int info;
 	bool color;
 	Node* left;
 	Node* right;
@@ -26,6 +27,7 @@ public:
 class Tree {
 public:
 	Node* root;
+	bool poryadok;
 	Tree() {
 		tree.root = leaf;
 	}
@@ -47,8 +49,10 @@ void Insert(Tree &tree, int key, int info);
 bool NodeExists(Node* node);
 void balanceTree(Tree &tree, Node* newNode);
 void swapN(Node* &a, Node* &b);
-void leftRotate(Tree &tree, Node* &Nodet);
-void rightRotate(Tree &tree, Node* &newNode);
+//void leftRotate(Tree& tree, Node*& Nodet);
+//void rightRotate(Tree& tree, Node*& newNode);
+void leftRotate(Tree& tree, Node* x);
+void rightRotate(Tree& tree, Node* y);
 Node* search(Node* node, int key);
 void removeN(Tree &tree, int key);
 int getChildrenCount(Node* node);
@@ -59,5 +63,5 @@ Node* getChildorMock(Node* node);
 void fixRulesAfterRemoval(Tree &tree, Node* node);
 void keymass(Node* node, int*& mass, int &kolvo);
 void kolvoNodes(Node* node, int& kolvo);
-int searchfor(Node* node, int key, int kakoi);
+//int searchfor(Node* node, int key, int kakoi);
 void printTree(Node* node);

@@ -51,7 +51,6 @@
 
 Node* leaf = new Node(0, 0);
 
-
 void Insert(Tree &tree, int key, int info) {
 	if (tree.root == leaf) {
 		Node* newNode = new Node(key, info);
@@ -138,71 +137,77 @@ void balanceTree(Tree &tree, Node* newNode) {
 	tree.root->color = 0;
 	return;
 }
-void swapN(Node* &a, Node* &b) {
-	int a_key = a->key;
-	a->key = b->key;
-	b->key = a_key;
-	int a_info = a->info;
-	a->info = b->info;
-	b->info = a_info;
+//void swapN(Node* &a, Node* &b) {
+//	int a_key = a->key;
+//	a->key = b->key;
+//	b->key = a_key;
+//	std::string a_info = a->info;
+//	a->info = b->info;
+//	b->info = a_info;
+//}
+//void leftRotate(Tree& tree, Node*& newNode) {
+//	if (NodeExists(newNode->left))
+//		swapN(newNode, newNode->left);
+//	Node* buffer = newNode->left;
+//	newNode->left = newNode->right;
+//	newNode->right = newNode->left->right;
+//	newNode->right->parent = newNode;
+//	newNode->right->left = newNode->right->right;
+//	newNode->right->left->parent = newNode->right;
+//	newNode->left->right = newNode->left->left;
+//	newNode->left->right->parent = newNode->left;
+//	newNode->left->left = buffer;
+//	newNode->left->left->parent = newNode->left;
+//}
+void leftRotate(Tree& tree, Node* x) {
+	Node* y = x->right;
+	x->right = y->left;
+
+	if (y->left != leaf)
+		y->left->parent = x;
+
+	y->parent = x->parent;
+
+	if (x->parent == leaf)
+		tree.root = y;
+	else if (x == x->parent->left)
+		x->parent->left = y;
+	else
+		x->parent->right = y;
+
+	y->left = x;
+	x->parent = y;
 }
-void leftRotate(Tree &tree, Node* &newNode) {
-	//Node* pivot = n->right;
+//void rightRotate(Tree& tree, Node*& Nodet) {
+//	if (NodeExists(Nodet->right))
+//		swapN(Nodet, Nodet->right);
+//	Node* buffer = Nodet->right;
+//	Nodet->right = Nodet->left;
+//	Nodet->left = Nodet->right->left;
+//	Nodet->left->parent = Nodet;
+//	Nodet->right->left = Nodet->right->right;
+//	Nodet->right->left->parent = Nodet->right;
+//	Nodet->right->right = buffer;
+//	Nodet->right->right->parent = Nodet->right;
+//}
+void rightRotate(Tree& tree, Node* y) {
+	Node* x = y->left;
+	y->left = x->right;
 
-	//pivot->parent = n->parent; /* при этом, возможно, pivot становится корнем дерева */
-	//if (n->parent != leaf) {
-	//	if (n->parent->left == n)
-	//		n->parent->left = pivot;
-	//	else
-	//		n->parent->right = pivot;
-	//}
+	if (x->right != leaf)
+		x->right->parent = y;
 
-	//n->right = pivot->left;
-	//if (pivot->left != leaf)
-	//	pivot->left->parent = n;
+	x->parent = y->parent;
 
-	//n->parent = pivot;
-	//pivot->left = n;
-	if(NodeExists(newNode->left))
-	swapN(newNode, newNode->left);
-	Node* buffer = newNode->left;
-	newNode->left = newNode->right;
-	newNode->right = newNode->left->right;
-	newNode->right->parent = newNode;
-	newNode->right->left = newNode->right->right;
-	newNode->right->left->parent = newNode->right;
-	newNode->left->right = newNode->left->left;
-	newNode->left->right->parent = newNode->left;
-	newNode->left->left = buffer;
-	newNode->left->left->parent = newNode->left;
-}
-void rightRotate(Tree &tree, Node* &Nodet) {
-		//Node* pivot = n->left;
+	if (y->parent == leaf)
+		tree.root = x;
+	else if (y == y->parent->right)
+		y->parent->right = x;
+	else
+		y->parent->left = x;
 
-		//pivot->parent = n->parent; /* при этом, возможно, pivot становится корнем дерева */
-		//if (n->parent != leaf) {
-		//	if (n->parent->left == n)
-		//		n->parent->left = pivot;
-		//	else
-		//		n->parent->right = pivot;
-		//}
-
-		//n->left = pivot->right;
-		//if (pivot->right != leaf)
-		//	pivot->right->parent = n;
-
-		//n->parent = pivot;
-		//pivot->right = n;
-	if (NodeExists(Nodet->right))
-	swapN(Nodet, Nodet->right);
-	Node* buffer = Nodet->right;
-	Nodet->right = Nodet->left;
-	Nodet->left = Nodet->right->left;
-	Nodet->left->parent = Nodet;
-	Nodet->right->left = Nodet->right->right;
-	Nodet->right->left->parent = Nodet->right;
-	Nodet->right->right = buffer;
-	Nodet->right->right->parent = Nodet->right;
+	x->right = y;
+	y->parent = x;
 }
 Node* search(Node* node, int key) {
 	if (node == leaf) return leaf;
@@ -322,10 +327,10 @@ void kolvoNodes(Node* node,int &kolvo) {
 	kolvo++;
 	kolvoNodes(node->right,kolvo);
 }
-void keymass(Node* node,int* &mass, int &kolvo) {
+void keymass(Node* node,std::string* &mass, int &kolvo) {
 	if (node == leaf)return;
 	keymass(node->left, mass, kolvo);
-	mass[kolvo--] = node->info;
+	mass[--kolvo] = node->info;
 	keymass(node->right, mass, kolvo);
 }
 int searchfor(Node* node, int key, int kakoi) {
@@ -335,6 +340,9 @@ int searchfor(Node* node, int key, int kakoi) {
 	int* mass = new int[kolvo];
 	int kol = kolvo;
 	keymass(node, mass, kolvo);
+	std::cout << '\n';
+	for (int i = 0; i < kol; i++)
+		std::cout << mass[i] << ' ';
 	int helpp=0;
 	if (kakoi) {
 		helpp = (getmax(node))->info;

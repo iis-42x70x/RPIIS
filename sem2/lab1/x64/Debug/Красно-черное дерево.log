@@ -1,2 +1,5 @@
 ﻿  кчд.cpp
-  Красно-черное дерево.vcxproj -> C:\Users\boyarskiu\source\repos\Красно-черное дерево\x64\Debug\Красно-черное дерево.exe
+кчд.obj : error LNK2019: ссылка на неразрешенный внешний символ "void __cdecl keymass(class Node *,int * &,int &)" (?keymass@@YAXPEAVNode@@AEAPEAHAEAH@Z) в функции "int __cdecl searchfor(class Node *,int,int)" (?searchfor@@YAHPEAVNode@@HH@Z).
+    Указание на символы, которые определены и могут подойти:
+      "void __cdecl keymass(class Node *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > * &,int &)" (?keymass@@YAXPEAVNode@@AEAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEAH@Z)
+C:\Users\boyarskiu\source\repos\Красно-черное дерево\x64\Debug\Красно-черное дерево.exe : fatal error LNK1120: неразрешенных внешних элементов: 1
