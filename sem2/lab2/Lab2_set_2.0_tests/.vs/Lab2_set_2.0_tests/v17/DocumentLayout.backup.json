@@ -1,0 +1,153 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Code\\Visual Studio\\Projects\\Lab2_set_2.0_tests\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6291B3F0-4F40-4DD6-B144-F4855F117931}|..\\Lab2_tests\\Lab2_tests.vcxproj|D:\\Code\\Visual Studio\\Projects\\Lab2_tests\\test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Code\\Visual Studio\\IDE\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF8F6775-636F-4A8B-9FD2-2085E1BDFFBA}|Lab2_set_2.0_tests.vcxproj|D:\\Code\\Visual Studio\\Projects\\Lab2_set_2.0_tests\\Lab2_set_2.0_tests.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BF8F6775-636F-4A8B-9FD2-2085E1BDFFBA}|Lab2_set_2.0_tests.vcxproj|solutionrelative:Lab2_set_2.0_tests.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6291B3F0-4F40-4DD6-B144-F4855F117931}|..\\Lab2_tests\\Lab2_tests.vcxproj|D:\\Code\\Visual Studio\\Projects\\Lab2_tests\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF8F6775-636F-4A8B-9FD2-2085E1BDFFBA}|Lab2_set_2.0_tests.vcxproj|D:\\Code\\Visual Studio\\Projects\\Lab2_set_2.0_tests\\source.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BF8F6775-636F-4A8B-9FD2-2085E1BDFFBA}|Lab2_set_2.0_tests.vcxproj|solutionrelative:source.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF8F6775-636F-4A8B-9FD2-2085E1BDFFBA}|Lab2_set_2.0_tests.vcxproj|D:\\Code\\Visual Studio\\Projects\\Lab2_set_2.0_tests\\result.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BF8F6775-636F-4A8B-9FD2-2085E1BDFFBA}|Lab2_set_2.0_tests.vcxproj|solutionrelative:result.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF8F6775-636F-4A8B-9FD2-2085E1BDFFBA}|Lab2_set_2.0_tests.vcxproj|D:\\Code\\Visual Studio\\Projects\\Lab2_set_2.0_tests\\Lab2_set_2.0_tests.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BF8F6775-636F-4A8B-9FD2-2085E1BDFFBA}|Lab2_set_2.0_tests.vcxproj|solutionrelative:Lab2_set_2.0_tests.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF8F6775-636F-4A8B-9FD2-2085E1BDFFBA}|Lab2_set_2.0_tests.vcxproj|D:\\Code\\Visual Studio\\Projects\\Lab2_set_2.0_tests\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BF8F6775-636F-4A8B-9FD2-2085E1BDFFBA}|Lab2_set_2.0_tests.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "vector",
+              "DocumentMoniker": "D:\\Code\\Visual Studio\\IDE\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector",
+              "RelativeDocumentMoniker": "..\\..\\IDE\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector",
+              "ToolTip": "D:\\Code\\Visual Studio\\IDE\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector",
+              "RelativeToolTip": "..\\..\\IDE\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector",
+              "ViewState": "AgIAAFEHAAAAAAAAAADwv18HAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-23T07:30:40.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "pch.cpp",
+              "DocumentMoniker": "D:\\Code\\Visual Studio\\Projects\\Lab2_tests\\pch.cpp",
+              "RelativeDocumentMoniker": "..\\Lab2_tests\\pch.cpp",
+              "ToolTip": "D:\\Code\\Visual Studio\\Projects\\Lab2_tests\\pch.cpp",
+              "RelativeToolTip": "..\\Lab2_tests\\pch.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-23T07:06:53.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "test.cpp",
+              "DocumentMoniker": "D:\\Code\\Visual Studio\\Projects\\Lab2_tests\\test.cpp",
+              "RelativeDocumentMoniker": "..\\Lab2_tests\\test.cpp",
+              "ToolTip": "D:\\Code\\Visual Studio\\Projects\\Lab2_tests\\test.cpp",
+              "RelativeToolTip": "..\\Lab2_tests\\test.cpp",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-23T06:55:44.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "result.txt",
+              "DocumentMoniker": "D:\\Code\\Visual Studio\\Projects\\Lab2_set_2.0_tests\\result.txt",
+              "RelativeDocumentMoniker": "result.txt",
+              "ToolTip": "D:\\Code\\Visual Studio\\Projects\\Lab2_set_2.0_tests\\result.txt",
+              "RelativeToolTip": "result.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-04-23T06:53:56.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "source.txt",
+              "DocumentMoniker": "D:\\Code\\Visual Studio\\Projects\\Lab2_set_2.0_tests\\source.txt",
+              "RelativeDocumentMoniker": "source.txt",
+              "ToolTip": "D:\\Code\\Visual Studio\\Projects\\Lab2_set_2.0_tests\\source.txt",
+              "RelativeToolTip": "source.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-04-23T06:53:55.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\Code\\Visual Studio\\Projects\\Lab2_set_2.0_tests\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "D:\\Code\\Visual Studio\\Projects\\Lab2_set_2.0_tests\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-23T06:52:30.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Lab2_set_2.0_tests.h",
+              "DocumentMoniker": "D:\\Code\\Visual Studio\\Projects\\Lab2_set_2.0_tests\\Lab2_set_2.0_tests.h",
+              "RelativeDocumentMoniker": "Lab2_set_2.0_tests.h",
+              "ToolTip": "D:\\Code\\Visual Studio\\Projects\\Lab2_set_2.0_tests\\Lab2_set_2.0_tests.h",
+              "RelativeToolTip": "Lab2_set_2.0_tests.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-23T06:48:21.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Lab2_set_2.0_tests.cpp",
+              "DocumentMoniker": "D:\\Code\\Visual Studio\\Projects\\Lab2_set_2.0_tests\\Lab2_set_2.0_tests.cpp",
+              "RelativeDocumentMoniker": "Lab2_set_2.0_tests.cpp",
+              "ToolTip": "D:\\Code\\Visual Studio\\Projects\\Lab2_set_2.0_tests\\Lab2_set_2.0_tests.cpp",
+              "RelativeToolTip": "Lab2_set_2.0_tests.cpp",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-23T06:47:25.011Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

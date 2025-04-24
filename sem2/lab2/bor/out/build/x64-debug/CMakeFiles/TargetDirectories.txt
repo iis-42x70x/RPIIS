@@ -1,3 +1,0 @@
-D:/Code/Visual Studio/Projects/bor/out/build/x64-debug/CMakeFiles/bor.dir
-D:/Code/Visual Studio/Projects/bor/out/build/x64-debug/CMakeFiles/edit_cache.dir
-D:/Code/Visual Studio/Projects/bor/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
