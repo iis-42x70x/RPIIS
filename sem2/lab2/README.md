@@ -26,7 +26,7 @@
 # main.cpp
 ```
 #include "pch.h"
-#include <locale>
+//Программа читает множество из файла, потом генерирует все перестановки и сохраняет результат в output.txt.
 int main(int argc, char* argv[]) {
     string filename;
     if (argc > 1) filename = argv[1];
@@ -54,24 +54,24 @@ int main(int argc, char* argv[]) {
 ```
 #include "pch.h"
 
-vector<string> string_to_vector_OfSetElements(const string& str) {
+vector<string> string_to_vector_OfSetElements(const string& str) {//парсинг множестваа как строки  на элементы
     vector<string> setElements;
     string temp;
-    int braceLevel = 0;
-    int angleLevel = 0;
+    int braceLevel = 0;//{} внутренних
+    int angleLevel = 0;//<>
 
     if (str == "{}")  return setElements;
 
-    if (str.empty()  str.front() != '{'   str.back() != '}') {
+    if (str.empty() || str.front() != '{' ||  str.back() != '}') {
         cerr << "Error: Wrong input \n";
         return {};
     }
 
-    string cleanStr = str.substr(1, str.length() - 2);
+    string cleanStr = str.substr(1, str.length() - 2);//строка очищенная от скобок
 
     for (size_t i = 0; i < cleanStr.length(); ++i) {
         char ch = cleanStr[i];
-
+//смотрим нет ли вложенных сккобок
         if (ch == '{') {
             braceLevel++;
             temp += ch;
@@ -79,11 +79,12 @@ vector<string> string_to_vector_OfSetElements(const string& str) {
         else if (ch == '}') {
             braceLevel--;
             if (braceLevel < 0) {
-                cerr << "Error: Unmatched closing curly brace\n";
+                cerr << "Error\n";
                 return {};
             }
             temp += ch;
         }
+//аналогичнаяя работа с <>
         else if (ch == '<') {
             angleLevel++;
             temp += ch;
@@ -91,11 +92,12 @@ vector<string> string_to_vector_OfSetElements(const string& str) {
         else if (ch == '>') {
             angleLevel--;
             if (angleLevel < 0) {
-                cerr << "Error: Unmatched closing angle bracket\n";
+                cerr << "Error\n";
                 return {};
             }
             temp += ch;
         }
+//обрабатываем запятые, разделяем множество. Если внутри есть {<a,c>, g}то разбиваем на "<a,c>", "g"
         else if (ch == ',' && braceLevel == 0 && angleLevel == 0) {
             if (!temp.empty()) {
                 setElements.push_back(temp);
@@ -193,9 +195,10 @@ void findAllCombinations(const string& filename) {
 ```
 # SetParser.h
 ```
+//объявление функций
 #pragma once
 #ifndef SETPARSER_H
-#define SETPARSER_H
+#define SETPARSER_H//защиты от повт включения
 #include <string>
 #include <vector>
 
@@ -213,7 +216,7 @@ void findAllCombinations(const string& filename);
 # pch.h
 ```
 #pragma once
-
+//предназначен для создания предварительно скомпилированного заголовка, pch.h собирает все базовые #include, чтобы ускорить сборку проекта и сделать код чище
 #include <string>
 #include <vector>
 #include <fstream>
@@ -224,6 +227,7 @@ void findAllCombinations(const string& filename);
 # pch.cpp
 ```
 //
+//это реализация для предварительно скомпилированных заголовков, pch.cpp нужен, чтобы скомпилировать pch.h в .pch файл.
 // pch.cpp
 //
 
