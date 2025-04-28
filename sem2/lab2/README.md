@@ -125,26 +125,26 @@ vector<string> string_to_vector_OfSetElements(const string& str) {//парсин
     return setElements;
 }
 
-void permute(vector<string>& setElements, int l, int r, vector<vector<string>>& result) {
-    if (l == r) {
+void permute(vector<string>& setElements, int l, int r, vector<vector<string>>& result) {//перестановки
+    if (l == r) {//все позиции заполнены
         result.push_back(setElements);
         return;
     }
-    for (int i = l; i <= r; ++i) {
+    for (int i = l; i <= r; ++i) {//меняем каждый раз местами текущий элемент l с i, пробуя все возможные варианты на позиции l
         swap(setElements[l], setElements[i]);
-        permute(setElements, l + 1, r, result);
+        permute(setElements, l + 1, r, result);//рекурсиво вызываем эту же функцию для генерацпии перестанвок
         swap(setElements[l], setElements[i]);
     }
 }
 
-vector<vector<string>> generateUniquePermutations(const vector<string>& setElements) {
-    vector<vector<string>> allPerms;
+vector<vector<string>> generateUniquePermutations(const vector<string>& setElements) { //генерация уникальных перестановок
+    vector<vector<string>> allPerms;//в-р всех перестановок, даже одинаковых
     vector<string> temp = setElements;
-    permute(temp, 0, temp.size() - 1, allPerms);
+    permute(temp, 0, temp.size() - 1, allPerms);//заполняем в-р всех перестановок
 
-    set<vector<string>> uniqueSets;
-    for (auto& p : allPerms) {
-        uniqueSets.insert(p);
+    set<vector<string>> uniqueSets;//множество set автоматически удаляет дубликаты
+    for (auto& p : allPerms) {//перебираем все перестановки p из allPerms
+        uniqueSets.insert(p);//кладём их в uniqueSets
     }
 
     return vector<vector<string>>(uniqueSets.begin(), uniqueSets.end());
@@ -161,21 +161,20 @@ void findAllCombinations(const string& filename) {
     getline(file, line);
     file.close();
 
-    vector<string> elements = string_to_vector_OfSetElements(line);
+    vector<string> elements = string_to_vector_OfSetElements(line);//преобразуем строку в вектор строк
+
     if (elements.empty()) {
         cerr << "Error: Failed to parse elements from input.\n";
         return;
     }
-
-    vector<vector<string>> uniquePermutations = generateUniquePermutations(elements);
-
+    vector<vector<string>> uniquePermutations = generateUniquePermutations(elements);//генерируем все уникальные перестановки
     ofstream outputFile("output.txt");
     if (!outputFile) {
         cerr << "Error: Unable to create output file\n";
         return;
     }
 
-    for (const auto& permutation : uniquePermutations) {
+    for (const auto& permutation : uniquePermutations) {//выводим все уникальные перестановки в консоль и файл
         cout << "{ ";
         outputFile << "{ ";
         for (size_t i = 0; i < permutation.size(); ++i) {
