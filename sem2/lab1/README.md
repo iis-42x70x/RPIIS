@@ -34,7 +34,7 @@
 
 ### Удаление вершины  в ориентированном графе ###
 
-```
+```C++
 void delete_element_from_vector(vector<pair<int, int>>& mas_pair, int& siz, int number) {
     if (number >= 0 && number < siz) {  // Изменено с number > 0 на number >= 0
         for (int i = number; i < siz - 1; i++) {
@@ -85,7 +85,7 @@ void delete_vertex(vector<vector<pair<int, int>>>& graph, int& vertex, int& edge
 
 ### Добавленеие вершины в ориентированном графе ###
 
-```
+```C++
 void insert_data(vector<vector<pair<int, int>>>& graph, int& vertex) {
     graph.push_back(vector<pair<int,int>>());
     vertex++;
@@ -95,7 +95,7 @@ void insert_data(vector<vector<pair<int, int>>>& graph, int& vertex) {
 ```
 ### Добавление гового ребра ###
 
-```
+```C++
 void insert_new_edge(vector<vector<pair<int, int>>>& graph, int vertex, int& edges) {
     int number_first_vertex;
     cout << "Введите номер вершины от которой пойдет новая дуга: ";
@@ -126,7 +126,7 @@ void insert_new_edge(vector<vector<pair<int, int>>>& graph, int vertex, int& edg
 
 ### Удаленеи дуг из ориентированного графа ###
 
-```
+```C++
 void delete_edge(vector<vector<pair<int, int>>>& graph, int vertex, int& edges) {
     int first, second;
     cout << "Введите номер вершины из которой выходит ребро:\n";
@@ -177,7 +177,7 @@ void delete_edge(vector<vector<pair<int, int>>>& graph, int vertex, int& edges) 
 
 Алгоритм BFS запускает операцию с первого или начального узла графа и тщательно его обходит. Как только он успешно пересекает начальный узел, затем посещается и помечается следующая непройденная вершина графа.
 
-```
+```C++
 void BFS(vector<vector<pair<int, int>>> graph) {
     vector<bool> used(graph.size(), false);
     queue<int> q;

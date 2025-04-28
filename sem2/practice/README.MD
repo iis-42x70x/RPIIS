@@ -62,7 +62,7 @@
 ## Выполнение работы (2 задание):
 
 **KBE**
-
+ы
 <img src="images/kbe3.png">
 
 
@@ -71,7 +71,7 @@
 
 Изучил правила формализации текста, выполнил задания, выданные преподавателем, в редакторах **KBE** и **Protege**.
 
-## Используемая литература
+## Используемые источники
 
 * <a href="https://protegeproject.github.io/protege/"> Установка и синтаксис</a>
 * <a href="https://drive.google.com/drive/folders/1zQF0KtRTaKJJu4rvXSxls0AlobdYUDx5"> Небольшой гайд по Protege  и KBE, материалы с заданием
