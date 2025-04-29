@@ -1,0 +1,423 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5/"
+     xml:base="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-5="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Имеет_акцент -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Имеет_акцент">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Аккомпанемент"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Тактовые_доли"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Имеет_рисунок_баса -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Имеет_рисунок_баса">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Регги"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Рисунок_баса"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Имеет_тактовый_размер -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Имеет_тактовый_размер">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальный_такт"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Имеет_темп -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Имеет_темп">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Регги"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальный_темп"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Использует -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Использует">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальные_инструменты"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальные_приемы"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Может_иметь_темп -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Может_иметь_темп">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Регги"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальный_темп"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Не_должно_иметь_темп -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Не_должно_иметь_темп">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Регги"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальный_темп"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Поучило_широкое_распростнанение -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Поучило_широкое_распростнанение">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Года"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Сформировалось -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Сформировалось">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Географическая_область"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Является_королем -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Является_королем">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Известные_личности"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Регги"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Современная_музыка"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Сформировалось(когда) -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Сформировалось(когда)">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Года"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Аккомпанемент -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Аккомпанемент">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыка"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Географическая_область -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Географическая_область"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Года -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Года"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Известные_личности -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Известные_личности"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Инструменты -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Инструменты"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыка -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыка"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальные_инструменты -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальные_инструменты">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Инструменты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальные_приемы -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальные_приемы">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыка"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальный_такт -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальный_такт">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыка"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальный_темп -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальный_темп">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыка"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Регги -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Регги">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Современная_музыка"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Рисунок_баса -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Рисунок_баса">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыка"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Современная_музыка -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Современная_музыка">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыка"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Тактовые_доли -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Тактовые_доли">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальный_такт"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Ямайка -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Ямайка">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Географическая_область"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Агрессивный_темп -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Агрессивный_темп">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальный_темп"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Аккомпанемент_Регги -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Аккомпанемент_Регги">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Аккомпанемент"/>
+        <untitled-ontology-5:Имеет_акцент rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#2-ая_доля"/>
+        <untitled-ontology-5:Имеет_акцент rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#4-ая_доля"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Бас-гитара -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Бас-гитара">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальные_инструменты"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Боб_Марли -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Боб_Марли">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Известные_личности"/>
+        <untitled-ontology-5:Является_королем rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Регги"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Брейк -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Брейк">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальные_приемы"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Быстрый_темп -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Быстрый_темп">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальный_темп"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Духовые_инструменты -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Духовые_инструменты">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальные_инструменты"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Регги -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Регги">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Регги"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Современная_музыка"/>
+        <untitled-ontology-5:Имеет_рисунок_баса rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Синкопированный_рисунок_баса"/>
+        <untitled-ontology-5:Имеет_тактовый_размер rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#4/4"/>
+        <untitled-ontology-5:Имеет_темп rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Умеренный_темп"/>
+        <untitled-ontology-5:Использует rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Бас-гитара"/>
+        <untitled-ontology-5:Использует rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Брейк"/>
+        <untitled-ontology-5:Использует rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Духовые_инструменты"/>
+        <untitled-ontology-5:Использует rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Тимбалес"/>
+        <untitled-ontology-5:Использует rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Ударные"/>
+        <untitled-ontology-5:Использует rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Электрогитара"/>
+        <untitled-ontology-5:Использует rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Электроорган"/>
+        <untitled-ontology-5:Может_иметь_темп rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Быстрый_темп"/>
+        <untitled-ontology-5:Не_должно_иметь_темп rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Агрессивный_темп"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Синкопированный_рисунок_баса -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Синкопированный_рисунок_баса">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Рисунок_баса"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Тимбалес -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Тимбалес">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальные_инструменты"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Ударные -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Ударные">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальные_инструменты"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Умеренный_темп -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Умеренный_темп">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальный_темп"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Электрогитара -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Электрогитара">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальные_инструменты"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Электроорган -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Электроорган">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальные_инструменты"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#1960-е -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#1960-е">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Года"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#1970-е -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#1970-е">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Года"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#2-ая_доля -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#2-ая_доля">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Тактовые_доли"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#4-ая_доля -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#4-ая_доля">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Тактовые_доли"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#4/4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#4/4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/3/untitled-ontology-5#Музыкальный_такт"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
