@@ -1,0 +1,2 @@
+A = {2, a, <6, 2>, {x, y}, next, -3, <apple, banana>, <1, 2, 3>, {}}
+B = {2, a, <1, 2>, {y, x}, text, -3, <apple, banana>, <1, 2, 3>, {}}
