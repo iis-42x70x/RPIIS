@@ -68,47 +68,47 @@ for все элементы B:
 ##### 1-й тест
 Исходные данные:
 
-<img scr = "image/pic1.PNG">
+<img scr = "img/pic1.PNG">
 
 Результат:
 
-<img scr = "image/res1.PNG">
+<img scr = "img/res1.PNG">
 
 ##### 2-й тест
 Исходные данные:
 
-<img scr = "image/pic2.PNG">
+<img scr = "img/pic2.PNG">
 
 Результат:
 
-<img scr = "image/res2.PNG">
+<img scr = "img/res2.PNG">
 
 ##### 3-й тест
 Исходные данные:
 
-<img scr = "image/pic3.PNG">
+<img scr = "img/pic3.PNG">
 
 Результат:
 
-<img scr = "image/res3.PNG">
+<img scr = "img/res3.PNG">
 
 ##### 4-й тест
 Исходные данные:
 
-<img scr = "image/pic4.PNG">
+<img scr = "img/pic4.PNG">
 
 Результат:
 
-<img scr = "image/res4.PNG">
+<img scr = "img/res4.PNG">
 
 ##### 5-й тест
 Исходные данные:
 
-<img scr = "image/pic5.PNG">
+<img scr = "img/pic5.PNG">
 
 Результат:
 
-<img scr = "image/res5.PNG">
+<img scr = "img/res5.PNG">
 
 ## Вывод
 В ходе лабораторной работы были улучшены навыки обработки множеств и вычисления их симметрической разности без учета кратности вхождения элементов в C++. Освоены принципы взаимодействия с файлами.
