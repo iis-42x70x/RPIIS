@@ -68,11 +68,11 @@ for все элементы B:
 ##### 1-й тест
 Исходные данные:
 
-<img scr = "img/pic1.PNG">
+<img src = "img/pic1.PNG">
 
 Результат:
 
-<img scr = "img/res1.PNG">
+<img src = "img/res1.PNG">
 
 ##### 2-й тест
 Исходные данные:
