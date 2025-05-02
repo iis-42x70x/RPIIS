@@ -14,6 +14,9 @@
  ## Вариант 
 Для выполнения лабораторной работы мне был выдан вариант **2**. Для работы с множествами буду использовать библиотеку  **vector** и **string**
 
+## Структура проекта
+<p align="center"><img src="images/structure.png"></p>
+
 ## Множество 
 
 **Множество** – простейшая информационная конструкция и математическая структура,
@@ -22,7 +25,7 @@
 некоторым множеством, то говорят, что существует вхождение объекта в это множество, а
 объект принадлежит этому множеству.
 
-<p text-align:center><img src="images/interscections.png"></p>
+<p align="center"><img src="images/interscections.png"></p>
 
 <p></p>
 Данная программа рассчитана на то, что множество может быть элементом множества
@@ -65,6 +68,7 @@ void remove_duplicates(vector<string>& elements) {
     }
     elements = unique;
 }
+
 ```
 
 **3)** Формирование множеств и разбиение
@@ -78,11 +82,11 @@ vector<string> get_elements(string& set) {
     for (int i = 1; i < set.length() - 1; i++) {
         char c = set[i];
 
-        if (c == '{') {
+        if (c == bracket1) {
             bracket_count++;
             current += c;
         }
-        else if (c == '}') {
+        else if (c == bracket2) {
             bracket_count--;
             current += c;
             if (bracket_count == 0 && bracket_count_treug == 0) {
@@ -90,11 +94,11 @@ vector<string> get_elements(string& set) {
                 current.clear();
             }
         }
-        else if (c == '<') {
+        else if (c == bracket3) {
             bracket_count_treug++;
             current += c;
         }
-        else if (c == '>') {
+        else if (c == bracket4) {
             bracket_count_treug--;
             current += c;
             if (bracket_count == 0 && bracket_count_treug == 0) {
@@ -102,11 +106,12 @@ vector<string> get_elements(string& set) {
                 current.clear();
             }
         }
-        else if (c == ',' && bracket_count == 0 && bracket_count_treug == 0) {
-            if (!current.empty()){
+        else if ((c == ',' || c == ' ') && bracket_count == 0 && bracket_count_treug == 0) {
+            if (!current.empty()) {
                 elements.push_back(current);
-            current.clear();
+                current.clear();
             }
+
         }
         else {
             current += c;
@@ -119,11 +124,12 @@ vector<string> get_elements(string& set) {
 
     return elements;
 }
+
 string sort_set(string& str) {
-    if (is_kortezh(str)) {
+    if (is_tupple(str)) {
         vector<string> elements = get_elements(str);
         for (auto& element : elements) {
-            if (is_set(element) || is_kortezh(element)) {
+            if (is_set(element) || is_tupple(element)) {
                 element = sort_set(element);
             }
         }
@@ -139,7 +145,7 @@ string sort_set(string& str) {
     if (is_set(str)) {
         vector<string> elements = get_elements(str);
         for (auto& element : elements) {
-            if (is_set(element) || is_kortezh(element)) {
+            if (is_set(element) || is_tupple(element)) {
                 element = sort_set(element);
             }
         }
@@ -155,7 +161,6 @@ string sort_set(string& str) {
     }
 
     return str;
-}
 }
 ```
 
