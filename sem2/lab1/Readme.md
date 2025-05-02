@@ -17,4 +17,142 @@
 - Массив — структура данных, хранящая набор значений, идентифицируемых по индексу или набору индексов, принимающих целые значения из некоторого заданного непрерывного диапазона.
 - Одномерный массив — это линейная структура данных на языке программирования C, состоящая из фиксированного числа элементов одного типа данных, хранящихся в смежных ячейках памяти.
 
+  ## <p align="center">Описание функций:</p>
+1. ### <p align="center">Добавление элемента в конец списка :</p>
+~~~c++
+void SinglyLinkedList::insert(int value) {
+    Node* newNode = new Node(value);
+    if (head == nullptr) {
+        head = newNode;
+    } else {
+        Node* temp = head;
+        while (temp->next != nullptr) {
+            temp = temp->next;
+        }
+        temp->next = newNode;
+    }
+}
+~~~
+
+2. ### <p align="center">Удаление элемента:</p>
+~~~c++
+void SinglyLinkedList::remove(int value) {
+    if (head == nullptr) return;
+    
+    if (head->data == value) {
+        Node* temp = head;
+        head = head->next;
+        delete temp;
+        return;
+    }
+    
+    Node* current = head;
+    while (current->next != nullptr && current->next->data != value) {
+        current = current->next;
+    }
+    
+    if (current->next != nullptr) {
+        Node* temp = current->next;
+        current->next = current->next->next;
+        delete temp;
+    }
+}
+~~~
+3. ### <p align="center">Сортировка элеменов списка:</p>
+~~~c++
+void SinglyLinkedList::sort() {
+    if (head == nullptr || head->next == nullptr) return;
+    
+    // Преобразование списка в вектор для сортировки
+    vector<int> values;
+    Node* current = head;
+    while (current != nullptr) {
+        values.push_back(current->data);
+        current = current->next;
+    }
+    
+    // Сортировка вектора
+    std::sort(values.begin(), values.end());
+    
+    // Восстановление списка из отсортированного вектора
+    current = head;
+    for (int val : values) {
+        current->data = val;
+        current = current->next;
+    }
+}
+~~~
+4. ### <p align="center">Поиск элемента списка:</p>
+~~~c++
+Node* SinglyLinkedList::search(int value) {
+    Node* current = head;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return current;
+        }
+        current = current->next;
+    }
+    return nullptr;
+}
+~~~
+5. ### <p align="center">Объединение изночального списка с новым:</p>
+~~~c++
+void SinglyLinkedList::merge(SinglyLinkedList& other) {
+    if (other.head == nullptr) return;
+    
+    if (head == nullptr) {
+        head = other.head;
+    } else {
+        Node* current = head;
+        while (current->next != nullptr) {
+            current = current->next;
+        }
+        current->next = other.head;
+    }
+    
+    other.head = nullptr; // Предотвращаем удаление узлов при уничтожении other
+}
+~~~
+6. ### <p align="center">Пересечение изночального списка с новым:</p>
+~~~c++
+SinglyLinkedList SinglyLinkedList::intersect(SinglyLinkedList& other) {
+    SinglyLinkedList result;
+    
+    // Преобразуем оба списка в векторы для удобства поиска
+    vector<int> thisValues;
+    Node* current = head;
+    while (current != nullptr) {
+        thisValues.push_back(current->data);
+        current = current->next;
+    }
+    
+    vector<int> otherValues;
+    current = other.head;
+    while (current != nullptr) {
+        otherValues.push_back(current->data);
+        current = current->next;
+    }
+    
+    // Находим пересечение значений
+    for (int val : thisValues) {
+        if (find(otherValues.begin(), otherValues.end(), val) != otherValues.end() &&
+            find(result.begin(), result.end(), val) == result.end()) {
+            result.insert(val);
+        }
+    }
+    
+    return result;
+}
+~~~
+7. ### <p align="center">Вывод на дисплей:</p>
+~~~c++
+void SinglyLinkedList::display() const {
+    Node* current = head;
+    while (current != nullptr) {
+        cout << current->data << " ";
+        current = current->next;
+    }
+    cout << endl;
+}
+~~~
 
