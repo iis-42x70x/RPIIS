@@ -161,9 +161,14 @@ void SinglyLinkedList::display() const {
 <p  align="center"><img src="img/2025-05-02_08-48-42.png" ></p>
 
 ### <p align="center">Объединение изночального списка с новым:</p>
-<p  align="center"><img src="img/2025-05-02_08-48-42.png" ></p>
+<p  align="center"><img src="img/2025-05-02_08-58-00.png" ></p>
 
 ### <p align="center">Пересечение изночального списка с новым:</p>
 <p  align="center"><img src="img/2025-05-02_08-59-22.png" ></p>
 
+## <p align="center">Вывод</p>
+В ходе работы я освоила создание библиотек на C++, изучила принцип разделения кода: реализацию в `.cpp`-файлах и объявления в `.hpp`-файлах. Я разработала библиотеку для работы с односвязным списком.
 
+## <p align="center">Используемые источники и материалы:</p>
+- https://www.youtube.com/watch?v=SajrPhE6FoQ (Реализация односвязного списка c++. Видио урок)
+- https://habr.com/en/sandbox/153128/ (Habr)
