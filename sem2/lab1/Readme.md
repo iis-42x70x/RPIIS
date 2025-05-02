@@ -156,3 +156,14 @@ void SinglyLinkedList::display() const {
 }
 ~~~
 
+ ## <p align="center">Пример работы функций:</p>
+### <p align="center">Добавление элемента в конец списка :</p>
+<p  align="center"><img src="img/2025-05-02_08-48-42.png" ></p>
+
+### <p align="center">Объединение изночального списка с новым:</p>
+<p  align="center"><img src="img/2025-05-02_08-48-42.png" ></p>
+
+### <p align="center">Пересечение изночального списка с новым:</p>
+<p  align="center"><img src="img/2025-05-02_08-59-22.png" ></p>
+
+
