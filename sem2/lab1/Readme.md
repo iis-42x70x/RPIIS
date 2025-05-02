@@ -160,6 +160,9 @@ void SinglyLinkedList::display() const {
 ### <p align="center">Добавление элемента в конец списка :</p>
 <p  align="center"><img src="img/2025-05-02_08-48-42.png" ></p>
 
+### <p align="center">Сортировка элеменов списка:</p>
+<p  align="center"><img src="img/2025-05-02_08-56-45.png" ></p>
+
 ### <p align="center">Объединение изночального списка с новым:</p>
 <p  align="center"><img src="img/2025-05-02_08-58-00.png" ></p>
 
