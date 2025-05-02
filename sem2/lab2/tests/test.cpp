@@ -1,16 +1,16 @@
-
 #include "pch.h"
-#include "C:\Users\Redmi\Desktop\Pioivis_laba2\main_pioivis\Header.h"
+#include "C:\Users\Redmi\Desktop\legend\tests\tests\Header.h"
+#include "C:\Users\Redmi\Desktop\legend\tests\tests\source.cpp"
 #include <vector>
 #include <string>
 
 
 TEST(TestCaseName, Peresechenie) {
-	vector <Union> test(2);
+	vector <Set> test(2);
 	vector <string> first = {
 		"a", "{a,s,d,f,g,h}", "{a,s,d,f,g,h,j,{a,s,d}}", "{{a}}"
 	};
-	test[0].set_vector(first);
+	test[0].set_of_vector(first);
 	vector <string> second = {
 		"a", "1", "{a,s,d,f,g,h,k,i,u,o}", "{a,s,d,f,h,h,g,j,{a,s,d}}", "{{a,a}}"
 	};
@@ -24,9 +24,9 @@ TEST(TestCaseName, Peresechenie) {
 		string result = sort_set(el);
 		el = result;
 	}
-	vector <string> resulti = test[0].get_vector();;
+	vector <string> resulti = test[0].get_vector();
 
-	main_peresechenie(test, resulti);
+	main_intersection(test, resulti);
 	EXPECT_EQ(resulti.size(), 3);
 	EXPECT_EQ(resulti[0], "a");
 	EXPECT_EQ(resulti[1], "{a,d,f,g,h,j,s,{a,d,s}}");
@@ -34,8 +34,8 @@ TEST(TestCaseName, Peresechenie) {
 
 }
 
-TEST(TestCaseName2, Peresechenie) {
-	vector <Union> test(3);
+TEST(TestCaseName2, Intersection) {
+	vector <Set> test(3);
 	vector <string> first = {
 		"a", "{a,s,d,f,g,h}", "{a,s,d,f,g,h,j,{a,{{s,s,d}},d}}", "{{a}}", "{}", "{{}}"
 	};
@@ -61,9 +61,9 @@ TEST(TestCaseName2, Peresechenie) {
 		string result = sort_set(el);
 		el = result;
 	}
-	vector <string> resulti = test[0].get_vector();;
+	vector <string> resulti = test[0].get_vector();
 
-	main_peresechenie(test, resulti);
+	main_intersection(test, resulti);
 	EXPECT_EQ(resulti.size(), 5);
 	EXPECT_EQ(resulti[0], "{a,d,f,g,h,j,s,{a,d,{{d,s}}}}");
 	EXPECT_EQ(resulti[1], "{{a}}");
@@ -76,7 +76,7 @@ TEST(TestCaseName2, Peresechenie) {
 
 
 
-TEST(bublesort, sort_test) {
+TEST(bubble_sort, sort_test) {
 	vector <string> test{
 		"a", "{a,s,d,f,g,h}", "{a,s,d,f,g,h,j,{a,{{s,s,d}},d}}", "{{a}}", "{}", "{{}}"
 	};
