@@ -1,0 +1,4 @@
+﻿  pch.cpp
+D:\Student\sem_2\Pioivis\lab2(Sets)\lab2(Sets)\pch.cpp(166,18): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+  test.cpp
+  lab2(Sets).vcxproj -> D:\Student\sem_2\Pioivis\lab2(Sets)\x64\Debug\lab2(Sets).exe
