@@ -25,12 +25,13 @@
 некоторым множеством, то говорят, что существует вхождение объекта в это множество, а
 объект принадлежит этому множеству.
 
-<p align="center"><img src="images/interscections.png"></p>
+<p align="center"><img src="images/interscections.png", height=200px></p>
 
 <p></p>
 Данная программа рассчитана на то, что множество может быть элементом множества
 <p></p>
-<img src="images/primer.jpg">
+
+<p align="center"><img src="images/primer.jpg"></p>
 
 Основные части программы:
 
