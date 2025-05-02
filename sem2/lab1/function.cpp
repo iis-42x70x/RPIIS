@@ -358,17 +358,27 @@ void RBTree::test_f() {
     for (int i = 0; i < 9; i++) {
         std::cout << " " << a[i];
     }
+    std::cout << std::endl;
     print_2(getRoot(), "", true);
-    std::cout << "Удаление элемента со значением" << a[5] << "\n";
+    std::cout << "Удаление элемента со значением " << a[5] << "\n";
     RB_DELETE(a[5]);
     print_2(getRoot(), "", true);
     minimum(getRoot());
     maximum(getRoot());
     node* found = search(a[4]);
     node* least = most_left(found);
-    std::cout << "Ближайший меньший элемент к элементу " << a[4] << ": " << least->data << std::endl;
-    node* least1 = most_right(found);
-    std::cout << "Ближайший больший элемент к элементу " << a[4] << ": " << least1->data << std::endl;
+    if(least){
+        std::cout << "Ближайший меньший элемент к элементу " << a[4] << ": " << least->data << std::endl;
+    }else{
+        std::cout << "Ближайшего меньшего элемента не существует. Данный элемент - наименьший.\n";
+    }
+    node* most = most_right(found);
+    if(most){
+        std::cout << "Ближайший больший элемент к элементу " << a[4] << ": " << most->data << std::endl;
+    }else{
+        std::cout << "Ближайшего большего элемента не существует. Данный элемент - наибольший.\n";
+    }
 }//
 // Created by aleks on 02.05.2025.
 //
+
