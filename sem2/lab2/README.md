@@ -198,22 +198,22 @@ std::vector<std::vector<std::string>> set_of_possible_orient_sets::generate_unor
 ## Пример работы программы
 **Файл для считывания:**
 
-![Исходное множество в файле](/images/file_container_for_input_set.png)
+![Исходное множество в файле](./images/file_container_for_input_set.png)
 
 **Работа программы при считывании исходного множества из файла:**
 
-![Пример работы программы начало вывода](/images/examp_program1.png)
+![Пример работы программы начало вывода](./images/examp_program1.png)
 
 **И так далее...**
 
-![Пример работы программы конец вывода](/images/examp_program2.png)
+![Пример работы программы конец вывода](./images/examp_program2.png)
 
 ## Тестирование
 Я использовал Unit-test bundle в Xcode для тестирования
 
-![Пример Unit-test1](/images/unit_test_examp1.png)
+![Пример Unit-test1](./images/unit_test_examp1.png)
 
-![Пример Unit-test2](/images/unit_test_examp2.png)
+![Пример Unit-test2](./images/unit_test_examp2.png)
 ## Вывод
 В ходе выполнения данной лабораторной работы я:
 - Изучил принцип работы с множествами.
