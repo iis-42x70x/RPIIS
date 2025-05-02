@@ -501,7 +501,25 @@ node* RBTree::most_left(node* z) {
 
 ## Тесты 
 
+### 1.
 
+<img src="pics\p2.png" width="400" alt="1">
+
+### 2.
+
+<img src="pics\p3.png" width="400" alt="1">
+
+### 3.
+
+<img src="pics\p4.png" width="400" alt="1">
+
+### 4.
+
+<img src="pics\p5.png" width="400" alt="1">
+
+### 5.
+
+<img src="pics\p6.png" width="400" alt="1">
 
 ## Вывод
 
