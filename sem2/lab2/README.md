@@ -244,7 +244,7 @@ TEST(SetTest, ThreeSetsWithTuplesResult) {
 TEST(SetTest, ThreeSetsWithTuplesResult2) {
     ofstream tmp("test_sets.txt");
     // Явно задаём форматирование с пробелами
-    tmp << "A = {a, b, {b,c}, a, <{a, b}, c>}\n"
+    tmp << "A = {a, b, {b,c}, a, <{a, <{      }>, b}, c>}\n"
         << "B = {a}\n"
         << "C = {<{a, b}, c>}";
     tmp.close();
