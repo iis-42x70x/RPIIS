@@ -12,7 +12,7 @@
 
 
  ## Вариант 
-Для выполнения лабораторной работы мне был выдан вариант **2**. Для работы с множествами буду использовать библиотеку  **vector** и **string**
+Для выполнения лабораторной работы мне был выдан вариант **2**. Для работы с множествами буду использовать библиотеки  **vector** и **string**
 
 ## Структура проекта
 <p align="center"><img src="images/structure.png"></p>
@@ -25,7 +25,7 @@
 некоторым множеством, то говорят, что существует вхождение объекта в это множество, а
 объект принадлежит этому множеству.
 
-<p align="center"><img src="images/interscections.png", height=200px></p>
+<p align="center"><img src="images/intersection.png", width=70%></p>
 
 <p></p>
 Данная программа рассчитана на то, что множество может быть элементом множества
@@ -175,25 +175,55 @@ string sort_set(string& str) {
 
 <img src="images/unit-test.jpg">
 
+### Код для тестирования функции сортировки ###
+
+```C++
+TEST(RemoveDuplicatesTest, RemovesDuplicates) {
+	std::vector<std::string> test_unique = {
+		"a","b","d","c","s","d","e","d","a","s","d","f","s","d","s","g"
+	};
+
+	remove_duplicates(test_unique);
+
+
+	EXPECT_EQ(test_unique.size(), 8);
+
+	EXPECT_EQ(test_unique[0], "a");
+	EXPECT_EQ(test_unique[1], "b");
+	EXPECT_EQ(test_unique[2], "d");
+	EXPECT_EQ(test_unique[3], "c");
+	EXPECT_EQ(test_unique[4], "s");
+	EXPECT_EQ(test_unique[5], "e");
+	EXPECT_EQ(test_unique[6], "f");
+	EXPECT_EQ(test_unique[7], "g");
+
+
+	std::vector<std::string> expected = { "a", "b", "d", "c", "s", "e", "f", "g" };
+	EXPECT_EQ(test_unique, expected);
+}
+```
+
+### Результат выполнения всех сортировок ###
+
 <p></p>
-<img src="images/unit_test_success.jpg">
+<img src="images/test1.png">
 
 
- **Тесты в консоли**
+ ### **Тесты в консоли** ###
  <p></p>
- <img src="images/test1.jpg">
+ <p align="center"><img src="images/test1.jpg", width=70%></p>
 
- #### Вывод:
+ ## Вывод:
 
 Во время выполнения рассчетной работы проделал вот такую работу:
-**1)** Повторил основные понятия теории множеств 
-**2)** Изучил основные операции над множествами 
-**3** Реализовал пересечение n-ого количества множеств в виде программы на языке С+
+**1)** Повторил основные понятия теории множеств;
+**2)** Изучил основные операции над множествами; 
+**3** Реализовал пересечение n-ого количества множеств в виде программы на языке С++;
 
 
-#### Используемые  источники
+## Используемые  источники
 
-#### Свободная энциклопедия "Википедия" [Электронный ресурс]-Режим доступа
+### Свободная энциклопедия "Википедия" [Электронный ресурс]-Режим доступа
 
 * https://ru.m.wikipedia.org/wiki/
 
