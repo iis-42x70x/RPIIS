@@ -124,10 +124,6 @@ void Intersection(const char* set1, const char* set2, char* result) {
             if(normalized1[i]==normalized2[j])
             {
                 intersect.push_back(normalized1[i]);
-                swap(normalized1[i],normalized1[normalized1.size()-1]);
-                swap(normalized2[j],normalized2[normalized2.size()-1]);
-                normalized1.pop_back();
-                normalized2.pop_back();
                 break;
             }
         }
