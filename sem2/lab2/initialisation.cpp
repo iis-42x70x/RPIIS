@@ -101,7 +101,7 @@ string normalizeElement(const string& elem) {
     }
 }
 
-void symmetricDifference(const char* set1, const char* set2, char* result) {
+void Intersection(const char* set1, const char* set2, char* result) {
     string s1(set1), s2(set2);
 
     auto elems1 = parseElements(s1);
@@ -115,37 +115,27 @@ void symmetricDifference(const char* set1, const char* set2, char* result) {
         normalized2.push_back(normalizeElement(elem));
     }
 
-    vector<string> diff;
+    vector<string> intersect;
 
-    for (const auto& elem1 : normalized1) {
-        bool found = false;
-        for (const auto& elem2 : normalized2) {
-            if (elem1 == elem2) {
-                found = true;
+    for (int i=0;i<normalized1.size();++i)
+    {
+        for(int j=0;j<normalized2.size();++j)
+        {
+            if(normalized1[i]==normalized2[j])
+            {
+                intersect.push_back(normalized1[i]);
+                swap(normalized1[i],normalized1[normalized1.size()-1]);
+                swap(normalized2[j],normalized2[normalized2.size()-1]);
+                normalized1.pop_back();
+                normalized2.pop_back();
                 break;
             }
         }
-        if (!found) {
-            diff.push_back(elem1);
-        }
     }
-    for (const auto& elem2 : normalized2) {
-        bool found = false;
-        for (const auto& elem1 : normalized1) {
-            if (elem2 == elem1) {
-                found = true;
-                break;
-            }
-        }
-        if (!found) {
-            diff.push_back(elem2);
-        }
-    }
-
     string res = "{";
-    for (size_t i = 0; i < diff.size(); ++i) {
+    for (size_t i = 0; i < intersect.size(); ++i) {
         if (i > 0) res += ",";
-        res += diff[i];
+        res += intersect[i];
     }
     res += "}";
     strcpy(result,res.c_str());
@@ -212,7 +202,7 @@ void menu(const char* filename) {
     if (readSets(filename, sets, setCount) != 0) return;
 
     while (true) {
-        cout << "\nМеню:\n1.Просмотр\n2.Добавить\n3.Сохранить\n4.Симметрическая разность\n5.Выход\nВыбор: ";
+        cout << "\nМеню:\n1.Просмотр\n2.Добавить\n3.Сохранить\n4.Пересечение\n5.Выход\nВыбор: ";
         int choice; cin >> choice; cin.ignore();
 
         if (choice == 1) {
@@ -250,7 +240,7 @@ void menu(const char* filename) {
                 continue;
             }
             char res[MAX_LINE_LENGTH];
-            symmetricDifference(sets[a - 1], sets[b - 1], res);
+            Intersection(sets[a - 1], sets[b - 1], res);
             string normalizedRes = normalizeElement(res);
             cout << "Результат:" << normalizedRes << endl;
         }
