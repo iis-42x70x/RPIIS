@@ -1,3 +1,5 @@
 { A , {A}, B , {C,< D,{E, E,F }>,G}, <A, A>, <A>}
 {C ,{ <D,{F ,E} >,C ,G}, <A, A, B>}
 {A , {A, A} , B, C, <D,{F,  E}>, G, G}
+{A , {A,B,D,C} , <{D,E},F>}
+{B , {A,C,D,B} , <{E,D},F>}
