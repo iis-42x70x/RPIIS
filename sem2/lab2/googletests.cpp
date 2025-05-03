@@ -36,7 +36,7 @@ TEST(ValidationTest, EdgeCases) {
     EXPECT_TRUE(isValidSet("{ }"));       
     EXPECT_TRUE(isValidSet("{{}}"));      
 }
-// Тесты симметрической разности (symmetricDifference)
+// Тесты пересечения(Intersection)
 TEST(Intersect, EmptySetCases) {
     char result[1024];
     Intersection("{}", "{A,B}", result);
