@@ -14,7 +14,7 @@ const int MAX_SETS = 10;
 
 vector<string> parseElements(const string&);
 string normalizeElement(const string&);
-void symmetricDifference(const char*, const char*, char*);
+void Intersection(const char*, const char*, char*);
 bool isValidSet(const char*);
 int readSets(const char*, char[MAX_SETS][MAX_LINE_LENGTH], int&);
 void writeSets(const char*, char[MAX_SETS][MAX_LINE_LENGTH], int);
