@@ -37,62 +37,54 @@ TEST(ValidationTest, EdgeCases) {
     EXPECT_TRUE(isValidSet("{{}}"));      
 }
 // Тесты симметрической разности (symmetricDifference)
-TEST(SymDiffTest, EmptySetCases) {
+TEST(Intersect, EmptySetCases) {
     char result[1024];
-    symmetricDifference("{}", "{A,B}", result);
-    EXPECT_STREQ(result, "{A,B}");
+    Intersection("{}", "{A,B}", result);
+    EXPECT_STREQ(result, "{}");
 
-    symmetricDifference("{A,B}", "{}", result);
-    EXPECT_STREQ(result, "{A,B}");
+    Intersection("{A,B}", "{}", result);
+    EXPECT_STREQ(result, "{}");
 }
-TEST(SymDiffTest, ComplexCases) {
+TEST(Intersection, ComplexCases) {
     char result[1024];
 
    
-    symmetricDifference(
+    Intersection(
         "{A, B, {X,Y}, <1,2>}",
         "{B, C, {X,Z}, <2,3>}",
         result
     );
-    EXPECT_STREQ(result, "{A,{X,Y},<1,2>,C,{X,Z},<2,3>}");
+    EXPECT_STREQ(result, "{B}");
 
     
-    symmetricDifference(
+    Intersection(
         "{<A,B>, <B,A>}",
         "{<B,A>, {A,B}}",
         result
     );
-    EXPECT_STREQ(result, "{<A,B>,{A,B}}");
+    EXPECT_STREQ(result, "{<B,A>}");
 
     
-    symmetricDifference(
+    Intersection(
         "{A, {B, {C, <D,E>}}}",
         "{A, {B, {C, <E,D>}}}",
         result
     );
-    EXPECT_STREQ(result, "{{B,{C,<D,E>}},{B,{C,<E,D>}}}");
+    EXPECT_STREQ(result, "{A}");
 
     
-    symmetricDifference(
+    Intersection(
         "{}",
         "{X, Y, {}}",
         result
     );
-    EXPECT_STREQ(result, "{X,Y,{}}");
-
-    
-    symmetricDifference(
-        "{A, A, <A,A>, {A}}",
-        "{<A,A>, A, {A,A}}",
-        result
-    );
     EXPECT_STREQ(result, "{}");
-    symmetricDifference(
-        "{A, B, C}",
-        "{X, Y, Z}",
+    Intersection(
+        "{A, B, C,<D,E,{G,H}>}",
+        "{X, Y, Z,<D,E,{G,H}>}",
         result
     );
-    EXPECT_STREQ(result, "{A,B,C,X,Y,Z}");
+    EXPECT_STREQ(result, "{<D,E,{G,H}>}");
 }
 // Тесты нормализации (normalizeElement)
 TEST(NormalizeTest, EmptySet) {
