@@ -29,90 +29,106 @@
 2. Запрос у пользователя количества элементов в множестве.
 3. Ввод элементов множества:
   - Запрос у пользователя ввода элементов множества;
-   - Сохранение введённых элементов в массив.
-4. Генерация комбинаций:
-- Использование функции next_permutation из стандартной библиотеки C++ для генерации всех возможных перестановок элементов множества.next_permutation(first, last) переставляет элементы так, чтобы получилась следующая в лексикографическом порядке перестановка. Можно применять не только к векторам, но и к строкам (как и многие другие алгоритмы). Метод возвращает true, если удалось построить следующую в лексикографическом порядке перестановку. Если же первоначальная перестановка уже была максимальной в лексикографическом порядке, то метод генерирует минимальную в лексикографическом порядке перестановку и возвращает false.
-   - Для каждой комбинации:
-      1) Вывод элементов комбинации в консоль.
-     2) Увеличение счетчика комбинаций.
-5. Вывод общего количества комбинаций.
-После завершения генерации всех комбинаций выводится общее количество сгенерированных комбинаций.
+   - Вводимые элементы добавляются в вектор elements.
+
+4. Генерация перестановок:
+Метод generatePermutations инициализирует вектор currentPermutation, который будет хранить текущую перестановку, и вектор used, который отслеживает, какие элементы уже были использованы.
+Затем вызывается рекурсивный метод generatePermutationsRecursive.
+Рекурсивная генерация перестановок:
+В методе generatePermutationsRecursive проверяется, достигнута ли длина текущей перестановки (currentPermutation) равная количеству элементов (elementsCount).
+Если да, то текущая перестановка выводится на экран.
+Если нет, то продолжается процесс генерации.
+Цикл по элементам:
+Для каждого элемента в векторе elements проверяется, был ли он использован (согласно вектору used).
+Если элемент не использован:
+Он добавляется в текущую перестановку (currentPermutation).
+Элемент помечается как использованный (used[i] = true).
+Рекурсивно вызывается метод для продолжения генерации с обновленным состоянием.
+После возвращения из рекурсии последний добавленный элемент удаляется из текущей перестановки (pop_back()), и его статус использования сбрасывается (used[i] = false).
+Завершение:
+
+Процесс продолжается до тех пор, пока не будут сгенерированы все возможные перестановки.
 В коде реализация этого алгоритма выглядит так:
 
 **Header.h**
 ```C++
-#ifndef COMBINATION_GENERATOR_H
-#define COMBINATION_GENERATOR_H
+#ifndef HEADER_H
+#define HEADER_H
 
-#include <iostream>
-#include <algorithm>
+#include <vector>
+#include <string>
 
-class CombinationGenerator {
+class PermutationGenerator {
 public:
-    // Конструктор класса, который принимает количество элементов множества
-    CombinationGenerator(int elementsCount);
-
-    // Метод для ввода элементов множества
+    PermutationGenerator(int count);
     void readElements();
-
-    // Метод для генерации всех возможных комбинаций элементов множества
-    void generateCombinations();
-
-    // Деструктор класса, который освобождает память, выделенную под массив элементов
-    ~CombinationGenerator();
+    void generatePermutations();
 
 private:
-    int numElements; // Количество элементов множества
-    int* elements;   // Указатель на массив элементов множества
+    void generatePermutationsRecursive(std::vector<std::string>& currentPermutation, std::vector<bool>& used);
+
+    int elementsCount;
+    std::vector<std::string> elements; // Вектор для хранения элементов
 };
 
-#endif
+#endif // HEADER_H
 ```
 **CombinationGenerator.сpp**
 ```C++
 #include "Header.h"
-
+#include <iostream>
+#include <vector>
+#include <string>
 
 using namespace std;
 
-// Конструктор класса, который принимает количество элементов множества
-CombinationGenerator::CombinationGenerator(int elementsCount) : numElements(elementsCount) {
-    // Выделяем память под массив элементов множества
-    elements = new int[numElements];
-}
+PermutationGenerator::PermutationGenerator(int count) : elementsCount(count) {}
 
-// Метод для ввода элементов множества
-void CombinationGenerator::readElements() {
-    // Просим пользователя ввести элементы множества
-    cout << "Введите элементы множества: ";
-    // Считываем элементы множества и сохраняем их в массив
-    for (int i = 0; i < numElements; i++) {
-       
-        cin >> elements[i];
+void PermutationGenerator::readElements() {
+    for (int i = 0; i < elementsCount; ++i) {
+        cout << "Введите элемент (буква или множество символов): ";
+        string input;
+        cin >> input;
+
+        // Добавляем элемент в вектор
+        elements.push_back(input);
     }
 }
 
-// Метод для генерации всех возможных комбинаций элементов множества
-void CombinationGenerator::generateCombinations() {
-    int combinationsCount = 0; // Счетчик комбинаций
-
-    // Генерируем и выводим все возможные комбинации элементов множества
-    do {
-        // Выводим текущую комбинацию элементов
-        for (int i = 0; i < numElements; i++) {
-            cout << elements[i] << " ";
-        }
-        cout << std::endl; // Переходим на новую строку
-        combinationsCount++; // Увеличиваем счетчик при генерации новой комбинации
-    } while (std::next_permutation(elements, elements + numElements)); // Получаем следующую перестановку элементов
-
-    // Выводим общее количество сгенерированных комбинаций
-    cout << "Количество сгенерированных комбинаций: " << combinationsCount << std::endl;
+void PermutationGenerator::generatePermutations() {
+    vector<string> currentPermutation;
+    vector<bool> used(elementsCount, false); // Вектор для отслеживания использованных элементов
+    generatePermutationsRecursive(currentPermutation, used);
 }
 
-// Деструктор класса, который освобождает память, выделенную под массив элементов
-CombinationGenerator::~CombinationGenerator() {
-    delete[] elements;
+void PermutationGenerator::generatePermutationsRecursive(vector<string>& currentPermutation, vector<bool>& used) {
+    // Если текущая перестановка имеет нужный размер, выводим её
+    if (currentPermutation.size() == elementsCount) {
+        cout << "{ ";
+        for (size_t i = 0; i < currentPermutation.size(); ++i) {
+            cout << currentPermutation[i];
+            if (i < currentPermutation.size() - 1) {
+                cout << ", "; // Добавляем запятую между элементами
+            }
+        }
+       
+        cout << "}";
+        cout << endl;
+        return; // Возвращаемся, чтобы не продолжать генерировать дальше
+    }
+
+    // Генерируем новые перестановки
+    for (int i = 0; i < elements.size(); ++i) {
+        if (!used[i]) { // Если элемент еще не использован
+            currentPermutation.push_back(elements[i]); // Добавляем элемент в текущую перестановку
+            used[i] = true; // Отмечаем элемент как использованный
+
+            generatePermutationsRecursive(currentPermutation, used); // Рекурсивный вызов
+
+            currentPermutation.pop_back(); // Убираем последний элемент для следующей итерации
+            used[i] = false; // Сбрасываем отметку о использовании элемента
+        }
+    }
 }
 ```
 ##  Вывод
