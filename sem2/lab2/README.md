@@ -32,16 +32,16 @@
    - Вводимые элементы добавляются в вектор elements.
 
 4. Генерация перестановок:
-Метод generatePermutations инициализирует вектор currentPermutation, который будет хранить текущую перестановку, и вектор used, который отслеживает, какие элементы уже были использованы.
-Затем вызывается рекурсивный метод generatePermutationsRecursive.
+Метод generate инициализирует вектор currentPermutation, который будет хранить текущую перестановку, и вектор used, который отслеживает, какие элементы уже были использованы.
+Затем вызывается рекурсивный метод genrec.
 Рекурсивная генерация перестановок:
-В методе generatePermutationsRecursive проверяется, достигнута ли длина текущей перестановки (currentPermutation) равная количеству элементов (elementsCount).
+В методе genrec проверяется, достигнута ли длина текущей перестановки (current) равная количеству элементов (elementsCount).
 Если да, то текущая перестановка выводится на экран.
 Если нет, то продолжается процесс генерации.
 Цикл по элементам:
 Для каждого элемента в векторе elements проверяется, был ли он использован (согласно вектору used).
 Если элемент не использован:
-Он добавляется в текущую перестановку (currentPermutation).
+Он добавляется в текущую перестановку (current).
 Элемент помечается как использованный (used[i] = true).
 Рекурсивно вызывается метод для продолжения генерации с обновленным состоянием.
 После возвращения из рекурсии последний добавленный элемент удаляется из текущей перестановки (pop_back()), и его статус использования сбрасывается (used[i] = false).
@@ -58,14 +58,14 @@
 #include <vector>
 #include <string>
 
-class PermutationGenerator {
+class Generator {
 public:
-    PermutationGenerator(int count);
+    Generator(int count);
     void readElements();
-    void generatePermutations();
+    void generate();
 
 private:
-    void generatePermutationsRecursive(std::vector<std::string>& currentPermutation, std::vector<bool>& used);
+    void genrec(std::vector<std::string>& currentPermutation, std::vector<bool>& used);
 
     int elementsCount;
     std::vector<std::string> elements; // Вектор для хранения элементов
@@ -82,9 +82,9 @@ private:
 
 using namespace std;
 
-PermutationGenerator::PermutationGenerator(int count) : elementsCount(count) {}
+Generator::Generator(int count) : elementsCount(count) {}
 
-void PermutationGenerator::readElements() {
+void Generator::readElements() {
     for (int i = 0; i < elementsCount; ++i) {
         cout << "Введите элемент (буква или множество символов): ";
         string input;
@@ -95,19 +95,19 @@ void PermutationGenerator::readElements() {
     }
 }
 
-void PermutationGenerator::generatePermutations() {
+void Generator::generate() {
     vector<string> currentPermutation;
     vector<bool> used(elementsCount, false); // Вектор для отслеживания использованных элементов
-    generatePermutationsRecursive(currentPermutation, used);
+    genrec(currentPermutation, used);
 }
 
-void PermutationGenerator::generatePermutationsRecursive(vector<string>& currentPermutation, vector<bool>& used) {
+void Generator::genrec(vector<string>& cur, vector<bool>& used) {
     // Если текущая перестановка имеет нужный размер, выводим её
-    if (currentPermutation.size() == elementsCount) {
+    if (cur.size() == elementsCount) {
         cout << "{ ";
-        for (size_t i = 0; i < currentPermutation.size(); ++i) {
-            cout << currentPermutation[i];
-            if (i < currentPermutation.size() - 1) {
+        for (size_t i = 0; i < cur.size(); ++i) {
+            cout << cur[i];
+            if (i < cur.size() - 1) {
                 cout << ", "; // Добавляем запятую между элементами
             }
         }
@@ -120,16 +120,17 @@ void PermutationGenerator::generatePermutationsRecursive(vector<string>& current
     // Генерируем новые перестановки
     for (int i = 0; i < elements.size(); ++i) {
         if (!used[i]) { // Если элемент еще не использован
-            currentPermutation.push_back(elements[i]); // Добавляем элемент в текущую перестановку
+            cur.push_back(elements[i]); // Добавляем элемент в текущую перестановку
             used[i] = true; // Отмечаем элемент как использованный
 
-            generatePermutationsRecursive(currentPermutation, used); // Рекурсивный вызов
+            genrec(cur, used); // Рекурсивный вызов
 
-            currentPermutation.pop_back(); // Убираем последний элемент для следующей итерации
+            cur.pop_back(); // Убираем последний элемент для следующей итерации
             used[i] = false; // Сбрасываем отметку о использовании элемента
         }
     }
 }
+
 ```
 ##  Тесты
 На скриншоте представлена работа тестовых программ для данной работы:
