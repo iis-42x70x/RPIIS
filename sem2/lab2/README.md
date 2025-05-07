@@ -27,9 +27,9 @@
 ```
 #include "pch.h"
 //Программа читает множество из файла, потом генерирует все перестановки и сохраняет результат в output.txt.
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) { //количество аргументов командной строки; массив указателей на аргументы, переданные при запуске программы (например, имя файла)
     string filename;
-    if (argc > 1) filename = argv[1];
+    if (argc > 1) filename = argv[1];//сли при запуске программы был передан аргумент, то filename получает значение этого аргумента (argv[1])
     else {
         while (true) {
             if (filename.empty()) {
