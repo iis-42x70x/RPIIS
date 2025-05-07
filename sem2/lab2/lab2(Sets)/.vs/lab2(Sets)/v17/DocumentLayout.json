@@ -1,21 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Student\\sem_2\\Pioivis\\lab2(Sets)\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\RPIIS\\sem2\\lab2\\lab2(Sets)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4014FECA-0554-4F3C-838E-3585332C398C}|lab2(Sets)\\lab2(Sets).vcxproj|D:\\Student\\sem_2\\Pioivis\\lab2(Sets)\\lab2(Sets)\\test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4014FECA-0554-4F3C-838E-3585332C398C}|lab2(Sets)\\lab2(Sets).vcxproj|solutionrelative:lab2(Sets)\\test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4014FECA-0554-4F3C-838E-3585332C398C}|lab2(Sets)\\lab2(Sets).vcxproj|D:\\Student\\sem_2\\Pioivis\\lab2(Sets)\\lab2(Sets)\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{4014FECA-0554-4F3C-838E-3585332C398C}|lab2(Sets)\\lab2(Sets).vcxproj|C:\\Users\\User\\RPIIS\\sem2\\lab2\\lab2(Sets)\\lab2(Sets)\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4014FECA-0554-4F3C-838E-3585332C398C}|lab2(Sets)\\lab2(Sets).vcxproj|solutionrelative:lab2(Sets)\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4014FECA-0554-4F3C-838E-3585332C398C}|lab2(Sets)\\lab2(Sets).vcxproj|D:\\Student\\sem_2\\Pioivis\\lab2(Sets)\\lab2(Sets)\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4014FECA-0554-4F3C-838E-3585332C398C}|lab2(Sets)\\lab2(Sets).vcxproj|solutionrelative:lab2(Sets)\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4014FECA-0554-4F3C-838E-3585332C398C}|lab2(Sets)\\lab2(Sets).vcxproj|C:\\Users\\User\\RPIIS\\sem2\\lab2\\lab2(Sets)\\lab2(Sets)\\test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4014FECA-0554-4F3C-838E-3585332C398C}|lab2(Sets)\\lab2(Sets).vcxproj|solutionrelative:lab2(Sets)\\test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Student\\sem_2\\Oaip\\Course_work\\Course_work\\Course_work\\Course_work.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4014FECA-0554-4F3C-838E-3585332C398C}|lab2(Sets)\\lab2(Sets).vcxproj|C:\\Users\\User\\RPIIS\\sem2\\lab2\\lab2(Sets)\\lab2(Sets)\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4014FECA-0554-4F3C-838E-3585332C398C}|lab2(Sets)\\lab2(Sets).vcxproj|solutionrelative:lab2(Sets)\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,54 +22,40 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Course_work.cpp",
-              "DocumentMoniker": "D:\\Student\\sem_2\\Oaip\\Course_work\\Course_work\\Course_work\\Course_work.cpp",
-              "RelativeDocumentMoniker": "..\\..\\Oaip\\Course_work\\Course_work\\Course_work\\Course_work.cpp",
-              "ToolTip": "D:\\Student\\sem_2\\Oaip\\Course_work\\Course_work\\Course_work\\Course_work.cpp",
-              "RelativeToolTip": "..\\..\\Oaip\\Course_work\\Course_work\\Course_work\\Course_work.cpp",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAAAIgAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-02T21:03:14.356Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "pch.h",
-              "DocumentMoniker": "D:\\Student\\sem_2\\Pioivis\\lab2(Sets)\\lab2(Sets)\\pch.h",
+              "DocumentMoniker": "C:\\Users\\User\\RPIIS\\sem2\\lab2\\lab2(Sets)\\lab2(Sets)\\pch.h",
               "RelativeDocumentMoniker": "lab2(Sets)\\pch.h",
-              "ToolTip": "D:\\Student\\sem_2\\Pioivis\\lab2(Sets)\\lab2(Sets)\\pch.h",
+              "ToolTip": "C:\\Users\\User\\RPIIS\\sem2\\lab2\\lab2(Sets)\\lab2(Sets)\\pch.h",
               "RelativeToolTip": "lab2(Sets)\\pch.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-02T19:14:09.808Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-02T19:14:09.808Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "pch.cpp",
-              "DocumentMoniker": "D:\\Student\\sem_2\\Pioivis\\lab2(Sets)\\lab2(Sets)\\pch.cpp",
+              "DocumentMoniker": "C:\\Users\\User\\RPIIS\\sem2\\lab2\\lab2(Sets)\\lab2(Sets)\\pch.cpp",
               "RelativeDocumentMoniker": "lab2(Sets)\\pch.cpp",
-              "ToolTip": "D:\\Student\\sem_2\\Pioivis\\lab2(Sets)\\lab2(Sets)\\pch.cpp",
+              "ToolTip": "C:\\Users\\User\\RPIIS\\sem2\\lab2\\lab2(Sets)\\lab2(Sets)\\pch.cpp",
               "RelativeToolTip": "lab2(Sets)\\pch.cpp",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAAALIAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-02T19:14:07.398Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "test.cpp",
-              "DocumentMoniker": "D:\\Student\\sem_2\\Pioivis\\lab2(Sets)\\lab2(Sets)\\test.cpp",
+              "DocumentMoniker": "C:\\Users\\User\\RPIIS\\sem2\\lab2\\lab2(Sets)\\lab2(Sets)\\test.cpp",
               "RelativeDocumentMoniker": "lab2(Sets)\\test.cpp",
-              "ToolTip": "D:\\Student\\sem_2\\Pioivis\\lab2(Sets)\\lab2(Sets)\\test.cpp",
+              "ToolTip": "C:\\Users\\User\\RPIIS\\sem2\\lab2\\lab2(Sets)\\lab2(Sets)\\test.cpp",
               "RelativeToolTip": "lab2(Sets)\\test.cpp",
               "ViewState": "AgIAADwAAAAAAAAAAAAwwFsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",

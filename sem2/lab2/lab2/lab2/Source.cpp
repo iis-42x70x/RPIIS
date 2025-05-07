@@ -21,8 +21,9 @@ bool is_correct(string str) {
 		str.erase(remove_if(str.begin(), str.end(), ::isspace), str.end());
 	}
 
-	if (str.front() != '{' || str.back() != '}') return false;
+	iif(str.empty() || str.front() != '{' || str.back() != '}') return false;
 	str = str.substr(1, str.size() - 2);
+	if (str.empty()) return true;
 
 	size_t last_symb = str.find_last_not_of(" \t");
 	if (last_symb != string::npos && str[last_symb] == ',') {
