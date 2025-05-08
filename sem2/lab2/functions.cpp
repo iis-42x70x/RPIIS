@@ -1,5 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include "header.h"
+#include "header.h"         // добавить сортировку
 
 vector<string> parseElements(const string& element) {       // делит строку на элементы вектора через ,
     vector<string> elements;
@@ -54,6 +54,18 @@ string normalizeElement(const string& elem) {       // приводит стро
 
         for (auto& it : inner)
             normalized.push_back(normalizeElement(it));
+
+        sort(normalized.begin(), normalized.end(), [](const string& a, const string& b) {
+            char first_a = a.front();
+            char first_b = b.front();
+
+            if (first_a == first_b) return a < b;
+            if (first_a == '{') return false;
+            if (first_b == '{') return true;
+            if (first_a == '<') return false;
+            if (first_b == '<') return true;
+            return a < b; 
+        });
 
         if (normalized.size() == 1) {
             return normalized[0];

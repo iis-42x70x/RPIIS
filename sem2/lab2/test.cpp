@@ -51,10 +51,10 @@ TEST(DifferenceTest, ComplexCases) {
    
     Difference(
         "{A, B, {X,Y}, <1,2>}",
-        "{B, C, {Y,Z}, <2,3>}",
+        "{B, C, {Y,X}, <2,3>}",
         result
     );
-    EXPECT_STREQ(result, "{A,{X,Y},<1,2>}");
+    EXPECT_STREQ(result, "{A,<1,2>}");
 
     Difference(
         "{<A,B>, <B,A>}",
@@ -93,13 +93,13 @@ TEST(NormalizeTest, MixedTypes) {
 
 TEST(NormalizeTest, NormalizationResults) {
     EXPECT_EQ(normalizeElement("{ A , {A}, B , {C,< D,{E, E,F }>,G}, <A, A>, {<A>}, <A> }"),
-        "{A,A,B,{C,<D,{E,E,F}>,G},<A,A>,<A>,<A>}");
+        "{A,A,B,<A,A>,<A>,<A>,{C,G,<D,{E,E,F}>}}");
 
     EXPECT_EQ(normalizeElement("{C ,{ <D,{F ,E} >,C ,G}, <A, A, B>}"),
-        "{C,{<D,{F,E}>,C,G},<A,A,B>}");
+        "{C,<A,A,B>,{C,G,<D,{E,F}>}}");
         
     EXPECT_EQ(normalizeElement("{A , {A, A} , B, C, <D,{F,  E}>, G, G}"),
-        "{A,{A,A},B,C,<D,{F,E}>,G,G}");
+        "{A,B,C,G,G,<D,{E,F}>,{A,A}}");
 }
 int main(int argc, char **argv)
 {
