@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/laba2"
+			"value" : "C:/Program Files (x86)/lab2_2"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -875,7 +875,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "laba2"
+			"value" : "lab2_2"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1282,7 +1282,7 @@
 			"value" : "TRUE"
 		},
 		{
-			"name" : "laba2_BINARY_DIR",
+			"name" : "lab2_2_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1294,7 +1294,7 @@
 			"value" : "E:/RPIIS/sem2/lab2/cmake-build-debug"
 		},
 		{
-			"name" : "laba2_IS_TOP_LEVEL",
+			"name" : "lab2_2_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1306,7 +1306,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "laba2_SOURCE_DIR",
+			"name" : "lab2_2_SOURCE_DIR",
 			"properties" : 
 			[
 				{

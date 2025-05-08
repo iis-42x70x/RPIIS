@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: laba2
+# Project: lab2_2
 # Configurations: Debug
 # =============================================================================
 
@@ -41,40 +41,48 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = E$:/RPIIS/sem2/lab2/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target laba2
+# Object build statements for EXECUTABLE target lab2_2
 
 
 #############################################
-# Order-only phony target for laba2
+# Order-only phony target for lab2_2
 
-build cmake_object_order_depends_target_laba2: phony || .
+build cmake_object_order_depends_target_lab2_2: phony || .
 
-build CMakeFiles/laba2.dir/main.cpp.obj: CXX_COMPILER__laba2_unscanned_Debug E$:/RPIIS/sem2/lab2/main.cpp || cmake_object_order_depends_target_laba2
-  DEP_FILE = CMakeFiles\laba2.dir\main.cpp.obj.d
+build CMakeFiles/lab2_2.dir/main.cpp.obj: CXX_COMPILER__lab2_2_unscanned_Debug E$:/RPIIS/sem2/lab2/main.cpp || cmake_object_order_depends_target_lab2_2
+  DEP_FILE = CMakeFiles\lab2_2.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\laba2.dir
-  OBJECT_FILE_DIR = CMakeFiles\laba2.dir
-  TARGET_COMPILE_PDB = CMakeFiles\laba2.dir\
-  TARGET_PDB = laba2.pdb
+  OBJECT_DIR = CMakeFiles\lab2_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\lab2_2.dir
+  TARGET_COMPILE_PDB = CMakeFiles\lab2_2.dir\
+  TARGET_PDB = lab2_2.pdb
+
+build CMakeFiles/lab2_2.dir/Set.cpp.obj: CXX_COMPILER__lab2_2_unscanned_Debug E$:/RPIIS/sem2/lab2/Set.cpp || cmake_object_order_depends_target_lab2_2
+  DEP_FILE = CMakeFiles\lab2_2.dir\Set.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\lab2_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\lab2_2.dir
+  TARGET_COMPILE_PDB = CMakeFiles\lab2_2.dir\
+  TARGET_PDB = lab2_2.pdb
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target laba2
+# Link build statements for EXECUTABLE target lab2_2
 
 
 #############################################
-# Link the executable laba2.exe
+# Link the executable lab2_2.exe
 
-build laba2.exe: CXX_EXECUTABLE_LINKER__laba2_Debug CMakeFiles/laba2.dir/main.cpp.obj
+build lab2_2.exe: CXX_EXECUTABLE_LINKER__lab2_2_Debug CMakeFiles/lab2_2.dir/main.cpp.obj CMakeFiles/lab2_2.dir/Set.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\laba2.dir
+  OBJECT_DIR = CMakeFiles\lab2_2.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\laba2.dir\
-  TARGET_FILE = laba2.exe
-  TARGET_IMPLIB = liblaba2.dll.a
-  TARGET_PDB = laba2.pdb
+  TARGET_COMPILE_PDB = CMakeFiles\lab2_2.dir\
+  TARGET_FILE = lab2_2.exe
+  TARGET_IMPLIB = liblab2_2.dll.a
+  TARGET_PDB = lab2_2.pdb
 
 
 #############################################
@@ -102,7 +110,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build laba2: phony laba2.exe
+build lab2_2: phony lab2_2.exe
 
 # =============================================================================
 # Folder targets.
@@ -112,7 +120,7 @@ build laba2: phony laba2.exe
 #############################################
 # Folder: E:/RPIIS/sem2/lab2/cmake-build-debug
 
-build all: phony laba2.exe
+build all: phony lab2_2.exe
 
 # =============================================================================
 # Built-in targets

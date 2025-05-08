@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "laba2",
+					"name" : "lab2_2",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "laba2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-laba2-Debug-b2c18250d887e99ddb6c.json",
-					"name" : "laba2",
+					"id" : "lab2_2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lab2_2-Debug-c032c5117a26042fa641.json",
+					"name" : "lab2_2",
 					"projectIndex" : 0
 				}
 			]

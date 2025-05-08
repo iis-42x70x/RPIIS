@@ -113,7 +113,7 @@ CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=E:/RPIIS/sem2/lab2/cmake-build-debug/CMa
 CMAKE_GNUtoMS:BOOL=OFF
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/laba2
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/lab2_2
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/Users/ekatsune/AppData/Local/Programs/CLion/bin/mingw/bin/ld.exe
@@ -157,7 +157,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=laba2
+CMAKE_PROJECT_NAME:STATIC=lab2_2
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=C:/Users/ekatsune/AppData/Local/Programs/CLion/bin/mingw/bin/ranlib.exe
@@ -243,13 +243,13 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-laba2_BINARY_DIR:STATIC=E:/RPIIS/sem2/lab2/cmake-build-debug
+lab2_2_BINARY_DIR:STATIC=E:/RPIIS/sem2/lab2/cmake-build-debug
 
 //Value Computed by CMake
-laba2_IS_TOP_LEVEL:STATIC=ON
+lab2_2_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-laba2_SOURCE_DIR:STATIC=E:/RPIIS/sem2/lab2
+lab2_2_SOURCE_DIR:STATIC=E:/RPIIS/sem2/lab2
 
 
 ########################
