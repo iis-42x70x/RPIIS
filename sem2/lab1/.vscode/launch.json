@@ -1,0 +1,47 @@
+{
+    "configurations": [
+        {
+            "name": "C/C++: clang++ сборка и отладка активного файла",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb",
+            "preLaunchTask": "C/C++: clang++ сборка активного файла"
+            
+        },
+        {
+            "name": "C/C++: g++ сборка и отладка активного файла",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "C/C++: g++ сборка активного файла"
+            
+        },
+        {
+            "name": "Run BTree",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/b_tree-tree_main",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "C/C++: g++ сборка проекта"
+        },
+        
+    ],
+    "version": "2.0.0"
+}

@@ -1,0 +1,22 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "__hash_table": "cpp",
+        "__split_buffer": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "deque": "cpp",
+        "initializer_list": "cpp",
+        "queue": "cpp",
+        "stack": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "fstream": "cpp",
+        "new": "cpp",
+        "iomanip": "cpp",
+        "sstream": "cpp"
+    }
+}

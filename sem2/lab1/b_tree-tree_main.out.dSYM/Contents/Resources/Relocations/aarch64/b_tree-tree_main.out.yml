@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     b_tree-tree_main.out
+relocations:     []
+...
