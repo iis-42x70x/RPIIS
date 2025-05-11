@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9/"
+     xml:base="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-9="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#имеет_диаметр -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#имеет_диаметр"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#предыдущая_по_диаметру_галактика_местной_группы -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#предыдущая_по_диаметру_галактика_местной_группы"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#следующая_по_диаметру_галактика_местной_группы -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#следующая_по_диаметру_галактика_местной_группы"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#содержит_в_себе -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#содержит_в_себе"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#имеет_диаметр -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#имеет_диаметр"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#имеет_значение -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#имеет_значение"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#имеет_массу -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#имеет_массу"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#содержит_в_себе -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#содержит_в_себе"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#галактика -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#галактика">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#космические_образования"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#звезда"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#созвездие"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#спиральный_рукав"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#эмиссионная_туманность"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#галактика_местной_группы -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#галактика_местной_группы">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#галактика"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#спиральная_Sc_галактика"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#звезда -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#звезда">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#космические_образования"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#спиральный_рукав"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#эмиссионная_туманность"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#звезда-гигант -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#звезда-гигант">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#звезда"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#интервальная_величина -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#интервальная_величина"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#космические_образования -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#космические_образования"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#первая_по_диаметру_галактика_местной_группы -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#первая_по_диаметру_галактика_местной_группы">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#галактика_местной_группы"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#созвездие -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#созвездие">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#космические_образования"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#спиральная_Sc_галактика -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#спиральная_Sc_галактика">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#галактика"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#спиральный_рукав -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#спиральный_рукав">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#космические_образования"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#эмиссионная_туманность"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#число -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#число"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#эмиссионная_туманность -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#эмиссионная_туманность">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#космические_образования"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#M33 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#M33">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#NGC598"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#NGC598 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#NGC598"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#NGC598 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#NGC598">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#Галактика_треугольника"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#Галактика_треугольника -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#Галактика_треугольника"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#NGC604 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#NGC604">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#эмиссионная_туманность"/>
+        <untitled-ontology-9:содержит_в_себе>200звезд-гигантов</untitled-ontology-9:содержит_в_себе>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#Галактика_Андромеды -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#Галактика_Андромеды">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#первая_по_диаметру_галактика_местной_группы"/>
+        <untitled-ontology-9:предыдущая_по_диаметру_галактика_местной_группы rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#Млечный_Путь"/>
+        <untitled-ontology-9:имеет_диаметр>4d</untitled-ontology-9:имеет_диаметр>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#Галактика_треугольника -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#Галактика_треугольника">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#галактика_местной_группы"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#спиральная_Sc_галактика"/>
+        <untitled-ontology-9:содержит_в_себе rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#созвездие_треугольника"/>
+        <untitled-ontology-9:содержит_в_себе rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#спиральный_рукав_галактики_треугольника"/>
+        <untitled-ontology-9:имеет_диаметр>50000 св. лет</untitled-ontology-9:имеет_диаметр>
+        <untitled-ontology-9:имеет_диаметр>d</untitled-ontology-9:имеет_диаметр>
+        <untitled-ontology-9:имеет_массу>m</untitled-ontology-9:имеет_массу>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#Млечный_Путь -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#Млечный_Путь">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#галактика_местной_группы"/>
+        <untitled-ontology-9:предыдущая_по_диаметру_галактика_местной_группы rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#Галактика_треугольника"/>
+        <untitled-ontology-9:следующая_по_диаметру_галактика_местной_группы rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#Галактика_Андромеды"/>
+        <untitled-ontology-9:имеет_диаметр>2d</untitled-ontology-9:имеет_диаметр>
+        <untitled-ontology-9:имеет_массу>от 5m до 10m</untitled-ontology-9:имеет_массу>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#созвездие_треугольника -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#созвездие_треугольника">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#созвездие"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#спиральный_рукав_галактики_треугольника -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#спиральный_рукав_галактики_треугольника">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#спиральный_рукав"/>
+        <untitled-ontology-9:содержит_в_себе rdf:resource="http://www.semanticweb.org/user/ontologies/2025/3/untitled-ontology-9#NGC604"/>
+        <untitled-ontology-9:содержит_в_себе>200 звезд-гигантов</untitled-ontology-9:содержит_в_себе>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
