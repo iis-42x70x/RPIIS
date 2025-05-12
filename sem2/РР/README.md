@@ -6,15 +6,15 @@
 ## Список используемых понятий:
 1. **Граф** - математическая структура, состоящая из вершин и ребер, соединяющих некоторые пары вершин.
 
-![img](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/%D0%A0%D0%A0/img/%D0%B3%D1%80%D0%B0%D1%84.jpg)
+![img](https://github.com/iis-42x70x/RPIIS/blob/Дорош_М/sem2/РР/img/graph.png)
 
 2. **Неориентированный граф** - это геометрическая фигура, состоящая из точек (вершины графа) и линий, их соединяющих (рёбра графа)
 
-![img](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/%D0%A0%D0%A0/img/%D0%BD%D0%B5%D0%BE%D1%80%D0%B3%D1%80%D0%B0%D1%84.jpg)
+![img](https://github.com/iis-42x70x/RPIIS/blob/Дорош_М/sem2/РР/img/test1.1.png)
 
 3. **Ориентированный граф** - это геометрическая фигура, состоящая из точек (вершины графа) и линий, их соединяющих (рёбра графа), причем эти линии имеют направление.
 
-![img](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/%D0%A0%D0%A0/img/%D0%BE%D1%80%D0%B3%D1%80%D0%B0%D1%84.jpg)
+![img](https://github.com/iis-42x70x/RPIIS/blob/Дорош_М/sem2/РР/img/test1.2.png)
 
 4. **Обхват гарфа** - длина наименьшего цикла в графе.
    
@@ -41,32 +41,32 @@ e. Для каждого столбца `j` в матрице `matrix`:
 
 1. Пользователь задает ориентированный граф.
 
-![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/%D0%A0%D0%A0/img/graph.png)
+![image](https://github.com/iis-42x70x/RPIIS/blob/Дорош_М/sem2/РР/img/test2.1.png)
 
 
 2. Выбирается вершина для начала обхода (допустим, A). Инициализируется переменная mingirth, которая будет хранить обхват орграфа, изначально равная `n`(количество вершин графа)+1.Также создаётся вектор  `visited`, который хранит посещённые вершины. И очередь `q`, которая хранит текущую вершину и дистанцию.
 
-![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/%D0%A0%D0%A0/img/wave1.png)
+![image](https://github.com/iis-42x70x/RPIIS/blob/Дорош_М/sem2/РР/img/test2.2.png)
 
 
 3. Используя обход в ширину двигаемся в вершину B, обновляя очередь `q` и занося её в вектор `visited`.
 
-![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/%D0%A0%D0%A0/img/wave2.png)
+![image](https://github.com/iis-42x70x/RPIIS/blob/Дорош_М/sem2/РР/img/test3.1.png)
 
 
 4. Продолжаем обход в ширину и все вышеперечисленные процессы.
 
-![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/%D0%A0%D0%A0/img/wave3.png)
+![image](https://github.com/iis-42x70x/RPIIS/blob/Дорош_М/sem2/РР/img/test3.2.png)
 
 
 5. Дойдя до вершины D, используем алгоритма обхода в ширину и получаем, что смежная вершина A является начальной вершиной. И получаем конечную дистанцию.
 
-![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/%D0%A0%D0%A0/img/wave4.png)
+![image](https://github.com/iis-42x70x/RPIIS/blob/Дорош_М/sem2/РР/img/wave1.png)
 
 
 6. Прописывыаем алгоритм сравнения текущей дистанции с переменной `mingirth` для получения минимального значения. И потом переприсваиваем `mingirth` минимальное значение.
    
-![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/%D0%A0%D0%A0/img/wave5.png)
+![image](https://github.com/iis-42x70x/RPIIS/blob/Дорош_М/sem2/РР/img/wave2.png)
 
 
 7. Потворяя данный алгоритм для всех вершин получим обхват орграфа.
@@ -74,30 +74,30 @@ e. Для каждого столбца `j` в матрице `matrix`:
 ## Пример входных и выходных конструкций:
 1. Входная:
 
-   ![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/%D0%A0%D0%A0/img/test1.1.png)
+   ![image](https://github.com/iis-42x70x/RPIIS/blob/Дорош_М/sem2/РР/img/wave3.png)
 
    Выходная:
 
-   ![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/%D0%A0%D0%A0/img/test1.2.png)
+   ![image](https://github.com/iis-42x70x/RPIIS/blob/Дорош_М/sem2/РР/img/wave4.png)
 
    
 2. Входная:
 
-![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/%D0%A0%D0%A0/img/test2.1.png)
+![image](https://github.com/iis-42x70x/RPIIS/blob/Дорош_М/sem2/РР/img/wave5.png)
 
 
    Выходная:
 
-![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/%D0%A0%D0%A0/img/test2.2.png)
+![image](https://github.com/iis-42x70x/RPIIS/blob/Дорош_М/sem2/РР/img/граф.jpg)
 
 3. Входная:
 
-![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/%D0%A0%D0%A0/img/test3.1.png)
+![image](https://github.com/iis-42x70x/RPIIS/blob/Дорош_М/sem2/РР/img/неорграф.jpg)
 
 
    Выходная:
 
-![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/%D0%A0%D0%A0/img/test3.2.png)
+![image](https://github.com/iis-42x70x/RPIIS/blob/Дорош_М/sem2/РР/img/орграф.jpg)
 
 
   
