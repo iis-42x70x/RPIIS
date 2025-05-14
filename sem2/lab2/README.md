@@ -115,6 +115,7 @@ TEST_F(SetOperationsTest, PermutationGeneration) {
     EXPECT_EQ(permutations[1], std::vector<std::string>({ "b", "a" }));
 }
 ```
+![Снимок экрана 2025-05-02 202328](https://github.com/user-attachments/assets/bfcebb02-5cd4-458d-85c5-a2e2a3336323)
 ## Выводы:
 В результате выполнения лабораторной работы были получены знания из теории множеств, создана программа, реализующая операции на множествах.
 ## Используемые источники:
