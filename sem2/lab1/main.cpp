@@ -1,4 +1,4 @@
-#include "BinarySearchTree.h"
+#include "BinarySearhTree.h"
 #include <iostream>
 #include <vector>
 
