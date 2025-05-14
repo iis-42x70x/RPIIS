@@ -1,0 +1,5 @@
+﻿  func.cpp
+  lab2.cpp
+C:\Users\Николай\source\repos\student\sem2\pioivis\lab2\lab2\lab2\lab2\lab2.cpp(45,33): warning C4566: символ, представленный универсальным именем символа "\u2205", невозможно представить в текущей кодовой странице (1251)
+  Создание кода...
+  lab2.vcxproj -> C:\Users\Николай\source\repos\student\sem2\pioivis\lab2\lab2_tests\x64\Debug\lab2.exe
