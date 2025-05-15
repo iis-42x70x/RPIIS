@@ -1,0 +1,464 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5/"
+     xml:base="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-5="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#вокругОси -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#вокругОси"/>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#вызываетЗакручивание -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#вызываетЗакручивание"/>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#вызываетМомент -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#вызываетМомент"/>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#вычислить -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#вычислить"/>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#закручиваетОбъект -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#закручиваетОбъект"/>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетВнешДиаметр -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетВнешДиаметр">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетДиаметр"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетВнешДиаметр"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Труба"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетВнутрДиаметр"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ВнешДиаметр"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетВнутрДиаметр"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетВнутрДиаметр -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетВнутрДиаметр">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетДиаметр"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетДиаметр -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетДиаметр">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетДиаметр"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Труба"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетДиаметр"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Диаметр"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетДлину -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетДлину"/>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетМатериал -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетМатериал"/>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетОсь -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетОсь"/>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетУгол -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетУгол"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетЕдиницыИзмерения -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетЕдиницыИзмерения">
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетЗначение"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетЗначение -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетЗначение"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ВнешДиаметр -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ВнешДиаметр">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Диаметр"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ВнутрДиаметр"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ВнутрДиаметр -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ВнутрДиаметр">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Диаметр"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ГеометрическийОбъект -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ГеометрическийОбъект"/>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Диаметр -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Диаметр">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ФизическаяВеличина"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Длина -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Длина">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ФизическаяВеличина"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Задача -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Задача"/>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ЗакручиваниеВокругОси -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ЗакручиваниеВокругОси">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ФизическийПроцесс"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Линия -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Линия">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ГеометрическийОбъект"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Материал -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Материал">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ФизическаяВеличина"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#МоментСилы -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#МоментСилы">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ФизическаяВеличина"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Ось -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Ось">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Линия"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Сила -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Сила">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ФизическаяВеличина"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Сталь -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Сталь">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Материал"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Труба -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Труба">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ФизическийОбъект"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Угол -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Угол">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ФизическаяВеличина"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ФизическаяВеличина -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ФизическаяВеличина"/>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ФизическийОбъект -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ФизическийОбъект"/>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ФизическийПроцесс -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ФизическийПроцесс"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#N -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#N">
+        <rdf:type rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Сила"/>
+        <untitled-ontology-5:вызываетМомент rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#момент_N"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#d1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#d1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ВнутрДиаметр"/>
+        <untitled-ontology-5:имеетЕдиницыИзмерения>мм</untitled-ontology-5:имеетЕдиницыИзмерения>
+        <untitled-ontology-5:имеетЗначение rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</untitled-ontology-5:имеетЗначение>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#d2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#d2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ВнешДиаметр"/>
+        <untitled-ontology-5:имеетЕдиницыИзмерения>мм</untitled-ontology-5:имеетЕдиницыИзмерения>
+        <untitled-ontology-5:имеетЗначение rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</untitled-ontology-5:имеетЗначение>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Длина_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Длина_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Длина"/>
+        <untitled-ontology-5:имеетЕдиницыИзмерения>м</untitled-ontology-5:имеетЕдиницыИзмерения>
+        <untitled-ontology-5:имеетЗначение rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</untitled-ontology-5:имеетЗначение>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Задача_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Задача_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Задача"/>
+        <untitled-ontology-5:вычислить rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#момент_N"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Закручивание_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Закручивание_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ЗакручиваниеВокругОси"/>
+        <untitled-ontology-5:вокругОси rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Ось_1"/>
+        <untitled-ontology-5:закручиваетОбъект rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Труба_1"/>
+        <untitled-ontology-5:имеетУгол rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Угол_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Ось_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Ось_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Ось"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Сталь_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Сталь_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Сталь"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Труба_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Труба_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Труба"/>
+        <untitled-ontology-5:имеетВнешДиаметр rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#d2"/>
+        <untitled-ontology-5:имеетВнутрДиаметр rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#d1"/>
+        <untitled-ontology-5:имеетДлину rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Длина_1"/>
+        <untitled-ontology-5:имеетМатериал rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Сталь_1"/>
+        <untitled-ontology-5:имеетОсь rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Ось_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Угол_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Угол_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Угол"/>
+        <untitled-ontology-5:имеетЕдиницыИзмерения>градусы</untitled-ontology-5:имеетЕдиницыИзмерения>
+        <untitled-ontology-5:имеетЗначение rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</untitled-ontology-5:имеетЗначение>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#момент_N -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#момент_N">
+        <rdf:type rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#МоментСилы"/>
+        <untitled-ontology-5:вызываетЗакручивание rdf:resource="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Закручивание_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ГеометрическийОбъект"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ФизическаяВеличина"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ФизическийОбъект"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#ФизическийПроцесс"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Диаметр"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Длина"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Материал"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#МоментСилы"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Сила"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#Угол"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#вокругОси"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#вызываетЗакручивание"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#вызываетМомент"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#вычислить"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#закручиваетОбъект"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетДиаметр"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетДлину"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетМатериал"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетОсь"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/всеволод/ontologies/2025/4/untitled-ontology-5#имеетУгол"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
