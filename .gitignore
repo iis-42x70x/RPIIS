@@ -1,0 +1,8 @@
+# Visual Studio временные файлы
+.vs/
+**/*.ipch
+**/*.pch
+**/Debug/
+**/Release/
+**/x64/
+**/x86/
