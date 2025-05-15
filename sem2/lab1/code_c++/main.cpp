@@ -34,7 +34,7 @@ void printTree(QuadNode* node, const std::string& direction = "Root", const std:
 }
 
 int main() {
-    // Пример матрицы 8x8
+    // Пример матрицы 4x4
     std::vector<std::vector<int>> matrix = {
         {8,8,8,8},
         {8,8,0,0},
