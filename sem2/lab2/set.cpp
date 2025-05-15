@@ -1,8 +1,9 @@
 #include "header.h"
 
 
-vector<string> parseElements(const string& element) {
+vector<string> get_elements(const string& element) {
     vector<string> elements;
+
     if (element.empty() || element.size() < 2) return elements;
 
     int depth = 0;
@@ -10,33 +11,45 @@ vector<string> parseElements(const string& element) {
 
     for (size_t i = 1; i < element.size() - 1; ++i) {
         char c = element[i];
-        if (c == '{' || c == '<') depth++;
-        else if (c == '}' || c == '>') depth--;
+        if (c == '{' || c == '<') {
+            ++depth;
+        } else if (c == '}' || c == '>') {
+            --depth;
+        }
 
         if (depth == 0 && c == ',') {
-            string elem = element.substr(start, i - start);
-            elem.erase(0, elem.find_first_not_of(" \t"));
-            elem.erase(elem.find_last_not_of(" \t") + 1);
-            if (!elem.empty()) elements.push_back(elem);
+            string token = element.substr(start, i - start);
+            token.erase(0, token.find_first_not_of(" \t"));
+            if (!token.empty()) {
+                token.erase(token.find_last_not_of(" \t") + 1);
+            }
+
+            if (!token.empty()) {
+                elements.push_back(token);
+            }
             start = i + 1;
         }
     }
+    string last_token = element.substr(start, element.size() - start - 1);
+    last_token.erase(0, last_token.find_first_not_of(" \t"));
+    if (!last_token.empty()) {
+        last_token.erase(last_token.find_last_not_of(" \t") + 1);
+    }
 
-    string lastElem = element.substr(start, element.size() - 1 - start);
-    lastElem.erase(0, lastElem.find_first_not_of(" \t"));
-    lastElem.erase(lastElem.find_last_not_of(" \t") + 1);
-    if (!lastElem.empty()) elements.push_back(lastElem);
+    if (!last_token.empty()) {
+        elements.push_back(last_token);
+    }
 
     return elements;
 }
 
-string normalizeElement(const string& elem) {
+string standard_view(const string& elem) {
     if (elem.empty()) return "";
 
     if (elem.front() == '<' && elem.back() == '>') {
-        vector<string> inner = parseElements(elem);
+        vector<string> inner = get_elements(elem);
         for (auto& e : inner) {
-            e = normalizeElement(e);
+            e = standard_view(e);
         }
 
         string res = "<";
@@ -48,15 +61,15 @@ string normalizeElement(const string& elem) {
         return res;
     }
     else if (elem.front() == '{' && elem.back() == '}') {
-        vector<string> inner = parseElements(elem);
-        vector<string> normalized;
+        vector<string> inner = get_elements(elem);
+        vector<string> standard;
 
         for (auto& e : inner) {
-            string norm = normalizeElement(e);
+            string norm = standard_view(e);
 
 
             bool is_duplicate = false;
-            for (const string& item : normalized) {
+            for (const string& item : standard) {
                 if (item == norm) {
                     is_duplicate = true;
                     break;
@@ -64,11 +77,11 @@ string normalizeElement(const string& elem) {
             }
 
             if (!is_duplicate) {
-                normalized.push_back(norm);
+                standard.push_back(norm);
             }
         }
 
-        sort(normalized.begin(), normalized.end(), [](const string& a, const string& b) {
+        sort(standard.begin(), standard.end(), [](const string& a, const string& b) {
             char first_a = a.front();
             char first_b = b.front();
 
@@ -80,14 +93,14 @@ string normalizeElement(const string& elem) {
             return a < b;
         });
 
-        if (normalized.size() == 1) {
-            return normalized[0];
+        if (standard.size() == 1) {
+            return standard[0];
         }
 
         string result = "{";
-        for (size_t i = 0; i < normalized.size(); ++i) {
+        for (size_t i = 0; i < standard.size(); ++i) {
             if (i > 0) result += ",";
-            result += normalized[i];
+            result += standard[i];
         }
         result += "}";
         return result;
@@ -103,22 +116,22 @@ string normalizeElement(const string& elem) {
 void symmetricDifference(const char* set1, const char* set2, char* result) {
     string s1(set1), s2(set2);
 
-    auto elems1 = parseElements(s1);
-    auto elems2 = parseElements(s2);
+    auto elems1 = get_elements(s1);
+    auto elems2 = get_elements(s2);
 
-    vector<string> normalized1, normalized2;
+    vector<string>  standard1,  standard2;
     for (const auto& elem : elems1) {
-        normalized1.push_back(normalizeElement(elem));
+        standard1.push_back(standard_view(elem));
     }
     for (const auto& elem : elems2) {
-        normalized2.push_back(normalizeElement(elem));
+        standard2.push_back(standard_view(elem));
     }
 
     vector<string> diff;
 
-    for (const auto& elem1 : normalized1) {
+    for (const auto& elem1 :  standard1) {
         bool found = false;
-        for (const auto& elem2 : normalized2) {
+        for (const auto& elem2 : standard2) {
             if (elem1 == elem2) {
                 found = true;
                 break;
@@ -128,9 +141,9 @@ void symmetricDifference(const char* set1, const char* set2, char* result) {
             diff.push_back(elem1);
         }
     }
-    for (const auto& elem2 : normalized2) {
+    for (const auto& elem2 : standard2) {
         bool found = false;
-        for (const auto& elem1 : normalized1) {
+        for (const auto& elem1 :  standard1) {
             if (elem2 == elem1) {
                 found = true;
                 break;
@@ -151,21 +164,27 @@ void symmetricDifference(const char* set1, const char* set2, char* result) {
 }
 
 bool isValidSet(const char* line) {
-    int braces = 0, angles = 0;
-    bool prev_comma = false;
-    for (; *line; ++line) {
-        if (*line == ',') {
-            if (prev_comma) return false;
-            prev_comma = true;
+    int braces = 0;
+    int angles = 0;
+
+    bool prevComma = false;
+
+    for (; *line != '\0'; ++line) {
+        char c = *line;
+
+        if (c == ',') {
+            if (prevComma) return false;
+            prevComma = true;
         }
-        else if (!isspace(*line)) {
-            prev_comma = false;
+        else if (!isspace(c)) {
+            prevComma = false;
         }
-        switch (*line) {
-            case '{': braces++; break;
-            case '}': braces--; break;
-            case '<': angles++; break;
-            case '>': angles--; break;
+
+        switch (c) {
+            case '{': ++braces; break;
+            case '}': --braces; break;
+            case '<': ++angles; break;
+            case '>': --angles; break;
         }
         if (braces < 0 || angles < 0) return false;
     }
@@ -211,12 +230,12 @@ void menu(const char* filename) {
     if (readSets(filename, sets, setCount) != 0) return;
 
     while (true) {
-        cout << "\nМеню:\n1.Просмотр\n2.Добавить\n3.Сохранить\n4.Пересечение\n5.Выход\nВыбор: ";
+        cout << "\nМеню:\n1.Просмотр\n2.Добавить\n3.Сохранить\n4.Симметрическая разность\n5.Выход\nВыбор: ";
         int choice; cin >> choice; cin.ignore();
 
         if (choice == 1) {
             for (int i = 0; i < setCount; ++i) {
-                string normalized = normalizeElement(sets[i]);
+                string normalized = standard_view(sets[i]);
                 cout << "Множество " << i + 1 << ": " << normalized << endl;
             }
         }
@@ -237,7 +256,7 @@ void menu(const char* filename) {
         }
         else if (choice == 3) {
             writeSets(filename, sets, setCount);
-            cout << "Cохранено -_-\n" << endl;
+            cout << "Cохранено в файл\n" << endl;
         }
         else if (choice == 4) {
             if (setCount < 2) {
@@ -245,7 +264,7 @@ void menu(const char* filename) {
                 continue;
             }
             int a, b;
-            cout << "Введите номера множеств: "; cin >> a >> b; cin.ignore();
+            cout << "Введите номера множеств: \n"; cin >> a >> b; cin.ignore();
             if (a < 1 || a > setCount || b < 1 || b > setCount) {
                 cout << "Некоректные номера!" << endl;
                 continue;
@@ -256,7 +275,7 @@ void menu(const char* filename) {
             }
             char res[MAX_LINE_LENGTH];
             symmetricDifference(sets[a - 1], sets[b - 1], res);
-            string normalizedRes = normalizeElement(res);
+            string normalizedRes = standard_view(res);
             cout << "Результат: " << normalizedRes << endl;
         }
         else if (choice == 5) {
