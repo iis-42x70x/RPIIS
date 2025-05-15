@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "E:\\gitrep\\pioivis\\RPIIS\\sem2\\lab1\\lab1 - AVL-tree (var 9)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{11AB36DF-8A6F-4B3C-9B37-2C1C6BE64B64}|lab1 - AVL-tree (var 9)\\lab1 - AVL-tree (var 9).vcxproj|E:\\gitrep\\pioivis\\RPIIS\\sem2\\lab1\\lab1 - AVL-tree (var 9)\\lab1 - AVL-tree (var 9)\\AVL_tree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{11AB36DF-8A6F-4B3C-9B37-2C1C6BE64B64}|lab1 - AVL-tree (var 9)\\lab1 - AVL-tree (var 9).vcxproj|solutionrelative:lab1 - AVL-tree (var 9)\\AVL_tree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{11AB36DF-8A6F-4B3C-9B37-2C1C6BE64B64}|lab1 - AVL-tree (var 9)\\lab1 - AVL-tree (var 9).vcxproj|E:\\gitrep\\pioivis\\RPIIS\\sem2\\lab1\\lab1 - AVL-tree (var 9)\\lab1 - AVL-tree (var 9)\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{11AB36DF-8A6F-4B3C-9B37-2C1C6BE64B64}|lab1 - AVL-tree (var 9)\\lab1 - AVL-tree (var 9).vcxproj|solutionrelative:lab1 - AVL-tree (var 9)\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11AB36DF-8A6F-4B3C-9B37-2C1C6BE64B64}|lab1 - AVL-tree (var 9)\\lab1 - AVL-tree (var 9).vcxproj|E:\\gitrep\\pioivis\\RPIIS\\sem2\\lab1\\lab1 - AVL-tree (var 9)\\lab1 - AVL-tree (var 9)\\AVL_tree.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{11AB36DF-8A6F-4B3C-9B37-2C1C6BE64B64}|lab1 - AVL-tree (var 9)\\lab1 - AVL-tree (var 9).vcxproj|solutionrelative:lab1 - AVL-tree (var 9)\\AVL_tree.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11AB36DF-8A6F-4B3C-9B37-2C1C6BE64B64}|lab1 - AVL-tree (var 9)\\lab1 - AVL-tree (var 9).vcxproj|E:\\gitrep\\pioivis\\RPIIS\\sem2\\lab1\\lab1 - AVL-tree (var 9)\\lab1 - AVL-tree (var 9)\\AVL_tree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{11AB36DF-8A6F-4B3C-9B37-2C1C6BE64B64}|lab1 - AVL-tree (var 9)\\lab1 - AVL-tree (var 9).vcxproj|solutionrelative:lab1 - AVL-tree (var 9)\\AVL_tree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +22,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "AVL_tree.cpp",
               "DocumentMoniker": "E:\\gitrep\\pioivis\\RPIIS\\sem2\\lab1\\lab1 - AVL-tree (var 9)\\lab1 - AVL-tree (var 9)\\AVL_tree.cpp",
               "RelativeDocumentMoniker": "lab1 - AVL-tree (var 9)\\AVL_tree.cpp",
               "ToolTip": "E:\\gitrep\\pioivis\\RPIIS\\sem2\\lab1\\lab1 - AVL-tree (var 9)\\lab1 - AVL-tree (var 9)\\AVL_tree.cpp",
               "RelativeToolTip": "lab1 - AVL-tree (var 9)\\AVL_tree.cpp",
-              "ViewState": "AgIAAJgAAAAAAAAAAAASwKMAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-23T15:34:26.159Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "AVL_tree.hpp",
               "DocumentMoniker": "E:\\gitrep\\pioivis\\RPIIS\\sem2\\lab1\\lab1 - AVL-tree (var 9)\\lab1 - AVL-tree (var 9)\\AVL_tree.hpp",
               "RelativeDocumentMoniker": "lab1 - AVL-tree (var 9)\\AVL_tree.hpp",
               "ToolTip": "E:\\gitrep\\pioivis\\RPIIS\\sem2\\lab1\\lab1 - AVL-tree (var 9)\\lab1 - AVL-tree (var 9)\\AVL_tree.hpp",
               "RelativeToolTip": "lab1 - AVL-tree (var 9)\\AVL_tree.hpp",
-              "ViewState": "AgIAACUAAAAAAAAAAAASwDQAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-02-18T13:44:35.836Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "main.cpp",
               "DocumentMoniker": "E:\\gitrep\\pioivis\\RPIIS\\sem2\\lab1\\lab1 - AVL-tree (var 9)\\lab1 - AVL-tree (var 9)\\main.cpp",
               "RelativeDocumentMoniker": "lab1 - AVL-tree (var 9)\\main.cpp",
               "ToolTip": "E:\\gitrep\\pioivis\\RPIIS\\sem2\\lab1\\lab1 - AVL-tree (var 9)\\lab1 - AVL-tree (var 9)\\main.cpp",
               "RelativeToolTip": "lab1 - AVL-tree (var 9)\\main.cpp",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGIAAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-18T13:43:06.212Z",
               "EditorCaption": ""
