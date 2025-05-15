@@ -11,6 +11,6 @@ C:\Users\ekatsune\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -
 -- Check for working CXX compiler: C:/Users/ekatsune/AppData/Local/Programs/CLion/bin/mingw/bin/g++.exe - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Configuring done (1.2s)
+-- Configuring done (0.7s)
 -- Generating done (0.0s)
 -- Build files have been written to: E:/RPIIS/sem2/lab2/cmake-build-debug
