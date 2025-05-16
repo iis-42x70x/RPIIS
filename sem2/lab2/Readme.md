@@ -26,7 +26,7 @@ $$
 **Пример симметрической разностью:**
 ```math
 \begin{aligned}
-A &= \{a, b, c, d\} \\
+A & = \{a, b, c, d\} \\
 B &= \{b, c, e, f\} \\
 A \triangle B &= \{a, d, e, f\}
 \end{aligned}
@@ -216,5 +216,5 @@ int main(int argc, char** argv) {
 
 1) **Создание библиотеки** :(https://www.youtube.com/watch?v=pAxEfF2yVlM&t=1s)
 2) **Учебное пособие "Дискретная математика", В.Е. Алексеев.** :[itmm.unn.ru](https://itmm.unn.ru/wp-content/uploads/sites/19/2020/04/DM-MM-uchebnik.pdf)
-3) **GoogleTests** (https://github.com/google/googletest/blob/main/docs/primer.md)
+3) **GoogleTests** (https://www.youtube.com/watch?v=bfCYGmWoIgQ&ab_channel=Learn2Code)
 
