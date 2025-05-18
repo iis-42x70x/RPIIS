@@ -217,8 +217,8 @@
 
 ## Пример работы программы 
 
-![Ввод](photo/input.png)
-![Вывод](photo/output.png)
+![Ввод](https://github.com/iis-42x70x/RPIIS/blob/Дорош_М/sem2/lab2/2025-05-18_19-27-18.png)
+![Вывод](https://github.com/iis-42x70x/RPIIS/blob/Дорош_М/sem2/lab2/2025-05-18_19-27-44.png)
 
 ## Выводы
 
