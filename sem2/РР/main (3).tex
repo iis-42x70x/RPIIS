@@ -1,0 +1,205 @@
+\documentclass{article}
+
+\usepackage{float}
+
+\usepackage{enumitem}%многоуровневая нумерация в алгоритме
+\usepackage[left=2.3cm,right=2.5cm,top=2.5cm,bottom=3.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\pagestyle{fancy} 
+\usepackage[english,russian]{babel}
+\begin{document}
+
+
+
+
+\begin{titlepage}
+
+  \begin{center}
+
+    \vspace{6cm}
+      Министерство образования Республики Беларусь\\[1em]
+    Учреждение образования\\
+    БЕЛОРУССКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ \\
+    ИНФОРМАТИКИ И РАДИОЭЛЕКТРОНИКИ\\[1em]
+
+  \begin{minipage}{\textwidth}
+      \begin{flushleft}
+        \begin{tabular}{ l l }
+          Факультет & Информационных технологий и управления\\
+          Кафедра   & Интеллектуальных информационных технологий
+        \end{tabular}
+      \end{flushleft}
+    \end{minipage}\\[1em]
+
+    
+    \vspace{5em}
+
+
+    \textbf{РАСЧЕТНАЯ РАБОТА}\\
+    {по дисциплине <<Представление и обработка информации в интеллектуальных системах>>}\\
+    на тему\\
+    \textbf{\large Решение теоретико-графовой задачи.Найти обхват графа}\\[1em]
+
+    \vspace{10em}
+    
+    \begin{tabular}{ p{0.65\textwidth}p{0.25\textwidth} }
+      Выполнил:& М.\,Д.~Дорош \\[1em]
+      Студент группы& \\
+      421703 & \\
+      Проверил: & Н.\,В.~Зотов \\
+     
+    \end{tabular}
+    
+    \vfill
+    {\normalsize Минск 2025}
+  \end{center}
+\end{titlepage}
+\newpage 
+\section{Формализация алгоритма расчетной работы (РР)}
+\textbf{Задание РР} 
+
+2.13 Найти обхват орграфа
+
+\textbf{Список используемых понятий:}
+\textbf{1.Граф }- математическая структура, состоящая из вершин и ребер, соединяющих некоторые пары вершин.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{граф.jpg}
+    \label{fig:enter-label}
+\end{figure}
+
+\textbf{2.Неориентированный граф} — это геометрическая фигура, 
+состоящая из точек (вершин графа) и соединяющих их линий (рёбер графа).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{неорграф.jpg}
+    \label{fig:enter-label}
+\end{figure}
+\textbf{3.Ориентированный граф} — это геометрическая фигура, состоящая из точек (вершин графа) и соединяющих их линий (рёбер графа), причём эти линии имеют направление.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{орграф.jpg}
+    \label{fig:enter-label}
+\end{figure}
+\textbf{Алгоритм РР}
+
+Инициализация переменной mingirth значением n + 1, где n — количество узлов в графе. Это больше, чем максимально возможная длина цикла в графе, поэтому mingirth будет обновляться при обнаружении более короткого цикла.
+Для каждого узла i в графе (внешний цикл): a. Инициализация вектора visited размером n, заполненного значениями false. Этот вектор будет отслеживать, какие узлы были посещены во время обхода в ширину (BFS). b. Инициализация очереди q с начальным узлом i и расстоянием 0. c. Запуск BFS, пока очередь q не станет пустой: d. Извлечение из очереди текущего узла cur и расстояния dist. e. Для каждого столбца j в матрице matrix:
+Если matrix[cur][j] == 1, это означает, что в этом столбце есть ребро.
+Тогда код проверяет все узлы neighbor в этом столбце, где matrix[neighbor][j] == -1, что означает отсутствие ребра.
+Если neighbor == i то это означает, что цикл найден, и mingirth обновляется до минимального значения между текущим mingirth и dist + 1 (длина цикла).
+Если neighbor != i и visited[neighbor] == false, то neighbor добавляется в очередь q с расстоянием dist + 1.
+После завершения BFS для всех узлов i проверяется значение mingirth:
+Если mingirth осталось равным n + 1, это означает, что в графе не было найдено ни одного цикла, поэтому функция возвращает -1.
+Иначе функция возвращает значение mingirth - минимальную длину цикла, найденную в процессе.
+
+\textbf{Результат формализации алгоритма РР}
+
+Пользователь задает ориентированный граф.
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{graph.png}
+    \label{fig:enter-label}
+\end{figure}
+
+
+Выбирается вершина для начала обхода (допустим, A). Инициализируется переменная mingirth, которая будет хранить обхват орграфа, изначально равная n(количеству вершин графа)+1. Также создаётся вектор visited, который хранит посещённые вершины. И очередь q, которая хранит текущую вершину и расстояние.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{wave1.png}
+    \label{fig:enter-label}
+\end{figure}
+Используя поиск в ширину, мы переходим к вершине B, обновляя очередь q и сохраняя её в векторе visited.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{wave2.png}
+    \label{fig:enter-label}
+\end{figure}
+\textbf{4.Обхват гарфа} - длина наименьшего цикла в графе.
+Продолжаем обход в ширину и все вышеперечисленные процессы.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{wave3.png}
+    \label{fig:enter-label}
+\end{figure}
+Дойдя до вершины D, мы используем алгоритм обхода в ширину и получаем, что смежная вершина A является начальной вершиной. И получаем конечную дистанцию.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{wave4.png}
+    \label{fig:enter-label}
+\end{figure}
+
+Прописываем алгоритм сравнения текущей дистанции с переменной mingirth для получения минимального значения. И затем присваиваем mingirth минимальное значение.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{wave5.png}
+    \label{fig:enter-label}
+\end{figure}
+
+Потворяя данный алгоритм для всех вершин получим обхват орграфа.
+Пример входных и выходных конструкций:
+Входная:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{test1.1.png}
+    \label{fig:enter-label}
+\end{figure}
+
+
+Выходная:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{test1.2.png}
+
+    \label{fig:enter-label}
+\end{figure}
+
+Входная:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{test2.1.png}
+    \label{fig:enter-label}
+\end{figure}
+
+Выходная:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{test2.2.png}
+    \label{fig:enter-label}
+\end{figure}
+
+Входная:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{test3.1.png}
+
+    \label{fig:enter-label}
+\end{figure}
+
+Выходная:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{test3.2.png}
+    \label{fig:enter-label}
+\end{figure}
+\textbf{Вывод}
+Формализовал алгоритм получения обхвата графа. Улучшил свои навыки работы с KBE.
+
+\newpage
+\textbf{Список литературы}
+[1] Оре О. Теория графов. – 2-е изд. – М.: Наука, 1980. – С. 336.
+
+[2] Кормен Т. Х. и др. Часть VI. Алгоритмы для работы с графами // Алгоритмы: построение и анализ = Introduction to Algorithms. – 2-е изд. – М.: Вильямс, 2006. – С. 1296.
+
+[3] Харари, Ф. Теория графов / Ф. Харари / Пер. с англ. и предисл. В.П. Козырева. Под ред. Г.П. Гаврилова. Изд. 2-е. – М.: Едиториал УРСС, 2003. – 269 с.
+
+[4] Нечипуренко, М. И. Алгоритмы и программы решения задач на графах и сетях / М. И. Нечипуренко, В. К. Попков, С. М. Майнагашев и др. – Новосибирск: Наука. Сиб. отд-ние, 1990. – 515 с.
+\end{document}
