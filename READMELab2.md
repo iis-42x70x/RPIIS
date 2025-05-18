@@ -109,14 +109,79 @@ TEST(CountMultiplicitiesTest, MultipleSetsTest) {
 
 
 
-![Снимок экрана 2025-05-02 202328](https://github.com/user-attachments/assets/bfcebb02-5cd4-458d-85c5-a2e2a3336323)
-![Снимок экрана 2025-05-02 202306](https://github.com/user-attachments/assets/b8d75a1b-b9fe-45fd-b1d6-05e1f889962e)
+ **Проверка работы с подмножествами**
+ ```
+TEST_F(SetOperationsTest, CheckSubsetsValidation) {
+    SetData set1 = { "A", false, {"1", "2", "3"} };
+    SetData set2 = { "B", false, {"1", "2", "3", "4"} };
+
+    testing::internal::CaptureStdout();
+    checkSubsets(set1, set2);
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_TRUE(output.find("A является подмножеством B") != std::string::npos);
+
+    SetData set3 = { "C", false, {"5", "6", "7"} };
+    testing::internal::CaptureStdout();
+    checkSubsets(set1, set3);
+    output = testing::internal::GetCapturedStdout();
+    EXPECT_TRUE(output.find("Множества не пересекаются") != std::string::npos);
+}
+```
+**Проверка идентичности множеств**
+```
+TEST_F(SetOperationsTest, IdenticalSetsValidation) {
+    SetData set1 = { "X", false, {"1", "2", "3"} };
+    SetData set2 = { "Y", false, {"1", "2", "3"} };
+
+    testing::internal::CaptureStdout();
+    checkSubsets(set1, set2);
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_TRUE(output.find("Множества идентичны") != std::string::npos);
+}
+```
+**Проверка обработки некорректного ввода**
+```
+TEST_F(SetOperationsTest, InvalidSetFormat) {
+    testing::internal::CaptureStderr();
+    SetData set = parseSet("Некорректный ввод");
+    std::string errorOutput = testing::internal::GetCapturedStderr();
+    EXPECT_TRUE(errorOutput.find("Ошибка: Некорректный формат множества") != std::string::npos);
+}
+```
+**Проверка работы с пустыми множествами**
+```
+TEST_F(SetOperationsTest, EmptySetValidation) {
+    SetData emptySet1 = parseSet("A={}");
+    EXPECT_EQ(emptySet1.name, "A");
+    EXPECT_TRUE(emptySet1.elements.empty());
+
+    SetData emptySet2 = parseSet("B=<>");
+    EXPECT_EQ(emptySet2.name, "B");
+    EXPECT_TRUE(emptySet2.elements.empty());
+}
+```
+**Проверка работы с подмножеством из одного элемента**
+```
+TEST_F(SetOperationsTest, CheckSubsetWithSingleElement) {
+    SetData set1 = { "A", false, {"42"} };
+    SetData set2 = { "B", false, {"42", "99"} };
+
+    testing::internal::CaptureStdout();
+    checkSubsets(set1, set2);
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_TRUE(output.find("A является подмножеством B") != std::string::npos);
+}
+```
+
+![image](https://github.com/user-attachments/assets/dd48414b-b64f-4a38-b959-a8228c0990e4)
+
+
 
 
 ## Выводы:
 В результате выполнения лабораторной работы были получены знания из теории множеств, создана программа, реализующая операции на множествах, подключена система Google Test для проверки работы программы.
 
 ## Используемые источники:
-Объединение множеств [[https://dementiy.gitbooks.io/algo/content/heaps.html](https://medium.com/nuances-of-programming/объединение-множеств-c-практическое-руководство-с-реальными-примерами-c4c74794f06e)]
+Подмножества множеств[https://www.yaklass.ru/p/algebra/11-klass/nachalnye-svedeniia-kombinatoriki-9340/razmeshcheniia-razmeshcheniia-s-povtoreniiami-9499/re-8f87406b-e6bb-428d-9076-041df9a6b885]
 
 Тесты [[(https://ru.wikipedia.org/wiki/Очередь_с_приоритетом_(программирование))](https://vitalissius.github.io/GoogleTest+VisualStudio/)]
