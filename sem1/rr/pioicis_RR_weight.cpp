@@ -1,77 +1,95 @@
 ﻿#include <iostream>
 #include <vector>
 #include <queue>
-#include <iomanip>
-#define INT_MAX 2147483647
 
 using namespace std;
 
-void output(vector<vector<int>>& ans, int n) 
-{
-    cout << "  ";
-    for (int i = 0; i < n; i++)
-        cout << setw(3) << i;
-    cout << endl;
-    for (int i = 0; i < n; i++) {
-        cout << i << "||";
-        for (int& it : ans[i]) {
-            cout << setw(3) << it;
-        }
-        cout << endl;
-    }
-}
-
-void bfs(vector<vector<int>>& graph)
-{
+vector<vector<int>> buildShortestPathsTree(const vector<vector<int>>& graph) {
     int n = graph.size();
-    vector<vector<int>> ans(n, vector<int>(n, 0));     // матрица смежности кратчайших путей
-    vector<int> len(n, INT_MAX);      // вектор кратчайших путей
-    vector<int> prev(n, -1);
-    queue<int> node;       // очередь вершин, которым предстоит проверка
+    vector<int> dist(n, INT_MAX);
+    vector<int> parent(n, -1);
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
 
-    len[0] = 0;
-    node.push(0);
+    const int start = 0;
+    dist[start] = 0;
+    pq.push({0, start});
 
-    while (!node.empty()) {
-        int pos = node.front();    // текущая позиция
-        node.pop();
+    while (!pq.empty()) {
+        int u = pq.top().second;
+        int current_dist = pq.top().first;
+        pq.pop();
 
-        // проверяем текущую вершину и добавляем её соседей в очередь на проверку 
-        for (int i = 0; i < n; i++) {
-            if (graph[pos][i] != 0 && graph[pos][i] + len[pos] < len[i]) {
-                if (prev[i] != -1) {
-                    ans[prev[i]][i] = 0;
-                    //ans[i][prev[i]] = 0;
-                }
-                ans[pos][i] = graph[pos][i];
-                //ans[i][pos] = graph[pos][i];
-                prev[i] = pos;
-                len[i] = len[pos] + graph[pos][i];
-                node.push(i);
+        if (current_dist > dist[u]) continue;
+
+        for (int v = 0; v < n; ++v) {
+            if (graph[u][v] == 0) continue;
+
+            int weight = graph[u][v];
+            if (dist[v] > dist[u] + weight) {
+                dist[v] = dist[u] + weight;
+                parent[v] = u;
+                pq.push({dist[v], v});
             }
         }
     }
-    output(ans, n);
+
+    
+    vector<vector<int>> tree(n, vector<int>(n, 0));
+    for (int v = 0; v < n; ++v) {
+        if (parent[v] != -1) {
+            tree[parent[v]][v] = graph[parent[v]][v];
+        }
+    }
+
+    return tree;
+}
+
+void printMatrix(const vector<vector<int>>& m) {
+    for (const auto& row : m) {
+        for (int val : row) {
+            cout << val << " ";
+        }
+        cout << endl;
+    }
+    cout << "----------------\n";
 }
 
 int main() {
-    setlocale(LC_ALL, "ru");
+    vector<vector<int>> ng = {
+        {0, 1, 1, 0},
+        {1, 0, 1, 1},
+        {1, 1, 0, 0},
+        {0, 1, 0, 0}
+    };
 
-    int n = 5;
-    vector<vector<int>> graph(n, vector<int>(n, 0));
+    vector<vector<int>> og = {
+        {0, 1, 1, 0, 0},
+        {0, 0, 0, 1, 0},
+        {0, 1, 0, 0, 1},
+        {0, 0, 0, 0, 1},
+        {0, 0, 0, 0, 0}
+    };
 
-    // ориентированный 
-    //           0  1  2  3  4  5  6  7
-    graph[0] = { 0, 6, 3, 0, 0 };
-    graph[1] = { 0, 0, 0, 1, 0 };
-    graph[2] = { 0, 2, 0, 0, 4 };
-    graph[3] = { 0, 0, 0, 0, 1 };
-    graph[4] = { 0, 0, 0, 0, 0 };
+    vector<vector<int>> vng = {
+        {0, 3, 2, 0, 0},
+        {3, 0, 1, 4, 0},
+        {2, 1, 0, 0, 5},
+        {0, 4, 0, 0, 2},
+        {0, 0, 5, 2, 0}
+    };
+
+    vector<vector<int>> vog = {
+        {0, 6, 3, 0},
+        {0, 0, 0, 1},
+        {0, 2, 0, 0},
+        {0, 0, 0, 0}
+    };
+
     
-    vector<vector<int>> ans = graph;
-    bfs(ans);
-
+    cout << "Tree for ng:\n"; printMatrix(buildShortestPathsTree(ng));
+    cout << "Tree for og:\n"; printMatrix(buildShortestPathsTree(og));
+    cout << "Tree for vng:\n"; printMatrix(buildShortestPathsTree(vng));
+    cout << "Tree for vog:\n"; printMatrix(buildShortestPathsTree(vog));
 
     return 0;
 }
-
