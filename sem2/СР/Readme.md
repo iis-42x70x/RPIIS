@@ -17,7 +17,7 @@ Hurricane», «Wind of Change» и «Send Me an Angel». Коллектив за
 «Величайших артистов хард-рока» по версии VH1. С 2010 года группа гастролирует с
 прощальным туром «Get Your Sting And Blackout».
 
-** Математическое выражение (вариант 13):**
+**Математическое выражение (вариант 13):**
 ![image](https://github.com/user-attachments/assets/a32b41dd-9e96-4702-9228-0a76f1fcd546)
 
 # Решение:  
