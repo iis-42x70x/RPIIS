@@ -25,6 +25,7 @@ Hurricane», «Wind of Change» и «Send Me an Angel». Коллектив за
 # Решение:  
 1. формализация текста:  
  a) в Protégé:  
+![image](https://github.com/user-attachments/assets/a2ec2768-a22e-4323-b0a5-142ab77ff2f9)
 
 
  b) в KBE: 
