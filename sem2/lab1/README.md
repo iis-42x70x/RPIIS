@@ -38,9 +38,9 @@
  
 ## Пример тестирования программы 
 
-![image](pic1.png)
+![image](photo/pic1.png)
 
-![image](pic2.png)
+![image](photo/pic2.png)
 
 
 ## Вывод
