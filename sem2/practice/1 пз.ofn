@@ -1,0 +1,158 @@
+Prefix(:=<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5>
+
+Declaration(Class(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#геометрическая_точка>))
+Declaration(Class(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#множество>))
+Declaration(Class(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#отрезок>))
+Declaration(Class(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#треугольник>))
+Declaration(Class(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#угол>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#быть_параллельным>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#быть_равным>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_медиану>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_среднюю_линию>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#лежать_напротив>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#пересекаемое_множество>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#пересечение>))
+Declaration(DataProperty(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_градусную_меру>))
+Declaration(DataProperty(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_периметр>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#MN>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#АО>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#АС>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#ВК>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#О>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#СО>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#множество_из_BK_и_MN>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#множество_из_О>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#треугольник_АВС>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#угол_В>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#угол_С>))
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#быть_параллельным> (<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#быть_параллельным>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#быть_параллельным> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#отрезок>)
+ObjectPropertyRange(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#быть_параллельным> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#отрезок>)
+
+# Object Property: <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#быть_равным> (<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#быть_равным>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#быть_равным> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#отрезок>)
+ObjectPropertyRange(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#быть_равным> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#отрезок>)
+
+# Object Property: <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_медиану> (<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_медиану>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_медиану> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#угол>)
+ObjectPropertyRange(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_медиану> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#отрезок>)
+
+# Object Property: <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_среднюю_линию> (<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_среднюю_линию>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_среднюю_линию> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#треугольник>)
+ObjectPropertyRange(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_среднюю_линию> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#отрезок>)
+
+# Object Property: <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#лежать_напротив> (<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#лежать_напротив>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#лежать_напротив> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#отрезок>)
+ObjectPropertyDomain(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#лежать_напротив> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#угол>)
+ObjectPropertyRange(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#лежать_напротив> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#отрезок>)
+ObjectPropertyRange(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#лежать_напротив> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#угол>)
+
+# Object Property: <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#пересекаемое_множество> (<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#пересекаемое_множество>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#пересекаемое_множество> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#множество>)
+ObjectPropertyRange(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#пересекаемое_множество> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#отрезок>)
+
+# Object Property: <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#пересечение> (<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#пересечение>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#пересечение> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#множество>)
+ObjectPropertyRange(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#пересечение> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#множество>)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_градусную_меру> (<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_градусную_меру>)
+
+DataPropertyDomain(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_градусную_меру> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#угол>)
+DataPropertyRange(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_градусную_меру> xsd:int)
+
+# Data Property: <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_периметр> (<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_периметр>)
+
+DataPropertyDomain(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_периметр> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#треугольник>)
+DataPropertyRange(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_периметр> xsd:int)
+
+
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#MN> (<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#MN>)
+
+ClassAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#отрезок> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#MN>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#быть_параллельным> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#MN> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#АС>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#лежать_напротив> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#MN> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#угол_В>)
+
+# Individual: <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#АО> (<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#АО>)
+
+ClassAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#отрезок> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#АО>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#быть_равным> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#АО> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#СО>)
+
+# Individual: <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#АС> (<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#АС>)
+
+ClassAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#отрезок> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#АС>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#быть_параллельным> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#АС> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#MN>)
+
+# Individual: <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#ВК> (<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#ВК>)
+
+ClassAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#отрезок> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#ВК>)
+
+# Individual: <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#О> (<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#О>)
+
+ClassAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#геометрическая_точка> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#О>)
+
+# Individual: <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#СО> (<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#СО>)
+
+ClassAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#отрезок> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#СО>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#быть_равным> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#СО> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#АО>)
+
+# Individual: <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#множество_из_BK_и_MN> (<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#множество_из_BK_и_MN>)
+
+ClassAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#множество> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#множество_из_BK_и_MN>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#пересекаемое_множество> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#множество_из_BK_и_MN> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#MN>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#пересекаемое_множество> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#множество_из_BK_и_MN> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#ВК>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#пересечение> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#множество_из_BK_и_MN> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#множество_из_О>)
+
+# Individual: <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#множество_из_О> (<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#множество_из_О>)
+
+ClassAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#множество> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#множество_из_О>)
+
+# Individual: <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#треугольник_АВС> (<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#треугольник_АВС>)
+
+ClassAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#треугольник> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#треугольник_АВС>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_среднюю_линию> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#треугольник_АВС> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#MN>)
+DataPropertyAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_периметр> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#треугольник_АВС> "20 см")
+
+# Individual: <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#угол_В> (<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#угол_В>)
+
+ClassAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#угол> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#угол_В>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_медиану> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#угол_В> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#ВК>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#лежать_напротив> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#угол_В> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#MN>)
+DataPropertyAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_градусную_меру> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#угол_В> "а")
+
+# Individual: <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#угол_С> (<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#угол_С>)
+
+ClassAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#угол> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#угол_С>)
+DataPropertyAssertion(<http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#иметь_градусную_меру> <http://www.semanticweb.org/asus/ontologies/2025/3/untitled-ontology-5#угол_С> "2а")
+
+
+)

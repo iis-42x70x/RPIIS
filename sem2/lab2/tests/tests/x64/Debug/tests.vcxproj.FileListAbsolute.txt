@@ -1,0 +1,6 @@
+D:\Учеба\пио\2 сем\лабы\prov\tests\x64\Debug\gtest.pdb
+D:\Учеба\пио\2 сем\лабы\prov\tests\x64\Debug\gtest_main.pdb
+D:\Учеба\пио\2 сем\лабы\prov\tests\tests\x64\Debug\tests.vcxproj.Up2Date
+D:\Учеба\пио\2 сем\лабы\lab 2\tests\x64\Debug\gtest.pdb
+D:\Учеба\пио\2 сем\лабы\lab 2\tests\x64\Debug\gtest_main.pdb
+D:\Учеба\пио\2 сем\лабы\lab 2\tests\tests\x64\Debug\tests.vcxproj.Up2Date
