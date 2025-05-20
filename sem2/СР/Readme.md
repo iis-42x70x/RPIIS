@@ -24,19 +24,17 @@ Hurricane», «Wind of Change» и «Send Me an Angel». Коллектив за
 
 # Решение:  
 1. формализация текста:  
-a) в Protégé:  
+ a) в Protégé:  
 
 
-b) в KBE: 
-<img src="https://ltdfoto.ru/images/2025/03/25/SNIMOK-EKRANA_20250325_203419.png" alt="SNIMOK-EKRANA_20250325_203419.png" border="0" />
+ b) в KBE: 
+ ![image](https://github.com/user-attachments/assets/12f303c3-50c3-4e77-85a5-96fd3cfdbf42)
 
 
-2. Заданное математическое выражение формализовать при помощи стандартов технологии OSTIS, используя редактор KBE и язык SCg.  
-**Математическое выражение(вариант 3):**  
-<img src="https://ltdfoto.ru/images/2025/03/24/SNIMOK-EKRANA_20250324_212711.png" alt="SNIMOK-EKRANA_20250324_212711.png" border="0" />
  
 # Решение:  
-<img src="https://ltdfoto.ru/images/2025/04/01/SNIMOK-EKRANA_20250401_152118.png" alt="SNIMOK-EKRANA_20250401_152118.png" border="0" />
+2. математическое выражение
+![image](https://github.com/user-attachments/assets/0ccaef92-cb81-4f4d-86ae-e0e22657e003)
 
 
 
