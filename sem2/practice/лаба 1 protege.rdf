@@ -1,0 +1,333 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16/"
+     xml:base="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-16="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#hasAngle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#hasAngle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#polygon"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#angle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#hasMedian -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#hasMedian">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#polygon"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#median"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#hasMiddleLine -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#hasMiddleLine">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#polygon"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#middleLine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#hasPoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#hasPoint">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#shape"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#hasSegment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#hasSegment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#shape"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#segment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#hasSide -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#hasSide">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#polygon"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#segment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#isBelong -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#isBelong">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#shape"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#angle"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#point"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#segment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#isCrossing -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#isCrossing">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#shape"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#segment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#isLieOpposite -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#isLieOpposite">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#segment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#segment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#isParallel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#isParallel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#segment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#segment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#hasDegreeMeasure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#hasDegreeMeasure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#hasLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#hasLength"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#hasPerimeter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#hasPerimeter"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#angle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#angle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#median -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#median">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#segment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#middleLine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#middleLine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#segment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#point -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#point">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#polygon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#polygon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#segment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#segment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#shape -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#shape"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#triangle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#triangle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#polygon"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#ABC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#ABC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#triangle"/>
+        <untitled-ontology-16:hasAngle rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#B"/>
+        <untitled-ontology-16:hasAngle rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#C"/>
+        <untitled-ontology-16:hasMedian rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#BK"/>
+        <untitled-ontology-16:hasMiddleLine rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#MN"/>
+        <untitled-ontology-16:hasPoint rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#O"/>
+        <untitled-ontology-16:hasSegment rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#AO"/>
+        <untitled-ontology-16:hasSegment rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#CO"/>
+        <untitled-ontology-16:hasSide rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#AC"/>
+        <untitled-ontology-16:hasPerimeter>20cm</untitled-ontology-16:hasPerimeter>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#AC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#AC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#segment"/>
+        <untitled-ontology-16:isParallel rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#MN"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#AO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#AO">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#segment"/>
+        <untitled-ontology-16:hasLength>CO</untitled-ontology-16:hasLength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#B -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#B">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#angle"/>
+        <untitled-ontology-16:hasDegreeMeasure>X</untitled-ontology-16:hasDegreeMeasure>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#BK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#BK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#median"/>
+        <untitled-ontology-16:isCrossing rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#MN"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#C -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#C">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#angle"/>
+        <untitled-ontology-16:hasDegreeMeasure>2X</untitled-ontology-16:hasDegreeMeasure>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#CO">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#segment"/>
+        <untitled-ontology-16:hasLength>AO</untitled-ontology-16:hasLength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#MN -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#MN">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#middleLine"/>
+        <untitled-ontology-16:isLieOpposite rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#B"/>
+        <untitled-ontology-16:isParallel rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#AC"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#O -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#O">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#point"/>
+        <untitled-ontology-16:isBelong rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#BK"/>
+        <untitled-ontology-16:isBelong rdf:resource="http://www.semanticweb.org/user/ontologies/2025/4/untitled-ontology-16#MN"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
