@@ -1,0 +1,821 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://student.bsuir.by/ontology/321702kadikov/geometryissue.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://student.bsuir.by/ontology/321702kadikov/geometryissue.owl">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Онтология геометрической задачи.
+Задача: 
+АВСD – равнобедренная трапеция, в неё вписана окружность с радиусом ОМ. АМ/ВС= = 1/4. BL и СК – высоты трапеции, которые являются сторонами получившего прямоугольника BLKC. Диагональ BK прямоугольника BLKC является стороной тупого угла BKD, равного 105 градусов.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#angle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#circle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#geometric_point"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#geometric_shape"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#isosceles_trapezoid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#line_segment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#number"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#rectangle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#a"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#dads"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#dasda"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#dasdasdfsd"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#dds"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#dsasd"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#h"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hh"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#j"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#jghjghj"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#jj"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#klmlkmkl"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sadfdsfsdf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ssad"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ПринадлежитОтрезку"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sdsdsa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#105"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#A"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ABCD"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AD"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#B"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BK"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BKD"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BL"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BLKC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#C"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CD"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#D"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#K"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#KC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#L"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LK"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#M"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#O"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#circle_X"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dasdas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fsfsdf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sdsfsdf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#АВ"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#circle"/>
+        <Class IRI="#geometric_shape"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#isosceles_trapezoid"/>
+        <Class IRI="#geometric_shape"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#rectangle"/>
+        <Class IRI="#geometric_shape"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#number"/>
+        <NamedIndividual IRI="#105"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#number"/>
+        <NamedIndividual IRI="#4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#geometric_point"/>
+        <NamedIndividual IRI="#A"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#isosceles_trapezoid"/>
+        <NamedIndividual IRI="#ABCD"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#line_segment"/>
+        <NamedIndividual IRI="#AD"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#line_segment"/>
+        <NamedIndividual IRI="#AM"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#geometric_point"/>
+        <NamedIndividual IRI="#B"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#line_segment"/>
+        <NamedIndividual IRI="#BC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#line_segment"/>
+        <NamedIndividual IRI="#BK"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#angle"/>
+        <NamedIndividual IRI="#BKD"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#line_segment"/>
+        <NamedIndividual IRI="#BL"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#rectangle"/>
+        <NamedIndividual IRI="#BLKC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#geometric_point"/>
+        <NamedIndividual IRI="#C"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#line_segment"/>
+        <NamedIndividual IRI="#CD"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#geometric_point"/>
+        <NamedIndividual IRI="#D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#geometric_point"/>
+        <NamedIndividual IRI="#K"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#line_segment"/>
+        <NamedIndividual IRI="#KC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#geometric_point"/>
+        <NamedIndividual IRI="#L"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#line_segment"/>
+        <NamedIndividual IRI="#LK"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#geometric_point"/>
+        <NamedIndividual IRI="#M"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#geometric_point"/>
+        <NamedIndividual IRI="#O"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#line_segment"/>
+        <NamedIndividual IRI="#OM"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#circle"/>
+        <NamedIndividual IRI="#circle_X"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#value"/>
+        <NamedIndividual IRI="#dasdas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#value"/>
+        <NamedIndividual IRI="#fsfsdf"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#value"/>
+        <NamedIndividual IRI="#sdsfsdf"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#line_segment"/>
+        <NamedIndividual IRI="#АВ"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#j"/>
+        <NamedIndividual IRI="#A"/>
+        <NamedIndividual IRI="#ABCD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#klmlkmkl"/>
+        <NamedIndividual IRI="#A"/>
+        <NamedIndividual IRI="#AM"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#klmlkmkl"/>
+        <NamedIndividual IRI="#A"/>
+        <NamedIndividual IRI="#АВ"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#klmlkmkl"/>
+        <NamedIndividual IRI="#A"/>
+        <NamedIndividual IRI="#AD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ПринадлежитОтрезку"/>
+        <NamedIndividual IRI="#A"/>
+        <NamedIndividual IRI="#AM"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ПринадлежитОтрезку"/>
+        <NamedIndividual IRI="#A"/>
+        <NamedIndividual IRI="#АВ"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ПринадлежитОтрезку"/>
+        <NamedIndividual IRI="#A"/>
+        <NamedIndividual IRI="#AD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#jj"/>
+        <NamedIndividual IRI="#AD"/>
+        <NamedIndividual IRI="#ABCD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sadfdsfsdf"/>
+        <NamedIndividual IRI="#AM"/>
+        <NamedIndividual IRI="#sdsfsdf"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hh"/>
+        <NamedIndividual IRI="#B"/>
+        <NamedIndividual IRI="#BKD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#j"/>
+        <NamedIndividual IRI="#B"/>
+        <NamedIndividual IRI="#ABCD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#j"/>
+        <NamedIndividual IRI="#B"/>
+        <NamedIndividual IRI="#BLKC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#klmlkmkl"/>
+        <NamedIndividual IRI="#B"/>
+        <NamedIndividual IRI="#АВ"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#klmlkmkl"/>
+        <NamedIndividual IRI="#B"/>
+        <NamedIndividual IRI="#BL"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#klmlkmkl"/>
+        <NamedIndividual IRI="#B"/>
+        <NamedIndividual IRI="#BK"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#klmlkmkl"/>
+        <NamedIndividual IRI="#B"/>
+        <NamedIndividual IRI="#BC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ПринадлежитОтрезку"/>
+        <NamedIndividual IRI="#B"/>
+        <NamedIndividual IRI="#BC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ПринадлежитОтрезку"/>
+        <NamedIndividual IRI="#B"/>
+        <NamedIndividual IRI="#АВ"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ПринадлежитОтрезку"/>
+        <NamedIndividual IRI="#B"/>
+        <NamedIndividual IRI="#BL"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ПринадлежитОтрезку"/>
+        <NamedIndividual IRI="#B"/>
+        <NamedIndividual IRI="#BK"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#jj"/>
+        <NamedIndividual IRI="#BC"/>
+        <NamedIndividual IRI="#ABCD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#jj"/>
+        <NamedIndividual IRI="#BC"/>
+        <NamedIndividual IRI="#BLKC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sadfdsfsdf"/>
+        <NamedIndividual IRI="#BC"/>
+        <NamedIndividual IRI="#dasdas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dsasd"/>
+        <NamedIndividual IRI="#BK"/>
+        <NamedIndividual IRI="#BLKC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#a"/>
+        <NamedIndividual IRI="#BKD"/>
+        <NamedIndividual IRI="#fsfsdf"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#h"/>
+        <NamedIndividual IRI="#BL"/>
+        <NamedIndividual IRI="#ABCD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#jj"/>
+        <NamedIndividual IRI="#BL"/>
+        <NamedIndividual IRI="#BLKC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#j"/>
+        <NamedIndividual IRI="#C"/>
+        <NamedIndividual IRI="#ABCD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#j"/>
+        <NamedIndividual IRI="#C"/>
+        <NamedIndividual IRI="#BLKC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#klmlkmkl"/>
+        <NamedIndividual IRI="#C"/>
+        <NamedIndividual IRI="#CD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#klmlkmkl"/>
+        <NamedIndividual IRI="#C"/>
+        <NamedIndividual IRI="#BC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#klmlkmkl"/>
+        <NamedIndividual IRI="#C"/>
+        <NamedIndividual IRI="#KC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ПринадлежитОтрезку"/>
+        <NamedIndividual IRI="#C"/>
+        <NamedIndividual IRI="#BC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ПринадлежитОтрезку"/>
+        <NamedIndividual IRI="#C"/>
+        <NamedIndividual IRI="#KC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ПринадлежитОтрезку"/>
+        <NamedIndividual IRI="#C"/>
+        <NamedIndividual IRI="#CD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#jj"/>
+        <NamedIndividual IRI="#CD"/>
+        <NamedIndividual IRI="#ABCD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ssad"/>
+        <NamedIndividual IRI="#CD"/>
+        <NamedIndividual IRI="#АВ"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hh"/>
+        <NamedIndividual IRI="#D"/>
+        <NamedIndividual IRI="#BKD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#j"/>
+        <NamedIndividual IRI="#D"/>
+        <NamedIndividual IRI="#ABCD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#klmlkmkl"/>
+        <NamedIndividual IRI="#D"/>
+        <NamedIndividual IRI="#AD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#klmlkmkl"/>
+        <NamedIndividual IRI="#D"/>
+        <NamedIndividual IRI="#CD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ПринадлежитОтрезку"/>
+        <NamedIndividual IRI="#D"/>
+        <NamedIndividual IRI="#CD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ПринадлежитОтрезку"/>
+        <NamedIndividual IRI="#D"/>
+        <NamedIndividual IRI="#AD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hh"/>
+        <NamedIndividual IRI="#K"/>
+        <NamedIndividual IRI="#BKD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#j"/>
+        <NamedIndividual IRI="#K"/>
+        <NamedIndividual IRI="#BLKC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#klmlkmkl"/>
+        <NamedIndividual IRI="#K"/>
+        <NamedIndividual IRI="#BK"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#klmlkmkl"/>
+        <NamedIndividual IRI="#K"/>
+        <NamedIndividual IRI="#KC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ПринадлежитОтрезку"/>
+        <NamedIndividual IRI="#K"/>
+        <NamedIndividual IRI="#KC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ПринадлежитОтрезку"/>
+        <NamedIndividual IRI="#K"/>
+        <NamedIndividual IRI="#BK"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#h"/>
+        <NamedIndividual IRI="#KC"/>
+        <NamedIndividual IRI="#ABCD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#jj"/>
+        <NamedIndividual IRI="#KC"/>
+        <NamedIndividual IRI="#BLKC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#j"/>
+        <NamedIndividual IRI="#L"/>
+        <NamedIndividual IRI="#BLKC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#klmlkmkl"/>
+        <NamedIndividual IRI="#L"/>
+        <NamedIndividual IRI="#LK"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#klmlkmkl"/>
+        <NamedIndividual IRI="#L"/>
+        <NamedIndividual IRI="#BL"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ПринадлежитОтрезку"/>
+        <NamedIndividual IRI="#L"/>
+        <NamedIndividual IRI="#LK"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ПринадлежитОтрезку"/>
+        <NamedIndividual IRI="#L"/>
+        <NamedIndividual IRI="#BL"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#jj"/>
+        <NamedIndividual IRI="#LK"/>
+        <NamedIndividual IRI="#BLKC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#klmlkmkl"/>
+        <NamedIndividual IRI="#M"/>
+        <NamedIndividual IRI="#circle_X"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#klmlkmkl"/>
+        <NamedIndividual IRI="#M"/>
+        <NamedIndividual IRI="#AM"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ПринадлежитОтрезку"/>
+        <NamedIndividual IRI="#M"/>
+        <NamedIndividual IRI="#OM"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ПринадлежитОтрезку"/>
+        <NamedIndividual IRI="#M"/>
+        <NamedIndividual IRI="#АВ"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dads"/>
+        <NamedIndividual IRI="#O"/>
+        <NamedIndividual IRI="#circle_X"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ПринадлежитОтрезку"/>
+        <NamedIndividual IRI="#O"/>
+        <NamedIndividual IRI="#OM"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dds"/>
+        <NamedIndividual IRI="#OM"/>
+        <NamedIndividual IRI="#circle_X"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dasda"/>
+        <NamedIndividual IRI="#circle_X"/>
+        <NamedIndividual IRI="#ABCD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dasdasdfsd"/>
+        <NamedIndividual IRI="#dasdas"/>
+        <NamedIndividual IRI="#AM"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#jghjghj"/>
+        <NamedIndividual IRI="#sdsfsdf"/>
+        <NamedIndividual IRI="#4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#jj"/>
+        <NamedIndividual IRI="#АВ"/>
+        <NamedIndividual IRI="#ABCD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ssad"/>
+        <NamedIndividual IRI="#АВ"/>
+        <NamedIndividual IRI="#CD"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#sdsdsa"/>
+        <NamedIndividual IRI="#105"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">105</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#sdsdsa"/>
+        <NamedIndividual IRI="#BKD"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">105</Literal>
+    </DataPropertyAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#a</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">РазмерУгла
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#angle</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Угол</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#circle</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Окружность
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#circle_X</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ОкружностьХ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dads</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ЦентрОкружности
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dasda</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Вписана_в_Трапецию</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dasdas</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ВеличинаВС</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dasdasdfsd</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ИтогПроизведенияВеличин</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dds</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Радиус</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dsasd</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Диагональ
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#fsfsdf</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ВеличинаBKD</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#geometric_point</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ГеометрическаяТочка
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#geometric_shape</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ГеометрическаяФигура</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#h</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Высота
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hh</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ОпорныеТочки</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isosceles_trapezoid</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">РавнобедреннаяТрапеция
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#j</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Вершина</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#jghjghj</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ПроизведениеВеличин</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#jj</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Сторона</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#klmlkmkl</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ГраничнаяТочка</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#line_segment</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Отрезок
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#number</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Число</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#rectangle</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Прямоугольник</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sadfdsfsdf</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sadfdsfsdf</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Длина
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sdsdsa</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Градус</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sdsfsdf</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ВеличинаАМ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ssad</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ОдинаковыеДлины
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#value</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Величина</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
