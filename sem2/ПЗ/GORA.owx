@@ -1,0 +1,309 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/1/ontologies/2024/4/untitled-ontology-3"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/1/ontologies/2024/4/untitled-ontology-3">
+    <Prefix name="" IRI="http://www.semanticweb.org/1/ontologies/2024/4/untitled-ontology-3/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Гора"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Населенный_пункт"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Отрезок"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Плита"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Страна"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Тип_местности"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Конец"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Наивысшая_точка"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Находится_в"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Начало"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Рядом_с"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Установлена_на"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#была_переименована"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#была_переименованна_в"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#была_установленна_в"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#высота_над_уровнем_моря"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#надпись"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#расстояние"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Беларусь"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Белорусская_гряда"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Гора_Дзержинская"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Гранитная_плита"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Дзержинск"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Минск"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Минская_возвышенность"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Расстояние"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Святая_гора"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Скирмантово"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Гора"/>
+        <Class IRI="#Страна"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Населенный_пункт"/>
+        <Class IRI="#Страна"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Плита"/>
+        <Class IRI="#Страна"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Тип_местности"/>
+        <Class IRI="#Страна"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Страна"/>
+        <NamedIndividual IRI="#Беларусь"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Тип_местности"/>
+        <NamedIndividual IRI="#Белорусская_гряда"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Гора"/>
+        <NamedIndividual IRI="#Гора_Дзержинская"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Плита"/>
+        <NamedIndividual IRI="#Гранитная_плита"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Населенный_пункт"/>
+        <NamedIndividual IRI="#Дзержинск"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Населенный_пункт"/>
+        <NamedIndividual IRI="#Минск"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Тип_местности"/>
+        <NamedIndividual IRI="#Минская_возвышенность"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Отрезок"/>
+        <NamedIndividual IRI="#Расстояние"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Гора"/>
+        <NamedIndividual IRI="#Святая_гора"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Населенный_пункт"/>
+        <NamedIndividual IRI="#Скирмантово"/>
+    </ClassAssertion>
+    <SameIndividual>
+        <NamedIndividual IRI="#Гора_Дзержинская"/>
+        <NamedIndividual IRI="#Святая_гора"/>
+    </SameIndividual>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Наивысшая_точка"/>
+        <NamedIndividual IRI="#Беларусь"/>
+        <NamedIndividual IRI="#Гора_Дзержинская"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Находится_в"/>
+        <NamedIndividual IRI="#Гора_Дзержинская"/>
+        <NamedIndividual IRI="#Скирмантово"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Рядом_с"/>
+        <NamedIndividual IRI="#Гора_Дзержинская"/>
+        <NamedIndividual IRI="#Дзержинск"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Установлена_на"/>
+        <NamedIndividual IRI="#Гранитная_плита"/>
+        <NamedIndividual IRI="#Гора_Дзержинская"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Находится_в"/>
+        <NamedIndividual IRI="#Минская_возвышенность"/>
+        <NamedIndividual IRI="#Белорусская_гряда"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Конец"/>
+        <NamedIndividual IRI="#Расстояние"/>
+        <NamedIndividual IRI="#Минск"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Начало"/>
+        <NamedIndividual IRI="#Расстояние"/>
+        <NamedIndividual IRI="#Гора_Дзержинская"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#была_переименована"/>
+        <NamedIndividual IRI="#Святая_гора"/>
+        <NamedIndividual IRI="#Гора_Дзержинская"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#высота_над_уровнем_моря"/>
+        <NamedIndividual IRI="#Гора_Дзержинская"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">345</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#была_установленна_в"/>
+        <NamedIndividual IRI="#Гранитная_плита"/>
+        <Literal>конце 1990-x</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#надпись"/>
+        <NamedIndividual IRI="#Гранитная_плита"/>
+        <Literal>Гора Дзержинская. Высшая точка Белоруссии. Высота 345 метров над уровнем моря.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#расстояние"/>
+        <NamedIndividual IRI="#Расстояние"/>
+        <Literal>30km</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#была_переименованна_в"/>
+        <NamedIndividual IRI="#Святая_гора"/>
+        <Literal>1958 году</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Находится_в"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Конец"/>
+        <Class IRI="#Страна"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Наивысшая_точка"/>
+        <Class IRI="#Страна"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Находится_в"/>
+        <Class IRI="#Гора"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Начало"/>
+        <Class IRI="#Отрезок"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Рядом_с"/>
+        <Class IRI="#Гора"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Установлена_на"/>
+        <Class IRI="#Плита"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#была_переименована"/>
+        <Class IRI="#Гора"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Конец"/>
+        <Class IRI="#Населенный_пункт"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Наивысшая_точка"/>
+        <Class IRI="#Гора"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Находится_в"/>
+        <Class IRI="#Населенный_пункт"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Находится_в"/>
+        <Class IRI="#Тип_местности"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Начало"/>
+        <Class IRI="#Гора"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Рядом_с"/>
+        <Class IRI="#Населенный_пункт"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Установлена_на"/>
+        <Class IRI="#Гора"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#была_переименована"/>
+        <Class IRI="#Гора"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#была_переименованна_в"/>
+        <Class IRI="#Гора"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#была_установленна_в"/>
+        <Class IRI="#Плита"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#была_переименованна_в"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#была_установленна_в"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
