@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GWF version="2.0">
+    <staticSector>
+        <bus type="bus" idtf="" shapeColor="0" id="2714698368960" parent="0" owner="2714701863456" b_x="694.934" b_y="-83.5002" e_x="688" e_y="909">
+            <points/>
+        </bus>
+        <node type="node/const/perm/group" idtf="Неизвестные" shapeColor="0" id="2714701863456" parent="0" left="0" top="0" right="197" bottom="41" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="695" y="-93" haveBus="true" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+    </staticSector>
+</GWF>
