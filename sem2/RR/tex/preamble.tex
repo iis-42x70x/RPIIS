@@ -1,0 +1,343 @@
+\documentclass[a4paper,14pt,oneside,final]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[T2A]{fontenc}
+%\usepackage{pscyr}
+%\renewcommand{\rmdefault}{cmr}
+\usepackage[final,hidelinks]{hyperref}
+\usepackage[square,numbers,sort&compress]{natbib}
+%\usepackage{times}
+\usefont{T2A}{ftm}{m}{sl}
+\setlength{\bibsep}{0em}
+\PassOptionsToPackage{hyphens}{url}
+
+\usepackage{hyphenat}
+
+\addto\extrasrussian{%
+  \def\equationautorefname{формула}%
+  \def\figureautorefname{рисунок}%
+  \def\listingautorefname{листинг}%
+  \def\tableautorefname{таблица}%
+}
+
+\addto\captionsrussian{
+  \renewcommand\contentsname{\centerline{\bfseries\large{\MakeUppercase{содержание}}}}
+  \renewcommand{\bibsection}{\sectioncentered*{Cписок использованных источников}}
+  \renewcommand{\listingscaption}{Листинг}
+}
+
+\AtEndDocument{
+
+  \addcontentsline{toc}{section}{Cписок использованных источников}%
+}
+\usepackage{extsizes}
+
+
+\sloppy
+
+\usepackage{microtype}
+\newlength{\fivecharsapprox}
+\setlength{\fivecharsapprox}{6ex}
+
+
+\usepackage{indentfirst}
+\setlength{\parindent}{\fivecharsapprox} 
+
+\usepackage[left=3cm,top=2.0cm,right=1.5cm,bottom=2.7cm]{geometry}
+
+\frenchspacing
+
+\usepackage{perpage}
+\MakePerPage{footnote}
+
+\makeatletter 
+\def\@makefnmark{\hbox{\@textsuperscript{\normalfont\@thefnmark)}}}
+\makeatother
+
+\usepackage[bottom]{footmisc}
+
+\makeatletter
+\renewcommand{\thesection}{\arabic{section}}
+\makeatother
+
+\setcounter{secnumdepth}{3}
+
+
+% Зачем: Настраивает отступ между таблицей с содержанимем и словом СОДЕРЖАНИЕ
+\usepackage{tocloft}
+\setlength{\cftbeforetoctitleskip}{-1em}
+\setlength{\cftaftertoctitleskip}{1em}
+
+
+% Зачем: Определяет отступы слева для записей в таблице содержания.
+\makeatletter
+\renewcommand{\l@section}{\@dottedtocline{1}{0.5em}{1.2em}}
+\renewcommand{\l@subsection}{\@dottedtocline{2}{1.7em}{2.0em}}
+\makeatother
+
+
+% Зачем: Работа с колонтитулами
+\usepackage{fancyhdr} 
+\pagestyle{fancy}
+
+
+\fancyhf{} 
+\fancyfoot[R]{\thepage}
+\renewcommand{\footrulewidth}{0pt} 
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{ 
+    \fancyhf{}
+    \rfoot{\thepage}}
+
+
+% Зачем: Задает стиль заголовков раздела жирным шрифтом, прописными буквами, без точки в конце
+\makeatletter
+\renewcommand\section{%
+  \@startsection {section}{1}%
+    {\fivecharsapprox}%
+    {-1em \@plus -1ex \@minus -.2ex}%
+    {1em \@plus .2ex}%
+    {\raggedright\hyphenpenalty=10000\normalfont\bfseries\MakeUppercase}}
+\makeatother
+
+
+% Зачем: Задает стиль заголовков подразделов
+
+\makeatletter
+\renewcommand\subsection{
+  \@startsection{subsection}{2}
+    {\fivecharsapprox}
+    {-1em \@plus -1ex \@minus -.2ex}
+    {1em \@plus .2ex}
+    {\raggedright\hyphenpenalty=10000\normalfont\normalsize\bfseries}}
+\makeatother
+
+
+% Зачем: Задает стиль заголовков пунктов
+\makeatletter
+\renewcommand\subsubsection{
+  \@startsection{subsubsection}{3}%
+    {\fivecharsapprox}%
+    {-1em \@plus -1ex \@minus -.2ex}%
+    {\z@}%
+    {\raggedright\hyphenpenalty=10000\normalfont\normalsize\bfseries}}
+\makeatother
+
+% Зачем: для оформления введения и заключения, они должны быть выровнены по центру.
+\makeatletter
+\newcommand\sectioncentered{%
+  \clearpage\@startsection {section}{1}%
+    {\z@}%
+    {-1em \@plus -1ex \@minus -.2ex}%
+    {1em \@plus .2ex}%
+    {\centering\hyphenpenalty=10000\normalfont\large\bfseries\MakeUppercase}%
+    }
+\makeatother
+
+
+
+% Зачем: Задает стиль библиографии
+\bibliographystyle{gost71s2003}
+
+\usepackage[final]{graphicx}
+\DeclareGraphicsExtensions{.png,.jpg}
+
+% Зачем: Добавление подписей к рисункам
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Зачем: поворот ячеек таблиц на 90 градусов
+\usepackage{rotating}
+\DeclareRobustCommand{\povernut}[1]{\begin{sideways}{#1}\end{sideways}}
+
+\DeclareRobustCommand{\x}[1]{\text{#1}}
+
+% Зачем: Задание подписей, разделителя и нумерации частей рисунков
+\DeclareCaptionLabelFormat{stbfigure}{Рисунок \emph{#2}}
+\DeclareCaptionLabelFormat{stbtable}{Таблица \emph{#2}}
+\DeclareCaptionLabelFormat{stblisting}{Листинг \emph{#2}}
+\DeclareCaptionLabelSeparator{stb}{~--~}
+\captionsetup{labelsep=stb}
+\captionsetup[figure]{labelformat=stbfigure, justification=centering, font={small}}
+\captionsetup[listing]{labelformat=stblisting,justification=centering, font={small}}
+\captionsetup[table]{labelformat=stbtable,justification=raggedright,  font={small}}
+\renewcommand{\thesubfigure}{\asbuk{subfigure}}
+% Зачем: Окружения для оформлени<я формул
+\usepackage{calc}
+\newlength{\lengthWordWhere}
+\settowidth{\lengthWordWhere}{где}
+\newenvironment{explanation}
+    {
+    \begin{itemize}[leftmargin=0cm, itemindent=\lengthWordWhere + \labelsep , labelsep=\labelsep]
+
+    \renewcommand\labelitemi{}
+    }
+    {
+    \\[\parsep]
+    \end{itemize}
+    }
+
+
+\usepackage{tabularx}
+
+\newenvironment{explanationx}
+    {
+    \noindent 
+    \tabularx{\textwidth}{@{}ll@{ --- } X }
+    }
+    { 
+    \\[\parsep]
+    \endtabularx
+    }
+
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{calc}
+\usepackage{fp}
+\usepackage{enumitem}
+
+\makeatletter
+ \AddEnumerateCounter{\asbuk}{\@asbuk}{щ)}
+\makeatother
+
+
+\setlist{nolistsep}
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+\renewcommand{\labelenumii}{\alph{enumii}.}
+
+\setlist[itemize,0]{itemindent=\parindent + 2.2ex,leftmargin=0ex,label=--}
+\setlist[enumerate,1]{leftmargin=4em}
+%\setlist[enumerate,2]{leftmargin=0em}
+
+
+% Зачем: Включение номера раздела в номер формулы. Нумерация формул внутри раздела.
+\AtBeginDocument{\numberwithin{equation}{section}}
+
+% Зачем: Включение номера раздела в номер таблицы. Нумерация таблиц внутри раздела.
+\AtBeginDocument{\numberwithin{table}{section}}
+
+% Зачем: Включение номера раздела в номер рисунка. Нумерация рисунков внутри раздела.
+\AtBeginDocument{\numberwithin{figure}{section}}
+
+% Зачем: Включение номера раздела в номер листинга. Нумерация листингов внутри раздела.
+\AtBeginDocument{\numberwithin{listing}{section}}
+
+
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{array}
+
+
+\usepackage{textcomp}
+
+\usepackage{siunitx}
+\sisetup{
+  binary-units = true,
+  output-decimal-marker = {,},
+  per-mode = symbol,
+  range-phrase = --,
+}
+\DeclareSIUnit{\sample}{S}
+
+
+\newcommand{\ignore}[2]{\hspace{0in}#2}
+
+
+\usepackage{verbatim}
+\usepackage{xcolor}
+\usepackage{minted}
+
+%\AtBeginDocument{\numberwithin{lstlisting}{section}}
+
+\usepackage[normalem]{ulem}
+
+\renewcommand{\UrlFont}{\small\rmfamily\tt}
+
+% Магия для подсчета разнообразных объектов в документе
+\usepackage{lastpage}
+\usepackage{totcount}
+\regtotcounter{section}
+
+\usepackage{etoolbox}
+
+\newcounter{totfigures}
+\newcounter{tottables}
+\newcounter{totreferences}
+\newcounter{totequation}
+
+\providecommand\totfig{} 
+\providecommand\tottab{}
+\providecommand\totref{}
+\providecommand\toteq{}
+
+\makeatletter
+\AtEndDocument{%
+  \addtocounter{totfigures}{\value{figure}}%
+  \addtocounter{tottables}{\value{table}}%
+  \addtocounter{totequation}{\value{equation}}
+  \immediate\write\@mainaux{%
+    \string\gdef\string\totfig{\number\value{totfigures}}%
+    \string\gdef\string\tottab{\number\value{tottables}}%
+    \string\gdef\string\totref{\number\value{totreferences}}%
+    \string\gdef\string\toteq{\number\value{totequation}}%
+  }%
+}
+\makeatother
+
+\pretocmd{\section}{\addtocounter{totfigures}{\value{figure}}\setcounter{figure}{0}}{}{}
+\pretocmd{\section}{\addtocounter{tottables}{\value{table}}\setcounter{table}{0}}{}{}
+\pretocmd{\section}{\addtocounter{totequation}{\value{equation}}\setcounter{equation}{0}}{}{}
+\pretocmd{\bibitem}{\addtocounter{totreferences}{1}}{}{}
+
+
+
+% Для оформления таблиц не влязящих на 1 страницу
+\usepackage{longtable}
+
+\usepackage{gensymb}
+
+% Зачем: преобразовывать текст в верхний регистр командой MakeTextUppercase
+\usepackage{textcase}
+
+%  Переносы в словах с тире \hyph.
+
+\def\hyph{-\penalty0\hskip0pt\relax}
+
+% Добавляем левый отступ для библиографии
+
+\makeatletter
+\renewenvironment{thebibliography}[1]
+     {\sectioncentered*{Cписок использованных источников}
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \setlength{\itemindent}{\dimexpr\labelwidth+\labelsep+1em}
+            \leftmargin\z@
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\makeatother
+
+\newcommand{\intro}[3]{
+    \stepcounter{section}
+        \sectioncentered*{ПРИЛОЖЕНИЕ \MakeUppercase{#1}}
+     \begin{center} 
+        \bf{(#2)}\\
+        \bf{#3}
+    \end{center}
+    \markboth{\MakeUppercase{#1}}{}
+    \addcontentsline{toc}{section}{Приложение \MakeUppercase{#1} (#2) #3}
+}

@@ -1,0 +1,21 @@
+\input{preamble}
+
+\begin{document}
+
+\input{title} 
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{content}
+
+% Если в тексте записки есть приложения, для добавления их в содержание, необходимо оставить слудеющую строку
+% Если приложений нет - данную строку добавляем в комментарий
+\addcontentsline{toc}{section}{Список использованных источников}
+
+\nocite{*}
+\selectlanguage{russian}
+\bibliography{bibliography}
+
+
+\end{document}
