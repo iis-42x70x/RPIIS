@@ -1,0 +1,388 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5">
+    <Prefix name="" IRI="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="untitled-ontology-5" IRI="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#"/>
+    <Declaration>
+        <Class IRI="#Величина"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Город"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Известная_группа_на_мировой_рок-сцене"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Известные_группы"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Композиции"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Месяц"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#События"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Список"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Стили"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Страна"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Телеканал"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Тур"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Число"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#рок_группа"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Быть_самой_популярной_рок_группой"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Выступающий"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Известные_композиции_группы"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Коллектив"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Название_списка"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Список_по_версии"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#город_основания"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#название_тура"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#продавец"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#стиль_группы"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#арабское_число"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#год_основания"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#дата_продаж"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#значение"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#количество_копий"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#начало_гастролей"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#носер_года_по_григориансокму_календарю"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#строчка_в_списке"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Get_Your_String_and_Blackout"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rock_You_like_a_Hurricane"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Send_me_an_angel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Still_Loving_you"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#VH1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wind_of_Change"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#scorpions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Величайшие_артисты_хард-рока"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ганновер"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Гастроли"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Германия"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Классический_рок"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Лирические_гитраные_баллады"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Нахождение_списке"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Продажа_копий_альбомов"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#100_миллионов"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#1965_год"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2010_год"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#29_января"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#46"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Известная_группа_на_мировой_рок-сцене"/>
+        <Class IRI="#Известные_группы"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Тур"/>
+        <NamedIndividual IRI="#Get_Your_String_and_Blackout"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Композиции"/>
+        <NamedIndividual IRI="#Rock_You_like_a_Hurricane"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Композиции"/>
+        <NamedIndividual IRI="#Send_me_an_angel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Композиции"/>
+        <NamedIndividual IRI="#Still_Loving_you"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Телеканал"/>
+        <NamedIndividual IRI="#VH1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Композиции"/>
+        <NamedIndividual IRI="#Wind_of_Change"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#рок_группа"/>
+        <NamedIndividual IRI="#scorpions"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Список"/>
+        <NamedIndividual IRI="#Величайшие_артисты_хард-рока"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Город"/>
+        <NamedIndividual IRI="#Ганновер"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#События"/>
+        <NamedIndividual IRI="#Гастроли"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Страна"/>
+        <NamedIndividual IRI="#Германия"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Стили"/>
+        <NamedIndividual IRI="#Классический_рок"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Стили"/>
+        <NamedIndividual IRI="#Лирические_гитраные_баллады"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#События"/>
+        <NamedIndividual IRI="#Нахождение_списке"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#События"/>
+        <NamedIndividual IRI="#Продажа_копий_альбомов"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Величина"/>
+        <NamedIndividual IRI="#100_миллионов"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Число"/>
+        <NamedIndividual IRI="#100_миллионов"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Величина"/>
+        <NamedIndividual IRI="#1965_год"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Число"/>
+        <NamedIndividual IRI="#1965_год"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Величина"/>
+        <NamedIndividual IRI="#2010_год"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Величина"/>
+        <NamedIndividual IRI="#29_января"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Величина"/>
+        <NamedIndividual IRI="#46"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Число"/>
+        <NamedIndividual IRI="#46"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#количество_копий"/>
+        <NamedIndividual IRI="#100_миллионов"/>
+        <Literal></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#носер_года_по_григориансокму_календарю"/>
+        <NamedIndividual IRI="#1965_год"/>
+        <Literal></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#значение"/>
+        <NamedIndividual IRI="#2010_год"/>
+        <Literal></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#значение"/>
+        <NamedIndividual IRI="#29_января"/>
+        <Literal></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#строчка_в_списке"/>
+        <NamedIndividual IRI="#46"/>
+        <Literal></Literal>
+    </DataPropertyAssertion>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#Быть_самой_популярной_рок_группой"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#название_тура"/>
+    </AsymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Быть_самой_популярной_рок_группой"/>
+        <Class IRI="#Страна"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Выступающий"/>
+        <Class IRI="#Тур"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Известные_композиции_группы"/>
+        <Class IRI="#Композиции"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Коллектив"/>
+        <Class IRI="#События"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Название_списка"/>
+        <Class IRI="#Список"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Список_по_версии"/>
+        <Class IRI="#Телеканал"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#город_основания"/>
+        <Class IRI="#Город"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#название_тура"/>
+        <Class IRI="#Тур"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#продавец"/>
+        <Class IRI="#События"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#стиль_группы"/>
+        <Class IRI="#Стили"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Быть_самой_популярной_рок_группой"/>
+        <Class IRI="#рок_группа"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Выступающий"/>
+        <Class IRI="#События"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Коллектив"/>
+        <Class IRI="#Телеканал"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#арабское_число"/>
+        <Class IRI="#Число"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#год_основания"/>
+        <Class IRI="#Величина"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#дата_продаж"/>
+        <Class IRI="#Величина"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#значение"/>
+        <Class IRI="#Величина"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#количество_копий"/>
+        <Class IRI="#Величина"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#начало_гастролей"/>
+        <Class IRI="#Величина"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#носер_года_по_григориансокму_календарю"/>
+        <Class IRI="#Число"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#строчка_в_списке"/>
+        <Class IRI="#Число"/>
+    </DataPropertyDomain>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
