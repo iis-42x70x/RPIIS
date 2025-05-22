@@ -33,6 +33,7 @@
 
 
 ## Результат работы тестов
+![image](https://github.com/user-attachments/assets/40ea66a8-c044-4db5-b466-92b13fef544a)
 
 ## Вывод
 
