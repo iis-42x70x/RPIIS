@@ -27,10 +27,32 @@
 
 ## Структура программы: 
 
+## Работа программы:
+1. Разбираем строку на элементы. Возвращаем количество найденных элементов:
 
-## Тесты
+![image](https://github.com/user-attachments/assets/0249038f-dfa3-45b3-b814-cdc416798800)
+
+2. Проверка элементов на уникальность:
+
+![image](https://github.com/user-attachments/assets/7c090e7d-3963-4cb9-9432-432fa220307f)
+
+3. Считываем данные из файла input.txt:
+
+![image](https://github.com/user-attachments/assets/d9f464a1-d1bd-4f46-8480-9963589b3764)
+
+4. Генерируем все возможные перестановки элементов и записываем их в файл output.txt
+
+![image](https://github.com/user-attachments/assets/6e207505-9b65-41a7-8743-65caac89b399)
 
 
+**Работа программы при считывании исходного множества из файла:**
+Исходное неориентированное множество:
+
+![image](https://github.com/user-attachments/assets/f734d00f-651f-4044-8f64-1e3edd54ead9)
+
+Результат работы программы:
+
+![image](https://github.com/user-attachments/assets/e8b0ca63-e13c-49bc-b0fb-006fe2fe6c7e)
 
 ## Результат работы тестов
 ![image](https://github.com/user-attachments/assets/40ea66a8-c044-4db5-b466-92b13fef544a)
