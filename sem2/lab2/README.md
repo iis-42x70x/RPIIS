@@ -55,7 +55,28 @@
 ![image](https://github.com/user-attachments/assets/e8b0ca63-e13c-49bc-b0fb-006fe2fe6c7e)
 
 ## Результат работы тестов
+Тестирование программы осуществлялось с использованием модульных тестов , реализованных на основе библиотеки assert.
+
 ![image](https://github.com/user-attachments/assets/40ea66a8-c044-4db5-b466-92b13fef544a)
+
+
+**Примеры тестов**
+
+* Проверка работы функции isUnique() на примере уникального и неуникального набора элементов.
+
+![image](https://github.com/user-attachments/assets/e1dfc231-739f-4439-a95f-8695f09cca71)
+
+* testParseElementsWithAngleBrackets() проверяет, что парсер корректно обрабатывает элементы внутри угловых скобок.
+
+![image](https://github.com/user-attachments/assets/86e53a44-9dd4-4fa1-af76-e84cf4589e96)
+
+* testParseElementsWithCurlyBrackets() проверяет, что парсер корректно обрабатывает элементы внутри фигурных скобок.
+
+![image](https://github.com/user-attachments/assets/1d761e36-8d23-4d38-a233-bb4a11065d0a)
+
+* void testParseNestedBrackets() проверяет корректную работу парсера при наличии вложенных скобок .
+
+![image](https://github.com/user-attachments/assets/fa5dd79b-a6c8-492b-8d67-1fb809d95429)
 
 ## Вывод
 
