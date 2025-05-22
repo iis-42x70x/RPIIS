@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7/"
+     xml:base="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Feature:_the_largest_observed_flat -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Feature:_the_largest_observed_flat">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#The_Great_Zodiac_Constellation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Type_(double,_white_dwarf) -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Type_(double,_white_dwarf)">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#A_single_white_dwarf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#location_(between_Aquarius_and_Aries) -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#location_(between_Aquarius_and_Aries)">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#The_Great_Zodiac_Constellation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#angular_diameter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#angular_diameter">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#The_Great_Zodiac_Constellation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#distance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#distance">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Space_objects"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#shine -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#shine">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Spiral_Galaxy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Star"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#stellar_magnitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#stellar_magnitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Spiral_Galaxy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Star"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#A_single_white_dwarf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#A_single_white_dwarf">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#The_brightest_stars"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Space_objects -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Space_objects"/>
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Spiral_Galaxy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Spiral_Galaxy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Space_objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Star -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Star">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Space_objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#The_Great_Zodiac_Constellation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#The_Great_Zodiac_Constellation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Space_objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#The_brightest_stars -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#The_brightest_stars">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Star"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Alrisha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Alrisha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Star"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Andromeda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Andromeda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Star"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Aquarius -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Aquarius">
+        <rdf:type rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Star"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Aries -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Aries">
+        <rdf:type rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Star"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Fish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Fish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#The_Great_Zodiac_Constellation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Pegasus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Pegasus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Star"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#The_Vanmaanen_Star -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#The_Vanmaanen_Star">
+        <rdf:type rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#A_single_white_dwarf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#galaxy_M_74 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#galaxy_M_74">
+        <rdf:type rdf:resource="http://www.semanticweb.org/егор/ontologies/2025/3/untitled-ontology-7#Spiral_Galaxy"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
