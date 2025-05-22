@@ -12,13 +12,6 @@ ofstream fout;                  ///< Выходный поток
 int n = 0;                      ///< Количество элементов
 string* elements = nullptr;     ///< Массив элементов (динамический)
 
-/**
- * @brief Разбирает строку на элементы, игнорируя запятые внутри скобок
- * @param input - входная строка
- * @param elementsArray - массив для хранения элементов
- * @param maxElements - максимальное количество элементов
- * @return int - количество найденных элементов
- */
 int parseElements(const string& input, string* elementsArray, int maxElements) {
     string current;
     int bracketDepth = 0;
@@ -52,12 +45,6 @@ int parseElements(const string& input, string* elementsArray, int maxElements) {
     return count;
 }
 
-/**
- * @brief Проверяет, является ли массив уникальным (нет повторяющихся элементов)
- * @param arr - массив строк
- * @param size - размер массива
- * @return true, если все элементы уникальны
- */
 bool isUnique(string* arr, int size) {
     for (int i = 0; i < size; ++i)
         for (int j = i + 1; j < size; ++j)
@@ -66,10 +53,6 @@ bool isUnique(string* arr, int size) {
     return true;
 }
 
-/**
- * @brief Считывает данные из файла input.txt по указанному пути
- * @return true, если успешно
- */
 bool readInput() {
     const string filePath = "input.txt"; 
 
@@ -124,9 +107,6 @@ bool readInput() {
     return true;
 }
 
-/**
- * @brief Записывает все перестановки в файл output.txt
- */
 void writePermutations() {
     fout.open("output.txt");
     if (!fout.is_open()) {
