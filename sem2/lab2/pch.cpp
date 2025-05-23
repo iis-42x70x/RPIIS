@@ -17,7 +17,7 @@ string NotSpace(const char* input) {
 
 bool CheckStr(const string& str) {
     if (str.empty()) {
-        cout << "Œ¯Ë·Í‡: ÌÂ ‚‚Â‰ÂÌÓ ÌË Ó‰ÌÓ„Ó ˝ÎÂÏÂÌÚ‡" << endl;
+        cout << "–û—à–∏–±–∫–∞: –Ω–µ –≤–≤–µ–¥–µ–Ω–æ –Ω–∏ –æ–¥–Ω–æ–≥–æ —ç–ª–µ–º–µ–Ω—Ç–∞" << endl;
         return false;
     }
     int col1 = 0;
@@ -45,33 +45,33 @@ bool CheckStr(const string& str) {
                         s += str[i];
                     }
         if (i > 0 && (str[i] == '{' || str[i] == '<') && (str[i - 1] != '{' && str[i - 1] != '<' && str[i - 1] != ',')) {
-            cout << "Œ¯Ë·Í‡: ÔÂÂ‰ '{' Ë '<' ÌÂ ÏÓÊÂÚ ÒÚÓˇÚ¸ ÌË˜Â„Ó ÍÓÏÂ  '{', '<' Ë ','\n";
+            cout << "–û—à–∏–±–∫–∞: –ø–µ—Ä–µ–¥ '{' –∏ '<' –Ω–µ –º–æ–∂–µ—Ç —Å—Ç–æ—è—Ç—å –Ω–∏—á–µ–≥–æ –∫—Ä–æ–º–µ  '{', '<' –∏ ','\n";
             return false;
         }
         if (i < size - 2 && (str[i] == '}' || str[i] == '>') && (str[i + 1] != '}' && str[i + 1] != '>' && str[i + 1] != ',')) {
-            cout << "Œ¯Ë·Í‡: ÔÓÒÎÂ '}' Ë '>' ÌÂ ÏÓÊÂÚ ÒÚÓˇÚ¸ ÌË˜Â„Ó ÍÓÏÂ  '}', '>' Ë ','\n";
+            cout << "–û—à–∏–±–∫–∞: –ø–æ—Å–ª–µ '}' –∏ '>' –Ω–µ –º–æ–∂–µ—Ç —Å—Ç–æ—è—Ç—å –Ω–∏—á–µ–≥–æ –∫—Ä–æ–º–µ  '}', '>' –∏ ','\n";
             return false;
         }
         if (i > 0 && (str[i] == '}' || str[i] == '>') && str[i - 1] == ',') {
-            cout << "Œ¯Ë·Í‡: ÔÂÂ‰ '}' Ë '>' ÌÂ ÏÓÊÂÚ ÒÚÓˇÚ¸ ','\n";
+            cout << "–û—à–∏–±–∫–∞: –ø–µ—Ä–µ–¥ '}' –∏ '>' –Ω–µ –º–æ–∂–µ—Ç —Å—Ç–æ—è—Ç—å ','\n";
             return false;
         }
         if (i < size - 2 && (str[i] == '{' || str[i] == '<') && str[i + 1] == ',') {
-            cout << "Œ¯Ë·Í‡: ÔÓÒÎÂ '{' Ë '<' ÌÂ ÏÓÊÂÚ ÒÚÓˇÚ¸ ','\n";
+            cout << "–û—à–∏–±–∫–∞: –ø–æ—Å–ª–µ '{' –∏ '<' –Ω–µ –º–æ–∂–µ—Ç —Å—Ç–æ—è—Ç—å ','\n";
             return false;
         }
     }
     if (col1) {
-        cout << "Œ¯Ë·Í‡: ÍÓÎË˜ÂÒÚ‚Ó '{' ÓÚÎË˜‡ÂÚÒˇ ÓÚ '}'\n";
+        cout << "–û—à–∏–±–∫–∞: –∫–æ–ª–∏—á–µ—Å—Ç–≤–æ '{' –æ—Ç–ª–∏—á–∞–µ—Ç—Å—è –æ—Ç '}'\n";
         return false;
     }
     if (col2) {
-        cout << "Œ¯Ë·Í‡: ÍÓÎË˜ÂÒÚ‚Ó '<' ÓÚÎË˜‡ÂÚÒˇ ÓÚ '>'\n";
+        cout << "–û—à–∏–±–∫–∞: –∫–æ–ª–∏—á–µ—Å—Ç–≤–æ '<' –æ—Ç–ª–∏—á–∞–µ—Ç—Å—è –æ—Ç '>'\n";
         return false;
     }
     for (int i = 0; i < s.size() - 1; i++) {
         if ((s[i] == '{' && s[i + 1] == '>') || (s[i] == '<' && s[i + 1] == '}')) {
-            cout << "Œ¯Ë·Í‡: ‡ÁÌ˚Â ÓÚÍ˚‚‡˛˘ËÂ Ë Á‡Í˚‚‡˛˘ËÂ ÒÍÓ·ÍË\n";
+            cout << "–û—à–∏–±–∫–∞: —Ä–∞–∑–Ω—ã–µ –æ—Ç–∫—Ä—ã–≤–∞—é—â–∏–µ –∏ –∑–∞–∫—Ä—ã–≤–∞—é—â–∏–µ —Å–∫–æ–±–∫–∏\n";
             return false;
         }
     }
@@ -116,54 +116,31 @@ void GenerateCombinations(const vector<SetElement>& elems, int n, int start,
     }
 }
 
+vector<SetElement> ParseAngles(const string& input, int& i);
 
-vector<SetElement> ParseCustomFormat(const string& input) {
+vector<SetElement> ParseSet(const string& input, int& i) {
     vector<SetElement> result;
-    int i = 0;
     if (input[i] != '{') return result;
     ++i;
 
     while (i < input.size()) {
         if (input[i] == '<') {
             ++i;
-            vector<SetElement> nested;
-            string temp;
-            while (i < input.size() && input[i] != '>') {
-                if (input[i] == ',') {
-                    if (!temp.empty()) {
-                        SetElement el;
-                        el.type = STRING;
-                        el.strvalue = temp;
-                        nested.push_back(el);
-                        temp.clear();
-                    }
-                }
-                else {
-                    temp += input[i];
-                }
-                ++i;
-            }
-            if (!temp.empty()) {
-                SetElement el;
-                el.type = STRING;
-                el.strvalue = temp;
-                nested.push_back(el);
-            }
-            SetElement setEl;
-            setEl.type = SET;
-            setEl.vecvalue = nested;
-            result.push_back(setEl);
-            ++i; 
+            SetElement el;
+            el.type = SET;
+            el.vecvalue = ParseAngles(input, i);
+            result.push_back(el);
+        }
+        else if (input[i] == '}') {
+            ++i;
+            return result;
         }
         else if (input[i] == ',') {
             ++i;
         }
-        else if (input[i] == '}') {
-            break;
-        }
         else {
             string temp;
-            while (i < input.size() && input[i] != ',' && input[i] != '}') {
+            while (i < input.size() && input[i] != ',' && input[i] != '}' && input[i] != '>') {
                 temp += input[i++];
             }
             if (!temp.empty()) {
@@ -178,12 +155,52 @@ vector<SetElement> ParseCustomFormat(const string& input) {
     return result;
 }
 
+vector<SetElement> ParseAngles(const string& input, int& i) {
+    vector<SetElement> result;
+
+    while (i < input.size()) {
+        if (input[i] == '<') {
+            ++i;
+            SetElement el;
+            el.type = SET;
+            el.vecvalue = ParseAngles(input, i);
+            result.push_back(el);
+        }
+        else if (input[i] == '>') {
+            ++i;
+            return result;
+        }
+        else if (input[i] == ',') {
+            ++i;
+        }
+        else {
+            string temp;
+            while (i < input.size() && input[i] != ',' && input[i] != '>' && input[i] != '<') {
+                temp += input[i++];
+            }
+            if (!temp.empty()) {
+                SetElement el;
+                el.type = STRING;
+                el.strvalue = temp;
+                result.push_back(el);
+            }
+        }
+    }
+
+    return result;
+}
+
+vector<SetElement> ParseCustomFormat(const string& input) {
+    int i = 0;
+    return ParseSet(input, i);
+}
+
 vector<SetElement> ReadFromFile() {
     char buffer[1024];
     ifstream file("input.txt");
 
     if (!file.is_open()) {
-        cout << "Œ¯Ë·Í‡ ÓÚÍ˚ÚËˇ Ù‡ÈÎ‡\n";
+        cout << "–û—à–∏–±–∫–∞ –æ—Ç–∫—Ä—ã—Ç–∏—è —Ñ–∞–π–ª–∞\n";
         return vector<SetElement>();
     }
 
@@ -195,5 +212,8 @@ vector<SetElement> ReadFromFile() {
     if (!CheckStr(cleaned)) {
         return vector<SetElement>();
     }
+
+    cout << cleaned << endl;
+
     return ParseCustomFormat(cleaned);
 }
