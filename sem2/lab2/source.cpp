@@ -7,23 +7,23 @@
 
 using namespace std;
 
-// вывод множеств 
+// РІС‹РІРѕРґ РјРЅРѕР¶РµСЃС‚РІ 
 void viewSets(vector<string> sets) {
     for (int i = 0; i <= sets.size(); i++) {
         if (i < sets.size()) {
-            cout << "Множество " << i + 1 << " :" << endl;
+            cout << "РњРЅРѕР¶РµСЃС‚РІРѕ " << i + 1 << " :" << endl;
             cout << "{" << sets[i] << "}" << endl;
         }
         else {
-            cout << "Все множества записаны." << endl;
+            cout << "Р’СЃРµ РјРЅРѕР¶РµСЃС‚РІР° Р·Р°РїРёСЃР°РЅС‹." << endl;
             cout << "----------------------" << endl;
         }
     }
 }
 
-//читает содержимое файла и добавляет строки в вектор
+//С‡РёС‚Р°РµС‚ СЃРѕРґРµСЂР¶РёРјРѕРµ С„Р°Р№Р»Р° Рё РґРѕР±Р°РІР»СЏРµС‚ СЃС‚СЂРѕРєРё РІ РІРµРєС‚РѕСЂ
 void readFile(vector<string>& sets, ifstream& inputFile) {
-    string line; //для хранения каждой строки из файла
+    string line; //РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РєР°Р¶РґРѕР№ СЃС‚СЂРѕРєРё РёР· С„Р°Р№Р»Р°
     while (getline(inputFile, line)) {
         sets.push_back(line);
     }
@@ -32,28 +32,28 @@ void readFile(vector<string>& sets, ifstream& inputFile) {
 
 string normalizeSet(const string& setStr) {
     string normalized = setStr;
-    // Удаляем все пробелы
+    // РЈРґР°Р»СЏРµРј РІСЃРµ РїСЂРѕР±РµР»С‹
     normalized.erase(remove(normalized.begin(), normalized.end(), ' '), normalized.end());
 
-    // Если строка не является множеством, возвращаем как есть
+    // Р•СЃР»Рё СЃС‚СЂРѕРєР° РЅРµ СЏРІР»СЏРµС‚СЃСЏ РјРЅРѕР¶РµСЃС‚РІРѕРј, РІРѕР·РІСЂР°С‰Р°РµРј РєР°Рє РµСЃС‚СЊ
     if (normalized.empty()) {
         return normalized;
     }
 
-    string inner; //строка без пробелов и без внешних скобок
-    // Удаляем внешние скобки
+    string inner; //СЃС‚СЂРѕРєР° Р±РµР· РїСЂРѕР±РµР»РѕРІ Рё Р±РµР· РІРЅРµС€РЅРёС… СЃРєРѕР±РѕРє
+    // РЈРґР°Р»СЏРµРј РІРЅРµС€РЅРёРµ СЃРєРѕР±РєРё
     if (normalized.front() == '{' && normalized.back() == '}') {
         inner = normalized.substr(1, normalized.length() - 2);
     }
     else {
-        inner = normalized; // если скобок нет, используем как есть
+        inner = normalized; // РµСЃР»Рё СЃРєРѕР±РѕРє РЅРµС‚, РёСЃРїРѕР»СЊР·СѓРµРј РєР°Рє РµСЃС‚СЊ
     }
 
     vector<string> elements;
     string currentElement;
     int braceDepth = 0;
 
-    // разбиваем строку на элементы
+    // СЂР°Р·Р±РёРІР°РµРј СЃС‚СЂРѕРєСѓ РЅР° СЌР»РµРјРµРЅС‚С‹
     for (int i = 0; i < inner.length(); i++) {
         char c = inner[i];
 
@@ -83,12 +83,12 @@ string normalizeSet(const string& setStr) {
         elements.push_back(currentElement);
     }
 
-    // Сортируем элементы, исключая те, что содержат "<" или ">"
+    // РЎРѕСЂС‚РёСЂСѓРµРј СЌР»РµРјРµРЅС‚С‹, РёСЃРєР»СЋС‡Р°СЏ С‚Рµ, С‡С‚Рѕ СЃРѕРґРµСЂР¶Р°С‚ "<" РёР»Рё ">"
     vector<string> elementsToSort;
     vector<string> nonSortedElements;
 
     for (const string& element : elements) {
-        if (element.find('<') != string::npos || element.find('>') != string::npos) { //если элемент есть
+        if (element.find('<') != string::npos || element.find('>') != string::npos) { //РµСЃР»Рё СЌР»РµРјРµРЅС‚ РµСЃС‚СЊ
             nonSortedElements.push_back(element);
         }
         else {
@@ -96,17 +96,17 @@ string normalizeSet(const string& setStr) {
         }
     }
 
-    // Сортируем только элементы, не содержащие '<' и '>'
+    // РЎРѕСЂС‚РёСЂСѓРµРј С‚РѕР»СЊРєРѕ СЌР»РµРјРµРЅС‚С‹, РЅРµ СЃРѕРґРµСЂР¶Р°С‰РёРµ '<' Рё '>'
     sort(elementsToSort.begin(), elementsToSort.end());
 
-    // Объединяем отсортированные элементы (в конец добавляем неотсортированные)
+    // РћР±СЉРµРґРёРЅСЏРµРј РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Рµ СЌР»РµРјРµРЅС‚С‹ (РІ РєРѕРЅРµС† РґРѕР±Р°РІР»СЏРµРј РЅРµРѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Рµ)
     elementsToSort.insert(elementsToSort.end(), nonSortedElements.begin(), nonSortedElements.end());
 
-    // Собираем нормализованную строку
+    // РЎРѕР±РёСЂР°РµРј РЅРѕСЂРјР°Р»РёР·РѕРІР°РЅРЅСѓСЋ СЃС‚СЂРѕРєСѓ
     string sortedInner;
     for (int i = 0; i < elementsToSort.size(); i++) {
         sortedInner += elementsToSort[i];
-        if (i < elementsToSort.size() - 1) { //если это не последний элемент
+        if (i < elementsToSort.size() - 1) { //РµСЃР»Рё СЌС‚Рѕ РЅРµ РїРѕСЃР»РµРґРЅРёР№ СЌР»РµРјРµРЅС‚
             sortedInner += ",";
         }
     }
@@ -138,7 +138,7 @@ vector<string> splitElements(const string& setStr) {
 
 void differenceSets(vector<string>& sets, string& initialResult) {
     if (sets.size() < 2) {
-        cout << "Недостаточно множеств для вычисления разности." << endl;
+        cout << "РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РјРЅРѕР¶РµСЃС‚РІ РґР»СЏ РІС‹С‡РёСЃР»РµРЅРёСЏ СЂР°Р·РЅРѕСЃС‚Рё." << endl;
         return;
     }
 
@@ -178,6 +178,6 @@ void differenceSets(vector<string>& sets, string& initialResult) {
     }
 
     initialResult = "{" + finalResult + "}";
-    cout << "Результат разности:" << endl;
+    cout << "Р РµР·СѓР»СЊС‚Р°С‚ СЂР°Р·РЅРѕСЃС‚Рё:" << endl;
     cout << "{" << finalResult << "}" << endl;
 }
