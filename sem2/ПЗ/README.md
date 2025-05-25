@@ -9,6 +9,11 @@ CH3OH, простейший одноатомный спирт, бесцветн�
 растворителей.
 ### Формализация текста в KBE:
 ![](https://github.com/iis-42x70x/RPIIS/blob/%D0%90%D0%BD%D0%BA%D1%83%D0%B4%D0%B0_%D0%91/sem2/%D0%9F%D0%97/TexT.png)
+### Protege:
+![](https://github.com/iis-42x70x/RPIIS/blob/%D0%90%D0%BD%D0%BA%D1%83%D0%B4%D0%B0_%D0%91/sem2/%D0%9F%D0%97/Class.png)
+![](https://github.com/iis-42x70x/RPIIS/blob/%D0%90%D0%BD%D0%BA%D1%83%D0%B4%D0%B0_%D0%91/sem2/%D0%9F%D0%97/ObjPr.png)
+![](https://github.com/iis-42x70x/RPIIS/blob/%D0%90%D0%BD%D0%BA%D1%83%D0%B4%D0%B0_%D0%91/sem2/%D0%9F%D0%97/DataPr.png)
+![](https://github.com/iis-42x70x/RPIIS/blob/%D0%90%D0%BD%D0%BA%D1%83%D0%B4%D0%B0_%D0%91/sem2/%D0%9F%D0%97/Ind.png)
 # Формализация математического выражения
 ## Вариант 11
 Выражение: ![](https://github.com/iis-42x70x/RPIIS/blob/%D0%90%D0%BD%D0%BA%D1%83%D0%B4%D0%B0_%D0%91/sem2/%D0%9F%D0%97/Vyrr.png) 
