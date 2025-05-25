@@ -65,6 +65,6 @@
 В процессе работы я изучил основы формализации текста с помощью редакторов *KBE* и *Protégé*. Эти инструменты помогли мне лучше понять, как создавать и структурировать информацию для интеллектуальных систем. 
 
 ## Используемые источники
+* <a href="https://www.youtube.com/watch?v=kNulTEIEQyg"> Введение в SC-код </a>
+* <a href="https://drive.google.com/drive/folders/1zQF0KtRTaKJJu4rvXSxls0AlobdYUDx5"> Вспомагательные материалы для формализации </a>
 
-* <a href="https://protegeproject.github.io/protege/"> Установка и синтаксис</a>
-* <a href="https://drive.google.com/drive/folders/1zQF0KtRTaKJJu4rvXSxls0AlobdYUDx5"> Небольшой гайд по **Protégé**  и **KBE**, материалы с заданием
