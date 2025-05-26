@@ -164,16 +164,16 @@ for (i = ap; i < a.size() && a[i] != '>'; i++)
 vector<int> p;
 int b1 = 0, a1 = 0, a2 = 0;
 
-// Подсчет уровней вложенности в b
+// Подсчет уровней вложенности в b и а
 for (int i = bp; i < b.size() && b[i] != '\0'; i++) {
     if (b[i] == '{') {
         if (p.size() <= b1) p.push_back(i);
         else p[b1] = i;
         b1++;
     }
-    if (i < a.size() && a[i] == '{') {
-        a1++;
-    }
+}
+for (int i = аp; i < а.size() && а[i] != '\0'; i++) {
+    if (a[i] == '{') a1++;
 }
 ```
 
@@ -321,7 +321,9 @@ for (const auto& str1 : s1) {
 
 ## Тесты 
 
-### 1.
+### Примеры входных и выходных конструкций
+
+#### 1.
 
 Вход:
 ```
@@ -331,8 +333,9 @@ B={{i},u,k,<o,u>}
 
 Выход:
 
+<img src="pics\pic1.png" width="250" alt="1">
 
-### 2.
+#### 2.
 
 Вход:
 ```
@@ -342,18 +345,21 @@ B={{i,{j,i},<o>},a,i}
 
 Выход:
 
-### 3.
+<img src="pics\pic2.png" width="250" alt="1">
+
+#### 3.
 
 Вход (пример с некорректным вводом):
 ```
 A={a,v,<<i>}
 B={o,a,i}
 ```
-<img src="pics\p4.png" width="400" alt="1">
 
 Выход:
 
-### 4.
+<img src="pics\pic3.png" width="400" alt="1">
+
+#### 4.
 
 Вход:
 ```
@@ -363,7 +369,9 @@ B={<<l,n>>, s, a}
 
 Выход:
 
-### 5.
+<img src="pics\pic4.png" width="250" alt="1">
+
+#### 5.
 
 Вход (пример, когда одна из разностей - пустое множество):
 ```
@@ -373,17 +381,103 @@ B={x,{u},{b,c,{<r>,s}},t}
 
 Выход:
 
+<img src="pics\pic5.png" width="250" alt="1">
+
+### Google test
+
+Также в ходе разработки программы был использован фреймворк Google Test (gtest) для модульного тестирования. Тесты охватывают основные функции программы: парсинг данных (file_read), сравнение строк (equal_str, eq_set) и операции с множествами (difference).
+
+#### Примеры тестов для file_read():
+```
+TEST_F(FileReadTest, ReadsValidSingleLine) {
+    CreateTestFile(test_filename, "{a, b, c}\n");
+
+    vector<string> s1, s2;
+    bool success = file_read(s1, s2);
+
+    ASSERT_TRUE(success);
+    ASSERT_EQ(s1.size(), 3);
+    EXPECT_EQ(s1[0], "a");
+    EXPECT_EQ(s1[1], "b");
+    EXPECT_EQ(s1[2], "c");
+    EXPECT_EQ(s2.size(), 0);
+}
+
+TEST_F(FileReadTest, HandlesInvalidFormat) {
+    CreateTestFile(test_filename, "{a, b, c\n");
+
+    vector<string> s1, s2;
+    bool success = file_read(s1, s2);
+
+    EXPECT_FALSE(success);
+    EXPECT_TRUE(s1.empty());
+    EXPECT_TRUE(s2.empty());
+}
+```
+
+#### Примеры тестов для equal_str():
+```
+TEST_F(ComparisonTest, equal_strWithGenerics) {
+    EXPECT_NE(equal_str("a<b>c", "a<b>c", 0, 0), -1);
+    EXPECT_NE(equal_str("a<b<c>>d", "a<b<c>>d", 0, 0), -1);
+    EXPECT_EQ(equal_str("a<b>c", "a<d>c", 0, 0), -1);
+    EXPECT_EQ(equal_str("a<b<c>>d", "a<b<d>>d", 0, 0), -1);
+}
+
+TEST_F(ComparisonTest, equal_strNestedSets) {
+    EXPECT_NE(equal_str("{a,<b>{c,<d>{e}}}", "{a,<b>{c,<d>{e}}}", 0, 0), -1);
+    EXPECT_NE(equal_str("{x,<y>}", "{x,<y>}", 0, 0), -1);
+    EXPECT_EQ(equal_str("{a,<b>{c}}", "{a,<b>{d}}", 0, 0), -1);
+    EXPECT_EQ(equal_str("{a}", "<a>", 0, 0), -1);
+}
+```
+
+#### Примеры тестов для eq_set():
+```
+TEST_F(ComparisonTest, EqSetSimpleSets) {
+    EXPECT_NE(eq_set("{a,b,c}", "{a,b,c}", 1, 1), -1);
+    EXPECT_NE(eq_set("{a,b,c}", "{c,b,a}", 1, 1), -1);
+    EXPECT_EQ(eq_set("{a,b,c}", "{a,b,d}", 1, 1), -1);
+    EXPECT_EQ(eq_set("{a,b,c}", "{a,b}", 1, 1), -1);
+}
+
+TEST_F(ComparisonTest, EqSetWithGenerics) {
+    EXPECT_NE(eq_set("{a,<b>,c}", "{a,<b>,c}", 1, 1), -1);
+    EXPECT_NE(eq_set("{a,<b<c>>,d}", "{a,<b<c>>,d}", 1, 1), -1);
+    EXPECT_EQ(eq_set("{a,<b>,c}", "{a,<d>,c}", 1, 1), -1);
+    EXPECT_EQ(eq_set("{a,<b<c>>,d}", "{a,<b<d>>,d}", 1, 1), -1);
+}
+```
+
+#### Примеры тестов для difference():
+```
+TEST_F(ComparisonTest, DifferenceEmptySets) {
+    s1 = {};
+    s2 = {};
+    testing::internal::CaptureStdout();
+    difference(s1, s2);
+    string output = testing::internal::GetCapturedStdout();
+    EXPECT_NE(output.find("пустое множество"), string::npos);
+}
+
+TEST_F(ComparisonTest, DifferenceSomeCommonElements) {
+    s1 = {"a", "b", "c", "d"};
+    s2 = {"b", "d", "e", "f"};
+    testing::internal::CaptureStdout();
+    difference(s1, s2);
+    string output = testing::internal::GetCapturedStdout();
+    EXPECT_NE(output.find("Разность: { a, c, }"), string::npos);
+}
+```
+
+При написании программы было создано 16 тестов, все пройдены успешно.
+
 ## Вывод
 
 В ходе выполнения лабораторной работы я:
-- Познакомилась с принципами работы красно-черных деревьев как самобалансирующихся бинарных деревьев поиска, их отличиями от обычных BST.
-- Изучила ключевые свойства красно-черных деревьев
-- Разработала библиотеку для работы с красно-черными деревьями на C++
+- Повторила основы теории множеств
+- Разработала библиотеку для вычисления разности множеств и систему тестов для проверки корректности ее работы на языке C++
 
 ## Используемые источники
-1. Красно-черное дерево https://stepik.org/lesson/853541/step/2
-2. Алгоритмы: построение и анализ, 2-е издание. : Пер. с англ. – М. : Издательский дом «Вильямс», 2005. – 1296 с.
-3. Деревья https://www.thedshandbook.com/trees/#:~:text=Basic%20Terminology&text=Every%20tree%20must%20have%20one,called%20as%20the%20Parent%20node.
-4. Бинарные деревья https://ru.hexlet.io/courses/algorithms-trees/lessons/binary/theory_unit
-5. Дерево (структура данных)
-   https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_(%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85)
+1. Google test: https://www.jetbrains.com/help/clion/unit-testing-tutorial.html
+https://github.com/MarinaKalashina/DateConverter_withTests
