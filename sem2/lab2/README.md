@@ -102,7 +102,7 @@ test_lab2.cpp
 
 ![image](https://github.com/user-attachments/assets/bc00a85b-32b2-4727-9a1c-db9d8574e6b5)
 
-![image](https://github.com/user-attachments/assets/55ba79fa-5b82-40d3-9f46-e0c053c0ef00)
+![image](https://github.com/user-attachments/assets/c3affb71-add7-4754-b018-54c930a90d0f)
 
 7 пример: 
 
