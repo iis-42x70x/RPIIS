@@ -182,7 +182,7 @@ void ProcessSetFromString(const string& input, vector<vector<string>>& result) {
 - Булеан пустого множества содержит только одно подмножество — пустое (размер result = 1).
 #####  Цель:
 Убедиться, что крайний случай с пустым множеством обрабатывается корректно.
-1[](https://github.com/iis-42x70x/RPIIS/blob/%D0%92%D0%B5%D0%B3%D0%B5%D1%80%D0%B0_%D0%9C/sem2/lab2/%7B6641D2A6-B4C1-487B-ABF5-3683D72AB062%7D.png)
+1[{6641D2A6-B4C1-487B-ABF5-3683D72AB062}.png](https://github.com/iis-42x70x/RPIIS/blob/%D0%92%D0%B5%D0%B3%D0%B5%D1%80%D0%B0_%D0%9C/sem2/lab2/%7B6641D2A6-B4C1-487B-ABF5-3683D72AB062%7D.png)
 ## Источники: 
 - [Google Tests](https://www.youtube.com/watch?v=bfCYGmWoIgQ&ab_channel=Learn2Code)
 - [Булеан](https://www.youtube.com/watch?v=JJOydDeP5Ms&ab_channel=%D0%94%D0%B0%D0%BD%D0%B8%D0%BB%D0%9B%D0%B5%D0%B1%D0%B5%D0%B4%D0%B5%D0%B2)
