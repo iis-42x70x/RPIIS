@@ -108,7 +108,7 @@ test_lab2.cpp
 
 ![image](https://github.com/user-attachments/assets/fca50857-98ee-4fa4-97d4-d81888b9c243)
 
-![image](https://github.com/user-attachments/assets/4d33909e-3682-4bfb-a976-1aac4e486195)
+![image](https://github.com/user-attachments/assets/b8cc6dbe-8481-4b79-9609-6263902939ec)
 
 ## Результат работы тестов
 Тестирование программы осуществлялось с использованием модульных тестов , реализованных на основе библиотеки assert.
