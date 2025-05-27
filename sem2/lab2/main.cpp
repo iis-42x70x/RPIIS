@@ -22,10 +22,10 @@ int main(){
     for(int i = 2; i<numSets; i++)
 	Cross = cross(Cross, sets[i]);
 
-    //cout << "{";
+    cout << "{";
     for(int i = 0; i<Cross.size(); i++)
 	    cout << Cross[i] << ", ";
-   // cout << "}\n";
+    cout << "}\n";
     
     delete [] sets;
     return 0;
