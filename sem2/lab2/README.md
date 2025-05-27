@@ -51,9 +51,11 @@
 ## Работа программы
 
 Ввод множеств в файл input.txt, с которым работает программа:
+
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/1in.png)
 
 Вывод программы:
+
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/1out.png)
 
 ## <p align="center">Выводы:</p>
