@@ -1,0 +1,284 @@
+\begin{SCn}
+\begin{small}
+
+\scnheader{Microsoft Azure AI}
+\scnidtf{Платформа облачных ИИ-сервисов, предоставляемая Microsoft}
+\scniselement{инструмент для разработки интеллектуальных систем}
+\scniselement{облачная вычислительная платформа}
+\scnrelfrom{разработчик}{Microsoft}
+\scnrelfrom{год запуска}{2017}
+\scnrelfrom{модель лицензирования}{оплата по использованию (pay-as-you-go)}
+\scntext{назначение}{Обеспечение широкого набора инструментов и API для построения, обучения, развёртывания и мониторинга моделей искусственного интеллекта в облаке.}
+
+\begin{scnrelfromset}{функциональные возможности}
+    \scnfileitem{Azure Machine Learning}
+    \begin{scnindent}
+        \scnidtf{Среда для обучения, мониторинга ML/AI моделей}
+        \scntext{уточнение}{Используется для MLOps, автоматизации и масштабируемого развёртывания моделей.}
+        \begin{scnrelfromset}{ключевые компоненты}
+            \scnfileitem{AutoML}
+            \begin{scnindent}
+                \scnidtf{Автоматический выбор моделей и гиперпараметров}
+            \end{scnindent}
+            \scnfileitem{Model Registry}
+            \begin{scnindent}
+                \scnidtf{Хранилище и контроль версий моделей}
+            \end{scnindent}
+            \scnfileitem{Pipeline Designer}
+            \begin{scnindent}
+                \scnidtf{Инструмент для визуального проектирования процессов обучения и инференса}
+            \end{scnindent}
+        \end{scnrelfromset}
+    \end{scnindent}
+
+    \scnfileitem{Cognitive Services}
+    \begin{scnindent}
+        \scnidtf{Набор API для обработки изображений, речи, текста и принятия решений}
+        \scntext{пояснение}{Позволяет использовать ИИ без необходимости обучения моделей.}
+        \begin{scnrelfromset}{подсервисы}
+            \scnfileitem{Computer Vision}
+            \scnfileitem{Text Analytics}
+            \scnfileitem{Speech-to-Text / Text-to-Speech}
+            \scnfileitem{Language Translation}
+        \end{scnrelfromset}
+    \end{scnindent}
+
+    \scnfileitem{Azure OpenAI Service}
+    \begin{scnindent}
+        \scnidtf{Доступ к крупным языковым моделям OpenAI (GPT-4, Codex, DALL·E)}
+        \scntext{пояснение}{Позволяет использовать генеративные ИИ-модели через интернет-запросы, с защитой и отслеживанием действий, как в других сервисах Azure.}
+    \end{scnindent}
+
+    \scnfileitem{Azure AI Studio}
+    \begin{scnindent}
+        \scnidtf{Интегрированная среда управления проектами ИИ}
+        \scntext{примечание}{Объединяет интерфейсы для загрузки данных, подготовки, аннотации, обучения и публикации моделей.}
+    \end{scnindent}
+
+    \scnfileitem{Azure AI Search}
+    \begin{scnindent}
+        \scnidtf{Интеллектуальный поиск с семантическим индексированием}
+        \scntext{особенность}{Позволяет автоматически находить в тексте ключевые фразы, имена людей, организаций, мест и проводить общий языковой анализ.}
+    \end{scnindent}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{поддерживаемые технологии}
+    \scnfileitem{Native Graph Storage}
+    \scnfileitem{CSV Import}
+    \scnfileitem{JSON / XML}
+    \scnfileitem{Neo4j Desktop}
+    \scnfileitem{Neo4j Aura (облако)}
+    \scnfileitem{Docker-контейнеры}
+    \scnfileitem{Kubernetes-деплой}
+    \scnfileitem{Neo4j Bloom}
+    \begin{scnindent}
+        \scnidtf{Визуальный интерфейс для исследования графа}
+    \end{scnindent}
+    \scnfileitem{Graph Data Science Library}
+    \begin{scnindent}
+        \scnidtf{Инструменты для построения признаков, рекомендаций и анализа сетей}
+    \end{scnindent}
+\end{scnrelfromset}
+
+
+\begin{scnrelfromset}{преимущества}
+    \scnfileitem{масштабируемость и отказоустойчивость}
+    \scnfileitem{гибкая настройка процессов обучения моделей и их применения в рабочих системах}
+    \scnfileitem{интеграция с другими сервисами Azure}
+    \scnfileitem{поддержка всей цепочки ML-процесса (данные → обучение → деплой)}
+    \scnfileitem{доступ к современным языковым и визуальным моделям (GPT, CLIP и др.)}
+    \scnfileitem{встроенная поддержка CI/CD и DevOps-процессов}
+    \scnfileitem{сертификации по стандартам безопасности (ISO, GDPR и др.)}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{недостатки}
+    \scnfileitem{зависимость от облачной инфраструктуры}
+    \scnfileitem{необходимость оплаты для полноценного использования}
+    \scnfileitem{необходимость освоения облачных и DevOps-подходов}
+    \scnfileitem{ограниченная доступность некоторых сервисов в отдельных регионах}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{библиографические источники}
+    \scnfileitem{Microsoft Azure AI documentation [Электронный ресурс] // Microsoft Learn. URL: \href{https://learn.microsoft.com/en-us/azure/ai-services/}{\textnormal{https://learn.microsoft.com/en-us/azure/ai-services/}} (дата обращения: 19.05.2025).}
+
+    \scnfileitem{Azure Machine Learning overview [Электронный ресурс] // Microsoft Learn. URL: \href{https://learn.microsoft.com/en-us/azure/machine-learning/}{\textnormal{https://learn.microsoft.com/en-us/azure/machine-learning/}} (дата обращения: 20.05.2025).}
+
+    \scnfileitem{Azure OpenAI Service [Электронный ресурс] // Microsoft Learn. URL: \href{https://learn.microsoft.com/en-us/azure/cognitive-services/openai/}{\textnormal{https://learn.microsoft.com/en-us/azure/cognitive-services/openai/}} (дата обращения: 20.05.2025).}
+\end{scnrelfromset}
+
+
+\scnheader{Neo4j}
+\scnidtf{Графовая база данных с открытым исходным кодом}
+\scnidtf{СУБД, ориентированная на хранение и анализ графовых структур, включая графы знаний}
+\scniselement{инструмент для разработки интеллектуальных систем}
+\scniselement{графовая СУБД}
+
+\scnrelfrom{разработчик}{Neo4j, Inc.}
+\scnrelfrom{год запуска}{2007}
+\scnrelfrom{модель лицензирования}{Community (бесплатная) и Enterprise (коммерческая)}
+
+\scntext{назначение}{Оптимизированное хранение, визуализация и выполнение запросов к графам знаний и семантическим сетям. Широко используется для построения систем с логическими связями между объектами: от рекомендательных и экспертных систем до инструментов анализа социальных графов.}
+
+\begin{scnrelfromset}{функциональные возможности}
+    \scnfileitem{Cypher Query Language}
+    \begin{scnindent}
+        \scnidtf{Декларативный язык для запросов к графам}
+            \scntext{особенность}{Позволяет описывать паттерны в связях между сущностями естественным образом.}
+    \end{scnindent}
+
+   \scnfileitem{Graph Algorithms}
+\begin{scnindent}
+    \scnidtf{Набор встроенных алгоритмов графового анализа}
+    \scntext{применение}{Используются для извлечения знаний из структуры графа.}
+    \begin{scnrelfromset}{алгоритмы}
+        \scnfileitem{PageRank}
+        \begin{scnindent}
+            \scnidtf{Метод оценки значимости узлов по числу и весу входящих связей}
+        \end{scnindent}
+        \scnfileitem{Louvain}
+        \begin{scnindent}
+            \scnidtf{Алгоритм для поиска сообществ в графах (кластеризация)}
+        \end{scnindent}
+        \scnfileitem{Поиск кратчайшего пути (Dijkstra)}
+        \begin{scnindent}
+            \scnidtf{Поиск оптимального пути между узлами по взвешенным рёбрам}
+        \end{scnindent}
+        \scnfileitem{Связность компонент}
+        \begin{scnindent}
+            \scnidtf{Обнаружение независимых (изолированных) подграфов}
+        \end{scnindent}
+    \end{scnrelfromset}
+\end{scnindent}
+
+
+    \scnfileitem{Graph Visualization}
+    \begin{scnindent}
+        \scnidtf{Интерактивное отображение узлов и связей}
+        \scntext{инструменты}{Neo4j Bloom, встроенный браузер}
+        \scntext{особенность}{Позволяет исследовать структуру графа в реальном времени.}
+    \end{scnindent}
+
+    \scnfileitem{Graph Data Science (GDS)}
+    \begin{scnindent}
+        \scnidtf{Библиотека для анализа графов и ML-задач}
+        \scntext{возможности}{Поддержка обучения моделей на графах, извлечение признаков, прогноз связей.}
+    \end{scnindent}
+
+    \scnfileitem{Гибкая интеграция}
+    \begin{scnindent}
+        \scnidtf{Подключение к внешним приложениям и языкам программирования}
+        \begin{scnrelfromset}{языки и технологии}
+            \scnitem{Python}
+            \scnitem{Java}
+            \scnitem{GraphQL}
+            \scnitem{REST API}
+        \end{scnrelfromset}
+    \end{scnindent}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{поддерживаемые технологии}
+    \scnfileitem{Neo4j Bloom}
+    \begin{scnindent}
+        \scnidtf{Визуальный интерфейс для исследования графа}
+    \end{scnindent}
+
+    \scnfileitem{Graph Data Science Library}
+    \begin{scnindent}
+        \scnidtf{Инструменты для построения признаков, рекомендаций и анализа}
+    \end{scnindent}
+
+    \scnfileitem{Native Graph Storage}
+    \begin{scnindent}
+        \scnidtf{Формат хранения, специально разработанный для эффективной работы с графовыми данными и запросами}
+    \end{scnindent}
+
+    \scnfileitem{CSV Import}
+    \begin{scnindent}
+        \scnidtf{Загрузка табличных данных в графовую базу через CSV-файлы}
+    \end{scnindent}
+
+    \scnfileitem{JSON / XML}
+    \begin{scnindent}
+        \scnidtf{Форматы для хранения и передачи структурированных данных}
+    \end{scnindent}
+
+    \scnfileitem{Neo4j Desktop}
+    \begin{scnindent}
+        \scnidtf{Локальное приложение для работы с экземплярами Neo4j и проектами}
+    \end{scnindent}
+
+    \scnfileitem{Neo4j Aura}
+    \begin{scnindent}
+        \scnidtf{Облачный хостинг Neo4j с автоматическим масштабированием и резервным копированием}
+    \end{scnindent}
+
+    \scnfileitem{Docker}
+    \begin{scnindent}
+        \scnidtf{Официальные образы Neo4j для развёртывания в контейнерах}
+    \end{scnindent}
+
+    \scnfileitem{Kubernetes}
+    \begin{scnindent}
+        \scnidtf{Масштабируемое развертывание Neo4j в среде Kubernetes}
+    \end{scnindent}
+\end{scnrelfromset}
+
+
+
+\begin{scnrelfromset}{преимущества}
+    \scnfileitem{высокая скорость обработки запросов к сложным графам}
+    \scnfileitem{поддержка масштабирования и кластеризации (в Enterprise)}
+    \scnfileitem{гибкий язык запросов Cypher}
+    \scnfileitem{интерактивная визуализация}
+    \scnfileitem{широкая поддержка языков и API}
+    \scnfileitem{активное сообщество и документация}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{недостатки}
+    \scnfileitem{ограниченная производительность при больших объёмах транзакций}
+    \scnfileitem{не подходит для хранения и анализа табличных (реляционных) данных}
+    \scnfileitem{расширенные возможности доступны только в коммерческой версии}
+    \scnfileitem{обладает высоким порогом входа для новичков}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{библиографические источники}
+    \scnfileitem{Neo4j Documentation [Электронный ресурс] // Официальный сайт. URL: \href{https://neo4j.com/docs/}{\textnormal{https://neo4j.com/docs/}} (дата обращения: 22.05.2025).}
+    
+    \scnfileitem{Cypher Query Language [Электронный ресурс] // Neo4j Developer Portal. URL: \href{https://neo4j.com/developer/cypher/}{\textnormal{https://neo4j.com/developer/cypher/}} (дата обращения: 21.05.2025).}
+    
+    \scnfileitem{Neo4j Graph Data Science [Электронный ресурс] // Neo4j. URL: \href{https://neo4j.com/product/graph-data-science/}{\textnormal{https://neo4j.com/product/graph-data-science/}} (дата обращения: 21.05.2025).}
+\end{scnrelfromset}
+
+\scnheader{Сравнение инструментов разработки интеллектуальных систем: Microsoft Azure AI и Neo4j}
+\begin{scneqtovector}
+    \scnitem{Microsoft Azure AI}
+    \scnitem{Neo4j}
+\end{scneqtovector}
+
+\begin{scnrelfromset}{сходства}
+    \scnfileitem{Оба инструмента предназначены для разработки интеллектуальных систем и реализуют поддержку ИИ-задач}
+    \scnfileitem{Поддерживают машинное обучение и анализ данных}
+    \scnfileitem{Обладают масштабируемыми архитектурами и поддержкой облачной/локальной интеграции}
+    \scnfileitem{Предоставляют API и средства визуализации для работы с данными}
+    \scnfileitem{Имеют активное сообщество, официальную документацию и профессиональную поддержку}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{различия}
+    \scnfileitem{Microsoft Azure AI — облачная платформа с множеством сервисов ИИ, Neo4j — специализированная графовая база данных}
+    \scnfileitem{Azure AI ориентирован на работу с ML-моделями и API, тогда как Neo4j — на графовые структуры и язык запросов Cypher}
+    \scnfileitem{Azure включает AutoML, OpenAI, Cognitive Services, в то время как Neo4j фокусируется на алгоритмах графового анализа}
+    \scnfileitem{Azure использует REST API, Python SDK и другие инструменты, тогда как Neo4j применяет декларативный язык запросов Cypher.}
+    \scnfileitem{Azure требует навыков работы с облачными средами и подписки, Neo4j можно использовать бесплатно в редакции Community Edition.}
+    \scnfileitem{Neo4j предпочтительнее для задач, связанных с графовой природой данных, тогда как Azure — для создания масштабируемых и комплексных ИИ-решений}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{рекомендации по выбору}
+    \scnfileitem{Microsoft Azure AI рекомендуется для создания масштабируемых AI/ML решений в облаке с использованием AutoML, OpenAI и Cognitive Services}
+    \scnfileitem{Azure AI — идеальный выбор для организаций, ориентированных на быстрое развертывание ИИ и интеграцию с другими Azure-сервисами}
+    \scnfileitem{Neo4j идеально подходит для проектов, связанных с анализом сложных графов: социальных сетей, графов знаний}
+    \scnfileitem{Neo4j эффективен в задачах, где приоритетом является моделирование логических и семантических связей между сущностями}
+\end{scnrelfromset}
+
+\end{small}
+\end{SCn}
+
