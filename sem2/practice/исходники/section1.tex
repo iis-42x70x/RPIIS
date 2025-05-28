@@ -1,0 +1,386 @@
+\begin{SCn}
+\begin{small}
+
+\scnheader{LINQ}
+\scnidtf{Language Integrated Query}
+\scnidtf{Запрос, интегрированный в язык программирования}
+\scniselement{язык запросов}
+\scniselement{технология декларативного запроса к данным в .NET}
+
+\begin{scnrelfromlist}{разработчик}
+    \scnitem{Microsoft (ведущий архитектор — Эрик Мейер)}
+\end{scnrelfromlist}
+
+\scnrelfrom{год создания}{2007}
+\scnrelfrom{основная парадигма}{декларативное программирование}
+\scnrelfrom{характер взаимодействия с данными}{строго типизированный декларативный синтаксис}
+
+
+\scntext{описание}{LINQ (Language-Integrated Query) — компонент платформы .NET, позволяющий формулировать типобезопасные запросы к различным источникам данных (коллекции, XML, БД) с использованием единого синтаксиса прямо в коде языка программирования (например, C\#).}
+
+\scntext{назначение}{LINQ предназначен для упрощения, унификации и безопасного доступа к данным в приложениях .NET. Запросы на LINQ интегрированы в язык и компилируются вместе с основным кодом, обеспечивая единый подход к работе с разнородными источниками данных.}
+
+\begin{scnrelfromset}{основные конструкции}
+    \scnfileitem{from}
+    \begin{scnindent}
+        \scnidtf{Определяет источник данных для запроса}
+        \scntext{пример}{\texttt{from x in collection select x}}
+        \scntext{объяснение}{Проходим по каждому элементу \texttt{x} в коллекции и возвращаем его. Это аналог цикла \texttt{foreach}.}
+    \end{scnindent}
+    
+    \scnfileitem{where}
+    \begin{scnindent}
+        \scnidtf{Фильтрация по условию}
+        \scntext{пример}{\texttt{from x in collection where x > 5 select x}}
+        \scntext{объяснение}{Выбираем только те элементы из коллекции, которые больше 5.}
+    \end{scnindent}
+
+    \scnfileitem{select}
+    \begin{scnindent}
+        \scnidtf{Определяет результат запроса}
+        \scntext{пример}{\texttt{from x in collection select x.Name}}
+        \scntext{объяснение}{Из каждого объекта берём только поле \texttt{Name} и включаем его в результат.}
+    \end{scnindent}
+
+    \scnfileitem{group}
+    \begin{scnindent}
+        \scnidtf{Группировка данных по ключу}
+        \scntext{пример}{\texttt{from x in products group x by x.Category}}
+        \scntext{объяснение}{Объединяем объекты по значению поля \texttt{Category}. Например, группируем товары по категориям.}
+    \end{scnindent}
+
+    \scnfileitem{join}
+    \begin{scnindent}
+        \scnidtf{Объединение двух источников данных по ключу}
+        \scntext{пример}{\texttt{from x in list1 join y in list2 on x.Id equals y.Id select new \{x, y\}}}
+        \scntext{объяснение}{Находим пары элементов из двух списков, где совпадает поле \texttt{Id}.}
+    \end{scnindent}
+
+    \scnfileitem{orderby}
+    \begin{scnindent}
+        \scnidtf{Сортировка результата запроса}
+        \scntext{пример}{\texttt{from x in people orderby x.Name ascending select x}}
+        \scntext{объяснение}{Сортируем коллекцию по имени в алфавитном порядке.}
+    \end{scnindent}
+\end{scnrelfromset}
+
+
+\begin{scnrelfromset}{поддержка}
+    \scnfileitem{LINQ to Objects}
+    \begin{scnindent}
+        \scnidtf{Работа с коллекциями и массивами}
+        \scntext{особенность}{Позволяет применять запросы к данным в памяти без подключения к БД.}
+    \end{scnindent}
+
+    \scnfileitem{LINQ to SQL / Entity Framework}
+    \begin{scnindent}
+        \scnidtf{Интеграция с реляционными базами данных}
+        \scntext{уточнение}{Запросы преобразуются в SQL и выполняются на стороне СУБД.}
+    \end{scnindent}
+
+    \scnfileitem{LINQ to XML}
+    \begin{scnindent}
+        \scnidtf{Обработка и выборка данных из XML-документов}
+        \scntext{пример}{\texttt{from x in xml.Elements("book") where x.Attribute("id") == "1" select x}}
+    \end{scnindent}
+
+    \scnfileitem{PLINQ}
+    \begin{scnindent}
+        \scnidtf{Выполнение LINQ-запросов сразу в нескольких потоках}
+        \scntext{применение}{Ускоряет обработку больших коллекций, разбивая её на части и обрабатывая их параллельно.}
+    \end{scnindent}
+
+     \scnfileitem{IAsyncEnumerable / async LINQ}
+    \begin{scnindent}
+        \scnidtf{Асинхронная работа с последовательностью данных}
+        \scntext{применение}{Позволяет получать и обрабатывать данные по одному, когда они становятся доступны — удобно, если данные приходят постепенно, например, из интернета.}
+    \end{scnindent}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{особенности}
+    \scnfileitem{Интеграция в язык программирования}
+    \begin{scnindent}
+        \scnidtf{Запросы являются частью языка и поддерживаются компилятором}
+    \end{scnindent}
+
+    \scnfileitem{Строгая типизация}
+    \begin{scnindent}
+        \scnidtf{Типы данных проверяются компилятором, и ошибки выявляются на этапе компиляции}
+    \end{scnindent}
+
+    \scnfileitem{Отложенное выполнение}
+    \begin{scnindent}
+        \scnidtf{Запрос выполняется только при обращении к результату}
+       
+    \end{scnindent}
+
+    \scnfileitem{Функциональный стиль}
+    \begin{scnindent}
+        \scnidtf{Активное использование лямбда-выражений и цепочек вызовов}
+    \end{scnindent}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{ограничения}
+    \scnfileitem{Зависимость от LINQ-провайдеров}
+    \begin{scnindent}
+        \scnidtf{Для различных источников данных требуется реализация LINQ-интерфейса}
+    \end{scnindent}
+
+    \scnfileitem{Проблемы с трансляцией}
+    \begin{scnindent}
+        \scnidtf{Не все выражения LINQ могут быть преобразованы в SQL}
+    \end{scnindent}
+
+    \scnfileitem{Ограничения на производительность}
+    \begin{scnindent}
+        \scnidtf{При больших объёмах данных возможна деградация быстродействия без оптимизации}
+    \end{scnindent}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{реализации}
+    \scnfileitem{C\#}
+    \begin{scnindent}
+        \scnidtf{Основной язык с полной поддержкой LINQ}
+    \end{scnindent}
+    \scnfileitem{F\#}
+    \begin{scnindent}
+        \scnidtf{Функциональный стиль запросов с композицией функций}
+    \end{scnindent}
+    \scnfileitem{LINQPad}
+    \begin{scnindent}
+        \scnidtf{Интерактивная среда для написания и тестирования LINQ-запросов}
+    \end{scnindent}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{примеры использования}
+    \scnfileitem{Фильтрация данных в коллекциях}
+    \scnfileitem{Работа с БД через Entity Framework}
+    \scnfileitem{Обработка XML-документов}
+    \scnfileitem{Анализ логов и CSV с LINQ to Objects}
+    \scnfileitem{Быстрая обработка больших списков через PLINQ}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{библиографические источники}
+    \scnfileitem{Microsoft Learn. Language Integrated Query (LINQ) [Электронный ресурс] // Microsoft Learn. URL: \href{https://learn.microsoft.com/en-us/dotnet/csharp/linq/}{\textnormal{https://learn.microsoft.com/en-us/dotnet/csharp/linq/}} (дата обращения: 17.05.2025).}
+
+    \scnfileitem{Wikipedia: LINQ [Электронный ресурс] // Wikipedia. URL: \href{https://en.wikipedia.org/wiki/Language_Integrated_Query}{\textnormal{\detokenize{https://en.wikipedia.org/wiki/Language_Integrated_Query}}} (дата обращения: 18.05.2025).}
+
+    \scnfileitem{Metanit: LINQ Tutorial [Электронный ресурс] // Metanit. URL: \href{https://metanit.com/sharp/tutorial/15.1.php}{\textnormal{https://metanit.com/sharp/tutorial/15.1.php}} (дата обращения: 17.05.2025).}
+\end{scnrelfromset}
+
+
+\scnheader{SPARQL}
+\scnidtf{SPARQL Protocol and RDF Query Language}
+\scnidtf{Протокол и язык запросов к RDF-графам}
+\scniselement{язык запросов к графовым базам данных}
+
+\begin{scnrelfromlist}{разработчик}
+    \scnitem{W3C (World Wide Web Consortium)}
+\end{scnrelfromlist}
+
+\scnrelfrom{год создания}{2008}
+\scnrelfrom{основная парадигма}{декларативное программирование}
+\scnrelfrom{характер взаимодействия с данными}{декларативный на основе шаблонов графов}
+
+\scntext{описание}{SPARQL — официальный язык запросов к данным, представленным в формате RDF (Resource Description Framework). Позволяет формировать гибкие и мощные запросы к графам знаний, извлекать информацию, проверять логические условия и конструировать новые графы.}
+
+\scntext{назначение}{Обеспечение возможности извлечения, фильтрации, агрегации и трансформации семантических данных, представленных в виде триплетов RDF. Используется в системах семантического веба, биоинформатике, цифровой гуманитаристике, государственном управлении и др.}
+
+\begin{scnrelfromset}{основные конструкции}
+    \scnfileitem{SELECT}
+    \begin{scnindent}
+        \scnidtf{Извлечение переменных в табличной форме}
+        \scntext{пример}{\texttt{SELECT ?name WHERE \{ ?person foaf:name ?name \}}}
+        \scntext{пояснение}{Этот запрос ищет всех сущностей, у которых указано некоторое имя, 
+            и возвращает найденные имена в виде таблицы — по одной строке на каждое совпадение.}
+    \end{scnindent}
+
+    \scnfileitem{CONSTRUCT}
+    \begin{scnindent}
+        \scnidtf{Формирование нового RDF-графа на основе шаблона}
+        \scntext{пример}{\texttt{CONSTRUCT \{ ?s foaf:label ?name \} WHERE \{ ?s foaf:name ?name \}}}
+        \scntext{пояснение}{Этот запрос создаёт новый RDF-граф, где берёт все объекты, у которых есть имя, 
+            и добавляет к ним новое свойство — метку с тем же значением, что и имя.}
+    \end{scnindent}
+
+    \scnfileitem{ASK}
+    \begin{scnindent}
+        \scnidtf{Проверка, существует ли хотя бы один результат для шаблона}
+        \scntext{пример}{\texttt{ASK WHERE \{ ?person ex:hasAge ?age . FILTER(?age > 30) \}}}
+        \scntext{пояснение}{Возвращает \texttt{true}, если хотя бы один человек в данных имеет возраст более 30 лет.}
+    \end{scnindent}
+
+    \scnfileitem{DESCRIBE}
+    \begin{scnindent}
+        \scnidtf{Возврат описания ресурса}
+        \scntext{пример}{\texttt{DESCRIBE <http://example.org/person/123>}}
+        \scntext{пояснение}{Возвращает все известные утверждения о заданном ресурсе. Используется, когда нужно получить полное описание объекта.}
+    \end{scnindent}
+
+    \scnfileitem{WHERE}
+    \begin{scnindent}
+        \scnidtf{Основной блок условий запроса}
+        \scntext{пример}{\texttt{SELECT ?name WHERE \{ ?person ex:hasName ?name \}}}
+        \scntext{пояснение}{Содержит шаблоны, определяющие, какие данные нужно найти в графе.}
+    \end{scnindent}
+
+    \scnfileitem{FILTER}
+    \begin{scnindent}
+        \scnidtf{Ограничение результатов по условиям}
+        \scntext{пример}{\texttt{FILTER (?age > 30)}}
+        \scntext{пояснение}{
+            Отбрасывает все результаты, не удовлетворяющие условию. Используется совместно с \texttt{WHERE}.
+        }
+    \end{scnindent}
+
+    \scnfileitem{OPTIONAL}
+    \begin{scnindent}
+        \scnidtf{Добавление необязательных шаблонов к запросу}
+        \scntext{пример}{\texttt{SELECT ?name ?email WHERE \{ ?person ex:hasName ?name . OPTIONAL \{ ?person ex:hasEmail ?email \} \}}}
+        \scntext{пояснение}{
+            Позволяет извлекать данные, если они есть, но не исключает результаты, если их нет.
+        }
+    \end{scnindent}
+
+    \scnfileitem{UNION}
+    \begin{scnindent}
+        \scnidtf{Объединение результатов нескольких шаблонов}
+        \scntext{пример}{\texttt{SELECT ?name WHERE \{ \{ ?person ex:hasName ?name \} UNION \{ ?person ex:hasLabel ?name \} \}}}
+        \scntext{пояснение}{
+            Объединяет данные из двух разных путей — например, когда информация может быть представлена разными свойствами.
+        }
+    \end{scnindent}
+
+    \scnfileitem{GRAPH}
+    \begin{scnindent}
+        \scnidtf{Запросы к определённому именованному графу}
+        \scntext{пример}{\texttt{SELECT ?name WHERE \{ GRAPH <http://example.org/graph1> \{ ?person ex:hasName ?name \} \}}}
+        \scntext{пояснение}{
+            Позволяет выполнять запросы к конкретному подграфу в хранилище с несколькими графами.
+        }
+    \end{scnindent}
+\end{scnrelfromset}
+
+
+\begin{scnrelfromset}{поддержка}
+    \scnfileitem{Работа с RDF и OWL}
+    \begin{scnindent}
+        \scnidtf{SPARQL работает с триплетами RDF и поддерживает онтологии, определённые в OWL}
+    \end{scnindent}
+
+    \scnfileitem{Подсчёты и фильтрация}
+    \begin{scnindent}
+        \scnidtf{Поддержка функций для подсчёта и вычислений — таких как количество (COUNT), сумма (SUM), среднее (AVG), минимум (MIN) и максимум (MAX)}
+    \end{scnindent}
+
+    \scnfileitem{Федеративные запросы (SERVICE)}
+    \begin{scnindent}
+        \scnidtf{Позволяют выполнять запросы к другим внешним базам данных, которые поддерживают SPARQL}
+    \end{scnindent}
+
+    \scnfileitem{Обновление графов (SPARQL Update)}
+    \begin{scnindent}
+        \scnidtf{Возможность добавления и удаления записей из RDF-базы данных}
+        \scntext{операции}{INSERT, DELETE, DELETE WHERE, INSERT DATA}
+    \end{scnindent}
+\end{scnrelfromset}
+
+\begin{scnrelfromlist}{применение}
+    \scnitem{семантический веб}
+    \scnitem{графы знаний}
+    \scnitem{биоинформатика}
+    \scnitem{цифровые гуманитарные науки}
+    \scnitem{государственные открытые данные}
+    \scnitem{объединение разных баз данных}
+\end{scnrelfromlist}
+
+\begin{scnrelfromset}{примеры использования}
+    \scnfileitem{Извлечение данных из Wikidata}
+    \scnfileitem{Конструирование новых графов (CONSTRUCT)}
+    \scnfileitem{Проверка наличия информации (ASK)}
+    \scnfileitem{Объединение запросов через UNION}
+    \scnfileitem{Использование FILTER для условий}
+    \scnfileitem{Обращение к внешним графам через SERVICE}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{реализации}
+    \scnfileitem{Apache Jena}
+    \begin{scnindent}
+        \scnidtf{Java-фреймворк для работы с RDF, OWL, SPARQL}
+    \end{scnindent}
+
+    \scnfileitem{Virtuoso}
+    \begin{scnindent}
+        \scnidtf{Масштабируемая база данных для хранения RDF-данных (триплетов)}
+    \end{scnindent}
+
+    \scnfileitem{GraphDB}
+    \begin{scnindent}
+        \scnidtf{Коммерческое RDF-хранилище с поддержкой логического вывода (reasoning) на основе онтологий}
+    \end{scnindent}
+
+    \scnfileitem{Blazegraph}
+    \begin{scnindent}
+        \scnidtf{Высокопроизводительное open-source RDF-хранилище, использовавшееся в Wikidata}
+    \end{scnindent}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{особенности}
+    \scnfileitem{Работа с графовой моделью данных (RDF)}
+    \scnfileitem{Совместимость с OWL-онтологиями}
+    \scnfileitem{Мощная фильтрация и логическая проверка}
+    \scnfileitem{Поддержка именованных графов}
+    \scnfileitem{Возможность объединения распределённых данных}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{ограничения}
+    \scnfileitem{высокий порог входа для новичков}
+    \scnfileitem{необходимость знания онтологического моделирования}
+    \scnfileitem{производительность зависит от используемого RDF-хранилища}
+    \scnfileitem{без дополнительных инструментов сложно делать сложные логические выводы}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{библиографические источники}
+    \scnfileitem{Wikipedia: SPARQL [Электронный ресурс] // Wikipedia. URL: \href{https://en.wikipedia.org/wiki/SPARQL}{\textnormal{https://en.wikipedia.org/wiki/SPARQL}} (дата обращения: 19.05.2025).}
+
+    \scnfileitem{W3C: SPARQL 1.1 Query Language [Электронный ресурс] // W3C Recommendation. URL: \href{https://www.w3.org/TR/sparql11-query/}{\textnormal{https://www.w3.org/TR/sparql11-query/}} (дата обращения: 20.05.2025).}
+
+    \scnfileitem{Ontotext: What Is SPARQL? [Электронный ресурс] // Ontotext. URL: \href{https://www.ontotext.com/knowledgehub/fundamentals/what-is-sparql/}{\textnormal{https://www.ontotext.com/knowledgehub/fundamentals/what-is-sparql/}} (дата обращения: 19.05.2025).}
+
+    \scnfileitem{Wikibooks: SPARQL Tutorial [Электронный ресурс] // Wikibooks. URL: \href{https://en.wikibooks.org/wiki/SPARQL}{\textnormal{https://en.wikibooks.org/wiki/SPARQL}} (дата обращения: 21.05.2025).}
+\end{scnrelfromset}
+
+\scnheader{Сравнение языков запросов LINQ и SPARQL}
+\begin{scneqtovector}
+    \scnitem{LINQ}
+    \scnitem{SPARQL}
+\end{scneqtovector}
+
+\begin{scnrelfromset}{сходства}
+    \scnfileitem{Оба языка реализуют декларативный подход к извлечению и обработке данных}
+    \scnfileitem{Поддерживают работу с различными источниками данных (графы, коллекции, базы)}
+    \scnfileitem{Имеют собственный набор конструкций: фильтрация, проекция, группировка}
+    \scnfileitem{Используются в системах, связанных с анализом и интеграцией информации}
+    \scnfileitem{Поддерживают отложенное выполнение запросов и оптимизацию исполнения}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{различия}
+    \scnfileitem{LINQ встроен в языки .NET-платформы (например, C\# или F\#), тогда как SPARQL — самостоятельный язык запросов, предназначенный для RDF-графов}
+    \scnfileitem{LINQ ориентирован на работу с объектами, XML-документами и данными из таблиц баз данных, тогда как SPARQL работает с графами данных и структурами, основанными на связях между сущностями и их аттрибутами.}
+    \scnfileitem{LINQ строго типизирован и интегрирован в язык программирования, тогда как SPARQL более гибкий, но требует знания RDF-схем}
+    \scnfileitem{SPARQL применяется преимущественно в задачах семантического веба и графовых базах, LINQ — в рамках типичных .NET-приложений}
+    \scnfileitem{LINQ зависит от LINQ-провайдеров, SPARQL — от производительности RDF-хранилищ}
+    \scnfileitem{LINQ использует C\#-подобный синтаксис, SPARQL — синтаксис, близкий к SQL}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{рекомендации по выбору}
+    \scnfileitem{LINQ рекомендуется разработчикам .NET для обработки объектов, XML-документов и данных из SQL-баз в рамках приложений на C\# или F\#}
+    \scnfileitem{LINQ удобен для задач фильтрации, агрегации и анализа коллекций в приложениях}
+    \scnfileitem{SPARQL является предпочтительным выбором для работы с графами знаний, онтологиями и хранилищами RDF}
+    \scnfileitem{SPARQL незаменим в проектах семантического веба, биоинформатики, цифровой гуманитаристики и информационного поиска с учётом семантики}
+\end{scnrelfromset}
+
+
+
+\end{small}
+\end{SCn}
