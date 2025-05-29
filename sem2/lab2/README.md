@@ -24,29 +24,61 @@
 Проект состоит из 4 файлов: `LAB_2_2_2.cpp`, `SetParser.cpp`, `pch.h`, `SetParser.h`, `test.cpp`. Файл `LAB_2_2_2.cpp` содержит функцию main, в которой реализована логика обработки аргументов командной строки, запроса имени входного файла, вызов основной функции обработки множества. Файл `SetParser.h` - заголовочный файл, включающий в себя объявления функций, подключение библиотек. Основные функции описаны в `SetParser.cpp` (функции для разбора входной строки с множеством, генерации уникальных перестановок элементов, а также для чтения входных данных и записи результата в файл). Также есть файл  `test.cpp` с тестами для проверки работоспособности программы с помощью GoogleTest. В файле `pch.h` объявоены библиотеки, использующиеся в программе.
 # LAB_2_2_2.cpp
 ```
-#include <gtest/gtest.h>
+#include <iostream>
+#include <string>
+#include <vector>
 #include "SetParser.h"
+#include <gtest/gtest.h>
 
-TEST(ParseTest, BasicParsing) {
-    auto result = string_to_vector("{a,b,c}");
-    EXPECT_EQ(result, (std::vector<std::string>{"a", "b", "c"}));
-}
-
-TEST(CartesianProductTest, TwoSets) {
-    std::vector<std::vector<std::string>> sets = {
-        {"1", "2"},
-        {"x", "y"}
-    };
-    auto result = cartesianProduct(sets);
-    EXPECT_EQ(result.size(), 4);
-    EXPECT_TRUE(std::find(result.begin(), result.end(), std::vector<std::string>{"1", "x"}) != result.end());
-    EXPECT_TRUE(std::find(result.begin(), result.end(), std::vector<std::string>{"2", "y"}) != result.end());
-}
+using namespace std;
 
 int main(int argc, char** argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
+    setlocale(LC_ALL, "Russian");
+    cout << "Выберите режим:\n1. Ручной ввод\n2. Запустить тесты\n";
+
+    int choice;
+    cin >> choice;
+    cin.ignore(); 
+
+    if (choice == 1) {
+        cout << "Введите количество множеств: ";
+        int count;
+        cin >> count;
+        cin.ignore();
+
+        vector<vector<string>> sets;
+        for (int i = 0; i < count; ++i) {
+            cout << "Введите множество " << i + 1 << " в формате {a,b,c}: ";
+            string input;
+            getline(cin, input);
+            auto parsed = string_to_vector(input);
+            sets.push_back(parsed);
+        }
+
+        auto result = cartesianProduct(sets);
+        cout << "Декартово произведение:\n";
+        for (const auto& tuple : result) {
+            cout << "< ";
+            for (size_t i = 0; i < tuple.size(); ++i) {
+                cout << tuple[i];
+                if (i < tuple.size() - 1)
+                    cout << ", ";
+            }
+            cout << " >\n";
+        }
+
+    }
+    else if (choice == 2) {
+        ::testing::InitGoogleTest(&argc, argv);
+        return RUN_ALL_TESTS();
+    }
+    else {
+        cout << "Неверный выбор.\n";
+    }
+
+    return 0;
 }
+
 ```
 # SetParser.cpp
 ```
@@ -55,23 +87,30 @@ int main(int argc, char** argv) {
 
 vector<string> string_to_vector(const string& str) {
     vector<string> result;
-    string temp;
-    if (str.empty() || str.front() != '{' || str.back() != '}') return result;
+    if (str.empty() || str.front() != '{' || str.back() != '}')
+        return result;
+
     string cleanStr = str.substr(1, str.size() - 2);
+    string temp;
+    int braceDepth = 0;
 
     for (char ch : cleanStr) {
-        if (ch == ',') {
+        if (ch == ',' && braceDepth == 0) {
             if (!temp.empty()) {
                 result.push_back(temp);
                 temp.clear();
             }
-            else
-                continue;
-                 
         }
-        else temp += ch;
+        else {
+            if (ch == '{') braceDepth++;
+            if (ch == '}') braceDepth--;
+            temp += ch;
+        }
     }
-    if (!temp.empty()) result.push_back(temp);
+
+    if (!temp.empty())
+        result.push_back(temp);
+
     return result;
 }
 
