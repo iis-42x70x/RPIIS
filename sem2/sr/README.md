@@ -17,5 +17,10 @@
 
 ![image](https://github.com/user-attachments/assets/419c6fab-5b78-4961-86d1-e810be51ed44)
 
-**1 задание** ТУТ КАРТИНКА КБЕ
+**1 задание** 
 
+![image](https://github.com/user-attachments/assets/bdbe12c2-00ac-4bd9-bf66-4371f3239268)
+
+**2 задание** 
+
+![image](https://github.com/user-attachments/assets/ea1d980b-e06d-4198-b8fb-ba74d3372c62)
