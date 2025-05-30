@@ -63,4 +63,4 @@ b. при помощи стандартов технологии OSTIS, испо
 
 [Гайд 2](https://drive.google.com/drive/folders/1YcFCikH9WaXeDmWPGPtRTk34FsCmLkVl)
 
-[Гайд 2]("https://drive.google.com/drive/folders/1zQF0KtRTaKJJu4rvXSxls0AlobdYUDx5")
+[Гайд 2](https://drive.google.com/drive/folders/1zQF0KtRTaKJJu4rvXSxls0AlobdYUDx5)
