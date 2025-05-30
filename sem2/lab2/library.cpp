@@ -80,57 +80,78 @@ vector<string> parseString(int num, string str){
 }
 
 vector<string> addSets(string str){
-	vector<string> set;
-	string temp;
+    vector<string> set;
+    string temp;
+    int setCount = 0;
+    int tupleCount = 0;
 
-	int setCount = 0;
-	int tupeCount = 0;
+    for(char c : str){
+        if(c == '{') {
+            setCount++;
+        } else if (c == '}') {
+            setCount--;
+        } else if(c == '<') {
+            tupleCount++;
+        } else if (c == '>') {
+            tupleCount--;
+        }
 
-	for(char c: str){
-		if(c=='{'){
-			setCount++;
-			temp+=c;
-		} else if (c=='}'){
-			setCount--;
-			temp+=c;
-			if(setCount ==0){
-				set.push_back(temp);
-				temp.clear();
-			}
-		} 
+        if (c == ',' && setCount == 0 && tupleCount == 0) {
+            // Разделяем элемент только если запятая ВНЕ множества/кортежа
+            if (!temp.empty()) {
+                set.push_back(temp);
+                temp.clear();
+            }
+        } else {
+            temp += c;
+        }
+    }
 
-		if(c=='<'){
-			tupeCount++;
-			temp+=c;
-		} else if (c=='>'){
-			tupeCount--;
-			temp+=c;
-			if(setCount == 0){
-				set.push_back(temp);
-				temp.clear();
-			}
-		} else if(c==',' && setCount == 0 && tupeCount == 0){
-			if(!temp.empty()){
-				set.push_back(temp);
-				temp.clear();
-			}
-		} else {
-			temp+=c;
-		}
-	}
-	if(!temp.empty()){
-		set.push_back(temp);
-	}
-	return set;
+    if (!temp.empty()) {
+        set.push_back(temp);
+    }
+    
+    return set;
 }
 
-string normalize(string& elem) { 
+
+vector<string> parseElements(const string& element) {
+    vector<string> elements;
+    if (element.empty() || element.size() < 2) return elements;
+
+    int depth = 0, start = 1;
+
+    for (int i = 1; i < element.size() - 1; i++) {
+        char c = element[i];
+        if (c == '{' || c == '<') depth++;
+        else if (c == '}' || c == '>') depth--;
+
+        if (depth == 0 && c == ',') {
+            string elem = element.substr(start, i - start);
+            elem.erase(0, elem.find_first_not_of(" \t"));
+            elem.erase(elem.find_last_not_of(" \t") + 1);
+            if (!elem.empty())
+                elements.push_back(elem);
+            start = i + 1;
+        }
+    }
+
+    string lastElem = element.substr(start, element.size() - 1 - start);
+    lastElem.erase(0, lastElem.find_first_not_of(" \t"));
+    lastElem.erase(lastElem.find_last_not_of(" \t") + 1);
+    if (!lastElem.empty())
+        elements.push_back(lastElem);
+
+    return elements;
+}
+
+string normalizeElement(const string& elem) {       // приводит строку в приличный вид
     if (elem.empty()) return "";
 
     if (elem.front() == '<' && elem.back() == '>') {
-        vector<string> inner = addSets(elem);
+        vector<string> inner = parseElements(elem);
         for (auto& it : inner) {
-            it = normalize(it);
+            it = normalizeElement(it);
         }
 
         string res = "<";
@@ -142,11 +163,11 @@ string normalize(string& elem) {
         return res;
     }
     else if (elem.front() == '{' && elem.back() == '}') {
-        vector<string> inner = addSets(elem);
-        vector<string> normalized; 
+        vector<string> inner = parseElements(elem);
+        vector<string> normalized;
 
         for (auto& it : inner)
-            normalized.push_back(normalize(it));
+            normalized.push_back(normalizeElement(it));
 
         sort(normalized.begin(), normalized.end(), [](const string& a, const string& b) {
             char first_a = a.front();
@@ -157,11 +178,10 @@ string normalize(string& elem) {
             if (first_b == '{') return true;
             if (first_a == '<') return false;
             if (first_b == '<') return true;
-            return a < b; 
+            return a < b;
         });
 
         if (normalized.size() == 1) {
-	    cout << normalized[0] << endl;
             return normalized[0];
         }
 
@@ -171,69 +191,17 @@ string normalize(string& elem) {
             result += normalized[i];
         }
         result += "}";
-	cout << result << endl;
         return result;
     }
     else {
         string simple = elem;
         simple.erase(remove_if(simple.begin(), simple.end(), ::isspace), simple.end());
-	cout << simple << endl;
         return simple;
     }
 }
 
-string sortSet(string& input) {
-    vector<std::string> elements;
-    string temp;
-    int bracketCount = 0;  
-    int parenthesisCount = 0;  
 
-    for (char c : input) {
-        if (c == '{') {
-            bracketCount++;
-            if (bracketCount == 1 && !temp.empty()) {
-                elements.push_back(temp);
-                temp.clear();
-            }
-        } 
-        
-        temp += c;
-        
-        if (c == '}') {
-            bracketCount--;
-            if (bracketCount == 0) {
-                elements.push_back(temp);
-                temp.clear();
-            }
-        } else if (c == '(') {
-            parenthesisCount++;
-        } else if (c == ')') {
-            parenthesisCount--;
-        } else if (c == ',' && bracketCount == 0 && parenthesisCount == 0) {
-            elements.push_back(temp);
-            temp.clear();
-        }
-    }
 
-    if (!temp.empty()) {
-        elements.push_back(temp);
-    }
-
-    sort(elements.begin(), elements.end(), [](const std::string& a, const std::string& b) {
-        bool isSetA = a.front() == '{' && a.back() == '}';
-        bool isSetB = b.front() == '{' && b.back() == '}';
-        if (isSetA != isSetB) return isSetB;
-        return a < b; 
-    });
-
-    std::string result;
-    for (const auto& elem : elements) {
-        if (!result.empty()) result += ",";
-        result += elem;
-    }
-
-    return result;
-}
 
 vector<string> cross(vector<string> set1, vector<string> set2){
 	vector<string> cross;
@@ -243,11 +211,11 @@ vector<string> cross(vector<string> set1, vector<string> set2){
 	for(int i = 0; i<num1; i++){
 		for(int j =  0; j<num2; j++){
 			if(set1[i].front() == '{' || set1[i].front()=='<'){
-				sortSet(set1[i]);
+				set1[i] = normalizeElement(set1[i]);
 			}
 
 			if(set2[j].front() == '{' || set2[j].front()=='<'){
-				sortSet(set1[i]);
+				set2[j] = normalizeElement(set2[j]);
 			}
 
 			if(!strcmp(set1[i].data(), set2[j].data()))

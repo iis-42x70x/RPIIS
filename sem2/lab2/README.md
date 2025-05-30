@@ -15,14 +15,13 @@
 ### Пересечение множеств
 Множество элементов, принадлежащих первому и одновременно второму множествам.
 
-## <p align="center">Список используемых алгоритмов:</p>
-
 ### CheckString
 
 1. Проверка корректности скобок ({}, <>).
 
 2. Проверка соответствия открывающих/закрывающих скобок.
 
+## <p align="center">Список используемых алгоритмов:</p>
 ### parseElements
 
 1. Разделение текста файла на множества.
@@ -43,44 +42,7 @@
 
 1. Сортировка элементов.
 
-### cross
-1. Ищет пересечение множеств
-   
-3. возврачает вектор строк
 
-## Работа программы
-
-Ввод множеств в файл input.txt, с которым работает программа:
-
-![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/1in.png)
-
-Вывод программы:
-
-![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/1out.png)
-
-При следующем вводе возникнет ошибка, так как программой не предусмотрен ввод через пробел:
-
-![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/2in.png)
-
-![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/2out.png)
-
-Также программа поддерживает вложенные множнства:
-
-![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/3in.png)
-
-![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/3out.png)
-
-И так тоже:
-
-![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/4in.png)
-
-![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/4out.png)
-
-Также программа предусматривает множества, вложенные в кортежи
-
-![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/5in.png)
-
-![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/5out.png)
 
 ## <p align="center">Выводы:</p>
 
