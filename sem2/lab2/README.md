@@ -57,6 +57,7 @@
 
 Ввод  
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/3in.png)  
+Ошибка возникла так как программа предпологает ввод без пробелов
 
 Вывод  
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/3out.png)  
