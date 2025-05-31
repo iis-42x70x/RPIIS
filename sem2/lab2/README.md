@@ -49,24 +49,28 @@
 Вывод  
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/1out.png)  
 
+
 Ввод  
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/2in.png)  
 
 Вывод  
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/2out.png)  
+Ошибка возникла так как программа предпологает ввод без пробелов
+
 
 Ввод  
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/3in.png)  
-Ошибка возникла так как программа предпологает ввод без пробелов
 
 Вывод  
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/3out.png)  
+
 
 Ввод  
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/4in.png)  
 
 Вывод  
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/4out.png)  
+
 
 Ввод  
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/5in.png)  
