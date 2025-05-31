@@ -51,7 +51,7 @@
 Вывод
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/1out.png)
 <\p>
-  <p align="left">
+<p align="left">
 Ввод
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/2in.png)
 <\p><p align="left">
