@@ -44,34 +44,34 @@
 
 ## <p align="center">Проимеры работы программы:</p>
 
-Ввод
-![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/1in.png)
-Вывод
-![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/1out.png)
+Ввод  
+![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/1in.png)  
+Вывод  
+![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/1out.png)  
 
-Ввод
-![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/2in.png)
+Ввод  
+![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/2in.png)  
 
-Вывод
-![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/2out.png)
+Вывод  
+![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/2out.png)  
 
-Ввод
-![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/3in.png)
+Ввод  
+![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/3in.png)  
 
-Вывод
-![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/3out.png)
+Вывод  
+![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/3out.png)  
 
-Ввод
-![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/4in.png)
+Ввод  
+![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/4in.png)  
 
-Вывод
-![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/4out.png)
+Вывод  
+![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/4out.png)  
 
-Ввод
-![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/5in.png)
+Ввод  
+![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/5in.png)  
 
-Вывод
-![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/5out.png)
+Вывод  
+![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/5out.png)  
 
 ## <p align="center">Выводы:</p>
 
