@@ -52,7 +52,11 @@ int main(int argc, char** argv) {
             string input;
             getline(cin, input);
             auto parsed = string_to_vector(input);
-            sets.push_back(parsed);
+            if (parsed.empty()) {
+                cerr << "Множество " << i + 1 << " некорректно и будет пропущено.\n";
+                continue;
+            }
+            sets.push_back(parsed);         
         }
 
         auto result = cartesianProduct(sets);
@@ -87,25 +91,49 @@ int main(int argc, char** argv) {
 
 vector<string> string_to_vector(const string& str) {
     vector<string> result;
-    if (str.empty() || str.front() != '{' || str.back() != '}')
-        return result;
+
+    if (str.empty() || str.front() != '{' || str.back() != '}') {
+        cerr << "Ошибка: множество должно начинаться с '{' и заканчиваться '}'\n";
+        return {};
+    }
 
     string cleanStr = str.substr(1, str.size() - 2);
     string temp;
     int braceDepth = 0;
+    int angleDepth = 0;
 
     for (char ch : cleanStr) {
-        if (ch == ',' && braceDepth == 0) {
-            if (!temp.empty()) {
+        if (ch == ',') {
+            if (braceDepth == 0 && angleDepth == 0) {
+                if (temp.empty()) {
+                    cerr << "Ошибка: пустой элемент между запятыми\n";
+                    return {};
+                }
                 result.push_back(temp);
                 temp.clear();
             }
+            else {
+                temp += ch;
+            }
         }
         else {
-            if (ch == '{') braceDepth++;
-            if (ch == '}') braceDepth--;
+            if (ch == '{') ++braceDepth;
+            else if (ch == '}') --braceDepth;
+            else if (ch == '<') ++angleDepth;
+            else if (ch == '>') --angleDepth;
+
+            if (braceDepth < 0 || angleDepth < 0) {
+                cerr << "Ошибка: лишняя закрывающая скобка\n";
+                return {};
+            }
+
             temp += ch;
         }
+    }
+
+    if (braceDepth != 0 || angleDepth != 0) {
+        cerr << "Ошибка: несоответствие открывающих и закрывающих скобок\n";
+        return {};
     }
 
     if (!temp.empty())
@@ -113,6 +141,8 @@ vector<string> string_to_vector(const string& str) {
 
     return result;
 }
+
+
 
 vector<vector<string>> parseMultipleSets(const string& filename) {
     ifstream file(filename);
@@ -168,6 +198,7 @@ void calculateCartesianProduct(const string& filename) {
         cout << " >\n";
     }
 }
+
 ```
 # SetParser.h
 ```
@@ -312,6 +343,7 @@ TEST(CartesianTest, NoSets) {
 # :clipboard: Примеры работы программы
 <img src="image1.png">
 <img src="image3.png">
+<img src="image.png">
 
 # :point_right: Выводы
 В результате данной лабораторной работы была реализована программа, формирующая множество равное декартовому произведению произвольного количества исходных множеств. Вся логика программы направлена на корректную обработку ввода, включая вложенные множества и кортежи, проверку синтаксической корректности, а также генерацию всех возможных уникальных комбинаций элементов.
