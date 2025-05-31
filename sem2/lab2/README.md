@@ -43,39 +43,36 @@
 1. Сортировка элементов.
 
 ## <p align="center">Проимеры работы программы:</p>
-<p align="left">
+
 Ввод
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/1in.png)
-<\p>
-<p align="left">
 Вывод
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/1out.png)
-<\p>
-<p align="left">
+
 Ввод
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/2in.png)
-<\p><p align="left">
+
 Вывод
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/2out.png)
-<\p><p align="left">
+
 Ввод
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/3in.png)
-  <\p><p align="left">
+
 Вывод
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/3out.png)
-<\p><p align="left">
+
 Ввод
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/4in.png)
-</p><p align="left">
+
 Вывод
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/4out.png)
-</p><p align="left">
+
 Ввод
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/5in.png)
-  </p><p align="left">
+
 Вывод
 ![](https://github.com/iis-42x70x/RPIIS/blob/Рассохов_Е/sem2/lab2/img/5out.png)
-  </p>
+
 ## <p align="center">Выводы:</p>
 
 В ходе лабораторной работы были улучшены навыки обработки множеств и вычисления их пересечений с учетом кратности вхождения элементов в C++. Освоены принципы взаимодействия с файлами.
