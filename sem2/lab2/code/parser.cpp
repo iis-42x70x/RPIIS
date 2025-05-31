@@ -6,11 +6,26 @@ Parser::Parser(const std::string& input) : input(input) {}
 
 Element Parser::parse() {
     skipWhitespace();
-    return parseElement();
+    // Разбираем корневой элемент (множество или атом)
+    Element el = parseElement();
+
+    // --- НОВОЕ: после parseElement() проверяем, что не осталось "лишнего" текста ---
+    skipWhitespace();
+    if (pos < input.size()) {
+        // Выбросим исключение, чтобы в main.cpp у нас попало в catch и строка пропустилась
+        throw std::runtime_error(
+            "Найден лишний символ '" + std::string(1, input[pos]) +
+            "' на позиции " + std::to_string(pos));
+    }
+    // ------------------------------------------------------------------------------
+
+    return el;
 }
 
 void Parser::skipWhitespace() {
-    while (pos < input.size() && isspace(input[pos])) ++pos;
+    while (pos < input.size() && isspace(static_cast<unsigned char>(input[pos]))) {
+        ++pos;
+    }
 }
 
 bool Parser::match(char c) {
@@ -23,62 +38,82 @@ bool Parser::match(char c) {
 }
 
 char Parser::peek() const {
-    return pos < input.size() ? input[pos] : '\0';
+    if (pos < input.size()) {
+        return input[pos];
+    }
+    return '\0';
 }
 
 char Parser::get() {
-    return pos < input.size() ? input[pos++] : '\0';
+    if (pos < input.size()) {
+        return input[pos++];
+    }
+    return '\0';
 }
 
 std::string Parser::parseName() {
     skipWhitespace();
-    std::string name;
-    while (pos < input.size()) {
-        char c = input[pos];
-        if (isalnum(c) || c == '_') {
-            name += c;
-            ++pos;
-        } else {
-            break;
-        }
+    if (pos >= input.size() || !(isalpha(static_cast<unsigned char>(input[pos])))) {
+        throw std::runtime_error(
+            "Ожидалось имя (буква) на позиции " + std::to_string(pos));
     }
-    if (name.empty()) throw std::runtime_error("Expected name at position " + std::to_string(pos));
+
+    std::string name;
+    while (pos < input.size() && (isalnum(static_cast<unsigned char>(input[pos])) || input[pos] == '_')) {
+        name.push_back(input[pos]);
+        ++pos;
+    }
     return name;
 }
 
 Element Parser::parseElement() {
     skipWhitespace();
-    char c = peek();
-    if (c == '{') {
-        return parseSet(false);
-    } else if (c == '<') {
-        return parseSet(true);
-    } else {
-        Element el;
-        el.name = parseName();
-        el.isSet = false;
-        return el;
+    if (pos >= input.size()) {
+        throw std::runtime_error("Неожиданный конец строки при разборе элемента");
     }
+
+    // Если встретили '{' — это неупорядоченное множество
+    if (match('{')) {
+        return parseSet(false);
+    }
+    // Если встретили '<' — это упорядоченное множество
+    if (match('<')) {
+        return parseSet(true);
+    }
+    // Иначе — это имя (атомарный элемент)
+    std::string nm = parseName();
+    Element atom;
+    atom.name = nm;
+    return atom;
 }
 
 Element Parser::parseSet(bool ordered) {
     Element set;
     set.isSet = true;
     set.ordered = ordered;
-    get(); // consume '{' or '<'
-    skipWhitespace();
 
+    // Условие для пустого множества: сразу встретили '}' или '>' после '{' или '<'
+    skipWhitespace();
     if ((ordered && peek() == '>') || (!ordered && peek() == '}')) {
-        get();
-        return set; // empty set
+        get(); // читаем символ '>' или '}'
+        return set; // пустое множество
     }
 
+    // Иначе читаем вложенные элементы
     while (true) {
         set.children.push_back(parseElement());
         skipWhitespace();
-        if ((ordered && match('>')) || (!ordered && match('}')))
+        // Если встретили '>' (для ordered) или '}' (для unordered) — значит конец множества
+        if ((ordered && match('>')) || (!ordered && match('}'))) {
             break;
-        if (!match(',')) throw std::runtime_error("Expected ',' at position " + std::to_string(pos));
+        }
+        // Иначе ожидаем запятую
+        if (!match(',')) {
+            char found = (pos < input.size() ? input[pos] : '\0');
+            throw std::runtime_error(
+                "Ожидалась запятая ',' на позиции " + std::to_string(pos) +
+                ", найден '" + std::string(1, found) + "'");
+        }
     }
 
     return set;
