@@ -53,8 +53,20 @@
 - Используется `contains()` + `equals()` для поиска совпадений
 
 ##  Результаты тестирования
-
+тест 1
 <img src="pictures\image.png"></img>
+
+тест 2
+<img src="pictures\test1.png"></img>
+
+тест 3
+<img src="pictures\test2.png"></img>
+
+тест 4
+<img src="pictures\test3.png"></img>
+
+тест 5
+<img src="pictures\test4.png"></img>
 
 ## ✅ Вывод
 
