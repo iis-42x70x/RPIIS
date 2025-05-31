@@ -54,7 +54,7 @@
 
 ##  Результаты тестирования
 тест 1
-<img src="pictures\image.png"></img>
+<img src="pictures\test.png"></img>
 
 тест 2
 <img src="pictures\test1.png"></img>
