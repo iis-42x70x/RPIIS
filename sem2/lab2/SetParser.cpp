@@ -3,25 +3,58 @@
 
 vector<string> string_to_vector(const string& str) {
     vector<string> result;
-    string temp;
-    if (str.empty() || str.front() != '{' || str.back() != '}') return result;
+
+    if (str.empty() || str.front() != '{' || str.back() != '}') {
+        cerr << "Ошибка: множество должно начинаться с '{' и заканчиваться '}'\n";
+        return {};
+    }
+
     string cleanStr = str.substr(1, str.size() - 2);
+    string temp;
+    int braceDepth = 0;
+    int angleDepth = 0;
 
     for (char ch : cleanStr) {
         if (ch == ',') {
-            if (!temp.empty()) {
+            if (braceDepth == 0 && angleDepth == 0) {
+                if (temp.empty()) {
+                    cerr << "Ошибка: пустой элемент между запятыми\n";
+                    return {};
+                }
                 result.push_back(temp);
                 temp.clear();
             }
-            else
-                continue;
-                 
+            else {
+                temp += ch;
+            }
         }
-        else temp += ch;
+        else {
+            if (ch == '{') ++braceDepth;
+            else if (ch == '}') --braceDepth;
+            else if (ch == '<') ++angleDepth;
+            else if (ch == '>') --angleDepth;
+
+            if (braceDepth < 0 || angleDepth < 0) {
+                cerr << "Ошибка: лишняя закрывающая скобка\n";
+                return {};
+            }
+
+            temp += ch;
+        }
     }
-    if (!temp.empty()) result.push_back(temp);
+
+    if (braceDepth != 0 || angleDepth != 0) {
+        cerr << "Ошибка: несоответствие открывающих и закрывающих скобок\n";
+        return {};
+    }
+
+    if (!temp.empty())
+        result.push_back(temp);
+
     return result;
 }
+
+
 
 vector<vector<string>> parseMultipleSets(const string& filename) {
     ifstream file(filename);
