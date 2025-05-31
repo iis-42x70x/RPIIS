@@ -1,0 +1,493 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#"
+     xml:base="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:webprotege="http://webprotege.stanford.edu/"
+     xmlns:untitled-ontology-10="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Больше -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Больше">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Впадающие_ручьи -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Впадающие_ручьи">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Озеро"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Ручей"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Время_пересыхания -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Время_пересыхания">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Ручей"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Время_года"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Второе_в -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Второе_в">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Страна"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Дно_озера -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Дно_озера">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Озеро"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Часть_озера"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Нахождение_в -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Нахождение_в">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Озеро"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Речной_бассейн"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Озеро"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Страна"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Нахождение_в_центре -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Нахождение_в_центре">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Озеро"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Остров"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Нахождение_на_границе -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Нахождение_на_границе">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Озеро"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Остров"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Страна"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Область -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Область">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Страна"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Область"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Озеро"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Остров"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Часть_озера"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Покрытие -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Покрытие">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Вещество"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Проточность -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Проточность">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Озеро"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Вид_проточности"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Район -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Район">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Область"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Район"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Часть -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Часть">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Вещество"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Процент"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8E8TSE5jr1vlOET1OPWPuz -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/R8E8TSE5jr1vlOET1OPWPuz">
+        <rdfs:label>Глубина</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBXDVHZKOlYdD1Gt8nIqJdc -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/RBXDVHZKOlYdD1Gt8nIqJdc">
+        <rdfs:label>Глубина_до_2м</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCi8Jw1An8VhmfNu6R8lp7Z -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/RCi8Jw1An8VhmfNu6R8lp7Z">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Глубина</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Вещество -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Вещество"/>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Вид_проточности -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Вид_проточности"/>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Время_года -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Время_года"/>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Область -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Область"/>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Озеро -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Озеро"/>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Остров -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Остров"/>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь"/>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Процент -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Процент"/>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Район -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Район"/>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Речной_бассейн -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Речной_бассейн"/>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Ручей -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Ручей"/>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Страна -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Страна"/>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Часть_озера -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Часть_озера"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Бассейн_Западной_Двины -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Бассейн_Западной_Двины">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Речной_бассейн"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Верхнедвинский_район -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Верхнедвинский_район">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Район"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Витебская_область -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Витебская_область">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Область"/>
+        <Район rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Верхнедвинский_район"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Глинистый_ил -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Глинистый_ил">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Вещество"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Дно -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Дно">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Часть_озера"/>
+        <Площадь rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь_дна"/>
+        <webprotege:R8E8TSE5jr1vlOET1OPWPuz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</webprotege:R8E8TSE5jr1vlOET1OPWPuz>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Кремнеземистый_сапропель -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Кремнеземистый_сапропель">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Вещество"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Латвия -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Латвия">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Страна"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Лето -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Лето">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Время_года"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Нарочь -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Нарочь">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Озеро"/>
+        <Площадь rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь_Нарочь"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Освейское_озеро -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Освейское_озеро">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Озеро"/>
+        <Впадающие_ручьи rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Ручьи"/>
+        <Дно_озера rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Дно"/>
+        <Нахождение_в rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Бассейн_Западной_Двины"/>
+        <Нахождение_в rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Республика_Беларусь"/>
+        <Нахождение_в_центре rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Остров"/>
+        <Нахождение_на_границе rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Латвия"/>
+        <Нахождение_на_границе rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Псковская_область"/>
+        <Площадь rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь_Освейского_озера"/>
+        <Проточность rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Слабопроточность"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Остров -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Остров">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Остров"/>
+        <Площадь rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#4.85_км2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь_Нарочь -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь_Нарочь">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь_Освейского_озера -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь_Освейского_озера">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь"/>
+        <Второе_в rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Республика_Беларусь"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь_дна -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь_дна">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь"/>
+        <Покрытие rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Глинистый_ил"/>
+        <Покрытие rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Кремнеземистый_сапропель"/>
+        <Покрытие rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Танкодендритовый_сапропель"/>
+        <Часть rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#80_процентов"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Псковская_область -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Псковская_область">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Область"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Республика_Беларусь -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Республика_Беларусь">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Страна"/>
+        <Область rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Витебская_область"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Ручьи -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Ручьи">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Ручей"/>
+        <Время_пересыхания rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Лето"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Слабопроточность -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Слабопроточность">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Вид_проточности"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Танкодендритовый_сапропель -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Танкодендритовый_сапропель">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Вещество"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#4.85_км2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#4.85_км2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Площадь"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#70_процентов -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#70_процентов">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Процент"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#80_процентов -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#80_процентов">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/4/untitled-ontology-10#Процент"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi -->
+
