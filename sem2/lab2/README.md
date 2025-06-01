@@ -149,7 +149,7 @@ input_filename = "input.txt"
 
 ## Примеры
 
-<p align="center"><img src="image/image.png", width=70%></p>
+<p align="center"><img src="image/image0.png", width=70%></p>
 
 <p align="center"><img src="images/image1.png", width=70%></p>
 
