@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GWF version="2.0">
+    <staticSector>
+        <!-- Контуры -->
+        <contour id="contour_graph" type="contour/const/perm" shapeColor="0" parent="0">
+            <points>
+                <point x="81.6377" y="260.353"/>
+                <point x="595.638" y="257.353"/>
+                <point x="590.638" y="527.353"/>
+                <point x="82.6377" y="529.353"/>
+            </points>
+        </contour>
+        
+        <contour id="contour_formalization" type="contour/const/perm" shapeColor="0" parent="0">
+            <points>
+                <point x="700.577" y="258.08"/>
+                <point x="1214.58" y="255.08"/>
+                <point x="1209.58" y="525.08"/>
+                <point x="701.577" y="527.08"/>
+            </points>
+        </contour>
+        
+        <!-- Основные элементы формализации -->
+        <node id="lambda" type="node/const/perm/general" idtf="Число реберной связности" shapeColor="0" parent="0" x="682.576" y="562.879">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node id="number" type="node/const/perm/group" idtf="Число" shapeColor="0" parent="0" x="914.394" y="562.121">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node id="operation" type="node/const/perm/group" idtf="Операция" shapeColor="0" parent="0" x="512.879" y="606.061">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node id="edge_removal" type="node/const/perm/relation" idtf="Удаление ребер" shapeColor="0" parent="0" x="636.364" y="603.788">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node id="graph" type="node/const/perm/general" idtf="Граф G" shapeColor="0" parent="contour_formalization" x="850" y="400">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node id="set_d" type="node/const/perm/general" idtf="Множество D ⊆ E" shapeColor="0" parent="contour_formalization" x="1000" y="400">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node id="graph_after" type="node/const/perm/general" idtf="Граф G\D" shapeColor="0" parent="contour_formalization" x="850" y="500">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node id="disconnected" type="node/const/perm/general" idtf="Несвязный" shapeColor="0" parent="contour_formalization" x="1000" y="500">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node id="min" type="node/const/perm/relation" idtf="Минимум" shapeColor="0" parent="contour_formalization" x="900" y="350">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        
+        <!-- Связи формализации -->
+        <pair id="p1" type="pair/const/pos/perm/orient/membership" id_b="lambda" id_e="edge_removal"/>
+        <pair id="p2" type="pair/const/pos/perm/orient/membership" id_b="edge_removal" id_e="operation"/>
+        <pair id="p3" type="pair/const/pos/perm/orient/membership" id_b="number" id_e="lambda"/>
+        <pair id="p4" type="pair/const/pos/perm/orient" id_b="edge_removal" id_e="graph"/>
+        <pair id="p5" type="pair/const/pos/perm/orient" id_b="edge_removal" id_e="set_d"/>
+        <pair id="p6" type="pair/const/pos/perm/orient" id_b="edge_removal" id_e="graph_after"/>
+        <pair id="p7" type="pair/const/pos/perm/orient" id_b="graph_after" id_e="disconnected"/>
+        <pair id="p8" type="pair/const/pos/perm/orient" id_b="set_d" id_e="min"/>
+        <pair id="p9" type="pair/const/pos/perm/orient" id_b="min" id_e="number"/>
+        
+        <!-- Графовые элементы -->
+        <node id="node1" type="node/const/perm/general" idtf="1" shapeColor="0" parent="contour_graph" x="143.554" y="462.045">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node id="node2" type="node/const/perm/general" idtf="2" shapeColor="0" parent="contour_graph" x="220.554" y="324.045">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node id="node3" type="node/const/perm/general" idtf="3" shapeColor="0" parent="contour_graph" x="311.554" y="462.045">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node id="node4" type="node/const/perm/general" idtf="4" shapeColor="0" parent="contour_graph" x="387.554" y="462.045">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node id="node5" type="node/const/perm/general" idtf="5" shapeColor="0" parent="contour_graph" x="541.554" y="463.045">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node id="node6" type="node/const/perm/general" idtf="6" shapeColor="0" parent="contour_graph" x="461.554" y="314.045">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        
+        <!-- Ребра графа -->
+        <pair id="edge1" type="pair/const/-/perm/noorien" id_b="node1" id_e="node3"/>
+        <pair id="edge2" type="pair/const/-/perm/noorien" id_b="node2" id_e="node1"/>
+        <pair id="edge3" type="pair/const/-/perm/noorien" id_b="node2" id_e="node3"/>
+        <pair id="edge4" type="pair/const/-/perm/noorien" id_b="node3" id_e="node4"/>
+        <pair id="edge5" type="pair/const/-/perm/noorien" id_b="node4" id_e="node5"/>
+        <pair id="edge6" type="pair/const/-/perm/noorien" id_b="node6" id_e="node4"/>
+        <pair id="edge7" type="pair/const/-/perm/noorien" id_b="node6" id_e="node5"/>
+        
+        <!-- Связь между графом и формализацией -->
+        <pair id="p10" type="pair/const/pos/perm/orient" id_b="graph" id_e="contour_graph"/>
+    </staticSector>
+</GWF>
