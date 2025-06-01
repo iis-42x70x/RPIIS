@@ -151,13 +151,18 @@ input_filename = "input.txt"
 
 <p align="center"><img src="images/image0.png", width=70%></p>
 
-<p align="center"><img src="images/image1.png", width=70%></p>
-
 <p align="center"><img src="images/image2.png", width=70%></p>
+
+<p align="center"><img src="images/image4.png", width=70%></p>
+
+## Примеры некорректных множеств
+
+<p align="center"><img src="images/image1.png", width=70%></p>
 
 <p align="center"><img src="images/image3.png", width=70%></p>
 
-<p align="center"><img src="images/image4.png", width=70%></p>
+<p align="center"><img src="images/image5.png", width=70%></p>
+
 
 
 ## Используемые  источники
