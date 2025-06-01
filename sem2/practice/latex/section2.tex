@@ -1,0 +1,152 @@
+\begin{SCn}
+\begin{small}
+
+\scnheader{Jason}
+\scnidtf{Инструмент и платформа для программирования многоагентных систем на базе языка AgentSpeak}
+\scnidtf{Платформа для разработки BDI-агентов (belief-desire-intention)}
+\scniselement{агентно-ориентированное программное обеспечение}
+\begin{scnrelfromlist}{разработчик}
+    \scnitem{Jomi F. Hübner}
+    \scnitem{Rafael H. Bordini}
+\end{scnrelfromlist}
+\scnrelfrom{год создания}{2005}
+\scntext{текущая стабильная версия}{2.5.1}
+\scntext{дата выпуска текущей версии}{30 января 2024}
+\scnrelfrom{лицензия}{GNU GPL v3}
+\scnrelfrom{язык разработки}{Java}
+\scntext{назначение}{Разработка и моделирование BDI-многоагентных систем с автономным поведением на основе логических правил и целей}
+\begin{scnrelfromset}{варианты исполнения}
+    \scnitem{Jason IDE}
+    \begin{scnindent}
+        \scnidtf{Встроенная среда разработки на базе Eclipse}
+        \scnnote{Поддержка редактирования кода на AgentSpeak, управление проектами, отладка и визуализация среды}
+    \end{scnindent}
+    \scnitem{Jason CLI}
+    \begin{scnindent}
+        \scnidtf{Командная оболочка для запуска MAS-программ Jason}
+        \scnnote{Позволяет исполнять агенты без GUI, подходит для серверного или тестового запуска}
+    \end{scnindent}
+\end{scnrelfromset}
+\begin{scnrelfromset}{функциональные возможности}
+    \scnfileitem{интерпретация планов BDI}
+    \scnfileitem{обработка отказов и метаданные планов}
+    \scnfileitem{интеграция с Java-библиотеками и пользовательскими внутренними действиями}
+    \scnfileitem{визуальные инструменты отладки («mind inspector»)}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{поддерживаемые языки}
+    \scnitem{AgentSpeak(L)}
+    \scnitem{FIPA-ACL (через JADE/SACI)}
+\end{scnrelfromset}
+\begin{scnrelfromset}{экосистема расширений}
+    \scnitem{Moise+}
+    \scnitem{Cartago}
+    \scnitem{Jason IDE}
+    \scnitem{FIPA Messaging}
+\end{scnrelfromset}
+\begin{scnrelfromset}{преимущества}
+    \scnfileitem{простота логического описания поведения агентов}
+    \scnfileitem{гибкость и расширяемость за счёт Java-интеграции}
+    \scnfileitem{хорошо подходит для академических и исследовательских проектов}
+    \scnfileitem{открытый исходный код и активное сообщество}
+    \scnfileitem{интеграция с JADE, OpenMAS и другими средами}
+\end{scnrelfromset}
+\begin{scnrelfromset}{недостатки}
+    \scnfileitem{относительно низкий уровень абстракции среды исполнения}
+    \scnfileitem{ограниченные графические средства моделирования и визуализации}
+    \scnfileitem{отсутствие встроенных средств машинного обучения или генерации поведения}
+\end{scnrelfromset}
+\begin{scnrelfromset}{библиографические источники}
+    \scnfileitem{Bordini R.H., Hübner J.F., Wooldridge M. Programming Multi-Agent Systems in AgentSpeak using Jason. Wiley, 2007.}
+    \scnfileitem{Jason [Электронный ресурс] // Официальный сайт. URL: https://jason.sourceforge.net (дата обращения: 12.05.2025).}
+    \scnfileitem{Bordini R.H., et al. Multi-Agent Programming: Languages, Tools and Applications. Springer, 2009.}
+\end{scnrelfromset}
+
+\scnheader{AutoGen}
+\scnidtf{Платформа для создания многоагентных систем, основанных на LLM и управляемых автогенерацией действий и ролей}
+\scniselement{средство для создания LLM-агентов}
+\scniselement{агентно-ориентированное программное обеспечение}
+\scnrelfrom{разработчик}{Microsoft Research}
+\scnrelfrom{год создания}{2023}
+\scnrelfrom{лицензия}{MIT}
+\scnrelfrom{текущая стабильная версия}{0.2.5}
+\scnrelfrom{дата выпуска текущей версии}{12 марта 2025}
+\scnrelfrom{язык разработки}{Python}
+\scntext{назначение}{Оркестровка агентов с LLM-ядером для автоматизации задач, требующих координации, общения и ролевой специализации}
+\scntext{архитектурные особенности}{AutoGen построен на взаимодействии между агентами, каждый из которых представляет собой LLM-инстанс с определённой ролевой функцией. Поддерживаются циклы общения, делегирование, принятие решений и выполнение задач через инструменты.}
+\begin{scnrelfromset}{варианты исполнения}
+    \scnitem{AutoGen Core}
+    \begin{scnindent}
+        \scntext{примечание}{Позволяет моделировать как одиночные агенты, так и команды с контролем ролевого поведения}
+    \end{scnindent}
+    \scnitem{AutoGen Studio (в разработке)}
+    \begin{scnindent}
+        \scnidtf{Визуальная среда проектирования многоагентных сценариев}
+    \end{scnindent}
+\end{scnrelfromset}
+\begin{scnrelfromset}{функциональные возможности}
+    \scnfileitem{ролевое программирование LLM-агентов}
+    \scnfileitem{создание сценариев кооперации, конкуренции, делегирования}
+    \scnfileitem{поддержка инструментов (функций, API), вызываемых агентами}
+    \scnfileitem{использование встроенной памяти и истории взаимодействия}
+    \scnfileitem{возможность асинхронного исполнения агентов}
+    \scnfileitem{интеграция с внешними API и локальными функциями через Python-интерфейсы}
+    \scnfileitem{обработка запросов, генерация текстов, планирование действий}
+\end{scnrelfromset}
+\begin{scnrelfromset}{поддерживаемые модели}
+    \scnitem{OpenAI GPT (через API)}
+    \scnitem{Azure OpenAI}
+    \scnitem{локальные модели через OpenAI-клонирующие интерфейсы (включая LM Studio)}
+\end{scnrelfromset}
+\begin{scnrelfromset}{преимущества}
+    \scnfileitem{гибкость построения диалоговых и функциональных цепочек агентов}
+    \scnfileitem{высокий уровень абстракции и простота настройки логики через Python}
+    \scnfileitem{интеграция с современными LLM для широкого круга задач}
+    \scnfileitem{поддержка автономных агентов с планированием и памятью}
+    \scnfileitem{активная разработка и поддержка со стороны Microsoft Research}
+\end{scnrelfromset}
+\begin{scnrelfromset}{недостатки}
+    \scnfileitem{зависимость от внешних LLM-платформ или ресурсов GPU}
+    \scnfileitem{относительная новизна и нестабильность некоторых функций}
+    \scnfileitem{отсутствие полноценной визуальной среды на момент мая 2025 года}
+    \scnfileitem{отсутствие встроенного редактора ролей и сценариев}
+\end{scnrelfromset}
+\begin{scnrelfromset}{библиографические источники}
+    \scnfileitem{AutoGen [Электронный ресурс] // GitHub repository. URL: https://github.com/microsoft/autogen (дата обращения: 12.05.2025).}
+    \scnfileitem{Liu B., Wang D., Wang Y. et al. AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation. arXiv preprint arXiv:2309.14610, 2023.}
+    \scnfileitem{Microsoft Research Blog on AutoGen. URL: https://www.microsoft.com/en-us/research/blog (дата обращения: 12.05.2025).}
+\end{scnrelfromset}
+
+\bigskip
+
+\scnheader{Сравнение систем Jason и AutoGen}
+\begin{scneqtovector}
+    \scnitem{Jason}
+    \scnitem{AutoGen}
+\end{scneqtovector}
+\begin{scnrelfromset}{сходства}
+    \scnfileitem{Поддерживают создание многоагентных систем}
+    \scnfileitem{Обеспечивают автономное поведение агентов}
+    \scnfileitem{Поддерживают межагентное взаимодействие и передачу сообщений}
+    \scnfileitem{Реализуют программную модель агентов с внутренним состоянием и логикой поведения}
+    \scnfileitem{Позволяют строить сложные сценарии взаимодействия}
+    \scnfileitem{Расширяются за счёт пользовательских функций и внешних библиотек}
+\end{scnrelfromset}
+\begin{scnrelfromset}{различия}
+    \scnfileitem{Jason ориентирован на BDI-модель и логическое программирование, AutoGen — на диалоговые LLM-модели и ролевую координацию}
+    \scnfileitem{Jason использует AgentSpeak и реализован на Java, AutoGen написан на Python и использует современные LLM (например, GPT-4)}
+    \scnfileitem{AutoGen предполагает наличие доступа к языковым моделям через API или локальные модели, Jason работает автономно}
+    \scnfileitem{Jason фокусируется на логике действий, перцепциях и намерениях, AutoGen — на генерации ответов, стратегий и коллаборации между LLM-агентами}
+    \scnfileitem{AutoGen ориентирован на автоматизацию LLM-задач (чтение, планирование, вызовы функций), Jason — на автономных программных агентов в искусственных средах}
+    \scnfileitem{Jason имеет зрелую экосистему и документацию, AutoGen — активно развивающийся, но ещё формирующийся проект}
+\end{scnrelfromset}
+\begin{scnrelfromset}{рекомендации по выбору}
+    \scnfileitem{Jason рекомендуется для учебных, исследовательских и симуляционных задач, связанных с классическими агентными моделями BDI}
+    \scnfileitem{Jason рекомендуется для учебных, исследовательских и симуляционных задач, связанных с классическими агентными моделями BDI}
+    \scnfileitem{AutoGen целесообразен для построения современных LLM-приложений с агентной координацией, включая ассистентов, планировщиков, агентов-аналитиков}
+    \scnfileitem{AutoGen предпочтителен при необходимости в высокоуровневом управлении агентами и взаимодействии с внешними системами через языковые модели}
+    \scnfileitem{Jason лучше подойдёт для реализации агентов в ограниченных средах, AutoGen — для задач, требующих гибкости, творчества и адаптивности через LLM}
+\end{scnrelfromset}
+
+\end{small}
+\end{SCn}

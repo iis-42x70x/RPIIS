@@ -1,0 +1,25 @@
+\input{preamble}
+\input{scn}
+\input{scn_alias}
+
+\begin{document}
+
+\input{title} 
+
+\pagenumbering{arabic}
+\setcounter{page}{2}
+
+\tableofcontents
+\newpage
+
+\input{content}
+
+% Если в тексте записки есть приложения, для добавления их в содержание, необходимо оставить слудеющую строку
+% Если приложений нет - данную строку добавляем в комментарий
+% \addcontentsline{toc}{section}{Список использованных источников}
+
+\nocite{*}
+\bibliography{bibliography}
+
+
+\end{document}

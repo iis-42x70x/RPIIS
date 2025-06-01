@@ -1,0 +1,288 @@
+\begin{SCn}
+\begin{small}
+
+\scnheader{AgentSpeak(Jason)}
+\scnidtf{Язык агентно-ориентированного программирования, разработанный Ананд С. Рао, Жоми Ф. Хюбнер и Рафаэл Х. Бордини}
+\scnidtf{AgentSpeak(L)}
+\scnidtf{AgentSpeak (Jason)}
+\scniselement{агентно-ориентированный язык}
+\begin{scnrelfromlist}{разработчик}
+    \scnitem{Ананд С. Рао}
+    \scnitem{Жоми Ф. Хюбнер}
+    \scnitem{Рафаэл Х. Бордини}
+\end{scnrelfromlist}
+\scnrelfrom{год создания}{1996}
+\scnrelfrom{основная парадигма}{декларативное и агентно-ориентированное программирование}
+\scntext{описание}{AgentSpeak — это агентно-ориентированный язык программирования, основанный на парадигме рациональных агентов BDI (Belief-Desire-Intention). Он позволяет разрабатывать интеллектуальных агентов, поведение которых определяется знаниями об окружающем мире (убеждения), целями (желания) и планами их достижения (намерения).}
+\scntext{описание}{Jason — это интерпретатор и расширение языка AgentSpeak, реализованный на Java. Он предоставляет среду разработки и выполнения для создания многоагентных систем, ориентированных на автономное поведение, реактивность и проактивность агентов.}
+\scntext{назначение}{AgentSpeak(Jason) активно используется в исследованиях в области искусственного интеллекта и для моделирования систем, где необходима автономия, адаптивность и взаимодействие между множеством интеллектуальных агентов.}
+\begin{scnrelfromset}{основные конструкции}
+    \scnfileitem{верование(belief)}
+    \scnfileitem{цель(goal)}
+    \scnfileitem{событие(event)}
+    \scnfileitem{план(plan)}
+    \scnfileitem{действие (action)}
+\end{scnrelfromset}
+\begin{scnrelfromset}{среды разработки}
+    \scnfileitem{Jason IDE}
+        \begin{scnindent}
+            \scnidtf{Графическая интегрированная среда разработки на базе Eclipse, предназначенная для создания, редактирования, исполнения и отладки программ на AgentSpeak(L)}
+        \end{scnindent}
+        
+        \begin{scnindent}
+            \scntext{примечание}{Обеспечивает удобный интерфейс для работы с агентами, включает подсветку синтаксиса, шаблоны кода, средства запуска и визуализации состояний агентов. Позволяет напрямую интегрировать Java-код, отлаживать логику BDI и наблюдать за перцепциями и планами в режиме исполнения.}
+        \end{scnindent}
+        \scnfileitem{Jason CLI (Command-Line Interface}
+    
+        \begin{scnindent}
+            \scntext{примечане}{Подходит для серверного исполнения, автоматического тестирования MAS-программ и встраивания Jason-агентов в более крупные системы. Позволяет быстро запускать .mas2j-проекты и получать вывод из среды агента.}
+        \end{scnindent}
+
+\scnfileitem{Jason + Moise+}
+    
+        \begin{scnindent}
+            \scntext{примечане}{Позволяет агентам действовать в соответствии с формально определённой организационной структурой: ролями, обязанностями, схемами взаимодействия. Используется для моделирования командной работы, иерархий и договорённостей между агентами.}
+        \end{scnindent}
+
+        \scnfileitem{Jason Web Integration / Jason-as-a-Service}
+    
+        \begin{scnindent}
+            \scntext{примечане}{Основано на создании REST-интерфейсов и запуске Jason-агентов как компонентов серверной логики. Используется в проектах по построению диалоговых агентов или облачных MAS.}
+        \end{scnindent}
+        
+\end{scnrelfromset}
+
+
+
+
+\scnrelfrom{стратегия вывода}{BDI–цикл рассуждения (выбор плана по событию)}
+\begin{scnrelfromlist}{поддержка}
+    \scnfileitem{асинхронная коммуникация речевыми актами}
+    \scnfileitem{параллельное выполнение агентов с независимыми циклами принятия решений}
+    \scnfileitem{обработка событий и целей с приоритетами и условиями активации}
+    \scnfileitem{интеграция с Java}
+    \scnfileitem{работа в распределённой среде}
+\end{scnrelfromlist}
+\begin{scnrelfromlist}{применение}
+    \scnitem{симуляцию поведения групп агентов (например, роботов)}
+    \scnitem{разработку интеллектуальных помощников}
+    \scnitem{обучение и моделирование в области ИИ}
+    \scnitem{соревнования Multi-Agent Programming Contest}
+\end{scnrelfromlist}
+
+\begin{scnrelfromset}{примеры использования}
+    \scnfileitem{Проект JADE and Jason Integration (Франция, INRIA)}
+    \scnfileitem{RoboCup Rescue Simulation League (Международные соревнования по спасательным роботам)}
+    \begin{scnindent}
+        \scnnote{Команды агентов (например, пожарные, медики, полицейские) были реализованы с помощью Jason и взаимодействовали в реальном времени с симулятором, принимая решения на основе перцепций (входных данных) и заранее определённых планов (например, «если здание горит и доступно, отправить агента тушить пожар»).}
+    \end{scnindent}
+    \scnfileitem{Исследование адаптивных умных домов (США, Университет Джорджии)}
+    \scnfileitem{Учебные проекты “Охотники за пищей”, “Wumpus World”}
+\end{scnrelfromset}
+\begin{scnrelfromset}{реализации}
+    \scnitem{Jason}
+    \scnitem{Python AgentSpeak}
+        \begin{scnindent}
+            \scntext{описание}{Неофициальная реализация AgentSpeak(L) на языке Python, ориентированная на образовательные и экспериментальные цели. Позволяет писать BDI-агентов с использованием синтаксиса, вдохновлённого Jason, но в среде Python.}
+        \end{scnindent}
+    \scnitem{AgentSpeak(XL), 2APL}
+    \begin{scnindent}
+            \scntext{описание}{Расширенная версия AgentSpeak, предложенная в рамках проекта 3APL/2APL, с дополнительными конструкциями для обработки планов и интеграции с внешними действиями. Обеспечивает более гибкое управление планами и возможностями агента.}
+        \end{scnindent}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{особенности}
+    \scnfileitem{простота логического описания поведения агентов}
+    \begin{scnindent}
+        \scnidtf{AgentSpeak использует декларативный подход для задания целей и поведения, приближённый к естественному языку рассуждений}
+    \end{scnindent}
+
+    \scnfileitem{гибкость и расширяемость}
+    \begin{scnindent}
+        \scnidtf{Jason поддерживает интеграцию с Java, что позволяет подключать собственные функции, библиотеки и компоненты среды}
+    \end{scnindent}
+
+    \scnfileitem{высокая пригодность для обучения и исследований}
+    \begin{scnindent}
+        \scnidtf{Jason активно используется в университетах и научных проектах благодаря
+открытости, документации и поддержке стандартов BDI}
+    \end{scnindent}
+
+    \scnfileitem{открытый исходный код}
+    \begin{scnindent}
+        \scnidtf{Jason распространяется по лицензии GPL и может быть модифицирован под
+конкретные задачи}
+    \end{scnindent}
+    
+    \scnfileitem{интеграция с организационными и средовыми расширениями}
+    \begin{scnindent}
+        \scnidtf{Поддержка Moise+ и CArtAgO позволяет моделировать сложные организационные и физические аспекты многoагентных систем}
+    \end{scnindent}
+
+    \scnfileitem{мощные средства отладки и визуали
+    зации}
+   \begin{scnindent}
+        \scnidtf{Средства визуального анализа BDI-состояний агентов в Jason IDE упрощают
+тестирование и верификацию поведения}
+    \end{scnindent}
+    
+\end{scnrelfromset}
+\begin{scnrelfromset}{ограничения}  
+    \scnfileitem{отсутствие исполняемой семантики}  
+        \begin{scnindent}  
+            \scnidtf{KIF описывает знания, но не предоставляет механизмов для выполнения действий}  
+        \end{scnindent}  
+        \begin{scnindent}  
+            \scntext{уточнение}{Требует интеграции с внешними движками (PowerLoom, Prolog) для логического вывода.}  
+        \end{scnindent}  
+    \scnfileitem{сложность синтаксиса}  
+        \begin{scnindent}  
+            \scnidtf{LISP-подобная скобочная нотация затрудняет освоение неподготовленными пользователями}  
+        \end{scnindent}  
+    \scnfileitem{ограниченная поддержка нечёткой логики}  
+        \begin{scnindent}  
+            \scnidtf{Нет встроенных средств для работы с вероятностными или нечёткими утверждениями}  
+        \end{scnindent}  
+        \begin{scnindent}  
+            \scntext{уточнение}{Требует расширений, как в проектах интеграции с fuzzy logic :cite[4].}  
+        \end{scnindent}  
+    \scnfileitem{слабая распространённость в промышленности}  
+        \begin{scnindent}  
+            \scnidtf{Вытеснен стандартами Semantic Web (OWL, RDF) в практических приложениях}  
+        \end{scnindent}  
+    \scnfileitem{отсутствие инструментов отладки}  
+        \begin{scnindent}  
+            \scnidtf{Нет встроенных средств визуализации логических противоречий в сложных онтологиях}  
+        \end{scnindent}  
+        \begin{scnindent}  
+            \scntext{уточнение}{Sigma IDE предоставляет базовую диагностику, но уступает современным инструментам.}  
+        \end{scnindent}  
+\end{scnrelfromset}  
+
+\begin{scnrelfromset}{библиографические источники}  
+    \scnfileitem{Genesereth M.R., Fikes R.E. Knowledge Interchange Format, Version 3.0 Reference Manual. Stanford University, 1992.}  
+    \scnfileitem{Gruber T.R. Ontolingua: A Mechanism to Support Portable Ontologies. Stanford KSL, 1992.}  
+    \scnfileitem{ISO/IEC 24707:2018 Information technology — Common Logic (CL).}  
+\end{scnrelfromset}  
+
+\scnheader{GOAL}
+\scnidtf{Агентно-ориентированный язык программирования для создания рациональных BDI-агентов, разработанный в Университете Утрехта (University of Utrecht), Нидерланды.}
+\scnidtf{GOAL (Goal-Oriented Agent Language)}
+\scniselement{агентно-ориентированный язык}
+\begin{scnrelfromlist}{разработчик}
+    \scnitem{Кожиман Субраманян (Koen Hindriks)}
+    \scnitem{Вирт Вербург (Virgil Verbrugge)}
+\end{scnrelfromlist}
+\scnrelfrom{год создания}{2001}
+\scnrelfrom{основная парадигма}{декларативное и агентно-ориентированное программирование, BDI-модель (Belief–Desire–Intention)}
+\scntext{описание}{GOAL — это специализированный язык программирования интеллектуальных агентов, основанный на BDI-модели, где агенты управляются своими убеждениями (Beliefs), целями (Goals) и действиями. Язык предоставляет декларативные средства для задания логики агентов и взаимодействия между ними.}
+\scntext{описание}{В GOAL акцент сделан на чистое разделение между знаниями и целями агента, а также на формальное определение условий активации планов. GOAL обеспечивает формальную верифицируемость поведения агентов, что делает его особенно подходящим для разработки надёжных автономных систем.}
+\scntext{назначение}{GOAL предназначен для создания интеллектуальных агентов, способных действовать автономно в динамической среде, принимать решения на основе текущих убеждений и целей, а также взаимодействовать с другими агентами в многоагентных системах.}
+\begin{scnrelfromset}{основные конструкции}
+    \scnfileitem{belief base (база знаний)}
+    \scnfileitem{goal base (база целей)}
+    \scnfileitem{conditional actions (условные действия)}
+    \scnfileitem{event module (обработка событий)}
+    \scnfileitem{action specifications (декларации действий)}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{среды разработки}
+    \scnfileitem{GOAL IDE}
+    \begin{scnindent}
+        \scnidtf{Интегрированная среда разработки, реализованная на Java, включает редактор, отладчик и симулятор поведения агентов}
+    \end{scnindent}
+        \begin{scnindent}
+            \scntext{примечание}{Позволяет программировать агентов, выполнять тестовые сценарии, визуализировать состояния когнитивной архитектуры и пошагово отслеживать принятие решений.}
+        \end{scnindent}
+    \scnfileitem{GOAL CLI}
+   \begin{scnindent}
+        \scnidtf{Командная среда для запуска и тестирования GOAL-программ без графического интерфейса}
+    \end{scnindent}
+        \begin{scnindent}
+            \scntext{примечание}{Подходит для пакетной обработки, CI-тестов и интеграции с другими системами.}
+        \end{scnindent}
+\end{scnrelfromset}
+
+\begin{scnrelfromset}{стратегия вывода}
+    \scnfileitem{событийно-управляемая активация планов (реактивный BDI-подход)}
+    \scnfileitem{оценка условий активации планов и выбор действий}
+\end{scnrelfromset}
+
+\begin{scnrelfromlist}{поддержка}
+    \scnfileitem{асинхронная коммуникация между агентами}
+    \scnfileitem{работа с логическими базами знаний и целями}
+    \scnfileitem{поддержка многозадачности на уровне агентов}
+    \scnfileitem{возможность формальной верификации поведения агентов}
+\end{scnrelfromlist}
+\begin{scnrelfromlist}{применение}
+    \scnitem{моделирование рационального поведения автономных агентов}
+    \scnitem{многоагентные симуляции и распределённые системы}
+    \scnitem{интеллектуальные роботы и виртуальные помощники}
+    \scnitem{автоматизация принятия решений}
+    \scnitem{игры и моделирование социальных сценариев}
+\end{scnrelfromlist}
+\begin{scnrelfromset}{примеры использования}
+    \scnfileitem{образовательные симуляции: курсы и лабораторные работы в Нидерландах и других странах по теме агентных систем}
+    \scnfileitem{многоагентные модели поведения в кризисных ситуациях и социальных симуляциях}
+    \scnfileitem{проекты по автономной навигации роботов на соревнованиях и в университетских лабораториях}
+    \scnfileitem{интеллектуальные помощники для планирования задач и поведения в виртуальных средах}
+    \scnfileitem{исследования в области автоматизации юридических рассуждений и логики обязательств}
+\end{scnrelfromset}
+\begin{scnrelfromset}{реализации}
+    \scnitem{GOAL Agent Programming Platform}
+    \scnitem{Eclipse Plugin for GOAL}
+    \scnitem{интеграция с среды Environments и MAS-tools}
+\end{scnrelfromset}
+\begin{scnrelfromset}{особенности}
+    \scnfileitem{логическая строгость и формальная семантика}
+    \scnfileitem{возможность верификации программ агентов}
+    \scnfileitem{модульность и чистое разделение когнитивных компонентов}
+    \scnfileitem{поддержка декларативных и реактивных моделей поведения}
+    \scnfileitem{интеграция с Java и Prolog}
+    \scnfileitem{использование в академических и исследовательских целях}
+\end{scnrelfromset}
+\begin{scnrelfromset}{ограничения}
+    \scnfileitem{менее развитая экосистема по сравнению с более популярными языками, как Prolog или Python}
+    \scnfileitem{высокий порог входа для новичков без подготовки в логике и агентных системах}
+    \scnfileitem{отсутствие поддержки динамически изменяемых структур данных}
+    \scnfileitem{ограниченная поддержка промышленных задач и интеграций}
+\end{scnrelfromset}
+\begin{scnrelfromset}{библиографические источники}
+    \scnfileitem{Hindriks K.V., de Boer F.S., van der Hoek W., Meyer J.-J.Ch. Agent Programming in GOAL: A Logic-Based Approach. AAMAS 2001. URL: https://homepages.cwi.nl/~koen/PUBLICATIONS/aamas2001.pdf}
+    \scnfileitem{GOAL Programming Platform. URL: https://goalapl.atlassian.net/}
+    \scnfileitem{Koen V. Hindriks. Programming Rational Agents using GOAL. Lecture Notes, TU Delft, 2023. URL: https://www.cs.tudelft.nl/~koen/}
+    \scnfileitem{Agent-Based Modelling and Simulation with GOAL: Applications and Techniques. Springer, 2021.}
+\end{scnrelfromset}
+
+\bigskip
+
+\scnheader{Сравнение языков логического программирования AgentSpeak(Jason) и GOAL}
+\begin{scneqtovector}
+    \scnitem{AgentSpeak(Jason)}
+    \scnitem{GOAL}
+\end{scneqtovector}
+\begin{scnrelfromset}{сходства}
+    \scnfileitem{Оба языка реализуют декларативный и агентно-ориентированный подход на основе BDI-модели (Belief–Desire–Intention)}
+    \scnfileitem{Позволяют описывать поведение интеллектуальных агентов с помощью убеждений, целей и планов}
+    \scnfileitem{Используют события и механизмы выбора планов для реагирования на изменения окружающей среды}
+    \scnfileitem{Предназначены для построения автономных, реактивных и проактивных агентов}
+    \scnfileitem{Поддерживают разработку многоагентных систем, взаимодействующих между собой}
+    \scnfileitem{Обладают формальной семантикой и используются в академических исследованиях и обучении}
+\end{scnrelfromset}
+\begin{scnrelfromset}{различия}
+    \scnfileitem{GOAL чётко разделяет убеждения и цели в отдельных базах, в то время как в Jason они более гибко определяются через события и планы}
+    \scnfileitem{GOAL акцентирует внимание на верифицируемости и логической строгости, Jason — на гибкости и расширяемости среды исполнения}
+    \scnfileitem{GOAL имеет собственную среду исполнения и инструменты отладки, Jason реализован как интерпретатор на Java и легко интегрируется с Java-приложениями}
+    \scnfileitem{GOAL использует декларативный стиль с логическими правилами для активации действий, в Jason планы записываются в императивной форме с условиями активации}
+    \scnfileitem{Jason поддерживает широкие возможности коммуникации через речевые акты, в GOAL коммуникация возможна, но реализуется менее подробно}
+    \scnfileitem{Jason активно применяется в международных соревнованиях (например, RoboCup), в то время как GOAL чаще используется в университетских исследованиях и обучении}
+\end{scnrelfromset}
+\begin{scnrelfromset}{рекомендации по выбору}
+    \scnfileitem{GOAL рекомендуется использовать в проектах, где важна формальная верификация поведения агентов, логическая строгость и моделирование когнитивных процессов}
+    \scnfileitem{GOAL хорошо подходит для обучения логике и основам BDI-подхода в университетских курсах}
+    \scnfileitem{AgentSpeak (Jason) целесообразно выбирать для создания гибких, расширяемых многоагентных систем с акцентом на взаимодействие, интеграцию с Java и участие в симуляциях или соревнованиях}
+    \scnfileitem{Jason удобен для прототипирования и разработки систем, где требуется динамическое поведение агентов и сложные речевые взаимодействия}
+\end{scnrelfromset}
+
+\end{small}
+\end{SCn}
