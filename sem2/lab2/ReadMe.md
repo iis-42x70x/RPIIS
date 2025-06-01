@@ -94,11 +94,11 @@ for все элементы B:
 ##### 4-й тест
 Исходные данные:
 
-<img src = "pok/1.png">
+<img src = "pok/2.png">
 
 Результат:
 
-<img src = "pok/2.png">
+<img src = "pok/1.png">
 
 
 ## Вывод
