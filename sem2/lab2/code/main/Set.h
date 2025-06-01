@@ -29,9 +29,12 @@ struct CustomSet {
     size_t size() const;
     CustomSet difference(const CustomSet& other) const;
     static string elementToString(const SetElement& element);
+    static SetElement parseToken(const string& token);
     static CustomSet parseFromString(const string& str);
     string toString() const;
 };
+
+string trim(const string& s);
 
 bool isValid(const string& str);
 

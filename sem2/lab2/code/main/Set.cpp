@@ -76,57 +76,98 @@ string CustomSet::elementToString(const SetElement& element) {
         }, element);
 }
 
+SetElement CustomSet::parseToken(const string& token) {
+    if (token.empty()) throw std::invalid_argument("Пустой элемент");
+
+    if (token.front() == '<' && token.back() == '>') {
+        vector<int> tuple;
+        string inner = token.substr(1, token.size() - 2);
+        stringstream ss(inner);
+        string num;
+        while (getline(ss, num, ',')) {
+            num = trim(num);
+            if (!num.empty()) {
+                tuple.push_back(stoi(num));
+            }
+        }
+        return tuple;
+    }
+
+    if (token.front() == '{' && token.back() == '}') {
+        unordered_set<string> innerSet;
+        string inner = token.substr(1, token.size() - 2);
+        stringstream ss(inner);
+        string word;
+        while (getline(ss, word, ',')) {
+            word = trim(word);
+            if (!word.empty()) {
+                innerSet.insert(word);
+            }
+        }
+        return innerSet;
+    }
+
+    try {
+        return stoi(token);
+    }
+    catch (...) {
+        return token;
+    }
+}
+
+
 CustomSet CustomSet::parseFromString(const string& str) {
     CustomSet result;
-    regex element_regex(R"((\{\s*[a-zA-Z_]\w*(\s*,\s*[a-zA-Z_]\w*)*\s*\}|<\s*\d+(\s*,\s*\d+)*\s*>|\d+))");
-    sregex_iterator it(str.begin(), str.end(), element_regex);
-    sregex_iterator end;
+    if (str.empty() || str.front() != '{' || str.back() != '}')
+        throw std::invalid_argument("Множество должно начинаться и заканчиваться фигурными скобками");
 
-    while (it != end) {
-        string token = it->str();
-        if (token == "{}") {
-            result.addElement(unordered_set<string>());
+    size_t i = 1;  // пропускаем первую {
+    string token;
+    stack<char> brackets;
+
+    while (i < str.size() - 1) {  // игнорируем последнюю }
+        char ch = str[i];
+
+        if (isspace(ch)) {
+            ++i;
+            continue;
         }
-        else if (token == "<>") {
-            result.addElement(vector<int>());
+
+        if (ch == '{' || ch == '<') {
+            token += ch;
+            brackets.push(ch);
+            ++i;
+            continue;
         }
-        else if (token[0] == '{') {
-            unordered_set<string> inner_set;
-            string inner = token.substr(1, token.size() - 2); 
-            stringstream ss(inner);
-            string item;
-            while (getline(ss, item, ',')) {
-                item = regex_replace(item, regex(R"(^\s+|\s+$)"), ""); 
-                if (!item.empty()) {
-                    inner_set.insert(item);
-                }
+
+        if ((ch == '}' && !brackets.empty() && brackets.top() == '{') ||
+            (ch == '>' && !brackets.empty() && brackets.top() == '<')) {
+            token += ch;
+            brackets.pop();
+            ++i;
+            continue;
+        }
+
+        if (ch == ',' && brackets.empty()) {
+            if (!token.empty()) {
+                result.addElement(parseToken(trim(token)));
+                token.clear();
             }
-            result.addElement(inner_set);
+            ++i;
+            continue;
         }
-        else if (token[0] == '<') {
-            vector<int> tuple;
-            regex num_regex(R"(\d+)");
-            sregex_iterator num_it(token.begin(), token.end(), num_regex);
-            while (num_it != end) {
-                tuple.push_back(stoi(num_it->str()));
-                ++num_it;
-            }
-            result.addElement(tuple);
-        }
-        else {
-            try {
-                int num = stoi(token);
-                result.addElement(num);
-            }
-            catch (...) {
-                result.addElement(token);
-            }
-        }
-        ++it;
+
+        token += ch;
+        ++i;
+    }
+
+    if (!token.empty()) {
+        result.addElement(parseToken(trim(token)));
     }
 
     return result;
 }
+
 
 string CustomSet::toString() const {
     stringstream ss;
@@ -138,6 +179,13 @@ string CustomSet::toString() const {
     ss << "}";
     return ss.str();
 }
+
+string trim(const string& s) {
+    size_t start = s.find_first_not_of(" \t\r\n");
+    size_t end = s.find_last_not_of(" \t\r\n");
+    return (start == string::npos) ? "" : s.substr(start, end - start + 1);
+}
+
 
 bool isValid(const std::string& str) {
     if (str.empty()) return false;
@@ -188,7 +236,6 @@ void solution(const std::string& filepath, bool isConst) {
     string line;
 
     while (getline(input, line)) {
-        // Добавляем только строки, содержащие символы кроме пробелов и табов
         if (line.find_first_not_of(" \t\r\n") != string::npos) {
             lines.push_back(line);
         }
