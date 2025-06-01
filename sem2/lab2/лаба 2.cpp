@@ -2,8 +2,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include <sstream>
-#include <utility>
+#include <stack>
 #include <unordered_set>
 
 using namespace std;
@@ -11,6 +10,7 @@ using namespace std;
 struct SetCollection {
     vector<vector<string>> sets;
 };
+
 
 void trim(string& str) {
     size_t start = str.find_first_not_of(" \t\n\r");
@@ -24,45 +24,68 @@ void trim(string& str) {
     }
 }
 
-bool is_balanced(const string& s) {
-    int balance_curly = 0;
-    int balance_angle = 0;
-    for (char c : s) {
-        if (c == '{') balance_curly++;
-        else if (c == '}') balance_curly--;
-        else if (c == '<') balance_angle++;
-        else if (c == '>') balance_angle--;
 
-        if (balance_curly < 0 || balance_angle < 0) return false;
+bool is_balanced(const string& s) {
+    stack<char> brackets;
+    for (char c : s) {
+        switch (c) {
+        case '{': case '<': case '(':
+            brackets.push(c);
+            break;
+        case '}':
+            if (brackets.empty() || brackets.top() != '{') return false;
+            brackets.pop();
+            break;
+        case '>':
+            if (brackets.empty() || brackets.top() != '<') return false;
+            brackets.pop();
+            break;
+        case ')':
+            if (brackets.empty() || brackets.top() != '(') return false;
+            brackets.pop();
+            break;
+        }
     }
-    return balance_curly == 0 && balance_angle == 0;
+    return brackets.empty();
 }
+
 
 bool is_set(const string& s) {
-    return (s.size() >= 2 && s.front() == '{' && s.back() == '}') ||
-        (s.size() >= 2 && s.front() == '<' && s.back() == '>');
+    if (s.size() < 2) return false;
+    return (s.front() == '{' && s.back() == '}') ||
+        (s.front() == '<' && s.back() == '>') ||
+        (s.front() == '(' && s.back() == ')');
 }
+
 
 vector<string> parse_element(const string& element) {
     vector<string> result;
     string current;
-    int curly_depth = 0;
-    int angle_depth = 0;
+    stack<char> brackets;
 
     for (char c : element) {
-        if (c == '{') curly_depth++;
-        else if (c == '}') curly_depth--;
-        else if (c == '<') angle_depth++;
-        else if (c == '>') angle_depth--;
-
-        if (c == ',' && curly_depth == 0 && angle_depth == 0) {
-            trim(current);
-            if (!current.empty()) {
-                result.push_back(current);
+        switch (c) {
+        case '{': case '<': case '(':
+            brackets.push(c);
+            current += c;
+            break;
+        case '}': case '>': case ')':
+            if (!brackets.empty()) brackets.pop();
+            current += c;
+            break;
+        case ',':
+            if (brackets.empty()) {
+                trim(current);
+                if (!current.empty()) {
+                    result.push_back(current);
+                }
+                current.clear();
             }
-            current.clear();
-        }
-        else {
+            else {
+                current += c;
+            }
+            break;
+        default:
             current += c;
         }
     }
@@ -75,6 +98,7 @@ vector<string> parse_element(const string& element) {
     return result;
 }
 
+
 void sort_set_elements(vector<string>& elements, bool is_ordered) {
     if (!is_ordered) {
         sort(elements.begin(), elements.end());
@@ -82,60 +106,72 @@ void sort_set_elements(vector<string>& elements, bool is_ordered) {
 }
 
 vector<string> parse_set(const string& set_str) {
-    vector<string> elements;
-    string content;
+    if (set_str.empty() || !is_set(set_str)) return {};
+
+    char open_char = set_str[0];
+    char close_char;
     bool is_ordered = false;
 
-    size_t start_brace = set_str.find('{');
-    size_t start_angle = set_str.find('<');
-
-    if (start_brace != string::npos && (start_angle == string::npos || start_brace < start_angle)) {
-       
-        size_t end_brace = set_str.rfind('}');
-        if (end_brace != string::npos) {
-            content = set_str.substr(start_brace + 1, end_brace - start_brace - 1);
-        }
-    }
-    else if (start_angle != string::npos) {
-       
-        is_ordered = true;
-        size_t end_angle = set_str.rfind('>');
-        if (end_angle != string::npos) {
-            content = set_str.substr(start_angle + 1, end_angle - start_angle - 1);
-        }
-    }
-    else {
-        return elements;
+    switch (open_char) {
+    case '{': close_char = '}'; break;
+    case '<': close_char = '>'; is_ordered = true; break;
+    case '(': close_char = ')'; break;
+    default: return {};
     }
 
-    elements = parse_element(content);
+    string content = set_str.substr(1, set_str.size() - 2);
+    vector<string> elements = parse_element(content);
     sort_set_elements(elements, is_ordered);
 
     return elements;
 }
 
+// Проверка корректности ввода
+bool validate_set_input(const string& line) {
+    if (!is_balanced(line)) {
+        return false;
+    }
+
+
+    bool in_set = false;
+    for (size_t i = 0; i < line.size(); i++) {
+        char c = line[i];
+
+        if (c == '{' || c == '<' || c == '(') {
+            in_set = true;
+        }
+        else if (c == '}' || c == '>' || c == ')') {
+            in_set = false;
+        }
+        else if (c == ',') {
+           
+            if (i == 0 || i == line.size() - 1 ||
+                line[i + 1] == '}' || line[i + 1] == '>' || line[i + 1] == ')') {
+                return false;
+            }
+    
+            if (i > 0 && line[i - 1] == ',') {
+                return false;
+            }
+        }
+    }
+
+    return true;
+}
+
 void parse_input(const string& line, SetCollection& collection) {
     size_t pos = 0;
     while (pos < line.size()) {
-        size_t start_curly = line.find('{', pos);
-        size_t start_angle = line.find('<', pos);
+        size_t start = line.find_first_of("{<(", pos);
+        if (start == string::npos) break;
 
-        size_t start;
-        char open_char, close_char;
-
-        if (start_curly != string::npos &&
-            (start_angle == string::npos || start_curly < start_angle)) {
-            start = start_curly;
-            open_char = '{';
-            close_char = '}';
-        }
-        else if (start_angle != string::npos) {
-            start = start_angle;
-            open_char = '<';
-            close_char = '>';
-        }
-        else {
-            break;
+        char open_char = line[start];
+        char close_char;
+        switch (open_char) {
+        case '{': close_char = '}'; break;
+        case '<': close_char = '>'; break;
+        case '(': close_char = ')'; break;
+        default: pos++; continue;
         }
 
         size_t end = start + 1;
@@ -148,7 +184,10 @@ void parse_input(const string& line, SetCollection& collection) {
 
         if (balance == 0) {
             string set_str = line.substr(start, end - start);
-            collection.sets.push_back(parse_set(set_str));
+            vector<string> set = parse_set(set_str);
+            if (!set.empty()) {
+                collection.sets.push_back(set);
+            }
             pos = end;
         }
         else {
@@ -157,55 +196,64 @@ void parse_input(const string& line, SetCollection& collection) {
     }
 }
 
+
 string normalize_element(const string& elem) {
     if (!is_set(elem)) return elem;
 
     bool is_ordered = (elem.front() == '<');
     string content = elem.substr(1, elem.size() - 2);
-    vector<string> nested_elements = parse_element(content);
+    vector<string> nested = parse_element(content);
 
     if (!is_ordered) {
-        sort(nested_elements.begin(), nested_elements.end());
+        sort(nested.begin(), nested.end());
     }
 
     string result;
-    result += is_ordered ? '<' : '{';
-    for (size_t i = 0; i < nested_elements.size(); ++i) {
+    result += elem.front();
+    for (size_t i = 0; i < nested.size(); ++i) {
         if (i > 0) result += ",";
-        result += normalize_element(nested_elements[i]);
+        result += normalize_element(nested[i]);
     }
-    result += is_ordered ? '>' : '}';
+    result += elem.back();
 
     return result;
 }
 
+
 bool elements_equal(const string& a, const string& b) {
-    string norm_a = normalize_element(a);
-    string norm_b = normalize_element(b);
-    return norm_a == norm_b;
+    return normalize_element(a) == normalize_element(b);
 }
 
+
 vector<string> symmetric_diff(const SetCollection& collection) {
-    vector<pair<string, int>> elements_count;
+    vector<pair<string, int>> elements;
 
     for (const auto& set : collection.sets) {
         for (const auto& elem : set) {
-            auto it = find_if(elements_count.begin(), elements_count.end(),
-                [&elem](const pair<string, int>& p) {
-                    return elements_equal(p.first, elem);
-                });
-            if (it != elements_count.end()) it->second++;
-            else elements_count.emplace_back(elem, 1);
+            bool found = false;
+            for (auto& p : elements) {
+                if (elements_equal(p.first, elem)) {
+                    p.second++;
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                elements.emplace_back(elem, 1);
+            }
         }
     }
 
     vector<string> result;
-    for (const auto& p : elements_count) {
-        if (p.second == 1) result.push_back(p.first);
+    for (const auto& p : elements) {
+        if (p.second == 1) {
+            result.push_back(p.first);
+        }
     }
 
     return result;
 }
+
 
 void print_set(const vector<string>& elements) {
     cout << "{";
@@ -232,11 +280,21 @@ int main() {
             string line;
             getline(cin, line);
             collection.sets.clear();
+
+            if (!validate_set_input(line)) {
+                cout << "Ошибка: некорректный ввод множеств!" << endl;
+                break;
+            }
+
             parse_input(line, collection);
             cout << "Считано множеств: " << collection.sets.size() << endl;
             break;
         }
         case 2:
+            if (collection.sets.empty()) {
+                cout << "Нет множеств для просмотра!" << endl;
+                break;
+            }
             for (size_t i = 0; i < collection.sets.size(); i++) {
                 cout << "Множество " << (i + 1) << ": ";
                 print_set(collection.sets[i]);
@@ -248,14 +306,14 @@ int main() {
                 cout << "Нужно минимум два множества!" << endl;
                 break;
             }
-            cout << "Симметрическая разность всех множеств: ";
+            cout << "Симметрическая разность: ";
             print_set(symmetric_diff(collection));
             cout << endl;
             break;
         case 4:
             return 0;
         default:
-            cout << "Неверный выбор\n";
+            cout << "Неверный выбор!" << endl;
         }
     }
 }
