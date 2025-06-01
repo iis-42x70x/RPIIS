@@ -33,7 +33,7 @@
 
 1. Classes:
 
-   ![image](https://github.com/user-attachments/assets/dd61448c-2669-4cc9-abf2-9df451619d8e)
+![image](https://github.com/user-attachments/assets/dd61448c-2669-4cc9-abf2-9df451619d8e)
    
 2. Object Properties:
 
