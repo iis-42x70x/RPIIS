@@ -12,17 +12,17 @@
     Сам текст(для **Protégé** вариант *29*, а для **KBE** вариант *29* (это текстовая задача) и вариант *12* (это 
     математическое выражение))
 
-    ![Var12_text.png](Var12_text.png)
-    ![Var29_text.png](Var29_text.png)
+    ![var12_text.png](var12_text.png)
+    ![var29_text.png](var29_text.png)
 ***
 # Решение:
 1. Формализация текста:
    - в [**Protégé**](https://github.com/iis-42x70x/RPIIS/blob/%D0%96%D0%B8%D0%BB%D0%B8%D0%BD_%D0%98/sem2/%D0%9F%D0%97/Var24.rdf)
    - в [**KBE**](https://github.com/iis-42x70x/RPIIS/blob/%D0%96%D0%B8%D0%BB%D0%B8%D0%BD_%D0%98/sem2/%D0%9F%D0%97/Var24.gwf)
-   ![Var29_kbe.png](Var29_kbe.png)
+   ![var29_kbe.png](var29_kbe.png)
 2. Формализация математического выражения:
    - в [**KBE**](https://github.com/iis-42x70x/RPIIS/blob/%D0%96%D0%B8%D0%BB%D0%B8%D0%BD_%D0%98/sem2/%D0%9F%D0%97/Var4.rdf) 
-   ![Var12_kbe.png](Var12_kbe.png)
+   ![var12_kbe.png](var12_kbe.png)
 ***
 # Вывод:
 В ходе работы заданный текст был формализован при помощи стандартов консорциума W3C, используя редактор Protégé, а также
