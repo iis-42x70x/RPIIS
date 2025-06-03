@@ -1,0 +1,394 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7/"
+     xml:base="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-7="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#было_прекращено_по_причине -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#было_прекращено_по_причине"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#в_версии -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#в_версии"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#находится_в -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#находится_в"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#начала_производство -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#начала_производство"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#под_названием -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#под_названием"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#производился_фирмой -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#производился_фирмой"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#сменил -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#сменил">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#снабжен -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#снабжен"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#собирали -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#собирали"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#является -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#является"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Год_начала_события -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Год_начала_события"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Год_окончания_события -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Год_окончания_события"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Год_смены -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Год_смены"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Количество_боковых_подушек_безопасности -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Количество_боковых_подушек_безопасности"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Количество_фронтальных_подушек_безопасности -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Количество_фронтальных_подушек_безопасности"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Месяц_окончания_события -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Месяц_окончания_события"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Месяц_события -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Месяц_события"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобили -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобили"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобильные_компании -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобильные_компании">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобили"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобильные_опции -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобильные_опции">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобили"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Производство -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Производство"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Размер_автомобиля -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Размер_автомобиля">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобили"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Рыночные_обстоятельства -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Рыночные_обстоятельства"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Страны -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Страны"/>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Технические_причины -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Технические_причины">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобили"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Тип_кузова -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Тип_кузова">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобили"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Adam_Opel_GmbH -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Adam_Opel_GmbH">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобильные_компании"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Astra_F -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Astra_F">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобили"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Chevrolet_Viva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Chevrolet_Viva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобили"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#GM-АВТОВАЗ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#GM-АВТОВАЗ">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобильные_компании"/>
+        <untitled-ontology-7:находится_в rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Российская_Федерация"/>
+        <untitled-ontology-7:начала_производство rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Производство_Opel_Astra_G_в_Российской_Федерации"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Opel_Astra_Classic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Opel_Astra_Classic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобили"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Opel_Astra_G -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Opel_Astra_G">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобили"/>
+        <untitled-ontology-7:производился_фирмой rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Adam_Opel_GmbH"/>
+        <untitled-ontology-7:сменил rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Astra_F"/>
+        <untitled-ontology-7:снабжен rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Боковые_подушки_безопасности"/>
+        <untitled-ontology-7:снабжен rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Трехточечные_ремни_безопасности"/>
+        <untitled-ontology-7:снабжен rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Фронтальные_подушки_безопасности"/>
+        <untitled-ontology-7:является rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Компактный_автомобиль"/>
+        <untitled-ontology-7:является rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Седан"/>
+        <untitled-ontology-7:Количество_боковых_подушек_безопасности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</untitled-ontology-7:Количество_боковых_подушек_безопасности>
+        <untitled-ontology-7:Количество_фронтальных_подушек_безопасности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</untitled-ontology-7:Количество_фронтальных_подушек_безопасности>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#АвтоЗАЗ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#АвтоЗАЗ">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобильные_компании"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Боковые_подушки_безопасности -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Боковые_подушки_безопасности">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобильные_опции"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Компактный_автомобиль -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Компактный_автомобиль">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Размер_автомобиля"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Нехватка_мощностей_на_конвейере -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Нехватка_мощностей_на_конвейере">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Технические_причины"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Низкий_спрос -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Низкий_спрос">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Рыночные_обстоятельства"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Производство_Opel_Astra_G_в_Российской_Федерации -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Производство_Opel_Astra_G_в_Российской_Федерации">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Производство"/>
+        <untitled-ontology-7:было_прекращено_по_причине rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Низкий_спрос"/>
+        <untitled-ontology-7:в_версии rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Седан"/>
+        <untitled-ontology-7:под_названием rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Chevrolet_Viva"/>
+        <untitled-ontology-7:Год_начала_события rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2004</untitled-ontology-7:Год_начала_события>
+        <untitled-ontology-7:Год_окончания_события rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2004</untitled-ontology-7:Год_окончания_события>
+        <untitled-ontology-7:Месяц_окончания_события>март</untitled-ontology-7:Месяц_окончания_события>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Производство_Opel_Astra_G_на_Украине -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Производство_Opel_Astra_G_на_Украине">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Производство"/>
+        <untitled-ontology-7:было_прекращено_по_причине rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Нехватка_мощностей_на_конвейере"/>
+        <untitled-ontology-7:находится_в rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Украина"/>
+        <untitled-ontology-7:под_названием rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Opel_Astra_Classic"/>
+        <untitled-ontology-7:Год_начала_события rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2004</untitled-ontology-7:Год_начала_события>
+        <untitled-ontology-7:Год_окончания_события>конец 2008</untitled-ontology-7:Год_окончания_события>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Российская_Федерация -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Российская_Федерация">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Страны"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Седан -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Седан">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Тип_кузова"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Трехточечные_ремни_безопасности -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Трехточечные_ремни_безопасности">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобильные_опции"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Украина -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Украина">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Страны"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Фронтальные_подушки_безопасности -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Фронтальные_подушки_безопасности">
+        <rdf:type rdf:resource="http://www.semanticweb.org/redmibook/ontologies/2025/4/untitled-ontology-7#Автомобильные_опции"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
