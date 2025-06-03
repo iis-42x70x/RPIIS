@@ -113,11 +113,24 @@ _Множество_ - математическая структура, соде
 10. Выводится сообщение: "Union result has been written to the file: " + outputPath.
 
 # Пример работы программы
-## Исходный текстовый файл
+## Исходный текстовый файл(1)
 ![union_input_plug.png](https://github.com/iis-42x70x/RPIIS/blob/%D0%A0%D1%8F%D0%B1%D0%B0%D1%8F_%D0%AE/sem2/img/union_input_plug.png)
 ## Работа программы
 ![union_work.png](https://github.com/iis-42x70x/RPIIS/blob/%D0%A0%D1%8F%D0%B1%D0%B0%D1%8F_%D0%AE/sem2/img/union_work.png)
-## Вывод в текстовом файле
-![union_output_plug.png](https://github.com/iis-42x70x/RPIIS/blob/%D0%A0%D1%8F%D0%B1%D0%B0%D1%8F_%D0%AE/sem2/img/union_output_plug.png)
-
-Вывод: Реализована программа объединения произвольного количества множеств без учета кратного вхождения.
+## Исходный текстовый файл(2)
+![image](https://github.com/user-attachments/assets/5fed85e8-aa79-47a3-871d-80b0a35ac335)
+## Работа программы
+![image](https://github.com/user-attachments/assets/571eb5b7-35a6-47e7-b06d-75c3cc13b704)
+## Исходный текстовый файл(3)
+![image](https://github.com/user-attachments/assets/1ac028aa-2a80-4571-bdc7-e16778cb09cb)
+## Работа программы
+![image](https://github.com/user-attachments/assets/1213526a-877b-4f20-97d0-7a75a8d8ae48)
+## Исходный текстовый файл(4)
+![image](https://github.com/user-attachments/assets/b4b9b4ef-ab27-43b7-9a46-3364c99ea514)
+## Работа программы
+![image](https://github.com/user-attachments/assets/b5470b02-3499-498e-afb5-7b5d78d63525)
+## Исходный текстовый файл(4)
+![image](https://github.com/user-attachments/assets/bfcea997-41a9-4150-825a-5b4b721a9c56)
+## Работа программы
+![image](https://github.com/user-attachments/assets/f85796be-4608-4b7b-b965-cb8a8598a84e)
+## Вывод: Реализована программа объединения произвольного количества множеств без учета кратного вхождения.
