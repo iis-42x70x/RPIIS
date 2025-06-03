@@ -9,20 +9,20 @@
     - При помощи стандарта консорциума W3C, используя редактор **Protégé**.
     - При помощи стандартов технологии **OSTIS**, используя редактор **KBE** и язык **SCg**.
 
-    Сам текст(для **Protégé** вариант *24*, а для **KBE** вариант *24* (это текстовая задача) и вариант *2* (это 
+    Сам текст(для **Protégé** вариант *29*, а для **KBE** вариант *29* (это текстовая задача) и вариант *12* (это 
     математическое выражение))
 
-    ![Var4_text.png](Var4_text.png)
-    ![Var24_text.png](Var24_text.png)
+    ![var12_text.png](var12_text.png)
+    ![var29_text.png](var29_text.png)
 ***
 # Решение:
 1. Формализация текста:
    - в [**Protégé**](https://github.com/iis-42x70x/RPIIS/blob/%D0%96%D0%B8%D0%BB%D0%B8%D0%BD_%D0%98/sem2/%D0%9F%D0%97/Var24.rdf)
    - в [**KBE**](https://github.com/iis-42x70x/RPIIS/blob/%D0%96%D0%B8%D0%BB%D0%B8%D0%BD_%D0%98/sem2/%D0%9F%D0%97/Var24.gwf)
-   ![Var24_kbe.png](Var24_kbe.png)
+   ![var29_kbe.png](var29_kbe.png)
 2. Формализация математического выражения:
    - в [**KBE**](https://github.com/iis-42x70x/RPIIS/blob/%D0%96%D0%B8%D0%BB%D0%B8%D0%BD_%D0%98/sem2/%D0%9F%D0%97/Var4.rdf) 
-   ![Var4_kbe.png](Var4_kbe.png)
+   ![var12_kbe.png](var12_kbe.png)
 ***
 # Вывод:
 В ходе работы заданный текст был формализован при помощи стандартов консорциума W3C, используя редактор Protégé, а также
