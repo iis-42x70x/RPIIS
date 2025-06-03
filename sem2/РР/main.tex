@@ -1,0 +1,187 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[russian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{anyfontsize}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\geometry{
+a4paper,
+left=20mm,
+right=20mm,
+top=15mm,
+bottom=15mm
+}
+\begin{document}
+\thispagestyle{empty}
+\begin{titlepage}
+  \begin{center}
+    Министерство образования Республики Беларусь\\[1em]
+    Учреждение образования\\
+    БЕЛОРУССКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ \\
+    ИНФОРМАТИКИ И РАДИОЭЛЕКТРОНИКИ\\[1em]
+
+    \begin{minipage}{\textwidth}
+      \begin{flushleft}
+        \begin{tabular}{ l l }
+          Факультет & Информационных технологий и управления\\
+          Кафедра   & Интеллектуальных информационных технологий
+        \end{tabular}
+      \end{flushleft}
+    \end{minipage}\\[1em]
+
+    \vspace{5em}
+
+
+    \textbf{РАСЧЕТНАЯ РАБОТА}\\
+    {по дисциплине <<Представление и обработка данных в интеллектуальных системах>>}\\
+    на тему\\
+    \textbf{\large Найти число вершинной связности для неориентированного графа.}\\[1em]
+
+    \vspace{10em}
+    
+    \begin{tabular}{ p{0.65\textwidth}p{0.25\textwidth} }
+      Выполнил:& П.\,Д.~Туровец \\[1em]
+      Студент группы& \\
+      421701 & \\
+      Проверил: & Н.\,В.~Малиновская \\
+     
+    \end{tabular}
+    
+    \vfill
+    {\normalsize Минск 2025}
+  \end{center}
+\end{titlepage}
+\section*{Ключевые понятия}
+Граф — математическая абстракция реальной системы любой природы, объекты которой обладают парными связями.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{Граф.png}
+\caption{Пример графа}
+\label{fig:graph}
+\end{figure}
+Неориентированный граф — это математическая структура, представляющая собой набор вершин и рёбер, где рёбра не имеют направления.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{NotorientedGraph.png}
+\caption{Пример неориентированного графа}
+\end{figure}
+\section*{Алгоритм решения}
+\begin{enumerate}[leftmargin=*,itemsep=2pt,parsep=2pt]
+\item Задается неориентированный граф
+\item Алгоритм последовательно рассматривает все пары вершин в графе (например, вершина 1 и вершина 2, вершина 1 и вершина 3 и так далее).
+\item Для каждой пары вершин алгоритм создает копию исходного графа, чтобы не изменять оригинальные данные.
+\item Для каждой пары вершин, алгоритм использует поиск в ширину (BFS) для нахождения путей, использующих уникальные рёбра, между этими вершинами в графе.
+\item Кол-во уникальных путей между вершинами, учитывая, что пропускная способность каждого ребра равна 1, сравнивается с сохранённым значением, минимальное из них равно числу вершинной связности.
+\item После вычисления путей, алгоритм обновляет копию графа.
+\end{enumerate}
+\section*{Демонстрация работы программы в семантической памяти}
+\begin{enumerate}[leftmargin=*,itemsep=2pt,parsep=2pt]
+\item Задаем неориентированный граф
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{pic1.png}
+\caption{Неориентированный граф}
+\end{figure}
+\item Перебираются все упорядоченные пары вершин (source, target) такие, что source < target. Рассмотрим первую пару: (A, B). Начинаем поиск пути между вершинами через BFS. Берём вершину A и заносим её в список visited.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth]{pic2.png}
+\caption{Начало обхода пары (А, B) с вершины А, занесение A в visited}
+\end{figure}
+\item Проверяем вершину B: ребро A-B cуществует и B не посещена. Проверим и записываем новое значение числа вершнииой связности
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth]{pic3.png}
+\caption{BFS в паре (A, B)}
+\end{figure}
+\item Берём следующие пары. Остальные пары будут пропущены в формализации. Рассмотрим сразу пару (C, D), т.к. она даст полное понимание алгоритма. Начинаем поиск пути между вершинами через BFS. Берём вершину C и заносим её в список visited.   
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{pic4.png}
+\caption{Занесение С в очищеный список visited}
+\end{figure}
+\item Проверяем вершину A, она ещё не посещена и имеет ребро с C. Заносим её в visited.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{pic5.png}
+\caption{Проверка А}
+\end{figure}
+\item Вершина B не имеет ребра с C, пропускае её. Идём к вершине C, пропускаем вершину, являющююся исходной. С вершиной D так же нет ребра, пропускаем и её. Все вершины проверены и мы переходим к следующей итерации: следующая вершина в очереди - A. Начинаем обходить с неё
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{pic2.png}
+\caption{Начало новой итерации с А}
+\end{figure}
+\item  Проверяем вершину A, пропускаем связь "сам с собой". Переходим к вершине B: ребро с A имеется и B ещё не посещена. Заносим в visited и кладём в очередь.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{pic6.png}
+\caption{Проверка А}
+\end{figure}
+\item Проверяем вершину C, уже посещяли, значит пропускаем. Смотрим на вершину D: ребро A-D существует, D ещё не посещена и является искомой. Проверим результат, так-же равен 1.
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{pic7.png}
+\caption{Проверка D}
+\end{figure}
+\end{enumerate}
+\section*{Примеры}
+\subsection*{Первый тест}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.1\linewidth]{ex11.png}
+\caption{Входные данные первого теста}
+\includegraphics[width=0.8\linewidth]{ex12.png}
+\caption{Выходные данные первого теста}
+\end{figure}
+\subsection*{Второй тест}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.2\linewidth]{ex21.png}
+\caption{Входные данные второго теста}
+\includegraphics[width=0.9\linewidth]{ex22.png}
+\caption{Выходные данные второго теста}
+\end{figure}
+\subsection*{Третий тест}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.1\linewidth]{ex31.png}
+\caption{Входные данные третьего теста}
+\includegraphics[width=0.8\linewidth]{ex32.png}
+\caption{Выходные данные третьего теста}
+\end{figure}
+\subsection*{Четвёртый тест}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.1\linewidth]{ex41.png}
+\caption{Входные данные четвёртого теста}
+\includegraphics[width=0.8\linewidth]{ex42.png}
+\caption{Выходные данные четвёртого теста}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.1\linewidth]{Формализация.png}
+\caption{Формализация понятия "неориентированный граф"}
+\end{figure}
+\section*{Вывод}
+В результате выполнения данной расчётной работы был формализован алгоритм построения каркаса графа, были изучены:
+\begin{itemize}[leftmargin=*,itemsep=2pt,parsep=2pt]
+\item Основы теории графов
+\item Способы представления графов
+\item Базовые алгоритмы для работы с графами
+\item Основы SC-кода и SC-алфавита
+\item Базовые знания о SCg-коде
+\item Правила формирования идентификаторов sc-элементов
+\end{itemize}
+\section*{Источники}
+\begin{itemize}[leftmargin=*,itemsep=2pt,parsep=2pt]
+\item \href{https://drive.google.com/drive/folders/1RSriLOZWpxyozHjUa1Kz3uZtIr0PixVh}{Руководство к выполнению РР}
+\end{itemize}
+\end{document}
