@@ -93,6 +93,7 @@ int main()
 }
 
 void SegmentTree::buildTree(vector<int>& arr, int v, int left, int right) {
+    if (arr.empty()) return;
     if (left == right - 1) {
         tree[v] = arr[left] == key ? 1 : 0;
     }
