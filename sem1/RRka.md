@@ -36,31 +36,30 @@
 **Примеры выполнения задания:**
 
 Тест 1) 
-<p  align="center">
+<p>
     <img src="T1.jpg" width ""height"" >
 </p>
 
 ---
 Тест 2) 
-<p  align="center">
+<p>
     <img src="T2.jpg" width ""height"" >
 </p>
 
 ---
 Тест 3) 
-<p  align="center">
+<p>
     <img src="T3.jpg" width ""height"" >
 </p>
 
 ---
 Тест 4)    
-<p  align="center">
-    <img src="T4.jpg" width ""height"" >
-</p>
+![image](https://github.com/user-attachments/assets/372139dc-3d69-4c5f-9911-ab2dbc1669a5)
+
 
 ---
 Тест 5) 
-<p  align="center">
+<p>
     <img src="T5.jpg" width ""height"" >
 </p>
 
