@@ -36,21 +36,18 @@
 **Примеры выполнения задания:**
 
 Тест 1) 
-<p>
-    <img src="T1.jpg" width ""height"" >
-</p>
+![image](https://github.com/user-attachments/assets/9dae4d73-f2e7-4cb5-82e4-8c441792054d)
+
 
 ---
 Тест 2) 
-<p>
-    <img src="T2.jpg" width ""height"" >
-</p>
+![image](https://github.com/user-attachments/assets/768f34b2-3c7b-4503-89d4-33110077de62)
+
 
 ---
 Тест 3) 
-<p>
-    <img src="T3.jpg" width ""height"" >
-</p>
+![image](https://github.com/user-attachments/assets/22e3380a-4c9d-4ef7-a708-d82c30baedb7)
+
 
 ---
 Тест 4)    
@@ -59,9 +56,8 @@
 
 ---
 Тест 5) 
-<p>
-    <img src="T5.jpg" width ""height"" >
-</p>
+![image](https://github.com/user-attachments/assets/1e616998-7207-4974-8b19-3e546c2e84c6)
+
 
 ---
 
