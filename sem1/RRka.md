@@ -36,26 +36,31 @@
 **Примеры выполнения задания:**
 
 Тест 1) 
+
 ![image](https://github.com/user-attachments/assets/9dae4d73-f2e7-4cb5-82e4-8c441792054d)
 
 
 ---
 Тест 2) 
+
 ![image](https://github.com/user-attachments/assets/768f34b2-3c7b-4503-89d4-33110077de62)
 
 
 ---
 Тест 3) 
+
 ![image](https://github.com/user-attachments/assets/22e3380a-4c9d-4ef7-a708-d82c30baedb7)
 
 
 ---
 Тест 4)    
+
 ![image](https://github.com/user-attachments/assets/372139dc-3d69-4c5f-9911-ab2dbc1669a5)
 
 
 ---
 Тест 5) 
+
 ![image](https://github.com/user-attachments/assets/1e616998-7207-4974-8b19-3e546c2e84c6)
 
 
