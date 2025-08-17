@@ -1,0 +1,484 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/msc55/ontologies/2025/4/untitled-ontology-18"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/msc55/ontologies/2025/4/untitled-ontology-18">
+    <Prefix name="" IRI="http://www.semanticweb.org/msc55/ontologies/2025/4/untitled-ontology-18/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Аллотропная_форма"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Атомный_номер"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Вещество"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Группа"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Люди"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Период"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Процесс"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Символ"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#События_открытия"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Физическая_величина"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Физическое_состояние"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Химики"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Химическая_сущность"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Химический_элемент"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Цвет"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#был_открыт_в"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#зависит_от_температуры"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#имееет_состояние"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#имеет_аллотропную_форму"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#имеет_атомный_номер"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#имеет_символ"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#имеет_цвет"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#нажодиться_в_периоде"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#открыт_кем"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#получен_путём_реакции_с"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#получен_через_процесс"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#принадлежит_группе"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#год_открытия"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#значение_атомного_номера"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#значение_группы"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#значение_периода"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#значение_символа"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#латинское_имя"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#число_форм"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Бор"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ж.Гей_Люссак"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Л.Тенар"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#аморфное"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#бесцветный"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#борный_ангидрид"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#группа_13"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#калий"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#красный"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#кристаллическое"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#нагревание"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#неопределенное"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#номер_5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#открытия_1808"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#период_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#серый"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#символ_B"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#темный"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#температура"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#формы_10"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Аллотропная_форма"/>
+        <Class IRI="#Химическая_сущность"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Атомный_номер"/>
+        <Class IRI="#Аллотропная_форма"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Вещество"/>
+        <Class IRI="#Химическая_сущность"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Химики"/>
+        <Class IRI="#Люди"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Химический_элемент"/>
+        <Class IRI="#Химическая_сущность"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Люди"/>
+        <Class IRI="#Химическая_сущность"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Процесс"/>
+        <Class IRI="#Химическая_сущность"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Физическое_состояние"/>
+        <Class IRI="#Цвет"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Химический_элемент"/>
+        <NamedIndividual IRI="#Бор"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Химики"/>
+        <NamedIndividual IRI="#Ж.Гей_Люссак"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Химики"/>
+        <NamedIndividual IRI="#Л.Тенар"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Физическое_состояние"/>
+        <NamedIndividual IRI="#аморфное"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Цвет"/>
+        <NamedIndividual IRI="#бесцветный"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Вещество"/>
+        <NamedIndividual IRI="#борный_ангидрид"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Группа"/>
+        <NamedIndividual IRI="#группа_13"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Вещество"/>
+        <NamedIndividual IRI="#калий"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Цвет"/>
+        <NamedIndividual IRI="#красный"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Физическое_состояние"/>
+        <NamedIndividual IRI="#кристаллическое"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Процесс"/>
+        <NamedIndividual IRI="#нагревание"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Физическое_состояние"/>
+        <NamedIndividual IRI="#неопределенное"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Атомный_номер"/>
+        <NamedIndividual IRI="#номер_5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#События_открытия"/>
+        <NamedIndividual IRI="#открытия_1808"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Период"/>
+        <NamedIndividual IRI="#период_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Цвет"/>
+        <NamedIndividual IRI="#серый"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Символ"/>
+        <NamedIndividual IRI="#символ_B"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Цвет"/>
+        <NamedIndividual IRI="#темный"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Физическая_величина"/>
+        <NamedIndividual IRI="#температура"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Аллотропная_форма"/>
+        <NamedIndividual IRI="#формы_10"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#был_открыт_в"/>
+        <NamedIndividual IRI="#Бор"/>
+        <NamedIndividual IRI="#открытия_1808"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#имееет_состояние"/>
+        <NamedIndividual IRI="#Бор"/>
+        <NamedIndividual IRI="#аморфное"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#имееет_состояние"/>
+        <NamedIndividual IRI="#Бор"/>
+        <NamedIndividual IRI="#кристаллическое"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#имееет_состояние"/>
+        <NamedIndividual IRI="#Бор"/>
+        <NamedIndividual IRI="#неопределенное"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#имеет_аллотропную_форму"/>
+        <NamedIndividual IRI="#Бор"/>
+        <NamedIndividual IRI="#формы_10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#имеет_атомный_номер"/>
+        <NamedIndividual IRI="#Бор"/>
+        <NamedIndividual IRI="#номер_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#имеет_символ"/>
+        <NamedIndividual IRI="#Бор"/>
+        <NamedIndividual IRI="#символ_B"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#имеет_цвет"/>
+        <NamedIndividual IRI="#Бор"/>
+        <NamedIndividual IRI="#бесцветный"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#имеет_цвет"/>
+        <NamedIndividual IRI="#Бор"/>
+        <NamedIndividual IRI="#красный"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#имеет_цвет"/>
+        <NamedIndividual IRI="#Бор"/>
+        <NamedIndividual IRI="#серый"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#имеет_цвет"/>
+        <NamedIndividual IRI="#Бор"/>
+        <NamedIndividual IRI="#темный"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#нажодиться_в_периоде"/>
+        <NamedIndividual IRI="#Бор"/>
+        <NamedIndividual IRI="#период_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#получен_путём_реакции_с"/>
+        <NamedIndividual IRI="#Бор"/>
+        <NamedIndividual IRI="#борный_ангидрид"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#получен_путём_реакции_с"/>
+        <NamedIndividual IRI="#Бор"/>
+        <NamedIndividual IRI="#калий"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#получен_через_процесс"/>
+        <NamedIndividual IRI="#Бор"/>
+        <NamedIndividual IRI="#нагревание"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#принадлежит_группе"/>
+        <NamedIndividual IRI="#Бор"/>
+        <NamedIndividual IRI="#группа_13"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#открыт_кем"/>
+        <NamedIndividual IRI="#открытия_1808"/>
+        <NamedIndividual IRI="#Ж.Гей_Люссак"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#открыт_кем"/>
+        <NamedIndividual IRI="#открытия_1808"/>
+        <NamedIndividual IRI="#Л.Тенар"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#зависит_от_температуры"/>
+        <NamedIndividual IRI="#формы_10"/>
+        <NamedIndividual IRI="#температура"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#латинское_имя"/>
+        <NamedIndividual IRI="#Бор"/>
+        <Literal>Borum</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#значение_группы"/>
+        <NamedIndividual IRI="#группа_13"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">13</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#значение_атомного_номера"/>
+        <NamedIndividual IRI="#номер_5"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#год_открытия"/>
+        <NamedIndividual IRI="#открытия_1808"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1808</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#значение_периода"/>
+        <NamedIndividual IRI="#период_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#значение_символа"/>
+        <NamedIndividual IRI="#символ_B"/>
+        <Literal>&quot;B&quot;</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#число_форм"/>
+        <NamedIndividual IRI="#формы_10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#зависит_от_температуры"/>
+        <Class IRI="#Аллотропная_форма"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#имееет_состояние"/>
+        <Class IRI="#Химический_элемент"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#имеет_цвет"/>
+        <Class IRI="#Химический_элемент"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#получен_через_процесс"/>
+        <Class IRI="#Химический_элемент"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#зависит_от_температуры"/>
+        <Class IRI="#Физическая_величина"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#имееет_состояние"/>
+        <Class IRI="#Физическое_состояние"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#имеет_цвет"/>
+        <Class IRI="#Цвет"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#получен_через_процесс"/>
+        <Class IRI="#Процесс"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#латинское_имя"/>
+        <Class IRI="#Химический_элемент"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#латинское_имя"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#бесцветный</IRI>
+        <Literal>Связан с кристаллическим состоянием бора</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#красный</IRI>
+        <Literal>Связан с кристаллическим состоянием бора</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#серый</IRI>
+        <Literal>Связан с кристаллическим состоянием бора</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#темный</IRI>
+        <Literal>Связан с аморфным состоянием бора</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
