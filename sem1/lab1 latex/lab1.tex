@@ -1,0 +1,319 @@
+\documentclass[10pt, a4paper, twocolumn]{article}
+%❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤ 
+\usepackage{enumerate}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol} %колонки
+\usepackage{setspace} %межстрочный интервал
+\usepackage{ragged2e}% выравнивания текста по ширине в документе.
+\usepackage{fancyhdr} %настройки верхнего и нижнего колонтитулов в документе.
+\usepackage{titlesec} %стилей заголовков разделов в документе.
+\usepackage{enumitem} %настройки списков в документе.
+\usepackage{graphicx}%Вставка картинок правильная
+\usepackage{float}%"Плавающие" картинки
+\usepackage{wrapfig}%Обтекание фигур (таблиц, картинок и прочего)
+
+\usepackage[left=1.9cm,right=1.9cm, top=2.2cm,bottom=2.5cm]{geometry}
+
+\justifying % выравнивает текст по ширине.
+\fancyhf{} %очищает все верхние и нижние колонтитулы.
+\renewcommand{\headrulewidth}{0pt} % remove the header rule
+\cfoot{\vskip -1.5cm \thepage} %устанавливает номер страницы в нижнем колонтитуле.
+\linespread{0.96} %устанавливает межстрочный интервал в 0.95.
+\setlength{\columnsep}{0.35cm}
+\setcounter{page}{66}
+\renewcommand{\thesection}{\Roman{section}} %устанавливает стиль нумерации разделов в виде заглавных римских цифр.
+
+\titleformat{\section}{\footnotesize\centering\sc}{\thesection.}{0cm}{}[] %настраивает стиль заголовков разделов.
+\begin{document}
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+    \item  $n_{s_{l_{v}}}$ $\in $ \ ($\mathbb{\bar N}$ $\cup$ \{0\}) \ \textbf{--- } the index of the last vacant segment in sc-memory;
+    \item $n_{s_{l_{r}}}$ $\in $  \ ($\mathbb{\bar N}$ $\cup$ \{0\}) --- the index of the last released segment in sc-memory;
+    \item $m_{s}$ $\in $  \textit{M} --- the object that synchronizes access to \textit{S},  $n_{s_{l_{e}}}$ and $n_{s_{max}}$;
+    \item $m^n_{s_{l_{r}}}$$\in $ \textit{M} --- the object that synchronizes access to $n_{s_{l_{r}}}$;
+    \item \textit{SSPI}=\{\textit{engage}, \textit{release}\} --- internal programming interface of sc-elements storage in sc-memory.
+\end{itemize}
+
+\par \ \ \ All allocated segments  \textit{ S}  may be free $\textit{S}_{f}$ \ $\subseteq$ \ \textit{S} or engaged  $S_{e}$ \ $\subseteq$ \ \textit{S}. The set of free sc-memory segments $S_{f}$ includes the set of vacant segments $S_{v}$ $\subseteq$ $S_{f}$ and the set of released segments $S_{r}$ $\subseteq$ $S_{f}$.
+ \par \ \ \  Cells in sc-memory segments \textit{E} may be free $E_{f}$ \ $\subseteq$ \ \textit{E} and engaged $E_{e}$ \ $\subseteq$ \ \textit{E}. The set of free sc-memory cells $E_{f}$ \ = \ \{$e^i$$^j$$_{f}$$\vert$  $e^i$$^j$$_{f}$ $\epsilon$ $s^i$$_{f}$, $s^i$$_{f}$ $\epsilon$ $S_{f}$\} includes the set of vacant cells $E_{v}$  $\subseteq$ $E_{f}$ and the set of released cells $E_{r}$ $\subseteq$ $E_{f}$.
+\par \ \ \ Consequently, the following statements hold for all sc-memory segments and cells in them:
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+    \item $E_{f}$ $\cup$ \ $E_{e}$ \ = \  \textit{E},  $E_{f}$  \ $\cap$ \ $E_{e}$ \ = $\varnothing$, 
+    \item $E_{v}$ $\cup$ \ $E_{r}$ \ =  \ $E_{f}$,  $E_{v}$ $\cap$ $E_{r}$ \ =  $\varnothing$, 
+    \item $S_{f}$  $\cup$ \  $S_{e}$ \ = \ \textit{S},   $S_{f}$ \ $\cap$ \  $S_{e}$ \ = $\varnothing$,
+    \item $S_{v}$ \ $\cup$ \ $S_{r}$ \ = \ $S_{f}$, \ $S_{v}$  $\cup$ \ $S_{r}$ \ $\subseteq$ \ $S_{f}$.
+\end{itemize}
+\par \ \ \ For the sets of engaged and released cells, the corresponding transitions can be defined in the form of: 
+\begin{itemize}
+    \item operation of allocating a \textit{engage} : $E_{f}$ $\xrightarrow{}$ $E_{e}$, which changes the state of the cell from "released" to "engaged":\end{itemize}
+\[ \ \ \ \ \ \ \ \ \ \ \ \textit{engage}() = \begin{cases} e_{ij} \in E_{e},\ \ \ if \exists e_{ij} \in  s_{i},   E_{f} \wedge n \leq n_{s_{max}},  \\
+\textrm{Error}, \ \ \ \ \ \ \ if \ n \ \textgreater \ n_{s_{max}} \vee \vert E_{f} \vert = 0;
+\end{cases} \]
+\begin{itemize}
+    \item operation of releasing a cell in sc-memory segment \textit{release} :  $E_{e}$ $\xrightarrow{}$ $E_{f}$, which changes the state of the cell from "engaged" to "released": 
+\end{itemize}
+\[ \ \ \ \ \textit{release}(e_{ij}) = 
+\begin{cases}
+e_{ij} \in E_{f}, \ \ if \ e_{ij} \in  E_{e},\\
+\textrm{Error},  \ \ \ \ \ \ if   \ e_{ij} \notin E_{e}.
+\end{cases}
+\]
+\par \ \ \ The algorithm of the cell engaging operation in sc-memory segment  \textit{(engage}) can be described as follows:
+\begin{itemize}
+    \item Step 1: Try to find any vacant segment \(S_i\) in the set \(S_v\):
+    \begin{enumerate}[label=\textbf{--}, leftmargin=*, listparindent=2em, noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+        \item If such a segment exists, go to step 2.
+        \item If no such segment exists, skip to step 3.
+    \end{enumerate}
+    \item Step 2: Engage a new cell in the found vacant
+segment \(s_i\):
+    \begin{enumerate}[label=\textbf{--}, leftmargin=*, listparindent=2em, noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+        \item Increase $n_{e_{le}}$ in segment \(s_i\) by 1.
+        \item Occupy the cell $e_{ij}$ with index $n_{e_{le}}$ in segment \(s_i\).
+        \item Return the address of the engaged cell $e_{ij}$ and  terminate.
+    \end{enumerate}
+    \item Step 3: Attempt to get a new segment from set \textit{S}:
+    \begin{enumerate}[label=\textbf{--}, leftmargin=*, listparindent=2em, noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+        \item If the number of engaged segments $n_{e_{le}}$ is less
+than the maximum $n_{s_{max}}$, create a new segment \(s_i\) (set $n_{e_{le}}$ as 0) and add it to \textit{S}.
+         \begin{enumerate}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,label=*, leftmargin=0.52cm, listparindent=2em]
+            \item Increase $n_{e_{le}}$ in segment \(s_i\) by 1.
+            \item Occupy the cell $e_{ij}$ with index $n_{e_{le}}$ in segment \(s_i\).
+            \item Return the address of the engaged cell $e_{ij}$ and terminate.
+          \end{enumerate}
+          \item If the maximum number of segments $n_{s_{max}}$ is
+reached, go to step 4.
+    \end{enumerate}
+    \item Step 4: Try to get the released segment \(s_i\) from the
+set \(S_r\):
+        \begin{enumerate}[label=\textbf{--}, leftmargin=*, listparindent=2em]
+            \item If there is no such segment, report an error and
+terminate.
+            \item If such a segment exists, proceed to step 5.
+        \end{enumerate}
+    \item Step 5: Engage a new cell in the found released segment \(s_i\):
+        \begin{enumerate}[label=\textbf{--}, leftmargin=*, listparindent=2em]
+            \item Get the last released cell $e_{ij}$ by its number in segment $n_{e_{r}}$.
+            \item Occupy the cell $e_{ij}$ with index $n_{e_{r}}$ in segment \(s_i\).
+            \item Update $n_{e_{r}}$ for the next released cell.
+            \item Return the address of the engaged cell $e_{ij}$ and terminate.
+        \end{enumerate}
+\end{itemize} 
+\par \ \ \ The algorithm of the cell releasing operation in sc-memory segment (\textit{release}) can be described as follows:
+\begin{itemize}
+    \item Step 1: Verify the correctness of the given address
+of cell $e_{ij}$ :
+    \begin{enumerate}[label=\textbf{--}, leftmargin=*, listparindent=2em, noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+        \item If the cell address does not exist in sc-memory,
+terminate with an error.
+        \item If the cell address exists in sc-memory, proceed
+to step 2.
+    \end{enumerate}
+    \item Step 2: Using the cell address, determine the corresponding segment $e_{i}$ of the cell in sc-memory and
+proceed to step 3.
+    \item Step 3: Release the cell $e_{ij}$ :
+    \begin{enumerate}[label=\textbf{--}, leftmargin=*, listparindent=2em, noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+        \item Update the information about the cell $e_{ij}$ , mark it as released.
+        \item Update the number of the last released cell in segment $n_{e_{r}}$.
+        \item Go to step 4.
+    \end{enumerate}
+    \item Step 4: Update the information about the released
+segments.
+ \begin{enumerate}[label=\textbf{--}, leftmargin=*, listparindent=2em]
+        \item If the released cell was the first released cell in
+the segment, update the information of the last
+released segment in sc-memory $n_{s_{lr}}$.
+        \item Go to step 5.
+ \end{enumerate}
+ \item Step 5: Terminate.
+\end{itemize}
+\par \ \ \  The described algorithms may include synchronization mechanisms to ensure data integrity during multithreaded sc-memory accesses. All synchronization operations in these algorithms can be performed using appropriate synchronization objects $m_{s}$, $m_{e}$, $m^n$$_{s_{lv}}$.
+The model of the synchronization object will be discussed later.
+\par \ \ \ Basically, the advantages of the described algorithms
+are due to the advantages of the cell engaging algorithm
+in sc-memory, which are as follows:
+\begin{itemize}
+    \item The cell engaging algorithm in sc-memory tries to
+find a vacant segment before creating a new one. If
+there is no vacant segment, it tries to create a new
+one if the maximum number of segments has not
+been reached. This approach avoids wasting memory
+on creating unnecessary segments.
+\item By updating the number of the last released cell in
+a segment, the algorithm keeps track of which cells
+are available for reuse. This tracking ensures that
+the engaging process is fast and does not require
+searching the entire memory for a released cell.
+\end{itemize}
+\par \ \ \ To analyze the complexity of these algorithms, let us
+consider their main characteristics:
+\begin{itemize}
+    \item In the algorithm of cell engaging operation in scmemory:
+        \begin{enumerate}[label=\textbf{--}, leftmargin=*, listparindent=2em, noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+            \item finding a vacant segment and engaging a cell in itrequires traversing many segments and checking their status, which can be accomplished in a time proportional to the number of segments;
+            \item creating a new segment and selecting a cell in it requires a fixed number of operations independent of the data size;.
+            \item finding a released segment also requires traversing multiple segments.
+        \end{enumerate}
+        \item In the algorithm of cell releasing operation in scmemory:
+        \begin{enumerate}[label=\textbf{--}, leftmargin=*, listparindent=2em, noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+        \item checking the correctness of the cell address and determining the appropriate segment can be accomplished in a time proportional to the number of segments, or faster if an efficient data structure is used to store the segments;
+        \item releasing a cell and updating segment information requires a fixed number of operations.
+        \end{enumerate}
+\end{itemize}
+\par \ \ \ The complexity of the algorithms depends on the
+data structures used and how they are processed. Assuming that multiple segments are processed efficiently,
+for example using internal lists in released segments
+and released segment cells, the underlying complexity
+of the algorithms will be determined by the number of
+operations required to process each step. Thus:
+\begin{itemize}
+    \item The algorithm of cell engaging operation in s-cmemory can have a complexity from \textit{O}(1) to \textit{O}(\textit{n}), where \textit{n} is the number of segments, depending on whether a free segment is found or a new segment needs to be engaged;
+    \item The algorithm of cell releasing operation in s-cmemory basically has a complexity of \textit{O}(1), since most operations are performed in a fixed amount of time, except for address correctness checking, which may require \textit{O}(\textit{n}) in the worst case
+\end{itemize}
+\par \ \ \ So, an sc-element storage is a set of cells, each of
+which can store some sc-element (be engaged) or can be
+empty (free):
+\[
+(\forall\textit{e} \in E : (e \in E_{e}) \vee (e \in E_{f})).
+\]
+\par \ \ \ Each cell $e_{ij}$ $\in$ $E$, $e_{ij}$ $\in$ $s_{i}$,$s_{i}$ $\in$ $S$ has a unique internal address $a$ = $\langle i,j \rangle$ $\in$ $A$. That is, the following
+statement always holds:
+\[
+ (\forall e_{ij} \in E, \exists !a \in A : (e_{ij} \in N) \wedge (s_{i} \in S)\wedge (a = \langle i,j\rangle))
+\]
+\par Each cell stores either an sc-node $N$ or an sc-connector
+$C$:
+\[
+(\forall\textit{e} \in E : (e \in N) \vee (e \in EC)),
+\]
+\[N \cup C = E, N \cap C = \varnothing .  \]
+\par \ \ \ It is assumed that if a cell stores some sc-element, it stores information characterizing this sc-element. Each cell in sc-memory $e$ $\in$ $E$ can be represented as a tuple:
+\[
+e = \langle FI, EI, CI \rangle,
+\]
+where
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+    \item FI \textbf{---} characteristics of the stored sc-element, including the type of sc-element and its states,
+    \item EI \textbf{---} information about sc-elements incident with the given sc-element,
+    \item CI \textbf{---} information about the number of incoming
+and outgoing sc-connectors for a given sc-element.
+\end{itemize}
+\par \ \ \ The characteristics of an sc-element F I can be represented as:
+\[
+FI = \langle t,s \rangle, 
+\]
+where 
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+    \item $t$ $\in$ $T$ is the syntactic type of a given sc-element (e.g., sc-node, sc-connector, ostis-system file,etc.),
+    \item $s$ $\in$ $ES$ is the state of the 
+ cell (e.g.,"engaged","free", etc.).
+\end{itemize}
+\[
+T = T_{n} \cup T_{c},
+\]
+\[
+T_{n} = \{ node, file\}, T_{c} = \{ connector, arc, edge \},
+\]
+where
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+    \item $T$ is the set of all possible syntactic types of scelements;
+    \item $T_{n}$ is set of all possible syntactic types of sc-nodes, \textit{node, file} \textbf{---} actual sc-node label and ostis-system
+file label, respectively;
+    \item $T_{c}$ is the set of all possible syntactic types of sc-connectors, \textit{connector, arc, edge} \textbf{---} the actual sc-connector label, sc-arc label, and sc edge label, respectively;
+\end{itemize}
+\[
+ES = \{ engaged, free \},
+\]
+where
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+    \item $ES$ is the set of all possible cell states;
+    \item $engaged$ \textbf{---} the cell is "engaged";
+    \item $free$ \textbf{---} the cell is "free".
+\end{itemize}
+\par \ \ \ Information about incident sc-connectors EI can be
+represented as:
+\[
+(\forall\textit{n} \in N : (n \ni EI = \langle b_{o}, \ b_{i} \rangle )),
+\]
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  ( $\forall$ n $\in$ \textit{C} :(\textit{c} $\ni$ \textit{EI} = \par = $\langle$ $b_{o}$,\ $b_{i}$,\ b,\ e,\ $n_{bo}$,\ $p_{bo}$, \ $n_{bi}$,\ $p_{bi}$,\ $n_{eo}$,\ $p_{eo}$, \ $n_{ei}$,\ $p_{ei}$ $\rangle$)),
+where
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+    \item $b_{o}$ $\in$ $A$ is the sc-address of the initial sc-connector
+outgoing from the given sc element,
+    \item $e_{i}$ $\in$ $A$ is the sc-address of the initial sc-connector
+incoming into the given sc-element,
+    \item $b$ $\in$ $A$ is the sc-address of the initial sc-element of
+the sc-connector,
+    \item $e$ $\in$ $A$  is the sc-address of the final sc-element of
+the sc-connector,
+    \item  $n_{bo}$ $\in$ $A$ is the sc-address of the next sc-connector
+outgoing from the initial sc-element,
+    \item $p_{bo}$ $\in$ $A$ is the sc-address of the previous scconnector outgoing from the initial sc-element,
+    \item  $n_{bi}$ $\in$ $A$ is the sc-address of the next sc-connector
+incoming into the initial sc-element,
+    \item  $p_{bi}$ $\in$ $A$ is the sc-address of the previous scconnector incoming into the initial sc-element,
+    \item  $n_{eo}$ $\in$ $A$ is the sc-address of the next sc-connector
+outgoing from the final sc-element,
+    \item $p_{eo}$ $\in$ $A$ A is the sc-address of the previous scconnector outgoing from the final sc-element,
+    \item $n_{ei}$ $\in$ $A$ A is the address of the next sc-connector
+incoming into the final sc-element,
+    \item $p_{ei}$ $\in$ $A$ is the address of the previous sc-connector
+incoming into the final sc-element.
+\end{itemize}
+\par In this case, the following statements are true:
+\[
+(\forall e \in E, \exists !b_{o},b_{o} \in A : (Inc(e,b_{o}) \wedge Inc(e, b_{i}))),
+\]
+
+\ \ \ \ \ \ \ \ \ ($\forall$ $e$ $\in$ $C$, $\exists$ ! $n_{bo}$,$p_{bo}$ , $n_{bi}$, $p_{bi}$ $\in$ $A$ : \par
+((\textit{Inc}(\textit{e}, $n_{bo}$)$\wedge$(\textit{Inc}(\textit{e}, $n_{bi}$)$\wedge$(\textit{Inc}(\textit{e}, $n_{bi}$)$\wedge$(\textit{Inc}(\textit{e}, $p_{bi}$)))),
+\\ 
+
+\ \ \ \ \ \ \ \ \ ($\forall$ $e$ $\in$ $C$, $\exists$ ! $n_{eo}$,$p_{eo}$ , $n_{ei}$, $p_{ei}$ $\in$ $A$ : \par
+((\textit{Inc}(\textit{e}, $n_{eo}$)$\wedge$(\textit{Inc}(\textit{e}, $p_{eo}$)$\wedge$(\textit{Inc}(\textit{e}, $n_{ei}$)$\wedge$(\textit{Inc}(\textit{e}, $p_{ei}$)))),
+\par \ \ \ where \textit{Inc} is the binary relation of incidence of two
+sc-elements.
+\par \ \ \ Information about the number of incoming and outgoing sc-connectors C can be represented as:
+\[
+CI = \langle c_{in}, c_{out} \rangle 
+\]
+where
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+    \item $c_{in}$ $\in$ ($\mathbb{\bar N}$ $\cup$ \{0\}) is the number of incoming sc-connectors in a given sc-element,
+    \item $c_{out}$ $\in$ ($\mathbb{\bar N}$ $\cup$ \{0\}) is the number of outgoing sc-connectors from a given sc-element.
+\end{itemize}
+\par \ \ \ This information can be used to optimize the isomorphic search for sc-constructions over a given graphtemplate [2].
+\par \ \ \ The model of storage of sc-elements in sc-memory
+provides:
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+    \item  storage of sc-constructions, their sc-elements, characteristics and incident relations between them;
+    \item ability to create, modify, search and delete scelements.
+\end{itemize}
+\par \ \ \ The advantages of this model are as follows:
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+    \item it provides efficient fragmentation and defragmentation of cells;
+    \item algorithms for allocating and freeing a memory
+segment have asymptotic complexity from $O$(1) to
+$O$($n$), where n is the number of segments that must
+be traversed to find a free segment.
+\end{itemize}
+\textit{B. Model of storage of external information constructions in sc-memory}
+\par \ \ \ The model of storage of external information constructions in sc-memory can be represented as
+\par \ \ \ \ \ \ \ \ \ \ $FS$ = $\langle$ $CH$, $M_{s}$, $n_{ch_{le}}$, $n_{ch_{max}}$, $m_{ch}$, $tr$ \\
+\par \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ $TSO$, $SOF$, $FSO$, $FSPI$ $\rangle$,
+where
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+    \item $CH$ = $\langle$$ch_{1}$, $ch_{2}$, ..., $ch_{i}$, ..., $ch_{n}$,   $\rangle$, $i$ = $\overline{1, n}$ is
+the sequence of dynamically allocated file segments
+in sc-memory of fixed size n;
+    \item $ch_{i}$ = \{ $\langle$ $\langle$ $l_{s_{i1}}$, $s_{i1}$  $\rangle$, ..., $\langle$ $l_{s_{ij1}}$, $s_{i1}$  $\rangle$, ... $\langle$ $l_{s_{im}}$,$e_{im}$$\rangle$$\rangle$, $n_{sl}$, $m_{s}$\}, $j$ = $\overline{1, m}$ \textit{---} the $i$-th file segment of fixed size m, consisting of cells – pairs of string lengths $s_{s_{ij}}$ and strings themselves $s_{ij}$ $\in$ $STR$,
+    \item $n_{s_{l}}$ $\in$ ($\mathbb{\bar N}$ $\cup$ \{0\}) \textbf{---}  the index of the last engaged
+cell in the file segment $ch_{i}$,
+    \item $m_{s}$ $\in$ $M$ \textbf{---} the object that synchronizes access to $n_{s_{le}}$;
+    \item $M_{s}$ $\subseteq$ $CHS$ $\times$ $M$ \textbf{---} a dynamic oriented set of file
+and cell pairs and their corresponding synchronization objects;
+    \item $n_{ch_{le}}$ $\in$  ($\mathbb{\bar N}$ $\cup$ \{0\}) \textbf{---} the index of the last engaged
+file segment in sc-memory ($n_{ch_{le}}$ = $n$),
+\end{itemize}
+\end{document}
