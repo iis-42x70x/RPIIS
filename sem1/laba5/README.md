@@ -1,0 +1,45 @@
+# Лабараторная работа №5
+### Поставленные цель:
+* Освоить командные оболочки shell (для OS семейства Unix) и cmd (для OS семейства MS Windows)
+* Освоить командное окружение для OS семейства Unix(утилиты из пакета GNU Core Utilities)
+
+### Используемые наборы ПО:
+* `OS MS Windows 11`
+
+![img](https://github.com/iis-42x70x/RPIIS/blob/%D0%A0%D0%B0%D0%B7%D1%83%D0%BC%D0%BE%D0%B2_%D0%92/sem1/laba5/png-klev-club-6dza-p-logotip-vindovs-11-png-3-removebg-preview.png)
+
+* `Linux - Ubuntu-24.04`
+
+![img](https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Ubuntu-logo-2022.svg/2560px-Ubuntu-logo-2022.svg.png)
+
+### Литература для изучения:
+* [selectel.ru](https://selectel.ru/blog/bat-file/)
+  
+* [habr.com](https://habr.com/ru/sandbox/168937/)
+  
+* [Гайд работы с Ubuntu и bash](https://youtube.com/playlist?list=PL0lO_mIqDDFUwVWvVitxG2oXA6a-Nq-Qq&si=2gRFrJWybrUjOdxC)
+
+### Поставленная задача:
+*54 Создать файл sh и bat, который выполняет следующее: 
+На вход пакетному файлу приходит относительный путь к папке (как параметр пакетного файла). Если такой папки нет, то писать “Данной папки нет” и завершить выполнение программы. Если такая папка есть, 
+то в ней и в ее подкаталогах найти файлы с расширением doc и считается количество неповторяющихся символов в названиях файлов (без расширения). Результат записывается в файл result.txt.*
+
+
+### Итоговые варианты:
+* [myscript.sh](https://github.com/iis-42x70x/RPIIS/blob/%D0%A0%D0%B0%D0%B7%D1%83%D0%BC%D0%BE%D0%B2_%D0%92/sem1/laba5/myscript.sh)
+
+* [myscript.bat](https://github.com/iis-42x70x/RPIIS/blob/%D0%A0%D0%B0%D0%B7%D1%83%D0%BC%D0%BE%D0%B2_%D0%92/sem1/laba5/myscript.bat)
+
+### Особенности bat:
+* В bat-файле "for ..." - цикл для поиска файлов с расширением .doc
+
+* В случае если папка не найдена - выполнение программы завершается
+
+### Особенности bash:
+* Ветвление в bash-файле выглядит в формате `if .. fi`
+
+* BASH-файл начинается с `#!/bin/bash`
+
+### Вывод:
+*Научился работать с bat- и sh(bash)- файлами. Написал пакетные файлы для OS Linux(Ubuntu 24.04) и MS Windows 11*
+
