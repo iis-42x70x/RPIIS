@@ -1,0 +1,7 @@
+Synapse Razer
+25304 Telegram.exe
+22800 DeepL.exe
+10872 SearchApp.exe
+16376 msedge.exe
+16024 explorer.exe
+3456 msedge.exe
